@@ -23,7 +23,7 @@ public class Annotator {
   List<TLink> labeledRelations;
 	Closure closure;
   
-	public Annotator() {
+	public Annotator() throws IOException {
     labeledLookup = new HashMap<String,String>();
     labeledRelations = new ArrayList<TLink>();
     closure = new Closure("closure-sieve.dat");
@@ -258,7 +258,7 @@ public class Annotator {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Annotator anno = new Annotator();
 		if( args.length == 1 ) {
 		  anno.readHTML(args[0]);

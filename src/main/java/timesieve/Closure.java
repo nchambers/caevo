@@ -2,6 +2,7 @@ package timesieve;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -9,7 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
-import java.util.Iterator;
 
 
 /**
@@ -21,11 +21,11 @@ public class Closure {
   static String rulePath = "closure.dat";
   HashMap<String,TLink.TYPE> rules[];
 
-  public Closure() { 
+  public Closure() throws IOException { 
     this(rulePath);
   }
 
-  public Closure(String path) { 
+  public Closure(String path) throws IOException { 
     loadClosureRules(path);
   }
 
@@ -40,11 +40,11 @@ public class Closure {
   /**
    * Reads the closure rules from a data file
    */
-  private void loadClosureRules(String path) {
+  private void loadClosureRules(String path) throws IOException {
+    int matchCase = 0;
+    int numAdded = 0;
+    BufferedReader in = new BufferedReader(new FileReader(path));
     try {
-      int matchCase = 0;
-      int numAdded = 0;
-      BufferedReader in = new BufferedReader(new FileReader(path));
       System.out.println("Loading closure rules from " + path);
 
       rules = new HashMap[4];
@@ -80,7 +80,9 @@ public class Closure {
       if( numAdded == 0 ) {
         System.out.println("WARNING!! Didn't load any closure rules. Was I supposed to?");
       }
-    } catch( Exception ex ) { ex.printStackTrace(); }
+    } finally {
+      in.close();
+    }
   }
 
   /**
