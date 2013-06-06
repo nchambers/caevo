@@ -1,7 +1,7 @@
 <project name="TimeSieve" default="compile" basedir=".">
 
-  <property name="build.path"     value="${basedir}/classes" />
-  <property name="source.path"    value="${basedir}/src" />
+  <property name="build.path"     value="${basedir}/target/classes" />
+  <property name="source.path"    value="${basedir}/src/main/java" />
 
   <property name="compile.debug"       value="true"/>
   <property name="compile.deprecation" value="false"/>
