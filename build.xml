@@ -1,0 +1,64 @@
+<project name="TimeSieve" default="compile" basedir=".">
+
+  <property name="build.path"     value="${basedir}/classes" />
+  <property name="source.path"    value="${basedir}/src" />
+
+  <property name="compile.debug"       value="true"/>
+  <property name="compile.deprecation" value="false"/>
+  <property name="compile.optimize"    value="true"/>
+  <property name="compile.source"      value="1.6" />
+  <property name="compile.target"      value="1.6" />
+<!--  <property name="compile.encoding"    value="utf-8" /> -->
+
+  <target name="classpath" description="Sets the classpath">
+    <echo message="${ant.project.name}" />
+    <path id="classpath">
+      <pathelement path="${basedir}/lib/jdom.jar"/>
+    </path>
+  </target>
+
+  <target name="clean" description="Delete old classes">
+    <echo message="${ant.project.name}" />
+    <delete includeemptydirs="true">
+       <fileset dir="${build.path}/" includes="**/*"/>
+     </delete>
+  </target>
+
+  <target name="compile" depends="classpath"
+          description="Compile core sources">
+    <echo message="${ant.project.name}" />
+    <mkdir    dir="${build.path}" />
+    <javac srcdir="${source.path}"
+          destdir="${build.path}"
+            debug="${compile.debug}"
+      deprecation="${compile.deprecation}"
+         optimize="${compile.optimize}"
+           source="${compile.source}"
+           target="${compile.target}">
+<!--         encoding="${comiple.encoding}" -->
+        <classpath refid="classpath" />
+      <!-- <compilerarg value="-Xmaxerrs"/>
+           <compilerarg value="20"/> -->
+      <!-- <compilerarg value="-Xlint"/> -->
+    </javac>
+  </target>
+
+  <target name="all" depends="clean,compile"
+          description="Clean and re-compile." />
+
+  <!-- This runs the specified class, using a separate Java VM -->
+  <!-- Specify class to run via "run.class," arg, i.e., -->
+  <!--       ant run -Drun.class=edu.stanford.nlp.tagger.maxent.MaxentTaggerGUI -->
+  <!-- Use "jvmarg" to pass arguments to the VM, use "arg" to pass cmdline args to the class -->
+  <target name="run" depends="classpath">
+    <java classname="${run.class}" fork="true" jvm="java">
+      <jvmarg value="-Xmx2g"/>
+      <jvmarg value="-server"/>
+      <classpath>
+	<path refid="classpath"/>
+	<pathelement path="${build.path}"/>
+      </classpath>
+    </java>
+  </target>
+
+</project>
