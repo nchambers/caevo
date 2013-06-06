@@ -26,7 +26,7 @@ public class Annotator {
 	public Annotator() throws IOException {
     labeledLookup = new HashMap<String,String>();
     labeledRelations = new ArrayList<TLink>();
-    closure = new Closure("closure-sieve.dat");
+    closure = new Closure();
 	}
 	
 	public void readHTML(String path) {

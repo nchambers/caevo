@@ -1,12 +1,14 @@
 package timesieve;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
@@ -18,15 +20,19 @@ import java.util.Vector;
  */
 public class Closure {
   static boolean report = true;
-  static String rulePath = "closure.dat";
+  static String rulePath = "/closure-sieve.dat";
   HashMap<String,TLink.TYPE> rules[];
 
   public Closure() throws IOException { 
-    this(rulePath);
+    this(Closure.class.getResource(rulePath));
   }
 
   public Closure(String path) throws IOException { 
-    loadClosureRules(path);
+    this(new File(path).toURI().toURL());
+  }
+
+  public Closure(URL url) throws IOException { 
+    loadClosureRules(url);
   }
 
   // 0: A-B A-C
@@ -40,12 +46,12 @@ public class Closure {
   /**
    * Reads the closure rules from a data file
    */
-  private void loadClosureRules(String path) throws IOException {
+  private void loadClosureRules(URL url) throws IOException {
     int matchCase = 0;
     int numAdded = 0;
-    BufferedReader in = new BufferedReader(new FileReader(path));
+    BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
     try {
-      System.out.println("Loading closure rules from " + path);
+      System.out.println("Loading closure rules from " + url);
 
       rules = new HashMap[4];
       for( int i = 0; i < 4; i++ ) {
