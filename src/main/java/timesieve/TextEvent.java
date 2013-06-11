@@ -8,9 +8,8 @@ import java.util.Vector;
 
 import org.jdom.Namespace;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Text;
+
+import timesieve.util.TimebankUtil;
 
 /**
  * index is 1 indexed.
@@ -120,27 +119,10 @@ public class TextEvent {
 
   public String string() {
     //	if( element != null ) return ((Text)element.getFirstChild()).getData();
-    if( element != null ) return stringFromElement(element).trim();
+    if( element != null ) return TimebankUtil.stringFromElement(element).trim();
     else return text;
   }
 
-  /**
-   * @returns The text of all text node leafs appended together
-   */
-  public static String stringFromElement(Node node) {
-    if( node instanceof Text ) {
-      return ((Text)node).getData().trim();
-    } else {
-      String str = "";
-      NodeList list = node.getChildNodes();
-      for( int i = 0; i < list.getLength(); i++ ) {
-        if( i == 0 ) str = stringFromElement(list.item(i));
-        else str += " " + stringFromElement(list.item(i));
-      }
-      return str;
-    }
-  }
-  
   public void setPOSTags(int[] p) { pos = p; }
   public void setEiid(String id) { eiid = id; }
   
