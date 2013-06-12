@@ -7,7 +7,14 @@ import edu.stanford.nlp.ling.CoreLabel;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Represents a sentence in a document, including the following data:
+ * - tokens
+ * - events as TextEvent objects
+ * - times as Timex objects
+ * 
+ * @author chambers
+ */
 public class Sentence {
   private String sid;
   private String sentence;

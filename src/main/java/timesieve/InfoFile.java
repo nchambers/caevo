@@ -16,6 +16,7 @@ import java.util.Set;
 import java.util.Vector;
 
 import timesieve.util.*;
+import timesieve.tlink.*;
 
 import org.jdom.Document;
 import org.jdom.Element;

@@ -1,4 +1,4 @@
-package timesieve;
+package timesieve.tlink;
 
 import org.jdom.*;
 import org.jdom.Namespace;
@@ -39,9 +39,9 @@ public class TLink implements Comparable<TLink> {
     currentMode = newmode;
   }
 
-  TLink() { }
+  public TLink() { }
 
-  TLink(Element el) {
+  public TLink(Element el) {
     event1 = el.getAttributeValue(EV1_ELEM);
     event2 = el.getAttributeValue(EV2_ELEM);
     relation = normalizeRelation(el.getAttributeValue(REL_ELEM));
@@ -51,18 +51,18 @@ public class TLink implements Comparable<TLink> {
     origin = el.getAttributeValue(ORIGIN_ELEM);
   }
 
-  TLink(String e1, String e2, TLink.TYPE rel) {
+  public TLink(String e1, String e2, TLink.TYPE rel) {
     this(e1, e2, rel, false);
   }
   
-  TLink(String e1, String e2, TLink.TYPE rel, boolean closure) {
+  public TLink(String e1, String e2, TLink.TYPE rel, boolean closure) {
     event1 = e1;
     event2 = e2;
     relation = rel;
     closed = closure;
   }
   
-  TLink(String e1, String e2, String rel, boolean closure) {
+  public TLink(String e1, String e2, String rel, boolean closure) {
     this(e1,e2,rel);
     closed = closure;
   }

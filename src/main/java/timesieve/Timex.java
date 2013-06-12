@@ -1,15 +1,14 @@
 package timesieve;
 
-
-import org.w3c.dom.Element;
-
-import org.jdom.*;
 import org.jdom.Namespace;
 
 /**
+ * This class represents a sequence of tokens for a Timex. It holds all TimeML attributes.
+ * 
  * sid is 0 indexed, just like the InfoFile specifies. The first sentence entry is 0.
  * offset is 1 indexed, just like Stanford parse trees. The first token is 1.
  *
+ * @author chambers
  */
 public class Timex {
   String text;

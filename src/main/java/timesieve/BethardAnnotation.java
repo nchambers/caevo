@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import timesieve.tlink.*;
+
 /**
  * A simple interface to read Steven Bethard's annotation of TimeBank.
  * It assumes the annotation is a single file.
+ * 
+ * @author Chambers
  */
 public class BethardAnnotation {
   Map<String,List<TLink>> _docTLinks;

@@ -15,6 +15,10 @@ import timesieve.util.TimebankUtil;
  * index is 1 indexed.
  * sid is 0 indexed.
  *
+ * This class holds all attributes about text events. It defines tense, aspect, class, and
+ * polarity. It also contains the event ID, it's instance ID, and the XML attribute names.
+ * 
+ * @author chambers
  */
 public class TextEvent {
   public static String NAME_ELEM = "event";
