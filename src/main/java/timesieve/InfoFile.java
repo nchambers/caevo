@@ -361,9 +361,24 @@ public class InfoFile {
     return tlinks;
   }
 
-
   /**
-   * @return A Vector of all Timex objects
+   * @return A List of Lists of all Timex objects. This does not 
+   *         return the document creation time!
+   * 
+   */
+  public List<List<Timex>> getTimexesBySentence(String file) {
+    List<List<Timex>> timexes = new ArrayList<List<Timex>>();
+    
+    // Timexes in each sentence.
+    List<Sentence> sentences = getSentences(file);
+    for( Sentence sent : sentences )
+      timexes.add(sent.timexes());
+    
+    return timexes;
+  }
+  
+  /**
+   * @return A List of all Timex objects, including the document creation time.
    */
   public List<Timex> getTimexes(String file) {
     List<Timex> timexes = new ArrayList<Timex>();
@@ -380,18 +395,41 @@ public class InfoFile {
     return timexes;
   }
 
-
   /**
-   * @return A Vector of all Event objects in one document (file parameter)
+   * @return A List of all Event objects in one document (file parameter)
    */
-  public Vector<TextEvent> getEvents(String file) {
+  public List<List<TextEvent>> getEventsBySentence(String file) {
     file = stripFile(file);
     Namespace ns = Namespace.getNamespace(INFO_NS);
     Element mainfile = getFileElement(file);
 
     // Check each sentence entry
     List<Element> children = mainfile.getChildren(ENTRY_ELEM,ns);
-    Vector<TextEvent> events = new Vector<TextEvent>();
+    List<List<TextEvent>> allEvents = new ArrayList<List<TextEvent>>();
+    for( Element sentenceObj : children ) {
+      String sid = sentenceObj.getAttributeValue(SID_ELEM);
+      Element ev = sentenceObj.getChild(EVENTS_ELEM,ns);
+      List<Element> localEventObjs = ev.getChildren(TextEvent.NAME_ELEM,ns);
+      List<TextEvent> localEvents = new ArrayList<TextEvent>();
+      for( Element child : localEventObjs )
+        localEvents.add(new TextEvent(sid, child));
+      allEvents.add(localEvents);
+    }
+
+    return allEvents;
+  }
+  
+  /**
+   * @return A List of all Event objects in one document (file parameter)
+   */
+  public List<TextEvent> getEvents(String file) {
+    file = stripFile(file);
+    Namespace ns = Namespace.getNamespace(INFO_NS);
+    Element mainfile = getFileElement(file);
+
+    // Check each sentence entry
+    List<Element> children = mainfile.getChildren(ENTRY_ELEM,ns);
+    List<TextEvent> events = new ArrayList<TextEvent>();
     for( Element obj : children ) {
       String sid = obj.getAttributeValue(SID_ELEM);
       Element ev = obj.getChild(EVENTS_ELEM,ns);
