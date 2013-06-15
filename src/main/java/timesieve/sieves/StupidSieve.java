@@ -32,13 +32,16 @@ public class StupidSieve implements Sieve {
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
 		
+		// Make BEFORE links between all intra-sentence pairs.
 		int sid = 0;
 		for( Sentence sent : info.getSentences(docname) ) {
 			System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
 			proposed.addAll(allPairsEvents(allEvents.get(sid)));
 			proposed.addAll(allPairsTimes(allTimexes.get(sid)));
+			sid++;
 		}
 
+		System.out.println("TLINKS: " + proposed);
 		return proposed;
 	}
 
@@ -54,6 +57,8 @@ public class StupidSieve implements Sieve {
 			}
 		}
 		
+		System.out.println("events: " + events);
+		System.out.println("created tlinks: " + proposed);
 		return proposed;
 	}
 	
