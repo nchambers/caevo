@@ -7,16 +7,24 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 
 import timesieve.*;
-//import timesieve.Sentence;
 import timesieve.tlink.TLink;
 import edu.jhu.hlt.concrete.Concrete.*;
-import edu.stanford.nlp.ling.Sentence;
+import edu.jhu.hlt.concrete.Concrete.Sentence;
+import edu.jhu.hlt.concrete.Concrete.TokenTagging.TaggedToken;
+import edu.jhu.hlt.concrete.Concrete.Tokenization.Kind;
+import edu.jhu.hlt.concrete.Concrete.Tokenization.TokenLattice;
+import edu.stanford.nlp.ling.CoreLabel;
+
 /**
  * Methods to help with using Concrete (https://github.com/hltcoe/concrete) data sources
  * @author Bill McDowell
  */
 public class ConcreteUtil {
 	private static final int NONE_ID = -1;
+	
+	/*
+	 *  Methods for transforming communication to info file
+	 */
 	
 	public static InfoFile communicationToInfoFile(Collection<Communication> comms, InfoFile info) {
 		for (Communication comm : comms)
@@ -40,15 +48,16 @@ public class ConcreteUtil {
 	
 	public static InfoFile communicationToInfoFile(Communication comm, InfoFile info) {
 		String file = ConcreteUtil.filenameFromCommunication(comm);
-		/* FIXME */List<Sentence> sentences = ConcreteUtil.sentencesFromCommunication(comm);
 		HashMap<Integer, List<Timex>> timexes = ConcreteUtil.timexesFromCommunication(comm);
-		List<TextEvent> textEvents = ConcreteUtil.textEventsFromCommunication(comm);
+		HashMap<Integer, List<TextEvent>> textEvents = ConcreteUtil.textEventsFromCommunication(comm);
 		List<TLink> tlinks = ConcreteUtil.tlinksFromCommunication(comm);
 
 		if (file == null)
 			throw new IllegalArgumentException();
 		
 		/* Transfer Sentences */
+		ConcreteUtil.sentencesCommunicationToInfoFile(comm, info);
+		
 		/* Transfer Timexes */
 		for (Entry<Integer, List<Timex>> eTimex : timexes.entrySet()) {
 			if (eTimex.getKey() >= 0)
@@ -58,13 +67,13 @@ public class ConcreteUtil {
 		}
 		
 		/* Transfer TextEvents */
-		/* Transfer TLinks */
+		for (Entry<Integer, List<TextEvent>> eTextEvent : textEvents.entrySet()) {
+			if (eTextEvent.getKey() >= 0)
+				info.addEvents(file, eTextEvent.getKey(), eTextEvent.getValue());
+		}
 		
-		// Sentences: info.addSentence(file, sid, text, parse, deps, events, timexes)
-		// Timexes: info.addTimexes(file, timexes) and info.addTimexes(docname, sid, timexes)
-		// Document creation time: info.addCreationTime(file, timex)
-		// Events: info.addEvents(docname, sid, events)
-		// TLinks: info.addTlinks(file, tlinks)
+		/* Transfer TLinks */
+		info.addTlinks(file, tlinks);
 		
 		return info;
 	}
@@ -81,7 +90,11 @@ public class ConcreteUtil {
 	
 	public static HashMap<Integer, List<Timex>> timexesFromCommunication(Communication comm) {
 		/* FIXME: Outstanding issues and questions
+		 *  - Is entity mention sentence index starting at 0, and increasing with consecutive sentences?
+		 *  - Timex type should be based on Entity.Type, but need DURATION... Need to add to Concrete?
 		 *  - What to use for TID?  Need to add to Concrete?
+		 *  - What to use for document function? Need to add to Concrete?
+		 *  - What to use for timex preposition? Do we need this?
 		 * 	- The code below assumes that all entity mentions have corresponding entities.
 		 * 	- What is the difference between Entity.Type.X_VALUE and Entity.Type.X?
 		 *  - Get document creation time separately from timexes? Based on start time field (getStartTime())?
@@ -118,17 +131,14 @@ public class ConcreteUtil {
 					}
 					
 					/* FIXME: Add in time.setTID() */
+					/* FIXME: Add in time.setType() */
+					/* FIXME: Add in time.setDocFunction() */
+					/* FIXME: Add in time.setPrep() */
 					
 					if (entity.hasCanonicalName())
 						time.setValue(entity.getCanonicalName());
 				
-					
-					//time.setType(v) /* FIXME */
-					//time.setDocFunction(func); /* FIXME */
-					//time.setPrep(prep); /* FIXME */
-					
-					
-					
+
 					if (mention.hasSentenceIndex()) {
 						time.setSID(mention.getSentenceIndex());
 						groupId = time.sid();
@@ -142,23 +152,10 @@ public class ConcreteUtil {
 		}
 	
 		return timexes;
-		
-		  /*public void setText(String text) { this.text = text; }
-		  public void setSID(int i) { sid = i; }
-		  public void setTID(String id) { tid = id; }
-
-		  public void setSpan(int s, int e) {
-		    offset = s;
-		    length = e - s;
-		  }
-
-		  public void setType(String v) { type = v; }
-		  public void setValue(String v) { value = v; }
-		  public void setPrep(String prep) { preposition = prep; }
-		  public void setDocFunction(String func) { docFunction = func; }*/
 	}
 	
-	public static List<TextEvent> textEventsFromCommunication(Communication comm) {
+	public static HashMap<Integer, List<TextEvent>> textEventsFromCommunication(Communication comm) {
+		/* FIXME */
 		/*Situation s;
 		SituaionMention se;
 		se.*/; 
@@ -170,10 +167,7 @@ public class ConcreteUtil {
 	}
 	
 	public static List<TLink> tlinksFromCommunication(Communication comm) {
-		return null;
-	}
-	
-	public static List<Sentence> sentencesFromCommunication(Communication comm) {
+		/* FIXME */
 		return null;
 	}
 	
@@ -199,6 +193,124 @@ public class ConcreteUtil {
 		
 		return mentionMap;
 	}
+	
+	private static void sentencesCommunicationToInfoFile(Communication comm, InfoFile info) {
+		/* FIXME: Outstanding issues and questions
+		 * 	- Currently, this just takes the first segmentation from the communication.  Is this okay?
+		 *		- Same with tokenizations and parses
+		 *  - Ignores concrete lattice tokenizations
+		 *  - Ignored the following fields in CoreLabels:
+		 *  	  	.setAfter(after);
+		 *				.setBefore(before);
+		 *				.setCapacity(newSize);
+		 *				.setCategory(category);
+		 *				.setDocID(docID);
+		 *				.setFromString(labelStr);
+		 *				.setIndex(index);								
+		 *				.setSentIndex(sentIndex);			
+		 *				.setValue(value);
+		 *				.setWord(word);
+		 *   - Generally not sure about what each field in CoreLabel is for
+		 */
+		if (comm.getSectionSegmentationCount() == 0)
+			return;
+		
+		String commText = comm.getText();
+		
+		List<Section> sections = comm.getSectionSegmentationList().get(0).getSectionList();
+		int sid = 0;
+		for (Section section : sections) {
+			if (section.getSentenceSegmentationCount() == 0)
+				continue;
+			
+			List<Sentence> sentences = section.getSentenceSegmentationList().get(0).getSentenceList();
+			for (Sentence sentence : sentences) {
+				String sText = "";
+				List<CoreLabel> sTokens = new ArrayList<CoreLabel>();
+				String sParse = "";
+				String sDeps = "";
+				
+				if (sentence.hasTextSpan())
+					sText = commText.substring(sentence.getTextSpan().getStart(), sentence.getTextSpan().getEnd());
+				
+				if (sentence.getTokenizationCount() > 0) {
+					List<Tokenization> toks = sentence.getTokenizationList();
+					for (Tokenization tok : toks) {
+						if (!tok.hasKind() || tok.getKind() == Tokenization.Kind.TOKEN_LIST) {
+							List<Token> tokens = tok.getTokenList();
+							HashMap<Integer, CoreLabel> tokenIdsToCoreLabels = new HashMap<Integer, CoreLabel>();
+							for (int i = 0; i < tokens.size(); i++) {
+								Token token = tokens.get(i);
+								CoreLabel sToken = new CoreLabel();
+								if (!token.hasTokenId() || (!token.hasText() && !token.hasTextSpan()))
+									continue;
+								
+								if (token.hasText())
+									sToken.setOriginalText(token.getText());
+								
+								if (token.hasTextSpan()) {
+									sToken.setBeginPosition(token.getTextSpan().getStart());
+									sToken.setEndPosition(token.getTextSpan().getEnd());
+								}
+								
+								sTokens.add(sToken);
+								tokenIdsToCoreLabels.put(token.getTokenId(), sToken);
+							}
+							
+							if (tok.getLemmasCount() > 0) {
+								List<TaggedToken> lemmas = tok.getLemmasList().get(0).getTaggedTokenList();
+								for (TaggedToken lemma : lemmas) {
+									if (lemma.hasTokenId() && lemma.hasTag() && tokenIdsToCoreLabels.containsKey(lemma.getTokenId()))
+										tokenIdsToCoreLabels.get(lemma.getTokenId()).setLemma(lemma.getTag());
+								}
+							}
+							
+							if (tok.getNerTagsCount() > 0) {
+								List<TaggedToken> ners = tok.getNerTagsList().get(0).getTaggedTokenList();
+								for (TaggedToken ner : ners) {
+									if (ner.hasTokenId() && ner.hasTag() && tokenIdsToCoreLabels.containsKey(ner.getTokenId()))
+										tokenIdsToCoreLabels.get(ner.getTokenId()).setNER(ner.getTag());
+								}
+							}
+							
+							if (tok.getPosTagsCount() > 0) {
+								List<TaggedToken> poss = tok.getPosTagsList().get(0).getTaggedTokenList();
+								for (TaggedToken pos : poss) {
+									if (pos.hasTokenId() && pos.hasTag() && tokenIdsToCoreLabels.containsKey(pos.getTokenId()))
+										tokenIdsToCoreLabels.get(pos.getTokenId()).setTag(pos.getTag());
+								}
+							}
+							
+							break;
+						}
+					}				
+				}
+					
+				if (sentence.getParseCount() > 0) {
+					/* FIXME */
+				}
+				
+				if (sentence.getDependencyParseCount() > 0) {
+					/* FIXME */
+				}
+					
+				info.addSentence(ConcreteUtil.filenameFromCommunication(comm), 
+												sid, 
+												sText, 
+												sTokens, 
+												sParse, 
+												sDeps, 
+												new ArrayList<TextEvent>(), 
+												new ArrayList<Timex>());
+				sid++;
+			}
+		}
+		
+	}
+	
+	/*
+	 *  Methods for transforming info file to communication
+	 */
 	
 	public static Communication infoFileToCommunication(InfoFile info) {
 		return null;
