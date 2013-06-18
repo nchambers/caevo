@@ -35,13 +35,8 @@
 		</dependency>
 		<dependency>
 			<groupId>edu.jhu.hlt.concrete</groupId>
-			<artifactId>concrete-protobufs</artifactId>
-			<version>1.0.9-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>edu.jhu.hlt.concrete</groupId>
 			<artifactId>concrete-java</artifactId>
-			<version>1.0.8-SNAPSHOT</version>
+			<version>1.0.10-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
