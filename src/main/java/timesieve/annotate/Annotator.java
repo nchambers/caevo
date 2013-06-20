@@ -270,6 +270,12 @@ public class Annotator {
 		  anno.loadProgressFile(args[1]);
       anno.prompt();
 		}
+		else {
+			String className = Annotator.class.getName();
+			System.err.println("error: incorrect number of arguments");
+			System.err.printf("usage: java %s html-file [progress-file]\n", className);
+			System.exit(1);
+		}
 	}
 
 }
