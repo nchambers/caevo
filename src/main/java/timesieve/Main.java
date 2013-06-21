@@ -23,7 +23,7 @@ public class Main {
 	
 	// List the sieve class names in your desired order.
 	String[] sieveClasses = { 
-			"WordFeatures5", "WordFeatures64", "WordNet209","ReichenbachDG13_1"			
+			"ReichenbachDG13_2"			
 	};
 
 	/**
