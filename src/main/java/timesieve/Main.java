@@ -23,7 +23,7 @@ public class Main {
 	
 	// List the sieve class names in your desired order.
 	String[] sieveClasses = { 
-			"ReichenbachDG13_2"			
+			"QuarterSieveReporting"	
 	};
 
 	/**
