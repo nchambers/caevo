@@ -60,7 +60,8 @@ public class WordNet {
   			"/home/nchamber/code/lib/jwnl_file_properties.xml",
   			"C:\\cygwin\\home\\sammy\\code\\lib\\jwnl_file_properties.xml",
   			"/home/sammy/code/lib/jwnl_file_properties.xml",
-  			"C:\\cygwin\\home\\sammy\\code\\lib\\jwnl_file_properties.xml" };
+  			"C:\\cygwin\\home\\sammy\\code\\lib\\jwnl_file_properties.xml",
+  			"/Users/ctaylor/NLP/timeSoftware/timesieve/properties/jwnl_file_properties.xml"};
   	for( String path : paths )
   		if( new File(path).exists() )
   			return path;  	
