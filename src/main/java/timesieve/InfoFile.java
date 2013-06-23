@@ -254,13 +254,13 @@ public class InfoFile {
   }
 
   /**
-   * @return A Vector of all TLink objects (event-event and event-time)
+   * @return A List of all TLink objects (event-event and event-time)
    */
-  public Vector<TLink> getTlinks(String file, boolean noclosures) {
+  public List<TLink> getTlinks(String file, boolean noclosures) {
     file = stripFile(file);
     Namespace ns = Namespace.getNamespace(INFO_NS);
     Element mainfile = getFileElement(file);
-    Vector<TLink> tlinks = new Vector<TLink>();
+    List<TLink> tlinks = new ArrayList<TLink>();
 
     if( mainfile != null ) {
       List children = mainfile.getChildren(TLink.TLINK_ELEM,ns);
@@ -275,7 +275,7 @@ public class InfoFile {
     }
     return tlinks;
   }
-  public Vector<TLink> getTlinks(String file) {
+  public List<TLink> getTlinks(String file) {
     return getTlinks(file, false);
   }
 
@@ -338,9 +338,9 @@ public class InfoFile {
   }
   
   /**
-   * @return A Vector of TLink objects Event-Event, no Event-Time links
+   * @return A List of TLink objects Event-Event, no Event-Time links
    */
-  public Vector<TLink> getTlinksOfType(String file, String type) {
+  public List<TLink> getTlinksOfType(String file, String type) {
     file = stripFile(file);
     Namespace ns = Namespace.getNamespace(INFO_NS);
     Element mainfile = getFileElement(file);
@@ -350,7 +350,7 @@ public class InfoFile {
       return null;
     }
     List children = mainfile.getChildren(TLink.TLINK_ELEM,ns);
-    Vector<TLink> tlinks = new Vector<TLink>();
+    List<TLink> tlinks = new ArrayList<TLink>();
     for( Object obj : children ) {
       Element el = (Element)obj;
       // return TLinks based on their type (e.g. event-event)
@@ -467,7 +467,7 @@ public class InfoFile {
 
   /**
    * Adds a list of TIMEX tags to the XML file
-   * @param timexes Vector of Timex objects
+   * @param timexes Collection of Timex objects
    */
   public void addTimexes(String file, Collection<Timex> timexes) {
     file = stripFile(file);
