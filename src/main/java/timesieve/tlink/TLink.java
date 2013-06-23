@@ -5,8 +5,7 @@ import org.jdom.Namespace;
 
 
 public class TLink implements Comparable<TLink> {
-	private String event1, event2;
-	public String eiid1 = null, eiid2 = null;  // backups for Semeval, they insist on the eiid used instead of the eid.
+	private String event1, event2; // These should be event instance IDs: eiid of the events
   protected TYPE relation;
   protected String originalRelation;
   protected boolean closed = false;
@@ -239,24 +238,10 @@ public class TLink implements Comparable<TLink> {
   public void setRelationConfidence(double d) { relationConfidence = d; }
 
   public Element toElement(Namespace ns) {
-  	return toElement(ns, false);
-  }
-
-  /**
-   * @param ns
-   * @param useEiids If true, use the eiid labels and not the main event labels.
-   * @return A new XML Element.
-   */
-  public Element toElement(Namespace ns, boolean useEiids) {
   	//  System.out.println("toElement " + event1 + " " + event2 + " " + relation + " " + closed + " " + origin);
   	Element el = new Element(TLINK_ELEM, ns);
-  	if( useEiids ) {
-  		el.setAttribute(EV1_ELEM, (eiid1 != null ? eiid1 : event1));
-  		el.setAttribute(EV2_ELEM, (eiid2 != null ? eiid2 : event2));
-  	} else {
-  		el.setAttribute(EV1_ELEM, event1);
-  		el.setAttribute(EV2_ELEM, event2);
-  	}
+  	el.setAttribute(EV1_ELEM, event1);
+  	el.setAttribute(EV2_ELEM, event2);
   	el.setAttribute(REL_ELEM, relation.toString());
   	el.setAttribute(CLOSED_ELEM, String.valueOf(closed));
   	if( origin != null ) el.setAttribute(ORIGIN_ELEM, origin);
