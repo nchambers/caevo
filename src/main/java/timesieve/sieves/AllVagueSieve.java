@@ -42,7 +42,7 @@ public class AllVagueSieve implements Sieve {
 			sid++;
 		}
 
-		System.out.println("TLINKS: " + proposed);
+//		System.out.println("TLINKS: " + proposed);
 		return proposed;
 	}
 

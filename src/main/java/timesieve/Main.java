@@ -69,33 +69,43 @@ public class Main {
 		return null;
 	}
 	
+	private Sieve[] createAllSieves(String[] stringClasses) {
+		Sieve sieves[] = new Sieve[stringClasses.length];
+		for( int xx = 0; xx < stringClasses.length; xx++ ) {
+			sieves[xx] = createSieveInstance(stringClasses[xx]);
+			System.out.println("Added " + stringClasses[xx]);
+		}
+		return sieves;
+	}
+	
 	/**
 	 * Assumes the global InfoFile is set.
 	 * Run all sieves!! On all documents!!
 	 */
 	public void runSieves() {
 		List<TLink> currentTLinks = new ArrayList<TLink>();
+
+		// Create all the sieves first.
+		Sieve sieves[] = createAllSieves(sieveClasses);
 		
 		// Do each file independently.
 		for( String docname : info.getFiles() ) {
 			System.out.println("Processing " + docname + "...");
 			
 			// Loop over the sieves in order.
-			for( String sieveClass : sieveClasses ) {
-					System.out.println("\tSieve " + sieveClass);
-					
-					// Create this sieve.
-					Sieve sieve = createSieveInstance(sieveClass);
-					if( sieve == null ) break;
-					
-					// Run this sieve
-					List<TLink> newLinks = sieve.annotate(info, docname, currentTLinks);
-					
-					// Verify the links as non-conflicting.
-					removeConflicts(currentTLinks, newLinks);
-					
-					// Add the good links to our current list.
-					currentTLinks.addAll(newLinks);
+			for( int xx = 0; xx < sieves.length; xx++ ) {
+				Sieve sieve = sieves[xx];
+				if( sieve == null ) continue;
+				System.out.println("\tSieve " + sieve.getClass().toString());
+
+				// Run this sieve
+				List<TLink> newLinks = sieve.annotate(info, docname, currentTLinks);
+
+				// Verify the links as non-conflicting.
+				removeConflicts(currentTLinks, newLinks);
+
+				// Add the good links to our current list.
+				currentTLinks.addAll(newLinks);
 			}
 			
 			// Add links to InfoFile.
@@ -120,15 +130,12 @@ public class Main {
 		}
 
 		// Create all the sieves first.
-		Sieve sieves[] = new Sieve[sieveClasses.length];
-		for( int xx = 0; xx < sieveClasses.length; xx++ )
-			sieves[xx] = createSieveInstance(sieveClasses[xx]);
+		Sieve sieves[] = createAllSieves(sieveClasses);
 		
+		// Empty TLink list and counts.
+		List<TLink> currentTLinks = new ArrayList<TLink>();
 		Counter<String> numCorrect = new ClassicCounter<String>();
 		Counter<String> numIncorrect = new ClassicCounter<String>();
-		
-		// Empty tlink list.
-		List<TLink> currentTLinks = new ArrayList<TLink>();
 		
 		// Loop over documents.
 		for( String docname : info.getFiles() ) {
