@@ -14,11 +14,9 @@ import edu.jhu.hlt.concrete.Concrete.TokenTagging.TaggedToken;
 import edu.jhu.hlt.concrete.Concrete.Tokenization.Kind;
 import edu.jhu.hlt.concrete.util.IdUtil;
 import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.ling.Label;
 import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeFactory;
-import edu.stanford.nlp.trees.TypedDependency;
 
 /**
  * Methods to help with using Concrete (https://github.com/hltcoe/concrete) data sources
@@ -478,14 +476,13 @@ public class ConcreteUtil {
 				}
 				
 				if (tokenization != null && sentence.getParseCount() > 0) {
-						Tree parseTree = ConcreteUtil.communicationParseToTree(sentence.getParse(0), tokenization);
-						if (parseTree != null)
-							sParse = parseTree.toString();
+					Tree parseTree = ConcreteUtil.communicationParseToTree(sentence.getParse(0), tokenization);
+					if (parseTree != null)
+						sParse = parseTree.toString();
 				}
 				
 				if (sentence.getDependencyParseCount() > 0) {
-					/* FIXME */
-					
+					sDeps = ConcreteUtil.communicationDependencyParseToString(sentence.getDependencyParse(0), tokenization);
 				}
 					
 				info.addSentence(ConcreteUtil.filenameFromCommunication(comm), 
@@ -500,6 +497,59 @@ public class ConcreteUtil {
 			}
 		}
 		
+	}
+	
+	private static String communicationDependencyParseToString(DependencyParse depParse, Tokenization tokenization) {
+		/* FIXME: Unresolved issues
+		 * - Assumes that the given tokenization matches the tokens given in the dependency parse
+		 * - Assumes number of tokens in tokenization is short, and iterates over them to search for token ids
+		 */
+		StringBuilder depStr = new StringBuilder();
+		
+		List<DependencyParse.Dependency> deps = depParse.getDependencyList();
+		for (DependencyParse.Dependency dep : deps) {
+			if (!dep.hasDep() || !dep.hasEdgeType() || !dep.hasGov())
+				continue;
+			
+			TokenRef dependent = dep.getDep();
+			TokenRef governing = dep.getGov();
+			String depType = dep.getEdgeType();
+			
+			if (!dependent.getTokenization().equals(tokenization.getUuid())
+			 || !governing.getTokenization().equals(tokenization.getUuid())
+			 || !dependent.hasTokenId() || !governing.hasTokenId())
+				continue;
+		
+			String governingStr = null, dependentStr = null;
+			for (Token token : tokenization.getTokenList()) {
+				if (!token.hasText())
+					continue;
+				
+				if (token.getTokenId() == dependent.getTokenId()) {
+					dependentStr = token.getText();
+				}
+				
+				if (token.getTokenId() == governing.getTokenId()) {
+					governingStr = token.getText();
+				}
+			}
+			
+			if (governingStr == null || dependentStr == null)
+				continue;
+			
+			depStr.append(depType)
+						.append("(")
+						.append(governingStr)
+						.append("-")
+						.append(governing.getTokenId())
+						.append(", ")
+						.append(dependentStr)
+						.append("-")
+						.append(dependent.getTokenId())
+						.append(")\n");
+		}
+		
+		return depStr.toString();
 	}
 	
 	private static Tree communicationParseToTree(Parse parse, Tokenization tokens) {
@@ -643,134 +693,6 @@ public class ConcreteUtil {
 		}
 		
 		return communications;
-	}
-	
-	private static String textDataFromInfoFile(InfoFile info, String file, List<Sentence> sentences) {
-		/* FIXME: Outstanding issues and questions
-		 * - Still need to do dependency and parse conversion
-		 * - Assumed token text is just the coreLabel's "value" (instead of "original text")
-		 * 	- Not sure how begin and end position in core label relate to this?  Are they what should be used by text span?
-		 * - Used iterator to fill in token_ids
-		 * - It seems like InfoFile should have a method for returning just the text of the file
-		 *    - Instead of just in terms of CoreLabels and sentences...
-		 *    - It looks like the sentences in the example info file are constructed incorrectly (there is a space before each period)
-		 *    - I reconstructed text by taking each CoreLabels middle value and last value (since first and last
-		 *      values of consecutive CoreLabels overlap
-		 *  - Why are the dependency trees not part of the infofile sentence objects?
-		 *  - Currently, I assume that all InfoFile sentences have parse and dependency trees, is that okay?
-		 */
-		
-		StringBuilder text = new StringBuilder();
-		List<timesieve.Sentence> infoSentences = info.getSentences(file);
-		List<String> dependencyStrs = info.getDependencies(file);
-		
-		if (infoSentences.size() != dependencyStrs.size())
-			throw new IllegalArgumentException();
-		
-		for (int i = 0; i < infoSentences.size(); i++) {
-			List<Token> tokens = new ArrayList<Token>();
-			List<TaggedToken> lemmas = new ArrayList<TaggedToken>();
-			List<TaggedToken> nerTags = new ArrayList<TaggedToken>();
-			List<TaggedToken> posTags = new ArrayList<TaggedToken>();
-			
-			timesieve.Sentence infoSentence = infoSentences.get(i);
-			List<CoreLabel> coreLabels = infoSentence.tokens();
-			int tokenId = 0;
-			for (CoreLabel coreLabel : coreLabels) {
-				if (coreLabel.lemma() != null) {
-					lemmas.add(
-						TaggedToken.newBuilder()
-							.setTag(coreLabel.lemma())
-							.setTokenId(tokenId)
-							.build()
-					);
-				}
-				
-				if (coreLabel.ner() != null) {
-					nerTags.add(
-						TaggedToken.newBuilder()
-							.setTag(coreLabel.ner())
-							.setTokenId(tokenId)
-							.build()
-					);					
-				}
-				
-				if (coreLabel.tag() != null) {
-					posTags.add(
-						TaggedToken.newBuilder()
-							.setTag(coreLabel.tag())
-							.setTokenId(tokenId)
-							.build()
-					);						
-				}
-				
-				tokens.add(
-					Token.newBuilder()
-						.setTokenId(tokenId)
-						.setTextSpan(
-							TextSpan.newBuilder()
-								.setStart(coreLabel.beginPosition())
-								.setEnd(coreLabel.endPosition())
-								.build()
-					  )
-						.setText(coreLabel.value())
-						.build()
-				);
-				
-				tokenId++;
-			}
-			
-			//Tree parseTree = Tree.valueOf(parseStr);
-			Parse parse = null;
-			/* FIXME: Do Parse */
-			
-			//TypedDependency dependencyTree = TreeOperator.stringToDependency(dependencyStr);
-			DependencyParse dependencyParse = null;
-			/* FIXME: Do Dependency */
-			
-			text.append(infoSentence.sentence());
-			
-			sentences.add(
-				Sentence.newBuilder()
-					.setUuid(IdUtil.generateUUID())
-					.setTextSpan(
-						TextSpan.newBuilder()
-							.setStart(text.length()-infoSentence.sentence().length())
-							.setEnd(text.length())
-							.build()
-					)
-					.addTokenization(
-						Tokenization.newBuilder()
-							.setUuid(IdUtil.generateUUID())
-							.setKind(Kind.TOKEN_LIST)
-							.addPosTags(
-								TokenTagging.newBuilder()
-									.setUuid(IdUtil.generateUUID())
-									.addAllTaggedToken(posTags)
-									.build()
-							)
-							.addNerTags(
-								TokenTagging.newBuilder()
-									.setUuid(IdUtil.generateUUID())
-									.addAllTaggedToken(nerTags)
-									.build()
-							)
-							.addLemmas(
-									TokenTagging.newBuilder()
-										.setUuid(IdUtil.generateUUID())
-										.addAllTaggedToken(lemmas)
-										.build()
-							)
-							.addAllToken(tokens)
-							.build()
-					)
-					.addParse(parse)
-					.addDependencyParse(dependencyParse)
-					.build()
-			);
-		}
-		
-		return text.toString();
 	}
 	
 	private static void timexEntitiesFromInfoFile(InfoFile info, String file, List<Entity> entities, List<EntityMention> entityMentions, HashMap<String, UUID> timexIdMap) {
@@ -931,6 +853,171 @@ public class ConcreteUtil {
 					.setConfidence((float)tlink.relationConfidence())
 					.build()
 			);
+		}
+	}
+	
+	private static String textDataFromInfoFile(InfoFile info, String file, List<Sentence> sentences) {
+		/* FIXME: Outstanding issues and questions
+		 * - Still need to do dependency and parse conversion
+		 * - Assumed token text is just the coreLabel's "value" (instead of "original text")
+		 * 	- Not sure how begin and end position in core label relate to this?  Are they what should be used by text span?
+		 * - Used iterator to fill in token_ids
+		 * - It seems like InfoFile should have a method for returning just the text of the file
+		 *    - Instead of just in terms of CoreLabels and sentences...
+		 *    - It looks like the sentences in the example info file are constructed incorrectly (there is a space before each period)
+		 *    - I reconstructed text by taking each CoreLabels middle value and last value (since first and last
+		 *      values of consecutive CoreLabels overlap
+		 *  - Why are the dependency trees not part of the infofile sentence objects?
+		 *  - Currently, I assume that all InfoFile sentences have parse and dependency trees, is that okay?
+		 */
+		
+		StringBuilder text = new StringBuilder();
+		List<timesieve.Sentence> infoSentences = info.getSentences(file);
+		List<String> dependencyStrs = info.getDependencies(file);
+		
+		if (infoSentences.size() != dependencyStrs.size())
+			throw new IllegalArgumentException();
+		
+		for (int i = 0; i < infoSentences.size(); i++) {
+			List<Token> tokens = new ArrayList<Token>();
+			List<TaggedToken> lemmas = new ArrayList<TaggedToken>();
+			List<TaggedToken> nerTags = new ArrayList<TaggedToken>();
+			List<TaggedToken> posTags = new ArrayList<TaggedToken>();
+			
+			timesieve.Sentence infoSentence = infoSentences.get(i);
+			List<CoreLabel> coreLabels = infoSentence.tokens();
+			int tokenId = 0;
+			for (CoreLabel coreLabel : coreLabels) {
+				if (coreLabel.lemma() != null) {
+					lemmas.add(
+						TaggedToken.newBuilder()
+							.setTag(coreLabel.lemma())
+							.setTokenId(tokenId)
+							.build()
+					);
+				}
+				
+				if (coreLabel.ner() != null) {
+					nerTags.add(
+						TaggedToken.newBuilder()
+							.setTag(coreLabel.ner())
+							.setTokenId(tokenId)
+							.build()
+					);					
+				}
+				
+				if (coreLabel.tag() != null) {
+					posTags.add(
+						TaggedToken.newBuilder()
+							.setTag(coreLabel.tag())
+							.setTokenId(tokenId)
+							.build()
+					);						
+				}
+				
+				tokens.add(
+					Token.newBuilder()
+						.setTokenId(tokenId)
+						.setTextSpan(
+							TextSpan.newBuilder()
+								.setStart(coreLabel.beginPosition())
+								.setEnd(coreLabel.endPosition())
+								.build()
+					  )
+						.setText(coreLabel.value())
+						.build()
+				);
+				
+				tokenId++;
+			}
+			
+			Tokenization tokenization = Tokenization.newBuilder()
+			.setUuid(IdUtil.generateUUID())
+			.setKind(Kind.TOKEN_LIST)
+			.addPosTags(
+				TokenTagging.newBuilder()
+					.setUuid(IdUtil.generateUUID())
+					.addAllTaggedToken(posTags)
+					.build()
+			)
+			.addNerTags(
+				TokenTagging.newBuilder()
+					.setUuid(IdUtil.generateUUID())
+					.addAllTaggedToken(nerTags)
+					.build()
+			)
+			.addLemmas(
+					TokenTagging.newBuilder()
+						.setUuid(IdUtil.generateUUID())
+						.addAllTaggedToken(lemmas)
+						.build()
+			)
+			.addAllToken(tokens)
+			.build();
+			
+			
+			Tree parseTree = Tree.valueOf(infoSentence.parse());
+			Parse parse = ConcreteUtil.infoFileTreeToParse(parseTree, tokenization);
+			
+			//TypedDependency dependencyTree = TreeOperator.stringToDependency(dependencyStr);
+			DependencyParse dependencyParse = null;
+			/* FIXME: Do Dependency */
+			
+			text.append(infoSentence.sentence());
+			
+			sentences.add(
+				Sentence.newBuilder()
+					.setUuid(IdUtil.generateUUID())
+					.setTextSpan(
+						TextSpan.newBuilder()
+							.setStart(text.length()-infoSentence.sentence().length())
+							.setEnd(text.length())
+							.build()
+					)
+					.addTokenization(tokenization)
+					.addParse(parse)
+					.addDependencyParse(dependencyParse)
+					.build()
+			);
+		}
+		
+		return text.toString();
+	}
+	
+	
+	private static Parse infoFileTreeToParse(Tree tree, Tokenization tokens) {
+		/* FIXME: Outstanding issues and questions
+		 * 	- Only has token sequence at leaves
+		 *  
+		 */
+		
+		return Parse.newBuilder()
+			.setUuid(IdUtil.generateUUID())
+			.setRoot(ConcreteUtil.infoFileTreeToParseHelper(tree, new int[]{0}, 0, tree.getLeaves().size(), tokens))
+			.build();
+	}
+	
+	private static Parse.Constituent infoFileTreeToParseHelper(Tree tree, int[] nodeIter, int leftTokenBound, int rightTokenBound, Tokenization tokens) {
+		if (tree.isLeaf()) {
+			List<Integer> tokenIds = new ArrayList<Integer>();
+			List<Token> tokenList = tokens.getTokenList();
+			for (int i = leftTokenBound; i < rightTokenBound; i++)
+				if (tokenList.get(i).hasTokenId())
+					tokenIds.add(tokenList.get(i).getTokenId());
+			
+			return Parse.Constituent.newBuilder()
+				.setId(nodeIter[0]++)
+				.setTag(tree.value())
+				.setTokenSequence(
+					TokenRefSequence.newBuilder()
+						.setTokenization(tokens.getUuid())
+						.addAllTokenId(tokenIds)
+						.build()
+				)
+				.build();
+		} else {
+			/* FIXME */
+			return null;
 		}
 	}
 }
