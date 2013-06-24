@@ -141,6 +141,7 @@ def check_annotation_documents_for_proper_formatting(annoFileDir, fnameToAnnotat
                 if not re_annotation_line.match(line):
                     FIX_FILE = True
                     line = line.replace('\t', ' ')
+                    line = re.sub("\s+"," ",line)
                     line = '\t'.join(line.split())
                     line = line.strip() + '\n'
                     if re_annotation_line.match(line):
@@ -184,7 +185,7 @@ check_annotation_documents_for_proper_formatting(annoFileDir, fnameToAnnotators)
 check_annotation_documents_for_duplicates(annoFileDir, fnameToAnnotators)
 
 #check to see if any pairs were missed or added during annotation
-check_annotation_documents_for_mismatching_pairs(annoFileDir, annoOriginalDir, fnameToAnnotators)
+x=check_annotation_documents_for_mismatching_pairs(annoFileDir, annoOriginalDir, fnameToAnnotators)
 
 '''
 #check to see if any files vary in number of lines across annotator
