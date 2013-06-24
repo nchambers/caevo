@@ -18,9 +18,12 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeFactory;
 
 /**
- * 
- * 
- * Only considers event/time pairs in the same sentence.
+ * The idea is that when a quarter expression like first, second, third, fourth
+ * quarter, appears directly after a reporting verb, it tends to be the case that
+ * the expression is not a temporal argument but rather modifies one of the verbs 
+ * arguments. For example "company reported third quarter losses of $3 million...",
+ * "third quarter" modifies" losses, and "third quarter losses" is itself an argument
+ * of "reported".
  * 
  * @author cassidy
  */
