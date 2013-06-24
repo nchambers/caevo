@@ -1,0 +1,5 @@
+average accuracy: 0.643169990693
+overall accuracy: 0.631195998181
+total pairs: 8458
+total annotated pairs: 8796
+total annotated pairs: 17592

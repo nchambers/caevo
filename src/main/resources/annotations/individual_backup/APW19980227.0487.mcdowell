@@ -210,6 +210,7 @@ e30	e36	a
 e30	e37	b
 e33	e34	b
 e33	e36	v
+e33	e36	v
 e33	e37	v
 e34	e35	v
 e34	e36	v
@@ -367,6 +368,7 @@ e60	e64	v
 e60	e65	v
 e60	e66	v
 e61	e62	b
+e61	e63	v
 e61	e63	v
 e61	e64	v
 e61	e65	v

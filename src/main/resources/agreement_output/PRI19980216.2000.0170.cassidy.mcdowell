@@ -1,0 +1,11 @@
+Total pairs: 121
+Matched: 98
+Not Matched: 23
+Accuracy: 0.809917355371901
+	b	a	i	ii	s	v
+b	34			3		4	
+a		36				1	
+i	2		5			4	
+ii	1			5			
+s					4	1	
+v	2	2	1	2		14	
