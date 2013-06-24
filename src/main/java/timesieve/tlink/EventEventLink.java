@@ -14,11 +14,6 @@ public class EventEventLink extends TLink {
   public EventEventLink(String e1, String e2, TYPE rel, boolean closed) {
     super(e1,e2,rel,closed);
   }
-  public EventEventLink(String e1, String eiid1, String e2, String eiid2, TYPE rel, boolean closed) {
-    super(e1,e2,rel,closed);
-    this.eiid1 = eiid1;
-    this.eiid2 = eiid2;
-  }
 
   public EventEventLink(Element el) {
     super(el);
