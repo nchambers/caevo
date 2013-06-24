@@ -1,6 +1,7 @@
 package timesieve;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -14,15 +15,21 @@ import edu.stanford.nlp.stats.Counter;
 import edu.stanford.nlp.util.StringUtils;
 
 /**
- * Controls all Sieve processing including tlink annotating, closure, and the core programming.
+ * Controls all Sieve processing including TLink annotating, closure, and the core programming.
+ * 
+ * java Main -info <filepath> gauntlet
+ * - Tests the sieves independently and calculates individual precision.
  * 
  * java Main -info <filepath>  
+ * - Runs the sieve pipeline.
  * 
  * @author chambers
  */
 public class Main {
 	InfoFile info;
+	Closure closure;
 	String outpath = "sieve-output.xml";
+	boolean debug = true;
 	
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = { 
@@ -40,6 +47,15 @@ public class Main {
 		if( props.containsKey("info") ) {
 			System.out.println("Checking for infofile at " + props.getProperty("info"));
 			info = new InfoFile(props.getProperty("info"));
+		}
+		
+		// Initialize the transitive closure code. 
+		try {
+			closure = new Closure();
+		} catch( IOException ex ) {
+			System.out.println("ERROR: couldn't load Closure utility.");
+			ex.printStackTrace();
+			System.exit(1);
 		}
 	}
 	
@@ -101,11 +117,22 @@ public class Main {
 				// Run this sieve
 				List<TLink> newLinks = sieve.annotate(info, docname, currentTLinks);
 
+				if( debug ) System.out.println("\t\t" + newLinks.size() + " new links.");
+//				if( debug ) System.out.println("\t\t" + newLinks);
+				
 				// Verify the links as non-conflicting.
-				removeConflicts(currentTLinks, newLinks);
+				int numRemoved = removeConflicts(currentTLinks, newLinks);
 
+				if( debug ) System.out.println("\t\tRemoved " + numRemoved + " proposed links.");
+				
 				// Add the good links to our current list.
 				currentTLinks.addAll(newLinks);
+				
+				// Run closure.
+				if( newLinks.size() > 0 ) {
+					int numClosed = closureExpand(currentTLinks);
+					if( debug ) System.out.println("\t\tClosure produced " + numClosed + " links.");
+				}
 			}
 			
 			// Add links to InfoFile.
@@ -184,16 +211,49 @@ public class Main {
 
 	/**
 	 * DESTRUCTIVE FUNCTION (proposedLinks will be modified)
-	 * Uses transitive closure rules to identify links that were proposed, but lead to conflicts.
-	 * Removes any links from the proposed list that conflict.
+	 * Removes any links from the proposed list that already have links between the same pairs in currentLinks.
 	 * @param currentLinks The list of current "good" links.
 	 * @param proposedLinks The list of proposed new links.
+	 * @return The number of links removed.
 	 */
-	private void removeConflicts(List<TLink> currentLinks, List<TLink> proposedLinks) {
-		// TODO
+	private int removeConflicts(List<TLink> currentLinks, List<TLink> proposedLinks) {
+		List<TLink> removals = new ArrayList<TLink>();
+		for( TLink proposed : proposedLinks ) {
+			for( TLink current : currentLinks ) {
+				if( current.coversSamePair(proposed) )
+					removals.add(proposed);
+			}
+		}
+		
+		for( TLink remove : removals )
+			proposedLinks.remove(remove);
+		
+		return removals.size();
+	}
+	
+	/**
+	 * DESTRUCTIVE FUNCTION (links may have new TLink objects appended to it)
+	 * Run transitive closure and add any inferred links.
+	 * @param links The list of TLinks to expand with transitive closure.
+	 */
+	private int closureExpand(List<TLink> links) {
+		List<TLink> newlinks = closure.computeClosure(links);
+
+		links.addAll(newlinks);
+		return newlinks.size();
 	}
 	
 	
+	/**
+	 * Main. Multiple run modes:
+	 * 
+	 * main -info <filepath> gauntlet
+	 * - Tests the sieves independently and calculates individual precision.
+	 * 
+	 * main -info <filepath>
+	 * - Runs the sieve pipeline.
+	 * 
+	 */
 	public static void main(String[] args) {
 		Properties props = StringUtils.argsToProperties(args);
 		Main main = new Main(args);

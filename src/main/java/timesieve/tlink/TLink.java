@@ -127,6 +127,19 @@ public class TLink implements Comparable<TLink> {
   }
   
   /**
+   * True if the two TLinks link the same two events, ignoring relation type.
+   * @param other The other TLink.
+   * @return True if the same events, false otherwise.
+   */
+  public boolean coversSamePair(TLink other) {
+  	if( event1.equals(other.event1()) && event2.equals(other.event2()) )
+  		return true;
+  	if( event2.equals(other.event1()) && event1.equals(other.event2()) )
+  		return true;
+  	return false;
+  }
+  
+  /**
    * Turn this TLink's relation into the reduced set: BEFORE,AFTER,OVERLAP
    */
   public void changeFullMode(MODE mode) {
