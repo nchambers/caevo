@@ -3,6 +3,7 @@ package timesieve;
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -77,7 +78,7 @@ import timesieve.tlink.*;
  */
 public class Tempeval3Parser {
   String baseDir = "/home/nchamber/corpora/tempeval3/TBAQ-cleaned";
-  String _serializedGrammar = "/home/nchamber/code/resources/englishPCFG.ser.gz";
+  String _serializedGrammar = "/englishPCFG.ser.gz";
   String posTaggerData = "/home/nchamber/code/resources/english-left3words-distsim.tagger";
   private String _nerPath = "/home/nchamber/code/resources/all.3class.distsim.crf.ser.gz";
   String outputFile = "tempeval3.xml";
@@ -106,13 +107,17 @@ public class Tempeval3Parser {
   
   InfoFile _infofile = null;
   InfoFile _trainInfofile = null;
+
+  boolean debug = false;
   
 
   public Tempeval3Parser(String[] args) {
     handleParameters(args);
     
     // Init parsers.
+//    URL grammarURL = Tempeval3Parser.class.getResource(_serializedGrammar);
     _parser = Ling.createParser(_serializedGrammar);
+    
     TreebankLanguagePack tlp = new PennTreebankLanguagePack();
     _gsf = tlp.grammaticalStructureFactory();
     _tf = new LabeledScoredTreeFactory();
@@ -232,7 +237,7 @@ public class Tempeval3Parser {
     		Timex dct = getDocumentCreationTime(doc);
     		if( dct != null ) _infofile.addCreationTime(doc, dct);
 
-    		//      if( numdocs % 2 == 1 ) break;
+//    		if( numdocs % 2 == 1 ) break;
     		numdocs++;
     	}
     }
@@ -386,7 +391,7 @@ public class Tempeval3Parser {
       if( tokens.get(tokeni) instanceof CoreLabel )
         token = ((CoreLabel)tokens.get(tokeni)).get(CoreAnnotations.OriginalTextAnnotation.class);
       
-      System.out.println("Checking __" + subraw + "__ with __" + token + "__");
+      if( debug ) System.out.println("Checking __" + subraw + "__ with __" + token + "__");
       
       if( subraw.startsWith(token) ) {
         rawi += token.length();
@@ -401,7 +406,7 @@ public class Tempeval3Parser {
       }
       // Reached an end of sentence, where the Stanford tokenizer added punctuation that wasn't in the raw text.
       else if( token.equals(".") && tokeni == tokens.size()-1 ) {
-        System.out.println("End of sentence reached in middle of text (rawi=" + rawi + ").");
+        if( debug ) System.out.println("End of sentence reached in middle of text (rawi=" + rawi + ").");
         return new Pair<Integer,Boolean>(rawi, true);
       }
       else if( subraw.charAt(0) == '.' && (subraw.length() == 1 || subraw.matches("^\\.\\s.*")) ) {
@@ -423,14 +428,16 @@ public class Tempeval3Parser {
     
     // Finished all tokens, but not the raw text.
     if( rawi < rawtext.length() ) {
-      System.out.println("Enddd of sentence reached in middle of text.");
-      System.out.println("rawtext=" + rawtext);
-      System.out.println("rawi=" + rawi);
+      if( debug ) {
+      	System.out.println("Enddd of sentence reached in middle of text.");
+      	System.out.println("rawtext=" + rawtext);
+      	System.out.println("rawi=" + rawi);
+      }
       return new Pair<Integer,Boolean>(rawi, true);
     }
       
     // Reached the end of the raw text. Not necessarily end of tokens, just return where we are.
-    System.out.println("RETURNING " + tokeni + " of " + tokens.size());
+    if( debug ) System.out.println("RETURNING " + tokeni + " of " + tokens.size());
     return new Pair<Integer,Boolean>(tokeni, false);
   } 
   
@@ -566,13 +573,13 @@ public class Tempeval3Parser {
 
     //    List<List<HasWord>> sentences = new ArrayList<List<HasWord>>();
     List<List<HasWord>> sentencesNormInvertible = new ArrayList<List<HasWord>>();
-    System.out.println(timebankSplits);
+    if( debug ) System.out.println(timebankSplits);
     for( String split : timebankSplits ) {
-      System.out.println("***" + split + "+++");
+      if( debug ) System.out.println("***" + split + "+++");
 //      sentences.addAll(Ling.getSentencesFromText(split));
       sentencesNormInvertible.addAll(Ling.getSentencesFromTextNormInvertible(split));
     }
-    System.out.println("Got " + sentencesNormInvertible.size() + " sentences.");
+    if( debug ) System.out.println("Got " + sentencesNormInvertible.size() + " sentences.");
 
     if( sentencesNormInvertible.size() > 0 ) {
       String trailingWhite = trailingWhitespace(allraw);
@@ -581,15 +588,15 @@ public class Tempeval3Parser {
       cl.set(CoreAnnotations.AfterAnnotation.class, trailingWhite);
     }
     
-    System.out.println("Original:");
-    System.out.println(allraw);
+    if( debug ) System.out.println("Original:");
+    if( debug ) System.out.println(allraw);
     
     // Loop over the Stanford tokenized sentences.
     for( List<HasWord> sentence : sentencesNormInvertible ) {
       List<TextEvent> localEvents = new ArrayList<TextEvent>();
       List<Timex> localTimex      = new ArrayList<Timex>();
-      System.out.println("Checking sentence: " + listToString(sentence));
-      System.out.println("rawstart = " + rawstart);
+      if( debug ) System.out.println("Checking sentence: " + listToString(sentence));
+      if( debug ) System.out.println("rawstart = " + rawstart);
       int wordi = 0;
             
       while( childi < children.getLength() ) {
@@ -605,7 +612,7 @@ public class Tempeval3Parser {
           else {
             //          if( rawstart > 0 ) str = str.substring(rawstart);
             //          rawstart = 0;
-            System.out.println("str=" + str + " and wordi=" + wordi);
+          	if( debug ) System.out.println("str=" + str + " and wordi=" + wordi);
             Pair<Integer,Boolean> pair = advance(str, sentence, rawstart, wordi);
             if( pair.second() ) { // sentence split in middle of this text node.
               rawstart = pair.first();
@@ -622,7 +629,7 @@ public class Tempeval3Parser {
         else if( child.getNodeType() == Node.ELEMENT_NODE ) {
           String str = child.getTextContent();
           int starti = wordi;
-          System.out.println("element with wordi=" + wordi);
+          if( debug ) System.out.println("element with wordi=" + wordi);
           Pair<Integer,Boolean> pair = advance(str, sentence, 0, wordi);
           // If sentence split, but the raw text pointer didn't move...then it was the
           // Stanford parser adding extra periods. Just move on to start at the next sentence.
@@ -645,7 +652,7 @@ public class Tempeval3Parser {
             fillInEventAttributes(event);
 //            eiidToID.put(event.eiid(), event.id()); // used later in TLink creation.
             seenEventIDs.add(event.id());            
-            System.out.println("created event: " + event);
+            if( debug ) System.out.println("created event: " + event);
             localEvents.add(event);
           }
           // TIMEX elements.
@@ -679,7 +686,7 @@ public class Tempeval3Parser {
       
       Pair<String,String> parseDep = parseDep(sentence);
 //      String invertibleTokens = generateInvertibleString(sentence);
-      System.out.println("before addSentence with events=" + localEvents);
+      if( debug ) System.out.println("before addSentence with events=" + localEvents);
 //      System.out.println("invertibleTokens:\n" + invertibleTokens);
       List<CoreLabel> cls = new ArrayList<CoreLabel>();
       for( HasWord word : sentence ) cls.add((CoreLabel)word);
@@ -806,7 +813,7 @@ public class Tempeval3Parser {
     Element textElement = (Element)doc.getElementsByTagName("TEXT").item(0);
     
     String justtext = textElement.getTextContent();
-    System.out.println("got: " + justtext);
+    if( debug ) System.out.println("got: " + justtext);
     
     intrepetXMLText(textElement, timebankFile);
   }
@@ -890,7 +897,7 @@ public class Tempeval3Parser {
     String eiid = event;
     String relatedEiid = relatedEvent;
     
-    System.out.println(event + "\t" + relatedEvent + "\t" + relatedTime + "\t" + time + "\t" + relType);
+    if( debug ) System.out.println(event + "\t" + relatedEvent + "\t" + relatedTime + "\t" + time + "\t" + relType);
 
     // Map EIID to ID for the events. 
     if( event != null && event.length() > 0 ) {
@@ -918,18 +925,18 @@ public class Tempeval3Parser {
     // Create the tlink object.
     if( event != null && event.length() > 0 && relatedEvent != null && relatedEvent.length() > 0 ) {
     	TLink thelink = new EventEventLink(event, relatedEvent, TLink.TYPE.valueOf(relType));
-    	thelink.eiid1 = eiid;
-    	thelink.eiid2 = relatedEiid;
+//    	thelink.eiid1 = eiid;
+//    	thelink.eiid2 = relatedEiid;
     	return thelink;
     }
     if( event != null && event.length() > 0 && relatedTime != null && relatedTime.length() > 0 ) {
     	TLink thelink = new EventTimeLink(event, relatedTime, TLink.TYPE.valueOf(relType));
-    	thelink.eiid1 = eiid;
+//    	thelink.eiid1 = eiid;
     	return thelink;
     }
     if( time != null && time.length() > 0 && relatedEvent != null && relatedEvent.length() > 0 ) {
     	TLink thelink = new EventTimeLink(time, relatedEvent, TLink.TYPE.valueOf(relType));
-    	thelink.eiid2 = relatedEiid;
+//    	thelink.eiid2 = relatedEiid;
     	return thelink;
     }
     if( time != null && time.length() > 0 && relatedTime != null && relatedTime.length() > 0 )
@@ -1014,7 +1021,7 @@ public class Tempeval3Parser {
     	eiidToID.put(eiid, eid);
     	if( !idToEiids.containsKey(eid) ) idToEiids.put(eid, new ArrayList<String>());
     	idToEiids.get(eid).add(eiid);
-    	System.out.println("Added MakeInstance " + eid + " to " + eiid);
+    	if( debug ) System.out.println("Added MakeInstance " + eid + " to " + eiid);
     }
   }
 
@@ -1188,7 +1195,6 @@ public class Tempeval3Parser {
   private static InfoFile lexParsedToDeps(String filepath, List<String> stringParses, TreeFactory tf, GrammaticalStructureFactory gsf) {
   	InfoFile info = new InfoFile();
 
-  	System.out.println("Dependency parsing:");
   	int sid = 0;
   	for( String strParse : stringParses ) {
   		//      System.out.println("* " + strParse);
@@ -1276,12 +1282,14 @@ public class Tempeval3Parser {
         System.out.println("Sentence failed to parse: " + sentence);
         System.exit(-1);
       }
+
       String parseString = ansTree.toString();
 
-      StringWriter treeStrWriter = new StringWriter();
-      TreePrint tp = new TreePrint("penn");
-      tp.printTree(ansTree, new PrintWriter(treeStrWriter,true));
-      parseString = treeStrWriter.toString();
+      // This generally works to pretty print on multiple lines, but not on windows. Carriage returns are a nightmare.
+//      StringWriter treeStrWriter = new StringWriter();
+//      TreePrint tp = new TreePrint("penn");
+//      tp.printTree(ansTree, new PrintWriter(treeStrWriter,true));
+//      parseString = treeStrWriter.toString();
       
       List<Tree> leaves = TreeOperator.leavesFromTree(ansTree);
       int ii = 0;
