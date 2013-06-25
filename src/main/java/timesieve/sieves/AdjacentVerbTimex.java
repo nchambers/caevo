@@ -48,7 +48,7 @@ public class AdjacentVerbTimex implements Sieve {
 		// Make BEFORE links between all intra-sentence pairs.
 		int sid = 0;
 		for( Sentence sent : info.getSentences(docname) ) {
-			System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+			//System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
 			Tree sentParseTree = sidToTree(sid, allParseStrings);
 			for (Timex timex : allTimexes.get(sid)) {
 				for (TextEvent event : allEvents.get(sid)) {
@@ -63,7 +63,7 @@ public class AdjacentVerbTimex implements Sieve {
 			sid++;
 			}
 			
-		System.out.println("TLINKS: " + proposed);
+		//System.out.println("TLINKS: " + proposed);
 		return proposed;
 	}
 	

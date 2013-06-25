@@ -28,12 +28,15 @@ import edu.stanford.nlp.trees.TreeFactory;
  * @author cassidy
  */
 public class QuarterSieveReporting implements Sieve {
+	// Regex checks if timex value indicates a quarter
 	private String valQuarterRegex = "\\d{4}-Q\\d";
 	private Pattern valQuarter = Pattern.compile(valQuarterRegex);
+	// Regex to ensure that the text looks like "Xth quarter"
 	private String textQuarterRegex = 
 			"(first|second|third|fourth|1st|2nd|3rd|4th)(\\s|-)quarter";
 	private Pattern textQuarter = Pattern.compile(textQuarterRegex);
 	
+	// create TreeFactory to convert a sentence to a tree
 	private static TreeFactory tf = new LabeledScoredTreeFactory();
 	/**
 	 * The main function. All sieves must have this.
@@ -43,20 +46,27 @@ public class QuarterSieveReporting implements Sieve {
 		// The inner list is the events in textual order.
 		List<List<TextEvent>> allEvents = info.getEventsBySentence(docname);
 		List<List<Timex>> allTimexes = info.getTimexesBySentence(docname);
+		// list of all parse strings for the document
 		List<String> allParseStrings = info.getParses(docname);
 		
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
 		
-		// Make BEFORE links between all intra-sentence pairs.
+		// check timexes/event pairs in each sentence against sieve criteria.
 		int sid = 0;
 		for( Sentence sent : info.getSentences(docname) ) {
-			System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+			// System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+			// get parse tree of sentence
 			Tree sentParseTree = sidToTree(sid, allParseStrings);
 			for (Timex timex : allTimexes.get(sid)) {
+				// only proceed if timex is of form YYYY-QX
 				if (!validateTimex(timex)) continue;
+				System.out.println("DEBUG: encountered QUARTER timex");
 				for (TextEvent event : allEvents.get(sid)) {
+					// only proceed if event is of type REPORTING
 					if (!validateEvent(event)) continue;
+					// check if timex/event pair satisfy positional criteria
+					// (ie that they occur within one word of one another)
 					int timexIndex = timex.offset();
 					int eventIndex = event.index();
 					if (timexIndex - 1 == eventIndex) {
@@ -74,7 +84,7 @@ public class QuarterSieveReporting implements Sieve {
 			sid++;
 		}
 		
-		System.out.println("TLINKS: " + proposed);
+		//System.out.println("TLINKS: " + proposed);
 		return proposed;
 	}
 	
@@ -112,9 +122,10 @@ public class QuarterSieveReporting implements Sieve {
 	
 	private Boolean validateTimex(Timex timex){
 		String val = timex.value();
+		String text = timex.text();
 		// check if value represent a quarter
 		Matcher matchVal = valQuarter.matcher(val);
-		Matcher matchText = valQuarter.matcher(val);
+		Matcher matchText = valQuarter.matcher(text);
 		if (matchText.matches() && matchVal.matches()) return true;
 		else return false;
 	}

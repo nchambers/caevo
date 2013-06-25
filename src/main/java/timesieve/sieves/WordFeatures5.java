@@ -39,8 +39,8 @@ public class WordFeatures5 implements Sieve {
 		int sid = 0;
 		for ( Sentence sent : sentList ) {
 			if (sid == numSentences - 1) continue;
-			System.out.println("DEBUG: adding tlinks from " + docname + " sentences:\n" + sent.sentence()
-					+ "\n" + sent.sentence());
+			//System.out.println("DEBUG: adding tlinks from " + docname + " sentences:\n" + sent.sentence()
+				//	+ "\n" + sent.sentence());
 			List<TextEvent> allEventsSent = new ArrayList<TextEvent>();
 			allEventsSent.addAll(allEvents.get(sid));
 			allEventsSent.addAll(allEvents.get(sid + 1));
@@ -48,7 +48,7 @@ public class WordFeatures5 implements Sieve {
 			sid ++;
 			}
 		
-		System.out.println("TLINKS: " + proposed);
+		//System.out.println("TLINKS: " + proposed);
 		return proposed;
 	}
 	
@@ -82,8 +82,8 @@ public class WordFeatures5 implements Sieve {
 				}
 			}
 			
-			System.out.println("events: " + events);
-			System.out.println("created tlinks: " + proposed);
+			//System.out.println("events: " + events);
+			//System.out.println("created tlinks: " + proposed);
 			return proposed;
 		}
 

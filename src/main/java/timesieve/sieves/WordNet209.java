@@ -48,8 +48,8 @@ public class WordNet209 implements Sieve {
 		int sid = 0;
 		for ( Sentence sent : sentList ) {
 			if (sid == numSentences - 1) continue;
-			System.out.println("DEBUG: adding tlinks from " + docname + " sentences:\n" + sent.sentence()
-			 										 + "\n" + sent.sentence());
+			//System.out.println("DEBUG: adding tlinks from " + docname + " sentences:\n" + sent.sentence()
+			 		//								 + "\n" + sent.sentence());
 		  // Get all events from the current and following sent and apply allPairsEvents to their
 			// concatenation
 			List<TextEvent> allEventsSent = new ArrayList<TextEvent>();
@@ -59,7 +59,7 @@ public class WordNet209 implements Sieve {
 			sid ++;
 		}
 		
-		System.out.println("TLINKS: " + proposed);
+		//System.out.println("TLINKS: " + proposed);
 		return proposed;
 	}
 	
@@ -89,8 +89,8 @@ public class WordNet209 implements Sieve {
 				}
 			}
 			
-			System.out.println("events: " + events);
-			System.out.println("created tlinks: " + proposed);
+			//System.out.println("events: " + events);
+			//System.out.println("created tlinks: " + proposed);
 			return proposed;
 		}
 

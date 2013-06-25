@@ -33,9 +33,18 @@ public class Main {
 	
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = { 
-			"QuarterSieveReporting",
+			"WordFeatures5",
 			"AllVagueSieve",
-			"StupidSieve"
+			"QuarterSieveReporting",
+			"StupidSieve",
+			"AdjacentVerbTimex",
+			"ReichenbachDG13_1",
+			"ReichenbachDG13_2",
+			"ReichenbachDG13_3",
+			"ReichenbachDG13_4",
+			"WordFeatures64",
+			"WordNet209",
+			"ReportingCreationDay"
 	};
 
 	/**
