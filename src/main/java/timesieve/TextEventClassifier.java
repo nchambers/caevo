@@ -1,9 +1,14 @@
 package timesieve;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.io.PrintWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -11,6 +16,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.zip.GZIPInputStream;
 
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.classify.LinearClassifierFactory;
@@ -96,20 +102,19 @@ public class TextEventClassifier {
     	wordnet = new WordNet(WordNet.findWordnetPath());
   }
   
-  public TextEventClassifier(InfoFile info, String eventmodelDir) {
-  	this(info, eventmodelDir, null);
+  public TextEventClassifier(InfoFile info) {
+  	this(info, null);
   }
   
-  public TextEventClassifier(InfoFile info, String eventmodelDir, String wordnetPath) {
+  public TextEventClassifier(InfoFile info, String wordnetPath) {
   	this.info = info;
-  	this.modelDir = eventmodelDir;
   	if( wordnetPath != null )
   		wordnet = new WordNet(wordnetPath);
   	else if( this.wordnetPath != null )
   		wordnet = new WordNet(wordnetPath);
   	
   	// Read in the event models.
-    readClassifiersFromDirectory();
+  	loadClassifiers();
   }
   
   public void setMinFeatureCutoff(int min) {
@@ -492,19 +497,12 @@ public class TextEventClassifier {
     
   }
   
-  public void readClassifiersFromDirectory() {
-    readClassifiersFromDirectory(modelDir);
-  }
-
-  public void readClassifiersFromDirectory(String dir) {
-  	if( !(new File(dir)).isDirectory() )
-  		System.out.println("Not a directory: " + dir);
-  	else {
-  		eventClassifier  = readClassifierFromFile(dir + File.separator + baseModelName);
-  		tenseClassifier  = readClassifierFromFile(dir + File.separator + baseModelName + "-tense");
-  		aspectClassifier = readClassifierFromFile(dir + File.separator + baseModelName + "-aspect");
-  		classClassifier  = readClassifierFromFile(dir + File.separator + baseModelName + "-class");  		
-  	}
+  public void loadClassifiers() {
+  	String base = "/models/" + baseModelName;
+  	eventClassifier  = readClassifierFromFile(this.getClass().getResource(base));
+  	tenseClassifier  = readClassifierFromFile(this.getClass().getResource(base + "-tense"));
+  	aspectClassifier = readClassifierFromFile(this.getClass().getResource(base + "-aspect"));
+  	classClassifier  = readClassifierFromFile(this.getClass().getResource(base + "-class"));
   }
   
   public Classifier<String,String> readClassifierFromFile(String path) {
@@ -517,7 +515,22 @@ public class TextEventClassifier {
   	}
   	return null;
   }
-  
+
+  public Classifier<String,String> readClassifierFromFile(URL path) {
+  	if( path == null ) System.out.println("ERROR: null classifier path!");
+  	try {
+  		ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new GZIPInputStream(path.openStream())));
+  		Object o = ois.readObject();
+  		ois.close();
+  		Classifier<String,String> classifier = (Classifier<String,String>)o;
+  		return classifier;
+  	} catch(Exception ex) { 
+  		System.out.println("Had fatal trouble loading " + path);
+  		ex.printStackTrace(); System.exit(1); 
+  	}
+  	return null;
+  }
+
   public void infoToFile(String path) {
     info.writeToFile(new File(path));
   }
@@ -530,7 +543,7 @@ public class TextEventClassifier {
     
     // Parse the file.
     info = Tempeval3Parser.rawTextFileToParsed(filepath, parser, gsf);
-    readClassifiersFromDirectory();
+    loadClassifiers();
     extractEvents();
 
     // Output the InfoFile with the events in it.
@@ -570,7 +583,7 @@ public class TextEventClassifier {
   public void markupPreParsedText(String filepath, TreeFactory tf, GrammaticalStructureFactory gsf) {
     // Parse the file.
     info = Tempeval3Parser.lexParsedFileToDepParsed(filepath, tf, gsf);
-    readClassifiersFromDirectory();
+    loadClassifiers();
     extractEvents();
 
     // Output the InfoFile with the events in it.
@@ -618,7 +631,7 @@ public class TextEventClassifier {
     
     // TextEventClassifier -info <infofile> 
     else {
-      classifier.readClassifiersFromDirectory();
+      classifier.loadClassifiers();
       classifier.extractEvents();
     	classifier.infoToFile("withevents.info.xml");
     	System.out.println("Created withevents.info.xml");
