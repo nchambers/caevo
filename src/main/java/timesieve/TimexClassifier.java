@@ -26,10 +26,12 @@ import edu.stanford.nlp.util.CoreMap;
  * @author chambers
  */
 public class TimexClassifier {
-  String _serializedGrammar = "/home/nchamber/code/resources/englishPCFG.ser.gz";
-  String posTaggerData = "/home/nchamber/code/resources/english-left3words-distsim.tagger";
-  private String _nerPath = "/home/nchamber/code/resources/all.3class.distsim.crf.ser.gz";
+  String _serializedGrammar = "edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz";
+  String posTaggerData = "edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger";
+  private String _nerPath = "edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz";
 
+  boolean debug = false;
+  
   AnnotationPipeline timexPipeline = null;
   InfoFile _infofile;
   
@@ -56,7 +58,7 @@ public class TimexClassifier {
    */
   public void markupTimex3() {
     for( String docname : _infofile.getFiles() ) {
-      System.out.println("doc = " + docname);
+      if( debug ) System.out.println("doc = " + docname);
       List<Sentence> sentences = _infofile.getSentences(docname);
       List<Timex> dcts = _infofile.getDocstamp(docname);
       if( dcts.size() > 1 ) {
@@ -64,7 +66,7 @@ public class TimexClassifier {
         System.exit(1);
       }
       String docDate = dcts.get(0).value();
-      System.out.println("markupTimex3 docDate = " + docDate);
+      if( debug ) System.out.println("markupTimex3 docDate = " + docDate);
 //      System.out.println(sentences.size() + " sentences.");
       int tid = 1;
       
@@ -201,7 +203,7 @@ public class TimexClassifier {
       newtimex.setDocFunction(stanfordElement.getAttribute("functionInDocument"));
       // Stanford Timex starts at index 0 in the sentence, not index 1.
       newtimex.setSpan(label.get(CoreAnnotations.TokenBeginAnnotation.class)+1, label.get(CoreAnnotations.TokenEndAnnotation.class)+1);
-      System.out.println("NEW STANFORD TIMEX: " + newtimex);
+      if( debug ) System.out.println("NEW SUTIME TIMEX: " + newtimex);
       newtimexes.add(newtimex);
     }
     return newtimexes;
@@ -219,7 +221,8 @@ public class TimexClassifier {
     props.setProperty("sutime.includeNested", "false");
     props.setProperty("sutime.restrictToTimex3", "true");
     props.setProperty("sutime.teRelHeurLevel", RelativeHeuristicLevel.BASIC.name());
-    props.setProperty("sutime.rules", "edu/stanford/nlp/time/rules/defs.sutime.txt,edu/stanford/nlp/time/rules/english.sutime.txt,edu/stanford/nlp/time/rules/english.holidays.sutime.txt");
+//    props.setProperty("sutime.rules", "edu/stanford/nlp/time/rules/defs.sutime.txt,edu/stanford/nlp/time/rules/english.sutime.txt,edu/stanford/nlp/time/rules/english.holidays.sutime.txt");
+    props.setProperty("sutime.rules", "edu/stanford/nlp/models/sutime/defs.sutime.txt,edu/stanford/nlp/models/sutime/english.sutime.txt,edu/stanford/nlp/models/sutime/english.holidays.sutime.txt");
     System.setProperty("pos.model", posTaggerData);
     
     AnnotationPipeline pipeline = new AnnotationPipeline();

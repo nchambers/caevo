@@ -17,22 +17,36 @@ import edu.stanford.nlp.util.StringUtils;
 /**
  * Controls all Sieve processing including TLink annotating, closure, and the core programming.
  * 
+ * REQUIREMENTS: 
+ * - An environment variable JWNL that points to your jwnl_file_properties.xml file.
+ * 
+ * HOW TO RUN:
  * java Main -info <filepath> gauntlet
  * - Tests the sieves independently and calculates individual precision.
  * 
+ * java Main -info <filepath> parsed
+ * - Run event, time, and TLink extraction. The given infofile contains parses.
+ * 
  * java Main -info <filepath>  
- * - Runs the sieve pipeline.
+ * - Runs only the tlink sieve pipeline. Assumes the given infofile has events and times.
  * 
  * @author chambers
  */
 public class Main {
+	TextEventClassifier eventClassifier;
+	TimexClassifier timexClassifier;
+	String wordnetPath; // to the jwnl_file_properties.xml file
+	
 	InfoFile info;
 	Closure closure;
 	String outpath = "sieve-output.xml";
 	boolean debug = true;
 	
 	// List the sieve class names in your desired order.
-	public final static String[] sieveClasses = { 
+	public final static String[] sieveClasses = {
+		  "DependencyE2EReportingGoverns",
+		  //"DependencyAnalyze",
+		  "Dependencies182",
 			"WordFeatures5",
 			"AllVagueSieve",
 			"QuarterSieveReporting",
@@ -58,6 +72,17 @@ public class Main {
 			info = new InfoFile(props.getProperty("info"));
 		}
 		
+		init();
+	}
+	
+	/**
+	 * Empty Constructor.
+	 */
+	public Main() {
+		init();
+	}
+	
+	private void init() {
 		// Initialize the transitive closure code. 
 		try {
 			closure = new Closure();
@@ -66,6 +91,14 @@ public class Main {
 			ex.printStackTrace();
 			System.exit(1);
 		}
+
+		// Load WordNet.
+		String path = System.getenv("JWNL");
+		if( path == null ) {
+			System.out.println("ERROR: couldn't find JWNL xml properties file: " + path);
+		} else wordnetPath = path;
+		
+		System.out.println("WordNet path:\t\t" + wordnetPath);
 	}
 	
 	/**
@@ -98,7 +131,7 @@ public class Main {
 		Sieve sieves[] = new Sieve[stringClasses.length];
 		for( int xx = 0; xx < stringClasses.length; xx++ ) {
 			sieves[xx] = createSieveInstance(stringClasses[xx]);
-			System.out.println("Added " + stringClasses[xx]);
+			System.out.println("Added sieve: " + stringClasses[xx]);
 		}
 		return sieves;
 	}
@@ -108,6 +141,10 @@ public class Main {
 	 * Run all sieves!! On all documents!!
 	 */
 	public void runSieves() {
+		runSieves(info);
+	}	
+
+	public void runSieves(InfoFile info) {
 		List<TLink> currentTLinks = new ArrayList<TLink>();
 
 		// Create all the sieves first.
@@ -252,6 +289,35 @@ public class Main {
 		return newlinks.size();
 	}
 	
+	/**
+	 * Assumes the InfoFile has its text parsed.
+	 */
+	public void markupAll() {
+		markupAll(info);
+	}
+	public void markupAll(InfoFile info) {
+		markupEvents(info);
+		markupTimexes(info);
+		runSieves(info);
+	}
+	
+	/**
+	 * Assumes the InfoFile has its text parsed.
+	 */
+	public void markupEvents(InfoFile info) {
+		if( eventClassifier == null )
+			eventClassifier = new TextEventClassifier(info, wordnetPath);
+		eventClassifier.extractEvents();
+	}
+	
+	/**
+	 * Assumes the InfoFile has its text parsed.
+	 */
+	public void markupTimexes(InfoFile info) {
+		if( timexClassifier == null )
+			timexClassifier = new TimexClassifier(info);
+		timexClassifier.markupTimex3();
+	}
 	
 	/**
 	 * Main. Multiple run modes:
@@ -264,7 +330,7 @@ public class Main {
 	 * 
 	 */
 	public static void main(String[] args) {
-		Properties props = StringUtils.argsToProperties(args);
+//		Properties props = StringUtils.argsToProperties(args);
 		Main main = new Main(args);
 		
 		// Test each sieve's precision independently.
@@ -273,7 +339,12 @@ public class Main {
 			main.runPrecisionGauntlet();
 		}
 		
-		// Run the normal sieve pipeline. 
+		// The given InfoFile only has text and parses, so extract events/times first.
+		else if( args.length > 0 && args[args.length-1].equalsIgnoreCase("parsed") ) {
+			main.markupAll();
+		}
+		
+		// Run just the TLink Sieve pipeline. Events/Timexes already in the given InfoFile.
 		else {
 			main.runSieves();
 		}
