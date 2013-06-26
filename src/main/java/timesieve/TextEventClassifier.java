@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -94,12 +95,21 @@ public class TextEventClassifier {
     else
     	wordnet = new WordNet(WordNet.findWordnetPath());
   }
-
+  
   public TextEventClassifier(InfoFile info, String eventmodelDir) {
+  	this(info, eventmodelDir, null);
+  }
+  
+  public TextEventClassifier(InfoFile info, String eventmodelDir, String wordnetPath) {
   	this.info = info;
   	this.modelDir = eventmodelDir;
   	if( wordnetPath != null )
-  	  wordnet = new WordNet(wordnetPath);
+  		wordnet = new WordNet(wordnetPath);
+  	else if( this.wordnetPath != null )
+  		wordnet = new WordNet(wordnetPath);
+  	
+  	// Read in the event models.
+    readClassifiersFromDirectory();
   }
   
   public void setMinFeatureCutoff(int min) {
@@ -364,11 +374,15 @@ public class TextEventClassifier {
     extractEvents(info, null);
   }
 
+  public void extractEvents(InfoFile info) {
+    extractEvents(info, null);
+  }
+  
   /**
    * Destructively add events to the global .info file.
    * @param docnames Limit extraction to a set of documents in the info file. Use null if you want all docs.
    */
-  public void extractEvents(InfoFile info, Set<String> docnames) {
+  public void extractEvents(InfoFile info, Collection<String> docnames) {
   	if( !ruleBased ) {
   		System.out.println("*** Classifier-Based Event Extraction ***");
   		extractEvents(info, docnames, false);
@@ -380,9 +394,10 @@ public class TextEventClassifier {
   
   /**
    * Destructively add events to the global .info file.
+   * ASSUMES the InfoFile already has parses and typed dependencies in it.
    * @param docnames Limit extraction to a set of documents in the info file. Use null if you want all docs.
    */
-  public void extractEvents(InfoFile info, Set<String> docnames, boolean useDeterministic) {
+  public void extractEvents(InfoFile info, Collection<String> docnames, boolean useDeterministic) {
     TreeFactory tf = new LabeledScoredTreeFactory();
     
     for( String docname : info.getFiles() ) {

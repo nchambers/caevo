@@ -50,7 +50,7 @@ public class WordNet {
   public WordNet(String wordnetPath) {
     // Load WordNet
     try {
-      if( wordnetPath.length() > 0 )
+      if( wordnetPath != null && wordnetPath.length() > 0 )
         JWNL.initialize(new FileInputStream(wordnetPath));
     } catch( Exception ex ) { ex.printStackTrace(); }
   }

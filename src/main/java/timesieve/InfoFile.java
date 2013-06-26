@@ -760,6 +760,7 @@ public class InfoFile {
    * This function does not output a formal XML document, but instead just the raw text 
    * of a document annotated with XML markup around events and timexes.
    * @param docname The one file in the InfoFile that you want to stringify with XML markup.
+   * @param eventElemName You can specify what you want the event's XML element to be (e.g., event or target)
    * @param idAttributeString You can specify what you want the event's XML attribute to be for its ID (e.g., id or eid)
    * @return A String which is the raw text with added XML markup around events and timexes.
    */
