@@ -35,7 +35,6 @@ import edu.stanford.nlp.util.StringUtils;
 public class Main {
 	TextEventClassifier eventClassifier;
 	TimexClassifier timexClassifier;
-	String wordnetPath; // to the jwnl_file_properties.xml file
 	
 	InfoFile info;
 	Closure closure;
@@ -91,14 +90,6 @@ public class Main {
 			ex.printStackTrace();
 			System.exit(1);
 		}
-
-		// Load WordNet.
-		String path = System.getenv("JWNL");
-		if( path == null ) {
-			System.out.println("ERROR: couldn't find JWNL xml properties file: " + path);
-		} else wordnetPath = path;
-		
-		System.out.println("WordNet path:\t\t" + wordnetPath);
 	}
 	
 	/**
@@ -305,8 +296,10 @@ public class Main {
 	 * Assumes the InfoFile has its text parsed.
 	 */
 	public void markupEvents(InfoFile info) {
-		if( eventClassifier == null )
-			eventClassifier = new TextEventClassifier(info, wordnetPath);
+		if( eventClassifier == null ) {
+			eventClassifier = new TextEventClassifier(info);
+			eventClassifier.loadClassifiers();
+		}		
 		eventClassifier.extractEvents();
 	}
 	

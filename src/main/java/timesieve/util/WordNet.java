@@ -1,6 +1,5 @@
 package timesieve.util;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,10 +17,13 @@ import net.didion.jwnl.data.Synset;
 import net.didion.jwnl.data.Word;
 import net.didion.jwnl.dictionary.Dictionary;
 
-
 /**
  * Helper class to lookup lemma forms in WordNet.
  * Caches lookups in memory to speedup the lookup, but can increase memory size.
+ * 
+ * Looks for the environment variable "JWNL" to find the path to jwnl_file_properties.xml
+ *
+ * @author chambers
  */
 public class WordNet {
   private Map<String,String> _verbToLemma;
@@ -46,6 +48,9 @@ public class WordNet {
   public final char hypernymChar = '@';
   public final String hypernymInstance = "@i";
   
+  public WordNet() {
+  	this(findWordnetPath());
+  }
   
   public WordNet(String wordnetPath) {
     // Load WordNet
@@ -56,17 +61,12 @@ public class WordNet {
   }
 
   public static String findWordnetPath() {
-  	String[] paths = { "/Users/mitts/Projects/resources/nl/wordnet/jwnl13rc1/file_properties.xml",
-  			"/home/nchamber/code/lib/jwnl_file_properties.xml",
-  			"C:\\cygwin\\home\\sammy\\code\\lib\\jwnl_file_properties.xml",
-  			"/home/sammy/code/lib/jwnl_file_properties.xml",
-  			"C:\\cygwin\\home\\sammy\\code\\lib\\jwnl_file_properties.xml",
-  			"/Users/ctaylor/NLP/timeSoftware/timesieve/properties/jwnl_file_properties.xml",
-  			"C:\\cygwin\\lib\\wnres\\jwnl_file_properties.xml"};
-  	for( String path : paths )
-  		if( new File(path).exists() )
-  			return path;  	
-  	return null;
+		// Load WordNet.
+		String path = System.getenv("JWNL");
+		if( path == null ) {
+			System.out.println("ERROR: couldn't find JWNL xml properties file: " + path);
+		}   	
+  	return path;
   }
   
   public String hashSizes() {

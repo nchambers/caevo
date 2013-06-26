@@ -285,7 +285,7 @@ public class Tempeval3Parser {
       // Identify all events.
       if( props.containsKey("events") ) {
         System.out.println("Now training all text events...");
-        TextEventClassifier eventClassifier = new TextEventClassifier(trainInfo, eventmodelDir);
+        TextEventClassifier eventClassifier = new TextEventClassifier(trainInfo);
         if( props.containsKey("eventmin") ) eventClassifier.setMinFeatureCutoff(Integer.parseInt(props.getProperty("eventmin")));
         eventClassifier.train(trainInfo, trainTest.first());
         System.out.println("Now testing all text events...");
@@ -316,7 +316,7 @@ public class Tempeval3Parser {
     // Identify all events.
     if( eventmodelDir != null ) {
       System.out.println("Now labeling all text events automatically...");
-      TextEventClassifier eventClassifier = new TextEventClassifier(info, eventmodelDir);
+      TextEventClassifier eventClassifier = new TextEventClassifier(info);
       if( props.containsKey("eventmin") ) eventClassifier.setMinFeatureCutoff(Integer.parseInt(props.getProperty("eventmin")));
       eventClassifier.readClassifiersFromDirectory(eventmodelDir);
       eventClassifier.extractEvents();
