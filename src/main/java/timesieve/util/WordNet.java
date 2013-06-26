@@ -61,26 +61,12 @@ public class WordNet {
   }
 
   public static String findWordnetPath() {
-<<<<<<< HEAD
 		// Load WordNet.
 		String path = System.getenv("JWNL");
 		if( path == null ) {
 			System.out.println("ERROR: couldn't find JWNL xml properties file: " + path);
 		}   	
   	return path;
-=======
-  	String[] paths = { "/Users/mitts/Projects/resources/nl/wordnet/jwnl13rc1/file_properties.xml",
-  			"/home/nchamber/code/lib/jwnl_file_properties.xml",
-  			"C:\\cygwin\\home\\sammy\\code\\lib\\jwnl_file_properties.xml",
-  			"/home/sammy/code/lib/jwnl_file_properties.xml",
-  			"C:\\cygwin\\home\\sammy\\code\\lib\\jwnl_file_properties.xml",
-  			"/Users/ctaylor/NLP/timeSoftware/timesieve/properties/jwnl_file_properties.xml",
-  			"C:\\cygwin\\lib\\wnres\\jwnl_file_properties.xml"};
-  	for( String path : paths )
-  		if( new File(path).exists() )
-  			return path;  	
-  	return null;
->>>>>>> 58f8fc2c845999a7909607a9709979b93050e778
   }
   
   public String hashSizes() {
