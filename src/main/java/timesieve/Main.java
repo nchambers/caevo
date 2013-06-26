@@ -75,6 +75,13 @@ public class Main {
 		init();
 	}
 	
+	/**
+	 * Empty Constructor.
+	 */
+	public Main() {
+		init();
+	}
+	
 	private void init() {
 		// Initialize the transitive closure code. 
 		try {
