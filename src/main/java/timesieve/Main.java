@@ -45,7 +45,7 @@ public class Main {
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
 		  "DependencyE2EReportingGoverns",
-		  //"DependencyAnalyze",
+		  "DependencyAnalyze",
 		  "Dependencies182",
 			"WordFeatures5",
 			"AllVagueSieve",
