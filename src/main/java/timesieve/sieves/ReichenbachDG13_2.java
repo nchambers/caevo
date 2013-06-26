@@ -34,7 +34,7 @@ import edu.stanford.nlp.trees.TreeFactory;
  * @author cassidy
  */
 public class ReichenbachDG13_2 implements Sieve {
-	
+	public boolean debug = false;
 	//create TreeFactory to convert a sentence to a tree
 	private static TreeFactory tf = new LabeledScoredTreeFactory();
 	
@@ -85,8 +85,9 @@ public class ReichenbachDG13_2 implements Sieve {
 		for( Sentence sent : sentList ) {
 			// skip the last sentence - it was accounted for last iteration
 			if (sid == numSentences - 1) continue;
-			//System.out.println("DEBUG: adding tlinks from " + docname + " sentences:\n" + sent.sentence()
-										//			+ "\n" + sent.sentence());
+			if (debug == true) {
+				System.out.println("DEBUG: adding tlinks from " + docname + " sentences:\n" + sent.sentence() + "\n" + sent.sentence());
+			}
 			List<TextEvent> allEventsSents = new ArrayList<TextEvent>();
 			allEventsSents.addAll(allEvents.get(sid));
 			allEventsSents.addAll(allEvents.get(sid + 1));
@@ -94,7 +95,9 @@ public class ReichenbachDG13_2 implements Sieve {
 			sid++;
 		}
 
-		//System.out.println("TLINKS: " + proposed);
+		if (debug == true) {
+			System.out.println("TLINKS: " + proposed);
+		}
 		return proposed;
 	}
 
@@ -146,8 +149,10 @@ public class ReichenbachDG13_2 implements Sieve {
 			}
 		}
 		
-		//System.out.println("events: " + events);
-		//System.out.println("created tlinks: " + proposed);
+		if (debug == true) {
+			System.out.println("events: " + events);
+			System.out.println("created tlinks: " + proposed);
+		}
 		return proposed;
 	}
 	

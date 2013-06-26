@@ -15,13 +15,13 @@ import timesieve.tlink.TLink;
  * and if e2's tense is neither PRESENT nor PRESPART,
  * Then e1 AFTER e2
  * 
- * Only considers events within one sentence of each other
+ * Only considers events within the same sentence
  * 
  * @author cassidy
  */
 
 public class WordFeatures5 implements Sieve {
-
+	public boolean debug = false;
 	/**
 	 * The main function. All sieves must have this.
 	 */
@@ -35,24 +35,23 @@ public class WordFeatures5 implements Sieve {
 		
 		// Obtain all event pairs within one sentence of one another
 		List<Sentence> sentList = info.getSentences(docname);
-		int numSentences = sentList.size();
 		int sid = 0;
+		
 		for ( Sentence sent : sentList ) {
-			if (sid == numSentences - 1) continue;
-			//System.out.println("DEBUG: adding tlinks from " + docname + " sentences:\n" + sent.sentence()
-				//	+ "\n" + sent.sentence());
-			List<TextEvent> allEventsSent = new ArrayList<TextEvent>();
-			allEventsSent.addAll(allEvents.get(sid));
-			allEventsSent.addAll(allEvents.get(sid + 1));
-			proposed.addAll(allPairsEvents(allEventsSent, sentList));
+			if (debug == true) {
+				System.out.println("DEBUG: adding tlinks from " + docname + " sentences:\n" + sent.sentence() + "\n" + sent.sentence());
+			}
+			proposed.addAll(allPairsEvents(allEvents.get(sid), sent));
 			sid ++;
 			}
 		
-		//System.out.println("TLINKS: " + proposed);
+		if (debug == true) {
+			System.out.println("TLINKS: " + proposed);
+		}
 		return proposed;
 	}
 	
-		private List<TLink> allPairsEvents(List<TextEvent> events, List<Sentence> sentList) {
+		private List<TLink> allPairsEvents(List<TextEvent> events, Sentence sent) {
 			
 			List<TLink> proposed = new ArrayList<TLink>();
 			for( int xx = 0; xx < events.size(); xx++ ) {
@@ -62,28 +61,28 @@ public class WordFeatures5 implements Sieve {
 					TextEvent e2 = events.get(yy);
 					// Check tense of e2 against criteria
 					if (e2.getTense().equals("PRESENT") && e2.getTense().equals("PRESPART")) {
-						// check if any of the 5 words preceding event1 is "before"
-						Sentence e1ContextSent = sentList.get(e1.sid());
-						String sentString = e1ContextSent.sentence();
+						// get e1's context tokens - the 5 words preceding event1 is "before"
+						String sentString = sent.sentence();
 						String delims = "[ ]+";
-						String[] e1ContextSentTokens = sentString.split(delims);
+						String[] e1SentTokens = sentString.split(delims);
 						int e1EndIndex = e1.index();
 						int e1StartIndex = Math.max(1, e1EndIndex - 5);
-						String[] e1ContextTokens = java.util.Arrays.copyOfRange(e1ContextSentTokens, e1StartIndex, e1EndIndex);
+						String[] e1ContextTokens = java.util.Arrays.copyOfRange(e1SentTokens, e1StartIndex, e1EndIndex);
+						// check if any of e1's context tokens is "before" - if so, add a tlink
 						for (String token : e1ContextTokens) {
 							if (token == "before") {
-								// add TLINK to the list
 								proposed.add(new EventEventLink(e1.eiid() , e2.eiid(), TLink.TYPE.AFTER));
 								break;
 							}
 						}
-							
 					}
 				}
 			}
 			
-			//System.out.println("events: " + events);
-			//System.out.println("created tlinks: " + proposed);
+			if (debug == true) {
+				System.out.println("events: " + events);
+				System.out.println("created tlinks: " + proposed);
+			}
 			return proposed;
 		}
 

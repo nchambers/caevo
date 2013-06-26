@@ -28,6 +28,7 @@ import edu.stanford.nlp.trees.TreeFactory;
  * @author cassidy
  */
 public class QuarterSieveReporting implements Sieve {
+	public boolean debug = false;
 	// Regex checks if timex value indicates a quarter
 	private String valQuarterRegex = "\\d{4}-Q\\d";
 	private Pattern valQuarter = Pattern.compile(valQuarterRegex);
@@ -55,7 +56,9 @@ public class QuarterSieveReporting implements Sieve {
 		// check timexes/event pairs in each sentence against sieve criteria.
 		int sid = 0;
 		for( Sentence sent : info.getSentences(docname) ) {
-			// System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+			if (debug == true) {
+				System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+			}
 			// get parse tree of sentence
 			Tree sentParseTree = sidToTree(sid, allParseStrings);
 			for (Timex timex : allTimexes.get(sid)) {
@@ -84,7 +87,9 @@ public class QuarterSieveReporting implements Sieve {
 			sid++;
 		}
 		
-		//System.out.println("TLINKS: " + proposed);
+		if (debug == true) {
+			System.out.println("TLINKS: " + proposed);
+		}
 		return proposed;
 	}
 	

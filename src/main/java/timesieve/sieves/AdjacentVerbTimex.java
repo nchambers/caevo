@@ -19,18 +19,20 @@ import edu.stanford.nlp.trees.TreeFactory;
 /**
  * Returns IS_INCLUDED for event, timex pairs for which
  * (1) event directly precedes timex
- * (2) event is in the past tense
- * (3) timex if of type DATE
- * (4) *I would like to add that event must be a verb - how do I do this?
+ * (2) timex if of type DATE
  * 
  * Only considers event/time pairs in the same sentence.
  * 
  * @author cassidy
  */
 public class AdjacentVerbTimex implements Sieve {
+	// Exclude timex that refer to "quarters" using this regex to be
+	// applied to timex.value, since such a timex usually modifies an 
+	// argument of the event verb, as opposed to serving as a stand-alone
+	// temporal argument of the verb.
+	public boolean debug = false;
 	private String valQuarterRegex = "\\d{4}-Q\\d";
 	private Pattern valQuarter = Pattern.compile(valQuarterRegex);
-	
 	private static TreeFactory tf = new LabeledScoredTreeFactory();
 	/**
 	 * The main function. All sieves must have this.
@@ -47,46 +49,45 @@ public class AdjacentVerbTimex implements Sieve {
 		
 		// Make BEFORE links between all intra-sentence pairs.
 		int sid = 0;
-		for( Sentence sent : info.getSentences(docname) ) {
-			//System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+		List<Sentence> sentList = info.getSentences(docname);
+		
+		for( Sentence sent : sentList ) {
+			if (debug == true) {
+				System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+				}
+			// get parse tree from sentence to calculate POS
 			Tree sentParseTree = sidToTree(sid, allParseStrings);
+			// check timex, event pairs against rule criteria
 			for (Timex timex : allTimexes.get(sid)) {
 				for (TextEvent event : allEvents.get(sid)) {
-					if (timex.offset() - 1 == event.index() &&  
-							timex.type().equals("DATE") && validateTimex(timex) &&
+					// if event directly precedes timex,
+					// timex is a date but isn't a quarter,
+					// and event is a verb, add an event-to-time is_included tlink
+					if (timex.offset() - 1 == event.index() && validateTimex(timex) &&
 							posTagFromTree(sentParseTree, event.index()).startsWith("VB")) {
-						// System.out.println("DEBUGPOS: " + event.string() + "/" + posTagFromTree(sentParseTree, event.index()) + " " + timex.text() + "/" + timex.value());
+						if (debug == true) {
+							System.out.println("DEBUGPOS: " + event.string() + "/" + posTagFromTree(sentParseTree, event.index()) + " " + timex.text() + "/" + timex.value());
+							}
 						proposed.add(new EventTimeLink(event.eiid() , timex.tid(), TLink.TYPE.IS_INCLUDED));
 						}
 					}
 				}
 			sid++;
 			}
-			
-		//System.out.println("TLINKS: " + proposed);
+		if (debug == true) {
+			System.out.println("TLINKS: " + proposed);
+			}
 		return proposed;
 	}
 	
-	private Boolean validateEvent(TextEvent event){
-		if (event.string().equals("ended")) return false;
-		else return true;
-	}
-	/**
-	 * validateTime ensures that timex value is of a certain form
-	 * one option is: YYYY-MM-DD or YYYY-MM or YYYY
-	 * The idea is that some time expressions are modifiers of arguments
-	 * of the verb, and not arguments themselves. 
-	 * For example, "X said Tuesday that ..." vs. "X said Tuesday's earnings were ..."
-	 * In the latter case, 'said' may not be included_in Tuesday. A very common example
-	 * is when the time expression is a quarter, since the verb is almost always after
-	 * the quarter. 
-	 */
+	
+	// validateTime ensures that timex value meets criteria
 	private Boolean validateTimex(Timex timex){
 		String val = timex.value();
-		// check if value represent a quarter
+		// Return false if timex value is not a date or is a quarter
 		Matcher m = valQuarter.matcher(val);
-		if (m.matches()) return false;
-		else return true;
+		if (!m.matches() && timex.type().equals("DATE")) return false;
+		else return false;
 	}
 	
 	private String posTagFromTree(Tree sentParseTree, int tokenIndex){
