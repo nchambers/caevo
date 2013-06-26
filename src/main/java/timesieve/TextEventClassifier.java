@@ -528,6 +528,28 @@ public class TextEventClassifier {
   	return null;
   }
 
+  public Classifier<String,String> readClassifierFromFile(String path) {
+  	try {
+  		Classifier<String,String> classifier = (Classifier<String,String>)IOUtils.readObjectFromFile(path);
+  		return classifier;
+  	} catch(Exception ex) { 
+  		System.out.println("Had fatal trouble loading " + path);
+  		ex.printStackTrace(); System.exit(1); 
+  	}
+  	return null;
+  }
+  
+  public void readClassifiersFromDirectory(String dir) {
+  	if( !(new File(dir)).isDirectory() )
+  		System.out.println("Not a directory: " + dir);
+  	else {
+  		eventClassifier  = readClassifierFromFile(dir + File.separator + baseModelName);
+  		tenseClassifier  = readClassifierFromFile(dir + File.separator + baseModelName + "-tense");
+  		aspectClassifier = readClassifierFromFile(dir + File.separator + baseModelName + "-aspect");
+  		classClassifier  = readClassifierFromFile(dir + File.separator + baseModelName + "-class");  		
+  	}
+  }
+  
   public void infoToFile(String path) {
     info.writeToFile(new File(path));
   }
