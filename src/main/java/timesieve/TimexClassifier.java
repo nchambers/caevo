@@ -65,7 +65,7 @@ public class TimexClassifier {
         System.out.println("markupTimex3 dct size is " + dcts.size());
         System.exit(1);
       }
-      String docDate = dcts.get(0).value();
+      String docDate = (dcts.size() > 0) ? dcts.get(0).value() : null;
       if( debug ) System.out.println("markupTimex3 docDate = " + docDate);
 //      System.out.println(sentences.size() + " sentences.");
       int tid = 1;
@@ -164,7 +164,7 @@ public class TimexClassifier {
     
     // Extract TIMEX3 entities.
     Annotation annotation = SUTimeMain.textToAnnotation(timexPipeline, buildStringFromCoreLabels(words, 0, words.size()), docDate);
-    
+
 /*    // Print TIMEX3 results.
     List<CoreLabel> sutimeTokens = annotation.get(CoreAnnotations.TokensAnnotation.class);
     System.out.println("SUTime returned # tokens = " + sutimeTokens.size());

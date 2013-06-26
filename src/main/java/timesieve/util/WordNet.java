@@ -337,7 +337,9 @@ public class WordNet {
         // which does not have a PointerType type in their API, yet appears in their database.
         // This is a hack that checks the key "@i" is an instance, "@" is standard hypernym.
 //        if( link.getType() == PointerType.HYPERNYM ) {
-        if( link.getType().getKey().charAt(0) == hypernymChar ) {
+      	if ( link.getType() == null )
+      		System.out.println("WARNING: Null hypernym chain in synset: " + synset.getGloss());
+        else if( link.getType().getKey().charAt(0) == hypernymChar ) {
           try {
             Synset target = link.getTargetSynset();
             if( !history.contains(target) ) {
