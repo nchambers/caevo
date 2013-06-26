@@ -497,6 +497,9 @@ public class TextEventClassifier {
     
   }
   
+  /**
+   * Read all serialized classifiers into memory.
+   */
   public void loadClassifiers() {
   	String base = "/models/" + baseModelName;
   	eventClassifier  = readClassifierFromFile(this.getClass().getResource(base));
@@ -504,28 +507,22 @@ public class TextEventClassifier {
   	aspectClassifier = readClassifierFromFile(this.getClass().getResource(base + "-aspect"));
   	classClassifier  = readClassifierFromFile(this.getClass().getResource(base + "-class"));
   }
-  
-  public Classifier<String,String> readClassifierFromFile(String path) {
-  	try {
-  		Classifier<String,String> classifier = (Classifier<String,String>)IOUtils.readObjectFromFile(path);
-  		return classifier;
-  	} catch(Exception ex) { 
-  		System.out.println("Had fatal trouble loading " + path);
-  		ex.printStackTrace(); System.exit(1); 
-  	}
-  	return null;
-  }
 
-  public Classifier<String,String> readClassifierFromFile(URL path) {
-  	if( path == null ) System.out.println("ERROR: null classifier path!");
+  /**
+   * Read a single serialized classifier into memory.
+   * @param url The path to the model. 
+   * @return The classifier object.
+   */
+  public Classifier<String,String> readClassifierFromFile(URL url) {
+  	if( url == null ) System.out.println("ERROR: null classifier path!");
   	try {
-  		ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new GZIPInputStream(path.openStream())));
+  		ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new GZIPInputStream(url.openStream())));
   		Object o = ois.readObject();
   		ois.close();
   		Classifier<String,String> classifier = (Classifier<String,String>)o;
   		return classifier;
   	} catch(Exception ex) { 
-  		System.out.println("Had fatal trouble loading " + path);
+  		System.out.println("Had fatal trouble loading " + url);
   		ex.printStackTrace(); System.exit(1); 
   	}
   	return null;

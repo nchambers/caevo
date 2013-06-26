@@ -17,6 +17,10 @@ import edu.stanford.nlp.util.StringUtils;
 /**
  * Controls all Sieve processing including TLink annotating, closure, and the core programming.
  * 
+ * REQUIREMENTS: 
+ * - An environment variable JWNL that points to your jwnl_file_properties.xml file.
+ * 
+ * HOW TO RUN:
  * java Main -info <filepath> gauntlet
  * - Tests the sieves independently and calculates individual precision.
  * 
