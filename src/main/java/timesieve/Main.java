@@ -32,7 +32,10 @@ public class Main {
 	boolean debug = true;
 	
 	// List the sieve class names in your desired order.
-	public final static String[] sieveClasses = { 
+	public final static String[] sieveClasses = {
+		  "DependencyE2EReportingGoverns",
+		  //"DependencyAnalyze",
+		  "Dependencies182",
 			"WordFeatures5",
 			"AllVagueSieve",
 			"QuarterSieveReporting",

@@ -37,7 +37,7 @@ import edu.stanford.nlp.trees.TreeFactory;
  * @author cassidy
  */
 public class ReichenbachDG13_1 implements Sieve {
-	
+	public boolean debug = false;
 	//create TreeFactory to convert a sentence to a tree
 	private static TreeFactory tf = new LabeledScoredTreeFactory();
 	
@@ -83,12 +83,16 @@ public class ReichenbachDG13_1 implements Sieve {
 		// Label event pairs that match sieve criteria
 		int sid = 0;
 		for( Sentence sent : info.getSentences(docname) ) {
-			//System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+			if (debug == true) {
+				System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+			}
 			proposed.addAll(allPairsEvents(allEvents.get(sid), allParseStrings));
 			sid++;
 		}
 
-		//System.out.println("TLINKS: " + proposed);
+		if (debug == true) {
+			System.out.println("TLINKS: " + proposed);
+		}
 		return proposed;
 	}
 
@@ -131,15 +135,20 @@ public class ReichenbachDG13_1 implements Sieve {
 			}
 		}
 		
-		//System.out.println("events: " + events);
-		//System.out.println("created tlinks: " + proposed);
+		if (debug == true) {
+			System.out.println("events: " + events);
+			System.out.println("created tlinks: " + proposed);
+		}
 		return proposed;
 	}
 	
+	// Get the label that corresponds to a given 
+	// tense/aspect profile pair
 	private TLink.TYPE taToLabel(String taProfilePair) {
 		return tenseAspectToLabel.get(taProfilePair);
 	}
 	
+	// apply D&G's mapping to consolidate tense and aspect labels
 	private String simplifyTense(String tense){
 		if (tense.equals("PRESPART")) return "PRESENT";
 		else if (tense.equals("PASTPART")) return "PAST";
@@ -157,6 +166,7 @@ public class ReichenbachDG13_1 implements Sieve {
 		else return null; 
 	}
 	
+	// use these to get pos information
 	private String posTagFromTree(Tree sentParseTree, int tokenIndex){
 		String posTag = TreeOperator.indexToPOSTag(sentParseTree, tokenIndex);
 		return posTag;
