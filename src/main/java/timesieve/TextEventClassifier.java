@@ -3,9 +3,7 @@ package timesieve;
 import java.io.BufferedInputStream;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileWriter;
-import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.PrintWriter;
 import java.net.URL;
@@ -45,7 +43,7 @@ import timesieve.util.WordNet;
  * Also provides training function to build and save a classifier for this task.
  * Input is a pre-built .info file, output is a classifier.
  *
- * TextEventClassifier [-model <dir>] [-wordnet <path>] -info <path> [train]
+ * TextEventClassifier [-wordnet <path>] -info <path> [train]
  * 
  * -model 
  * Both read and write: path to write the new trained model, or where to read from when testing.
@@ -53,15 +51,19 @@ import timesieve.util.WordNet;
  * -rules
  * If given, will run event extraction using basic rules.
  * 
+ * -wordnet
+ * Can specify the path to WordNet. The code also looks for the environment variable JWNL if
+ * you don't give this flag.
+ * 
  */
 public class TextEventClassifier {
   InfoFile info;
   WordNet wordnet;
-  String wordnetPath = "/home/nchamber/code/lib/jwnl_file_properties.xml";
+  String wordnetPath = null;
   String serializedGrammar = "/home/nchamber/code/resources/englishPCFG.ser.gz";
   
   boolean ruleBased = false;
-  String modelDir = "eventmodels";
+  String modelOutDir = "eventmodels";
   String baseModelName = "event.classifier";
   int minFeatCutoff = 2;
 
@@ -87,8 +89,6 @@ public class TextEventClassifier {
     	wordnetPath = params.get("-wordnet");
     if( params.hasFlag("-grammar") )
       serializedGrammar = params.get("-grammar");
-    if( params.hasFlag("-model") )
-    	modelDir = params.get("-model");
     if( params.hasFlag("-rules") )
     	ruleBased = true;
     if( params.hasFlag("-eventmin") )
@@ -96,25 +96,22 @@ public class TextEventClassifier {
     if( params.hasFlag("-coe") )
     	coeMarkFormat = true;
     
-    if( wordnetPath != null )
-    	wordnet = new WordNet(wordnetPath);
-    else
-    	wordnet = new WordNet(WordNet.findWordnetPath());
+    loadWordNet();
   }
   
   public TextEventClassifier(InfoFile info) {
-  	this(info, null);
-  }
-  
-  public TextEventClassifier(InfoFile info, String wordnetPath) {
   	this.info = info;
+  	loadWordNet();
+  }
+
+	/**
+	 * Load WordNet. Default looks for the JWNL environment variable.
+	 */
+  private void loadWordNet() {
   	if( wordnetPath != null )
   		wordnet = new WordNet(wordnetPath);
-  	else if( this.wordnetPath != null )
-  		wordnet = new WordNet(wordnetPath);
-  	
-  	// Read in the event models.
-  	loadClassifiers();
+  	else 
+  		wordnet = new WordNet();
   }
   
   public void setMinFeatureCutoff(int min) {
@@ -305,11 +302,11 @@ public class TextEventClassifier {
   }
 
   public void writeClassifiersToFile() {
-    String path = modelDir + File.separator + baseModelName;
+    String path = modelOutDir + File.separator + baseModelName;
     System.out.println("Saving the classifier to disk (" + path + ")...");
     try {
       // Create the directory of classifiers, if necessary.
-      File dir = new File(modelDir);
+      File dir = new File(modelOutDir);
       if( !dir.exists() ) dir.mkdir();
         
       IOUtils.writeObjectToFile(eventClassifier, path);
@@ -639,12 +636,14 @@ public class TextEventClassifier {
     // TextEventClassifier -model <dir> <rawfile> raw
     else if( args[args.length-1].equalsIgnoreCase("raw") ) {
       System.out.println("Marking up raw text input.");
+      classifier.loadClassifiers();
       classifier.markupRawText(args[args.length-2]);
     }
     
     // TextEventClassifier -model <dir> <file-of-parses> parsed
     else if( args[args.length-1].equalsIgnoreCase("parsed") ) {
       System.out.println("Marking up pre-parsed text input.");
+      classifier.loadClassifiers();
       classifier.markupPreParsedText(args[args.length-2]);
     }
     
