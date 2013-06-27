@@ -1,0 +1,486 @@
+         Nashua	              -	      B-A1	      B-A0	         O	         O	         O
+          Corp.	              -	      E-A1	      I-A0	         O	         O	         O
+              ,	              -	         O	      I-A0	         O	         O	         O
+        rumored	        rumored	       S-V	      I-A0	         O	         O	         O
+              a	              -	      B-A2	      I-A0	         O	         O	         O
+      potential	              -	      I-A2	      I-A0	         O	         O	         O
+       takeover	              -	      I-A2	      I-A0	         O	         O	         O
+         target	              -	      E-A2	      I-A0	         O	         O	         O
+            for	              -	  B-AM-TMP	      I-A0	         O	         O	         O
+            six	              -	  I-AM-TMP	      I-A0	         O	         O	         O
+         months	              -	  E-AM-TMP	      I-A0	         O	         O	         O
+              ,	              -	         O	      E-A0	         O	         O	         O
+           said	           said	         O	       S-V	         O	         O	         O
+           that	              -	         O	      B-A1	         O	         O	         O
+              a	              -	         O	      I-A1	      B-A0	      B-A0	      B-A0
+          Dutch	              -	         O	      I-A1	      I-A0	      I-A0	      I-A0
+        company	              -	         O	      I-A1	      E-A0	      E-A0	      E-A0
+            has	            has	         O	      I-A1	       S-V	         O	         O
+         sought	         sought	         O	      I-A1	      B-A1	       S-V	         O
+           U.S.	              -	         O	      I-A1	      I-A1	      B-A1	         O
+       approval	              -	         O	      I-A1	      I-A1	      I-A1	         O
+             to	              -	         O	      I-A1	      I-A1	      I-A1	         O
+            buy	            buy	         O	      I-A1	      I-A1	      I-A1	       S-V
+             up	              -	         O	      I-A1	      I-A1	      I-A1	      B-A1
+             to	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+             25	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+              %	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+             of	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+         Nashua	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+             's	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+         shares	              -	         O	      E-A1	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+         Nashua	              -	      S-A0	      S-A0	      S-A0	         O
+    immediately	              -	  S-AM-TMP	         O	         O	         O
+      responded	      responded	       S-V	         O	         O	         O
+             by	              -	      B-A2	         O	         O	         O
+  strengthening	  strengthening	      I-A2	       S-V	         O	         O
+              a	              -	      I-A2	      B-A1	         O	         O
+    poison-pill	              -	      I-A2	      I-A1	         O	         O
+           plan	              -	      I-A2	      E-A1	         O	         O
+            and	              -	      I-A2	         O	         O	         O
+         saying	         saying	      I-A2	         O	       S-V	         O
+             it	              -	      I-A2	         O	      B-A1	      S-A0
+           will	              -	      I-A2	         O	      I-A1	  S-AM-MOD
+            buy	            buy	      I-A2	         O	      I-A1	       S-V
+           back	              -	      I-A2	         O	      I-A1	  S-AM-DIR
+             up	              -	      I-A2	         O	      I-A1	      B-A1
+             to	              -	      I-A2	         O	      I-A1	      I-A1
+            one	              -	      I-A2	         O	      I-A1	      I-A1
+        million	              -	      I-A2	         O	      I-A1	      I-A1
+             of	              -	      I-A2	         O	      I-A1	      I-A1
+            its	              -	      I-A2	         O	      I-A1	      I-A1
+         shares	              -	      I-A2	         O	      I-A1	      I-A1
+              ,	              -	      I-A2	         O	      I-A1	      I-A1
+             or	              -	      I-A2	         O	      I-A1	      I-A1
+           10.4	              -	      I-A2	         O	      I-A1	      I-A1
+              %	              -	      I-A2	         O	      I-A1	      I-A1
+             of	              -	      I-A2	         O	      I-A1	      I-A1
+            the	              -	      I-A2	         O	      I-A1	      I-A1
+            9.6	              -	      I-A2	         O	      I-A1	      I-A1
+        million	              -	      I-A2	         O	      I-A1	      I-A1
+    outstanding	              -	      E-A2	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+         Nashua	              -	         O	         O	         O	      B-A0
+              ,	              -	         O	         O	         O	      I-A0
+          whose	              -	    B-R-A1	    B-R-A0	         O	      I-A0
+          major	              -	    I-R-A1	    I-R-A0	         O	      I-A0
+       business	              -	    E-R-A1	    E-R-A0	         O	      I-A0
+             is	             is	       S-V	         O	         O	      I-A0
+        selling	        selling	      B-A1	       S-V	         O	      I-A0
+        copiers	              -	      I-A1	      B-A1	         O	      I-A0
+              ,	              -	      I-A1	      I-A1	         O	      I-A0
+      facsimile	              -	      I-A1	      I-A1	         O	      I-A0
+       machines	              -	      I-A1	      I-A1	         O	      I-A0
+            and	              -	      I-A1	      I-A1	         O	      I-A0
+        related	        related	      I-A1	      I-A1	       S-V	      I-A0
+       supplies	              -	      E-A1	      E-A1	      S-A1	      I-A0
+              ,	              -	         O	         O	         O	      E-A0
+           said	           said	         O	         O	         O	       S-V
+          Reiss	              -	         O	         O	         O	      B-A0
+            amp	              -	         O	         O	         O	      I-A0
+             Co	              -	         O	         O	         O	      E-A0
+              .	              -	         O	         O	         O	         O
+
+           B.V.	              -	      B-A0	      B-A0
+             of	              -	      I-A0	      I-A0
+            the	              -	      I-A0	      I-A0
+    Netherlands	              -	      E-A0	      E-A0
+          filed	          filed	       S-V	         O
+              a	              -	      B-A1	         O
+        request	              -	      E-A1	         O
+           with	              -	      B-A2	         O
+            the	              -	      I-A2	         O
+        Federal	              -	      I-A2	         O
+          Trade	              -	      I-A2	         O
+     Commission	              -	      E-A2	         O
+          under	              -	      B-A3	         O
+            the	              -	      I-A3	         O
+Hart-Scott-Rodino	              -	      I-A3	         O
+            Act	              -	      E-A3	         O
+            for	              -	      B-A4	         O
+     permission	              -	      I-A4	         O
+             to	              -	      I-A4	         O
+            buy	            buy	      I-A4	       S-V
+           more	              -	      I-A4	      B-A1
+           than	              -	      I-A4	      I-A1
+              $	              -	      I-A4	      I-A1
+             15	              -	      I-A4	      I-A1
+        million	              -	      I-A4	      I-A1
+             of	              -	      I-A4	      I-A1
+         Nashua	              -	      I-A4	      I-A1
+             's	              -	      I-A4	      I-A1
+          stock	              -	      I-A4	      I-A1
+            but	              -	      I-A4	      I-A1
+           less	              -	      I-A4	      I-A1
+           than	              -	      I-A4	      I-A1
+             25	              -	      I-A4	      I-A1
+              %	              -	      E-A4	      E-A1
+              .	              -	         O	         O
+
+     Previously	              -	  S-AM-TMP	         O
+              ,	              -	         O	         O
+             an	              -	      B-A0	         O
+      affiliate	              -	      I-A0	         O
+             of	              -	      I-A0	         O
+        Unicorp	              -	      I-A0	         O
+         Canada	              -	      E-A0	         O
+      disclosed	      disclosed	       S-V	         O
+              a	              -	      B-A1	      B-A1
+          stake	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+           less	              -	      I-A1	      I-A1
+           than	              -	      I-A1	      I-A1
+              5	              -	      I-A1	      I-A1
+              %	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+         Nashua	              -	      E-A1	      E-A1
+              ,	              -	         O	         O
+      according	      according	  B-AM-ADV	       S-V
+             to	              -	  I-AM-ADV	      B-A1
+         Daniel	              -	  I-AM-ADV	      I-A1
+             M.	              -	  I-AM-ADV	      I-A1
+         Junius	              -	  I-AM-ADV	      I-A1
+              ,	              -	  I-AM-ADV	      I-A1
+         Nashua	              -	  I-AM-ADV	      I-A1
+             's	              -	  I-AM-ADV	      I-A1
+      treasurer	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+         Nashua	              -	      B-A0	      B-A1	      B-A1
+             's	              -	      I-A0	      I-A1	      I-A1
+          stock	              -	      E-A0	      E-A1	      E-A1
+            has	            has	       S-V	         O	         O
+     fluctuated	     fluctuated	    B-C-A1	       S-V	         O
+        sharply	              -	    I-C-A1	  S-AM-MNR	         O
+             on	              -	    I-C-A1	  B-AM-ADV	         O
+       takeover	              -	    I-C-A1	  I-AM-ADV	         O
+    speculation	              -	    E-C-A1	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O
+         rising	         rising	         O	  B-AM-ADV	       S-V
+             to	              -	         O	  I-AM-ADV	      B-A2
+              a	              -	         O	  I-AM-ADV	      I-A2
+           high	              -	         O	  I-AM-ADV	      E-A2
+            for	              -	         O	  I-AM-ADV	  B-AM-TMP
+            the	              -	         O	  I-AM-ADV	  I-AM-TMP
+           year	              -	         O	  I-AM-ADV	  I-AM-TMP
+             of	              -	         O	  I-AM-ADV	  I-AM-TMP
+              $	              -	         O	  I-AM-ADV	  I-AM-TMP
+         42.875	              -	         O	  I-AM-ADV	  I-AM-TMP
+              a	              -	         O	  I-AM-ADV	  I-AM-TMP
+          share	              -	         O	  I-AM-ADV	  I-AM-TMP
+             in	              -	         O	  I-AM-ADV	  I-AM-TMP
+           June	              -	         O	  I-AM-ADV	  I-AM-TMP
+           from	              -	         O	  I-AM-ADV	  I-AM-TMP
+              $	              -	         O	  I-AM-ADV	  I-AM-TMP
+          29.75	              -	         O	  I-AM-ADV	  I-AM-TMP
+             in	              -	         O	  I-AM-ADV	  I-AM-TMP
+          March	              -	         O	  E-AM-ADV	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+            But	              -	  S-AM-DIS	  S-AM-DIS	         O
+            the	              -	      B-A0	      B-A0	         O
+        company	              -	      E-A0	      E-A0	         O
+            has	            has	       S-V	         O	         O
+            had	            had	         O	       S-V	         O
+           weak	              -	      B-A1	      B-A1	         O
+        results	              -	      I-A1	      E-A1	         O
+             so	              -	      I-A1	  B-AM-TMP	         O
+            far	              -	      I-A1	  E-AM-TMP	         O
+           this	              -	      I-A1	  B-AM-TMP	         O
+           year	              -	      I-A1	  E-AM-TMP	         O
+              ,	              -	      I-A1	         O	         O
+           with	              -	      I-A1	  B-AM-MNR	         O
+       earnings	              -	      I-A1	  I-AM-MNR	      S-A1
+      declining	      declining	      I-A1	  I-AM-MNR	       S-V
+             43	              -	      I-A1	  I-AM-MNR	      B-A2
+              %	              -	      I-A1	  I-AM-MNR	      E-A2
+             to	              -	      I-A1	  I-AM-MNR	      B-A4
+              $	              -	      I-A1	  I-AM-MNR	      I-A4
+           13.7	              -	      I-A1	  I-AM-MNR	      I-A4
+        million	              -	      I-A1	  I-AM-MNR	      I-A4
+              ,	              -	      I-A1	  I-AM-MNR	      I-A4
+             or	              -	      I-A1	  I-AM-MNR	      I-A4
+              $	              -	      I-A1	  I-AM-MNR	      I-A4
+           1.43	              -	      I-A1	  I-AM-MNR	      I-A4
+              a	              -	      I-A1	  I-AM-MNR	      I-A4
+          share	              -	      I-A1	  I-AM-MNR	      E-A4
+              ,	              -	      I-A1	  I-AM-MNR	         O
+             on	              -	      I-A1	  I-AM-MNR	         O
+              a	              -	      I-A1	  I-AM-MNR	         O
+              4	              -	      I-A1	  I-AM-MNR	         O
+              %	              -	      I-A1	  I-AM-MNR	         O
+        decline	              -	      I-A1	  I-AM-MNR	         O
+             in	              -	      I-A1	  I-AM-MNR	         O
+        revenue	              -	      I-A1	  I-AM-MNR	         O
+             to	              -	      I-A1	  I-AM-MNR	         O
+              $	              -	      I-A1	  I-AM-MNR	         O
+          713.5	              -	      I-A1	  I-AM-MNR	         O
+        million	              -	      I-A1	  I-AM-MNR	         O
+        through	              -	      I-A1	  I-AM-MNR	         O
+            the	              -	      I-A1	  I-AM-MNR	         O
+          first	              -	      I-A1	  I-AM-MNR	         O
+           nine	              -	      I-A1	  I-AM-MNR	         O
+         months	              -	      I-A1	  I-AM-MNR	         O
+             of	              -	      I-A1	  I-AM-MNR	         O
+            the	              -	      I-A1	  I-AM-MNR	         O
+           year	              -	      E-A1	  E-AM-MNR	         O
+              .	              -	         O	         O	         O
+
+            Its	              -	      B-A1	      B-A1	      B-A1	         O
+          stock	              -	      E-A1	      E-A1	      E-A1	         O
+            has	            has	       S-V	         O	         O	         O
+        slumped	        slumped	    S-C-A1	       S-V	         O	         O
+       recently	              -	  S-AM-TMP	  S-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O	         O
+        closing	        closing	         O	  B-AM-ADV	       S-V	         O
+      unchanged	              -	         O	  I-AM-ADV	  S-AM-MNR	         O
+         Friday	              -	         O	  I-AM-ADV	  S-AM-TMP	         O
+             at	              -	         O	  I-AM-ADV	  B-AM-EXT	         O
+              $	              -	         O	  I-AM-ADV	  I-AM-EXT	         O
+             29	              -	         O	  I-AM-ADV	  I-AM-EXT	         O
+              a	              -	         O	  I-AM-ADV	  I-AM-EXT	         O
+          share	              -	         O	  I-AM-ADV	  E-AM-EXT	         O
+             in	              -	         O	  I-AM-ADV	  B-AM-LOC	         O
+      composite	              -	         O	  I-AM-ADV	  I-AM-LOC	         O
+        trading	              -	         O	  I-AM-ADV	  I-AM-LOC	         O
+             on	              -	         O	  I-AM-ADV	  I-AM-LOC	         O
+            the	              -	         O	  I-AM-ADV	  I-AM-LOC	         O
+            New	              -	         O	  I-AM-ADV	  I-AM-LOC	         O
+           York	              -	         O	  I-AM-ADV	  I-AM-LOC	         O
+          Stock	              -	         O	  I-AM-ADV	  I-AM-LOC	         O
+       Exchange	              -	         O	  E-AM-ADV	  E-AM-LOC	         O
+              ;	              -	         O	         O	         O	         O
+             at	              -	         O	         O	         O	  B-AM-ADV
+           that	              -	         O	         O	         O	  I-AM-ADV
+          price	              -	         O	         O	         O	  E-AM-ADV
+              ,	              -	         O	         O	         O	         O
+            the	              -	         O	         O	         O	      B-A0
+        company	              -	         O	         O	         O	      E-A0
+            has	            has	         O	         O	         O	       S-V
+              a	              -	         O	         O	         O	      B-A1
+         market	              -	         O	         O	         O	      I-A1
+          value	              -	         O	         O	         O	      I-A1
+             of	              -	         O	         O	         O	      I-A1
+          about	              -	         O	         O	         O	      I-A1
+              $	              -	         O	         O	         O	      I-A1
+          278.4	              -	         O	         O	         O	      I-A1
+        million	              -	         O	         O	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+         Nashua	              -	      S-A0	         O
+      announced	      announced	       S-V	         O
+            the	              -	      B-A1	         O
+          Reiss	              -	      I-A1	         O
+        request	              -	      E-A1	         O
+          after	              -	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	      B-A1
+         market	              -	  I-AM-TMP	      E-A1
+         closed	         closed	  E-AM-TMP	       S-V
+              .	              -	         O	         O
+
+            Mr.	              -	      B-A0	         O	         O
+         Junius	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+         Nashua	              -	      B-A1	      B-A1	      B-A1
+             's	              -	      I-A1	      I-A1	      I-A1
+      intention	              -	      I-A1	      E-A1	      E-A1
+             is	             is	      I-A1	       S-V	         O
+             to	              -	      I-A1	    B-C-A1	         O
+         remain	         remain	      I-A1	    I-C-A1	       S-V
+             an	              -	      I-A1	    I-C-A1	      B-A3
+    independent	              -	      I-A1	    I-C-A1	      I-A3
+         public	              -	      I-A1	    I-C-A1	      I-A3
+        company	              -	      E-A1	    E-C-A1	      E-A3
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O
+        company	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	      S-A0	         O	         O
+        amended	        amended	      I-A1	       S-V	         O	         O	         O
+            its	              -	      I-A1	      B-A1	         O	         O	         O
+    shareholder	              -	      I-A1	      I-A1	         O	         O	         O
+         rights	              -	      I-A1	      I-A1	         O	         O	         O
+           plan	              -	      I-A1	      E-A1	         O	         O	         O
+             by	              -	      I-A1	  B-AM-MNR	         O	         O	         O
+       reducing	       reducing	      I-A1	  I-AM-MNR	       S-V	         O	         O
+             to	              -	      I-A1	  I-AM-MNR	      B-A4	         O	         O
+             10	              -	      I-A1	  I-AM-MNR	      I-A4	         O	         O
+              %	              -	      I-A1	  I-AM-MNR	      E-A4	         O	         O
+           from	              -	      I-A1	  I-AM-MNR	      B-A3	         O	         O
+             20	              -	      I-A1	  I-AM-MNR	      I-A3	         O	         O
+              %	              -	      I-A1	  I-AM-MNR	      E-A3	         O	         O
+            the	              -	      I-A1	  I-AM-MNR	      B-A1	         O	         O
+          level	              -	      I-A1	  I-AM-MNR	      I-A1	         O	         O
+             of	              -	      I-A1	  I-AM-MNR	      I-A1	         O	         O
+      ownership	              -	      I-A1	  I-AM-MNR	      I-A1	         O	         O
+             by	              -	      I-A1	  I-AM-MNR	      I-A1	         O	         O
+             an	              -	      I-A1	  I-AM-MNR	      I-A1	      B-A0	         O
+       outsider	              -	      I-A1	  I-AM-MNR	      I-A1	      E-A0	         O
+           that	              -	      I-A1	  I-AM-MNR	      I-A1	    S-R-A0	         O
+          would	              -	      I-A1	  I-AM-MNR	      I-A1	  S-AM-MOD	         O
+        trigger	        trigger	      I-A1	  I-AM-MNR	      I-A1	       S-V	         O
+            the	              -	      I-A1	  I-AM-MNR	      I-A1	      B-A1	         O
+       issuance	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	         O
+             to	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	         O
+          other	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	      B-A0
+        holders	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	      E-A0
+             of	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	         O
+         rights	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	         O
+             to	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	         O
+            buy	            buy	      I-A1	  I-AM-MNR	      I-A1	      I-A1	       S-V
+     additional	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	      B-A1
+         shares	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	      I-A1
+             of	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	      I-A1
+         Nashua	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	      I-A1
+         common	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	      E-A1
+             at	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	      B-A3
+           half	              -	      I-A1	  I-AM-MNR	      I-A1	      I-A1	      I-A3
+          price	              -	      E-A1	  E-AM-MNR	      E-A1	      E-A1	      E-A3
+              .	              -	         O	         O	         O	         O	         O
+
+             In	              -	  B-AM-DIS
+       addition	              -	  E-AM-DIS
+              ,	              -	         O
+            the	              -	      B-A0
+        company	              -	      I-A0
+             's	              -	      I-A0
+          board	              -	      E-A0
+     authorized	     authorized	       S-V
+            the	              -	      B-A1
+       purchase	              -	      I-A1
+             of	              -	      I-A1
+             up	              -	      I-A1
+             to	              -	      I-A1
+             an	              -	      I-A1
+     additional	              -	      I-A1
+            one	              -	      I-A1
+        million	              -	      I-A1
+         shares	              -	      E-A1
+              .	              -	         O
+
+          Under	              -	         O	         O	         O	  B-AM-ADV	  B-AM-LOC
+              a	              -	      B-A1	         O	      B-A0	  I-AM-ADV	  I-AM-LOC
+        program	              -	      E-A1	         O	      I-A0	  I-AM-ADV	  I-AM-LOC
+       approved	       approved	       S-V	         O	      I-A0	  I-AM-ADV	  I-AM-LOC
+             by	              -	      B-A0	         O	      I-A0	  I-AM-ADV	  I-AM-LOC
+            the	              -	      I-A0	         O	      I-A0	  I-AM-ADV	  I-AM-LOC
+        company	              -	      E-A0	         O	      I-A0	  I-AM-ADV	  I-AM-LOC
+             in	              -	  B-AM-TMP	         O	      I-A0	  I-AM-ADV	  I-AM-LOC
+           1987	              -	  E-AM-TMP	         O	      E-A0	  I-AM-ADV	  I-AM-LOC
+           that	              -	         O	    S-R-A0	    S-R-A0	  I-AM-ADV	  I-AM-LOC
+            did	            did	         O	       S-V	         O	  I-AM-ADV	  I-AM-LOC
+            n't	              -	         O	      B-A1	  S-AM-NEG	  I-AM-ADV	  I-AM-LOC
+        specify	        specify	         O	      I-A1	       S-V	  I-AM-ADV	  I-AM-LOC
+              a	              -	         O	      I-A1	      B-A1	  I-AM-ADV	  I-AM-LOC
+          share	              -	         O	      I-A1	      I-A1	  I-AM-ADV	  I-AM-LOC
+         amount	              -	         O	      E-A1	      E-A1	  E-AM-ADV	  E-AM-LOC
+              ,	              -	         O	         O	         O	         O	         O
+         Nashua	              -	         O	         O	         O	      S-A0	      S-A0
+            had	            had	         O	         O	         O	       S-V	         O
+      purchased	      purchased	         O	         O	         O	         O	       S-V
+        481,000	              -	         O	         O	         O	         O	      B-A1
+         shares	              -	         O	         O	         O	         O	      E-A1
+        through	              -	         O	         O	         O	         O	  B-AM-TMP
+          Sept.	              -	         O	         O	         O	         O	  I-AM-TMP
+             29	              -	         O	         O	         O	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O
+
+           Alex	              -	      B-A0	         O	         O	         O	         O
+      Henderson	              -	      I-A0	         O	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O	         O
+             an	              -	      I-A0	         O	         O	         O	         O
+        analyst	              -	      I-A0	         O	         O	         O	         O
+             at	              -	      I-A0	         O	         O	         O	         O
+Prudential-Bache	              -	      I-A0	         O	         O	         O	         O
+     Securities	              -	      I-A0	         O	         O	         O	         O
+              ,	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O
+          while	              -	      I-A1	         O	         O	  B-AM-ADV	         O
+         Nashua	              -	      I-A1	      B-A0	      B-A1	  I-AM-ADV	         O
+             's	              -	      I-A1	      I-A0	      I-A1	  I-AM-ADV	         O
+    performance	              -	      I-A1	      I-A0	      I-A1	  I-AM-ADV	         O
+           this	              -	      I-A1	      I-A0	      I-A1	  I-AM-ADV	         O
+           year	              -	      I-A1	      E-A0	      E-A1	  I-AM-ADV	         O
+            has	            has	      I-A1	       S-V	         O	  I-AM-ADV	         O
+           been	           been	      I-A1	    B-C-A1	       S-V	  I-AM-ADV	         O
+      atrocious	              -	      I-A1	    E-C-A1	    S-C-A1	  E-AM-ADV	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+            the	              -	      I-A1	         O	         O	      B-A1	         O
+        company	              -	      I-A1	         O	         O	      E-A1	         O
+    nonetheless	              -	      I-A1	         O	         O	  S-AM-DIS	         O
+             is	             is	      I-A1	         O	         O	       S-V	         O
+     attractive	              -	      I-A1	         O	         O	  B-AM-MNR	         O
+             as	              -	      I-A1	         O	         O	  I-AM-MNR	         O
+              a	              -	      I-A1	         O	         O	  I-AM-MNR	         O
+        classic	              -	      I-A1	         O	         O	  I-AM-MNR	         O
+        breakup	              -	      I-A1	         O	         O	  I-AM-MNR	         O
+      candidate	              -	      I-A1	         O	         O	  E-AM-MNR	         O
+        because	              -	      I-A1	         O	         O	  B-AM-CAU	         O
+          there	              -	      I-A1	         O	         O	  I-AM-CAU	      S-A0
+             's	             's	      I-A1	         O	         O	  I-AM-CAU	       S-V
+             no	              -	      I-A1	         O	         O	  I-AM-CAU	      B-A1
+     similarity	              -	      I-A1	         O	         O	  I-AM-CAU	      I-A1
+        between	              -	      I-A1	         O	         O	  I-AM-CAU	      I-A1
+            its	              -	      I-A1	         O	         O	  I-AM-CAU	      I-A1
+              {	              -	      I-A1	         O	         O	  I-AM-CAU	      I-A1
+           four	              -	      I-A1	         O	         O	  I-AM-CAU	      I-A1
+              }	              -	      I-A1	         O	         O	  I-AM-CAU	      I-A1
+     businesses	              -	      E-A1	         O	         O	  E-AM-CAU	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+             He	              -	      S-A0
+      estimated	      estimated	       S-V
+            the	              -	      B-A1
+        breakup	              -	      I-A1
+          value	              -	      E-A1
+             at	              -	      B-A2
+              $	              -	      I-A2
+             55	              -	      I-A2
+              a	              -	      I-A2
+          share	              -	      E-A2
+              .	              -	         O
+
+             In	              -	         O	  B-AM-ADV
+       addition	              -	         O	  I-AM-ADV
+             to	              -	         O	  I-AM-ADV
+        selling	        selling	       S-V	  I-AM-ADV
+  Japanese-made	              -	      B-A1	  I-AM-ADV
+   photocopiers	              -	      I-A1	  I-AM-ADV
+            and	              -	      I-A1	  I-AM-ADV
+      facsimile	              -	      I-A1	  I-AM-ADV
+       machines	              -	      E-A1	  I-AM-ADV
+             in	              -	  B-AM-LOC	  I-AM-ADV
+         Europe	              -	  E-AM-LOC	  I-AM-ADV
+            and	              -	         O	  I-AM-ADV
+         copier	              -	         O	  I-AM-ADV
+       supplies	              -	         O	  I-AM-ADV
+             in	              -	         O	  I-AM-ADV
+            the	              -	         O	  I-AM-ADV
+           U.S.	              -	         O	  E-AM-ADV
+              ,	              -	         O	         O
+         Nashua	              -	      S-A0	      S-A0
+            has	            has	         O	       S-V
+          three	              -	         O	      B-A1
+          other	              -	         O	      I-A1
+          major	              -	         O	      I-A1
+     businesses	              -	         O	      I-A1
+              :	              -	         O	      I-A1
+         labels	              -	         O	      I-A1
+            and	              -	         O	      I-A1
+          tapes	              -	         O	      I-A1
+              ,	              -	         O	      I-A1
+           data	              -	         O	      I-A1
+        storage	              -	         O	      I-A1
+          disks	              -	         O	      I-A1
+            for	              -	         O	      I-A1
+      computers	              -	         O	      I-A1
+            and	              -	         O	      I-A1
+     mail-order	              -	         O	      I-A1
+ photofinishing	              -	         O	      E-A1
+              .	              -	         O	         O
+

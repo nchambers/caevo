@@ -1,0 +1,205 @@
+          Ogden	              -	      B-A0	         O
+       Projects	              -	      I-A0	         O
+           Inc.	              -	      E-A0	         O
+           said	           said	       S-V	         O
+            net	              -	      B-A1	      B-A1
+         income	              -	      I-A1	      E-A1
+         jumped	         jumped	      I-A1	       S-V
+             to	              -	      I-A1	      B-A4
+              $	              -	      I-A1	      I-A4
+            6.6	              -	      I-A1	      I-A4
+        million	              -	      I-A1	      I-A4
+              ,	              -	      I-A1	      I-A4
+             or	              -	      I-A1	      I-A4
+             18	              -	      I-A1	      I-A4
+          cents	              -	      I-A1	      I-A4
+              a	              -	      I-A1	      I-A4
+          share	              -	      I-A1	      I-A4
+              ,	              -	      I-A1	      E-A4
+             in	              -	      I-A1	  B-AM-TMP
+            the	              -	      I-A1	  I-AM-TMP
+          third	              -	      I-A1	  I-AM-TMP
+        quarter	              -	      E-A1	  E-AM-TMP
+              .	              -	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A0
+      Fairfield	              -	      I-A1	      I-A1	      I-A0
+              ,	              -	      I-A1	      I-A1	      I-A0
+           N.J.	              -	      I-A1	      I-A1	      I-A0
+              ,	              -	      I-A1	      I-A1	      I-A0
+        company	              -	      E-A1	      E-A1	      I-A0
+              ,	              -	         O	         O	      I-A0
+          which	              -	    S-R-A1	    S-R-A1	      I-A0
+             is	             is	       S-V	         O	      I-A0
+             92	              -	      B-A2	         O	      I-A0
+              %	              -	      E-A2	         O	      I-A0
+              -	              -	         O	         O	      I-A0
+          owned	          owned	         O	       S-V	      I-A0
+             by	              -	         O	      B-A0	      I-A0
+          Ogden	              -	         O	      I-A0	      I-A0
+          Corp.	              -	         O	      I-A0	      I-A0
+              ,	              -	         O	      I-A0	      I-A0
+            New	              -	         O	      I-A0	      I-A0
+           York	              -	         O	      I-A0	      I-A0
+              ,	              -	         O	      E-A0	      E-A0
+            had	            had	         O	         O	       S-V
+            net	              -	         O	         O	      B-A1
+             of	              -	         O	         O	      I-A1
+              $	              -	         O	         O	      I-A1
+            1.1	              -	         O	         O	      I-A1
+        million	              -	         O	         O	      I-A1
+              ,	              -	         O	         O	      I-A1
+             or	              -	         O	         O	      I-A1
+           four	              -	         O	         O	      I-A1
+          cents	              -	         O	         O	      I-A1
+              a	              -	         O	         O	      I-A1
+          share	              -	         O	         O	      I-A1
+              ,	              -	         O	         O	      I-A1
+              a	              -	         O	         O	      I-A1
+           year	              -	         O	         O	      I-A1
+            ago	              -	         O	         O	      E-A1
+              .	              -	         O	         O	         O
+
+        Revenue	              -	      S-A1
+         soared	         soared	       S-V
+             to	              -	      B-A4
+              $	              -	      I-A4
+          101.7	              -	      I-A4
+        million	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+           39.5	              -	      I-A3
+        million	              -	      E-A3
+              .	              -	         O
+
+          Ogden	              -	         O	         O	      B-A1
+       Projects	              -	         O	         O	      I-A1
+              ,	              -	         O	         O	      I-A1
+          whose	              -	      B-A1	    B-R-A1	      I-A1
+         shares	              -	      E-A1	    E-R-A1	      I-A1
+          began	          began	       S-V	         O	      I-A1
+        trading	        trading	    B-C-A1	       S-V	      I-A1
+             on	              -	    I-C-A1	  B-AM-LOC	      I-A1
+            the	              -	    I-C-A1	  I-AM-LOC	      I-A1
+            New	              -	    I-C-A1	  I-AM-LOC	      I-A1
+           York	              -	    I-C-A1	  I-AM-LOC	      I-A1
+          Stock	              -	    I-C-A1	  I-AM-LOC	      I-A1
+       Exchange	              -	    I-C-A1	  E-AM-LOC	      I-A1
+             in	              -	    I-C-A1	  B-AM-TMP	      I-A1
+         August	              -	    E-C-A1	  E-AM-TMP	      I-A1
+              ,	              -	         O	         O	      E-A1
+         closed	         closed	         O	         O	       S-V
+      yesterday	              -	         O	         O	  S-AM-TMP
+             at	              -	         O	         O	  B-AM-EXT
+              $	              -	         O	         O	  I-AM-EXT
+         26.875	              -	         O	         O	  E-AM-EXT
+              ,	              -	         O	         O	         O
+           down	              -	         O	         O	  B-AM-MNR
+             75	              -	         O	         O	  I-AM-MNR
+          cents	              -	         O	         O	  E-AM-MNR
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	      B-A0
+          stock	              -	      E-A1	      E-A0
+          began	          began	       S-V	         O
+        trading	        trading	    B-C-A1	       S-V
+           this	              -	    I-C-A1	  B-AM-TMP
+         summer	              -	    I-C-A1	  E-AM-TMP
+             at	              -	    I-C-A1	      B-A3
+              $	              -	    I-C-A1	      I-A3
+             14	              -	    I-C-A1	      I-A3
+         apiece	              -	    E-C-A1	      E-A3
+              .	              -	         O	         O
+
+          Ogden	              -	      B-A0	      B-A0	         O
+       Projects	              -	      E-A0	      I-A0	         O
+              ,	              -	         O	      I-A0	         O
+          which	              -	    S-R-A0	      I-A0	         O
+            has	            has	       S-V	      I-A0	         O
+      interests	              -	      B-A1	      I-A0	         O
+             in	              -	      I-A1	      I-A0	         O
+    solid-waste	              -	      I-A1	      I-A0	         O
+       recovery	              -	      I-A1	      I-A0	         O
+            and	              -	      I-A1	      I-A0	         O
+hazardous-waste	              -	      I-A1	      I-A0	         O
+        cleanup	              -	      E-A1	      I-A0	         O
+              ,	              -	         O	      E-A0	         O
+           said	           said	         O	       S-V	         O
+             it	              -	         O	      B-A1	      S-A0
+            has	            has	         O	      I-A1	       S-V
+             13	              -	         O	      I-A1	      B-A1
+     facilities	              -	         O	      I-A1	      I-A1
+             in	              -	         O	      I-A1	      I-A1
+      operation	              -	         O	      I-A1	      E-A1
+              ,	              -	         O	      I-A1	         O
+             up	              -	         O	      I-A1	    B-C-A1
+           from	              -	         O	      I-A1	    I-C-A1
+          seven	              -	         O	      I-A1	    I-C-A1
+              a	              -	         O	      I-A1	    I-C-A1
+           year	              -	         O	      I-A1	    I-C-A1
+            ago	              -	         O	      E-A1	    E-C-A1
+              .	              -	         O	         O	         O
+
+      Meanwhile	              -	         O	  S-AM-TMP
+              ,	              -	         O	         O
+          Ogden	              -	      B-A0	      B-A0
+          Corp.	              -	      E-A0	      I-A0
+              ,	              -	         O	      I-A0
+          which	              -	    S-R-A0	      I-A0
+           also	              -	  S-AM-DIS	      I-A0
+            has	            has	       S-V	      I-A0
+      interests	              -	      B-A1	      I-A0
+             in	              -	      I-A1	      I-A0
+       building	              -	      I-A1	      I-A0
+    maintenance	              -	      I-A1	      I-A0
+            and	              -	      I-A1	      I-A0
+     management	              -	      I-A1	      I-A0
+              ,	              -	      I-A1	      E-A0
+       reported	       reported	      I-A1	       S-V
+  third-quarter	              -	      I-A1	      B-A1
+            net	              -	      I-A1	      I-A1
+         income	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A1
+           27.1	              -	      I-A1	      I-A1
+        million	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+             or	              -	      I-A1	      I-A1
+             67	              -	      I-A1	      I-A1
+          cents	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+          share	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+           more	              -	      I-A1	      I-A1
+           than	              -	      I-A1	      I-A1
+          twice	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A1
+           13.5	              -	      I-A1	      I-A1
+        million	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+             or	              -	      I-A1	      I-A1
+             34	              -	      I-A1	      I-A1
+          cents	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+          share	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+           year	              -	      I-A1	      I-A1
+        earlier	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+        Revenue	              -	      S-A1
+           rose	           rose	       S-V
+             33	              -	      B-A2
+              %	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+          378.1	              -	      I-A4
+        million	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+          283.8	              -	      I-A3
+        million	              -	      E-A3
+              .	              -	         O
+

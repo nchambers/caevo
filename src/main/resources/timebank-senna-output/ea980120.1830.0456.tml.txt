@@ -1,0 +1,96 @@
+            The	              -	      B-A0	         O	         O	         O
+       Pentagon	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+          today	              -	  S-AM-TMP	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O
+           will	              -	      I-A1	  S-AM-MOD	         O	         O
+     re-examine	     re-examine	      I-A1	       S-V	         O	         O
+            the	              -	      I-A1	      B-A1	      B-A1	         O
+       question	              -	      I-A1	      E-A1	      E-A1	         O
+            are	            are	      I-A1	         O	       S-V	         O
+            the	              -	      I-A1	         O	      B-A3	      B-A1
+        remains	              -	      I-A1	         O	      I-A3	      E-A1
+         inside	              -	      I-A1	         O	      I-A3	         O
+            the	              -	      I-A1	         O	      I-A3	      B-A1
+           Tomb	              -	      I-A1	         O	      I-A3	      E-A1
+             of	              -	      I-A1	         O	      I-A3	         O
+            the	              -	      I-A1	         O	      I-A3	         O
+        Unknown	              -	      I-A1	         O	      I-A3	         O
+           from	              -	      I-A1	         O	      I-A3	         O
+            the	              -	      I-A1	         O	      I-A3	         O
+        Vietnam	              -	      I-A1	         O	      I-A3	         O
+            War	              -	      I-A1	         O	      I-A3	         O
+              ,	              -	      I-A1	         O	      I-A3	         O
+             in	              -	      I-A1	         O	      I-A3	  B-AM-DIS
+           fact	              -	      I-A1	         O	      I-A3	  E-AM-DIS
+              ,	              -	      I-A1	         O	      I-A3	         O
+          known	          known	      E-A1	         O	      I-A3	       S-V
+              ?	              -	         O	         O	      E-A3	         O
+
+            CBS	              -	      B-A0	         O
+           News	              -	      E-A0	         O
+          first	              -	  S-AM-TMP	         O
+       reported	       reported	       S-V	         O
+           last	              -	  B-AM-TMP	         O
+          night	              -	  E-AM-TMP	         O
+           that	              -	      B-A1	         O
+            the	              -	      I-A1	      B-A0
+           tomb	              -	      I-A1	      E-A0
+            may	              -	      I-A1	  S-AM-MOD
+        contain	        contain	      I-A1	       S-V
+            the	              -	      I-A1	      B-A1
+        remains	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+            Air	              -	      I-A1	      I-A1
+          Force	              -	      I-A1	      I-A1
+          pilot	              -	      I-A1	      I-A1
+        Michael	              -	      I-A1	      I-A1
+        Blassie	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+          There	              -	         O	         O	         O	         O
+            was	            was	       S-V	         O	         O	         O
+              a	              -	      B-A1	         O	         O	         O
+      suspicion	              -	      I-A1	         O	         O	         O
+            the	              -	      I-A1	      B-A1	         O	         O
+           body	              -	      I-A1	      E-A1	         O	         O
+            was	            was	      I-A1	       S-V	         O	         O
+        Blassie	              -	      E-A1	      S-A1	         O	         O
+        because	              -	  B-AM-CAU	  B-AM-CAU	         O	         O
+            his	              -	  I-AM-CAU	  I-AM-CAU	      B-A1	      B-A1
+        uniform	              -	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1
+            and	              -	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1
+             ID	              -	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1
+           card	              -	  I-AM-CAU	  I-AM-CAU	      E-A1	      E-A1
+           were	           were	  I-AM-CAU	  I-AM-CAU	       S-V	         O
+          found	          found	  I-AM-CAU	  I-AM-CAU	    B-C-A1	       S-V
+           near	              -	  I-AM-CAU	  I-AM-CAU	    I-C-A1	  B-AM-LOC
+            the	              -	  I-AM-CAU	  I-AM-CAU	    I-C-A1	  I-AM-LOC
+           body	              -	  I-AM-CAU	  I-AM-CAU	    I-C-A1	  I-AM-LOC
+             in	              -	  I-AM-CAU	  I-AM-CAU	    I-C-A1	  I-AM-LOC
+        Vietnam	              -	  E-AM-CAU	  E-AM-CAU	    E-C-A1	  E-AM-LOC
+              .	              -	         O	         O	         O	         O
+
+            But	              -	  S-AM-DIS	  S-AM-DIS
+   subsequently	              -	  S-AM-TMP	  S-AM-TMP
+              ,	              -	         O	         O
+           they	              -	      S-A1	      S-A1
+           were	           were	       S-V	         O
+           lost	           lost	    S-C-A1	       S-V
+              .	              -	         O	         O
+
+        Blassie	              -	      B-A0	         O
+             's	              -	      I-A0	         O
+         mother	              -	      E-A0	         O
+            now	              -	  S-AM-TMP	         O
+          wants	          wants	       S-V	         O
+            the	              -	      B-A1	         O
+        remains	              -	      I-A1	         O
+             in	              -	      I-A1	         O
+            the	              -	      I-A1	      B-A1
+           tomb	              -	      I-A1	      E-A1
+         tested	         tested	      I-A1	       S-V
+            for	              -	      I-A1	  B-AM-PNC
+            DNA	              -	      E-A1	  E-AM-PNC
+              .	              -	         O	         O
+

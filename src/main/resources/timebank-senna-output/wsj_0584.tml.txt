@@ -1,0 +1,1207 @@
+            The	              -	         O	      B-A0	         O	      B-A1	      B-A0
+      bolstered	      bolstered	       S-V	      I-A0	         O	      I-A1	      I-A0
+       cellular	              -	      B-A1	      I-A0	         O	      I-A1	      I-A0
+      agreement	              -	      E-A1	      I-A0	         O	      I-A1	      I-A0
+        between	              -	         O	      I-A0	         O	      I-A1	      I-A0
+      BellSouth	              -	         O	      I-A0	         O	      I-A1	      I-A0
+          Corp.	              -	         O	      I-A0	         O	      I-A1	      I-A0
+            and	              -	         O	      I-A0	         O	      I-A1	      I-A0
+            LIN	              -	         O	      I-A0	         O	      I-A1	      I-A0
+   Broadcasting	              -	         O	      I-A0	         O	      I-A1	      I-A0
+          Corp.	              -	         O	      E-A0	         O	      E-A1	      E-A0
+        carries	        carries	         O	       S-V	         O	         O	         O
+     heightened	     heightened	         O	      B-A1	       S-V	         O	         O
+          risks	              -	         O	      E-A1	      S-A1	         O	         O
+            and	              -	         O	         O	         O	         O	         O
+          could	              -	         O	         O	         O	  S-AM-MOD	         O
+           fail	           fail	         O	         O	         O	       S-V	         O
+             to	              -	         O	         O	         O	      B-A2	         O
+           fend	           fend	         O	         O	         O	      I-A2	       B-V
+            off	              -	         O	         O	         O	      I-A2	       E-V
+          McCaw	              -	         O	         O	         O	      I-A2	      B-A1
+       Cellular	              -	         O	         O	         O	      I-A2	      I-A1
+ Communications	              -	         O	         O	         O	      I-A2	      I-A1
+           Inc.	              -	         O	         O	         O	      I-A2	      I-A1
+              ,	              -	         O	         O	         O	      I-A2	      I-A1
+            the	              -	         O	         O	         O	      I-A2	      I-A1
+          rival	              -	         O	         O	         O	      I-A2	      I-A1
+         suitor	              -	         O	         O	         O	      I-A2	      I-A1
+            for	              -	         O	         O	         O	      I-A2	      I-A1
+            LIN	              -	         O	         O	         O	      E-A2	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+       Moreover	              -	         O	  S-AM-DIS	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+            the	              -	         O	      B-A0	         O	         O	         O	         O
+        amended	        amended	       S-V	      I-A0	         O	         O	         O	         O
+           pact	              -	      S-A1	      E-A0	         O	         O	         O	         O
+          shows	          shows	         O	       S-V	         O	         O	         O	         O
+            how	              -	         O	      B-A1	         O	S-R-AM-MNR	         O	         O
+          McCaw	              -	         O	      I-A1	      B-A0	      B-A0	         O	         O
+             's	              -	         O	      I-A1	      I-A0	      I-A0	         O	         O
+    persistence	              -	         O	      I-A1	      E-A0	      E-A0	         O	         O
+            has	            has	         O	      I-A1	       S-V	         O	         O	         O
+         pushed	         pushed	         O	      I-A1	         O	       S-V	         O	         O
+            LIN	              -	         O	      I-A1	         O	      B-A1	         O	         O
+            and	              -	         O	      I-A1	         O	      I-A1	         O	         O
+      BellSouth	              -	         O	      I-A1	         O	      E-A1	         O	         O
+           into	              -	         O	      I-A1	         O	      B-A2	         O	         O
+              a	              -	         O	      I-A1	         O	      I-A2	         O	         O
+         corner	              -	         O	      I-A1	         O	      E-A2	         O	         O
+              ,	              -	         O	      I-A1	         O	         O	         O	         O
+        forcing	        forcing	         O	      I-A1	         O	  B-AM-ADV	       S-V	         O
+           huge	              -	         O	      I-A1	         O	  I-AM-ADV	      B-A1	         O
+           debt	              -	         O	      I-A1	         O	  I-AM-ADV	      E-A1	         O
+             on	              -	         O	      I-A1	         O	  I-AM-ADV	      B-A2	         O
+            the	              -	         O	      I-A1	         O	  I-AM-ADV	      I-A2	         O
+       proposed	       proposed	         O	      I-A1	         O	  I-AM-ADV	      I-A2	       S-V
+            new	              -	         O	      I-A1	         O	  I-AM-ADV	      I-A2	      B-A1
+        company	              -	         O	      E-A1	         O	  E-AM-ADV	      E-A2	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A0	         O	      B-A0
+           debt	              -	      E-A1	      I-A0	         O	      I-A0
+              ,	              -	         O	      I-A0	         O	      I-A0
+      estimated	      estimated	       S-V	      I-A0	         O	      I-A0
+             at	              -	      B-A2	      I-A0	         O	      I-A0
+              $	              -	      I-A2	      I-A0	         O	      I-A0
+            4.7	              -	      I-A2	      I-A0	         O	      I-A0
+        billion	              -	      E-A2	      I-A0	         O	      I-A0
+              ,	              -	         O	      E-A0	         O	      E-A0
+          could	              -	         O	  S-AM-MOD	         O	         O
+       mortgage	       mortgage	         O	       S-V	         O	         O
+            the	              -	         O	      B-A1	         O	         O
+       cellular	              -	         O	      I-A1	         O	         O
+        company	              -	         O	      I-A1	         O	         O
+             's	              -	         O	      I-A1	         O	         O
+         future	              -	         O	      I-A1	         O	         O
+        earning	        earning	         O	      I-A1	       S-V	         O
+          power	              -	         O	      E-A1	      S-A0	         O
+             in	              -	         O	  B-AM-PNC	         O	         O
+          order	              -	         O	  I-AM-PNC	         O	         O
+             to	              -	         O	  I-AM-PNC	         O	         O
+        placate	        placate	         O	  I-AM-PNC	         O	       S-V
+           some	              -	         O	  I-AM-PNC	         O	      B-A1
+            LIN	              -	         O	  I-AM-PNC	         O	      I-A1
+        holders	              -	         O	  I-AM-PNC	         O	      E-A1
+             in	              -	         O	  I-AM-PNC	         O	  B-AM-TMP
+            the	              -	         O	  I-AM-PNC	         O	  I-AM-TMP
+          short	              -	         O	  I-AM-PNC	         O	  I-AM-TMP
+           term	              -	         O	  E-AM-PNC	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O
+           plan	              -	      E-A0	         O	         O
+          still	              -	  S-AM-TMP	         O	         O
+          calls	          calls	       S-V	         O	         O
+            for	              -	      B-A1	         O	         O
+            LIN	              -	      I-A1	      S-A0	      S-A0
+             to	              -	      I-A1	         O	         O
+        combine	        combine	      I-A1	       S-V	         O
+            its	              -	      I-A1	      B-A1	         O
+       cellular	              -	      I-A1	      I-A1	         O
+      telephone	              -	      I-A1	      I-A1	         O
+     properties	              -	      I-A1	      E-A1	         O
+           with	              -	      I-A1	      B-A2	         O
+      BellSouth	              -	      I-A1	      I-A2	         O
+             's	              -	      I-A1	      E-A2	         O
+            and	              -	      I-A1	         O	         O
+             to	              -	      I-A1	         O	         O
+           spin	           spin	      I-A1	         O	       B-V
+            off	              -	      I-A1	         O	       E-V
+            its	              -	      I-A1	         O	      B-A1
+   broadcasting	              -	      I-A1	         O	      I-A1
+     operations	              -	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O
+
+            But	              -	         O	  S-AM-DIS	         O	         O
+          under	              -	         O	  B-AM-ADV	         O	         O
+            new	              -	         O	  I-AM-ADV	         O	         O
+          terms	              -	         O	  I-AM-ADV	         O	         O
+             of	              -	         O	  I-AM-ADV	         O	         O
+            the	              -	      B-A1	  I-AM-ADV	         O	         O
+      agreement	              -	      E-A1	  I-AM-ADV	         O	         O
+              ,	              -	         O	  I-AM-ADV	         O	         O
+      announced	      announced	       S-V	  I-AM-ADV	         O	         O
+         Friday	              -	  S-AM-TMP	  I-AM-ADV	         O	         O
+              ,	              -	         O	  E-AM-ADV	         O	         O
+            LIN	              -	         O	      B-A0	      B-A0	         O
+        holders	              -	         O	      E-A0	      E-A0	         O
+          would	              -	         O	  S-AM-MOD	         O	         O
+        receive	        receive	         O	       S-V	         O	         O
+              a	              -	         O	      B-A1	         O	         O
+        special	              -	         O	      I-A1	         O	         O
+           cash	              -	         O	      I-A1	         O	         O
+       dividend	              -	         O	      I-A1	         O	         O
+             of	              -	         O	      I-A1	         O	         O
+              $	              -	         O	      I-A1	         O	         O
+             42	              -	         O	      I-A1	         O	         O
+              a	              -	         O	      I-A1	         O	         O
+          share	              -	         O	      I-A1	         O	         O
+              ,	              -	         O	      I-A1	         O	         O
+   representing	   representing	         O	      I-A1	       S-V	         O
+              a	              -	         O	      I-A1	      B-A1	         O
+         payout	              -	         O	      I-A1	      I-A1	         O
+             of	              -	         O	      I-A1	      I-A1	         O
+          about	              -	         O	      I-A1	      I-A1	         O
+              $	              -	         O	      I-A1	      I-A1	         O
+           2.23	              -	         O	      I-A1	      I-A1	         O
+        billion	              -	         O	      E-A1	      E-A1	         O
+              ,	              -	         O	         O	         O	         O
+        shortly	              -	         O	  B-AM-TMP	         O	         O
+         before	              -	         O	  I-AM-TMP	         O	         O
+            the	              -	         O	  I-AM-TMP	         O	         O
+       proposed	       proposed	         O	  I-AM-TMP	         O	       S-V
+         merger	              -	         O	  E-AM-TMP	         O	      S-A1
+              .	              -	         O	         O	         O	         O
+
+            LIN	              -	      S-A0	         O	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	      S-A0	      S-A0	         O	         O	         O
+        expects	        expects	      I-A1	       S-V	         O	         O	         O	         O	         O
+             to	              -	      I-A1	      B-A1	         O	         O	         O	         O	         O
+         borrow	         borrow	      I-A1	      I-A1	       S-V	         O	         O	         O	         O
+            the	              -	      I-A1	      I-A1	      B-A1	         O	         O	         O	         O
+          money	              -	      I-A1	      I-A1	      E-A1	         O	         O	         O	         O
+             to	              -	      I-A1	      I-A1	  B-AM-PNC	         O	         O	         O	         O
+            pay	            pay	      I-A1	      I-A1	  I-AM-PNC	       S-V	         O	         O	         O
+            the	              -	      I-A1	      I-A1	  I-AM-PNC	      B-A1	         O	         O	         O
+       dividend	              -	      I-A1	      E-A1	  E-AM-PNC	      E-A1	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O	         O	         O
+            but	              -	      I-A1	         O	         O	         O	         O	         O	         O
+    commitments	              -	      I-A1	         O	         O	         O	      B-A0	      B-A1	      B-A1
+           from	              -	      I-A1	         O	         O	         O	      I-A0	      I-A1	      I-A1
+          banks	              -	      I-A1	         O	         O	         O	      E-A0	      E-A1	      E-A1
+          still	              -	      I-A1	         O	         O	         O	  S-AM-TMP	  S-AM-TMP	  S-AM-TMP
+           have	           have	      I-A1	         O	         O	         O	       S-V	         O	         O
+            n't	              -	      I-A1	         O	         O	         O	      S-A1	  S-AM-NEG	  S-AM-NEG
+           been	           been	      I-A1	         O	         O	         O	         O	       S-V	         O
+       obtained	       obtained	      E-A1	         O	         O	         O	         O	    S-C-A1	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+          Under	              -	  B-AM-LOC	  B-AM-LOC
+       previous	              -	  I-AM-LOC	  I-AM-LOC
+          terms	              -	  E-AM-LOC	  E-AM-LOC
+              ,	              -	         O	         O
+        holders	              -	      S-A0	      S-A0
+          would	              -	  S-AM-MOD	  S-AM-MOD
+           have	           have	       S-V	         O
+       received	       received	      B-A1	       S-V
+              a	              -	      I-A1	      B-A1
+       dividend	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+           only	              -	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A1
+             20	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+          share	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+             In	              -	  B-AM-DIS	         O
+       addition	              -	  E-AM-DIS	         O
+              ,	              -	         O	         O
+            New	              -	      B-A0	      B-A0
+     York-based	              -	      I-A0	      I-A0
+            LIN	              -	      E-A0	      E-A0
+          would	              -	  S-AM-MOD	         O
+       exercise	       exercise	       S-V	         O
+            its	              -	      B-A1	         O
+          right	              -	      I-A1	         O
+             to	              -	      I-A1	         O
+            buy	            buy	      I-A1	       B-V
+            out	              -	      I-A1	       E-V
+            for	              -	      I-A1	      B-A1
+              $	              -	      I-A1	      I-A1
+            1.9	              -	      I-A1	      I-A1
+        billion	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+             55	              -	      I-A1	      I-A1
+              %	              -	      I-A1	      I-A1
+         equity	              -	      I-A1	      I-A1
+       interest	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+            its	              -	      I-A1	      I-A1
+        partner	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+     Metromedia	              -	      I-A1	      I-A1
+            Co.	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+            New	              -	      I-A1	      I-A1
+           York	              -	      I-A1	      I-A1
+       cellular	              -	      I-A1	      I-A1
+      franchise	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+           That	              -	         O	      B-A1	      B-A1
+          money	              -	         O	      E-A1	      E-A1
+           also	              -	  S-AM-DIS	  S-AM-DIS	  S-AM-DIS
+          would	              -	  S-AM-MOD	         O	         O
+           have	           have	       S-V	  S-AM-MOD	  S-AM-MOD
+             to	              -	         O	         O	         O
+             be	             be	         O	       S-V	         O
+       borrowed	       borrowed	         O	    S-C-A1	       S-V
+              .	              -	         O	         O	         O
+
+             In	              -	  B-AM-DIS	  B-AM-DIS	         O
+         effect	              -	  E-AM-DIS	  E-AM-DIS	         O
+              ,	              -	         O	         O	         O
+          McCaw	              -	      S-A0	      S-A0	      S-A0
+            has	            has	       S-V	         O	         O
+         forced	         forced	      B-A1	       S-V	         O
+            LIN	              -	      I-A1	      B-A1	      S-A0
+             's	              -	      I-A1	      I-A1	         O
+           hand	              -	      I-A1	      E-A1	         O
+             by	              -	      I-A1	  B-AM-MNR	         O
+        bidding	        bidding	      I-A1	  I-AM-MNR	       S-V
+              $	              -	      I-A1	  I-AM-MNR	      B-A1
+            1.9	              -	      I-A1	  I-AM-MNR	      I-A1
+        billion	              -	      I-A1	  I-AM-MNR	      I-A1
+            for	              -	      I-A1	  I-AM-MNR	      I-A1
+            the	              -	      I-A1	  I-AM-MNR	      I-A1
+          stake	              -	      I-A1	  I-AM-MNR	      E-A1
+        earlier	              -	      I-A1	  I-AM-MNR	  B-AM-TMP
+           this	              -	      I-A1	  I-AM-MNR	  I-AM-TMP
+          month	              -	      E-A1	  E-AM-MNR	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+             We	              -	      S-A0	      S-A0	         O	         O	      B-A1
+            're	            're	       S-V	         O	         O	         O	      I-A1
+         taking	         taking	      B-A1	       B-V	         O	         O	      I-A1
+             on	              -	      I-A1	       E-V	         O	         O	      I-A1
+           more	              -	      I-A1	      B-A1	      B-A1	      B-A1	      I-A1
+           debt	              -	      I-A1	      I-A1	      E-A1	      E-A1	      I-A1
+           than	              -	      I-A1	      I-A1	         O	         O	      I-A1
+             we	              -	      I-A1	      I-A1	         O	      S-A0	      I-A1
+          would	              -	      I-A1	      I-A1	  S-AM-MOD	  S-AM-MOD	      I-A1
+           have	           have	      I-A1	      I-A1	       S-V	         O	      I-A1
+          liked	          liked	      I-A1	      I-A1	         O	       S-V	      I-A1
+             to	              -	      E-A1	      E-A1	         O	         O	      E-A1
+              ,	              -	         O	         O	         O	         O	         O
+   acknowledged	   acknowledged	         O	         O	         O	         O	       S-V
+        Michael	              -	         O	         O	         O	         O	      B-A0
+          Plouf	              -	         O	         O	         O	         O	      I-A0
+              ,	              -	         O	         O	         O	         O	      I-A0
+            LIN	              -	         O	         O	         O	         O	      I-A0
+             's	              -	         O	         O	         O	         O	      I-A0
+           vice	              -	         O	         O	         O	         O	      I-A0
+      president	              -	         O	         O	         O	         O	      I-A0
+            and	              -	         O	         O	         O	         O	      I-A0
+      treasurer	              -	         O	         O	         O	         O	      E-A0
+              .	              -	         O	         O	         O	         O	         O
+
+       Although	              -	         O	         O	         O	         O	  B-AM-ADV	         O
+             he	              -	      S-A0	         O	         O	         O	  I-AM-ADV	         O
+      expressed	      expressed	       S-V	         O	         O	         O	  I-AM-ADV	         O
+     confidence	              -	      B-A1	         O	         O	         O	  I-AM-ADV	         O
+           that	              -	      I-A1	         O	         O	         O	  I-AM-ADV	         O
+            the	              -	      I-A1	         O	      B-A1	      B-A2	  I-AM-ADV	         O
+       proposed	       proposed	      I-A1	       S-V	      I-A1	      I-A2	  I-AM-ADV	         O
+            new	              -	      I-A1	      B-A1	      I-A1	      I-A2	  I-AM-ADV	         O
+        company	              -	      I-A1	      I-A1	      I-A1	      I-A2	  I-AM-ADV	         O
+             's	              -	      I-A1	      I-A1	      I-A1	      I-A2	  I-AM-ADV	         O
+           cash	              -	      I-A1	      I-A1	      I-A1	      I-A2	  I-AM-ADV	         O
+           flow	              -	      I-A1	      E-A1	      E-A1	      E-A2	  I-AM-ADV	         O
+          would	              -	      I-A1	         O	  S-AM-MOD	         O	  I-AM-ADV	         O
+             be	             be	      I-A1	         O	       S-V	         O	  I-AM-ADV	         O
+     sufficient	              -	      I-A1	         O	    B-C-A1	         O	  I-AM-ADV	         O
+             to	              -	      I-A1	         O	    I-C-A1	         O	  I-AM-ADV	         O
+          cover	          cover	      I-A1	         O	    I-C-A1	       S-V	  I-AM-ADV	         O
+       interest	              -	      I-A1	         O	    I-C-A1	      B-A1	  I-AM-ADV	         O
+       payments	              -	      I-A1	         O	    I-C-A1	      I-A1	  I-AM-ADV	         O
+             on	              -	      I-A1	         O	    I-C-A1	      I-A1	  I-AM-ADV	         O
+            the	              -	      I-A1	         O	    I-C-A1	      I-A1	  I-AM-ADV	         O
+           debt	              -	      E-A1	         O	    E-C-A1	      E-A1	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+             he	              -	         O	         O	         O	         O	      S-A0	         O
+      estimated	      estimated	         O	         O	         O	         O	       S-V	         O
+           that	              -	         O	         O	         O	         O	      B-A1	         O
+            the	              -	         O	         O	         O	         O	      I-A1	      B-A1
+        company	              -	         O	         O	         O	         O	      I-A1	      E-A1
+          would	              -	         O	         O	         O	         O	      I-A1	  S-AM-MOD
+            n't	              -	         O	         O	         O	         O	      I-A1	  S-AM-NEG
+             be	             be	         O	         O	         O	         O	      I-A1	       S-V
+     profitable	              -	         O	         O	         O	         O	      I-A1	         O
+          until	              -	         O	         O	         O	         O	      I-A1	         O
+           1994	              -	         O	         O	         O	         O	      I-A1	         O
+             or	              -	         O	         O	         O	         O	      I-A1	         O
+          later	              -	         O	         O	         O	         O	      E-A1	         O
+              .	              -	         O	         O	         O	         O	         O	         O
+
+        Analyst	              -	      S-A0
+       estimate	       estimate	       S-V
+            the	              -	      B-A1
+          value	              -	      I-A1
+             of	              -	      I-A1
+            the	              -	      I-A1
+      BellSouth	              -	      I-A1
+       proposal	              -	      E-A1
+             at	              -	      B-A2
+          about	              -	      I-A2
+              $	              -	      I-A2
+            115	              -	      I-A2
+             to	              -	      I-A2
+              $	              -	      I-A2
+            125	              -	      I-A2
+              a	              -	      I-A2
+          share	              -	      E-A2
+              .	              -	         O
+
+           They	              -	      S-A0
+          value	          value	       S-V
+          McCaw	              -	      B-A1
+             's	              -	      I-A1
+            bid	              -	      E-A1
+             at	              -	      B-A2
+              $	              -	      I-A2
+            112	              -	      I-A2
+             to	              -	      I-A2
+              $	              -	      I-A2
+            118	              -	      I-A2
+              a	              -	      I-A2
+          share	              -	      E-A2
+              .	              -	         O
+
+            The	              -	      B-A1	      B-A1
+       previous	              -	      I-A1	      I-A1
+      BellSouth	              -	      I-A1	      I-A1
+           pact	              -	      E-A1	      E-A1
+            was	            was	       S-V	         O
+         valued	         valued	  B-AM-MNR	       S-V
+             at	              -	  I-AM-MNR	      B-A2
+          about	              -	  I-AM-MNR	      I-A2
+              $	              -	  I-AM-MNR	      I-A2
+             98	              -	  I-AM-MNR	      I-A2
+             to	              -	  I-AM-MNR	      I-A2
+              $	              -	  I-AM-MNR	      I-A2
+            110	              -	  I-AM-MNR	      I-A2
+              a	              -	  I-AM-MNR	      I-A2
+          share	              -	  E-AM-MNR	      E-A2
+              .	              -	         O	         O
+
+          McCaw	              -	      B-A0
+              ,	              -	      I-A0
+            the	              -	      I-A0
+        largest	              -	      I-A0
+       provider	              -	      I-A0
+             of	              -	      I-A0
+       cellular	              -	      I-A0
+      telephone	              -	      I-A0
+        service	              -	      I-A0
+             in	              -	      I-A0
+            the	              -	      I-A0
+           U.S.	              -	      I-A0
+              ,	              -	      E-A0
+        already	              -	  S-AM-TMP
+           owns	           owns	       S-V
+          about	              -	      B-A1
+            9.4	              -	      I-A1
+              %	              -	      I-A1
+             of	              -	      I-A1
+            LIN	              -	      I-A1
+             's	              -	      I-A1
+          stock	              -	      E-A1
+              .	              -	         O
+
+             In	              -	         O	  B-AM-ADV	         O	         O	         O
+       response	              -	         O	  I-AM-ADV	         O	         O	         O
+             to	              -	         O	  I-AM-ADV	         O	         O	         O
+      BellSouth	              -	         O	  I-AM-ADV	         O	         O	         O
+             's	              -	         O	  I-AM-ADV	         O	         O	         O
+        amended	        amended	       S-V	  I-AM-ADV	         O	         O	         O
+           pact	              -	      S-A1	  E-AM-ADV	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            the	              -	         O	      B-A0	      B-A0	         O	         O
+       Kirkland	              -	         O	      I-A0	      I-A0	         O	         O
+              ,	              -	         O	      I-A0	      I-A0	         O	         O
+          Wash.	              -	         O	      I-A0	      I-A0	         O	         O
+              ,	              -	         O	      I-A0	      I-A0	         O	         O
+        company	              -	         O	      E-A0	      E-A0	         O	         O
+       extended	       extended	         O	       S-V	         O	         O	         O
+            its	              -	         O	      B-A1	         O	         O	         O
+            own	              -	         O	      I-A1	         O	         O	         O
+          offer	              -	         O	      I-A1	         O	         O	         O
+             to	              -	         O	      I-A1	         O	         O	         O
+            buy	            buy	         O	      I-A1	       S-V	         O	         O
+             22	              -	         O	      I-A1	      B-A1	         O	         O
+        million	              -	         O	      I-A1	      I-A1	         O	         O
+            LIN	              -	         O	      I-A1	      I-A1	         O	         O
+         shares	              -	         O	      I-A1	      E-A1	         O	         O
+            for	              -	         O	      I-A1	      B-A3	         O	         O
+              $	              -	         O	      I-A1	      I-A3	         O	         O
+            125	              -	         O	      I-A1	      I-A3	         O	         O
+         apiece	              -	         O	      I-A1	      E-A3	         O	         O
+              ,	              -	         O	      I-A1	         O	         O	         O
+          which	              -	         O	      I-A1	         O	    S-R-A0	         O
+          would	              -	         O	      I-A1	         O	  S-AM-MOD	         O
+           give	           give	         O	      I-A1	         O	       S-V	         O
+          McCaw	              -	         O	      I-A1	         O	      S-A2	         O
+              a	              -	         O	      I-A1	         O	      B-A1	         O
+           50.3	              -	         O	      I-A1	         O	      I-A1	         O
+              %	              -	         O	      I-A1	         O	      I-A1	         O
+    controlling	    controlling	         O	      I-A1	         O	      I-A1	       S-V
+       interest	              -	         O	      E-A1	         O	      E-A1	      S-A0
+              .	              -	         O	         O	         O	         O	         O
+
+           Over	              -	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	         O
+        weekend	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+          McCaw	              -	      S-A0	      S-A0
+      continued	      continued	       S-V	         O
+             to	              -	      B-A1	         O
+           call	           call	      I-A1	       S-V
+            for	              -	      I-A1	      B-A1
+             an	              -	      I-A1	      I-A1
+        auction	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+            LIN	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+       Analysts	              -	      S-A0	         O	         O
+           said	           said	       S-V	         O	         O
+           they	              -	      B-A1	      S-A0	         O
+         expect	         expect	      I-A1	       S-V	         O
+          McCaw	              -	      I-A1	      B-A1	      S-A0
+             to	              -	      I-A1	      I-A1	         O
+       escalate	       escalate	      I-A1	      I-A1	       S-V
+            the	              -	      I-A1	      I-A1	      B-A1
+        bidding	              -	      I-A1	      I-A1	      E-A1
+          again	              -	      E-A1	      E-A1	  S-AM-TMP
+              .	              -	         O	         O	         O
+
+           This	              -	      B-A1	      B-A1	         O
+           game	              -	      E-A1	      I-A1	         O
+             is	             is	       S-V	      I-A1	         O
+            n't	              -	  S-AM-NEG	      I-A1	         O
+           over	              -	  B-AM-TMP	      I-A1	         O
+            yet	              -	  E-AM-TMP	      E-A1	         O
+              ,	              -	         O	         O	         O
+           said	           said	         O	       S-V	         O
+           Joel	              -	         O	      B-A0	         O
+             D.	              -	         O	      I-A0	         O
+          Gross	              -	         O	      I-A0	         O
+              ,	              -	         O	      I-A0	         O
+              a	              -	         O	      I-A0	         O
+           vice	              -	         O	      I-A0	         O
+      president	              -	         O	      I-A0	         O
+             at	              -	         O	      I-A0	         O
+      Donaldson	              -	         O	      I-A0	         O
+              ,	              -	         O	      I-A0	         O
+         Lufkin	              -	         O	      I-A0	         O
+            amp	              -	         O	      I-A0	         O
+       Jenrette	              -	         O	      I-A0	         O
+     Securities	              -	         O	      I-A0	         O
+          Corp.	              -	         O	      I-A0	         O
+             At	              -	         O	      I-A0	         O
+           some	              -	         O	      I-A0	         O
+          point	              -	         O	      E-A0	         O
+              ,	              -	         O	         O	         O
+             it	              -	         O	    B-C-A1	      S-A1
+           will	              -	         O	    I-C-A1	  S-AM-MOD
+         become	         become	         O	    I-C-A1	       S-V
+ non-economical	              -	         O	    I-C-A1	      B-A2
+            for	              -	         O	    I-C-A1	      I-A2
+            one	              -	         O	    I-C-A1	      I-A2
+        company	              -	         O	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O
+
+            But	              -	  S-AM-DIS	         O	         O
+              I	              -	      S-A0	      S-A0	         O
+             do	             do	       S-V	         O	         O
+            n't	              -	      B-A1	  S-AM-NEG	         O
+          think	          think	      I-A1	       S-V	         O
+             we	              -	      I-A1	      B-A1	      S-A1
+            're	            're	      I-A1	      I-A1	       S-V
+             at	              -	      I-A1	      I-A1	  B-AM-TMP
+           that	              -	      I-A1	      I-A1	  I-AM-TMP
+          point	              -	      E-A1	      E-A1	  E-AM-TMP
+            yet	              -	  S-AM-TMP	  S-AM-TMP	  S-AM-TMP
+              .	              -	         O	         O	         O
+
+          Under	              -	         O	  B-AM-LOC	  B-AM-LOC
+            its	              -	         O	  I-AM-LOC	  I-AM-LOC
+        revised	        revised	       S-V	  I-AM-LOC	  I-AM-LOC
+       proposal	              -	      S-A1	  E-AM-LOC	  E-AM-LOC
+              ,	              -	         O	         O	         O
+  Atlanta-based	              -	         O	      B-A0	      B-A1
+      BellSouth	              -	         O	      E-A0	      E-A1
+          would	              -	         O	  S-AM-MOD	  S-AM-MOD
+           have	           have	         O	       S-V	         O
+              a	              -	         O	      B-A1	         O
+             50	              -	         O	      I-A1	         O
+              %	              -	         O	      I-A1	         O
+       interest	              -	         O	      I-A1	         O
+             in	              -	         O	      I-A1	         O
+            the	              -	         O	      I-A1	         O
+            new	              -	         O	      I-A1	         O
+       cellular	              -	         O	      I-A1	         O
+        company	              -	         O	      E-A1	         O
+            and	              -	         O	         O	         O
+          would	              -	         O	         O	  S-AM-MOD
+             be	             be	         O	         O	       S-V
+    responsible	              -	         O	         O	      B-A3
+            for	              -	         O	         O	      I-A3
+           half	              -	         O	         O	      I-A3
+             of	              -	         O	         O	      I-A3
+            its	              -	         O	         O	      I-A3
+           debt	              -	         O	         O	      E-A3
+              .	              -	         O	         O	         O
+
+             To	              -	         O	         O	  B-AM-PNC	         O	         O	         O	         O
+        sweeten	        sweeten	       S-V	         O	  I-AM-PNC	         O	         O	         O	         O
+            the	              -	      B-A1	         O	  I-AM-PNC	         O	         O	         O	         O
+           pact	              -	      E-A1	         O	  I-AM-PNC	         O	         O	         O	         O
+        further	              -	  S-AM-MNR	         O	  I-AM-PNC	         O	         O	         O	         O
+             --	              -	         O	         O	  I-AM-PNC	         O	         O	         O	         O
+            and	              -	         O	         O	  I-AM-PNC	         O	         O	         O	         O
+             to	              -	         O	         O	  I-AM-PNC	         O	         O	         O	         O
+           ease	           ease	         O	       S-V	  I-AM-PNC	         O	         O	         O	         O
+       concerns	              -	         O	      B-A1	  I-AM-PNC	         O	         O	         O	         O
+             of	              -	         O	      I-A1	  I-AM-PNC	         O	         O	         O	         O
+  institutional	              -	         O	      I-A1	  I-AM-PNC	         O	         O	         O	         O
+      investors	              -	         O	      E-A1	  E-AM-PNC	         O	         O	         O	         O
+             --	              -	         O	         O	         O	         O	         O	         O	         O
+      BellSouth	              -	      S-A0	      S-A0	      S-A0	         O	         O	         O	         O
+          added	          added	         O	         O	       S-V	         O	         O	         O	         O
+              a	              -	         O	         O	      B-A1	      B-A1	      B-A0	         O	         O
+      provision	              -	         O	         O	      I-A1	      E-A1	      E-A0	         O	         O
+       designed	       designed	         O	         O	      I-A1	       S-V	         O	         O	         O
+             to	              -	         O	         O	      I-A1	  B-AM-PNC	         O	         O	         O
+           give	           give	         O	         O	      I-A1	  I-AM-PNC	       S-V	         O	         O
+          extra	              -	         O	         O	      I-A1	  I-AM-PNC	      B-A1	         O	         O
+     protection	              -	         O	         O	      I-A1	  I-AM-PNC	      E-A1	         O	         O
+             to	              -	         O	         O	      I-A1	  I-AM-PNC	      B-A2	         O	         O
+        holders	              -	         O	         O	      I-A1	  I-AM-PNC	      E-A2	         O	         O
+             if	              -	         O	         O	      I-A1	  I-AM-PNC	  B-AM-ADV	         O	         O
+            the	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      B-A0	      B-A0
+       regional	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      I-A0	      I-A0
+           Bell	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      I-A0	      I-A0
+        company	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      E-A0	      E-A0
+           ever	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	  S-AM-TMP	         O
+        decides	        decides	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	       S-V	         O
+             to	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      B-A1	         O
+            buy	            buy	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      I-A1	       S-V
+            the	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      I-A1	      B-A1
+           rest	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      I-A1	      I-A1
+             of	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      I-A1	      I-A1
+            the	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      I-A1	      I-A1
+            new	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      I-A1	      I-A1
+       cellular	              -	         O	         O	      I-A1	  I-AM-PNC	  I-AM-ADV	      I-A1	      I-A1
+        company	              -	         O	         O	      E-A1	  E-AM-PNC	  E-AM-ADV	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A0	         O	         O	         O
+      provision	              -	      E-A1	      E-A0	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+      described	      described	       S-V	         O	         O	         O	         O
+             as	              -	      B-A2	         O	         O	         O	         O
+       back-end	              -	      I-A2	         O	         O	         O	         O
+     protection	              -	      E-A2	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+          would	              -	         O	  S-AM-MOD	         O	         O	         O
+        require	        require	         O	       S-V	         O	         O	         O
+      BellSouth	              -	         O	      S-A2	      S-A0	         O	         O
+             to	              -	         O	      B-A1	         O	         O	         O
+            pay	            pay	         O	      I-A1	       S-V	         O	         O
+              a	              -	         O	      I-A1	      B-A1	         O	         O
+          price	              -	         O	      I-A1	      I-A1	         O	         O
+     equivalent	              -	         O	      I-A1	      I-A1	         O	         O
+             to	              -	         O	      I-A1	      I-A1	         O	         O
+           what	              -	         O	      I-A1	      I-A1	         O	    S-R-A1
+             an	              -	         O	      I-A1	      I-A1	         O	      B-A0
+        outside	              -	         O	      I-A1	      I-A1	         O	      I-A0
+          party	              -	         O	      I-A1	      I-A1	         O	      E-A0
+          might	              -	         O	      I-A1	      I-A1	  S-AM-MOD	         O
+           have	           have	         O	      I-A1	      I-A1	       S-V	  S-AM-MOD
+             to	              -	         O	      I-A1	      I-A1	         O	         O
+            pay	            pay	         O	      E-A1	      E-A1	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+          McCaw	              -	      B-A0
+             's	              -	      I-A0
+            bid	              -	      E-A0
+           also	              -	  S-AM-DIS
+            has	            has	       S-V
+              a	              -	      B-A1
+        similar	              -	      I-A1
+         clause	              -	      E-A1
+              .	              -	         O
+
+           Only	              -	      B-A0	         O	         O
+          McCaw	              -	      I-A0	         O	         O
+             's	              -	      I-A0	         O	         O
+       proposal	              -	      E-A0	         O	         O
+       requires	       requires	       S-V	         O	         O
+            the	              -	      B-A2	      B-A0	         O
+        company	              -	      E-A2	      E-A0	         O
+             to	              -	      B-A1	         O	         O
+          begin	          begin	      I-A1	       S-V	         O
+             an	              -	      I-A1	      B-A1	         O
+        auction	              -	      I-A1	      I-A1	         O
+        process	              -	      I-A1	      E-A1	         O
+             in	              -	      I-A1	  B-AM-TMP	         O
+           June	              -	      I-A1	  I-AM-TMP	         O
+           1994	              -	      I-A1	  E-AM-TMP	         O
+            for	              -	      I-A1	  B-AM-PNC	         O
+      remaining	      remaining	      I-A1	  I-AM-PNC	       S-V
+         shares	              -	      I-A1	  I-AM-PNC	      S-A1
+             at	              -	      I-A1	  I-AM-PNC	         O
+    third-party	              -	      I-A1	  I-AM-PNC	         O
+         prices	              -	      E-A1	  E-AM-PNC	         O
+              .	              -	         O	         O	         O
+
+             To	              -	         O	         O	         O	         O	         O	         O	         O
+        mollify	        mollify	       S-V	         O	         O	         O	         O	         O	         O
+   shareholders	              -	      B-A1	      S-A1	         O	         O	         O	         O	         O
+      concerned	      concerned	      I-A1	       S-V	         O	         O	         O	         O	         O
+          about	              -	      I-A1	      B-A0	         O	         O	         O	         O	         O
+            the	              -	      I-A1	      I-A0	         O	         O	         O	         O	         O
+      long-term	              -	      I-A1	      I-A0	         O	         O	         O	         O	         O
+          value	              -	      I-A1	      I-A0	         O	         O	         O	         O	         O
+             of	              -	      I-A1	      I-A0	         O	         O	         O	         O	         O
+            the	              -	      I-A1	      I-A0	         O	         O	         O	         O	         O
+        company	              -	      I-A1	      I-A0	         O	         O	         O	         O	         O
+          under	              -	      I-A1	      I-A0	         O	         O	         O	         O	         O
+            the	              -	      I-A1	      I-A0	         O	         O	         O	         O	         O
+  BellSouth-LIN	              -	      I-A1	      I-A0	         O	         O	         O	         O	         O
+      agreement	              -	      E-A1	      E-A0	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+      BellSouth	              -	      S-A0	         O	      S-A0	      S-A0	         O	         O	         O
+           also	              -	         O	         O	  S-AM-DIS	         O	         O	         O	         O
+         agreed	         agreed	         O	         O	       S-V	         O	         O	         O	         O
+             to	              -	         O	         O	      B-A1	         O	         O	         O	         O
+            pay	            pay	         O	         O	      I-A1	       S-V	         O	         O	         O
+             as	              -	         O	         O	      I-A1	      B-A1	         O	         O	         O
+           much	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+             as	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+              $	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+             10	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+              a	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+          share	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+              ,	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+             or	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+              $	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+            540	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+        million	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+              ,	              -	         O	         O	      I-A1	      E-A1	         O	         O	         O
+             if	              -	         O	         O	      I-A1	  B-AM-ADV	         O	         O	         O
+              ,	              -	         O	         O	      I-A1	  I-AM-ADV	         O	         O	         O
+          after	              -	         O	         O	      I-A1	  I-AM-ADV	  B-AM-TMP	         O	         O
+           five	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	         O	         O
+          years	              -	         O	         O	      I-A1	  I-AM-ADV	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	      I-A1	  I-AM-ADV	         O	         O	         O
+            the	              -	         O	         O	      I-A1	  I-AM-ADV	      B-A1	         O	         O
+        trading	              -	         O	         O	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+          value	              -	         O	         O	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+             of	              -	         O	         O	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+            the	              -	         O	         O	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+            new	              -	         O	         O	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+       cellular	              -	         O	         O	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+        company	              -	         O	         O	      I-A1	  I-AM-ADV	      E-A1	         O	         O
+             is	             is	         O	         O	      I-A1	  I-AM-ADV	       S-V	         O	         O
+            n't	              -	         O	         O	      I-A1	  I-AM-ADV	  S-AM-NEG	         O	         O
+             as	              -	         O	         O	      I-A1	  I-AM-ADV	  B-AM-TMP	         O	         O
+           high	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	         O	         O
+             as	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	         O	         O
+            the	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	      B-A1	      B-A1
+          value	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	      E-A1	      E-A1
+           that	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	    S-R-A1	    S-R-A1
+   shareholders	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	      S-A0	      S-A0
+          would	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	  S-AM-MOD	  S-AM-MOD
+           have	           have	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	       S-V	         O
+       realized	       realized	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	         O	       S-V
+           from	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	         O	      B-A2
+            the	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	         O	      I-A2
+          McCaw	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-TMP	         O	      I-A2
+          offer	              -	         O	         O	      E-A1	  E-AM-ADV	  E-AM-TMP	         O	      E-A2
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+             We	              -	      S-A1	      S-A1
+            're	            're	       S-V	         O
+           very	              -	      B-A1	  S-AM-EXT
+        pleased	        pleased	      I-A1	       S-V
+           with	              -	      I-A1	      B-A2
+            the	              -	      I-A1	      I-A2
+            new	              -	      I-A1	      I-A2
+           deal	              -	      E-A1	      E-A2
+              .	              -	         O	         O
+
+             We	              -	      S-A0	      S-A0	         O	      B-A1	         O
+            did	            did	       S-V	         O	         O	      I-A1	         O
+            n't	              -	      B-A1	  S-AM-NEG	         O	      I-A1	         O
+         expect	         expect	      I-A1	       S-V	         O	      I-A1	         O
+      BellSouth	              -	      I-A1	      B-A1	      S-A1	      I-A1	         O
+             to	              -	      I-A1	      I-A1	         O	      I-A1	         O
+             be	             be	      I-A1	      I-A1	       S-V	      I-A1	         O
+             so	              -	      I-A1	      I-A1	  B-AM-MNR	      I-A1	         O
+     responsive	              -	      E-A1	      E-A1	  E-AM-MNR	      E-A1	         O
+              ,	              -	         O	         O	         O	         O	         O
+           said	           said	         O	         O	         O	       S-V	         O
+      Frederick	              -	         O	         O	         O	      B-A0	         O
+             A.	              -	         O	         O	         O	      I-A0	         O
+          Moran	              -	         O	         O	         O	      I-A0	         O
+              ,	              -	         O	         O	         O	      I-A0	         O
+      president	              -	         O	         O	         O	      I-A0	         O
+             of	              -	         O	         O	         O	      I-A0	         O
+          Moran	              -	         O	         O	         O	      I-A0	      B-A0
+          Asset	              -	         O	         O	         O	      I-A0	      I-A0
+     Management	              -	         O	         O	         O	      I-A0	      I-A0
+           Inc.	              -	         O	         O	         O	      I-A0	      E-A0
+              ,	              -	         O	         O	         O	      I-A0	         O
+          which	              -	         O	         O	         O	      I-A0	    S-R-A0
+          holds	          holds	         O	         O	         O	      I-A0	       S-V
+        500,000	              -	         O	         O	         O	      I-A0	      B-A1
+            LIN	              -	         O	         O	         O	      I-A0	      I-A1
+         shares	              -	         O	         O	         O	      E-A0	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+      BellSouth	              -	      B-A1	      B-A1
+             's	              -	      I-A1	      I-A1
+       back-end	              -	      I-A1	      I-A1
+     protection	              -	      E-A1	      E-A1
+            was	            was	       S-V	         O
+         flawed	         flawed	    S-C-A1	       S-V
+     previously	              -	  S-AM-TMP	  S-AM-TMP
+              .	              -	         O	         O
+
+             We	              -	      S-A0	         O
+          think	          think	       S-V	         O
+           this	              -	      B-A1	      S-A1
+             is	             is	      I-A1	       S-V
+              a	              -	      I-A1	      B-A1
+       superior	              -	      I-A1	      I-A1
+           deal	              -	      I-A1	      I-A1
+             to	              -	      I-A1	      I-A1
+          McCaw	              -	      I-A1	      I-A1
+             's	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+             We	              -	      S-A1	      S-A1
+            're	            're	       S-V	         O
+      surprised	      surprised	      S-A1	       S-V
+              .	              -	         O	         O
+
+             We	              -	      S-A0	      S-A0	         O	         O	         O
+            did	            did	       S-V	         O	         O	         O	         O
+            n't	              -	  S-AM-NEG	  S-AM-NEG	         O	         O	         O
+          think	          think	      B-A1	       S-V	         O	         O	         O
+              a	              -	      I-A1	      B-A1	         O	      B-A1	      B-A0
+       sleeping	       sleeping	      I-A1	      I-A1	       S-V	      I-A1	      I-A0
+              {	              -	      I-A1	      I-A1	      B-A0	      I-A1	      I-A0
+           Bell	              -	      I-A1	      I-A1	      I-A0	      I-A1	      I-A0
+              }	              -	      I-A1	      I-A1	      I-A0	      I-A1	      I-A0
+      mentality	              -	      I-A1	      I-A1	      E-A0	      E-A1	      E-A0
+          would	              -	      I-A1	      I-A1	         O	  S-AM-MOD	         O
+             be	             be	      I-A1	      I-A1	         O	       S-V	         O
+        willing	              -	      I-A1	      I-A1	         O	  B-AM-ADV	         O
+             to	              -	      I-A1	      I-A1	         O	  I-AM-ADV	         O
+           take	           take	      I-A1	      I-A1	         O	  I-AM-ADV	       B-V
+             on	              -	      I-A1	      I-A1	         O	  I-AM-ADV	       E-V
+       dilution	              -	      E-A1	      E-A1	         O	  E-AM-ADV	      S-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            But	              -	         O	         O	         O	         O	         O	         O	         O
+        Kenneth	              -	      B-A0	         O	         O	         O	         O	         O	         O
+           Leon	              -	      I-A0	         O	         O	         O	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O	         O	         O	         O
+              a	              -	      I-A0	         O	         O	         O	         O	         O	         O
+telecommunications	              -	      I-A0	         O	         O	         O	         O	         O	         O
+        analyst	              -	      I-A0	         O	         O	         O	         O	         O	         O
+           with	              -	      I-A0	         O	         O	         O	         O	         O	         O
+           Bear	              -	      I-A0	         O	         O	         O	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O	         O	         O	         O
+        Stearns	              -	      I-A0	         O	         O	         O	         O	         O	         O
+            amp	              -	      I-A0	         O	         O	         O	         O	         O	         O
+            Co.	              -	      I-A0	         O	         O	         O	         O	         O	         O
+              ,	              -	      E-A0	         O	         O	         O	         O	         O	         O
+          finds	          finds	       S-V	         O	         O	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A1	         O	         O	         O	         O	         O
+      BellSouth	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+       proposal	              -	      I-A1	      E-A1	         O	         O	         O	         O	         O
+          still	              -	      I-A1	  S-AM-TMP	         O	         O	         O	         O	         O
+         flawed	         flawed	      I-A1	       S-V	         O	         O	         O	         O	         O
+        because	              -	      I-A1	  B-AM-CAU	         O	         O	         O	         O	         O
+            the	              -	      I-A1	  I-AM-CAU	      B-A0	         O	      B-A1	      B-A0	      B-A0
+        company	              -	      I-A1	  I-AM-CAU	      E-A0	         O	      E-A1	      E-A0	      E-A0
+           does	           does	      I-A1	  I-AM-CAU	       S-V	         O	         O	         O	         O
+            n't	              -	      I-A1	  I-AM-CAU	  S-AM-NEG	  S-AM-NEG	         O	         O	         O
+           have	           have	      I-A1	  I-AM-CAU	         O	       S-V	  S-AM-MOD	         O	         O
+             to	              -	      I-A1	  I-AM-CAU	         O	         O	         O	         O	         O
+           wait	           wait	      I-A1	  I-AM-CAU	         O	         O	       S-V	         O	         O
+           five	              -	      I-A1	  I-AM-CAU	         O	         O	  B-AM-TMP	         O	         O
+          years	              -	      I-A1	  I-AM-CAU	         O	         O	  E-AM-TMP	         O	         O
+             to	              -	      I-A1	  I-AM-CAU	         O	         O	      B-A2	         O	         O
+          begin	          begin	      I-A1	  I-AM-CAU	         O	         O	      I-A2	       S-V	         O
+         buying	         buying	      I-A1	  I-AM-CAU	         O	         O	      I-A2	      B-A1	       S-V
+           more	              -	      I-A1	  I-AM-CAU	         O	         O	      I-A2	      I-A1	      B-A1
+            LIN	              -	      I-A1	  I-AM-CAU	         O	         O	      I-A2	      I-A1	      I-A1
+         shares	              -	      E-A1	  E-AM-CAU	         O	         O	      E-A2	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+            How	              -	      B-A1
+           many	              -	      I-A1
+         shares	              -	      E-A1
+           will	              -	  S-AM-MOD
+             be	             be	       B-V
+         around	              -	       E-V
+             in	              -	  B-AM-TMP
+           1995	              -	  E-AM-TMP
+              ?	              -	         O
+
+             he	              -	      S-A0
+          asked	          asked	       S-V
+              .	              -	         O
+
+          There	              -	      S-A0	         O	         O
+             's	             's	       S-V	         O	         O
+        nothing	              -	      B-A1	      S-A0	         O
+     preventing	     preventing	      I-A1	       S-V	         O
+      BellSouth	              -	      I-A1	      S-A1	      S-A0
+           from	              -	      I-A1	      B-A2	         O
+         buying	         buying	      I-A1	      I-A2	       S-V
+             up	              -	      I-A1	      I-A2	         O
+         shares	              -	      I-A1	      E-A2	      S-A1
+             in	              -	      I-A1	         O	         O
+            the	              -	      I-A1	         O	         O
+      meanwhile	              -	      E-A1	         O	         O
+              .	              -	         O	         O	         O
+
+      BellSouth	              -	         O	      B-A0	         O
+             's	              -	         O	      I-A0	         O
+        revised	        revised	       S-V	      I-A0	         O
+       proposal	              -	      S-A1	      E-A0	         O
+      surprised	      surprised	         O	       S-V	         O
+           many	              -	         O	      B-A1	         O
+       industry	              -	         O	      I-A1	         O
+       analysts	              -	         O	      E-A1	         O
+              ,	              -	         O	         O	         O
+     especially	              -	         O	  B-AM-CAU	         O
+        because	              -	         O	  I-AM-CAU	         O
+             of	              -	         O	  I-AM-CAU	         O
+            the	              -	         O	  I-AM-CAU	      B-A0
+        company	              -	         O	  I-AM-CAU	      I-A0
+             's	              -	         O	  I-AM-CAU	      E-A0
+    willingness	              -	         O	  I-AM-CAU	         O
+             to	              -	         O	  I-AM-CAU	         O
+         accept	         accept	         O	  I-AM-CAU	       S-V
+           some	              -	         O	  I-AM-CAU	      B-A1
+       dilution	              -	         O	  I-AM-CAU	      I-A1
+             of	              -	         O	  I-AM-CAU	      I-A1
+         future	              -	         O	  I-AM-CAU	      I-A1
+       earnings	              -	         O	  E-AM-CAU	      E-A1
+              .	              -	         O	         O	         O
+
+        William	              -	      B-A0	         O	         O
+             O.	              -	      I-A0	         O	         O
+          McCoy	              -	      I-A0	         O	         O
+              ,	              -	      I-A0	         O	         O
+      president	              -	      I-A0	         O	         O
+             of	              -	      I-A0	         O	         O
+            the	              -	      I-A0	         O	         O
+        company	              -	      I-A0	         O	         O
+             's	              -	      I-A0	         O	         O
+      BellSouth	              -	      I-A0	         O	         O
+    Enterprises	              -	      I-A0	         O	         O
+           Inc.	              -	      I-A0	         O	         O
+           unit	              -	      I-A0	         O	         O
+              ,	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+            the	              -	      B-A1	         O	      B-A0
+        revised	        revised	      I-A1	       S-V	      I-A0
+      agreement	              -	      I-A1	      S-A1	      I-A0
+           with	              -	      I-A1	         O	      I-A0
+            LIN	              -	      I-A1	         O	      E-A0
+          would	              -	      I-A1	         O	  S-AM-MOD
+         dilute	         dilute	      I-A1	         O	       S-V
+      BellSouth	              -	      I-A1	         O	      B-A1
+       earnings	              -	      I-A1	         O	      E-A1
+             by	              -	      I-A1	         O	      B-A2
+          about	              -	      I-A1	         O	      I-A2
+              9	              -	      I-A1	         O	      I-A2
+              %	              -	      I-A1	         O	      E-A2
+             in	              -	      I-A1	         O	  B-AM-TMP
+           both	              -	      I-A1	         O	  I-AM-TMP
+           1990	              -	      I-A1	         O	  I-AM-TMP
+            and	              -	      I-A1	         O	  I-AM-TMP
+           1991	              -	      I-A1	         O	  I-AM-TMP
+            and	              -	      I-A1	         O	  I-AM-TMP
+             by	              -	      I-A1	         O	  I-AM-TMP
+  significantly	              -	      I-A1	         O	  I-AM-TMP
+           less	              -	      I-A1	         O	  I-AM-TMP
+     thereafter	              -	      E-A1	         O	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+         Indeed	              -	  S-AM-DIS	         O
+              ,	              -	         O	         O
+      BellSouth	              -	      B-A1	         O
+             's	              -	      I-A1	         O
+       cellular	              -	      I-A1	         O
+     operations	              -	      E-A1	         O
+           were	           were	       S-V	         O
+          among	              -	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	      B-A1
+          first	              -	  I-AM-TMP	      I-A1
+             in	              -	  I-AM-TMP	      I-A1
+            the	              -	  I-AM-TMP	      I-A1
+        country	              -	  I-AM-TMP	      E-A1
+             to	              -	  I-AM-TMP	         O
+         become	         become	  I-AM-TMP	       S-V
+     profitable	              -	  E-AM-TMP	      S-A2
+              .	              -	         O	         O
+
+            For	              -	  B-AM-TMP
+           1988	              -	  E-AM-TMP
+              ,	              -	         O
+      BellSouth	              -	      S-A0
+         earned	         earned	       S-V
+              $	              -	      B-A1
+            1.7	              -	      I-A1
+        billion	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+              $	              -	      I-A1
+           3.51	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      I-A1
+              ,	              -	      E-A1
+             on	              -	  B-AM-MNR
+        revenue	              -	  I-AM-MNR
+             of	              -	  I-AM-MNR
+              $	              -	  I-AM-MNR
+           13.6	              -	  I-AM-MNR
+        billion	              -	  E-AM-MNR
+              .	              -	         O
+
+       Analysts	              -	      S-A1	      S-A0	         O	         O	         O
+           were	           were	       S-V	         O	         O	         O	         O
+     predicting	     predicting	    B-C-A1	       S-V	         O	         O	         O
+           1990	              -	    I-C-A1	      B-A1	         O	         O	         O
+      BellSouth	              -	    I-C-A1	      I-A1	         O	         O	         O
+       earnings	              -	    I-C-A1	      I-A1	         O	         O	         O
+             in	              -	    I-C-A1	      I-A1	         O	         O	         O
+            the	              -	    I-C-A1	      I-A1	         O	         O	         O
+          range	              -	    I-C-A1	      I-A1	         O	         O	         O
+             of	              -	    I-C-A1	      I-A1	         O	         O	         O
+              $	              -	    I-C-A1	      I-A1	         O	         O	         O
+           3.90	              -	    I-C-A1	      I-A1	         O	         O	         O
+              a	              -	    I-C-A1	      I-A1	         O	         O	         O
+          share	              -	    I-C-A1	      I-A1	         O	         O	         O
+              ,	              -	    I-C-A1	      I-A1	         O	         O	         O
+             or	              -	    I-C-A1	      I-A1	         O	         O	         O
+              $	              -	    I-C-A1	      I-A1	         O	         O	         O
+            1.9	              -	    I-C-A1	      I-A1	         O	         O	         O
+        billion	              -	    E-C-A1	      E-A1	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            but	              -	         O	         O	         O	         O	         O
+            now	              -	         O	         O	  S-AM-TMP	  S-AM-TMP	  S-AM-TMP
+          those	              -	         O	         O	      B-A1	      B-A1	      B-A1
+      estimates	              -	         O	         O	      E-A1	      E-A1	      E-A1
+            are	            are	         O	         O	       S-V	         O	         O
+          being	          being	         O	         O	    B-C-A1	       S-V	         O
+         scaled	         scaled	         O	         O	    I-C-A1	    B-C-A1	       S-V
+           back	              -	         O	         O	    E-C-A1	    E-C-A1	  S-AM-DIR
+              .	              -	         O	         O	         O	         O	         O
+
+             In	              -	  B-AM-LOC
+      composite	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+         Friday	              -	  S-AM-TMP
+             on	              -	  B-AM-LOC
+            the	              -	  I-AM-LOC
+            New	              -	  I-AM-LOC
+           York	              -	  I-AM-LOC
+          Stock	              -	  I-AM-LOC
+       Exchange	              -	  E-AM-LOC
+              ,	              -	         O
+      BellSouth	              -	      B-A1
+         shares	              -	      E-A1
+           fell	           fell	       S-V
+           87.5	              -	      B-A2
+          cents	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+         52.125	              -	      E-A4
+              .	              -	         O
+
+             In	              -	  B-AM-LOC	         O	         O
+       national	              -	  I-AM-LOC	         O	         O
+over-the-counter	              -	  I-AM-LOC	         O	         O
+        trading	              -	  E-AM-LOC	         O	         O
+              ,	              -	         O	         O	         O
+            LIN	              -	      B-A1	      B-A1	         O
+         shares	              -	      E-A1	      E-A1	         O
+         soared	         soared	       S-V	         O	         O
+              $	              -	      B-A2	         O	         O
+          4.625	              -	      E-A2	         O	         O
+             to	              -	      B-A4	         O	         O
+         closed	         closed	      I-A4	       S-V	         O
+             at	              -	      I-A4	  B-AM-EXT	         O
+              $	              -	      I-A4	  I-AM-EXT	         O
+        112.625	              -	      E-A4	  E-AM-EXT	         O
+              ,	              -	         O	         O	         O
+          while	              -	  B-AM-ADV	         O	         O
+          McCaw	              -	  I-AM-ADV	         O	      S-A1
+           fell	           fell	  I-AM-ADV	         O	       S-V
+              $	              -	  I-AM-ADV	         O	      B-A2
+           2.50	              -	  I-AM-ADV	         O	      I-A2
+              a	              -	  I-AM-ADV	         O	      I-A2
+          share	              -	  I-AM-ADV	         O	      E-A2
+             to	              -	  I-AM-ADV	         O	      B-A4
+              $	              -	  I-AM-ADV	         O	      I-A4
+          37.75	              -	  E-AM-ADV	         O	      E-A4
+              .	              -	         O	         O	         O
+
+            The	              -	         O	      B-A2	         O	      B-A0	         O
+       proposed	       proposed	       S-V	      I-A2	         O	      I-A0	         O
+  BellSouth-LIN	              -	      B-A1	      I-A2	         O	      I-A0	         O
+       cellular	              -	      I-A1	      I-A2	         O	      I-A0	         O
+        company	              -	      E-A1	      E-A2	         O	      I-A0	         O
+              ,	              -	         O	         O	         O	      I-A0	         O
+      including	      including	         O	       S-V	         O	      I-A0	         O
+            the	              -	         O	      B-A1	         O	      I-A0	         O
+          newly	              -	         O	      I-A1	  S-AM-TMP	      I-A0	         O
+       acquired	       acquired	         O	      I-A1	       S-V	      I-A0	         O
+     Metromedia	              -	         O	      I-A1	      B-A1	      I-A0	         O
+          stake	              -	         O	      E-A1	      E-A1	      I-A0	         O
+              ,	              -	         O	         O	         O	      E-A0	         O
+          would	              -	         O	         O	         O	  S-AM-MOD	         O
+           give	           give	         O	         O	         O	       S-V	         O
+            the	              -	         O	         O	         O	      B-A2	      B-A2
+            new	              -	         O	         O	         O	      I-A2	      I-A2
+         entity	              -	         O	         O	         O	      E-A2	      I-A2
+             55	              -	         O	         O	         O	      B-A1	      I-A2
+        million	              -	         O	         O	         O	      I-A1	      I-A2
+      potential	              -	         O	         O	         O	      I-A1	      I-A2
+      customers	              -	         O	         O	         O	      I-A1	      E-A2
+              ,	              -	         O	         O	         O	      I-A1	         O
+      including	      including	         O	         O	         O	      I-A1	       S-V
+          about	              -	         O	         O	         O	      I-A1	      B-A1
+             35	              -	         O	         O	         O	      I-A1	      I-A1
+        million	              -	         O	         O	         O	      I-A1	      I-A1
+             in	              -	         O	         O	         O	      I-A1	      I-A1
+            the	              -	         O	         O	         O	      I-A1	      I-A1
+         nation	              -	         O	         O	         O	      I-A1	      I-A1
+             's	              -	         O	         O	         O	      I-A1	      I-A1
+            top	              -	         O	         O	         O	      I-A1	      I-A1
+             10	              -	         O	         O	         O	      I-A1	      I-A1
+        markets	              -	         O	         O	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            Mr.	              -	      B-A0	         O	         O	         O	         O	         O
+           Leon	              -	      I-A0	         O	         O	         O	         O	         O
+             of	              -	      I-A0	         O	         O	         O	         O	         O
+           Bear	              -	      I-A0	         O	         O	         O	         O	         O
+        Stearns	              -	      E-A0	         O	         O	         O	         O	         O
+     speculated	     speculated	       S-V	         O	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O	         O
+          McCaw	              -	      I-A1	      S-A0	      S-A0	      S-A0	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O	         O
+             in	              -	      I-A1	         O	  B-AM-TMP	         O	         O	         O
+             an	              -	      I-A1	         O	  I-AM-TMP	         O	         O	         O
+        attempt	              -	      I-A1	         O	  I-AM-TMP	         O	         O	         O
+             to	              -	      I-A1	         O	  I-AM-TMP	         O	         O	         O
+            buy	            buy	      I-A1	       S-V	  I-AM-TMP	         O	         O	         O
+           time	              -	      I-A1	      S-A1	  E-AM-TMP	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O	         O
+          might	              -	      I-A1	         O	  S-AM-MOD	         O	         O	         O
+       consider	       consider	      I-A1	         O	       S-V	         O	         O	         O
+         filing	         filing	      I-A1	         O	      B-A1	       S-V	         O	         O
+             an	              -	      I-A1	         O	      I-A1	      B-A1	         O	         O
+      antitrust	              -	      I-A1	         O	      I-A1	      I-A1	         O	         O
+           suit	              -	      I-A1	         O	      I-A1	      E-A1	         O	         O
+        against	              -	      I-A1	         O	      I-A1	      B-A3	         O	         O
+      BellSouth	              -	      I-A1	         O	      I-A1	      E-A3	         O	         O
+           with	              -	      I-A1	         O	      I-A1	      B-A4	         O	         O
+            the	              -	      I-A1	         O	      I-A1	      I-A4	         O	         O
+        Justice	              -	      I-A1	         O	      I-A1	      I-A4	         O	         O
+     Department	              -	      I-A1	         O	      I-A1	      I-A4	         O	         O
+            and	              -	      I-A1	         O	      I-A1	      I-A4	         O	         O
+           U.S.	              -	      I-A1	         O	      I-A1	      I-A4	      B-A0	         O
+       District	              -	      I-A1	         O	      I-A1	      I-A4	      I-A0	         O
+          Judge	              -	      I-A1	         O	      I-A1	      I-A4	      I-A0	         O
+         Harold	              -	      I-A1	         O	      I-A1	      I-A4	      I-A0	         O
+         Greene	              -	      I-A1	         O	      I-A1	      I-A4	      E-A0	         O
+              ,	              -	      I-A1	         O	      I-A1	      I-A4	         O	         O
+            who	              -	      I-A1	         O	      I-A1	      I-A4	    S-R-A0	         O
+       oversees	       oversees	      I-A1	         O	      I-A1	      I-A4	       S-V	         O
+    enforcement	              -	      I-A1	         O	      I-A1	      I-A4	      B-A1	         O
+             of	              -	      I-A1	         O	      I-A1	      I-A4	      I-A1	         O
+            the	              -	      I-A1	         O	      I-A1	      I-A4	      I-A1	      B-A0
+        consent	              -	      I-A1	         O	      I-A1	      I-A4	      I-A1	      I-A0
+         decree	              -	      I-A1	         O	      I-A1	      I-A4	      I-A1	      E-A0
+           that	              -	      I-A1	         O	      I-A1	      I-A4	      I-A1	    S-R-A0
+          broke	          broke	      I-A1	         O	      I-A1	      I-A4	      I-A1	       B-V
+             up	              -	      I-A1	         O	      I-A1	      I-A4	      I-A1	       E-V
+            the	              -	      I-A1	         O	      I-A1	      I-A4	      I-A1	      B-A1
+           Bell	              -	      I-A1	         O	      I-A1	      I-A4	      I-A1	      I-A1
+         system	              -	      I-A1	         O	      I-A1	      I-A4	      I-A1	      E-A1
+             in	              -	      I-A1	         O	      I-A1	      I-A4	      I-A1	  B-AM-TMP
+           1984	              -	      E-A1	         O	      E-A1	      E-A4	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O
+
+         Indeed	              -	  S-AM-DIS	         O
+              ,	              -	         O	         O
+          McCaw	              -	      S-A1	      S-A0
+         seemed	         seemed	       S-V	         O
+             to	              -	    B-C-A1	         O
+           hint	           hint	    I-C-A1	       S-V
+             at	              -	    I-C-A1	      B-A1
+           that	              -	    I-C-A1	      I-A1
+         option	              -	    I-C-A1	      E-A1
+             in	              -	    I-C-A1	  B-AM-LOC
+              a	              -	    I-C-A1	  I-AM-LOC
+          brief	              -	    I-C-A1	  I-AM-LOC
+      statement	              -	    E-C-A1	  E-AM-LOC
+              .	              -	         O	         O
+
+         Urging	         Urging	       S-V	         O	  B-AM-ADV	         O	         O	         O	         O
+            LIN	              -	      B-A1	      B-A0	  I-AM-ADV	         O	         O	         O	         O
+      directors	              -	      E-A1	      E-A0	  I-AM-ADV	         O	         O	         O	         O
+             to	              -	      B-A2	         O	  I-AM-ADV	         O	         O	         O	         O
+        conduct	        conduct	      I-A2	       S-V	  I-AM-ADV	         O	         O	         O	         O
+              a	              -	      I-A2	      B-A1	  I-AM-ADV	         O	         O	         O	         O
+           fair	              -	      I-A2	      I-A1	  I-AM-ADV	         O	         O	         O	         O
+        auction	              -	      I-A2	      E-A1	  I-AM-ADV	         O	         O	         O	         O
+             on	              -	      I-A2	  B-AM-LOC	  I-AM-ADV	         O	         O	         O	         O
+              a	              -	      I-A2	  I-AM-LOC	  I-AM-ADV	         O	         O	         O	         O
+          level	              -	      I-A2	  I-AM-LOC	  I-AM-ADV	         O	         O	         O	         O
+        playing	              -	      I-A2	  I-AM-LOC	  I-AM-ADV	         O	         O	         O	         O
+          field	              -	      E-A2	  E-AM-LOC	  E-AM-ADV	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+          McCaw	              -	         O	         O	      S-A0	         O	         O	         O	         O
+          asked	          asked	         O	         O	       S-V	         O	         O	         O	         O
+            how	              -	         O	         O	      B-A1	         O	         O	         O	         O
+           well	              -	         O	         O	      I-A1	         O	         O	         O	         O
+            the	              -	         O	         O	      I-A1	      B-A1	         O	         O	         O
+         public	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O
+       interest	              -	         O	         O	      I-A1	      E-A1	         O	         O	         O
+          would	              -	         O	         O	      I-A1	  S-AM-MOD	  S-AM-MOD	         O	         O
+             be	             be	         O	         O	      I-A1	       S-V	         O	         O	         O
+         served	         served	         O	         O	      I-A1	  B-AM-ADV	       S-V	         O	         O
+           with	              -	         O	         O	      I-A1	  I-AM-ADV	  B-AM-ADV	         O	         O
+            the	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      B-A0
+           Bell	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A0
+      operating	      operating	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	       S-V	      I-A0
+      companies	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	      S-A0	      E-A0
+    controlling	    controlling	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	       S-V
+           over	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      B-A1
+             94	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+              %	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+             of	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+            all	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+       cellular	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+              {	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+      potential	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+      customers	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+              }	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+             in	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+            the	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+         nation	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+             's	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+            top	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+             10	              -	         O	         O	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+        markets	              -	         O	         O	      E-A1	  E-AM-ADV	  E-AM-ADV	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+

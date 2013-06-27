@@ -1,0 +1,486 @@
+            The	              -	      B-A0	         O	         O	         O	         O
+             US	              -	      I-A0	         O	         O	         O	         O
+     government	              -	      E-A0	         O	         O	         O	         O
+       recently	              -	  S-AM-TMP	         O	         O	         O	         O
+      announced	      announced	       S-V	         O	         O	         O	         O
+            new	              -	      B-A1	      B-A1	      B-A0	         O	         O
+    regulations	              -	      I-A1	      E-A1	      E-A0	         O	         O
+       designed	       designed	      I-A1	       S-V	         O	         O	         O
+             to	              -	      I-A1	  B-AM-PNC	         O	         O	         O
+         change	         change	      I-A1	  I-AM-PNC	       S-V	         O	         O
+            the	              -	      I-A1	  I-AM-PNC	      B-A1	      B-A1	  B-AM-MNR
+            way	              -	      I-A1	  I-AM-PNC	      I-A1	      I-A1	  E-AM-MNR
+     transplant	              -	      I-A1	  I-AM-PNC	      I-A1	      I-A1	      B-A1
+         organs	              -	      I-A1	  I-AM-PNC	      E-A1	      E-A1	      E-A1
+            are	            are	      I-A1	  I-AM-PNC	         O	       S-V	         O
+           made	           made	      I-A1	  I-AM-PNC	         O	    B-C-A1	       S-V
+      available	              -	      I-A1	  I-AM-PNC	         O	    I-C-A1	      B-A2
+             to	              -	      I-A1	  I-AM-PNC	         O	    I-C-A1	      I-A2
+           sick	              -	      I-A1	  I-AM-PNC	         O	    I-C-A1	      I-A2
+       patients	              -	      E-A1	  E-AM-PNC	         O	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O	         O	         O
+
+          Under	              -	  B-AM-LOC	  B-AM-LOC	         O
+            the	              -	  I-AM-LOC	  I-AM-LOC	         O
+            new	              -	  I-AM-LOC	  I-AM-LOC	         O
+     guidelines	              -	  E-AM-LOC	  E-AM-LOC	         O
+              ,	              -	         O	         O	         O
+          donor	              -	      B-A1	      B-A1	         O
+         organs	              -	      E-A1	      E-A1	         O
+           will	              -	  S-AM-MOD	  S-AM-MOD	         O
+             be	             be	       S-V	         O	         O
+           made	           made	    B-C-A1	       S-V	         O
+      available	              -	    I-C-A1	      B-A2	         O
+             to	              -	    I-C-A1	      I-A2	         O
+            the	              -	    I-C-A1	      I-A2	         O
+        sickest	              -	    I-C-A1	      I-A2	         O
+         people	              -	    I-C-A1	      E-A2	         O
+          first	              -	    E-C-A1	  S-AM-TMP	         O
+              ,	              -	         O	         O	         O
+       wherever	              -	  B-AM-ADV	  B-AM-ADV	         O
+           they	              -	  I-AM-ADV	  I-AM-ADV	      S-A0
+           live	           live	  I-AM-ADV	  I-AM-ADV	       S-V
+             in	              -	  I-AM-ADV	  I-AM-ADV	  B-AM-LOC
+            the	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-LOC
+        country	              -	  E-AM-ADV	  E-AM-ADV	  E-AM-LOC
+              .	              -	         O	         O	         O
+
+      Currently	              -	  S-AM-TMP	  S-AM-TMP
+              ,	              -	         O	         O
+     transplant	              -	      B-A1	      B-A1
+         organs	              -	      E-A1	      E-A1
+            are	            are	       S-V	         O
+       rationed	       rationed	  B-AM-MNR	       S-V
+        through	              -	  I-AM-MNR	      B-A1
+              a	              -	  I-AM-MNR	      I-A1
+       regional	              -	  I-AM-MNR	      I-A1
+         system	              -	  I-AM-MNR	      I-A1
+             of	              -	  I-AM-MNR	      I-A1
+   distribution	              -	  E-AM-MNR	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	         O
+        private	              -	      I-A0	         O
+          group	              -	      E-A0	         O
+           that	              -	    S-R-A0	         O
+           runs	           runs	       S-V	         O
+            the	              -	      B-A1	         O
+        current	              -	      I-A1	         O
+         system	              -	      E-A1	         O
+              ,	              -	         O	         O
+         United	              -	         O	      B-A0
+        Network	              -	         O	      I-A0
+            for	              -	         O	      I-A0
+          Organ	              -	         O	      I-A0
+        Sharing	              -	         O	      I-A0
+              ,	              -	         O	      I-A0
+             or	              -	         O	      I-A0
+           UNOS	              -	         O	      E-A0
+              ,	              -	         O	         O
+        objects	        objects	         O	       S-V
+             to	              -	         O	      B-A1
+            the	              -	         O	      I-A1
+            new	              -	         O	      I-A1
+    regulations	              -	         O	      E-A1
+              .	              -	         O	         O
+
+           UNOS	              -	      S-A0	         O	         O	         O	         O	         O	         O
+           says	           says	       S-V	         O	         O	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A0	      B-A0	         O	      B-A1	      B-A1	         O
+    regulations	              -	      I-A1	      E-A0	      E-A0	         O	      I-A1	      I-A1	         O
+            put	            put	      I-A1	       S-V	         O	         O	      I-A1	      I-A1	         O
+            the	              -	      I-A1	      B-A1	         O	         O	      I-A1	      I-A1	         O
+        federal	              -	      I-A1	      I-A1	         O	         O	      I-A1	      I-A1	         O
+     government	              -	      I-A1	      E-A1	         O	         O	      I-A1	      I-A1	         O
+             in	              -	      I-A1	      B-A2	         O	         O	      I-A1	      I-A1	         O
+         charge	              -	      I-A1	      I-A2	         O	         O	      I-A1	      I-A1	      B-A1
+             of	              -	      I-A1	      I-A2	         O	         O	      I-A1	      I-A1	      I-A1
+       deciding	       deciding	      I-A1	      I-A2	       S-V	         O	      I-A1	      I-A1	      I-A1
+            who	              -	      I-A1	      I-A2	      B-A1	    S-R-A0	      I-A1	      I-A1	      I-A1
+           gets	           gets	      I-A1	      I-A2	      I-A1	       S-V	      I-A1	      I-A1	      I-A1
+    transplants	              -	      I-A1	      E-A2	      E-A1	      S-A1	      I-A1	      I-A1	      I-A1
+            and	              -	      I-A1	         O	         O	         O	      I-A1	      I-A1	      I-A1
+           that	              -	      I-A1	         O	         O	         O	      I-A1	      I-A1	      I-A1
+           many	              -	      I-A1	         O	         O	         O	      I-A1	      I-A1	      I-A1
+       hospital	              -	      I-A1	         O	         O	         O	      I-A1	      I-A1	      I-A1
+     transplant	              -	      I-A1	         O	         O	         O	      I-A1	      I-A1	      I-A1
+        centers	              -	      I-A1	         O	         O	         O	      E-A1	      E-A1	      E-A1
+          would	              -	      I-A1	         O	         O	         O	  S-AM-MOD	  S-AM-MOD	         O
+             be	             be	      I-A1	         O	         O	         O	       S-V	         O	         O
+         forced	         forced	      I-A1	         O	         O	         O	    B-C-A1	       S-V	         O
+             to	              -	      I-A1	         O	         O	         O	    I-C-A1	      B-A2	         O
+          close	          close	      E-A1	         O	         O	         O	    E-C-A1	      E-A2	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+         Health	              -	      B-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O
+            and	              -	      I-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O
+          Human	              -	      I-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O
+       Services	              -	      I-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O
+      Secretary	              -	      E-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O
+             Do	             Do	       S-V	         O	         O	         O	         O	         O	         O	         O	         O	         O
+              -	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+          Donna	              -	      S-A1	      B-A0	         O	         O	         O	         O	         O	         O	         O	         O
+        Shalala	              -	         O	      E-A0	         O	         O	         O	         O	         O	         O	         O	         O
+           says	           says	         O	       S-V	         O	         O	         O	         O	         O	         O	         O	         O
+       patients	              -	         O	      B-A1	      S-A0	         O	      B-A0	         O	         O	         O	         O	         O
+            who	              -	         O	      I-A1	    S-R-A0	         O	      I-A0	         O	         O	         O	         O	         O
+           need	           need	         O	      I-A1	       S-V	         O	      I-A0	         O	         O	         O	         O	         O
+             an	              -	         O	      I-A1	      B-A1	         O	      I-A0	         O	         O	         O	         O	         O
+          organ	              -	         O	      I-A1	      I-A1	         O	      I-A0	         O	         O	         O	         O	         O
+     transplant	              -	         O	      I-A1	      E-A1	         O	      E-A0	         O	         O	         O	         O	         O
+         should	              -	         O	      I-A1	         O	  S-AM-MOD	         O	         O	         O	         O	         O	         O
+            not	              -	         O	      I-A1	         O	  S-AM-NEG	         O	         O	         O	         O	         O	         O
+           have	           have	         O	      I-A1	         O	       S-V	         O	         O	         O	         O	         O	         O
+             to	              -	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O	         O
+           take	           take	         O	      I-A1	         O	         O	       S-V	         O	         O	         O	         O	         O
+              a	              -	         O	      I-A1	         O	         O	      B-A1	         O	         O	         O	         O	         O
+         chance	              -	         O	      I-A1	         O	         O	      I-A1	         O	         O	         O	         O	         O
+           that	              -	         O	      I-A1	         O	         O	      I-A1	         O	         O	         O	         O	         O
+             an	              -	         O	      I-A1	         O	         O	      I-A1	      B-A1	         O	         O	         O	         O
+          organ	              -	         O	      I-A1	         O	         O	      I-A1	      E-A1	         O	         O	         O	         O
+           will	              -	         O	      I-A1	         O	         O	      I-A1	  S-AM-MOD	         O	         O	         O	         O
+         become	         become	         O	      I-A1	         O	         O	      I-A1	       S-V	         O	         O	         O	         O
+      available	              -	         O	      I-A1	         O	         O	      I-A1	      S-A2	         O	         O	         O	         O
+             in	              -	         O	      I-A1	         O	         O	      I-A1	  B-AM-LOC	         O	         O	         O	         O
+          their	              -	         O	      I-A1	         O	         O	      I-A1	  I-AM-LOC	         O	         O	         O	         O
+          local	              -	         O	      I-A1	         O	         O	      I-A1	  I-AM-LOC	         O	         O	         O	         O
+           area	              -	         O	      E-A1	         O	         O	      E-A1	  E-AM-LOC	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+            nor	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+         should	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+       patients	              -	         O	         O	         O	         O	         O	         O	         O	      S-A0	      S-A0	      S-A0
+           have	           have	         O	         O	         O	         O	         O	         O	       S-V	  S-AM-MOD	         O	         O
+             to	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+         travel	         travel	         O	         O	         O	         O	         O	         O	         O	       S-V	         O	         O
+             to	              -	         O	         O	         O	         O	         O	         O	         O	      B-A1	         O	         O
+     transplant	              -	         O	         O	         O	         O	         O	         O	         O	      I-A1	         O	         O
+        centers	              -	         O	         O	         O	         O	         O	         O	         O	      E-A1	         O	         O
+            far	              -	         O	         O	         O	         O	         O	         O	         O	  B-AM-DIR	         O	         O
+           from	              -	         O	         O	         O	         O	         O	         O	         O	  I-AM-DIR	         O	         O
+          their	              -	         O	         O	         O	         O	         O	         O	         O	  I-AM-DIR	         O	         O
+          homes	              -	         O	         O	         O	         O	         O	         O	         O	  E-AM-DIR	         O	         O
+             to	              -	         O	         O	         O	         O	         O	         O	         O	  B-AM-PNC	         O	         O
+        improve	        improve	         O	         O	         O	         O	         O	         O	         O	  I-AM-PNC	       S-V	         O
+          their	              -	         O	         O	         O	         O	         O	         O	         O	  I-AM-PNC	      B-A1	         O
+        chances	              -	         O	         O	         O	         O	         O	         O	         O	  I-AM-PNC	      I-A1	         O
+             of	              -	         O	         O	         O	         O	         O	         O	         O	  I-AM-PNC	      I-A1	         O
+        getting	        getting	         O	         O	         O	         O	         O	         O	         O	  I-AM-PNC	      I-A1	       S-V
+             an	              -	         O	         O	         O	         O	         O	         O	         O	  I-AM-PNC	      I-A1	      B-A1
+          organ	              -	         O	         O	         O	         O	         O	         O	         O	  E-AM-PNC	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+           UNOS	              -	      B-A0	         O	         O	         O
+    spokeswoman	              -	      I-A0	         O	         O	         O
+          Donna	              -	      I-A0	         O	         O	         O
+          Henry	              -	      I-A0	         O	         O	         O
+         Wright	              -	      E-A0	         O	         O	         O
+           says	           says	       S-V	         O	         O	         O
+            the	              -	      B-A1	      B-A1	         O	         O
+            new	              -	      I-A1	      I-A1	         O	         O
+         policy	              -	      I-A1	      E-A1	         O	         O
+          would	              -	      I-A1	  S-AM-MOD	         O	         O
+            not	              -	      I-A1	  S-AM-NEG	         O	         O
+    necessarily	              -	      I-A1	  S-AM-ADV	         O	         O
+             be	             be	      I-A1	       S-V	         O	         O
+           more	              -	      I-A1	      B-A3	         O	         O
+           fair	              -	      I-A1	      I-A3	         O	         O
+             or	              -	      I-A1	      I-A3	         O	         O
+      effective	              -	      I-A1	      E-A3	         O	         O
+        because	              -	      I-A1	  B-AM-CAU	         O	         O
+     allowances	              -	      I-A1	  I-AM-CAU	      S-A1	      S-A1
+            are	            are	      I-A1	  I-AM-CAU	       S-V	         O
+        already	              -	      I-A1	  I-AM-CAU	    B-C-A1	  S-AM-TMP
+           made	           made	      I-A1	  I-AM-CAU	    I-C-A1	       S-V
+            for	              -	      I-A1	  I-AM-CAU	    I-C-A1	  B-AM-PNC
+            the	              -	      I-A1	  I-AM-CAU	    I-C-A1	  I-AM-PNC
+           most	              -	      I-A1	  I-AM-CAU	    I-C-A1	  I-AM-PNC
+          needy	              -	      I-A1	  I-AM-CAU	    I-C-A1	  I-AM-PNC
+       patients	              -	      E-A1	  E-AM-CAU	    E-C-A1	  E-AM-PNC
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1
+        sickest	              -	      I-A1	      I-A1
+       patients	              -	      E-A1	      E-A1
+            are	            are	       S-V	         O
+        already	              -	  S-AM-TMP	  S-AM-TMP
+        treated	        treated	         O	       S-V
+          first	              -	         O	  S-AM-TMP
+              .	              -	         O	         O
+
+          There	              -	      S-A1	         O	         O
+            are	            are	       S-V	         O	         O
+            not	              -	      B-A1	         O	         O
+           huge	              -	      I-A1	         O	         O
+        waiting	        waiting	      I-A1	       S-V	         O
+             uh	              -	      I-A1	         O	         O
+       disparit	              -	      I-A1	         O	         O
+              -	              -	      I-A1	         O	         O
+        waiting	        waiting	      I-A1	         O	       S-V
+           time	              -	      I-A1	         O	      B-A1
+    disparities	              -	      I-A1	         O	      E-A1
+        amongst	              -	      I-A1	         O	      B-A2
+            the	              -	      I-A1	         O	      I-A2
+           very	              -	      I-A1	         O	      I-A2
+             uh	              -	      I-A1	         O	      I-A2
+        sickest	              -	      I-A1	         O	      I-A2
+       patients	              -	      E-A1	         O	      E-A2
+              .	              -	         O	         O	         O
+
+             It	              -	      S-A1
+             's	             's	       S-V
+        between	              -	  B-AM-TMP
+            two	              -	  I-AM-TMP
+             to	              -	  I-AM-TMP
+            six	              -	  I-AM-TMP
+           days	              -	  I-AM-TMP
+            for	              -	  I-AM-TMP
+          every	              -	  I-AM-TMP
+            one	              -	  I-AM-TMP
+             uh	              -	  I-AM-TMP
+             of	              -	  I-AM-TMP
+            the	              -	  I-AM-TMP
+        sickest	              -	  I-AM-TMP
+       patients	              -	  I-AM-TMP
+         across	              -	  I-AM-TMP
+            the	              -	  I-AM-TMP
+        country	              -	  E-AM-TMP
+              .	              -	         O
+
+             um	              -	         O	         O	         O	         O	         O	         O	         O
+             So	              -	  S-AM-DIS	         O	         O	         O	         O	         O	         O
+             it	              -	      S-A0	         O	         O	         O	         O	         O	         O
+             's	             's	       S-V	         O	         O	         O	         O	         O	         O
+              a	              -	      S-A1	         O	         O	         O	         O	         O	         O
+              -	              -	         O	         O	         O	         O	         O	         O	         O
+             it	              -	         O	      S-A0	         O	         O	         O	         O	         O
+             's	             's	         O	       S-V	         O	         O	         O	         O	         O
+              a	              -	         O	      B-A1	         O	         O	         O	         O	         O
+        fallacy	              -	         O	      I-A1	         O	         O	         O	         O	         O
+           that	              -	         O	      I-A1	         O	         O	         O	         O	         O
+           they	              -	         O	      I-A1	      S-A1	      S-A0	         O	         O	         O
+            're	            're	         O	      I-A1	       S-V	         O	         O	         O	         O
+          doing	          doing	         O	      I-A1	      B-A1	       S-V	         O	         O	         O
+           this	              -	         O	      I-A1	      E-A1	      S-A1	         O	         O	         O
+        because	              -	         O	      I-A1	  B-AM-CAU	  B-AM-CAU	         O	         O	         O
+             um	              -	         O	      I-A1	  I-AM-CAU	  I-AM-CAU	      B-A1	      B-A1	      B-A2
+            the	              -	         O	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1	      I-A2
+        sickest	              -	         O	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1	      I-A2
+       patients	              -	         O	      I-A1	  I-AM-CAU	  I-AM-CAU	      E-A1	      E-A1	      E-A2
+            are	            are	         O	      I-A1	  I-AM-CAU	  I-AM-CAU	       S-V	         O	         O
+            n't	              -	         O	      I-A1	  I-AM-CAU	  I-AM-CAU	    B-C-A1	  S-AM-NEG	  S-AM-NEG
+          being	          being	         O	      I-A1	  I-AM-CAU	  I-AM-CAU	    I-C-A1	       S-V	         O
+         served	         served	         O	      E-A1	  E-AM-CAU	  E-AM-CAU	    E-C-A1	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+         Doctor	              -	      B-A0	         O	         O	         O
+          James	              -	      I-A0	         O	         O	         O
+        Burdick	              -	      I-A0	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O
+            the	              -	      I-A0	         O	         O	         O
+      Professor	              -	      I-A0	         O	         O	         O
+             of	              -	      I-A0	         O	         O	         O
+     Transplant	              -	      I-A0	         O	         O	         O
+        Surgery	              -	      I-A0	         O	         O	         O
+             at	              -	      I-A0	         O	         O	         O
+          Johns	              -	      I-A0	         O	         O	         O
+        Hopkins	              -	      I-A0	         O	         O	         O
+     University	              -	      I-A0	         O	         O	         O
+       Hospital	              -	      I-A0	         O	         O	         O
+             in	              -	      I-A0	         O	         O	         O
+      Baltimore	              -	      I-A0	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O
+       Maryland	              -	      I-A0	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O
+            and	              -	      I-A0	         O	         O	         O
+         former	              -	      I-A0	         O	         O	         O
+      President	              -	      I-A0	         O	         O	         O
+             of	              -	      I-A0	         O	         O	         O
+           UNOS	              -	      I-A0	         O	         O	         O
+              ,	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            the	              -	      B-A1	      B-A0	      B-A1	         O
+        current	              -	      I-A1	      I-A0	      I-A1	         O
+         system	              -	      I-A1	      E-A0	      E-A1	         O
+            has	            has	      I-A1	       S-V	         O	         O
+        evolved	        evolved	      I-A1	         O	       S-V	         O
+           over	              -	      I-A1	         O	  B-AM-TMP	         O
+        several	              -	      I-A1	         O	  I-AM-TMP	         O
+          years	              -	      I-A1	         O	  E-AM-TMP	         O
+            and	              -	      I-A1	         O	         O	         O
+             it	              -	      I-A1	         O	         O	      S-A0
+          works	          works	      I-A1	         O	         O	       S-V
+           well	              -	      E-A1	         O	         O	  S-AM-MNR
+              .	              -	         O	         O	         O	         O
+
+            You	              -	      S-A0	         O	         O
+            may	              -	  S-AM-MOD	         O	         O
+              ,	              -	         O	         O	         O
+             in	              -	  B-AM-TMP	         O	         O
+              a	              -	  I-AM-TMP	         O	         O
+           year	              -	  I-AM-TMP	         O	         O
+             or	              -	  I-AM-TMP	         O	         O
+            two	              -	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O
+           save	           save	       S-V	         O	         O
+              a	              -	      B-A1	         O	         O
+            few	              -	      I-A1	         O	         O
+           more	              -	      I-A1	         O	         O
+          lives	              -	      E-A1	         O	         O
+             if	              -	  B-AM-ADV	         O	         O
+            you	              -	  I-AM-ADV	      S-A0	      S-A0
+             do	             do	  I-AM-ADV	       S-V	         O
+        sickest	        sickest	  I-AM-ADV	      B-A1	       S-V
+          first	              -	  E-AM-ADV	      E-A1	  S-AM-TMP
+              .	              -	         O	         O	         O
+
+            But	              -	         O	         O	         O	         O	         O	         O
+            the	              -	         O	         O	         O	         O	         O	         O
+         number	              -	         O	         O	         O	         O	         O	         O
+             of	              -	         O	         O	         O	         O	         O	         O
+       patients	              -	         O	         O	         O	         O	         O	         O
+        waiting	        waiting	       S-V	         O	         O	         O	         O	         O
+           then	              -	  S-AM-TMP	  S-AM-TMP	         O	         O	         O	         O
+         begins	         begins	         O	       S-V	         O	         O	         O	         O
+             to	              -	         O	      B-A1	         O	         O	         O	         O
+       increase	       increase	         O	      I-A1	       S-V	         O	         O	         O
+              ,	              -	         O	      I-A1	         O	         O	         O	         O
+             um	              -	         O	      I-A1	         O	         O	         O	         O
+            and	              -	         O	      I-A1	         O	         O	         O	         O
+              ,	              -	         O	      I-A1	         O	         O	         O	         O
+             in	              -	         O	      I-A1	         O	         O	         O	         O
+           fact	              -	         O	      I-A1	         O	         O	         O	         O
+              ,	              -	         O	      I-A1	         O	         O	         O	         O
+             um	              -	         O	      I-A1	         O	         O	         O	         O
+           over	              -	         O	      I-A1	         O	         O	         O	         O
+            the	              -	         O	      I-A1	         O	      B-A1	         O	         O
+          years	              -	         O	      I-A1	         O	      I-A1	         O	         O
+           many	              -	         O	      I-A1	         O	      I-A1	      B-A1	         O
+           more	              -	         O	      I-A1	         O	      I-A1	      I-A1	         O
+       patients	              -	         O	      I-A1	         O	      I-A1	      E-A1	         O
+            who	              -	         O	      I-A1	         O	      E-A1	    S-R-A1	         O
+            are	            are	         O	      I-A1	         O	       S-V	         O	         O
+          about	              -	         O	      I-A1	         O	         O	         O	         O
+             to	              -	         O	      I-A1	         O	         O	         O	         O
+            die	            die	         O	      I-A1	         O	         O	       S-V	         O
+             of	              -	         O	      I-A1	         O	         O	      B-A3	         O
+          liver	              -	         O	      I-A1	         O	         O	      I-A3	         O
+            tra	              -	         O	      I-A1	         O	         O	      E-A3	         O
+              -	              -	         O	      I-A1	         O	         O	         O	         O
+             uh	              -	         O	      I-A1	         O	         O	         O	      B-A1
+        without	              -	         O	      I-A1	         O	         O	         O	      I-A1
+              a	              -	         O	      I-A1	         O	         O	         O	      I-A1
+          liver	              -	         O	      I-A1	         O	         O	         O	      I-A1
+     transplant	              -	         O	      I-A1	         O	         O	         O	      E-A1
+          would	              -	         O	      I-A1	         O	         O	         O	  S-AM-MOD
+     accumulate	     accumulate	         O	      E-A1	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O
+
+             If	              -	         O	  B-AM-ADV	  B-AM-ADV
+            you	              -	      S-A0	  I-AM-ADV	  I-AM-ADV
+             do	             do	       S-V	  I-AM-ADV	  I-AM-ADV
+            the	              -	      B-A1	  I-AM-ADV	  I-AM-ADV
+             uh	              -	      I-A1	  I-AM-ADV	  I-AM-ADV
+    alternative	              -	      I-A1	  I-AM-ADV	  I-AM-ADV
+        extreme	              -	      E-A1	  E-AM-ADV	  E-AM-ADV
+              ,	              -	         O	         O	         O
+            you	              -	         O	      S-A0	      S-A0
+             do	             do	         O	       S-V	         O
+            n't	              -	         O	      B-A1	  S-AM-NEG
+           save	           save	         O	      I-A1	       S-V
+             as	              -	         O	      I-A1	  B-AM-TMP
+           many	              -	         O	      I-A1	  I-AM-TMP
+          lives	              -	         O	      I-A1	  I-AM-TMP
+             in	              -	         O	      I-A1	  I-AM-TMP
+            the	              -	         O	      I-A1	  I-AM-TMP
+          early	              -	         O	      I-A1	  I-AM-TMP
+          years	              -	         O	      I-A1	  E-AM-TMP
+              ,	              -	         O	      I-A1	         O
+             by	              -	         O	      I-A1	      B-A3
+              a	              -	         O	      I-A1	      I-A3
+          small	              -	         O	      I-A1	      I-A3
+       fraction	              -	         O	      E-A1	      E-A3
+              .	              -	         O	         O	         O
+
+            Our	              -	      B-A1	         O
+         system	              -	      E-A1	         O
+             is	             is	       S-V	         O
+       balanced	              -	    S-C-A1	         O
+              ,	              -	         O	         O
+             it	              -	         O	      S-A1
+             's	             's	         O	       S-V
+          right	              -	         O	  B-AM-TMP
+             in	              -	         O	  I-AM-TMP
+            the	              -	         O	  I-AM-TMP
+         middle	              -	         O	  E-AM-TMP
+              .	              -	         O	         O
+
+            And	              -	  S-AM-DIS
+              ,	              -	         O
+      therefore	              -	  S-AM-DIS
+              ,	              -	         O
+             it	              -	      S-A0
+          works	          works	       S-V
+           very	              -	  B-AM-MNR
+           well	              -	  E-AM-MNR
+              .	              -	         O
+
+     Nationwide	              -	  S-AM-LOC	         O	         O
+              ,	              -	         O	         O	         O
+          there	              -	         O	         O	         O
+            are	            are	       S-V	         O	         O
+          about	              -	      B-A1	      B-A1	         O
+            ten	              -	      I-A1	      I-A1	         O
+       thousand	              -	      I-A1	      I-A1	         O
+       patients	              -	      I-A1	      E-A1	         O
+        waiting	        waiting	      I-A1	       S-V	         O
+            for	              -	      I-A1	      B-A2	         O
+          liver	              -	      I-A1	      I-A2	         O
+    transplants	              -	      I-A1	      E-A2	         O
+           each	              -	      I-A1	         O	         O
+           year	              -	      E-A1	         O	         O
+            and	              -	         O	         O	         O
+           only	              -	         O	         O	      B-A1
+           four	              -	         O	         O	      I-A1
+       thousand	              -	         O	         O	      I-A1
+         organs	              -	         O	         O	      E-A1
+         become	         become	         O	         O	       S-V
+      available	              -	         O	         O	      B-A2
+            for	              -	         O	         O	      I-A2
+    transplants	              -	         O	         O	      E-A2
+              .	              -	         O	         O	         O
+
+      Secretary	              -	      B-A0	      B-A0	         O	         O	         O
+        Shalala	              -	      E-A0	      E-A0	         O	         O	         O
+           says	           says	       S-V	         O	         O	         O	         O
+           UNOS	              -	      B-A1	         O	         O	         O	         O
+           five	              -	      I-A1	         O	         O	         O	         O
+         months	              -	      I-A1	         O	         O	         O	         O
+            ago	              -	      I-A1	         O	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+             or	              -	      I-A1	         O	         O	         O	         O
+           gave	           gave	      I-A1	       S-V	         O	         O	         O
+           them	              -	      I-A1	      S-A2	      S-A0	         O	         O
+           five	              -	      I-A1	      B-A1	         O	         O	         O
+         months	              -	      I-A1	      I-A1	         O	         O	         O
+             to	              -	      I-A1	      I-A1	         O	         O	         O
+        develop	        develop	      I-A1	      I-A1	       S-V	         O	         O
+              a	              -	      I-A1	      I-A1	      B-A1	         O	         O
+            new	              -	      I-A1	      I-A1	      I-A1	         O	         O
+           plan	              -	      I-A1	      I-A1	      I-A1	         O	         O
+             to	              -	      I-A1	      I-A1	      I-A1	         O	         O
+     distribute	     distribute	      I-A1	      I-A1	      I-A1	       S-V	         O
+         livers	              -	      I-A1	      I-A1	      I-A1	      B-A1	      S-A1
+          which	              -	      I-A1	      I-A1	      I-A1	      I-A1	    S-R-A1
+            are	            are	      I-A1	      I-A1	      I-A1	      I-A1	       S-V
+             in	              -	      I-A1	      I-A1	      I-A1	      I-A1	  B-AM-LOC
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A1	  I-AM-LOC
+       shortest	              -	      I-A1	      I-A1	      I-A1	      I-A1	  I-AM-LOC
+         supply	              -	      E-A1	      E-A1	      E-A1	      E-A1	  E-AM-LOC
+              .	              -	         O	         O	         O	         O	         O
+
+           This	              -	      S-A1
+             is	             is	       S-V
+            VOA	              -	      S-A1
+          Today	              -	  S-AM-TMP
+              .	              -	         O
+

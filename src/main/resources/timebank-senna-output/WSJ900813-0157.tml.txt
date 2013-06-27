@@ -1,0 +1,1857 @@
+           Iraq	              -	         O	         O	      B-A0	         O	         O
+             's	              -	         O	         O	      I-A0	         O	         O
+         Saddam	              -	         O	         O	      I-A0	         O	         O
+        Hussein	              -	         O	         O	      I-A0	         O	         O
+              ,	              -	         O	         O	      I-A0	         O	         O
+            his	              -	         O	      B-A1	      I-A0	         O	         O
+        options	              -	         O	      I-A1	      I-A0	         O	         O
+            for	              -	         O	      I-A1	      I-A0	         O	         O
+         ending	         ending	       S-V	      I-A1	      I-A0	         O	         O
+            the	              -	      B-A1	      I-A1	      I-A0	         O	         O
+        Persian	              -	      I-A1	      I-A1	      I-A0	         O	         O
+           Gulf	              -	      I-A1	      I-A1	      I-A0	         O	         O
+         crisis	              -	      E-A1	      E-A1	      I-A0	         O	         O
+        growing	        growing	         O	       S-V	      I-A0	         O	         O
+   increasingly	              -	         O	      B-A2	      I-A0	         O	         O
+     unpleasant	              -	         O	      E-A2	      I-A0	         O	         O
+              ,	              -	         O	         O	      E-A0	         O	         O
+        assumed	        assumed	         O	         O	       S-V	         O	         O
+            the	              -	         O	         O	      B-A1	         O	         O
+           role	              -	         O	         O	      I-A1	         O	         O
+             of	              -	         O	         O	      I-A1	         O	         O
+      embattled	              -	         O	         O	      I-A1	         O	         O
+           Arab	              -	         O	         O	      I-A1	         O	         O
+           hero	              -	         O	         O	      I-A1	         O	         O
+             in	              -	         O	         O	      I-A1	         O	         O
+       offering	       offering	         O	         O	      I-A1	       S-V	         O
+            his	              -	         O	         O	      I-A1	      B-A1	         O
+          first	              -	         O	         O	      I-A1	      I-A1	         O
+          rough	              -	         O	         O	      I-A1	      I-A1	         O
+       proposal	              -	         O	         O	      I-A1	      I-A1	         O
+            for	              -	         O	         O	      I-A1	      I-A1	         O
+              a	              -	         O	         O	      I-A1	      I-A1	         O
+     negotiated	     negotiated	         O	         O	      I-A1	      I-A1	       S-V
+            end	              -	         O	         O	      I-A1	      E-A1	      S-A1
+             to	              -	         O	         O	      I-A1	      B-A2	         O
+            the	              -	         O	         O	      I-A1	      I-A2	         O
+  confrontation	              -	         O	         O	      E-A1	      E-A2	         O
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	         O	      B-A0	      B-A0	      B-A0	         O	         O
+          Iraqi	              -	         O	      I-A0	      I-A0	      I-A0	         O	         O
+         leader	              -	         O	      E-A0	      E-A0	      E-A0	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+             in	              -	         O	         O	         O	         O	         O	         O
+             an	              -	      B-A1	         O	         O	         O	         O	         O
+     initiative	              -	      E-A1	         O	         O	         O	         O	         O
+       designed	       designed	       S-V	         O	         O	         O	         O	         O
+             as	              -	      B-A3	         O	         O	         O	         O	         O
+           much	              -	      I-A3	         O	         O	         O	         O	         O
+             to	              -	      I-A3	         O	         O	         O	         O	         O
+          rally	          rally	      I-A3	       S-V	         O	         O	         O	         O
+           Arab	              -	      I-A3	      B-A1	         O	         O	         O	         O
+         public	              -	      I-A3	      I-A1	         O	         O	         O	         O
+        opinion	              -	      I-A3	      E-A1	         O	         O	         O	         O
+             as	              -	      I-A3	         O	         O	         O	         O	         O
+             to	              -	      I-A3	         O	         O	         O	         O	         O
+         launch	         launch	      I-A3	         O	       S-V	         O	         O	         O
+     meaningful	              -	      I-A3	         O	      B-A1	      B-A1	         O	         O
+   negotiations	              -	      E-A3	         O	      E-A1	      E-A1	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+      announced	      announced	         O	         O	         O	       S-V	         O	         O
+      yesterday	              -	         O	         O	         O	  S-AM-TMP	         O	         O
+           that	              -	         O	         O	         O	      B-A1	         O	         O
+             he	              -	         O	         O	         O	      I-A1	      S-A0	         O
+           will	              -	         O	         O	         O	      I-A1	  S-AM-MOD	         O
+       withdraw	       withdraw	         O	         O	         O	      I-A1	       S-V	         O
+            his	              -	         O	         O	         O	      I-A1	      B-A1	         O
+         troops	              -	         O	         O	         O	      I-A1	      E-A1	         O
+           from	              -	         O	         O	         O	      I-A1	      B-A3	         O
+         Kuwait	              -	         O	         O	         O	      I-A1	      E-A3	         O
+           only	              -	         O	         O	         O	      I-A1	  B-AM-ADV	         O
+             if	              -	         O	         O	         O	      I-A1	  I-AM-ADV	         O
+         Israel	              -	         O	         O	         O	      I-A1	  I-AM-ADV	      S-A0
+      withdraws	      withdraws	         O	         O	         O	      I-A1	  I-AM-ADV	       S-V
+           from	              -	         O	         O	         O	      I-A1	  I-AM-ADV	      B-A1
+            the	              -	         O	         O	         O	      I-A1	  I-AM-ADV	      I-A1
+           West	              -	         O	         O	         O	      I-A1	  I-AM-ADV	      I-A1
+           Bank	              -	         O	         O	         O	      I-A1	  I-AM-ADV	      I-A1
+            and	              -	         O	         O	         O	      I-A1	  I-AM-ADV	      I-A1
+          Syria	              -	         O	         O	         O	      I-A1	  I-AM-ADV	      E-A1
+           from	              -	         O	         O	         O	      I-A1	  I-AM-ADV	      B-A2
+        Lebanon	              -	         O	         O	         O	      E-A1	  E-AM-ADV	      E-A2
+              .	              -	         O	         O	         O	         O	         O	         O
+
+             He	              -	      S-A0	      S-A0	         O	         O	         O	         O	         O	         O
+     apparently	              -	  S-AM-ADV	         O	         O	         O	         O	         O	         O	         O
+          hopes	          hopes	       S-V	         O	         O	         O	         O	         O	         O	         O
+             to	              -	      B-A1	         O	         O	         O	         O	         O	         O	         O
+           lure	           lure	      I-A1	       S-V	         O	         O	         O	         O	         O	         O
+        support	              -	      I-A1	      B-A1	         O	         O	         O	         O	         O	         O
+           from	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+          Arabs	              -	      I-A1	      I-A1	      S-A0	      S-A0	         O	         O	         O	         O
+            who	              -	      I-A1	      I-A1	    S-R-A0	    S-R-A0	         O	         O	         O	         O
+           have	           have	      I-A1	      I-A1	       S-V	         O	         O	         O	         O	         O
+        spurned	        spurned	      I-A1	      I-A1	      B-A1	       S-V	         O	         O	         O	         O
+            him	              -	      I-A1	      E-A1	      E-A1	      S-A1	         O	         O	         O	         O
+             so	              -	      I-A1	         O	         O	         O	         O	         O	         O	         O
+            far	              -	      I-A1	         O	         O	         O	         O	         O	         O	         O
+             by	              -	      I-A1	         O	         O	         O	         O	         O	         O	         O
+     suggesting	     suggesting	      I-A1	         O	         O	         O	       S-V	         O	         O	         O
+           that	              -	      I-A1	         O	         O	         O	      B-A1	         O	         O	         O
+           Iraq	              -	      I-A1	         O	         O	         O	      I-A1	      S-A0	         O	         O
+           will	              -	      I-A1	         O	         O	         O	      I-A1	  S-AM-MOD	         O	         O
+            use	            use	      I-A1	         O	         O	         O	      I-A1	       S-V	         O	         O
+            its	              -	      I-A1	         O	         O	         O	      I-A1	      B-A1	         O	         O
+     occupation	              -	      I-A1	         O	         O	         O	      I-A1	      I-A1	         O	         O
+             of	              -	      I-A1	         O	         O	         O	      I-A1	      I-A1	         O	         O
+         Kuwait	              -	      I-A1	         O	         O	         O	      I-A1	      E-A1	         O	         O
+             as	              -	      I-A1	         O	         O	         O	      I-A1	      B-A2	         O	         O
+              a	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      B-A0	         O
+          lever	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      E-A0	         O
+             to	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	         O	         O
+          solve	          solve	      I-A1	         O	         O	         O	      I-A1	      I-A2	       S-V	         O
+            the	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      B-A1	         O
+           Arab	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	         O
+          world	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	         O
+             's	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	         O
+           most	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	         O
+    frustrating	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	         O
+        problem	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	         O
+              ,	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	         O
+            the	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	      B-A1
+        23-year	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	      I-A1
+        Israeli	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	      I-A1
+     occupation	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	      I-A1
+             of	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	      I-A1
+           land	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	      E-A1
+        claimed	        claimed	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	       S-V
+             by	              -	      I-A1	         O	         O	         O	      I-A1	      I-A2	      I-A1	      B-A0
+   Palestinians	              -	      E-A1	         O	         O	         O	      E-A1	      E-A2	      E-A1	      E-A0
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+           Even	              -	         O	         O	         O	  B-AM-TMP
+             as	              -	         O	         O	         O	  I-AM-TMP
+         Saddam	              -	      B-A1	      B-A0	      B-A0	  I-AM-TMP
+        Hussein	              -	      E-A1	      E-A0	      E-A0	  I-AM-TMP
+            was	            was	       S-V	         O	         O	  I-AM-TMP
+      searching	      searching	      B-A1	       S-V	         O	  I-AM-TMP
+            for	              -	      I-A1	      B-A1	         O	  I-AM-TMP
+              a	              -	      I-A1	      I-A1	      B-A0	  I-AM-TMP
+           ploy	              -	      I-A1	      I-A1	      E-A0	  I-AM-TMP
+             to	              -	      I-A1	      I-A1	         O	  I-AM-TMP
+           ease	           ease	      I-A1	      I-A1	       S-V	  I-AM-TMP
+            his	              -	      I-A1	      I-A1	      B-A1	  I-AM-TMP
+      isolation	              -	      E-A1	      E-A1	      E-A1	  E-AM-TMP
+              ,	              -	         O	         O	         O	         O
+         though	              -	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+            the	              -	         O	         O	         O	      B-A0
+  international	              -	         O	         O	         O	      I-A0
+       pressure	              -	         O	         O	         O	      I-A0
+        against	              -	         O	         O	         O	      I-A0
+            him	              -	         O	         O	         O	      E-A0
+        clicked	        clicked	         O	         O	         O	       B-V
+             up	              -	         O	         O	         O	       E-V
+        another	              -	         O	         O	         O	      B-A1
+          notch	              -	         O	         O	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+          White	              -	      I-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+          House	              -	      E-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+      yesterday	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+      disclosed	      disclosed	       S-V	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+         Kuwait	              -	      I-A1	         O	      B-A0	      B-A0	         O	         O	         O	         O	         O	         O	         O
+             's	              -	      I-A1	         O	      I-A0	      I-A0	         O	         O	         O	         O	         O	         O	         O
+         ousted	         ousted	      I-A1	       S-V	      I-A0	      I-A0	         O	         O	         O	         O	         O	         O	         O
+     government	              -	      I-A1	      S-A0	      E-A0	      E-A0	         O	         O	         O	         O	         O	         O	         O
+            has	            has	      I-A1	         O	       S-V	         O	         O	         O	         O	         O	         O	         O	         O
+       formally	              -	      I-A1	         O	      B-A1	  S-AM-MNR	         O	         O	         O	         O	         O	         O	         O
+          asked	          asked	      I-A1	         O	      I-A1	       S-V	         O	         O	         O	         O	         O	         O	         O
+            the	              -	      I-A1	         O	      I-A1	      B-A2	      B-A0	         O	         O	         O	         O	         O	         O
+           U.S.	              -	      I-A1	         O	      I-A1	      E-A2	      E-A0	         O	         O	         O	         O	         O	         O
+             to	              -	      I-A1	         O	      I-A1	      B-A1	         O	         O	         O	         O	         O	         O	         O
+        enforce	        enforce	      I-A1	         O	      I-A1	      I-A1	       S-V	         O	         O	         O	         O	         O	         O
+            the	              -	      I-A1	         O	      I-A1	      I-A1	      B-A1	         O	         O	         O	         O	         O	         O
+          total	              -	      I-A1	         O	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+          trade	              -	      I-A1	         O	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+        embargo	              -	      I-A1	         O	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+            the	              -	      I-A1	         O	      I-A1	      I-A1	      I-A1	         O	      B-A0	         O	         O	         O	         O
+         United	              -	      I-A1	         O	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	         O	         O	         O
+        Nations	              -	      I-A1	         O	      I-A1	      I-A1	      I-A1	         O	      E-A0	         O	         O	         O	         O
+            has	            has	      I-A1	         O	      I-A1	      I-A1	      I-A1	       S-V	         O	         O	         O	         O	         O
+        imposed	        imposed	      I-A1	         O	      I-A1	      I-A1	      I-A1	      B-A1	       S-V	         O	         O	         O	         O
+             on	              -	      I-A1	         O	      I-A1	      I-A1	      I-A1	      I-A1	      B-A1	         O	         O	         O	         O
+           Iraq	              -	      I-A1	         O	      E-A1	      I-A1	      E-A1	      E-A1	      E-A1	         O	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O
+       allowing	       allowing	      I-A1	         O	         O	      I-A1	         O	         O	         O	       S-V	         O	         O	         O
+            the	              -	      I-A1	         O	         O	      I-A1	         O	         O	         O	      B-A1	      B-A0	         O	         O
+           U.S.	              -	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	      I-A0	         O	         O
+            and	              -	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	      I-A0	         O	         O
+          other	              -	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	      I-A0	         O	         O
+        nations	              -	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	      E-A0	         O	         O
+             to	              -	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	         O	         O	         O
+    immediately	              -	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	  S-AM-TMP	         O	         O
+          begin	          begin	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	       S-V	         O	         O
+       stopping	       stopping	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	      B-A1	       S-V	         O
+          ships	              -	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	      I-A1	      B-A1	      S-A0
+       carrying	       carrying	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	      I-A1	      I-A1	       S-V
+          Iraqi	              -	      I-A1	         O	         O	      I-A1	         O	         O	         O	      I-A1	      I-A1	      I-A1	      B-A1
+          goods	              -	      E-A1	         O	         O	      E-A1	         O	         O	         O	      E-A1	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+      Secretary	              -	      B-A0	      B-A0	         O	         O
+             of	              -	      I-A0	      I-A0	         O	         O
+          State	              -	      I-A0	      I-A0	         O	         O
+          James	              -	      I-A0	      I-A0	         O	         O
+          Baker	              -	      E-A0	      E-A0	         O	         O
+              ,	              -	         O	         O	         O	         O
+       speaking	       speaking	       S-V	  B-AM-ADV	         O	         O
+             on	              -	      B-A1	  I-AM-ADV	         O	         O
+            ABC	              -	      I-A1	  I-AM-ADV	         O	         O
+           News	              -	      I-A1	  I-AM-ADV	         O	         O
+              '	              -	      I-A1	  I-AM-ADV	         O	         O
+           This	              -	      I-A1	  I-AM-ADV	         O	         O
+           Week	              -	      E-A1	  E-AM-ADV	         O	         O
+              ,	              -	         O	         O	         O	         O
+           said	           said	         O	       S-V	         O	         O
+            the	              -	         O	      B-A1	      B-A0	         O
+        Kuwaiti	              -	         O	      I-A1	      I-A0	         O
+        request	              -	         O	      I-A1	      E-A0	         O
+          gives	          gives	         O	      I-A1	       S-V	         O
+            the	              -	         O	      I-A1	      B-A2	      B-A0
+           U.S.	              -	         O	      I-A1	      I-A2	      I-A0
+            and	              -	         O	      I-A1	      I-A2	      I-A0
+          other	              -	         O	      I-A1	      I-A2	      I-A0
+      countries	              -	         O	      I-A1	      E-A2	      E-A0
+              a	              -	         O	      I-A1	      B-A1	         O
+          legal	              -	         O	      I-A1	      I-A1	         O
+          basis	              -	         O	      I-A1	      I-A1	         O
+            for	              -	         O	      I-A1	      I-A1	         O
+       stopping	       stopping	         O	      I-A1	      I-A1	       S-V
+            the	              -	         O	      I-A1	      I-A1	      B-A1
+         export	              -	         O	      I-A1	      I-A1	      I-A1
+             of	              -	         O	      I-A1	      I-A1	      I-A1
+            oil	              -	         O	      I-A1	      I-A1	      I-A1
+            and	              -	         O	      I-A1	      I-A1	      I-A1
+           that	              -	         O	      I-A1	      I-A1	      I-A1
+           sort	              -	         O	      I-A1	      I-A1	      I-A1
+             of	              -	         O	      I-A1	      I-A1	      I-A1
+          thing	              -	         O	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O
+           U.S.	              -	      E-A0	         O
+      maintains	      maintains	       S-V	         O
+           that	              -	      B-A1	         O
+          under	              -	      I-A1	  B-AM-LOC
+            the	              -	      I-A1	  I-AM-LOC
+           U.N.	              -	      I-A1	  I-AM-LOC
+        charter	              -	      I-A1	  E-AM-LOC
+              ,	              -	      I-A1	         O
+            the	              -	      I-A1	      B-A0
+        Kuwaiti	              -	      I-A1	      I-A0
+        request	              -	      I-A1	      E-A0
+       triggers	       triggers	      I-A1	       S-V
+          steps	              -	      I-A1	      B-A1
+            for	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+     collective	              -	      I-A1	      I-A1
+    enforcement	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+  international	              -	      I-A1	      I-A1
+      sanctions	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+            Mr.	              -	      B-A0	      B-A0	      B-A0	         O
+          Baker	              -	      E-A0	      E-A0	      E-A0	         O
+       declined	       declined	       S-V	         O	         O	         O
+             to	              -	      B-A1	         O	         O	         O
+            use	            use	      I-A1	       S-V	         O	         O
+            the	              -	      I-A1	      B-A1	         O	         O
+           word	              -	      I-A1	      I-A1	         O	         O
+       blockade	              -	      E-A1	      E-A1	         O	         O
+              ,	              -	         O	         O	         O	         O
+            but	              -	         O	         O	         O	         O
+           said	           said	         O	         O	       S-V	         O
+           that	              -	         O	         O	      B-A1	         O
+   interdiction	              -	         O	         O	      I-A1	      B-A1
+             of	              -	         O	         O	      I-A1	      I-A1
+          Iraqi	              -	         O	         O	      I-A1	      I-A1
+      shipments	              -	         O	         O	      I-A1	      E-A1
+          would	              -	         O	         O	      I-A1	  S-AM-MOD
+          begin	          begin	         O	         O	      I-A1	       S-V
+         almost	              -	         O	         O	      I-A1	  B-AM-TMP
+      instantly	              -	         O	         O	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+             In	              -	  B-AM-LOC	         O	         O	         O
+              a	              -	  I-AM-LOC	         O	         O	         O
+      statement	              -	  E-AM-LOC	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+            the	              -	      B-A0	         O	         O	         O
+          White	              -	      I-A0	         O	         O	         O
+          House	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O
+          would	              -	      I-A1	  S-AM-MOD	         O	         O
+             do	             do	      I-A1	       S-V	         O	         O
+       whatever	              -	      I-A1	      B-A1	  S-AM-NEG	         O
+             is	             is	      I-A1	      I-A1	       S-V	         O
+      necessary	              -	      I-A1	      I-A1	      B-A1	         O
+             to	              -	      I-A1	      I-A1	      I-A1	         O
+         ensure	         ensure	      I-A1	      I-A1	      I-A1	       S-V
+     compliance	              -	      I-A1	      I-A1	      I-A1	      B-A1
+           with	              -	      I-A1	      I-A1	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A1
+      sanctions	              -	      E-A1	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+          Other	              -	      B-A0	         O	         O	         O	         O	         O	         O	         O
+           Bush	              -	      I-A0	         O	         O	         O	         O	         O	         O	         O
+ administration	              -	      I-A0	         O	         O	         O	         O	         O	         O	         O
+      officials	              -	      E-A0	         O	         O	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O	         O	         O	         O
+            the	              -	      I-A1	         O	      B-A1	      B-A2	      B-A0	         O	         O	         O
+  international	              -	      I-A1	         O	      I-A1	      I-A2	      I-A0	         O	         O	         O
+          naval	              -	      I-A1	         O	      I-A1	      I-A2	      I-A0	         O	         O	         O
+          force	              -	      I-A1	         O	      I-A1	      I-A2	      I-A0	         O	         O	         O
+             in	              -	      I-A1	         O	      I-A1	      I-A2	      I-A0	         O	         O	         O
+            the	              -	      I-A1	         O	      I-A1	      I-A2	      I-A0	         O	         O	         O
+           area	              -	      I-A1	         O	      I-A1	      I-A2	      I-A0	         O	         O	         O
+             --	              -	      I-A1	         O	      I-A1	      I-A2	      I-A0	         O	         O	         O
+     consisting	     consisting	      I-A1	       S-V	      I-A1	      I-A2	      I-A0	         O	         O	         O
+             of	              -	      I-A1	      B-A2	      I-A1	      I-A2	      I-A0	         O	         O	         O
+       American	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	         O	         O
+              ,	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	         O	         O
+        British	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      B-A0	         O
+              ,	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+         French	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+              ,	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+       Canadian	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+              ,	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+         Soviet	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+              ,	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+         German	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+            and	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+     Australian	              -	      I-A1	      I-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+          ships	              -	      I-A1	      E-A2	      I-A1	      I-A2	      I-A0	         O	      I-A0	         O
+             --	              -	      I-A1	         O	      E-A1	      E-A2	      E-A0	         O	      E-A0	         O
+            may	              -	      I-A1	         O	  S-AM-MOD	  S-AM-MOD	         O	         O	         O	         O
+             be	             be	      I-A1	         O	       S-V	         O	         O	         O	         O	         O
+           used	           used	      I-A1	         O	    B-C-A1	       S-V	         O	         O	         O	         O
+           both	              -	      I-A1	         O	    I-C-A1	      B-A2	         O	         O	         O	         O
+             to	              -	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	         O	         O
+           stop	           stop	      I-A1	         O	    I-C-A1	      I-A2	       S-V	         O	         O	         O
+            oil	              -	      I-A1	         O	    I-C-A1	      I-A2	      B-A1	      B-A0	         O	         O
+        exports	              -	      I-A1	         O	    I-C-A1	      I-A2	      E-A1	      E-A0	         O	         O
+           from	              -	      I-A1	         O	    I-C-A1	      I-A2	      B-A2	         O	         O	         O
+        leaving	        leaving	      I-A1	         O	    I-C-A1	      I-A2	      I-A2	       S-V	         O	         O
+           Iraq	              -	      I-A1	         O	    I-C-A1	      I-A2	      I-A2	      B-A1	         O	         O
+            and	              -	      I-A1	         O	    I-C-A1	      I-A2	      I-A2	      I-A1	         O	         O
+         Kuwait	              -	      I-A1	         O	    I-C-A1	      I-A2	      E-A2	      E-A1	         O	         O
+            and	              -	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	         O	         O
+             to	              -	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	         O	         O
+           stop	           stop	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	       S-V	         O
+      shipments	              -	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	      B-A1	         O
+             of	              -	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	      I-A1	         O
+           food	              -	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	      I-A1	         O
+            and	              -	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	      I-A1	         O
+          other	              -	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	      I-A1	      B-A1
+          goods	              -	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	      I-A1	      E-A1
+           from	              -	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	      I-A1	         O
+          going	          going	      I-A1	         O	    I-C-A1	      I-A2	         O	         O	      I-A1	       S-V
+             in	              -	      E-A1	         O	    E-C-A1	      E-A2	         O	         O	      E-A1	  S-AM-DIR
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+      President	              -	      B-A0	         O	         O
+           Bush	              -	      E-A0	         O	         O
+        implied	        implied	       S-V	         O	         O
+             as	              -	  B-AM-TMP	         O	         O
+           much	              -	  I-AM-TMP	         O	         O
+      yesterday	              -	  E-AM-TMP	         O	         O
+           when	              -	  B-AM-TMP	         O	         O
+      reporters	              -	  I-AM-TMP	      S-A0	         O
+          asked	          asked	  I-AM-TMP	       S-V	         O
+        whether	              -	  I-AM-TMP	      B-A1	         O
+            the	              -	  I-AM-TMP	      I-A1	      B-A1
+   interdiction	              -	  I-AM-TMP	      I-A1	      E-A1
+          would	              -	  I-AM-TMP	      I-A1	  S-AM-MOD
+          apply	          apply	  I-AM-TMP	      I-A1	       S-V
+             to	              -	  I-AM-TMP	      I-A1	      B-A2
+           food	              -	  E-AM-TMP	      E-A1	      E-A2
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0
+      president	              -	      E-A0
+      responded	      responded	       S-V
+              ,	              -	         O
+     Everything	              -	      B-A1
+              ,	              -	      I-A1
+     everything	              -	      E-A1
+              .	              -	         O
+
+          While	              -	         O	         O	  B-AM-ADV	         O	         O	         O	         O
+         shying	         shying	       S-V	         O	  I-AM-ADV	         O	         O	         O	         O
+           away	              -	  B-AM-DIR	         O	  I-AM-ADV	         O	         O	         O	         O
+           from	              -	  I-AM-DIR	         O	  I-AM-ADV	         O	         O	         O	         O
+       actually	              -	  I-AM-DIR	         O	  I-AM-ADV	         O	         O	         O	         O
+          using	          using	  I-AM-DIR	       S-V	  I-AM-ADV	         O	         O	         O	         O
+            the	              -	  I-AM-DIR	      B-A1	  I-AM-ADV	         O	         O	         O	         O
+           word	              -	  I-AM-DIR	      I-A1	  I-AM-ADV	         O	         O	         O	         O
+       blockade	              -	  E-AM-DIR	      E-A1	  E-AM-ADV	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+            Mr.	              -	      B-A0	         O	      B-A0	         O	         O	         O	         O
+           Bush	              -	      E-A0	         O	      E-A0	         O	         O	         O	         O
+   acknowledged	   acknowledged	         O	         O	       S-V	         O	         O	         O	         O
+           that	              -	         O	         O	      B-A1	         O	         O	         O	         O
+            the	              -	         O	         O	      I-A1	      B-A1	      B-A0	      B-A0	      B-A0
+           U.S.	              -	         O	         O	      I-A1	      I-A1	      I-A0	      I-A0	      I-A0
+            and	              -	         O	         O	      I-A1	      I-A1	      I-A0	      I-A0	      I-A0
+         others	              -	         O	         O	      I-A1	      E-A1	      E-A0	      E-A0	      E-A0
+           were	           were	         O	         O	      I-A1	       S-V	         O	         O	         O
+         trying	         trying	         O	         O	      I-A1	    B-C-A1	       S-V	         O	         O
+             to	              -	         O	         O	      I-A1	    I-C-A1	      B-A1	         O	         O
+          block	          block	         O	         O	      I-A1	    I-C-A1	      I-A1	       S-V	         O
+       shipping	       shipping	         O	         O	      I-A1	    I-C-A1	      I-A1	      B-A1	       S-V
+             to	              -	         O	         O	      I-A1	    I-C-A1	      I-A1	      I-A1	      B-A1
+           Iraq	              -	         O	         O	      E-A1	    E-C-A1	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+             No	              -	         O	      B-A1
+          point	              -	         O	      I-A1
+        getting	        getting	       S-V	      I-A1
+           into	              -	      B-A2	      I-A1
+            all	              -	      I-A2	      I-A1
+          these	              -	      I-A2	      I-A1
+      semantics	              -	      E-A2	      E-A1
+              ,	              -	         O	         O
+             he	              -	         O	      S-A0
+           said	           said	         O	       S-V
+              .	              -	         O	         O
+
+            The	              -	      B-A1	         O	         O
+           main	              -	      I-A1	         O	         O
+          thing	              -	      E-A1	         O	         O
+             is	             is	       S-V	         O	         O
+             to	              -	  B-AM-PNC	         O	         O
+           stop	           stop	  I-AM-PNC	       S-V	         O
+            the	              -	  I-AM-PNC	      B-A1	      B-A1
+            oil	              -	  I-AM-PNC	      E-A1	      E-A1
+           from	              -	  I-AM-PNC	      B-A2	         O
+         coming	         coming	  I-AM-PNC	      I-A2	       S-V
+            out	              -	  I-AM-PNC	      I-A2	         O
+             of	              -	  I-AM-PNC	      I-A2	         O
+          there	              -	  E-AM-PNC	      E-A2	         O
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	         O	         O	         O	         O	         O	         O	         O
+          naval	              -	      I-A1	         O	         O	         O	         O	         O	         O	         O
+   interdiction	              -	      I-A1	         O	         O	         O	         O	         O	         O	         O
+          force	              -	      E-A1	         O	         O	         O	         O	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O	         O	         O	         O	         O
+           part	              -	    B-C-A1	         O	         O	         O	         O	         O	         O	         O
+             of	              -	    I-C-A1	         O	         O	         O	         O	         O	         O	         O
+             an	              -	    I-C-A1	         O	      B-A1	         O	         O	         O	         O	         O
+        overall	              -	    I-C-A1	         O	      I-A1	         O	         O	         O	         O	         O
+       American	              -	    I-C-A1	         O	      I-A1	         O	         O	         O	         O	         O
+       strategy	              -	    I-C-A1	         O	      E-A1	         O	         O	         O	         O	         O
+           that	              -	    I-C-A1	         O	         O	         O	         O	         O	         O	         O
+      officials	              -	    I-C-A1	      S-A0	         O	         O	         O	         O	         O	         O
+            say	            say	    I-C-A1	       S-V	         O	         O	         O	         O	         O	         O
+             is	             is	    I-C-A1	    B-C-A1	       S-V	         O	         O	         O	         O	         O
+       designed	       designed	    I-C-A1	    I-C-A1	    B-C-A1	       S-V	         O	         O	         O	         O
+             to	              -	    I-C-A1	    I-C-A1	    I-C-A1	      B-A3	         O	         O	         O	         O
+          leave	          leave	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	       S-V	         O	         O	         O
+            the	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      B-A2	         O	         O	         O
+          Iraqi	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A2	         O	         O	         O
+         leader	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      E-A2	         O	         O	         O
+           with	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      B-A1	         O	         O	         O
+           only	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	         O	         O
+            the	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	         O	         O
+          stark	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	         O	         O
+         choice	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	         O	         O
+             of	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	         O	         O
+        backing	        backing	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	       B-V	         O	         O
+            out	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	       E-V	         O	         O
+             of	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	      B-A1	         O	         O
+         Kuwait	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	      E-A1	         O	         O
+             or	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	         O	         O
+      launching	      launching	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	       S-V	         O
+            new	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	      B-A1	         O
+        attacks	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	      E-A1	         O
+             to	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	  B-AM-PNC	         O
+         change	         change	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	  I-AM-PNC	       S-V
+            his	              -	    I-C-A1	    I-C-A1	    I-C-A1	      I-A3	      I-A1	         O	  I-AM-PNC	      B-A1
+      situation	              -	    E-C-A1	    E-C-A1	    E-C-A1	      E-A3	      E-A1	         O	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+         Though	              -	         O	         O	         O	         O	  B-AM-ADV	         O	         O	         O	         O
+           they	              -	      S-A0	         O	         O	         O	  I-AM-ADV	         O	         O	         O	         O
+         insist	         insist	       S-V	         O	         O	         O	  I-AM-ADV	         O	         O	         O	         O
+           they	              -	      B-A1	      S-A1	      S-A0	      S-A0	  I-AM-ADV	         O	         O	         O	         O
+            are	            are	      I-A1	       S-V	         O	         O	  I-AM-ADV	         O	         O	         O	         O
+            n't	              -	      I-A1	  S-AM-NEG	  S-AM-NEG	         O	  I-AM-ADV	         O	         O	         O	         O
+         trying	         trying	      I-A1	  B-AM-ADV	       S-V	         O	  I-AM-ADV	         O	         O	         O	         O
+             to	              -	      I-A1	  I-AM-ADV	      B-A1	         O	  I-AM-ADV	         O	         O	         O	         O
+           lure	           lure	      I-A1	  I-AM-ADV	      I-A1	       S-V	  I-AM-ADV	         O	         O	         O	         O
+         Saddam	              -	      I-A1	  I-AM-ADV	      I-A1	      B-A1	  I-AM-ADV	         O	         O	         O	         O
+        Hussein	              -	      I-A1	  I-AM-ADV	      I-A1	      E-A1	  I-AM-ADV	         O	         O	         O	         O
+           into	              -	      I-A1	  I-AM-ADV	      I-A1	      B-A2	  I-AM-ADV	         O	         O	         O	         O
+             an	              -	      I-A1	  I-AM-ADV	      I-A1	      I-A2	  I-AM-ADV	         O	         O	         O	         O
+         attack	              -	      E-A1	  E-AM-ADV	      E-A1	      E-A2	  E-AM-ADV	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+      officials	              -	         O	         O	         O	         O	      S-A0	         O	         O	         O	         O
+           hope	           hope	         O	         O	         O	         O	       S-V	         O	         O	         O	         O
+           that	              -	         O	         O	         O	         O	      B-A1	         O	         O	         O	         O
+             if	              -	         O	         O	         O	         O	      I-A1	         O	  B-AM-ADV	         O	         O
+             he	              -	         O	         O	         O	         O	      I-A1	      S-A0	  I-AM-ADV	         O	         O
+        strikes	        strikes	         O	         O	         O	         O	      I-A1	       S-V	  I-AM-ADV	         O	         O
+          again	              -	         O	         O	         O	         O	      I-A1	  S-AM-TMP	  E-AM-ADV	         O	         O
+              ,	              -	         O	         O	         O	         O	      I-A1	         O	         O	         O	         O
+            the	              -	         O	         O	         O	         O	      I-A1	         O	      B-A0	         O	         O
+           U.S.	              -	         O	         O	         O	         O	      I-A1	         O	      I-A0	         O	         O
+            and	              -	         O	         O	         O	         O	      I-A1	         O	      I-A0	         O	         O
+            its	              -	         O	         O	         O	         O	      I-A1	         O	      I-A0	         O	         O
+         allies	              -	         O	         O	         O	         O	      I-A1	         O	      E-A0	         O	         O
+           will	              -	         O	         O	         O	         O	      I-A1	         O	  S-AM-MOD	         O	         O
+           have	           have	         O	         O	         O	         O	      I-A1	         O	       S-V	         O	         O
+           such	              -	         O	         O	         O	         O	      I-A1	         O	      B-A1	         O	         O
+             an	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	         O	         O
+     impressive	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	         O	         O
+          force	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	         O	         O
+             in	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	         O	         O
+          place	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	         O	         O
+             in	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	         O	         O
+          Saudi	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	         O	         O
+         Arabia	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	         O	         O
+           that	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	         O	         O
+           they	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	      S-A1	      S-A0
+           will	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	  S-AM-MOD	         O
+             be	             be	         O	         O	         O	         O	      I-A1	         O	      I-A1	       S-V	         O
+           able	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	  B-AM-ADV	         O
+             to	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	  I-AM-ADV	         O
+          crush	          crush	         O	         O	         O	         O	      I-A1	         O	      I-A1	  I-AM-ADV	       S-V
+            him	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	  I-AM-ADV	      S-A1
+             in	              -	         O	         O	         O	         O	      I-A1	         O	      I-A1	  I-AM-ADV	         O
+    retaliation	              -	         O	         O	         O	         O	      E-A1	         O	      E-A1	  E-AM-ADV	         O
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+           Iraq	              -	      B-A1	      B-A1	         O	         O	         O
+             's	              -	      I-A1	      E-A1	         O	         O	         O
+          first	              -	      I-A1	         O	         O	         O	         O
+         option	              -	      E-A1	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+             of	              -	  B-AM-DIS	         O	         O	         O	         O
+         course	              -	  E-AM-DIS	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            may	              -	  S-AM-MOD	         O	         O	         O	         O
+             be	             be	       S-V	         O	         O	         O	         O
+         simply	              -	  B-AM-MNR	  S-AM-ADV	         O	         O	         O
+             to	              -	  I-AM-MNR	         O	         O	         O	         O
+            sit	            sit	  I-AM-MNR	       S-V	         O	         O	         O
+          tight	              -	  E-AM-MNR	  S-AM-MNR	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O
+           hope	           hope	         O	         O	       S-V	         O	         O
+             it	              -	         O	         O	      B-A1	      S-A1	         O
+            can	              -	         O	         O	      I-A1	  S-AM-MOD	         O
+         endure	         endure	         O	         O	      I-A1	       S-V	         O
+              a	              -	         O	         O	      I-A1	      B-A2	         O
+          trade	              -	         O	         O	      I-A1	      I-A2	         O
+        embargo	              -	         O	         O	      I-A1	      I-A2	         O
+         longer	              -	         O	         O	      I-A1	      I-A2	         O
+           than	              -	         O	         O	      I-A1	      I-A2	         O
+            the	              -	         O	         O	      I-A1	      I-A2	      B-A0
+           West	              -	         O	         O	      I-A1	      I-A2	      E-A0
+            can	              -	         O	         O	      I-A1	      I-A2	  S-AM-MOD
+           live	           live	         O	         O	      I-A1	      I-A2	       S-V
+        without	              -	         O	         O	      I-A1	      I-A2	  B-AM-MNR
+          Iraqi	              -	         O	         O	      I-A1	      I-A2	  I-AM-MNR
+            and	              -	         O	         O	      I-A1	      I-A2	  I-AM-MNR
+        Kuwaiti	              -	         O	         O	      I-A1	      I-A2	  I-AM-MNR
+            oil	              -	         O	         O	      E-A1	      E-A2	  E-AM-MNR
+              .	              -	         O	         O	         O	         O	         O
+
+       Speaking	       Speaking	       S-V	  B-AM-ADV	         O
+             on	              -	      B-A1	  I-AM-ADV	         O
+            the	              -	      I-A1	  I-AM-ADV	         O
+            ABC	              -	      I-A1	  I-AM-ADV	         O
+        program	              -	      E-A1	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O
+          Abdul	              -	         O	      B-A0	         O
+           Amir	              -	         O	      I-A0	         O
+      al-Anbari	              -	         O	      I-A0	         O
+              ,	              -	         O	      I-A0	         O
+           Iraq	              -	         O	      I-A0	         O
+             's	              -	         O	      I-A0	         O
+     ambassador	              -	         O	      I-A0	         O
+             to	              -	         O	      I-A0	         O
+            the	              -	         O	      I-A0	         O
+           U.N.	              -	         O	      I-A0	         O
+              ,	              -	         O	      E-A0	         O
+       asserted	       asserted	         O	       S-V	         O
+           that	              -	         O	      B-A1	         O
+             an	              -	         O	      I-A1	      B-A0
+        embargo	              -	         O	      I-A1	      I-A0
+             on	              -	         O	      I-A1	      I-A0
+           Iraq	              -	         O	      I-A1	      E-A0
+          could	              -	         O	      I-A1	  S-AM-MOD
+         plunge	         plunge	         O	      I-A1	       S-V
+            the	              -	         O	      I-A1	      B-A1
+           U.S.	              -	         O	      I-A1	      E-A1
+           into	              -	         O	      I-A1	      B-A2
+              a	              -	         O	      I-A1	      I-A2
+     depression	              -	         O	      I-A1	      I-A2
+            and	              -	         O	      I-A1	      I-A2
+            the	              -	         O	      I-A1	      I-A2
+           rest	              -	         O	      I-A1	      I-A2
+             of	              -	         O	      I-A1	      I-A2
+            the	              -	         O	      I-A1	      I-A2
+          world	              -	         O	      I-A1	      E-A2
+           into	              -	         O	      I-A1	      B-A3
+             an	              -	         O	      I-A1	      I-A3
+       economic	              -	         O	      I-A1	      I-A3
+         crisis	              -	         O	      E-A1	      E-A3
+              .	              -	         O	         O	         O
+
+           Iraq	              -	      S-A1	      S-A0	      S-A0	         O	      S-A0	         O	         O	         O
+        clearly	              -	  S-AM-ADV	  S-AM-ADV	         O	         O	         O	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O	         O	         O	         O	         O
+         trying	         trying	  B-AM-ADV	       S-V	         O	         O	         O	         O	         O	         O
+             to	              -	  I-AM-ADV	      B-A1	         O	         O	         O	         O	         O	         O
+            woo	            woo	  I-AM-ADV	      I-A1	       B-V	         O	         O	         O	         O	         O
+           back	              -	  I-AM-ADV	      I-A1	       E-V	         O	         O	         O	         O	         O
+           more	              -	  I-AM-ADV	      I-A1	      B-A1	         O	         O	         O	         O	         O
+           Arab	              -	  I-AM-ADV	      I-A1	      I-A1	         O	         O	         O	         O	         O
+        support	              -	  I-AM-ADV	      I-A1	      E-A1	         O	         O	         O	         O	         O
+             in	              -	  I-AM-ADV	      I-A1	  B-AM-MNR	         O	         O	         O	         O	         O
+           case	              -	  I-AM-ADV	      I-A1	  I-AM-MNR	         O	         O	         O	         O	         O
+            the	              -	  I-AM-ADV	      I-A1	  I-AM-MNR	      B-A0	         O	         O	         O	         O
+       conflict	              -	  I-AM-ADV	      I-A1	  I-AM-MNR	      E-A0	         O	         O	         O	         O
+          drags	          drags	  I-AM-ADV	      I-A1	  I-AM-MNR	       B-V	         O	         O	         O	         O
+             on	              -	  E-AM-ADV	      E-A1	  E-AM-MNR	       E-V	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O
+         hoping	         hoping	  B-AM-ADV	         O	         O	         O	       S-V	         O	         O	         O
+           that	              -	  I-AM-ADV	         O	         O	         O	      B-A1	         O	         O	         O
+            its	              -	  I-AM-ADV	         O	         O	         O	      I-A1	      B-A0	         O	         O
+      neighbors	              -	  I-AM-ADV	         O	         O	         O	      I-A1	      E-A0	         O	         O
+     eventually	              -	  I-AM-ADV	         O	         O	         O	      I-A1	  S-AM-TMP	         O	         O
+           will	              -	  I-AM-ADV	         O	         O	         O	      I-A1	  S-AM-MOD	         O	         O
+           help	           help	  I-AM-ADV	         O	         O	         O	      I-A1	       S-V	         O	         O
+             it	              -	  I-AM-ADV	         O	         O	         O	      I-A1	      B-A1	      S-A0	         O
+        survive	        survive	  I-AM-ADV	         O	         O	         O	      I-A1	      I-A1	       S-V	         O
+              a	              -	  I-AM-ADV	         O	         O	         O	      I-A1	      I-A1	      B-A1	         O
+      prolonged	      prolonged	  I-AM-ADV	         O	         O	         O	      I-A1	      I-A1	      I-A1	       S-V
+            war	              -	  I-AM-ADV	         O	         O	         O	      I-A1	      I-A1	      I-A1	      S-A1
+             of	              -	  I-AM-ADV	         O	         O	         O	      I-A1	      I-A1	      I-A1	         O
+       economic	              -	  I-AM-ADV	         O	         O	         O	      I-A1	      I-A1	      I-A1	         O
+      attrition	              -	  I-AM-ADV	         O	         O	         O	      I-A1	      I-A1	      I-A1	         O
+           with	              -	  I-AM-ADV	         O	         O	         O	      I-A1	      I-A1	      I-A1	         O
+            the	              -	  I-AM-ADV	         O	         O	         O	      I-A1	      I-A1	      I-A1	         O
+           West	              -	  E-AM-ADV	         O	         O	         O	      E-A1	      E-A1	      E-A1	         O
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+             So	              -	  S-AM-DIS	         O	         O	         O	         O	         O	         O
+         Saddam	              -	      B-A0	      B-A0	         O	      B-A0	         O	         O	         O
+        Hussein	              -	      E-A0	      E-A0	         O	      E-A0	         O	         O	         O
+             on	              -	  B-AM-TMP	         O	         O	         O	         O	         O	         O
+         Friday	              -	  E-AM-TMP	         O	         O	         O	         O	         O	         O
+          tried	          tried	       S-V	         O	         O	         O	         O	         O	         O
+             to	              -	      B-A1	         O	         O	         O	         O	         O	         O
+          scare	          scare	      I-A1	       S-V	         O	         O	         O	         O	         O
+          other	              -	      I-A1	      B-A1	         O	         O	         O	         O	         O
+           Arab	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+        leaders	              -	      I-A1	      E-A1	         O	         O	         O	         O	         O
+           into	              -	      I-A1	      B-A2	         O	         O	         O	         O	         O
+     supporting	     supporting	      I-A1	      I-A2	       S-V	         O	         O	         O	         O
+            him	              -	      I-A1	      I-A2	      S-A1	         O	         O	         O	         O
+             by	              -	      I-A1	      I-A2	  B-AM-MNR	         O	         O	         O	         O
+        calling	        calling	      I-A1	      I-A2	  I-AM-MNR	       S-V	         O	         O	         O
+             on	              -	      I-A1	      I-A2	  I-AM-MNR	      B-A2	         O	         O	         O
+          Arabs	              -	      I-A1	      I-A2	  E-AM-MNR	      E-A2	         O	         O	         O
+             to	              -	      I-A1	      I-A2	    B-C-A1	      B-A1	         O	         O	         O
+           rise	           rise	      I-A1	      I-A2	    I-C-A1	      I-A1	       B-V	         O	         O
+             up	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	       E-V	         O	         O
+             in	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  B-AM-LOC	         O	         O
+              a	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	         O	         O
+           holy	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	         O	         O
+            war	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	         O	         O
+        against	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	         O	         O
+        leaders	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	      S-A0	      B-A0
+            who	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	    S-R-A0	      I-A0
+        invited	        invited	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	       S-V	      I-A0
+       American	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	      B-A1	      I-A0
+            and	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	      I-A1	      I-A0
+          other	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	      I-A1	      I-A0
+        Western	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	      I-A1	      I-A0
+       soldiers	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	      E-A1	      E-A0
+           into	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	      B-A2	         O
+          Saudi	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	      I-A2	         O
+         Arabia	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	      E-A2	         O
+             to	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	  B-AM-PNC	         O
+        protect	        protect	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	  I-AM-PNC	       S-V
+            the	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	  I-AM-PNC	      B-A1
+       oil-rich	              -	      I-A1	      I-A2	    I-C-A1	      I-A1	  I-AM-LOC	  I-AM-PNC	      I-A1
+        kingdom	              -	      E-A1	      E-A2	    E-C-A1	      E-A1	  E-AM-LOC	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+           Then	              -	  B-AM-TMP	         O	         O
+      yesterday	              -	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O
+             he	              -	      S-A0	      S-A0	         O
+          tried	          tried	       S-V	         O	         O
+             to	              -	      B-A1	         O	         O
+         entice	         entice	      I-A1	       S-V	         O
+           Arab	              -	      I-A1	      B-A1	         O
+        leaders	              -	      I-A1	      E-A1	         O
+           with	              -	      I-A1	      B-A2	         O
+            his	              -	      I-A1	      I-A2	         O
+       proposal	              -	      I-A1	      I-A2	         O
+            for	              -	      I-A1	      I-A2	         O
+              a	              -	      I-A1	      I-A2	      B-A0
+     diplomatic	              -	      I-A1	      I-A2	      I-A0
+       solution	              -	      I-A1	      I-A2	      E-A0
+        linking	        linking	      I-A1	      I-A2	       S-V
+            his	              -	      I-A1	      I-A2	      B-A1
+     occupation	              -	      I-A1	      I-A2	      I-A1
+             of	              -	      I-A1	      I-A2	      I-A1
+         Kuwait	              -	      I-A1	      I-A2	      I-A1
+           with	              -	      I-A1	      I-A2	      I-A1
+         Israel	              -	      I-A1	      I-A2	      I-A1
+             's	              -	      I-A1	      I-A2	      I-A1
+     occupation	              -	      I-A1	      I-A2	      I-A1
+             of	              -	      I-A1	      I-A2	      I-A1
+            the	              -	      I-A1	      I-A2	      I-A1
+           West	              -	      I-A1	      I-A2	      I-A1
+           Bank	              -	      E-A1	      E-A2	      E-A1
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	      B-A0
+       proposal	              -	      E-A1	      E-A0
+           also	              -	  S-AM-DIS	         O
+         called	         called	       S-V	         O
+            for	              -	      B-A1	         O
+      replacing	      replacing	      I-A1	       S-V
+       American	              -	      I-A1	      B-A1
+            and	              -	      I-A1	      I-A1
+          other	              -	      I-A1	      I-A1
+        Western	              -	      I-A1	      I-A1
+         troops	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+          Saudi	              -	      I-A1	      I-A1
+         Arabia	              -	      I-A1	      E-A1
+           with	              -	      I-A1	      B-A2
+           Arab	              -	      I-A1	      I-A2
+         forces	              -	      E-A1	      E-A2
+              .	              -	         O	         O
+
+            The	              -	      B-A0	         O
+           Bush	              -	      I-A0	         O
+ administration	              -	      E-A0	         O
+    immediately	              -	  S-AM-TMP	         O
+           said	           said	       S-V	         O
+             it	              -	      B-A1	      S-A0
+  categorically	              -	      I-A1	  S-AM-MNR
+        rejects	        rejects	      I-A1	       S-V
+            the	              -	      I-A1	      B-A1
+      proposals	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+            And	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+      President	              -	      B-A0	         O	         O	         O	         O	         O	         O	         O	         O
+           Bush	              -	      E-A0	         O	         O	         O	         O	         O	         O	         O	         O
+      yesterday	              -	  S-AM-TMP	         O	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+          asked	          asked	       S-V	         O	         O	         O	  B-AM-ADV	         O	         O	         O	         O
+        whether	              -	      B-A1	         O	         O	         O	  I-AM-ADV	         O	         O	         O	         O
+             he	              -	      I-A1	      S-A1	         O	      B-A0	  I-AM-ADV	         O	         O	         O	         O
+            was	            was	      I-A1	       S-V	         O	      I-A0	  I-AM-ADV	         O	         O	         O	         O
+             at	              -	      I-A1	         O	         O	      I-A0	  I-AM-ADV	         O	         O	         O	         O
+          least	              -	      I-A1	         O	         O	      I-A0	  I-AM-ADV	         O	         O	         O	         O
+           glad	              -	      I-A1	         O	         O	      I-A0	  I-AM-ADV	         O	         O	         O	         O
+           Iraq	              -	      I-A1	         O	      S-A1	      E-A0	  I-AM-ADV	         O	         O	         O	         O
+             is	             is	      I-A1	         O	       S-V	         O	  I-AM-ADV	         O	         O	         O	         O
+     discussing	     discussing	      I-A1	         O	    B-C-A1	       S-V	  I-AM-ADV	         O	         O	         O	         O
+   negotiations	              -	      E-A1	         O	    E-C-A1	      S-A1	  E-AM-ADV	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+        replied	        replied	         O	         O	         O	         O	       S-V	         O	         O	         O	         O
+              :	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+              I	              -	         O	         O	         O	         O	         O	      S-A0	      S-A0	         O	         O
+             do	             do	         O	         O	         O	         O	         O	       S-V	         O	         O	         O
+            n't	              -	         O	         O	         O	         O	         O	  S-AM-NEG	  S-AM-NEG	         O	         O
+            see	            see	         O	         O	         O	         O	         O	  B-AM-PNC	       S-V	         O	         O
+       anything	              -	         O	         O	         O	         O	         O	  I-AM-PNC	      B-A1	      S-A1	      S-A1
+             to	              -	         O	         O	         O	         O	         O	  I-AM-PNC	      I-A1	         O	         O
+             be	             be	         O	         O	         O	         O	         O	  I-AM-PNC	      I-A1	       S-V	         O
+       pleasing	       pleasing	         O	         O	         O	         O	         O	  I-AM-PNC	      I-A1	         O	       S-V
+             in	              -	         O	         O	         O	         O	         O	  I-AM-PNC	      I-A1	         O	  B-AM-LOC
+          there	              -	         O	         O	         O	         O	         O	  I-AM-PNC	      I-A1	         O	  E-AM-LOC
+             at	              -	         O	         O	         O	         O	         O	  I-AM-PNC	      I-A1	         O	  B-AM-ADV
+            all	              -	         O	         O	         O	         O	         O	  E-AM-PNC	      E-A1	         O	  E-AM-ADV
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+       American	              -	      B-A1	      B-A0	         O	         O	         O	         O	         O
+    strategists	              -	      E-A1	      E-A0	         O	         O	         O	         O	         O
+            are	            are	       S-V	         O	         O	         O	         O	         O	         O
+    calculating	    calculating	    S-C-A1	       S-V	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+         though	              -	  B-AM-ADV	         O	         O	  B-AM-ADV	         O	         O	         O
+              ,	              -	  I-AM-ADV	         O	         O	  I-AM-ADV	         O	         O	         O
+           that	              -	  I-AM-ADV	      B-A1	         O	  I-AM-ADV	         O	         O	         O
+            the	              -	  I-AM-ADV	      I-A1	      B-A1	  I-AM-ADV	      B-A0	         O	         O
+          trade	              -	  I-AM-ADV	      I-A1	      I-A1	  I-AM-ADV	      I-A0	         O	         O
+      sanctions	              -	  I-AM-ADV	      I-A1	      E-A1	  I-AM-ADV	      I-A0	         O	         O
+             --	              -	  I-AM-ADV	      I-A1	         O	  I-AM-ADV	      I-A0	         O	         O
+       enforced	       enforced	  I-AM-ADV	      I-A1	       S-V	  I-AM-ADV	      I-A0	         O	         O
+             by	              -	  I-AM-ADV	      I-A1	         O	  I-AM-ADV	      I-A0	         O	         O
+             an	              -	  I-AM-ADV	      I-A1	         O	  I-AM-ADV	      I-A0	         O	         O
+      effective	              -	  I-AM-ADV	      I-A1	         O	  I-AM-ADV	      I-A0	         O	         O
+         though	              -	  I-AM-ADV	      I-A1	         O	  I-AM-ADV	      I-A0	         O	         O
+        perhaps	              -	  I-AM-ADV	      I-A1	         O	  I-AM-ADV	      I-A0	         O	         O
+     undeclared	              -	  I-AM-ADV	      I-A1	         O	  I-AM-ADV	      I-A0	         O	         O
+          naval	              -	  I-AM-ADV	      I-A1	         O	  I-AM-ADV	      I-A0	         O	         O
+       blockade	              -	  I-AM-ADV	      E-A1	         O	  E-AM-ADV	      I-A0	         O	         O
+             --	              -	  I-AM-ADV	         O	         O	         O	      E-A0	         O	         O
+           will	              -	  I-AM-ADV	         O	         O	  S-AM-MOD	         O	         O	         O
+           hold	           hold	  I-AM-ADV	         O	         O	       S-V	         O	         O	         O
+        tightly	              -	  I-AM-ADV	         O	         O	      B-A1	         O	         O	         O
+         enough	              -	  I-AM-ADV	         O	         O	      I-A1	         O	         O	         O
+             to	              -	  I-AM-ADV	         O	         O	      I-A1	         O	         O	         O
+       convince	       convince	  I-AM-ADV	         O	         O	      I-A1	       S-V	         O	         O
+           Iraq	              -	  I-AM-ADV	         O	         O	      I-A1	      S-A1	      S-A1	         O
+           that	              -	  I-AM-ADV	         O	         O	      I-A1	      B-A2	    S-R-A1	         O
+             it	              -	  I-AM-ADV	         O	         O	      I-A1	      I-A2	      S-A0	         O
+           will	              -	  I-AM-ADV	         O	         O	      I-A1	      I-A2	  S-AM-MOD	         O
+           lose	           lose	  I-AM-ADV	         O	         O	      I-A1	      I-A2	       S-V	         O
+             in	              -	  I-AM-ADV	         O	         O	      I-A1	      I-A2	  B-AM-TMP	         O
+            the	              -	  I-AM-ADV	         O	         O	      I-A1	      I-A2	  I-AM-TMP	         O
+           long	              -	  I-AM-ADV	         O	         O	      I-A1	      I-A2	  I-AM-TMP	         O
+            run	              -	  I-AM-ADV	         O	         O	      I-A1	      I-A2	  E-AM-TMP	         O
+             by	              -	  I-AM-ADV	         O	         O	      I-A1	      I-A2	  B-AM-MNR	         O
+         simply	              -	  I-AM-ADV	         O	         O	      I-A1	      I-A2	  I-AM-MNR	  S-AM-ADV
+       standing	       standing	  I-AM-ADV	         O	         O	      I-A1	      I-A2	  I-AM-MNR	       S-V
+            pat	              -	  E-AM-ADV	         O	         O	      E-A1	      E-A2	  E-AM-MNR	      S-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+             At	              -	         O	         O	  B-AM-TMP	         O	         O	         O
+           that	              -	         O	         O	  I-AM-TMP	         O	         O	         O
+          point	              -	         O	         O	  I-AM-TMP	         O	         O	         O
+              ,	              -	         O	         O	  I-AM-TMP	         O	         O	         O
+         rather	              -	         O	         O	  I-AM-TMP	         O	         O	         O
+           than	              -	         O	         O	  I-AM-TMP	         O	         O	         O
+             go	             go	       S-V	         O	  I-AM-TMP	         O	         O	         O
+        through	              -	      B-A1	         O	  I-AM-TMP	         O	         O	         O
+            the	              -	      I-A1	         O	  I-AM-TMP	         O	         O	         O
+    humiliation	              -	      I-A1	         O	  I-AM-TMP	         O	         O	         O
+             of	              -	      I-A1	         O	  I-AM-TMP	         O	         O	         O
+        backing	        backing	      I-A1	       S-V	  I-AM-TMP	         O	         O	         O
+            out	              -	      I-A1	         O	  I-AM-TMP	         O	         O	         O
+             of	              -	      I-A1	      B-A1	  I-AM-TMP	         O	         O	         O
+         Kuwait	              -	      E-A1	      E-A1	  E-AM-TMP	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+            the	              -	         O	      B-A0	      B-A0	         O	         O	         O
+         Iraqis	              -	         O	      E-A0	      E-A0	         O	         O	         O
+          might	              -	         O	         O	  S-AM-MOD	         O	         O	         O
+           well	              -	         O	         O	  S-AM-MNR	         O	         O	         O
+       conclude	       conclude	         O	         O	       S-V	         O	         O	         O
+           that	              -	         O	         O	      B-A1	         O	         O	         O
+           they	              -	         O	         O	      I-A1	      S-A0	      S-A0	      S-A0
+           need	           need	         O	         O	      I-A1	       S-V	         O	         O
+             to	              -	         O	         O	      I-A1	      B-A1	         O	         O
+           lash	           lash	         O	         O	      I-A1	      I-A1	       S-V	         O
+            out	              -	         O	         O	      I-A1	      I-A1	  S-AM-DIR	         O
+             in	              -	         O	         O	      I-A1	      I-A1	  B-AM-MNR	         O
+           some	              -	         O	         O	      I-A1	      I-A1	  I-AM-MNR	         O
+            way	              -	         O	         O	      I-A1	      I-A1	  E-AM-MNR	         O
+             to	              -	         O	         O	      I-A1	      I-A1	  B-AM-PNC	         O
+          shake	          shake	         O	         O	      I-A1	      I-A1	  I-AM-PNC	       S-V
+         things	              -	         O	         O	      I-A1	      I-A1	  I-AM-PNC	      B-A1
+             up	              -	         O	         O	      E-A1	      E-A1	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+             In	              -	  B-AM-LOC	         O
+           that	              -	  I-AM-LOC	         O
+          event	              -	  E-AM-LOC	         O
+              ,	              -	         O	         O
+         Saddam	              -	      B-A1	      B-A0
+        Hussein	              -	      E-A1	      E-A0
+        appears	        appears	       S-V	         O
+             to	              -	    B-C-A1	         O
+           have	           have	    I-C-A1	       S-V
+          three	              -	    I-C-A1	      B-A1
+        choices	              -	    E-C-A1	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A1	      B-A0	         O	         O	         O
+          first	              -	      E-A1	      E-A0	         O	         O	         O
+          would	              -	  S-AM-MOD	         O	         O	         O	         O
+             be	             be	       S-V	         O	         O	         O	         O
+             to	              -	         O	         O	         O	         O	         O
+         launch	         launch	         O	       S-V	         O	         O	         O
+            the	              -	         O	      B-A1	         O	         O	         O
+    much-feared	              -	         O	      I-A1	         O	         O	         O
+         direct	              -	         O	      I-A1	         O	         O	         O
+       invasion	              -	         O	      I-A1	         O	         O	         O
+             of	              -	         O	      I-A1	         O	         O	         O
+          Saudi	              -	         O	      I-A1	      B-A0	      B-A0	         O
+         Arabia	              -	         O	      E-A1	      E-A0	      E-A0	         O
+              ,	              -	         O	         O	         O	         O	         O
+         hoping	         hoping	  B-AM-ADV	  B-AM-ADV	       S-V	         O	         O
+             to	              -	  I-AM-ADV	  I-AM-ADV	      B-A1	         O	         O
+          seize	          seize	  I-AM-ADV	  I-AM-ADV	      I-A1	       S-V	         O
+           some	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	      B-A1	         O
+          Saudi	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O
+            oil	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O
+         fields	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	      E-A1	         O
+            and	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	         O	         O
+        improve	        improve	  I-AM-ADV	  I-AM-ADV	      I-A1	         O	       S-V
+            his	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	         O	      B-A1
+     bargaining	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	         O	      I-A1
+       position	              -	  E-AM-ADV	  E-AM-ADV	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            But	              -	  S-AM-DIS	         O	         O	         O
+           that	              -	      B-A1	      B-A1	         O	         O
+         option	              -	      E-A1	      E-A1	         O	         O
+             is	             is	       S-V	         O	         O	         O
+        growing	        growing	    B-C-A1	       S-V	         O	         O
+           less	              -	    I-C-A1	  B-AM-TMP	         O	         O
+            and	              -	    I-C-A1	  I-AM-TMP	         O	         O
+           less	              -	    I-C-A1	  I-AM-TMP	         O	         O
+         likely	              -	    E-C-A1	  I-AM-TMP	         O	         O
+             as	              -	  B-AM-TMP	  I-AM-TMP	         O	         O
+      thousands	              -	  I-AM-TMP	  I-AM-TMP	      B-A0	      B-A0
+             of	              -	  I-AM-TMP	  I-AM-TMP	      I-A0	      I-A0
+       American	              -	  I-AM-TMP	  I-AM-TMP	      I-A0	      I-A0
+              ,	              -	  I-AM-TMP	  I-AM-TMP	      I-A0	      I-A0
+        British	              -	  I-AM-TMP	  I-AM-TMP	      I-A0	      I-A0
+              ,	              -	  I-AM-TMP	  I-AM-TMP	      I-A0	      I-A0
+       Egyptian	              -	  I-AM-TMP	  I-AM-TMP	      I-A0	      I-A0
+              ,	              -	  I-AM-TMP	  I-AM-TMP	      I-A0	      I-A0
+         Syrian	              -	  I-AM-TMP	  I-AM-TMP	      I-A0	      I-A0
+            and	              -	  I-AM-TMP	  I-AM-TMP	      I-A0	      I-A0
+       Moroccan	              -	  I-AM-TMP	  I-AM-TMP	      I-A0	      I-A0
+         forces	              -	  I-AM-TMP	  I-AM-TMP	      E-A0	      E-A0
+       assemble	       assemble	  I-AM-TMP	  I-AM-TMP	       S-V	         O
+             in	              -	  I-AM-TMP	  I-AM-TMP	  B-AM-LOC	         O
+            and	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-LOC	         O
+         around	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-LOC	         O
+          Saudi	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-LOC	         O
+         Arabia	              -	  I-AM-TMP	  I-AM-TMP	  E-AM-LOC	         O
+             to	              -	  I-AM-TMP	  I-AM-TMP	  B-AM-PNC	         O
+        protect	        protect	  I-AM-TMP	  I-AM-TMP	  I-AM-PNC	       S-V
+            the	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-PNC	      B-A1
+        kingdom	              -	  E-AM-TMP	  E-AM-TMP	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	      B-A1
+         Saudis	              -	      E-A0	         O	         O	      I-A1
+           even	              -	  S-AM-ADV	         O	         O	      I-A1
+           have	           have	       S-V	         O	         O	      I-A1
+             in	              -	      B-A1	         O	         O	      I-A1
+          their	              -	      I-A1	         O	         O	      I-A1
+     possession	              -	      I-A1	         O	         O	      I-A1
+             48	              -	      I-A1	         O	         O	      I-A1
+        Kuwaiti	              -	      I-A1	         O	         O	      I-A1
+            jet	              -	      I-A1	         O	         O	      I-A1
+       fighters	              -	      I-A1	         O	         O	      I-A1
+              ,	              -	      I-A1	         O	         O	      I-A1
+      virtually	              -	      I-A1	      B-A0	      B-A0	      I-A1
+            the	              -	      I-A1	      I-A0	      I-A0	      I-A1
+         entire	              -	      I-A1	      I-A0	      I-A0	      I-A1
+        Kuwaiti	              -	      I-A1	      I-A0	      I-A0	      I-A1
+            air	              -	      I-A1	      I-A0	      I-A0	      I-A1
+          force	              -	      I-A1	      E-A0	      E-A0	      I-A1
+              ,	              -	      I-A1	         O	         O	      I-A1
+          which	              -	      I-A1	    S-R-A0	    S-R-A0	      I-A1
+        managed	        managed	      I-A1	       S-V	         O	      I-A1
+             to	              -	      I-A1	      B-A1	         O	      I-A1
+         escape	         escape	      I-A1	      I-A1	       S-V	      I-A1
+            the	              -	      I-A1	      I-A1	      B-A1	      I-A1
+          Iraqi	              -	      I-A1	      I-A1	      I-A1	      I-A1
+       invasion	              -	      E-A1	      E-A1	      E-A1	      E-A1
+              ,	              -	         O	         O	         O	         O
+          Saudi	              -	         O	         O	         O	      B-A0
+      officials	              -	         O	         O	         O	      E-A0
+           said	           said	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A1
+          Saudi	              -	      I-A1	      I-A1	      I-A1
+         window	              -	      I-A1	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+  vulnerability	              -	      E-A1	      E-A1	      I-A1
+            ...	              -	         O	         O	      I-A1
+             is	             is	       S-V	         O	      I-A1
+        closing	        closing	    B-C-A1	       S-V	      I-A1
+           very	              -	    I-C-A1	  B-AM-MNR	      I-A1
+           fast	              -	    I-C-A1	  E-AM-MNR	      E-A1
+              ,	              -	    I-C-A1	         O	         O
+         Prince	              -	    I-C-A1	      B-A0	      B-A0
+         Bandar	              -	    I-C-A1	      I-A0	      I-A0
+            bin	              -	    I-C-A1	      I-A0	      I-A0
+         Sultan	              -	    I-C-A1	      I-A0	      I-A0
+              ,	              -	    I-C-A1	      I-A0	      I-A0
+            the	              -	    I-C-A1	      I-A0	      I-A0
+          Saudi	              -	    I-C-A1	      I-A0	      I-A0
+     ambassador	              -	    I-C-A1	      I-A0	      I-A0
+             to	              -	    I-C-A1	      I-A0	      I-A0
+     Washington	              -	    E-C-A1	      I-A0	      I-A0
+              ,	              -	         O	      E-A0	      E-A0
+           said	           said	         O	         O	       S-V
+           over	              -	         O	         O	  B-AM-TMP
+            the	              -	         O	         O	  I-AM-TMP
+        weekend	              -	         O	         O	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	         O	         O	         O
+         second	              -	      I-A1	         O	         O	         O
+    possibility	              -	      E-A1	         O	         O	         O
+          would	              -	  S-AM-MOD	         O	         O	         O
+             be	             be	       S-V	         O	         O	         O
+             to	              -	    B-C-A1	         O	         O	         O
+          start	          start	    I-C-A1	       S-V	         O	         O
+              a	              -	    I-C-A1	      B-A1	         O	         O
+          fight	              -	    I-C-A1	      I-A1	         O	         O
+           with	              -	    I-C-A1	      I-A1	         O	         O
+         Israel	              -	    E-C-A1	      E-A1	         O	         O
+              ,	              -	         O	         O	         O	         O
+             in	              -	  B-AM-ADV	         O	         O	         O
+          hopes	              -	  I-AM-ADV	         O	         O	         O
+           that	              -	  I-AM-ADV	         O	         O	         O
+            all	              -	  I-AM-ADV	         O	         O	      B-A1
+          Arabs	              -	  I-AM-ADV	         O	         O	      E-A1
+          would	              -	  I-AM-ADV	         O	  S-AM-MOD	         O
+           have	           have	  I-AM-ADV	         O	       S-V	  S-AM-MOD
+             to	              -	  I-AM-ADV	         O	         O	         O
+           move	           move	  I-AM-ADV	         O	         O	       S-V
+         behind	              -	  I-AM-ADV	         O	         O	  B-AM-LOC
+           Iraq	              -	  I-AM-ADV	         O	         O	  E-AM-LOC
+             in	              -	  I-AM-ADV	         O	         O	  B-AM-MNR
+              a	              -	  I-AM-ADV	         O	         O	  I-AM-MNR
+          fight	              -	  I-AM-ADV	         O	         O	  I-AM-MNR
+        against	              -	  I-AM-ADV	         O	         O	  I-AM-MNR
+          their	              -	  I-AM-ADV	         O	         O	  I-AM-MNR
+         common	              -	  I-AM-ADV	         O	         O	  I-AM-MNR
+        Israeli	              -	  I-AM-ADV	         O	         O	  I-AM-MNR
+          enemy	              -	  E-AM-ADV	         O	         O	  E-AM-MNR
+              .	              -	         O	         O	         O	         O
+
+             In	              -	  B-AM-LOC	  B-AM-LOC	         O
+           such	              -	  I-AM-LOC	  I-AM-LOC	         O
+             an	              -	  I-AM-LOC	  I-AM-LOC	         O
+          event	              -	  E-AM-LOC	  E-AM-LOC	         O
+              ,	              -	         O	         O	         O
+         Saddam	              -	      B-A0	      B-A1	         O
+        Hussein	              -	      E-A0	      I-A1	         O
+           also	              -	  S-AM-DIS	      I-A1	         O
+          might	              -	  S-AM-MOD	      I-A1	         O
+      calculate	      calculate	       S-V	      E-A1	         O
+              ,	              -	         O	         O	         O
+            the	              -	      B-A1	      B-A1	      B-A0
+         Saudis	              -	      I-A1	      E-A1	      E-A0
+          would	              -	      I-A1	  S-AM-MOD	         O
+             be	             be	      I-A1	       S-V	         O
+          under	              -	      I-A1	  B-AM-CAU	         O
+       pressure	              -	      I-A1	  I-AM-CAU	         O
+             to	              -	      I-A1	  I-AM-CAU	         O
+           kick	           kick	      I-A1	  I-AM-CAU	       B-V
+            out	              -	      I-A1	  I-AM-CAU	       E-V
+           U.S.	              -	      I-A1	  I-AM-CAU	      B-A1
+         troops	              -	      I-A1	  I-AM-CAU	      E-A1
+        because	              -	      I-A1	  I-AM-CAU	         O
+             of	              -	      I-A1	  I-AM-CAU	         O
+        America	              -	      I-A1	  I-AM-CAU	         O
+             's	              -	      I-A1	  I-AM-CAU	         O
+          close	              -	      I-A1	  I-AM-CAU	         O
+           ties	              -	      I-A1	  I-AM-CAU	         O
+           with	              -	      I-A1	  I-AM-CAU	         O
+         Israel	              -	      E-A1	  E-AM-CAU	         O
+              .	              -	         O	         O	         O
+
+           Iraq	              -	      S-A0	      S-A0
+          could	              -	  S-AM-MOD	         O
+          start	          start	       S-V	         O
+    hostilities	              -	      B-A1	         O
+           with	              -	      I-A1	         O
+         Israel	              -	      E-A1	         O
+         either	              -	  B-AM-MNR	         O
+        through	              -	  I-AM-MNR	         O
+              a	              -	  I-AM-MNR	         O
+         direct	              -	  I-AM-MNR	         O
+         attack	              -	  I-AM-MNR	         O
+             or	              -	  I-AM-MNR	         O
+             by	              -	  I-AM-MNR	         O
+      attacking	      attacking	  I-AM-MNR	       S-V
+         Jordan	              -	  E-AM-MNR	      S-A1
+              .	              -	         O	         O
+
+         Israel	              -	      S-A0	      S-A0	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O
+       publicly	              -	      B-A1	  S-AM-MNR	         O	         O	         O
+       declared	       declared	      I-A1	       S-V	         O	         O	         O
+           that	              -	      I-A1	      B-A1	         O	         O	         O
+             it	              -	      I-A1	      I-A1	      S-A0	         O	         O
+           will	              -	      I-A1	      I-A1	  S-AM-MOD	         O	         O
+        respond	        respond	      I-A1	      I-A1	       S-V	         O	         O
+             to	              -	      I-A1	      I-A1	      B-A1	         O	         O
+             an	              -	      I-A1	      I-A1	      I-A1	         O	         O
+          Iraqi	              -	      I-A1	      I-A1	      I-A1	         O	         O
+         attack	              -	      I-A1	      I-A1	      I-A1	         O	         O
+             on	              -	      I-A1	      I-A1	      I-A1	         O	         O
+         Jordan	              -	      I-A1	      E-A1	      E-A1	         O	         O
+        because	              -	      I-A1	  B-AM-CAU	  B-AM-CAU	         O	         O
+             it	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      S-A0	         O
+             wo	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	  S-AM-MOD	         O
+            n't	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	  S-AM-NEG	         O
+          allow	          allow	      I-A1	  I-AM-CAU	  I-AM-CAU	       S-V	         O
+           Iraq	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      B-A1	      B-A0
+             's	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A0
+      dangerous	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A0
+           army	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      E-A0
+             to	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	         O
+           take	           take	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	       S-V
+        control	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      B-A1
+             of	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1
+         Jordan	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1
+             's	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1
+           long	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1
+         border	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1
+           with	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	      I-A1	      I-A1
+         Israel	              -	      E-A1	  E-AM-CAU	  E-AM-CAU	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+           Iraq	              -	      B-A1	      B-A0
+             's	              -	      I-A1	      I-A0
+          third	              -	      I-A1	      I-A0
+         attack	              -	      I-A1	      I-A0
+         option	              -	      E-A1	      E-A0
+          would	              -	  S-AM-MOD	         O
+             be	             be	       S-V	         O
+             to	              -	    B-C-A1	         O
+          start	          start	    I-C-A1	       S-V
+             an	              -	    I-C-A1	      B-A1
+     undeclared	              -	    I-C-A1	      I-A1
+            war	              -	    I-C-A1	      I-A1
+             on	              -	    I-C-A1	      I-A1
+            the	              -	    I-C-A1	      I-A1
+           U.S.	              -	    I-C-A1	      I-A1
+            and	              -	    I-C-A1	      I-A1
+          other	              -	    I-C-A1	      I-A1
+        Western	              -	    I-C-A1	      I-A1
+        nations	              -	    I-C-A1	      I-A1
+        through	              -	    I-C-A1	      I-A1
+      terrorism	              -	    E-C-A1	      E-A1
+              .	              -	         O	         O
+
+            Two	              -	      B-A0
+         Middle	              -	      I-A0
+           East	              -	      I-A0
+     terrorists	              -	      I-A0
+           with	              -	      I-A0
+        records	              -	      I-A0
+             of	              -	      I-A0
+     successful	              -	      I-A0
+        attacks	              -	      I-A0
+        against	              -	      I-A0
+        Western	              -	      I-A0
+        targets	              -	      I-A0
+              ,	              -	      I-A0
+            Abu	              -	      I-A0
+          Nidal	              -	      I-A0
+            and	              -	      I-A0
+            Abu	              -	      I-A0
+          Abbas	              -	      I-A0
+              ,	              -	      E-A0
+           have	           have	       S-V
+           ties	              -	      B-A1
+             to	              -	      I-A1
+        Baghdad	              -	      E-A1
+              .	              -	         O
+
+            And	              -	         O	  S-AM-DIS	         O	         O	         O
+           even	              -	      B-A0	      B-A0	         O	         O	         O
+      terrorist	              -	      I-A0	      I-A0	         O	         O	         O
+         groups	              -	      E-A0	      I-A0	         O	         O	         O
+           that	              -	    S-R-A0	      I-A0	         O	         O	         O
+        opposed	        opposed	       S-V	      I-A0	         O	         O	         O
+           Iraq	              -	      S-A1	      I-A0	         O	         O	         O
+             in	              -	  B-AM-LOC	      I-A0	         O	         O	         O
+            its	              -	  I-AM-LOC	      I-A0	         O	         O	         O
+            war	              -	  I-AM-LOC	      I-A0	         O	         O	         O
+           with	              -	  I-AM-LOC	      I-A0	         O	         O	         O
+           Iran	              -	  E-AM-LOC	      E-A0	         O	         O	         O
+           show	           show	         O	       S-V	         O	         O	         O
+          signs	              -	         O	      B-A1	         O	         O	         O
+             of	              -	         O	      I-A1	         O	         O	         O
+       swinging	       swinging	         O	      I-A1	       S-V	         O	         O
+         behind	              -	         O	      I-A1	  B-AM-CAU	         O	         O
+         Saddam	              -	         O	      I-A1	  I-AM-CAU	         O	         O
+        Hussein	              -	         O	      I-A1	  I-AM-CAU	         O	         O
+            now	              -	         O	      I-A1	  I-AM-CAU	         O	         O
+           that	              -	         O	      I-A1	  I-AM-CAU	         O	         O
+             he	              -	         O	      I-A1	  I-AM-CAU	      S-A1	         O
+             is	             is	         O	      I-A1	  I-AM-CAU	       S-V	         O
+             in	              -	         O	      I-A1	  I-AM-CAU	  B-AM-LOC	         O
+              a	              -	         O	      I-A1	  I-AM-CAU	  I-AM-LOC	         O
+  confrontation	              -	         O	      I-A1	  I-AM-CAU	  I-AM-LOC	         O
+           with	              -	         O	      I-A1	  I-AM-CAU	  I-AM-LOC	         O
+            the	              -	         O	      I-A1	  I-AM-CAU	  I-AM-LOC	         O
+           U.S.	              -	         O	      I-A1	  I-AM-CAU	  E-AM-LOC	         O
+            And	              -	         O	      I-A1	  I-AM-CAU	         O	         O
+           Iraq	              -	         O	      I-A1	  I-AM-CAU	         O	      S-A0
+          still	              -	         O	      I-A1	  I-AM-CAU	         O	  S-AM-TMP
+            has	            has	         O	      I-A1	  I-AM-CAU	         O	       S-V
+      thousands	              -	         O	      I-A1	  I-AM-CAU	         O	      B-A1
+             of	              -	         O	      I-A1	  I-AM-CAU	         O	      I-A1
+      Americans	              -	         O	      I-A1	  I-AM-CAU	         O	      I-A1
+            and	              -	         O	      I-A1	  I-AM-CAU	         O	      I-A1
+          other	              -	         O	      I-A1	  I-AM-CAU	         O	      I-A1
+     Westerners	              -	         O	      I-A1	  I-AM-CAU	         O	      E-A1
+          under	              -	         O	      I-A1	  I-AM-CAU	         O	  B-AM-LOC
+            its	              -	         O	      I-A1	  I-AM-CAU	         O	  I-AM-LOC
+        control	              -	         O	      I-A1	  I-AM-CAU	         O	  I-AM-LOC
+             in	              -	         O	      I-A1	  I-AM-CAU	         O	  I-AM-LOC
+           Iraq	              -	         O	      I-A1	  I-AM-CAU	         O	  I-AM-LOC
+            and	              -	         O	      I-A1	  I-AM-CAU	         O	  I-AM-LOC
+         Kuwait	              -	         O	      E-A1	  E-AM-CAU	         O	  E-AM-LOC
+              .	              -	         O	         O	         O	         O	         O
+
+           They	              -	      S-A1	      S-A1	      S-A1	      S-A0	      S-A1
+            are	            are	       S-V	         O	         O	         O	         O
+            n't	              -	    B-C-A1	  S-AM-NEG	  S-AM-NEG	         O	         O
+          being	          being	    I-C-A1	       S-V	         O	         O	         O
+        allowed	        allowed	    I-C-A1	    B-C-A1	       S-V	         O	         O
+             to	              -	    I-C-A1	    I-C-A1	    B-C-A1	         O	         O
+          leave	          leave	    E-C-A1	    E-C-A1	    E-C-A1	       S-V	         O
+            and	              -	         O	         O	         O	         O	         O
+          could	              -	         O	         O	         O	         O	  S-AM-MOD
+         become	         become	         O	         O	         O	         O	       S-V
+       hostages	              -	         O	         O	         O	         O	      S-A2
+              .	              -	         O	         O	         O	         O	         O
+
+             If	              -	         O	  B-AM-ADV	  B-AM-ADV	         O	         O	         O	         O
+           Iraq	              -	      S-A0	  I-AM-ADV	  I-AM-ADV	         O	         O	         O	         O
+        chooses	        chooses	       S-V	  I-AM-ADV	  I-AM-ADV	         O	         O	         O	         O
+              a	              -	      B-A1	  I-AM-ADV	  I-AM-ADV	         O	         O	         O	         O
+         simple	              -	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	         O	         O	         O
+            war	              -	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	         O	         O	         O
+             of	              -	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	         O	         O	         O
+         nerves	              -	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	         O	         O	         O
+            and	              -	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	         O	         O	         O
+       economic	              -	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	         O	         O	         O
+      attrition	              -	      E-A1	  E-AM-ADV	  E-AM-ADV	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+            the	              -	         O	      B-A0	         O	         O	         O	         O	         O
+           Bush	              -	         O	      I-A0	         O	         O	         O	         O	         O
+ administration	              -	         O	      E-A0	         O	         O	         O	         O	         O
+          knows	          knows	         O	       S-V	         O	         O	         O	         O	         O
+              a	              -	         O	      B-A1	      B-A0	         O	         O	         O	         O
+           long	              -	         O	      I-A1	      I-A0	         O	         O	         O	         O
+      stalemate	              -	         O	      I-A1	      E-A0	         O	         O	         O	         O
+          could	              -	         O	      I-A1	  S-AM-MOD	         O	         O	         O	         O
+            try	            try	         O	      I-A1	       S-V	         O	         O	         O	         O
+            the	              -	         O	      I-A1	      B-A1	         O	         O	         O	         O
+       patience	              -	         O	      I-A1	      I-A1	         O	         O	         O	         O
+             of	              -	         O	      I-A1	      I-A1	         O	         O	         O	         O
+            the	              -	         O	      I-A1	      I-A1	         O	         O	         O	         O
+       American	              -	         O	      I-A1	      I-A1	         O	         O	         O	         O
+         public	              -	         O	      I-A1	      I-A1	         O	         O	         O	         O
+            and	              -	         O	      I-A1	      I-A1	         O	         O	         O	         O
+            the	              -	         O	      I-A1	      I-A1	         O	         O	         O	         O
+           West	              -	         O	      I-A1	      E-A1	         O	         O	         O	         O
+             in	              -	         O	      I-A1	      B-A2	         O	         O	         O	         O
+        general	              -	         O	      I-A1	      E-A2	         O	         O	         O	         O
+              ,	              -	         O	      I-A1	         O	         O	         O	         O	         O
+            and	              -	         O	      I-A1	         O	         O	         O	         O	         O
+          could	              -	         O	      I-A1	         O	  S-AM-MOD	         O	         O	         O
+           open	           open	         O	      I-A1	         O	       S-V	         O	         O	         O
+            the	              -	         O	      I-A1	         O	      B-A1	         O	         O	         O
+    possibility	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O
+           that	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O
+       moderate	              -	         O	      I-A1	         O	      I-A1	         O	      B-A1	         O
+          Arabs	              -	         O	      I-A1	         O	      I-A1	         O	      E-A1	         O
+             --	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O
+           even	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O
+      including	      including	         O	      I-A1	         O	      I-A1	       S-V	         O	         O
+          Saudi	              -	         O	      I-A1	         O	      I-A1	      B-A1	         O	         O
+         Arabia	              -	         O	      I-A1	         O	      I-A1	      E-A1	         O	         O
+             --	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O
+          might	              -	         O	      I-A1	         O	      I-A1	         O	  S-AM-MOD	         O
+           drop	           drop	         O	      I-A1	         O	      I-A1	         O	       S-V	         O
+            out	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O
+             of	              -	         O	      I-A1	         O	      I-A1	         O	      B-A2	         O
+            the	              -	         O	      I-A1	         O	      I-A1	         O	      I-A2	         O
+         effort	              -	         O	      I-A1	         O	      I-A1	         O	      I-A2	         O
+        against	              -	         O	      I-A1	         O	      I-A1	         O	      I-A2	         O
+           Iraq	              -	         O	      I-A1	         O	      I-A1	         O	      E-A2	         O
+            and	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O
+         accept	         accept	         O	      I-A1	         O	      I-A1	         O	         O	       S-V
+           some	              -	         O	      I-A1	         O	      I-A1	         O	         O	      B-A1
+           deal	              -	         O	      I-A1	         O	      I-A1	         O	         O	      E-A1
+           from	              -	         O	      I-A1	         O	      I-A1	         O	         O	      B-A2
+         Saddam	              -	         O	      I-A1	         O	      I-A1	         O	         O	      I-A2
+        Hussein	              -	         O	      E-A1	         O	      E-A1	         O	         O	      E-A2
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+            But	              -	  S-AM-DIS	  S-AM-DIS	         O
+           U.S.	              -	      B-A0	      B-A0	         O
+      officials	              -	      E-A0	      E-A0	         O
+           have	           have	       S-V	         O	         O
+          sized	          sized	      B-A1	       B-V	         O
+             up	              -	      I-A1	       E-V	         O
+         Saddam	              -	      I-A1	      B-A1	         O
+        Hussein	              -	      I-A1	      E-A1	         O
+             as	              -	      I-A1	      B-A3	         O
+              a	              -	      I-A1	      I-A3	         O
+            man	              -	      I-A1	      I-A3	         O
+            who	              -	      I-A1	      I-A3	         O
+              ,	              -	      I-A1	      E-A3	         O
+        despite	              -	      I-A1	  B-AM-ADV	  B-AM-ADV
+           some	              -	      I-A1	  I-AM-ADV	  I-AM-ADV
+   recklessness	              -	      I-A1	  I-AM-ADV	  E-AM-ADV
+              ,	              -	      I-A1	  I-AM-ADV	         O
+           will	              -	      I-A1	  I-AM-ADV	  S-AM-MOD
+           back	           back	      I-A1	  I-AM-ADV	       B-V
+           down	              -	      I-A1	  I-AM-ADV	       E-V
+             if	              -	      I-A1	  I-AM-ADV	  B-AM-ADV
+             he	              -	      I-A1	  I-AM-ADV	  I-AM-ADV
+           must	              -	      E-A1	  E-AM-ADV	  E-AM-ADV
+              .	              -	         O	         O	         O
+
+           This	              -	      S-A1	         O	      B-A0	         O	         O
+             is	             is	       S-V	         O	      I-A0	         O	         O
+              a	              -	      B-A1	      B-A1	      I-A0	         O	         O
+            guy	              -	      I-A1	      E-A1	      I-A0	         O	         O
+            who	              -	      I-A1	    S-R-A1	      I-A0	         O	         O
+             is	             is	      I-A1	       S-V	      I-A0	         O	         O
+      impulsive	              -	      I-A1	      S-A2	      I-A0	         O	         O
+              ,	              -	      I-A1	         O	      I-A0	         O	         O
+            and	              -	      I-A1	         O	      I-A0	         O	         O
+      therefore	              -	      I-A1	         O	      I-A0	         O	         O
+        capable	              -	      I-A1	         O	      I-A0	         O	         O
+             of	              -	      I-A1	         O	      I-A0	         O	         O
+            big	              -	      I-A1	         O	      I-A0	         O	         O
+miscalculations	              -	      E-A1	         O	      I-A0	         O	         O
+              ,	              -	         O	         O	      E-A0	         O	         O
+           says	           says	         O	         O	       S-V	         O	         O
+            one	              -	         O	         O	      B-A0	      B-A1	         O
+         senior	              -	         O	         O	      I-A0	      I-A1	         O
+ administration	              -	         O	         O	      I-A0	      I-A1	         O
+       official	              -	         O	         O	      I-A0	      E-A1	         O
+       involved	       involved	         O	         O	      I-A0	       S-V	         O
+             in	              -	         O	         O	      I-A0	      B-A2	         O
+       managing	       managing	         O	         O	      I-A0	      I-A2	       S-V
+            the	              -	         O	         O	      I-A0	      I-A2	      B-A1
+         crisis	              -	         O	         O	      E-A0	      E-A2	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O
+       official	              -	      E-A0	         O	         O	         O	         O
+           adds	           adds	       S-V	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+         though	              -	  S-AM-DIS	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O
+             at	              -	      I-A1	  B-AM-TMP	         O	         O	         O
+            the	              -	      I-A1	  I-AM-TMP	         O	         O	         O
+           same	              -	      I-A1	  I-AM-TMP	         O	         O	         O
+           time	              -	      I-A1	  E-AM-TMP	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+             we	              -	      I-A1	      S-A0	         O	         O	         O
+          think	          think	      I-A1	       S-V	         O	         O	         O
+             he	              -	      I-A1	      B-A1	      S-A0	         O	         O
+             is	             is	      I-A1	      I-A1	       S-V	         O	         O
+        someone	              -	      I-A1	      I-A1	      B-A1	      S-A1	         O
+            who	              -	      I-A1	      I-A1	      I-A1	    S-R-A1	         O
+             is	             is	      I-A1	      I-A1	      I-A1	       S-V	         O
+        capable	              -	      I-A1	      I-A1	      I-A1	  B-AM-MNR	         O
+             of	              -	      I-A1	      I-A1	      I-A1	  I-AM-MNR	         O
+       rational	              -	      I-A1	      I-A1	      I-A1	  I-AM-MNR	         O
+      judgments	              -	      I-A1	      I-A1	      I-A1	  E-AM-MNR	         O
+           when	              -	      I-A1	      I-A1	      I-A1	         O	         O
+             it	              -	      I-A1	      I-A1	      I-A1	         O	         O
+          comes	          comes	      I-A1	      I-A1	      I-A1	         O	       S-V
+             to	              -	      I-A1	      I-A1	      I-A1	         O	      B-A4
+          power	              -	      E-A1	      E-A1	      E-A1	         O	      E-A4
+              .	              -	         O	         O	         O	         O	         O
+
+            And	              -	         O	         O	         O
+           when	              -	S-R-AM-TMP	         O	         O
+             he	              -	      S-A0	         O	         O
+          finds	          finds	       S-V	         O	         O
+      something	              -	      B-A1	      S-A1	         O
+             is	             is	      I-A1	       S-V	         O
+   unprofitable	              -	      E-A1	      S-A1	         O
+              ,	              -	         O	         O	         O
+           then	              -	         O	         O	         O
+            one	              -	         O	         O	      S-A0
+            can	              -	         O	         O	  S-AM-MOD
+            see	            see	         O	         O	       S-V
+        certain	              -	         O	         O	      B-A1
+ accommodations	              -	         O	         O	      E-A1
+              .	              -	         O	         O	         O
+
+           Thus	              -	  S-AM-DIS	  S-AM-DIS	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+ administration	              -	      B-A1	      B-A0	      B-A0	         O	         O	         O	         O	         O	         O
+          aides	              -	      E-A1	      E-A0	      E-A0	         O	         O	         O	         O	         O	         O
+           will	              -	  S-AM-MOD	  S-AM-MOD	         O	         O	         O	         O	         O	         O	         O
+             be	             be	       S-V	         O	         O	         O	         O	         O	         O	         O	         O
+         trying	         trying	  B-AM-ADV	       S-V	         O	         O	         O	         O	         O	         O	         O
+             to	              -	  I-AM-ADV	      B-A1	         O	         O	         O	         O	         O	         O	         O
+      calculate	      calculate	  I-AM-ADV	      I-A1	       S-V	         O	         O	         O	         O	         O	         O
+        whether	              -	  I-AM-ADV	      I-A1	      B-A1	         O	         O	         O	         O	         O	         O
+         Saddam	              -	  I-AM-ADV	      I-A1	      I-A1	         O	      B-A1	      B-A0	         O	         O	         O
+        Hussein	              -	  I-AM-ADV	      I-A1	      I-A1	         O	      I-A1	      I-A0	         O	         O	         O
+             's	              -	  I-AM-ADV	      I-A1	      I-A1	         O	      E-A1	      I-A0	         O	         O	         O
+       proposed	       proposed	  I-AM-ADV	      I-A1	      I-A1	       S-V	         O	      I-A0	         O	         O	         O
+     diplomatic	              -	  I-AM-ADV	      I-A1	      I-A1	      B-A1	         O	      I-A0	         O	         O	         O
+        formula	              -	  I-AM-ADV	      I-A1	      I-A1	      E-A1	         O	      I-A0	         O	         O	         O
+            for	              -	  I-AM-ADV	      I-A1	      I-A1	         O	         O	      I-A0	         O	         O	         O
+        getting	        getting	  I-AM-ADV	      I-A1	      I-A1	         O	       S-V	      I-A0	         O	         O	         O
+            out	              -	  I-AM-ADV	      I-A1	      I-A1	         O	      B-A2	      I-A0	         O	         O	         O
+             of	              -	  I-AM-ADV	      I-A1	      I-A1	         O	      I-A2	      I-A0	         O	         O	         O
+         Kuwait	              -	  I-AM-ADV	      I-A1	      I-A1	         O	      E-A2	      E-A0	         O	         O	         O
+     represents	     represents	  I-AM-ADV	      I-A1	      I-A1	         O	         O	       S-V	         O	         O	         O
+            the	              -	  I-AM-ADV	      I-A1	      I-A1	         O	         O	      B-A1	         O	         O	         O
+          first	              -	  I-AM-ADV	      I-A1	      I-A1	         O	         O	      I-A1	         O	         O	         O
+           sign	              -	  I-AM-ADV	      I-A1	      I-A1	         O	         O	      I-A1	         O	         O	         O
+             he	              -	  I-AM-ADV	      I-A1	      I-A1	         O	         O	      I-A1	      S-A1	      S-A0	         O
+             is	             is	  I-AM-ADV	      I-A1	      I-A1	         O	         O	      I-A1	       S-V	         O	         O
+      searching	      searching	  I-AM-ADV	      I-A1	      I-A1	         O	         O	      I-A1	         O	       S-V	         O
+            for	              -	  I-AM-ADV	      I-A1	      I-A1	         O	         O	      I-A1	         O	      B-A1	         O
+              a	              -	  I-AM-ADV	      I-A1	      I-A1	         O	         O	      I-A1	         O	      I-A1	         O
+            way	              -	  I-AM-ADV	      I-A1	      I-A1	         O	         O	      I-A1	         O	      I-A1	         O
+            out	              -	  I-AM-ADV	      I-A1	      E-A1	         O	         O	      I-A1	         O	      E-A1	         O
+             or	              -	  I-AM-ADV	      I-A1	         O	         O	         O	      I-A1	         O	         O	         O
+         simply	              -	  I-AM-ADV	      I-A1	         O	         O	         O	      I-A1	         O	         O	  S-AM-ADV
+             is	             is	  I-AM-ADV	      I-A1	         O	         O	         O	      I-A1	         O	         O	       S-V
+              a	              -	  I-AM-ADV	      I-A1	         O	         O	         O	      I-A1	         O	         O	      B-A1
+         public	              -	  I-AM-ADV	      I-A1	         O	         O	         O	      I-A1	         O	         O	      I-A1
+      relations	              -	  I-AM-ADV	      I-A1	         O	         O	         O	      I-A1	         O	         O	      I-A1
+          stunt	              -	  E-AM-ADV	      E-A1	         O	         O	         O	      E-A1	         O	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+          There	              -	      S-A1	         O	         O	         O	         O	         O	         O
+            are	            are	       S-V	         O	         O	         O	         O	         O	         O
+  disagreements	              -	      B-A1	      B-A1	      B-A1	         O	         O	         O	         O
+          among	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+        experts	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+          about	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+            how	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+           much	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+       pressure	              -	      I-A1	      E-A1	      E-A1	         O	         O	         O	         O
+           will	              -	      I-A1	  S-AM-MOD	  S-AM-MOD	         O	         O	         O	         O
+             be	             be	      I-A1	       S-V	         O	         O	         O	         O	         O
+         needed	         needed	      I-A1	      B-A1	       S-V	         O	         O	         O	         O
+             to	              -	      I-A1	      I-A1	  B-AM-PNC	         O	         O	         O	         O
+           make	           make	      I-A1	      I-A1	  I-AM-PNC	       S-V	         O	         O	         O
+         Saddam	              -	      I-A1	      I-A1	  I-AM-PNC	      B-A1	      B-A0	         O	         O
+        Hussein	              -	      I-A1	      I-A1	  I-AM-PNC	      I-A1	      E-A0	         O	         O
+         decide	         decide	      I-A1	      I-A1	  I-AM-PNC	      I-A1	       S-V	         O	         O
+             he	              -	      I-A1	      I-A1	  I-AM-PNC	      I-A1	      B-A1	      S-A1	         O
+             's	             's	      I-A1	      I-A1	  I-AM-PNC	      I-A1	      I-A1	       B-V	         O
+             up	              -	      I-A1	      I-A1	  I-AM-PNC	      I-A1	      I-A1	       E-V	         O
+        against	              -	      I-A1	      I-A1	  I-AM-PNC	      I-A1	      I-A1	      B-A2	         O
+            the	              -	      I-A1	      I-A1	  I-AM-PNC	      I-A1	      I-A1	      I-A2	         O
+           wall	              -	      I-A1	      E-A1	  I-AM-PNC	      E-A1	      I-A1	      E-A2	         O
+            and	              -	      I-A1	         O	  I-AM-PNC	         O	      I-A1	         O	         O
+        whether	              -	      I-A1	         O	  I-AM-PNC	         O	      I-A1	         O	         O
+         simple	              -	      I-A1	         O	  I-AM-PNC	         O	      I-A1	         O	      B-A1
+       economic	              -	      I-A1	         O	  I-AM-PNC	         O	      I-A1	         O	      I-A1
+       pressure	              -	      I-A1	         O	  I-AM-PNC	         O	      I-A1	         O	      E-A1
+           will	              -	      I-A1	         O	  I-AM-PNC	         O	      I-A1	         O	  S-AM-MOD
+           ever	              -	      I-A1	         O	  I-AM-PNC	         O	      I-A1	         O	  S-AM-TMP
+             be	             be	      I-A1	         O	  I-AM-PNC	         O	      I-A1	         O	       S-V
+         enough	              -	      E-A1	         O	  E-AM-PNC	         O	      E-A1	         O	    S-C-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	         O	         O	         O	         O	         O
+        biggest	              -	      I-A1	         O	         O	         O	         O	         O
+          worry	              -	      E-A1	         O	         O	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O	         O
+             if	              -	      I-A1	         O	         O	  B-AM-ADV	         O	  B-AM-ADV
+             he	              -	      I-A1	      S-A0	         O	  I-AM-ADV	      S-A0	  I-AM-ADV
+        decides	        decides	      I-A1	       S-V	         O	  I-AM-ADV	         O	  I-AM-ADV
+             he	              -	      I-A1	      B-A1	      S-A0	  I-AM-ADV	      S-A0	  I-AM-ADV
+          needs	          needs	      I-A1	      I-A1	       S-V	  I-AM-ADV	         O	  I-AM-ADV
+              a	              -	      I-A1	      I-A1	      B-A1	  I-AM-ADV	         O	  I-AM-ADV
+            way	              -	      I-A1	      I-A1	      I-A1	  I-AM-ADV	         O	  I-AM-ADV
+            out	              -	      I-A1	      I-A1	      I-A1	  I-AM-ADV	         O	  I-AM-ADV
+             of	              -	      I-A1	      I-A1	      I-A1	  I-AM-ADV	         O	  I-AM-ADV
+            his	              -	      I-A1	      I-A1	      I-A1	  I-AM-ADV	         O	  I-AM-ADV
+    predicament	              -	      I-A1	      E-A1	      E-A1	  E-AM-ADV	         O	  I-AM-ADV
+            but	              -	      I-A1	         O	         O	  S-AM-DIS	         O	  I-AM-ADV
+           does	           does	      I-A1	         O	         O	       S-V	         O	  I-AM-ADV
+            n't	              -	      I-A1	         O	         O	      B-A1	  S-AM-NEG	  I-AM-ADV
+            see	            see	      I-A1	         O	         O	      I-A1	       S-V	  I-AM-ADV
+              a	              -	      I-A1	         O	         O	      I-A1	      B-A1	  I-AM-ADV
+    face-saving	              -	      I-A1	         O	         O	      I-A1	      I-A1	  I-AM-ADV
+         method	              -	      I-A1	         O	         O	      E-A1	      E-A1	  E-AM-ADV
+              ,	              -	      I-A1	         O	         O	         O	         O	         O
+             he	              -	      I-A1	         O	         O	         O	         O	      S-A0
+          could	              -	      I-A1	         O	         O	         O	         O	  S-AM-MOD
+           lash	           lash	      I-A1	         O	         O	         O	         O	       B-V
+            out	              -	      I-A1	         O	         O	         O	         O	       E-V
+             in	              -	      I-A1	         O	         O	         O	         O	  B-AM-MNR
+      dangerous	              -	      I-A1	         O	         O	         O	         O	  I-AM-MNR
+            and	              -	      I-A1	         O	         O	         O	         O	  I-AM-MNR
+  unpredictable	              -	      I-A1	         O	         O	         O	         O	  I-AM-MNR
+           ways	              -	      E-A1	         O	         O	         O	         O	  E-AM-MNR
+              .	              -	         O	         O	         O	         O	         O	         O
+
+           U.S.	              -	      B-A0	         O	         O	         O
+      officials	              -	      E-A0	         O	         O	         O
+          claim	          claim	       S-V	         O	         O	         O
+           they	              -	      B-A1	      S-A0	         O	         O
+        already	              -	      I-A1	  S-AM-TMP	         O	         O
+            see	            see	      I-A1	       S-V	         O	         O
+          signs	              -	      I-A1	      B-A1	      B-A1	      S-A1
+         Saddam	              -	      I-A1	      I-A1	      I-A1	      B-A0
+        Hussein	              -	      I-A1	      I-A1	      E-A1	      E-A0
+             is	             is	      I-A1	      I-A1	       S-V	         O
+        getting	        getting	      I-A1	      I-A1	    B-C-A1	       S-V
+        nervous	              -	      E-A1	      E-A1	    E-C-A1	      S-A2
+              .	              -	         O	         O	         O	         O
+
+             In	              -	         O	      B-A1	  B-AM-TMP	         O	         O
+            the	              -	         O	      I-A1	  I-AM-TMP	         O	         O
+          first	              -	         O	      I-A1	  I-AM-TMP	         O	         O
+           days	              -	         O	      I-A1	  I-AM-TMP	         O	         O
+          after	              -	         O	      I-A1	  I-AM-TMP	         O	         O
+      President	              -	      B-A0	      I-A1	  I-AM-TMP	         O	         O
+           Bush	              -	      E-A0	      I-A1	  I-AM-TMP	         O	         O
+      announced	      announced	       S-V	      I-A1	  I-AM-TMP	         O	         O
+            the	              -	      B-A1	      I-A1	  I-AM-TMP	         O	         O
+    dispatching	              -	      I-A1	      I-A1	  I-AM-TMP	         O	         O
+             of	              -	      I-A1	      I-A1	  I-AM-TMP	         O	         O
+           U.S.	              -	      I-A1	      I-A1	  I-AM-TMP	         O	         O
+         troops	              -	      E-A1	      E-A1	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+           they	              -	         O	      S-A0	         O	         O	         O
+           note	           note	         O	       S-V	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            the	              -	         O	    B-C-A1	      B-A0	      B-A0	         O
+          Iraqi	              -	         O	    I-C-A1	      I-A0	      I-A0	         O
+         leader	              -	         O	    I-C-A1	      E-A0	      E-A0	         O
+           made	           made	         O	    I-C-A1	       S-V	         O	         O
+        several	              -	         O	    I-C-A1	      B-A1	         O	         O
+     nationwide	              -	         O	    I-C-A1	      I-A1	         O	         O
+      addresses	              -	         O	    I-C-A1	      E-A1	         O	         O
+     indirectly	              -	         O	    I-C-A1	  S-AM-MNR	         O	         O
+             --	              -	         O	    I-C-A1	         O	         O	         O
+         having	         having	         O	    I-C-A1	  B-AM-ADV	       S-V	         O
+           them	              -	         O	    I-C-A1	  I-AM-ADV	      B-A1	      S-A1
+           read	           read	         O	    I-C-A1	  I-AM-ADV	      I-A1	       S-V
+             by	              -	         O	    I-C-A1	  I-AM-ADV	      I-A1	      B-A0
+              a	              -	         O	    I-C-A1	  I-AM-ADV	      I-A1	      I-A0
+     television	              -	         O	    I-C-A1	  I-AM-ADV	      I-A1	      I-A0
+      announcer	              -	         O	    E-C-A1	  E-AM-ADV	      E-A1	      E-A0
+              .	              -	         O	         O	         O	         O	         O
+
+           That	              -	      S-A0	         O	         O	         O	         O	      B-A1
+          shows	          shows	       S-V	         O	         O	         O	         O	      I-A1
+             he	              -	      B-A1	      S-A1	      S-A1	         O	         O	      I-A1
+             's	             's	      I-A1	       S-V	         O	         O	         O	      I-A1
+        nervous	              -	      I-A1	  B-AM-MNR	         O	         O	         O	      I-A1
+          about	              -	      I-A1	  I-AM-MNR	         O	         O	         O	      I-A1
+    pinpointing	    pinpointing	      I-A1	  I-AM-MNR	       S-V	         O	         O	      I-A1
+            his	              -	      I-A1	  I-AM-MNR	      B-A1	         O	         O	      I-A1
+       location	              -	      I-A1	  E-AM-MNR	      E-A1	         O	         O	      I-A1
+              ,	              -	      I-A1	         O	         O	         O	         O	      I-A1
+         either	              -	      I-A1	         O	         O	         O	         O	      I-A1
+        because	              -	      I-A1	         O	         O	         O	         O	      I-A1
+             he	              -	      I-A1	         O	         O	      S-A1	         O	      I-A1
+             's	             's	      I-A1	         O	         O	       S-V	         O	      I-A1
+         afraid	              -	      I-A1	         O	         O	      B-A3	         O	      I-A1
+             we	              -	      I-A1	         O	         O	      I-A3	      S-A0	      I-A1
+            'll	              -	      I-A1	         O	         O	      I-A3	  S-AM-MOD	      I-A1
+           find	           find	      I-A1	         O	         O	      I-A3	       S-V	      I-A1
+            him	              -	      I-A1	         O	         O	      E-A3	      S-A1	      I-A1
+              ,	              -	      I-A1	         O	         O	         O	         O	      I-A1
+             or	              -	      I-A1	         O	         O	         O	         O	      I-A1
+           that	              -	      I-A1	         O	         O	         O	         O	      I-A1
+       internal	              -	      I-A1	         O	         O	         O	         O	      I-A1
+        enemies	              -	      I-A1	         O	         O	         O	         O	      I-A1
+           will	              -	      E-A1	         O	         O	         O	         O	      E-A1
+              ,	              -	         O	         O	         O	         O	         O	         O
+           says	           says	         O	         O	         O	         O	         O	       S-V
+            one	              -	         O	         O	         O	         O	         O	      B-A0
+           U.S.	              -	         O	         O	         O	         O	         O	      I-A0
+       official	              -	         O	         O	         O	         O	         O	      E-A0
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	         O	         O	         O
+unpredictability	              -	      I-A1	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O
+           Iraq	              -	      I-A1	         O	         O	         O
+             's	              -	      I-A1	         O	         O	         O
+         leader	              -	      E-A1	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O
+              a	              -	      B-A1	         O	         O	         O
+      principal	              -	      I-A1	         O	         O	         O
+         reason	              -	      I-A1	         O	         O	         O
+            the	              -	      I-A1	      B-A1	         O	      B-A0
+           U.S.	              -	      I-A1	      E-A1	         O	      E-A0
+             is	             is	      I-A1	       S-V	         O	         O
+          going	          going	      I-A1	    B-C-A1	       S-V	         O
+             to	              -	      I-A1	    I-C-A1	      B-A1	         O
+           such	              -	      I-A1	    I-C-A1	      I-A1	         O
+          great	              -	      I-A1	    I-C-A1	      I-A1	         O
+        lengths	              -	      I-A1	    I-C-A1	      I-A1	         O
+             to	              -	      I-A1	    I-C-A1	      I-A1	         O
+          build	          build	      I-A1	    I-C-A1	      I-A1	       S-V
+              a	              -	      I-A1	    I-C-A1	      I-A1	      B-A1
+        mammoth	              -	      I-A1	    I-C-A1	      I-A1	      I-A1
+          force	              -	      I-A1	    I-C-A1	      I-A1	      E-A1
+             in	              -	      I-A1	    I-C-A1	      I-A1	  B-AM-LOC
+            and	              -	      I-A1	    I-C-A1	      I-A1	  I-AM-LOC
+         around	              -	      I-A1	    I-C-A1	      I-A1	  I-AM-LOC
+          Saudi	              -	      I-A1	    I-C-A1	      I-A1	  I-AM-LOC
+         Arabia	              -	      E-A1	    E-C-A1	      E-A1	  E-AM-LOC
+              .	              -	         O	         O	         O	         O
+
+       Pentagon	              -	      B-A0	         O	         O
+      officials	              -	      E-A0	         O	         O
+            say	            say	       S-V	         O	         O
+            the	              -	      B-A1	      B-A1	         O
+           goal	              -	      I-A1	      E-A1	         O
+             is	             is	      I-A1	       S-V	         O
+             to	              -	      I-A1	    B-C-A1	         O
+            put	            put	      I-A1	    I-C-A1	       S-V
+         40,000	              -	      I-A1	    I-C-A1	      B-A1
+         troops	              -	      I-A1	    I-C-A1	      E-A1
+             in	              -	      I-A1	    I-C-A1	      B-A2
+            the	              -	      I-A1	    I-C-A1	      I-A2
+         region	              -	      I-A1	    I-C-A1	      E-A2
+             by	              -	      I-A1	    I-C-A1	  B-AM-TMP
+            the	              -	      I-A1	    I-C-A1	  I-AM-TMP
+            end	              -	      I-A1	    I-C-A1	  I-AM-TMP
+             of	              -	      I-A1	    I-C-A1	  I-AM-TMP
+            the	              -	      I-A1	    I-C-A1	  I-AM-TMP
+          month	              -	      E-A1	    E-C-A1	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+            But	              -	  S-AM-DIS	  S-AM-DIS	         O	         O	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A0	         O	         O	         O	         O	         O	         O
+ administration	              -	      E-A1	      E-A0	         O	         O	         O	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O	         O	         O	         O	         O
+            n't	              -	  S-AM-NEG	  S-AM-NEG	         O	         O	         O	         O	         O	         O
+        putting	        putting	  B-AM-ADV	       S-V	         O	         O	         O	         O	         O	         O
+            any	              -	  I-AM-ADV	      B-A1	         O	         O	         O	         O	         O	         O
+          upper	              -	  I-AM-ADV	      I-A1	         O	         O	         O	         O	         O	         O
+          limit	              -	  I-AM-ADV	      E-A1	         O	         O	         O	         O	         O	         O
+             on	              -	  I-AM-ADV	      B-A2	         O	         O	         O	         O	         O	         O
+            how	              -	  I-AM-ADV	      I-A2	      B-A1	         O	         O	         O	         O	         O
+           high	              -	  I-AM-ADV	      I-A2	      I-A1	         O	         O	         O	         O	         O
+            the	              -	  I-AM-ADV	      I-A2	      I-A1	         O	         O	         O	         O	         O
+          force	              -	  I-AM-ADV	      E-A2	      E-A1	         O	         O	         O	         O	         O
+          could	              -	  I-AM-ADV	         O	  S-AM-MOD	         O	         O	         O	         O	         O
+             go	             go	  I-AM-ADV	         O	       S-V	         O	         O	         O	         O	         O
+          after	              -	  I-AM-ADV	         O	         O	         O	         O	         O	         O	         O
+           that	              -	  I-AM-ADV	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	  I-AM-ADV	         O	         O	         O	         O	         O	         O	         O
+    calculating	    calculating	  I-AM-ADV	  B-AM-ADV	  B-AM-ADV	       S-V	         O	         O	         O	         O
+           that	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      B-A1	         O	         O	         O	         O
+             it	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      S-A1	         O	         O	         O
+          would	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	  S-AM-MOD	         O	         O	         O
+             be	             be	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	       S-V	         O	         O	         O
+              a	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      B-A1	         O	         O	         O
+        mistake	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O	         O	         O
+             to	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O	         O	         O
+  underestimate	  underestimate	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	       S-V	         O	         O
+            and	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O	         O	         O
+             an	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O	         O	         O
+      advantage	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O	         O	         O
+             to	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O	         O	         O
+           keep	           keep	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O	       S-V	         O
+         Saddam	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O	      B-A1	      B-A0
+        Hussein	              -	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      I-A1	      I-A1	         O	      I-A1	      E-A0
+       guessing	       guessing	  E-AM-ADV	  E-AM-ADV	  E-AM-ADV	      E-A1	      E-A1	         O	      E-A1	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+           U.S.	              -	      B-A0	      B-A0	      B-A0	         O	         O
+     commanders	              -	      E-A0	      I-A0	      I-A0	         O	         O
+             in	              -	         O	      I-A0	      I-A0	         O	         O
+         charge	              -	         O	      I-A0	      I-A0	         O	         O
+             of	              -	         O	      I-A0	      I-A0	         O	         O
+       planning	       planning	       S-V	      I-A0	      I-A0	         O	         O
+            for	              -	      B-A1	      I-A0	      I-A0	         O	         O
+         Middle	              -	      I-A1	      I-A0	      I-A0	         O	         O
+           East	              -	      I-A1	      I-A0	      I-A0	         O	         O
+         crises	              -	      E-A1	      E-A0	      E-A0	         O	         O
+           have	           have	         O	       S-V	         O	         O	         O
+      indicated	      indicated	         O	      B-A1	       S-V	         O	         O
+             in	              -	         O	      I-A1	  B-AM-TMP	         O	         O
+            the	              -	         O	      I-A1	  I-AM-TMP	         O	         O
+           past	              -	         O	      I-A1	  E-AM-TMP	         O	         O
+           that	              -	         O	      I-A1	      B-A1	         O	         O
+           they	              -	         O	      I-A1	      I-A1	      S-A1	      S-A0
+           were	           were	         O	      I-A1	      I-A1	       S-V	         O
+        capable	              -	         O	      I-A1	      I-A1	      B-A3	         O
+             of	              -	         O	      I-A1	      I-A1	      I-A3	         O
+      deploying	      deploying	         O	      I-A1	      I-A1	      I-A3	       S-V
+             as	              -	         O	      I-A1	      I-A1	      I-A3	      B-A1
+           many	              -	         O	      I-A1	      I-A1	      I-A3	      I-A1
+             as	              -	         O	      I-A1	      I-A1	      I-A3	      I-A1
+        300,000	              -	         O	      I-A1	      I-A1	      I-A3	      I-A1
+         troops	              -	         O	      E-A1	      E-A1	      E-A3	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            And	              -	  S-AM-DIS	         O	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A0	      B-A0	         O	         O	         O
+           U.S.	              -	      E-A1	      E-A0	      E-A0	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O	         O	         O
+         taking	         taking	    B-C-A1	       S-V	         O	         O	         O	         O
+        similar	              -	    I-C-A1	      B-A1	         O	         O	         O	         O
+          steps	              -	    I-C-A1	      E-A1	         O	         O	         O	         O
+             to	              -	    I-C-A1	  B-AM-PNC	         O	         O	         O	         O
+         ensure	         ensure	    I-C-A1	  I-AM-PNC	       S-V	         O	         O	         O
+           that	              -	    I-C-A1	  I-AM-PNC	      B-A1	         O	         O	         O
+            its	              -	    I-C-A1	  I-AM-PNC	      I-A1	      B-A1	      B-A0	         O
+          naval	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	      I-A0	         O
+          force	              -	    I-C-A1	  I-AM-PNC	      I-A1	      E-A1	      E-A0	         O
+             is	             is	    I-C-A1	  I-AM-PNC	      I-A1	       S-V	         O	         O
+       adequate	              -	    I-C-A1	  I-AM-PNC	      I-A1	      B-A1	         O	         O
+             to	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	         O	         O
+          carry	          carry	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	       B-V	         O
+            out	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	       E-V	         O
+              a	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	      B-A1	         O
+       blockade	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	      I-A1	         O
+             of	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	      I-A1	         O
+           Iraq	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	      E-A1	         O
+            and	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	         O	         O
+        support	        support	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	         O	       S-V
+              a	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	         O	      B-A1
+            war	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	         O	      E-A1
+             if	              -	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1	         O	  B-AM-ADV
+      necessary	              -	    E-C-A1	  E-AM-PNC	      E-A1	      E-A1	         O	  E-AM-ADV
+              .	              -	         O	         O	         O	         O	         O	         O
+
+           Over	              -	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	         O
+        weekend	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+       Pentagon	              -	      B-A0	         O
+      officials	              -	      E-A0	         O
+      confirmed	      confirmed	       S-V	         O
+        reports	              -	      B-A1	         O
+           that	              -	      I-A1	         O
+              a	              -	      I-A1	         O
+         fourth	              -	      I-A1	         O
+           U.S.	              -	      I-A1	         O
+       aircraft	              -	      I-A1	         O
+        carrier	              -	      I-A1	         O
+             --	              -	      I-A1	         O
+            the	              -	      I-A1	      B-A0
+           John	              -	      I-A1	      I-A0
+             F.	              -	      I-A1	      I-A0
+        Kennedy	              -	      I-A1	      I-A0
+             --	              -	      I-A1	      I-A0
+            and	              -	      I-A1	      I-A0
+            its	              -	      I-A1	      I-A0
+       powerful	              -	      I-A1	      I-A0
+          group	              -	      I-A1	      I-A0
+             of	              -	      I-A1	      I-A0
+        support	              -	      I-A1	      I-A0
+          ships	              -	      I-A1	      E-A0
+          could	              -	      I-A1	  S-AM-MOD
+           head	           head	      I-A1	       S-V
+            for	              -	      I-A1	      B-A2
+            the	              -	      I-A1	      I-A2
+         Middle	              -	      I-A1	      I-A2
+           East	              -	      I-A1	      E-A2
+         within	              -	      I-A1	  B-AM-TMP
+              a	              -	      I-A1	  I-AM-TMP
+            few	              -	      I-A1	  I-AM-TMP
+           days	              -	      E-A1	  E-AM-TMP
+              .	              -	         O	         O
+
+          Three	              -	      B-A1	      B-A1	      B-A1	      B-A1
+          other	              -	      I-A1	      I-A1	      I-A1	      I-A1
+       carriers	              -	      I-A1	      I-A1	      I-A1	      I-A1
+            and	              -	      I-A1	      I-A1	      I-A1	      I-A1
+          their	              -	      I-A1	      I-A1	      I-A1	      I-A1
+         escort	              -	      I-A1	      I-A1	      I-A1	      I-A1
+        vessels	              -	      E-A1	      E-A1	      E-A1	      E-A1
+        already	              -	  S-AM-TMP	  S-AM-TMP	  S-AM-TMP	         O
+            are	            are	       S-V	         O	         O	         O
+      stationed	      stationed	    B-C-A1	       S-V	         O	         O
+         within	              -	    I-C-A1	      B-A2	         O	         O
+       striking	              -	    I-C-A1	      I-A2	         O	         O
+       distance	              -	    I-C-A1	      I-A2	         O	         O
+             of	              -	    I-C-A1	      I-A2	         O	         O
+           Iraq	              -	    E-C-A1	      E-A2	         O	         O
+             or	              -	         O	         O	         O	         O
+            are	            are	         O	         O	       S-V	         O
+       steaming	       steaming	         O	         O	    B-C-A1	       S-V
+         toward	              -	         O	         O	    I-C-A1	  B-AM-DIR
+            the	              -	         O	         O	    I-C-A1	  I-AM-DIR
+           area	              -	         O	         O	    E-C-A1	  E-AM-DIR
+              .	              -	         O	         O	         O	         O
+
+            But	              -	         O	      B-A1	  S-AM-DIS	         O	         O	         O	         O	         O	         O	         O
+         unless	              -	         O	      I-A1	  B-AM-ADV	         O	         O	         O	         O	         O	         O	         O
+            the	              -	      B-A1	      I-A1	  I-AM-ADV	         O	         O	         O	         O	         O	         O	         O
+       military	              -	      I-A1	      I-A1	  I-AM-ADV	         O	         O	         O	         O	         O	         O	         O
+      situation	              -	      E-A1	      I-A1	  I-AM-ADV	         O	         O	         O	         O	         O	         O	         O
+        changes	        changes	       S-V	      I-A1	  I-AM-ADV	         O	         O	         O	         O	         O	         O	         O
+    drastically	              -	  S-AM-MNR	      E-A1	  E-AM-ADV	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+       military	              -	         O	      B-A0	         O	         O	         O	         O	         O	         O	         O	         O
+      officials	              -	         O	      E-A0	         O	         O	         O	         O	         O	         O	         O	         O
+            say	            say	         O	       S-V	         O	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+            the	              -	         O	    B-C-A1	      B-A1	      B-A2	         O	         O	         O	         O	         O	         O
+           most	              -	         O	    I-C-A1	      I-A1	      I-A2	         O	         O	         O	         O	         O	         O
+         likely	              -	         O	    I-C-A1	      I-A1	      I-A2	         O	         O	         O	         O	         O	         O
+           plan	              -	         O	    I-C-A1	      E-A1	      E-A2	         O	         O	         O	         O	         O	         O
+           will	              -	         O	    I-C-A1	  S-AM-MOD	         O	         O	         O	         O	         O	         O	         O
+             be	             be	         O	    I-C-A1	       S-V	         O	         O	         O	         O	         O	         O	         O
+            for	              -	         O	    I-C-A1	    B-C-A1	         O	         O	         O	         O	         O	         O	         O
+            the	              -	         O	    I-C-A1	    I-C-A1	         O	         O	         O	         O	         O	         O	         O
+        Kennedy	              -	         O	    I-C-A1	    I-C-A1	         O	         O	         O	         O	         O	         O	         O
+             to	              -	         O	    I-C-A1	    I-C-A1	         O	         O	         O	         O	         O	         O	         O
+     eventually	              -	         O	    I-C-A1	    I-C-A1	  S-AM-TMP	         O	         O	         O	         O	         O	         O
+        replace	        replace	         O	    I-C-A1	    I-C-A1	       S-V	         O	         O	         O	         O	         O	         O
+            the	              -	         O	    I-C-A1	    I-C-A1	      B-A1	      B-A1	         O	         O	         O	         O	         O
+        carrier	              -	         O	    I-C-A1	    I-C-A1	      I-A1	      E-A1	         O	         O	         O	         O	         O
+         Dwight	              -	         O	    I-C-A1	    I-C-A1	      I-A1	      B-A0	      B-A1	      B-A1	      B-A1	      B-A1	         O
+             D.	              -	         O	    I-C-A1	    I-C-A1	      I-A1	      I-A0	      I-A1	      I-A1	      I-A1	      I-A1	         O
+     Eisenhower	              -	         O	    I-C-A1	    I-C-A1	      I-A1	      E-A0	      E-A1	      E-A1	      E-A1	      E-A1	         O
+              ,	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	         O	         O	         O	         O
+          which	              -	         O	    I-C-A1	    I-C-A1	      I-A1	    S-R-A0	    S-R-A1	    S-R-A1	    S-R-A1	    S-R-A1	         O
+            has	            has	         O	    I-C-A1	    I-C-A1	      I-A1	       S-V	         O	         O	         O	         O	         O
+           been	           been	         O	    I-C-A1	    I-C-A1	      I-A1	         O	       S-V	         O	         O	         O	         O
+             on	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	  B-AM-LOC	         O	         O	         O	         O
+         patrol	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	  E-AM-LOC	         O	         O	         O	         O
+          since	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	  B-AM-TMP	         O	         O	         O	         O
+          March	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	  E-AM-TMP	         O	         O	         O	         O
+            and	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	         O	         O	         O	         O
+            was	            was	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	       S-V	         O	         O	         O
+      scheduled	      scheduled	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	      B-A1	       S-V	         O	         O
+             to	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	      I-A1	      B-A2	         O	         O
+         return	         return	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	      I-A1	      I-A2	       S-V	         O
+             to	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	      I-A1	      I-A2	      B-A4	         O
+           port	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	      I-A1	      I-A2	      E-A4	         O
+         before	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	      I-A1	      I-A2	  B-AM-TMP	         O
+    hostilities	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	      I-A1	      I-A2	  I-AM-TMP	      S-A1
+        erupted	        erupted	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	      I-A1	      I-A2	  I-AM-TMP	       S-V
+             in	              -	         O	    I-C-A1	    I-C-A1	      I-A1	         O	         O	      I-A1	      I-A2	  I-AM-TMP	  B-AM-LOC
+         Kuwait	              -	         O	    E-C-A1	    E-C-A1	      E-A1	         O	         O	      E-A1	      E-A2	  E-AM-TMP	  E-AM-LOC
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+            ---	              -	      B-A0
+           Andy	              -	      I-A0
+        Pasztor	              -	      E-A0
+    contributed	    contributed	       S-V
+             to	              -	      B-A2
+           this	              -	      I-A2
+        article	              -	      E-A2
+              .	              -	         O
+

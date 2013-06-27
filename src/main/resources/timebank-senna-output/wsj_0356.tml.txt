@@ -1,0 +1,140 @@
+          Rally	              -	      B-A0	         O	         O	         O	         O
+             's	              -	      I-A0	         O	         O	         O	         O
+           Inc.	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O	         O
+        adopted	        adopted	      I-A1	       S-V	         O	         O	         O
+              a	              -	      I-A1	      B-A1	      B-A0	         O	         O
+   shareholders	              -	      I-A1	      I-A1	      I-A0	         O	         O
+         rights	              -	      I-A1	      I-A1	      E-A0	         O	         O
+           plan	           plan	      I-A1	      I-A1	       S-V	         O	         O
+             to	              -	      I-A1	      I-A1	      B-A1	         O	         O
+        protect	        protect	      I-A1	      I-A1	      I-A1	       S-V	         O
+   shareholders	              -	      I-A1	      I-A1	      I-A1	      S-A1	         O
+           from	              -	      I-A1	      I-A1	      I-A1	      B-A2	         O
+             an	              -	      I-A1	      I-A1	      I-A1	      I-A2	         O
+   inadequately	              -	      I-A1	      I-A1	      I-A1	      I-A2	  S-AM-MNR
+         priced	         priced	      I-A1	      I-A1	      I-A1	      I-A2	       S-V
+       takeover	              -	      I-A1	      I-A1	      I-A1	      I-A2	      B-A1
+          offer	              -	      E-A1	      E-A1	      E-A1	      E-A2	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0
+           plan	              -	      E-A0
+       provides	       provides	       S-V
+            for	              -	      B-A1
+            the	              -	      I-A1
+   distribution	              -	      I-A1
+             of	              -	      I-A1
+            one	              -	      I-A1
+         common	              -	      I-A1
+ stock-purchase	              -	      I-A1
+          right	              -	      I-A1
+             as	              -	      I-A1
+              a	              -	      I-A1
+       dividend	              -	      I-A1
+            for	              -	      I-A1
+           each	              -	      I-A1
+          share	              -	      I-A1
+             of	              -	      I-A1
+         common	              -	      I-A1
+    outstanding	              -	      E-A1
+              .	              -	         O
+
+           Each	              -	      B-A0	         O
+          right	              -	      E-A0	         O
+       entitles	       entitles	       S-V	         O
+   shareholders	              -	      B-A1	      S-A0
+             to	              -	      I-A1	         O
+            buy	            buy	      I-A1	       S-V
+       one-half	              -	      I-A1	      B-A1
+          share	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+         common	              -	      I-A1	      E-A1
+            for	              -	      I-A1	      B-A3
+              $	              -	      I-A1	      I-A3
+             30	              -	      E-A1	      E-A3
+              .	              -	         O	         O
+
+        Earlier	              -	         O	  B-AM-TMP	         O	         O	         O
+           this	              -	         O	  I-AM-TMP	         O	         O	         O
+          month	              -	         O	  E-AM-TMP	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+              a	              -	      B-A1	      B-A0	         O	         O	         O
+          group	              -	      E-A1	      I-A0	         O	         O	         O
+            led	            led	       S-V	      I-A0	         O	         O	         O
+             by	              -	      B-A0	      I-A0	         O	         O	         O
+          three	              -	      I-A0	      I-A0	         O	         O	         O
+             of	              -	      I-A0	      I-A0	         O	         O	         O
+            the	              -	      I-A0	      I-A0	         O	         O	         O
+        company	              -	      I-A0	      I-A0	         O	         O	         O
+             's	              -	      I-A0	      I-A0	         O	         O	         O
+      directors	              -	      I-A0	      I-A0	         O	         O	         O
+              ,	              -	      I-A0	      I-A0	         O	         O	         O
+           Burt	              -	      I-A0	      I-A0	         O	         O	         O
+       Sugarman	              -	      I-A0	      I-A0	         O	         O	         O
+              ,	              -	      I-A0	      I-A0	         O	         O	         O
+          James	              -	      I-A0	      I-A0	         O	         O	         O
+             M.	              -	      I-A0	      I-A0	         O	         O	         O
+        Trotter	              -	      I-A0	      I-A0	         O	         O	         O
+            III	              -	      I-A0	      I-A0	         O	         O	         O
+            and	              -	      I-A0	      I-A0	         O	         O	         O
+         Willam	              -	      I-A0	      I-A0	         O	         O	         O
+             E.	              -	      I-A0	      I-A0	         O	         O	         O
+        Trotter	              -	      I-A0	      I-A0	         O	         O	         O
+             II	              -	      I-A0	      I-A0	         O	         O	         O
+              ,	              -	      E-A0	      E-A0	         O	         O	         O
+      indicated	      indicated	         O	       S-V	         O	         O	         O
+             it	              -	         O	      B-A1	      S-A0	         O	         O
+            had	            had	         O	      I-A1	       S-V	         O	         O
+              a	              -	         O	      I-A1	      B-A1	         O	         O
+           45.2	              -	         O	      I-A1	      I-A1	         O	         O
+              %	              -	         O	      I-A1	      I-A1	         O	         O
+          stake	              -	         O	      I-A1	      I-A1	         O	         O
+             in	              -	         O	      I-A1	      I-A1	         O	         O
+            the	              -	         O	      I-A1	      I-A1	         O	         O
+     Louisville	              -	         O	      I-A1	      I-A1	         O	         O
+              ,	              -	         O	      I-A1	      I-A1	         O	         O
+            Ky.	              -	         O	      I-A1	      I-A1	         O	         O
+              ,	              -	         O	      I-A1	      I-A1	         O	         O
+      fast-food	              -	         O	      I-A1	      I-A1	         O	         O
+        company	              -	         O	      I-A1	      E-A1	         O	         O
+            and	              -	         O	      I-A1	         O	         O	         O
+           that	              -	         O	      I-A1	         O	         O	         O
+             it	              -	         O	      I-A1	         O	      S-A0	      S-A0
+        planned	        planned	         O	      I-A1	         O	       S-V	         O
+             to	              -	         O	      I-A1	         O	      B-A1	         O
+           seek	           seek	         O	      I-A1	         O	      I-A1	       S-V
+              a	              -	         O	      I-A1	         O	      I-A1	      B-A1
+       majority	              -	         O	      I-A1	         O	      I-A1	      I-A1
+             of	              -	         O	      I-A1	         O	      I-A1	      I-A1
+          seats	              -	         O	      I-A1	         O	      I-A1	      I-A1
+             on	              -	         O	      I-A1	         O	      I-A1	      I-A1
+          Rally	              -	         O	      I-A1	         O	      I-A1	      I-A1
+             's	              -	         O	      I-A1	         O	      I-A1	      I-A1
+    nine-member	              -	         O	      I-A1	         O	      I-A1	      I-A1
+          board	              -	         O	      E-A1	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O
+        company	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A1	      S-A1	         O	         O
+            was	            was	      I-A1	       S-V	         O	         O	         O
+      concerned	      concerned	      I-A1	  B-AM-CAU	       S-V	         O	         O
+          about	              -	      I-A1	  I-AM-CAU	      B-A0	         O	         O
+            the	              -	      I-A1	  I-AM-CAU	      I-A0	         O	         O
+      announced	      announced	      I-A1	  I-AM-CAU	      I-A0	       S-V	         O
+         intent	              -	      I-A1	  I-AM-CAU	      I-A0	      B-A1	         O
+             to	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1	         O
+        acquire	        acquire	      I-A1	  I-AM-CAU	      I-A0	      I-A1	       S-V
+        control	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1	      B-A1
+             of	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1	      I-A1
+            the	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1	      I-A1
+        company	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1	      E-A1
+             by	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1	      B-A0
+              a	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1	      I-A0
+   Sugarman-led	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1	      I-A0
+          group	              -	      E-A1	  E-AM-CAU	      E-A0	      E-A1	      E-A0
+              .	              -	         O	         O	         O	         O	         O
+

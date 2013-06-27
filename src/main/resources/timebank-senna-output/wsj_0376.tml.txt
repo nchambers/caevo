@@ -1,0 +1,429 @@
+     Courtaulds	              -	      B-A0	      B-A0	         O	      B-A0
+            PLC	              -	      E-A0	      E-A0	         O	      E-A0
+      announced	      announced	       S-V	         O	         O	         O
+          plans	              -	      B-A1	         O	         O	         O
+             to	              -	      I-A1	         O	         O	         O
+           spin	           spin	      I-A1	       B-V	         O	         O
+            off	              -	      I-A1	       E-V	         O	         O
+            its	              -	      I-A1	      B-A1	         O	         O
+       textiles	              -	      I-A1	      I-A1	         O	         O
+     operations	              -	      I-A1	      E-A1	         O	         O
+             to	              -	      I-A1	      B-A4	         O	         O
+       existing	       existing	      I-A1	      I-A4	       S-V	         O
+   shareholders	              -	      I-A1	      I-A4	      S-A1	         O
+             in	              -	      I-A1	      I-A4	         O	         O
+              a	              -	      I-A1	      I-A4	         O	         O
+  restructuring	              -	      I-A1	      E-A4	         O	         O
+             to	              -	      I-A1	  B-AM-PNC	         O	         O
+          boost	          boost	      I-A1	  I-AM-PNC	         O	       S-V
+    shareholder	              -	      I-A1	  I-AM-PNC	         O	      B-A1
+          value	              -	      E-A1	  E-AM-PNC	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0	         O	      B-A1
+        British	              -	      I-A0	      I-A0	         O	      I-A1
+       chemical	              -	      I-A0	      I-A0	         O	      I-A1
+            and	              -	      I-A0	      I-A0	         O	      I-A1
+        textile	              -	      I-A0	      I-A0	         O	      I-A1
+        company	              -	      I-A0	      I-A0	         O	      I-A1
+             's	              -	      I-A0	      I-A0	         O	      I-A1
+           plan	              -	      E-A0	      I-A0	         O	      I-A1
+              ,	              -	         O	      I-A0	         O	      I-A1
+          which	              -	    S-R-A0	      I-A0	         O	      I-A1
+       requires	       requires	       S-V	      I-A0	         O	      I-A1
+    shareholder	              -	      B-A1	      I-A0	         O	      I-A1
+       approval	              -	      E-A1	      I-A0	         O	      I-A1
+              ,	              -	         O	      E-A0	         O	      I-A1
+          would	              -	         O	  S-AM-MOD	         O	      I-A1
+         create	         create	         O	       S-V	         O	      I-A1
+              a	              -	         O	      B-A1	         O	      I-A1
+            new	              -	         O	      I-A1	         O	      I-A1
+              ,	              -	         O	      I-A1	         O	      I-A1
+         listed	         listed	         O	      I-A1	       S-V	      I-A1
+           U.K.	              -	         O	      I-A1	      B-A1	      I-A1
+          stock	              -	         O	      I-A1	      E-A1	      I-A1
+           with	              -	         O	      I-A1	         O	      I-A1
+              a	              -	         O	      I-A1	         O	      I-A1
+       probable	              -	         O	      I-A1	         O	      I-A1
+         market	              -	         O	      I-A1	         O	      I-A1
+ capitalization	              -	         O	      I-A1	         O	      I-A1
+        between	              -	         O	      I-A1	         O	      I-A1
+              #	              -	         O	      I-A1	         O	      I-A1
+            300	              -	         O	      I-A1	         O	      I-A1
+        million	              -	         O	      I-A1	         O	      I-A1
+              (	              -	         O	      I-A1	         O	      I-A1
+              $	              -	         O	      I-A1	         O	      I-A1
+            473	              -	         O	      I-A1	         O	      I-A1
+        million	              -	         O	      I-A1	         O	      I-A1
+              )	              -	         O	      I-A1	         O	      I-A1
+            and	              -	         O	      I-A1	         O	      I-A1
+              #	              -	         O	      I-A1	         O	      I-A1
+            400	              -	         O	      I-A1	         O	      I-A1
+        million	              -	         O	      E-A1	         O	      E-A1
+              ,	              -	         O	         O	         O	         O
+       analysts	              -	         O	         O	         O	      S-A0
+           said	           said	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A1	         O	      B-A1
+  establishment	              -	      I-A1	         O	      I-A1
+             of	              -	      I-A1	         O	      I-A1
+            the	              -	      I-A1	      B-A1	      I-A1
+       separate	              -	      I-A1	      I-A1	      I-A1
+        company	              -	      E-A1	      E-A1	      I-A1
+              ,	              -	         O	         O	      I-A1
+             to	              -	         O	         O	      I-A1
+             be	             be	       S-V	         O	      I-A1
+         called	         called	    B-C-A1	       S-V	      I-A1
+     Courtaulds	              -	    I-C-A1	      B-A2	      I-A1
+       Textiles	              -	    E-C-A1	      E-A2	      I-A1
+              ,	              -	         O	         O	      E-A1
+          could	              -	         O	         O	  S-AM-MOD
+             be	             be	         O	         O	       S-V
+      effective	              -	         O	         O	    S-C-A1
+             as	              -	         O	         O	  B-AM-TMP
+          early	              -	         O	         O	  I-AM-TMP
+             as	              -	         O	         O	  I-AM-TMP
+           next	              -	         O	         O	  I-AM-TMP
+           year	              -	         O	         O	  I-AM-TMP
+             's	              -	         O	         O	  I-AM-TMP
+          first	              -	         O	         O	  I-AM-TMP
+        quarter	              -	         O	         O	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+      Investors	              -	      S-A0
+       welcomed	       welcomed	       S-V
+            the	              -	      B-A1
+           move	              -	      E-A1
+              .	              -	         O
+
+     Courtaulds	              -	      B-A1	      B-A0
+              '	              -	      I-A1	      I-A0
+         shares	              -	      E-A1	      E-A0
+           rose	           rose	       S-V	         O
+             15	              -	      B-A2	         O
+          pence	              -	      E-A2	         O
+             to	              -	      B-A4	         O
+            362	              -	      I-A4	         O
+          pence	              -	      E-A4	         O
+              ,	              -	         O	         O
+        valuing	        valuing	  B-AM-ADV	       S-V
+            the	              -	  I-AM-ADV	      B-A1
+         entire	              -	  I-AM-ADV	      I-A1
+        company	              -	  I-AM-ADV	      E-A1
+             at	              -	  I-AM-ADV	      B-A2
+          about	              -	  I-AM-ADV	      I-A2
+              #	              -	  I-AM-ADV	      I-A2
+           1.44	              -	  I-AM-ADV	      I-A2
+        billion	              -	  E-AM-ADV	      E-A2
+              .	              -	         O	         O
+
+     Courtaulds	              -	      B-A2	         O
+              '	              -	      I-A2	         O
+        spinoff	              -	      E-A2	         O
+       reflects	       reflects	       S-V	         O
+       pressure	              -	      B-A1	         O
+             on	              -	      I-A1	         O
+        British	              -	      I-A1	      B-A0
+       industry	              -	      I-A1	      E-A0
+             to	              -	      I-A1	         O
+          boost	          boost	      I-A1	       S-V
+          share	              -	      I-A1	      B-A1
+         prices	              -	      I-A1	      E-A1
+         beyond	              -	      I-A1	      B-A4
+            the	              -	      I-A1	      I-A4
+          reach	              -	      I-A1	      I-A4
+             of	              -	      I-A1	      I-A4
+      corporate	              -	      I-A1	      I-A4
+        raiders	              -	      E-A1	      E-A4
+              .	              -	         O	         O
+
+     Courtaulds	              -	      B-A1	         O	         O	         O	         O	         O
+              '	              -	      I-A1	         O	         O	         O	         O	         O
+  restructuring	              -	      E-A1	         O	         O	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O	         O	         O
+          among	              -	  B-AM-LOC	         O	         O	         O	         O	         O
+            the	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+        largest	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+           thus	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+            far	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+             in	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+        Britain	              -	  E-AM-LOC	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+         though	              -	  B-AM-ADV	         O	         O	         O	         O	         O
+             it	              -	  I-AM-ADV	      S-A1	      S-A1	         O	         O	         O
+             is	             is	  I-AM-ADV	       S-V	         O	         O	         O	         O
+        dwarfed	        dwarfed	  I-AM-ADV	      B-A1	       S-V	         O	         O	         O
+             by	              -	  I-AM-ADV	      I-A1	      B-A0	         O	         O	         O
+          B.A.T	              -	  I-AM-ADV	      I-A1	      I-A0	      B-A0	         O	      B-A0
+     Industries	              -	  I-AM-ADV	      I-A1	      I-A0	      I-A0	         O	      I-A0
+            PLC	              -	  I-AM-ADV	      I-A1	      I-A0	      I-A0	         O	      I-A0
+             's	              -	  I-AM-ADV	      I-A1	      I-A0	      E-A0	         O	      E-A0
+          plans	              -	  I-AM-ADV	      I-A1	      I-A0	         O	         O	         O
+             to	              -	  I-AM-ADV	      I-A1	      I-A0	         O	         O	         O
+           spin	           spin	  I-AM-ADV	      I-A1	      I-A0	       S-V	         O	         O
+        roughly	              -	  I-AM-ADV	      I-A1	      I-A0	      B-A1	         O	         O
+            off	              -	  I-AM-ADV	      I-A1	      I-A0	      I-A1	         O	         O
+              #	              -	  I-AM-ADV	      I-A1	      I-A0	      I-A1	         O	         O
+              4	              -	  I-AM-ADV	      I-A1	      I-A0	      I-A1	         O	         O
+        billion	              -	  I-AM-ADV	      I-A1	      I-A0	      I-A1	         O	         O
+             in	              -	  I-AM-ADV	      I-A1	      I-A0	      I-A1	         O	         O
+         assets	              -	  I-AM-ADV	      I-A1	      I-A0	      E-A1	         O	         O
+             to	              -	  I-AM-ADV	      I-A1	      I-A0	  B-AM-PNC	         O	         O
+           help	           help	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	       S-V	         O
+           fend	           fend	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	      B-A1	       B-V
+            off	              -	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	      I-A1	       E-V
+              a	              -	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	      I-A1	      B-A1
+       takeover	              -	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	      I-A1	      I-A1
+            bid	              -	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	      I-A1	      I-A1
+           from	              -	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	      I-A1	      I-A1
+   Anglo-French	              -	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	      I-A1	      I-A1
+      financier	              -	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	      I-A1	      I-A1
+            Sir	              -	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	      I-A1	      I-A1
+          James	              -	  I-AM-ADV	      I-A1	      I-A0	  I-AM-PNC	      I-A1	      I-A1
+      Goldsmith	              -	  E-AM-ADV	      E-A1	      E-A0	  E-AM-PNC	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	         O	      B-A0	         O	         O
+       divested	       divested	       S-V	      I-A0	         O	         O
+     Courtaulds	              -	      B-A1	      I-A0	         O	         O
+        textile	              -	      I-A1	      I-A0	         O	         O
+     operations	              -	      E-A1	      E-A0	         O	         O
+            had	            had	         O	       S-V	         O	         O
+      operating	      operating	         O	      B-A1	       S-V	         O
+         profit	              -	         O	      I-A1	      S-A1	         O
+             of	              -	         O	      I-A1	         O	         O
+              #	              -	         O	      I-A1	         O	         O
+             50	              -	         O	      I-A1	         O	         O
+        million	              -	         O	      I-A1	         O	         O
+             on	              -	         O	      I-A1	         O	         O
+              #	              -	         O	      I-A1	         O	         O
+            980	              -	         O	      I-A1	         O	         O
+        million	              -	         O	      I-A1	         O	         O
+             in	              -	         O	      I-A1	         O	         O
+        revenue	              -	         O	      I-A1	         O	         O
+             in	              -	         O	      I-A1	         O	         O
+            the	              -	         O	      I-A1	         O	      B-A1
+           year	              -	         O	      I-A1	         O	      E-A1
+          ended	          ended	         O	      I-A1	         O	       S-V
+          March	              -	         O	      I-A1	         O	  B-AM-TMP
+             31	              -	         O	      E-A1	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+           Some	              -	      B-A0	      B-A0	         O	         O	         O	         O
+       analysts	              -	      E-A0	      E-A0	         O	         O	         O	         O
+           have	           have	       S-V	         O	         O	         O	         O	         O
+           said	           said	         O	       S-V	         O	         O	         O	         O
+     Courtaulds	              -	         O	      B-A1	      B-A0	         O	         O	         O
+              '	              -	         O	      I-A1	      I-A0	         O	         O	         O
+          moves	              -	         O	      I-A1	      E-A0	         O	         O	         O
+          could	              -	         O	      I-A1	  S-AM-MOD	         O	         O	         O
+          boost	          boost	         O	      I-A1	       S-V	         O	         O	         O
+            the	              -	         O	      I-A1	      B-A1	         O	         O	         O
+        company	              -	         O	      I-A1	      I-A1	         O	         O	         O
+             's	              -	         O	      I-A1	      I-A1	         O	         O	         O
+          value	              -	         O	      I-A1	      E-A1	         O	         O	         O
+             by	              -	         O	      I-A1	      B-A2	         O	         O	         O
+              5	              -	         O	      I-A1	      I-A2	         O	         O	         O
+              %	              -	         O	      I-A1	      I-A2	         O	         O	         O
+             to	              -	         O	      I-A1	      I-A2	         O	         O	         O
+             10	              -	         O	      I-A1	      I-A2	         O	         O	         O
+              %	              -	         O	      I-A1	      E-A2	         O	         O	         O
+              ,	              -	         O	      I-A1	         O	         O	         O	         O
+        because	              -	  B-AM-CAU	      I-A1	  B-AM-ADV	         O	         O	         O
+            the	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	      B-A0	         O	         O
+            two	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	      I-A0	         O	         O
+       entities	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	      E-A0	         O	         O
+     separately	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	  S-AM-MNR	         O	         O
+           will	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	  S-AM-MOD	         O	         O
+          carry	          carry	  I-AM-CAU	      I-A1	  I-AM-ADV	       S-V	         O	         O
+              a	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	      B-A1	         O	         O
+         higher	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+          price	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+       earnings	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+       multiple	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+           than	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+           they	              -	  I-AM-CAU	      I-A1	  I-AM-ADV	      I-A1	      S-A0	      S-A1
+            did	            did	  I-AM-CAU	      I-A1	  I-AM-ADV	      I-A1	       S-V	         O
+       combined	       combined	  E-AM-CAU	      E-A1	  E-AM-ADV	      E-A1	      S-A1	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O
+
+             In	              -	  B-AM-DIS	         O	         O	         O
+       addition	              -	  E-AM-DIS	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+     Courtaulds	              -	      S-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            the	              -	      B-A1	      B-A1	         O	         O
+          moves	              -	      I-A1	      E-A1	         O	         O
+            are	            are	      I-A1	       S-V	         O	         O
+        logical	              -	      I-A1	      S-A3	         O	         O
+        because	              -	      I-A1	  B-AM-CAU	         O	         O
+           they	              -	      I-A1	  I-AM-CAU	      S-A0	         O
+           will	              -	      I-A1	  I-AM-CAU	  S-AM-MOD	         O
+          allow	          allow	      I-A1	  I-AM-CAU	       S-V	         O
+           both	              -	      I-A1	  I-AM-CAU	      B-A1	      B-A0
+            the	              -	      I-A1	  I-AM-CAU	      I-A1	      I-A0
+      chemicals	              -	      I-A1	  I-AM-CAU	      I-A1	      I-A0
+            and	              -	      I-A1	  I-AM-CAU	      I-A1	      I-A0
+        textile	              -	      I-A1	  I-AM-CAU	      I-A1	      I-A0
+     businesses	              -	      I-A1	  I-AM-CAU	      I-A1	      E-A0
+             to	              -	      I-A1	  I-AM-CAU	      I-A1	         O
+          focus	          focus	      I-A1	  I-AM-CAU	      I-A1	       S-V
+           more	              -	      I-A1	  I-AM-CAU	      I-A1	  B-AM-MNR
+        closely	              -	      I-A1	  I-AM-CAU	      I-A1	  E-AM-MNR
+             on	              -	      I-A1	  I-AM-CAU	      I-A1	      B-A2
+           core	              -	      I-A1	  I-AM-CAU	      I-A1	      I-A2
+     activities	              -	      E-A1	  E-AM-CAU	      E-A1	      E-A2
+              .	              -	         O	         O	         O	         O
+
+     Courtaulds	              -	      S-A0	      S-A1	      S-A0	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O	         O
+           been	           been	      B-A1	       S-V	         O	         O	         O	         O
+          under	              -	      I-A1	  B-AM-CAU	         O	         O	         O	         O
+       pressure	              -	      I-A1	  I-AM-CAU	         O	         O	         O	         O
+             to	              -	      I-A1	  I-AM-CAU	         O	         O	         O	         O
+        enhance	        enhance	      I-A1	  I-AM-CAU	       S-V	         O	         O	         O
+    shareholder	              -	      I-A1	  I-AM-CAU	      B-A1	         O	         O	         O
+          value	              -	      I-A1	  I-AM-CAU	      E-A1	         O	         O	         O
+          since	              -	      I-A1	  I-AM-CAU	         O	         O	         O	         O
+       takeover	              -	      I-A1	  I-AM-CAU	         O	      B-A2	      B-A1	      B-A0
+    speculators	              -	      I-A1	  I-AM-CAU	         O	      E-A2	      I-A1	      I-A0
+             --	              -	      I-A1	  I-AM-CAU	         O	         O	      I-A1	      I-A0
+      including	      including	      I-A1	  I-AM-CAU	         O	       S-V	      I-A1	      I-A0
+     Australian	              -	      I-A1	  I-AM-CAU	         O	      B-A1	      I-A1	      I-A0
+      financier	              -	      I-A1	  I-AM-CAU	         O	      I-A1	      I-A1	      I-A0
+          Kerry	              -	      I-A1	  I-AM-CAU	         O	      I-A1	      I-A1	      I-A0
+         Packer	              -	      I-A1	  I-AM-CAU	         O	      E-A1	      I-A1	      I-A0
+             --	              -	      I-A1	  I-AM-CAU	         O	         O	      E-A1	      E-A0
+       surfaced	       surfaced	      I-A1	  I-AM-CAU	         O	         O	       S-V	         O
+        holding	        holding	      I-A1	  I-AM-CAU	         O	         O	    B-C-A1	       S-V
+          small	              -	      I-A1	  I-AM-CAU	         O	         O	    I-C-A1	      B-A1
+         stakes	              -	      I-A1	  I-AM-CAU	         O	         O	    I-C-A1	      E-A1
+           last	              -	      I-A1	  I-AM-CAU	         O	         O	    I-C-A1	  B-AM-TMP
+           year	              -	      E-A1	  E-AM-CAU	         O	         O	    E-C-A1	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O
+
+         Though	              -	         O	         O	  B-AM-ADV	  B-AM-ADV	         O
+            Mr.	              -	      B-A0	      B-A0	  I-AM-ADV	  I-AM-ADV	         O
+         Packer	              -	      E-A0	      E-A0	  I-AM-ADV	  I-AM-ADV	         O
+            has	            has	       S-V	         O	  I-AM-ADV	  I-AM-ADV	         O
+          since	              -	  S-AM-TMP	  S-AM-TMP	  I-AM-ADV	  I-AM-ADV	         O
+           sold	           sold	         O	       S-V	  I-AM-ADV	  I-AM-ADV	         O
+            his	              -	         O	      B-A1	  I-AM-ADV	  I-AM-ADV	         O
+          stake	              -	         O	      E-A1	  E-AM-ADV	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O	         O	         O
+     Courtaulds	              -	         O	         O	      S-A1	      S-A1	      S-A0
+             is	             is	         O	         O	       S-V	         O	         O
+         moving	         moving	         O	         O	    B-C-A1	       S-V	         O
+             to	              -	         O	         O	    I-C-A1	  B-AM-PNC	         O
+           keep	           keep	         O	         O	    I-C-A1	  I-AM-PNC	       S-V
+            its	              -	         O	         O	    I-C-A1	  I-AM-PNC	      B-A1
+  institutional	              -	         O	         O	    I-C-A1	  I-AM-PNC	      I-A1
+   shareholders	              -	         O	         O	    I-C-A1	  I-AM-PNC	      I-A1
+          happy	              -	         O	         O	    E-C-A1	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+           Even	              -	  B-AM-ADV	  B-AM-ADV	      B-A1
+        without	              -	  I-AM-ADV	  I-AM-ADV	      I-A1
+              a	              -	  I-AM-ADV	  I-AM-ADV	      I-A1
+       specific	              -	  I-AM-ADV	  I-AM-ADV	      I-A1
+       takeover	              -	  I-AM-ADV	  I-AM-ADV	      I-A1
+         threat	              -	  E-AM-ADV	  E-AM-ADV	      I-A1
+              ,	              -	         O	         O	      I-A1
+     Courtaulds	              -	      S-A1	      S-A0	      I-A1
+             is	             is	       S-V	         O	      I-A1
+         giving	         giving	      B-A1	       S-V	      I-A1
+   shareholders	              -	      I-A1	      S-A2	      I-A1
+         choice	              -	      I-A1	      B-A1	      I-A1
+            and	              -	      I-A1	      I-A1	      I-A1
+          value	              -	      E-A1	      E-A1	      E-A1
+              ,	              -	         O	         O	         O
+           said	           said	         O	         O	       S-V
+          Julia	              -	         O	         O	      B-A0
+          Blake	              -	         O	         O	      I-A0
+              ,	              -	         O	         O	      I-A0
+             an	              -	         O	         O	      I-A0
+        analyst	              -	         O	         O	      I-A0
+             at	              -	         O	         O	      I-A0
+         London	              -	         O	         O	      I-A0
+   stockbrokers	              -	         O	         O	      I-A0
+       Barclays	              -	         O	         O	      I-A0
+             de	              -	         O	         O	      I-A0
+          Zoete	              -	         O	         O	      I-A0
+           Wedd	              -	         O	         O	      E-A0
+              .	              -	         O	         O	         O
+
+             In	              -	  B-AM-LOC	         O	  B-AM-LOC	         O	         O	         O
+              a	              -	  I-AM-LOC	         O	  I-AM-LOC	         O	         O	         O
+      statement	              -	  E-AM-LOC	         O	  E-AM-LOC	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+            the	              -	      B-A0	         O	         O	         O	         O	         O
+        company	              -	      E-A0	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O
+              :	              -	         O	         O	         O	         O	         O	         O
+           Both	              -	    B-C-A1	      B-A0	      B-A1	      B-A1	         O	         O
+          parts	              -	    I-C-A1	      E-A0	      E-A1	      E-A1	         O	         O
+            can	              -	    I-C-A1	  S-AM-MOD	  S-AM-MOD	         O	         O	         O
+           only	              -	    I-C-A1	  S-AM-ADV	  S-AM-ADV	         O	         O	         O
+        realize	        realize	    I-C-A1	       S-V	         O	         O	         O	         O
+          their	              -	    I-C-A1	      B-A1	         O	         O	         O	         O
+           full	              -	    I-C-A1	      I-A1	         O	         O	         O	         O
+      potential	              -	    I-C-A1	      E-A1	         O	         O	         O	         O
+            and	              -	    I-C-A1	         O	         O	         O	         O	         O
+             be	             be	    I-C-A1	         O	       S-V	         O	         O	         O
+  appropriately	              -	    I-C-A1	         O	  B-AM-MNR	  S-AM-MNR	         O	         O
+         valued	         valued	    I-C-A1	         O	  I-AM-MNR	       S-V	         O	         O
+             by	              -	    I-C-A1	         O	  I-AM-MNR	      B-A0	         O	         O
+            the	              -	    I-C-A1	         O	  I-AM-MNR	      I-A0	         O	         O
+         market	              -	    I-C-A1	         O	  E-AM-MNR	      E-A0	         O	         O
+             if	              -	    I-C-A1	  B-AM-ADV	  B-AM-ADV	  B-AM-ADV	         O	         O
+           they	              -	    I-C-A1	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	      S-A1	         O
+            are	            are	    I-C-A1	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	       S-V	         O
+     separately	              -	    I-C-A1	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	  S-AM-MNR	  S-AM-MNR
+         quoted	         quoted	    I-C-A1	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	         O	       S-V
+      companies	              -	    E-C-A1	  E-AM-ADV	  E-AM-ADV	  E-AM-ADV	         O	      S-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	         O	      B-A0
+        sharper	              -	         O	      I-A0
+     definition	              -	         O	      I-A0
+            and	              -	         O	      I-A0
+            the	              -	      B-A1	      I-A0
+       autonomy	              -	      E-A1	      I-A0
+          which	              -	    S-R-A1	      I-A0
+           each	              -	      S-A0	      I-A0
+           will	              -	  S-AM-MOD	      I-A0
+        thereby	              -	  S-AM-ADV	      I-A0
+           gain	           gain	       S-V	      E-A0
+           will	              -	         O	  S-AM-MOD
+        benefit	        benefit	         O	       S-V
+   shareholders	              -	         O	      B-A1
+              ,	              -	         O	      I-A1
+      customers	              -	         O	      I-A1
+            and	              -	         O	      I-A1
+      employees	              -	         O	      E-A1
+              .	              -	         O	         O
+
+     Courtaulds	              -	      B-A1	         O
+       Chairman	              -	      I-A1	         O
+            and	              -	      I-A1	         O
+          Chief	              -	      I-A1	         O
+      Executive	              -	      I-A1	         O
+            Sir	              -	      I-A1	         O
+    Christopher	              -	      I-A1	         O
+           Hogg	              -	      E-A1	         O
+           will	              -	  S-AM-MOD	         O
+         remain	         remain	       S-V	         O
+             in	              -	      B-A3	         O
+           both	              -	      I-A3	         O
+          posts	              -	      I-A3	         O
+             at	              -	      I-A3	         O
+            the	              -	      I-A3	         O
+      surviving	      surviving	      I-A3	       S-V
+       chemical	              -	      I-A3	      B-A0
+        company	              -	      E-A3	      E-A0
+          after	              -	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	         O
+        spinoff	              -	  E-AM-TMP	         O
+              .	              -	         O	         O
+

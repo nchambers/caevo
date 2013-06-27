@@ -1,0 +1,324 @@
+          Aetna	              -	      B-A1	      B-A2
+           Life	              -	      I-A1	      I-A2
+            amp	              -	      I-A1	      I-A2
+       Casualty	              -	      I-A1	      I-A2
+            Co.	              -	      I-A1	      I-A2
+             's	              -	      I-A1	      I-A2
+  third-quarter	              -	      I-A1	      I-A2
+            net	              -	      I-A1	      I-A2
+         income	              -	      E-A1	      E-A2
+           fell	           fell	       S-V	         O
+             22	              -	      B-A2	         O
+              %	              -	      E-A2	         O
+             to	              -	      B-A4	         O
+              $	              -	      I-A4	         O
+          182.6	              -	      I-A4	         O
+        million	              -	      I-A4	         O
+              ,	              -	      I-A4	         O
+             or	              -	      I-A4	         O
+              $	              -	      I-A4	         O
+           1.63	              -	      I-A4	         O
+              a	              -	      I-A4	         O
+          share	              -	      E-A4	         O
+              ,	              -	         O	         O
+     reflecting	     reflecting	  B-AM-ADV	       S-V
+            the	              -	  I-AM-ADV	      B-A1
+        damages	              -	  I-AM-ADV	      I-A1
+           from	              -	  I-AM-ADV	      I-A1
+      Hurricane	              -	  I-AM-ADV	      I-A1
+           Hugo	              -	  I-AM-ADV	      I-A1
+            and	              -	  I-AM-ADV	      I-A1
+          lower	              -	  I-AM-ADV	      I-A1
+        results	              -	  I-AM-ADV	      I-A1
+            for	              -	  I-AM-ADV	      I-A1
+           some	              -	  I-AM-ADV	      I-A1
+             of	              -	  I-AM-ADV	      I-A1
+            the	              -	  I-AM-ADV	      I-A1
+        company	              -	  I-AM-ADV	      I-A1
+             's	              -	  I-AM-ADV	      I-A1
+          major	              -	  I-AM-ADV	      I-A1
+      divisions	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+    Catastrophe	              -	      B-A0	         O
+         losses	              -	      E-A0	         O
+        reduced	        reduced	       S-V	         O
+          Aetna	              -	      B-A1	         O
+             's	              -	      I-A1	         O
+            net	              -	      I-A1	         O
+         income	              -	      E-A1	         O
+             by	              -	      B-A2	         O
+              $	              -	      I-A2	      B-A2
+             50	              -	      I-A2	      I-A2
+        million	              -	      I-A2	      E-A2
+              ,	              -	      I-A2	         O
+      including	      including	      I-A2	       S-V
+              $	              -	      I-A2	      B-A1
+             36	              -	      I-A2	      I-A1
+        million	              -	      I-A2	      I-A1
+           from	              -	      I-A2	      I-A1
+           Hugo	              -	      E-A2	      E-A1
+              .	              -	         O	         O
+
+           Last	              -	  B-AM-TMP	         O
+           year	              -	  E-AM-TMP	         O
+    catastrophe	              -	      B-A1	         O
+         losses	              -	      E-A1	         O
+        totaled	        totaled	       S-V	         O
+              $	              -	      B-A2	         O
+              5	              -	      I-A2	         O
+        million	              -	      E-A2	         O
+              ,	              -	         O	         O
+           when	              -	  B-AM-TMP	S-R-AM-TMP
+            net	              -	  I-AM-TMP	      S-A1
+            was	            was	  I-AM-TMP	       S-V
+              $	              -	  I-AM-TMP	      B-A3
+          235.5	              -	  I-AM-TMP	      I-A3
+        million	              -	  I-AM-TMP	      I-A3
+              ,	              -	  I-AM-TMP	      I-A3
+             or	              -	  I-AM-TMP	      I-A3
+              $	              -	  I-AM-TMP	      I-A3
+           2.07	              -	  I-AM-TMP	      I-A3
+              a	              -	  I-AM-TMP	      I-A3
+          share	              -	  E-AM-TMP	      E-A3
+              .	              -	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A1	      B-A2
+   year-earlier	              -	      I-A1	      I-A1	      I-A1	      I-A2
+        results	              -	      E-A1	      E-A1	      E-A1	      E-A2
+           have	           have	       S-V	         O	         O	         O
+           been	           been	         O	       S-V	         O	         O
+       restated	       restated	         O	         O	       S-V	         O
+             to	              -	         O	         O	  B-AM-PNC	         O
+        reflect	        reflect	         O	         O	  I-AM-PNC	       S-V
+             an	              -	         O	         O	  I-AM-PNC	      B-A1
+     accounting	              -	         O	         O	  I-AM-PNC	      I-A1
+         change	              -	         O	         O	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0	      B-A0
+        insurer	              -	      E-A0	      E-A0	      E-A0
+            has	            has	       S-V	         O	         O
+        started	        started	         O	       S-V	         O
+     processing	     processing	         O	    B-C-A1	       S-V
+         claims	              -	         O	    I-C-A1	      B-A1
+           from	              -	         O	    I-C-A1	      I-A1
+            the	              -	         O	    I-C-A1	      I-A1
+       Northern	              -	         O	    I-C-A1	      I-A1
+     California	              -	         O	    I-C-A1	      I-A1
+     earthquake	              -	         O	    I-C-A1	      E-A1
+         nearly	              -	         O	    I-C-A1	         O
+            two	              -	         O	    I-C-A1	         O
+          weeks	              -	         O	    I-C-A1	         O
+            ago	              -	         O	    E-C-A1	         O
+              .	              -	         O	         O	         O
+
+            But	              -	         O	         O	         O	         O	         O	  S-AM-DIS
+        because	              -	         O	         O	         O	         O	         O	  B-AM-CAU
+          these	              -	      B-A1	      B-A1	      B-A1	      B-A1	      B-A1	  I-AM-CAU
+         claims	              -	      E-A1	      E-A1	      E-A1	      E-A1	      E-A1	  I-AM-CAU
+            are	            are	       S-V	         O	         O	         O	         O	  I-AM-CAU
+           more	              -	    B-C-A1	         O	         O	         O	         O	  I-AM-CAU
+      difficult	              -	    I-C-A1	         O	         O	         O	         O	  I-AM-CAU
+             to	              -	    I-C-A1	         O	         O	         O	         O	  I-AM-CAU
+       evaluate	       evaluate	    E-C-A1	       S-V	         O	         O	         O	  I-AM-CAU
+            and	              -	         O	         O	         O	         O	         O	  I-AM-CAU
+           have	           have	         O	         O	       S-V	         O	         O	  I-AM-CAU
+           been	           been	         O	         O	      B-A1	       S-V	         O	  I-AM-CAU
+         coming	         coming	         O	         O	      I-A1	         O	       S-V	  I-AM-CAU
+             in	              -	         O	         O	      I-A1	         O	  B-AM-MNR	  I-AM-CAU
+           more	              -	         O	         O	      I-A1	         O	  I-AM-MNR	  I-AM-CAU
+         slowly	              -	         O	         O	      E-A1	         O	  E-AM-MNR	  E-AM-CAU
+              ,	              -	         O	         O	         O	         O	         O	         O
+            the	              -	         O	         O	         O	         O	         O	      B-A0
+        company	              -	         O	         O	         O	         O	         O	      E-A0
+            has	            has	         O	         O	         O	         O	         O	       S-V
+             no	              -	         O	         O	         O	         O	         O	      B-A1
+       estimate	              -	         O	         O	         O	         O	         O	      I-A1
+             of	              -	         O	         O	         O	         O	         O	      I-A1
+            the	              -	         O	         O	         O	         O	         O	      I-A1
+         impact	              -	         O	         O	         O	         O	         O	      I-A1
+             of	              -	         O	         O	         O	         O	         O	      I-A1
+            the	              -	         O	         O	         O	         O	         O	      I-A1
+     earthquake	              -	         O	         O	         O	         O	         O	      I-A1
+             on	              -	         O	         O	         O	         O	         O	      I-A1
+ fourth-quarter	              -	         O	         O	         O	         O	         O	      I-A1
+        results	              -	         O	         O	         O	         O	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+             In	              -	  B-AM-LOC
+            New	              -	  I-AM-LOC
+           York	              -	  I-AM-LOC
+          Stock	              -	  I-AM-LOC
+       Exchange	              -	  I-AM-LOC
+      composite	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+         Friday	              -	  S-AM-TMP
+              ,	              -	         O
+          Aetna	              -	      S-A1
+         closed	         closed	       S-V
+             at	              -	  B-AM-EXT
+              $	              -	  I-AM-EXT
+             60	              -	  E-AM-EXT
+              ,	              -	         O
+           down	              -	  B-AM-MNR
+             50	              -	  I-AM-MNR
+          cents	              -	  E-AM-MNR
+              .	              -	         O
+
+             In	              -	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	         O
+         latest	              -	  I-AM-TMP	         O
+        quarter	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+          Aetna	              -	      S-A0	         O
+            had	            had	       S-V	         O
+              a	              -	      B-A1	      B-A1
+              $	              -	      I-A1	      I-A1
+             23	              -	      I-A1	      I-A1
+        million	              -	      I-A1	      I-A1
+           loss	              -	      I-A1	      I-A1
+             on	              -	      I-A1	      I-A1
+            its	              -	      I-A1	      I-A1
+auto/homeowners	              -	      I-A1	      I-A1
+           line	              -	      E-A1	      E-A1
+              ,	              -	         O	         O
+       compared	       compared	  B-AM-ADV	       S-V
+           with	              -	  I-AM-ADV	      B-A2
+       earnings	              -	  I-AM-ADV	      I-A2
+             of	              -	  I-AM-ADV	      I-A2
+              $	              -	  I-AM-ADV	      I-A2
+             33	              -	  I-AM-ADV	      I-A2
+        million	              -	  I-AM-ADV	      I-A2
+           last	              -	  I-AM-ADV	      I-A2
+           year	              -	  E-AM-ADV	      E-A2
+              .	              -	         O	         O
+
+         Profit	              -	      B-A1	      B-A2
+            for	              -	      I-A1	      I-A2
+            its	              -	      I-A1	      I-A2
+     commercial	              -	      I-A1	      I-A2
+      insurance	              -	      I-A1	      I-A2
+       division	              -	      E-A1	      E-A2
+           fell	           fell	       S-V	         O
+             30	              -	      B-A2	         O
+              %	              -	      E-A2	         O
+             to	              -	      B-A4	         O
+              $	              -	      I-A4	         O
+             59	              -	      I-A4	         O
+        million	              -	      E-A4	         O
+              ,	              -	         O	         O
+     reflecting	     reflecting	  B-AM-ADV	       S-V
+         higher	              -	  I-AM-ADV	      B-A1
+    catastrophe	              -	  I-AM-ADV	      I-A1
+         losses	              -	  I-AM-ADV	      I-A1
+            and	              -	  I-AM-ADV	      I-A1
+            the	              -	  I-AM-ADV	      I-A1
+          price	              -	  I-AM-ADV	      I-A1
+            war	              -	  I-AM-ADV	      I-A1
+             in	              -	  I-AM-ADV	      I-A1
+            the	              -	  I-AM-ADV	      I-A1
+property/casualty	              -	  I-AM-ADV	      I-A1
+         market	              -	  I-AM-ADV	      I-A1
+            for	              -	  I-AM-ADV	      I-A1
+         nearly	              -	  I-AM-ADV	      I-A1
+          three	              -	  I-AM-ADV	      I-A1
+          years	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+        However	              -	         O	  S-AM-DIS
+              ,	              -	         O	         O
+          Aetna	              -	      B-A2	      B-A0
+             's	              -	      I-A2	      I-A0
+       employee	              -	      I-A2	      I-A0
+       benefits	              -	      I-A2	      I-A0
+       division	              -	      E-A2	      I-A0
+              ,	              -	         O	      I-A0
+          which	              -	    S-R-A2	      I-A0
+       includes	       includes	       S-V	      I-A0
+            its	              -	      B-A1	      I-A0
+          group	              -	      I-A1	      I-A0
+         health	              -	      I-A1	      I-A0
+      insurance	              -	      I-A1	      I-A0
+     operations	              -	      E-A1	      I-A0
+              ,	              -	         O	      E-A0
+         posted	         posted	         O	       S-V
+              a	              -	         O	      B-A1
+             34	              -	         O	      I-A1
+              %	              -	         O	      I-A1
+         profit	              -	         O	      I-A1
+           gain	              -	         O	      I-A1
+             to	              -	         O	      I-A1
+              $	              -	         O	      I-A1
+            106	              -	         O	      I-A1
+        million	              -	         O	      E-A1
+              .	              -	         O	         O
+
+  Third-quarter	              -	      B-A2	         O	         O
+        results	              -	      E-A2	         O	         O
+       included	       included	       S-V	         O	         O
+            net	              -	      B-A1	         O	         O
+       realized	       realized	      I-A1	       S-V	         O
+        capital	              -	      I-A1	      B-A1	         O
+          gains	              -	      I-A1	      E-A1	         O
+             of	              -	      I-A1	         O	         O
+              $	              -	      I-A1	         O	      B-A2
+             48	              -	      I-A1	         O	      I-A2
+        million	              -	      I-A1	         O	      E-A2
+              ,	              -	      I-A1	         O	         O
+          which	              -	      I-A1	         O	    S-R-A2
+       included	       included	      I-A1	         O	       S-V
+              $	              -	      I-A1	         O	      B-A1
+             27	              -	      I-A1	         O	      I-A1
+        million	              -	      I-A1	         O	      I-A1
+           from	              -	      I-A1	         O	      I-A1
+            the	              -	      I-A1	         O	      I-A1
+           sale	              -	      I-A1	         O	      I-A1
+             of	              -	      I-A1	         O	      I-A1
+      Federated	              -	      I-A1	         O	      I-A1
+      Investors	              -	      I-A1	         O	      I-A1
+             in	              -	      I-A1	         O	      I-A1
+         August	              -	      I-A1	         O	      I-A1
+            and	              -	      I-A1	         O	      I-A1
+              a	              -	      I-A1	         O	      I-A1
+              $	              -	      I-A1	         O	      I-A1
+             15	              -	      I-A1	         O	      I-A1
+        million	              -	      I-A1	         O	      I-A1
+            tax	              -	      I-A1	         O	      I-A1
+         credit	              -	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O
+
+             In	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+           nine	              -	  I-AM-TMP
+         months	              -	  E-AM-TMP
+              ,	              -	         O
+            net	              -	      S-A1
+           rose	           rose	       S-V
+            4.3	              -	      B-A2
+              %	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+          525.8	              -	      I-A4
+        million	              -	      I-A4
+             or	              -	      I-A4
+              $	              -	      I-A4
+           4.67	              -	      I-A4
+              a	              -	      I-A4
+          share	              -	      I-A4
+              ,	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+          504.2	              -	      I-A3
+        million	              -	      I-A3
+              ,	              -	      I-A3
+             or	              -	      I-A3
+              $	              -	      I-A3
+           4.41	              -	      I-A3
+              a	              -	      I-A3
+          share	              -	      I-A3
+              ,	              -	      I-A3
+           last	              -	      I-A3
+           year	              -	      E-A3
+              .	              -	         O
+

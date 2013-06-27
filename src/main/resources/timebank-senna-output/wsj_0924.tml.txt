@@ -1,0 +1,162 @@
+       Dominion	              -	      B-A0
+        Textile	              -	      I-A0
+           Inc.	              -	      I-A0
+        holders	              -	      E-A0
+        adopted	        adopted	       S-V
+              a	              -	      B-A1
+shareholder-rights	              -	      I-A1
+           plan	              -	      E-A1
+             at	              -	  B-AM-LOC
+            the	              -	  I-AM-LOC
+         annual	              -	  I-AM-LOC
+        meeting	              -	  E-AM-LOC
+              .	              -	         O
+
+            The	              -	      B-A1	         O
+      so-called	              -	      I-A1	         O
+         poison	              -	      I-A1	         O
+           pill	              -	      E-A1	         O
+           took	           took	       S-V	         O
+         effect	              -	      S-A2	         O
+           Aug.	              -	  B-AM-TMP	         O
+              9	              -	  E-AM-TMP	         O
+        pending	        pending	  B-AM-ADV	       S-V
+   ratification	              -	  I-AM-ADV	      B-A1
+             by	              -	  I-AM-ADV	      I-A1
+        holders	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+         Rights	              -	      S-A1	      B-A1	      B-A1	      B-A1	         O	         O
+       attached	       attached	       S-V	      I-A1	      I-A1	      I-A1	         O	         O
+             to	              -	      B-A1	      I-A1	      I-A1	      I-A1	         O	         O
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O
+        company	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O
+             's	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O
+         common	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O
+         shares	              -	      E-A1	      E-A1	      E-A1	      E-A1	         O	         O
+           were	           were	         O	       S-V	         O	         O	         O	         O
+         issued	         issued	    B-C-A1	    B-C-A1	       S-V	         O	         O	         O
+           that	              -	    I-C-A1	    I-C-A1	    B-C-A1	    S-R-A1	    S-R-A1	         O
+            are	            are	    I-C-A1	    I-C-A1	    I-C-A1	       S-V	         O	         O
+      triggered	      triggered	    I-C-A1	    I-C-A1	    I-C-A1	      S-A3	       S-V	         O
+             if	              -	    I-C-A1	    I-C-A1	    I-C-A1	  B-AM-ADV	  B-AM-ADV	         O
+              a	              -	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      B-A0
+        hostile	              -	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      I-A0
+         bidder	              -	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      E-A0
+       acquires	       acquires	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	       S-V
+           more	              -	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      B-A1
+           than	              -	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      I-A1
+             20	              -	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      I-A1
+              %	              -	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      I-A1
+             of	              -	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      I-A1
+            the	              -	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      I-A1
+         shares	              -	    I-C-A1	    I-C-A1	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      I-A1
+    outstanding	              -	    E-C-A1	    E-C-A1	    E-C-A1	  E-AM-ADV	  E-AM-ADV	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+           Once	              -	  S-AM-TMP	  B-AM-TMP	         O	         O
+      triggered	      triggered	       S-V	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A0	         O	         O
+         rights	              -	      E-A1	      E-A0	         O	         O
+          allow	          allow	         O	       S-V	         O	         O
+        holders	              -	         O	      B-A1	      S-A0	      S-A0
+             to	              -	         O	      I-A1	         O	         O
+            buy	            buy	         O	      I-A1	       S-V	         O
+     additional	              -	         O	      I-A1	      B-A1	         O
+         shares	              -	         O	      I-A1	      E-A1	         O
+             at	              -	         O	      I-A1	      B-A3	         O
+             50	              -	         O	      I-A1	      I-A3	         O
+              %	              -	         O	      I-A1	      I-A3	         O
+             of	              -	         O	      I-A1	      I-A3	         O
+            the	              -	         O	      I-A1	      I-A3	         O
+           then	              -	         O	      I-A1	      I-A3	         O
+        current	              -	         O	      I-A1	      I-A3	         O
+         market	              -	         O	      I-A1	      I-A3	         O
+          price	              -	         O	      I-A1	      E-A3	         O
+             or	              -	         O	      I-A1	         O	         O
+              ,	              -	         O	      I-A1	         O	         O
+             at	              -	         O	      I-A1	         O	         O
+            the	              -	         O	      I-A1	         O	         O
+          board	              -	         O	      I-A1	         O	         O
+             's	              -	         O	      I-A1	         O	         O
+     discretion	              -	         O	      I-A1	         O	         O
+              ,	              -	         O	      I-A1	         O	         O
+             to	              -	         O	      I-A1	         O	         O
+        receive	        receive	         O	      I-A1	         O	       S-V
+     securities	              -	         O	      I-A1	         O	      B-A1
+             or	              -	         O	      I-A1	         O	      I-A1
+         assets	              -	         O	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+     Separately	              -	  S-AM-ADV	         O
+              ,	              -	         O	         O
+       Dominion	              -	      B-A0	         O
+        Textile	              -	      E-A0	         O
+         posted	         posted	       S-V	         O
+            net	              -	      B-A1	         O
+         income	              -	      I-A1	         O
+             of	              -	      I-A1	         O
+            4.7	              -	      I-A1	         O
+        million	              -	      I-A1	         O
+       Canadian	              -	      I-A1	         O
+        dollars	              -	      I-A1	         O
+              (	              -	      I-A1	         O
+              $	              -	      I-A1	         O
+              4	              -	      I-A1	         O
+        million	              -	      I-A1	         O
+              )	              -	      I-A1	         O
+              ,	              -	      I-A1	         O
+             or	              -	      I-A1	         O
+             12	              -	      I-A1	         O
+       Canadian	              -	      I-A1	         O
+          cents	              -	      I-A1	         O
+              a	              -	      I-A1	         O
+          share	              -	      I-A1	         O
+              ,	              -	      E-A1	         O
+            for	              -	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	      B-A1
+   fiscal-first	              -	  I-AM-TMP	      I-A1
+        quarter	              -	  I-AM-TMP	      E-A1
+          ended	          ended	  I-AM-TMP	       S-V
+          Sept.	              -	  I-AM-TMP	  B-AM-TMP
+             30	              -	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O
+
+            The	              -	      B-A0
+        company	              -	      E-A0
+            had	            had	       S-V
+              a	              -	      B-A1
+            net	              -	      I-A1
+           loss	              -	      I-A1
+             of	              -	      I-A1
+             C$	              -	      I-A1
+            2.3	              -	      I-A1
+        million	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+             14	              -	      I-A1
+       Canadian	              -	      I-A1
+          cents	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      I-A1
+              ,	              -	      E-A1
+              a	              -	  B-AM-TMP
+           year	              -	  I-AM-TMP
+            ago	              -	  E-AM-TMP
+              .	              -	         O
+
+          Sales	              -	      S-A1	         O
+           were	           were	       S-V	         O
+             C$	              -	      B-A3	      B-A1
+          348.2	              -	      I-A3	      I-A1
+        million	              -	      I-A3	      E-A1
+       compared	       compared	      I-A3	       S-V
+           with	              -	      I-A3	      B-A2
+             C$	              -	      I-A3	      I-A2
+          307.2	              -	      I-A3	      I-A2
+              a	              -	      I-A3	      I-A2
+           year	              -	      I-A3	      I-A2
+        earlier	              -	      E-A3	      E-A2
+              .	              -	         O	         O
+

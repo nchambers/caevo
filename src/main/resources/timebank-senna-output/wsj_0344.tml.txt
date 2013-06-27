@@ -1,0 +1,287 @@
+          Price	              -	      B-A0	         O	         O	         O	         O	         O
+          Stern	              -	      I-A0	         O	         O	         O	         O	         O
+          Sloan	              -	      I-A0	         O	         O	         O	         O	         O
+           Inc.	              -	      E-A0	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O	      S-A0	         O
+          hired	          hired	      I-A1	       S-V	         O	         O	         O	         O
+             an	              -	      I-A1	      B-A1	      B-A0	      B-A0	         O	         O
+     investment	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+        banking	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+           firm	              -	      I-A1	      E-A1	      E-A0	      E-A0	         O	         O
+             to	              -	      I-A1	      B-A2	         O	         O	         O	         O
+         assist	         assist	      I-A1	      I-A2	       S-V	         O	         O	         O
+             in	              -	      I-A1	      I-A2	      B-A2	         O	         O	         O
+     evaluating	     evaluating	      I-A1	      I-A2	      I-A2	       S-V	         O	         O
+  restructuring	              -	      I-A1	      I-A2	      I-A2	      B-A1	         O	         O
+             or	              -	      I-A1	      I-A2	      I-A2	      I-A1	         O	         O
+         merger	              -	      I-A1	      I-A2	      I-A2	      I-A1	         O	         O
+   alternatives	              -	      I-A1	      E-A2	      E-A2	      E-A1	         O	         O
+            and	              -	      I-A1	         O	         O	         O	         O	         O
+       reported	       reported	      I-A1	         O	         O	         O	       S-V	         O
+              a	              -	      I-A1	         O	         O	         O	      B-A1	         O
+            net	              -	      I-A1	         O	         O	         O	      I-A1	         O
+           loss	              -	      I-A1	         O	         O	         O	      I-A1	         O
+             of	              -	      I-A1	         O	         O	         O	      I-A1	         O
+              $	              -	      I-A1	         O	         O	         O	      I-A1	         O
+            8.1	              -	      I-A1	         O	         O	         O	      I-A1	         O
+        million	              -	      I-A1	         O	         O	         O	      I-A1	         O
+              ,	              -	      I-A1	         O	         O	         O	      I-A1	         O
+             or	              -	      I-A1	         O	         O	         O	      I-A1	         O
+              $	              -	      I-A1	         O	         O	         O	      I-A1	         O
+           2.14	              -	      I-A1	         O	         O	         O	      I-A1	         O
+              a	              -	      I-A1	         O	         O	         O	      I-A1	         O
+          share	              -	      I-A1	         O	         O	         O	      I-A1	         O
+              ,	              -	      I-A1	         O	         O	         O	      E-A1	         O
+            for	              -	      I-A1	         O	         O	         O	  B-AM-TMP	         O
+            the	              -	      I-A1	         O	         O	         O	  I-AM-TMP	      B-A1
+          third	              -	      I-A1	         O	         O	         O	  I-AM-TMP	      I-A1
+        quarter	              -	      I-A1	         O	         O	         O	  I-AM-TMP	      E-A1
+          ended	          ended	      I-A1	         O	         O	         O	  I-AM-TMP	       S-V
+          Sept.	              -	      I-A1	         O	         O	         O	  I-AM-TMP	  B-AM-TMP
+             30	              -	      E-A1	         O	         O	         O	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O
+
+          These	              -	      B-A1
+        results	              -	      E-A1
+        compare	        compare	       S-V
+           with	              -	      B-A2
+            net	              -	      I-A2
+         income	              -	      I-A2
+             of	              -	      I-A2
+              $	              -	      I-A2
+            1.8	              -	      I-A2
+        million	              -	      I-A2
+              ,	              -	      I-A2
+             or	              -	      I-A2
+             44	              -	      I-A2
+          cents	              -	      I-A2
+              a	              -	      I-A2
+          share	              -	      I-A2
+              ,	              -	      I-A2
+            for	              -	      I-A2
+            the	              -	      I-A2
+  corresponding	              -	      I-A2
+         period	              -	      I-A2
+           last	              -	      I-A2
+           year	              -	      E-A2
+              .	              -	         O
+
+           This	              -	      B-A2	         O	         O	         O	         O
+        quarter	              -	      I-A2	         O	         O	         O	         O
+             's	              -	      I-A2	         O	         O	         O	         O
+           loss	              -	      E-A2	         O	         O	         O	         O
+       includes	       includes	       S-V	         O	         O	         O	         O
+         pretax	              -	      B-A1	         O	         O	         O	         O
+        charges	              -	      I-A1	         O	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O	         O
+              $	              -	      I-A1	         O	         O	         O	         O
+            4.9	              -	      I-A1	         O	         O	         O	         O
+        million	              -	      I-A1	         O	         O	         O	         O
+             on	              -	      I-A1	         O	         O	         O	         O
+            the	              -	      I-A1	         O	         O	         O	         O
+       proposed	       proposed	      I-A1	       S-V	         O	         O	         O
+discontinuation	              -	      I-A1	      S-A1	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O	         O
+            the	              -	      I-A1	         O	         O	         O	         O
+        company	              -	      I-A1	         O	         O	         O	         O
+             's	              -	      I-A1	         O	         O	         O	         O
+       troubled	              -	      I-A1	         O	         O	         O	         O
+        British	              -	      I-A1	         O	         O	         O	         O
+     subsidiary	              -	      I-A1	         O	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+            and	              -	      I-A1	         O	         O	         O	         O
+              $	              -	      I-A1	         O	         O	         O	         O
+            3.7	              -	      I-A1	         O	         O	         O	         O
+        million	              -	      I-A1	         O	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O	         O
+          other	              -	      I-A1	         O	         O	         O	      B-A1
+     write-offs	              -	      I-A1	         O	         O	         O	      E-A1
+            the	              -	      I-A1	         O	      B-A0	         O	         O
+        company	              -	      I-A1	         O	      E-A0	         O	         O
+           said	           said	      I-A1	         O	       S-V	         O	         O
+           were	           were	      I-A1	         O	      B-A1	       S-V	         O
+  non-recurring	              -	      I-A1	         O	      I-A1	      B-A1	         O
+            and	              -	      I-A1	         O	      I-A1	      I-A1	         O
+    principally	              -	      I-A1	         O	      I-A1	      I-A1	  S-AM-ADV
+        related	        related	      I-A1	         O	      I-A1	      I-A1	       S-V
+             to	              -	      I-A1	         O	      I-A1	      I-A1	      B-A2
+      inventory	              -	      I-A1	         O	      I-A1	      I-A1	      I-A2
+              ,	              -	      I-A1	         O	      I-A1	      I-A1	      I-A2
+     publishing	              -	      I-A1	         O	      I-A1	      I-A1	      I-A2
+       advances	              -	      I-A1	         O	      I-A1	      I-A1	      I-A2
+            and	              -	      I-A1	         O	      I-A1	      I-A1	      I-A2
+pre-publication	              -	      I-A1	         O	      I-A1	      I-A1	      I-A2
+          costs	              -	      E-A1	         O	      E-A1	      E-A1	      E-A2
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O	         O
+     publishing	              -	      I-A0	         O	         O	         O	         O	         O
+        concern	              -	      E-A0	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O	         O	         O
+       retained	       retained	      I-A1	       S-V	         O	         O	         O	         O
+            the	              -	      I-A1	      B-A1	      B-A0	      B-A0	         O	         O
+     investment	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+        banking	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+           firm	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+             of	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+      Donaldson	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+              ,	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+         Lufkin	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+            amp	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+       Jenrette	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+     Securities	              -	      I-A1	      I-A1	      I-A0	      I-A0	         O	         O
+           Inc.	              -	      I-A1	      I-A1	      E-A0	      E-A0	         O	         O
+             to	              -	      I-A1	      I-A1	         O	         O	         O	         O
+            act	            act	      I-A1	      I-A1	       S-V	         O	         O	         O
+             as	              -	      I-A1	      I-A1	      B-A1	         O	         O	         O
+            its	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O
+      financial	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O
+        adviser	              -	      I-A1	      I-A1	      E-A1	         O	         O	         O
+              ,	              -	      I-A1	      I-A1	         O	         O	         O	         O
+      assisting	      assisting	      I-A1	      I-A1	  B-AM-ADV	       S-V	         O	         O
+             in	              -	      I-A1	      I-A1	  I-AM-ADV	      B-A2	         O	         O
+            the	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	         O	         O
+     evaluation	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	         O	         O
+             of	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	         O	         O
+        various	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      B-A2	         O
+      financial	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A2	         O
+            and	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A2	         O
+      strategic	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A2	         O
+   alternatives	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      E-A2	         O
+              ,	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	         O	         O
+      including	      including	      I-A1	      I-A1	  I-AM-ADV	      I-A2	       S-V	         O
+           debt	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      B-A1	         O
+    refinancing	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	         O
+              ,	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	         O
+        raising	        raising	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	       S-V
+        capital	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	      B-A1
+              ,	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	      I-A1
+recapitalization	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	      I-A1
+         merger	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	      I-A1
+             or	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	      I-A1
+           sale	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A2	      I-A1	      I-A1
+        company	              -	      E-A1	      E-A1	  E-AM-ADV	      E-A2	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0
+        company	              -	      E-A0
+           also	              -	  S-AM-DIS
+       retained	       retained	       S-V
+       attorney	              -	      B-A1
+         Martin	              -	      I-A1
+             P.	              -	      I-A1
+          Levin	              -	      I-A1
+              ,	              -	      I-A1
+              a	              -	      I-A1
+       director	              -	      I-A1
+             of	              -	      I-A1
+            the	              -	      I-A1
+        company	              -	      I-A1
+            and	              -	      I-A1
+         former	              -	      I-A1
+           head	              -	      I-A1
+             of	              -	      I-A1
+            the	              -	      I-A1
+   Times-Mirror	              -	      I-A1
+     Publishing	              -	      I-A1
+          Group	              -	      I-A1
+              ,	              -	      I-A1
+             as	              -	      I-A1
+             an	              -	      I-A1
+        adviser	              -	      E-A1
+              .	              -	         O
+
+            Net	              -	      B-A1
+          sales	              -	      I-A1
+            for	              -	      I-A1
+           this	              -	      I-A1
+           year	              -	      I-A1
+             's	              -	      I-A1
+          third	              -	      I-A1
+        quarter	              -	      E-A1
+           were	           were	       S-V
+              $	              -	      B-A2
+             14	              -	      I-A2
+        million	              -	      E-A2
+              ,	              -	         O
+           down	              -	  B-AM-ADV
+           from	              -	  I-AM-ADV
+              $	              -	  I-AM-ADV
+           21.4	              -	  I-AM-ADV
+        million	              -	  I-AM-ADV
+           last	              -	  I-AM-ADV
+           year	              -	  E-AM-ADV
+              .	              -	         O
+
+            The	              -	      B-A0	         O	         O
+        company	              -	      E-A0	         O	         O
+     attributed	     attributed	       S-V	         O	         O
+            the	              -	      B-A1	         O	         O
+       decrease	              -	      E-A1	         O	         O
+             in	              -	  B-AM-ADV	         O	         O
+           part	              -	  E-AM-ADV	         O	         O
+             to	              -	      B-A2	         O	         O
+            the	              -	      I-A2	         O	         O
+      exclusion	              -	      I-A2	         O	         O
+             of	              -	      I-A2	         O	         O
+            the	              -	      I-A2	         O	         O
+        company	              -	      I-A2	         O	         O
+             's	              -	      I-A2	         O	         O
+        British	              -	      I-A2	         O	         O
+          sales	              -	      I-A2	         O	         O
+           from	              -	      I-A2	         O	         O
+            the	              -	      I-A2	         O	         O
+        current	              -	      I-A2	         O	         O
+           year	              -	      I-A2	         O	         O
+             's	              -	      I-A2	         O	         O
+        figures	              -	      I-A2	         O	         O
+             as	              -	      I-A2	         O	         O
+              a	              -	      I-A2	         O	         O
+         result	              -	      I-A2	         O	         O
+             of	              -	      I-A2	         O	         O
+            the	              -	      I-A2	         O	         O
+     subsidiary	              -	      I-A2	         O	         O
+             's	              -	      I-A2	         O	         O
+         status	              -	      I-A2	         O	         O
+             as	              -	      I-A2	         O	         O
+              a	              -	      I-A2	         O	         O
+       proposed	       proposed	      I-A2	       S-V	         O
+   discontinued	   discontinued	      I-A2	      B-A1	       S-V
+      operation	              -	      E-A2	      E-A1	      S-A1
+            and	              -	         O	         O	         O
+              ,	              -	         O	         O	         O
+             in	              -	  B-AM-DIS	         O	         O
+           part	              -	  E-AM-DIS	         O	         O
+              ,	              -	         O	         O	         O
+             to	              -	      B-A2	         O	         O
+          lower	              -	      I-A2	         O	         O
+          sales	              -	      I-A2	         O	         O
+             in	              -	      I-A2	         O	         O
+        certain	              -	      I-A2	         O	         O
+            key	              -	      I-A2	         O	         O
+        foreign	              -	      I-A2	         O	         O
+            and	              -	      I-A2	         O	         O
+       domestic	              -	      I-A2	         O	         O
+       accounts	              -	      E-A2	         O	         O
+              .	              -	         O	         O	         O
+
+           U.K.	              -	      B-A1
+          sales	              -	      I-A1
+            for	              -	      I-A1
+           last	              -	      I-A1
+           year	              -	      I-A1
+             's	              -	      I-A1
+        quarter	              -	      E-A1
+           were	           were	       S-V
+          about	              -	    B-C-A1
+              $	              -	    I-C-A1
+              3	              -	    I-C-A1
+        million	              -	    E-C-A1
+              .	              -	         O
+

@@ -1,0 +1,501 @@
+             On	              -	  B-AM-DIS	         O	         O
+            the	              -	  I-AM-DIS	         O	         O
+          other	              -	  I-AM-DIS	         O	         O
+           hand	              -	  E-AM-DIS	         O	         O
+              ,	              -	         O	         O	         O
+             it	              -	         O	         O	         O
+             's	             's	       S-V	         O	         O
+        turning	        turning	      B-A3	       B-V	         O
+            out	              -	      I-A3	       E-V	         O
+             to	              -	      I-A3	      B-A1	         O
+             be	             be	      I-A3	      I-A1	       S-V
+        another	              -	      I-A3	      I-A1	      B-A2
+           very	              -	      I-A3	      I-A1	      I-A2
+            bad	              -	      I-A3	      I-A1	      I-A2
+      financial	              -	      I-A3	      I-A1	      I-A2
+           week	              -	      I-A3	      I-A1	      I-A2
+            for	              -	      I-A3	      I-A1	      I-A2
+           Asia	              -	      E-A3	      E-A1	      E-A2
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	      B-A0
+      financial	              -	      I-A1	      I-A0
+     assistance	              -	      I-A1	      I-A0
+           from	              -	      I-A1	      I-A0
+            the	              -	      I-A1	      I-A0
+          World	              -	      I-A1	      I-A0
+           Bank	              -	      I-A1	      I-A0
+            and	              -	      I-A1	      I-A0
+            the	              -	      I-A1	      I-A0
+  International	              -	      I-A1	      I-A0
+       Monetary	              -	      I-A1	      I-A0
+           Fund	              -	      E-A1	      E-A0
+            are	            are	       S-V	         O
+            not	              -	    B-C-A1	  S-AM-NEG
+        helping	        helping	    E-C-A1	       S-V
+              .	              -	         O	         O
+
+             In	              -	  B-AM-TMP	  B-AM-TMP
+            the	              -	  I-AM-TMP	  I-AM-TMP
+           last	              -	  I-AM-TMP	  I-AM-TMP
+         twenty	              -	  I-AM-TMP	  I-AM-TMP
+           four	              -	  I-AM-TMP	  I-AM-TMP
+          hours	              -	  E-AM-TMP	  E-AM-TMP
+              ,	              -	         O	         O
+            the	              -	      B-A1	      B-A1
+          value	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+     Indonesian	              -	      I-A1	      I-A1
+          stock	              -	      I-A1	      I-A1
+         market	              -	      E-A1	      E-A1
+            has	            has	       S-V	         O
+         fallen	         fallen	    B-C-A1	       S-V
+             by	              -	    I-C-A1	      B-A2
+         twelve	              -	    I-C-A1	      I-A2
+        percent	              -	    E-C-A1	      E-A2
+              .	              -	         O	         O
+
+            The	              -	      B-A1	      B-A1
+     Indonesian	              -	      I-A1	      I-A1
+       currency	              -	      E-A1	      E-A1
+            has	            has	       S-V	         O
+           lost	           lost	      B-A1	       S-V
+         twenty	              -	      I-A1	      B-A1
+            six	              -	      I-A1	      I-A1
+        percent	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+            its	              -	      I-A1	      I-A1
+          value	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+             In	              -	  B-AM-LOC
+      Singapore	              -	  E-AM-LOC
+              ,	              -	         O
+         stocks	              -	      S-A0
+            hit	            hit	       S-V
+              a	              -	      B-A1
+           five	              -	      I-A1
+           year	              -	      I-A1
+            low	              -	      E-A1
+              .	              -	         O
+
+             In	              -
+            the	              -
+    Philippines	              -
+              ,	              -
+              a	              -
+           four	              -
+           year	              -
+            low	              -
+              .	              -
+
+            And	              -
+             in	              -
+           Hong	              -
+           Kong	              -
+              ,	              -
+              a	              -
+          three	              -
+        percent	              -
+           drop	              -
+              .	              -
+
+           More	              -	         O	         O
+       problems	              -	         O	         O
+             in	              -	         O	         O
+           Hong	              -	         O	         O
+           Kong	              -	         O	         O
+            for	              -	         O	         O
+              a	              -	         O	         O
+          place	              -	         O	         O
+              ,	              -	         O	         O
+            for	              -	         O	         O
+             an	              -	         O	         O
+        economy	              -	         O	         O
+              ,	              -	         O	         O
+           that	              -	         O	         O
+           many	              -	      B-A0	      B-A1
+        experts	              -	      E-A0	      I-A1
+        thought	        thought	       S-V	      E-A1
+            was	            was	         O	       S-V
+           once	              -	         O	  B-AM-TMP
+     invincible	              -	         O	  E-AM-TMP
+              .	              -	         O	         O
+
+           Here	              -	  S-AM-LOC
+             's	             's	       S-V
+            ABC	              -	      B-A1
+             's	              -	      I-A1
+            Jim	              -	      I-A1
+         Laurie	              -	      E-A1
+              .	              -	         O
+
+            Not	              -	         O	         O
+           that	              -	         O	         O
+           long	              -	  B-AM-TMP	         O
+            ago	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+         before	              -	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	         O
+        Chinese	              -	  I-AM-TMP	         O
+       takeover	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+            the	              -	      B-A1	         O
+           news	              -	      I-A1	         O
+          about	              -	      I-A1	         O
+           real	              -	      I-A1	         O
+         estate	              -	      I-A1	         O
+           here	              -	      E-A1	         O
+            was	            was	       S-V	         O
+           that	              -	    B-C-A1	         O
+            the	              -	    I-C-A1	      B-A1
+            sky	              -	    I-C-A1	      E-A1
+            was	            was	    I-C-A1	       S-V
+            the	              -	    I-C-A1	      B-A1
+          limit	              -	    I-C-A1	      I-A1
+            the	              -	    I-C-A1	      I-A1
+        highest	              -	    I-C-A1	      I-A1
+         prices	              -	    I-C-A1	      I-A1
+             in	              -	    I-C-A1	      I-A1
+            the	              -	    I-C-A1	      I-A1
+          world	              -	    E-C-A1	      E-A1
+              .	              -	         O	         O
+
+             So	              -	         O	  B-AM-TMP	         O
+           when	              -	         O	  I-AM-TMP	         O
+           Wong	              -	      B-A0	  I-AM-TMP	         O
+           Kwan	              -	      E-A0	  I-AM-TMP	         O
+          spent	          spent	       S-V	  I-AM-TMP	         O
+        seventy	              -	      B-A3	  I-AM-TMP	         O
+        million	              -	      I-A3	  I-AM-TMP	         O
+        dollars	              -	      E-A3	  I-AM-TMP	         O
+            for	              -	      B-A1	  I-AM-TMP	         O
+           this	              -	      I-A1	  I-AM-TMP	         O
+          house	              -	      E-A1	  E-AM-TMP	         O
+              ,	              -	         O	         O	         O
+             he	              -	         O	      S-A0	         O
+        thought	        thought	         O	       S-V	         O
+             it	              -	         O	      B-A1	      S-A1
+            was	            was	         O	      I-A1	       S-V
+              a	              -	         O	      I-A1	      B-A1
+          great	              -	         O	      I-A1	      I-A1
+           deal	              -	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+             He	              -	      S-A0	      S-A0	         O
+           sold	           sold	       S-V	         O	         O
+            the	              -	      B-A1	         O	         O
+       property	              -	      E-A1	         O	         O
+             to	              -	      B-A3	         O	         O
+           five	              -	      I-A3	         O	         O
+         buyers	              -	      E-A3	         O	         O
+            and	              -	         O	         O	         O
+           said	           said	         O	       S-V	         O
+             he	              -	         O	      B-A1	      S-A0
+             'd	              -	         O	      I-A1	  S-AM-MOD
+         double	         double	         O	      I-A1	       S-V
+            his	              -	         O	      I-A1	      B-A1
+          money	              -	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+             In	              -	  B-AM-LOC	  B-AM-LOC
+           Hong	              -	  I-AM-LOC	  I-AM-LOC
+           Kong	              -	  E-AM-LOC	  E-AM-LOC
+              ,	              -	         O	         O
+             is	             is	       S-V	         O
+         always	              -	    B-C-A1	  S-AM-TMP
+        belongs	        belongs	    I-C-A1	       S-V
+             to	              -	    I-C-A1	      B-A1
+            the	              -	    I-C-A1	      I-A1
+         seller	              -	    I-C-A1	      I-A1
+             's	              -	    I-C-A1	      I-A1
+         market	              -	    E-C-A1	      E-A1
+              .	              -	         O	         O
+
+            Now	              -	  B-AM-ADV	  S-AM-TMP
+           with	              -	  I-AM-ADV	  B-AM-MNR
+            new	              -	  I-AM-ADV	  I-AM-MNR
+   construction	              -	  I-AM-ADV	  I-AM-MNR
+          under	              -	  I-AM-ADV	  I-AM-MNR
+            way	              -	  E-AM-ADV	  E-AM-MNR
+              ,	              -	         O	         O
+          three	              -	      B-A0	      B-A0
+             of	              -	      I-A0	      I-A0
+            his	              -	      I-A0	      I-A0
+         buyers	              -	      E-A0	      E-A0
+           have	           have	       S-V	         O
+         backed	         backed	    B-C-A1	       B-V
+            out	              -	    E-C-A1	       E-V
+              .	              -	         O	         O
+
+            And	              -	  S-AM-DIS	         O
+           Wong	              -	      B-A1	      B-A1
+           Kwan	              -	      E-A1	      E-A1
+           will	              -	  S-AM-MOD	         O
+             be	             be	       S-V	         O
+          lucky	              -	      B-A3	         O
+             to	              -	      I-A3	         O
+          break	          break	      I-A3	       S-V
+           even	              -	      E-A3	  S-AM-ADV
+              .	              -	         O	         O
+
+            All	              -	         O	  B-AM-ADV
+         across	              -	         O	  I-AM-ADV
+           Hong	              -	         O	  I-AM-ADV
+           Kong	              -	         O	  E-AM-ADV
+              ,	              -	         O	         O
+            the	              -	      B-A1	      B-A1
+       property	              -	      I-A1	      I-A1
+         market	              -	      E-A1	      E-A1
+            has	            has	       S-V	         O
+        crashed	        crashed	         O	       S-V
+              .	              -	         O	         O
+
+         Pamela	              -	      B-A0
+            Pak	              -	      E-A0
+           owns	           owns	       S-V
+          eight	              -	      B-A1
+   condominiums	              -	      E-A1
+           here	              -	  S-AM-LOC
+              .	              -	         O
+
+            Pak	              -	      S-A0
+             ca	              -	  S-AM-MOD
+            n't	              -	  S-AM-NEG
+           find	           find	       S-V
+         buyers	              -	      S-A1
+              .	              -	         O
+
+            She	              -	      S-A0	      B-A1
+      estimates	      estimates	       S-V	      I-A1
+            her	              -	      B-A1	      I-A1
+     properties	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+          worth	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+        hundred	              -	      I-A1	      I-A1
+         thirty	              -	      I-A1	      I-A1
+        million	              -	      I-A1	      I-A1
+        dollars	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+        October	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      E-A1
+            are	            are	      I-A1	       S-V
+          worth	              -	      I-A1	    B-C-A1
+           only	              -	      I-A1	    I-C-A1
+           half	              -	      I-A1	    I-C-A1
+           that	              -	      I-A1	    I-C-A1
+            now	              -	      E-A1	    E-C-A1
+              .	              -	         O	         O
+
+           They	              -	      S-A0	         O	         O
+        believe	        believe	       S-V	         O	         O
+             ah	              -	      B-A1	      B-A1	      S-A1
+             it	              -	      I-A1	      E-A1	      S-A0
+           will	              -	      I-A1	  S-AM-MOD	  S-AM-MOD
+             be	             be	      I-A1	       S-V	         O
+         always	              -	      I-A1	  S-AM-TMP	         O
+             up	              -	      I-A1	  B-AM-ADV	         O
+          going	          going	      I-A1	  I-AM-ADV	       B-V
+             up	              -	      I-A1	  I-AM-ADV	       E-V
+            and	              -	      I-A1	  I-AM-ADV	         O
+             up	              -	      I-A1	  I-AM-ADV	         O
+             ah	              -	      I-A1	  I-AM-ADV	         O
+        forever	              -	      E-A1	  E-AM-ADV	         O
+              .	              -	         O	         O	         O
+
+         Nobody	              -	      S-A0
+        believe	        believe	       S-V
+           this	              -	      B-A1
+            any	              -	      I-A1
+           more	              -	      E-A1
+              .	              -	         O
+
+             Of	              -	  B-AM-DIS
+            all	              -	  I-AM-DIS
+             of	              -	  I-AM-DIS
+           Asia	              -	  I-AM-DIS
+             's	              -	  I-AM-DIS
+      economies	              -	  E-AM-DIS
+              ,	              -	         O
+           Hong	              -	      B-A1
+           Kong	              -	      E-A1
+             is	             is	       S-V
+            the	              -	      B-A1
+           most	              -	      I-A1
+         robust	              -	      E-A1
+              .	              -	         O
+
+            But	              -	  S-AM-DIS	  S-AM-DIS	  S-AM-DIS	  S-AM-DIS	         O	         O	         O
+             in	              -	  B-AM-TMP	  B-AM-TMP	  B-AM-TMP	  B-AM-TMP	         O	         O	         O
+            the	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	         O	         O
+           past	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	         O	         O
+          three	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	         O	         O
+         months	              -	  E-AM-TMP	  E-AM-TMP	  E-AM-TMP	  E-AM-TMP	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+         stocks	              -	      S-A0	      S-A1	         O	         O	         O	         O	         O
+           have	           have	       S-V	         O	         O	         O	         O	         O	         O
+        plunged	        plunged	      S-A1	       S-V	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+       interest	              -	         O	         O	      B-A1	      B-A1	         O	         O	         O
+          rates	              -	         O	         O	      E-A1	      E-A1	         O	         O	         O
+           have	           have	         O	         O	       S-V	         O	         O	         O	         O
+         soared	         soared	         O	         O	      S-A1	       S-V	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O	         O	         O
+            the	              -	         O	         O	         O	         O	      B-A0	         O	         O
+       downturn	              -	         O	         O	         O	         O	      I-A0	         O	         O
+            all	              -	         O	         O	         O	         O	      I-A0	         O	         O
+         across	              -	         O	         O	         O	         O	      I-A0	         O	         O
+           Asia	              -	         O	         O	         O	         O	      E-A0	         O	         O
+          means	          means	         O	         O	         O	         O	       S-V	         O	         O
+           that	              -	         O	         O	         O	         O	      B-A1	         O	         O
+         people	              -	         O	         O	         O	         O	      I-A1	      S-A1	      S-A0
+            are	            are	         O	         O	         O	         O	      I-A1	       S-V	         O
+            not	              -	         O	         O	         O	         O	      I-A1	    B-C-A1	  S-AM-NEG
+       spending	       spending	         O	         O	         O	         O	      I-A1	    I-C-A1	       S-V
+           here	              -	         O	         O	         O	         O	      E-A1	    E-C-A1	  S-AM-LOC
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+         Hotels	              -	      S-A1
+            are	            are	       S-V
+           only	              -	  B-AM-MNR
+         thirty	              -	  I-AM-MNR
+        percent	              -	  I-AM-MNR
+           full	              -	  E-AM-MNR
+              .	              -	         O
+
+            You	              -	      S-A0
+            can	              -	  S-AM-MOD
+            get	            get	       S-V
+        seventy	              -	      B-A1
+        percent	              -	      I-A1
+      discounts	              -	      E-A1
+             at	              -	         O
+            the	              -	         O
+       shopping	              -	         O
+          malls	              -	         O
+              .	              -	         O
+
+          Three	              -
+       thousand	              -
+         dollar	              -
+         pearls	              -
+            for	              -
+          eight	              -
+        hundred	              -
+        dollars	              -
+              .	              -
+
+              A	              -
+            two	              -
+        hundred	              -
+         dollar	              -
+           wool	              -
+         jacket	              -
+            for	              -
+          fifty	              -
+        dollars	              -
+              .	              -
+
+          Still	              -	  S-AM-DIS
+              ,	              -	         O
+          there	              -	         O
+            are	            are	       S-V
+            few	              -	      B-A1
+         buyers	              -	      E-A1
+              .	              -	         O
+
+            And	              -	  S-AM-DIS	         O
+             at	              -	  B-AM-LOC	         O
+            the	              -	  I-AM-LOC	         O
+            big	              -	  I-AM-LOC	         O
+      brokerage	              -	  I-AM-LOC	         O
+         houses	              -	  E-AM-LOC	         O
+              ,	              -	         O	         O
+          after	              -	  B-AM-TMP	  B-AM-TMP
+            ten	              -	  I-AM-TMP	  I-AM-TMP
+          years	              -	  I-AM-TMP	  I-AM-TMP
+             of	              -	  I-AM-TMP	  I-AM-TMP
+           boom	              -	  E-AM-TMP	  E-AM-TMP
+              ,	              -	         O	         O
+           they	              -	      S-A0	      S-A0
+            're	            're	       S-V	         O
+        talking	        talking	      B-A1	       S-V
+          about	              -	      I-A1	      B-A1
+        layoffs	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+              I	              -	      S-A0	         O	         O	         O	         O	         O
+          think	          think	       S-V	         O	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O	         O
+            the	              -	      I-A1	      B-A1	         O	         O	         O	         O
+           mood	              -	      I-A1	      E-A1	         O	         O	         O	         O
+             is	             is	      I-A1	       S-V	         O	         O	         O	         O
+         fairly	              -	      I-A1	    B-C-A1	         O	         O	         O	         O
+         gloomy	              -	      E-A1	    E-C-A1	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O	         O
+              I	              -	         O	         O	      S-A0	         O	         O	         O
+          think	          think	         O	         O	       S-V	         O	         O	         O
+             it	              -	         O	         O	      B-A1	      S-A1	         O	      S-A1
+             's	             's	         O	         O	      I-A1	       S-V	         O	         O
+            not	              -	         O	         O	      I-A1	         O	  S-AM-NEG	         O
+          going	          going	         O	         O	      I-A1	         O	       S-V	  S-AM-MOD
+             to	              -	         O	         O	      I-A1	         O	         O	         O
+         change	         change	         O	         O	      I-A1	         O	         O	       S-V
+            for	              -	         O	         O	      I-A1	         O	         O	  B-AM-TMP
+              a	              -	         O	         O	      I-A1	         O	         O	  I-AM-TMP
+         couple	              -	         O	         O	      I-A1	         O	         O	  I-AM-TMP
+             of	              -	         O	         O	      I-A1	         O	         O	  I-AM-TMP
+          years	              -	         O	         O	      E-A1	         O	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O
+
+             So	              -	  B-AM-PNC	         O	         O	         O
+            for	              -	  I-AM-PNC	         O	         O	         O
+           Hong	              -	  I-AM-PNC	         O	         O	         O
+           Kong	              -	  E-AM-PNC	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+             it	              -	         O	         O	         O	         O
+             's	             's	       S-V	         O	         O	         O
+           time	              -	      B-A1	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O
+             as	              -	      I-A1	         O	         O	         O
+     investment	              -	      I-A1	      B-A0	      B-A0	         O
+        bankers	              -	      I-A1	      E-A0	      E-A0	         O
+           like	           like	      I-A1	       S-V	         O	         O
+             to	              -	      I-A1	      B-A1	         O	         O
+            say	            say	      I-A1	      E-A1	       S-V	         O
+              ,	              -	      I-A1	         O	         O	         O
+             to	              -	      I-A1	         O	         O	         O
+     reposition	     reposition	      E-A1	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+             To	              -	         O	         O	  B-AM-ADV
+         either	              -	         O	         O	  I-AM-ADV
+           hold	           hold	       B-V	         O	  I-AM-ADV
+             on	              -	       E-V	         O	  I-AM-ADV
+          tight	              -	  S-AM-MNR	         O	  I-AM-ADV
+             or	              -	         O	         O	  I-AM-ADV
+            get	            get	         O	       B-V	  I-AM-ADV
+            out	              -	         O	       E-V	  E-AM-ADV
+              ,	              -	         O	         O	         O
+             as	              -	         O	         O	         O
+           much	              -	         O	         O	      B-A1
+             of	              -	         O	         O	      I-A1
+           Asia	              -	         O	         O	      E-A1
+           goes	           goes	         O	         O	       S-V
+           into	              -	         O	         O	      B-A2
+      recession	              -	         O	         O	      E-A2
+              .	              -	         O	         O	         O
+
+            Jim	              -
+         Laurie	              -
+              ,	              -
+            ABC	              -
+           News	              -
+              ,	              -
+           Hong	              -
+           Kong	              -
+              .	              -
+

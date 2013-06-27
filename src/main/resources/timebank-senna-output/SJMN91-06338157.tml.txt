@@ -1,0 +1,362 @@
+            One	              -	         O	      B-A0	         O	         O	         O	         O	         O	         O
+             of	              -	         O	      I-A0	         O	         O	         O	         O	         O	         O
+      President	              -	         O	      I-A0	         O	         O	         O	         O	         O	         O
+           Bush	              -	         O	      I-A0	         O	         O	         O	         O	         O	         O
+             's	              -	         O	      I-A0	         O	         O	         O	         O	         O	         O
+           sons	              -	         O	      E-A0	         O	         O	         O	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O	         O	         O	         O
+       informed	       informed	      B-A1	       S-V	         O	         O	         O	         O	         O	         O
+          White	              -	      I-A1	      B-A2	         O	         O	         O	         O	         O	         O
+          House	              -	      I-A1	      I-A2	         O	         O	         O	         O	         O	         O
+          Chief	              -	      I-A1	      I-A2	         O	         O	         O	         O	         O	         O
+             of	              -	      I-A1	      I-A2	         O	         O	         O	         O	         O	         O
+          Staff	              -	      I-A1	      E-A2	         O	         O	         O	         O	         O	         O
+           John	              -	      I-A1	      B-A1	         O	         O	         O	         O	         O	         O
+         Sununu	              -	      I-A1	      E-A1	         O	         O	         O	         O	         O	         O
+           that	              -	      I-A1	      B-A2	         O	         O	         O	         O	         O	         O
+             he	              -	      I-A1	      I-A2	      S-A0	      S-A0	         O	         O	      S-A0	         O
+            has	            has	      I-A1	      I-A2	       S-V	         O	         O	         O	         O	         O
+           lost	           lost	      I-A1	      I-A2	         O	       S-V	         O	         O	         O	         O
+           much	              -	      I-A1	      I-A2	         O	      B-A1	         O	         O	         O	         O
+             of	              -	      I-A1	      I-A2	         O	      I-A1	         O	         O	         O	         O
+            his	              -	      I-A1	      I-A2	         O	      I-A1	         O	         O	         O	         O
+        support	              -	      I-A1	      I-A2	         O	      I-A1	         O	         O	         O	         O
+          among	              -	      I-A1	      I-A2	         O	      I-A1	         O	         O	         O	         O
+    Republicans	              -	      I-A1	      E-A2	         O	      E-A1	         O	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O	         O	         O	         O
+      prompting	      prompting	      I-A1	  B-AM-ADV	         O	  B-AM-ADV	       S-V	         O	         O	  B-AM-ADV
+             an	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      B-A1	         O	         O	  I-AM-ADV
+        intense	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	         O	         O	  I-AM-ADV
+         effort	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	         O	         O	  I-AM-ADV
+             by	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	         O	         O	  I-AM-ADV
+         Sununu	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	      S-A0	         O	  I-AM-ADV
+             to	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	         O	         O	  I-AM-ADV
+           hold	           hold	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	       B-V	         O	  I-AM-ADV
+             on	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	       E-V	         O	  I-AM-ADV
+             to	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	      B-A1	         O	  I-AM-ADV
+            his	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	      I-A1	         O	  I-AM-ADV
+            job	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	      E-A1	         O	  I-AM-ADV
+             by	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  B-AM-MNR	         O	  I-AM-ADV
+  demonstrating	  demonstrating	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	       S-V	  I-AM-ADV
+            his	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	      B-A1	  I-AM-ADV
+            GOP	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	      I-A1	  I-AM-ADV
+        backing	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	      I-A1	  E-AM-ADV
+              ,	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	      I-A1	         O
+          White	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	      I-A1	      B-A0
+          House	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	      I-A1	      I-A0
+            and	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	      I-A1	      I-A0
+     Republican	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	      I-A1	      I-A0
+        sources	              -	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	      I-A1	      E-A0
+           said	           said	      I-A1	  I-AM-ADV	         O	  I-AM-ADV	      I-A1	  I-AM-MNR	      I-A1	       S-V
+         Monday	              -	      E-A1	  E-AM-ADV	         O	  E-AM-ADV	      E-A1	  E-AM-MNR	      E-A1	  S-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+         Sununu	              -	      S-A1	      S-A2	         O	         O	         O	         O	      B-A1
+            was	            was	       S-V	         O	         O	         O	         O	         O	      I-A1
+           told	           told	    B-C-A1	       S-V	         O	         O	         O	         O	      I-A1
+      Wednesday	              -	    I-C-A1	  S-AM-TMP	         O	         O	         O	         O	      I-A1
+             by	              -	    I-C-A1	      B-A0	         O	         O	         O	         O	      I-A1
+           Bush	              -	    I-C-A1	      I-A0	         O	         O	         O	         O	      I-A1
+             's	              -	    I-C-A1	      I-A0	         O	         O	         O	         O	      I-A1
+            son	              -	    I-C-A1	      I-A0	         O	         O	         O	         O	      I-A1
+              ,	              -	    I-C-A1	      I-A0	         O	         O	         O	         O	      I-A1
+         George	              -	    I-C-A1	      I-A0	         O	         O	         O	         O	      I-A1
+              ,	              -	    I-C-A1	      E-A0	         O	         O	         O	         O	      I-A1
+           that	              -	    I-C-A1	    B-C-A1	         O	         O	         O	         O	      I-A1
+             he	              -	    I-C-A1	    I-C-A1	      S-A0	      S-A0	      S-A0	         O	      I-A1
+            had	            had	    I-C-A1	    I-C-A1	       S-V	         O	         O	         O	      I-A1
+      alienated	      alienated	    I-C-A1	    I-C-A1	      B-A1	       S-V	         O	         O	      I-A1
+        members	              -	    I-C-A1	    I-C-A1	      I-A1	      B-A1	         O	         O	      I-A1
+             of	              -	    I-C-A1	    I-C-A1	      I-A1	      I-A1	         O	         O	      I-A1
+            the	              -	    I-C-A1	    I-C-A1	      I-A1	      I-A1	         O	         O	      I-A1
+        Cabinet	              -	    I-C-A1	    I-C-A1	      E-A1	      E-A1	         O	         O	      I-A1
+              ,	              -	    I-C-A1	    I-C-A1	         O	         O	         O	         O	      I-A1
+            the	              -	    I-C-A1	    I-C-A1	         O	         O	      B-A0	         O	      I-A1
+          White	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A0	         O	      I-A1
+          House	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A0	         O	      I-A1
+          staff	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A0	         O	      I-A1
+            and	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A0	         O	      I-A1
+            the	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A0	         O	      I-A1
+     Republican	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A0	         O	      I-A1
+      political	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A0	         O	      I-A1
+      community	              -	    I-C-A1	    I-C-A1	         O	         O	      E-A0	         O	      I-A1
+              ,	              -	    I-C-A1	    I-C-A1	         O	         O	         O	         O	      I-A1
+       creating	       creating	    I-C-A1	    I-C-A1	         O	         O	       S-V	         O	      I-A1
+              a	              -	    I-C-A1	    I-C-A1	         O	         O	      B-A1	      B-A0	      I-A1
+      situation	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A1	      E-A0	      I-A1
+           that	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A1	    S-R-A0	      I-A1
+           puts	           puts	    I-C-A1	    I-C-A1	         O	         O	      I-A1	       S-V	      I-A1
+            his	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A1	      B-A1	      I-A1
+  effectiveness	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A1	      E-A1	      I-A1
+             in	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A1	  B-AM-MNR	      I-A1
+    significant	              -	    I-C-A1	    I-C-A1	         O	         O	      I-A1	  I-AM-MNR	      I-A1
+          doubt	              -	    E-C-A1	    E-C-A1	         O	         O	      E-A1	  E-AM-MNR	      E-A1
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+            the	              -	         O	         O	         O	         O	         O	         O	      B-A0
+        sources	              -	         O	         O	         O	         O	         O	         O	      E-A0
+           said	           said	         O	         O	         O	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A1	      B-A1	         O	         O	      B-A1
+        message	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O	      I-A1
+             to	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O	      I-A1
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O	      I-A1
+          chief	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O	      I-A1
+          staff	              -	      E-A1	      E-A1	      E-A1	      E-A1	         O	         O	      I-A1
+            was	            was	       S-V	         O	         O	         O	         O	         O	      I-A1
+          meant	          meant	    B-C-A1	       S-V	         O	         O	         O	         O	      I-A1
+             to	              -	    I-C-A1	    B-C-A1	         O	         O	         O	         O	      I-A1
+             be	             be	    I-C-A1	    I-C-A1	       S-V	         O	         O	         O	      I-A1
+          taken	          taken	    I-C-A1	    I-C-A1	  B-AM-ADV	       S-V	         O	         O	      I-A1
+             as	              -	    I-C-A1	    I-C-A1	  I-AM-ADV	      B-A1	         O	         O	      I-A1
+              a	              -	    I-C-A1	    I-C-A1	  I-AM-ADV	      I-A1	         O	         O	      I-A1
+     suggestion	              -	    I-C-A1	    I-C-A1	  I-AM-ADV	      I-A1	         O	         O	      I-A1
+           that	              -	    I-C-A1	    I-C-A1	  I-AM-ADV	      I-A1	         O	         O	      I-A1
+         Sununu	              -	    I-C-A1	    I-C-A1	  I-AM-ADV	      I-A1	      S-A0	         O	      I-A1
+          offer	              -	    I-C-A1	    I-C-A1	  I-AM-ADV	      I-A1	         O	         O	      I-A1
+             to	              -	    I-C-A1	    I-C-A1	  I-AM-ADV	      I-A1	         O	         O	      I-A1
+         resign	         resign	    E-C-A1	    E-C-A1	  E-AM-ADV	      I-A1	       S-V	         O	      E-A1
+              ,	              -	         O	         O	         O	      I-A1	         O	         O	         O
+            one	              -	         O	         O	         O	      I-A1	         O	         O	      B-A0
+         highly	              -	         O	         O	         O	      I-A1	         O	  S-AM-EXT	      I-A0
+         placed	         placed	         O	         O	         O	      I-A1	         O	       S-V	      I-A0
+         source	              -	         O	         O	         O	      I-A1	         O	      S-A1	      E-A0
+           said	           said	         O	         O	         O	      E-A1	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+        Instead	              -	  S-AM-DIS	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+         Sununu	              -	      S-A0	      S-A0	         O	         O
+         sought	         sought	       S-V	         O	         O	         O
+             to	              -	         O	         O	         O	         O
+          prove	          prove	         O	       S-V	         O	         O
+             to	              -	         O	      B-A2	         O	         O
+            the	              -	         O	      I-A2	         O	         O
+      president	              -	         O	      E-A2	         O	         O
+           that	              -	         O	      B-A1	         O	         O
+            his	              -	         O	      I-A1	      B-A0	         O
+     supporters	              -	         O	      I-A1	      E-A0	         O
+      outnumber	      outnumber	         O	      I-A1	       S-V	         O
+            his	              -	         O	      I-A1	      B-A1	         O
+        critics	              -	         O	      I-A1	      E-A1	         O
+            and	              -	         O	      I-A1	         O	         O
+           that	              -	         O	      I-A1	         O	         O
+             he	              -	         O	      I-A1	         O	      S-A1
+         should	              -	         O	      I-A1	         O	  S-AM-MOD
+         remain	         remain	         O	      I-A1	         O	       S-V
+             in	              -	         O	      I-A1	         O	      B-A3
+            his	              -	         O	      I-A1	         O	      I-A3
+           post	              -	         O	      E-A1	         O	      E-A3
+              .	              -	         O	         O	         O	         O
+
+            One	              -	      B-A0	         O	         O	      B-A0	         O
+         senior	              -	      I-A0	         O	         O	      I-A0	         O
+       official	              -	      E-A0	         O	         O	      E-A0	         O
+         Monday	              -	  S-AM-TMP	         O	         O	         O	         O
+      described	      described	       S-V	         O	         O	         O	         O
+            the	              -	      B-A1	         O	         O	         O	         O
+          White	              -	      I-A1	         O	         O	         O	         O
+          House	              -	      E-A1	         O	         O	         O	         O
+             as	              -	      B-A2	         O	         O	         O	         O
+              a	              -	      I-A2	         O	         O	         O	         O
+     collection	              -	      I-A2	         O	         O	         O	         O
+             of	              -	      I-A2	         O	         O	         O	         O
+          small	              -	      I-A2	         O	         O	         O	         O
+         groups	              -	      I-A2	         O	         O	         O	         O
+             of	              -	      I-A2	         O	         O	         O	         O
+          aides	              -	      I-A2	      S-A0	         O	         O	         O
+        holding	        holding	      I-A2	       S-V	         O	         O	         O
+          their	              -	      I-A2	      B-A1	         O	         O	         O
+        breaths	              -	      E-A2	      E-A1	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+        waiting	        waiting	  B-AM-ADV	         O	       S-V	         O	         O
+             to	              -	  I-AM-ADV	         O	      B-A2	         O	         O
+            see	            see	  I-AM-ADV	         O	      I-A2	       S-V	         O
+        whether	              -	  I-AM-ADV	         O	      I-A2	      B-A1	         O
+         Sununu	              -	  I-AM-ADV	         O	      I-A2	      I-A1	      S-A0
+       survives	       survives	  E-AM-ADV	         O	      E-A2	      E-A1	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+            One	              -	         O	      B-A0	         O	         O	         O	         O
+            GOP	              -	         O	      I-A0	         O	         O	         O	         O
+         source	              -	         O	      I-A0	         O	         O	         O	         O
+              ,	              -	         O	      I-A0	         O	         O	         O	         O
+      reporting	      reporting	       S-V	      I-A0	         O	         O	         O	         O
+             on	              -	      B-A1	      I-A0	         O	         O	         O	         O
+              a	              -	      I-A1	      I-A0	         O	         O	         O	         O
+           call	              -	      I-A1	      I-A0	         O	         O	         O	         O
+           from	              -	      I-A1	      I-A0	         O	         O	         O	         O
+            the	              -	      I-A1	      I-A0	         O	         O	         O	         O
+          chief	              -	      I-A1	      I-A0	         O	         O	         O	         O
+             of	              -	      I-A1	      I-A0	         O	         O	         O	         O
+          staff	              -	      I-A1	      I-A0	         O	         O	         O	         O
+             to	              -	      I-A1	      I-A0	         O	         O	         O	         O
+              a	              -	      I-A1	      I-A0	         O	         O	         O	         O
+     Republican	              -	      I-A1	      I-A0	         O	         O	         O	         O
+         leader	              -	      E-A1	      I-A0	         O	         O	         O	         O
+              ,	              -	         O	      E-A0	         O	         O	         O	         O
+           said	           said	         O	       S-V	         O	         O	         O	         O
+         Sununu	              -	         O	      B-A1	      S-A0	         O	         O	         O
+       lamented	       lamented	         O	      I-A1	       S-V	         O	         O	         O
+           that	              -	         O	      I-A1	      B-A1	         O	         O	         O
+            the	              -	         O	      I-A1	      I-A1	      B-A1	      B-A0	         O
+          noose	              -	         O	      I-A1	      I-A1	      E-A1	      E-A0	         O
+             is	             is	         O	      I-A1	      I-A1	       S-V	         O	         O
+     tightening	     tightening	         O	      I-A1	      I-A1	  B-AM-ADV	       S-V	         O
+         around	              -	         O	      I-A1	      I-A1	  I-AM-ADV	  B-AM-MNR	         O
+             my	              -	         O	      I-A1	      I-A1	  I-AM-ADV	  I-AM-MNR	         O
+           neck	              -	         O	      E-A1	      E-A1	  E-AM-ADV	  E-AM-MNR	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O	         O
+              I	              -	         O	         O	         O	         O	         O	      S-A0
+           need	           need	         O	         O	         O	         O	         O	       S-V
+           your	              -	         O	         O	         O	         O	         O	      B-A1
+           help	              -	         O	         O	         O	         O	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+              ;	              -	         O	         O	         O	         O
+        Another	              -	         O	      B-A0	         O	         O
+         highly	              -	  S-AM-MNR	      I-A0	         O	         O
+         placed	         placed	       S-V	      I-A0	         O	         O
+         source	              -	      S-A1	      E-A0	         O	         O
+           said	           said	         O	       S-V	         O	         O
+            the	              -	         O	      B-A1	      B-A0	      B-A0
+      president	              -	         O	      I-A1	      I-A0	      I-A0
+             's	              -	         O	      I-A1	      I-A0	      I-A0
+            son	              -	         O	      I-A1	      E-A0	      E-A0
+            met	            met	         O	      I-A1	       S-V	         O
+           with	              -	         O	      I-A1	      B-A1	         O
+         Sununu	              -	         O	      I-A1	      E-A1	         O
+           last	              -	         O	      I-A1	  B-AM-TMP	         O
+           week	              -	         O	      I-A1	  E-AM-TMP	         O
+          after	              -	         O	      I-A1	  B-AM-TMP	         O
+        holding	        holding	         O	      I-A1	  I-AM-TMP	       S-V
+              a	              -	         O	      I-A1	  I-AM-TMP	      B-A1
+         series	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+             of	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+  conversations	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+          about	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+            the	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+      structure	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+             of	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+            the	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+          White	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+          House	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+          staff	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+            and	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+             of	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+            the	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+       campaign	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+           with	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+          other	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+           Bush	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+      loyalists	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+            and	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+            GOP	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+      activists	              -	         O	      E-A1	  E-AM-TMP	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O
+         source	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            the	              -	      B-A1	      B-A0	         O	         O
+        younger	              -	      I-A1	      I-A0	         O	         O
+           Bush	              -	      I-A1	      E-A0	         O	         O
+       sketched	       sketched	      I-A1	       B-V	         O	         O
+            out	              -	      I-A1	       E-V	         O	         O
+            for	              -	      I-A1	  B-AM-CAU	         O	         O
+         Sununu	              -	      I-A1	  I-AM-CAU	         O	      B-A1
+       problems	              -	      I-A1	  I-AM-CAU	         O	      E-A1
+            the	              -	      I-A1	  I-AM-CAU	      B-A1	      B-A0
+      president	              -	      I-A1	  I-AM-CAU	      E-A1	      E-A0
+             is	             is	      I-A1	  I-AM-CAU	       S-V	         O
+   encountering	   encountering	      I-A1	  I-AM-CAU	  B-AM-CAU	       S-V
+        because	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	  B-AM-CAU
+             of	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU
+            the	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU
+          chief	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU
+             of	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU
+          staff	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU
+             's	              -	      I-A1	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU
+         tenure	              -	      E-A1	  E-AM-CAU	  E-AM-CAU	  E-AM-CAU
+              .	              -	         O	         O	         O	         O
+
+             He	              -	      S-A1	      S-A2	         O	      B-A1
+            was	            was	       S-V	         O	         O	      I-A1
+           told	           told	         O	       S-V	         O	      I-A1
+            ...	              -	         O	         O	         O	      I-A1
+            the	              -	         O	         O	      B-A1	      I-A1
+    handwriting	              -	         O	         O	      E-A1	      I-A1
+            was	            was	         O	         O	       S-V	      I-A1
+             on	              -	         O	         O	  B-AM-LOC	      I-A1
+            the	              -	         O	         O	  I-AM-LOC	      I-A1
+           wall	              -	         O	         O	  E-AM-LOC	      E-A1
+              ,	              -	         O	         O	         O	         O
+            the	              -	         O	         O	         O	      B-A0
+         source	              -	         O	         O	         O	      E-A0
+           said	           said	         O	         O	         O	       S-V
+         Monday	              -	         O	         O	         O	  S-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+           That	              -	      S-A1	         O	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+            the	              -	      B-A0	         O	         O	         O	         O	         O	         O	         O	         O
+         source	              -	      E-A0	         O	         O	         O	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+            was	            was	    B-C-A1	       S-V	         O	         O	         O	         O	         O	         O	         O
+           when	              -	    I-C-A1	  B-AM-TMP	         O	         O	         O	         O	         O	         O	         O
+         Sununu	              -	    I-C-A1	  I-AM-TMP	      S-A0	      S-A0	      S-A0	         O	         O	         O	         O
+        started	        started	    I-C-A1	  I-AM-TMP	       S-V	         O	         O	         O	         O	         O	         O
+        calling	        calling	    I-C-A1	  I-AM-TMP	      B-A1	       S-V	         O	         O	         O	         O	         O
+  congressional	              -	    I-C-A1	  I-AM-TMP	      I-A1	      B-A1	         O	         O	         O	         O	         O
+    Republicans	              -	    I-C-A1	  E-AM-TMP	      E-A1	      E-A1	         O	         O	         O	         O	         O
+            and	              -	    I-C-A1	         O	         O	         O	         O	         O	         O	         O	         O
+         asking	         asking	    I-C-A1	         O	         O	         O	       S-V	         O	         O	         O	         O
+           them	              -	    I-C-A1	         O	         O	         O	      S-A2	      S-A0	         O	         O	         O
+             to	              -	    I-C-A1	         O	         O	         O	      B-A1	         O	         O	         O	         O
+           tell	           tell	    I-C-A1	         O	         O	         O	      I-A1	       S-V	         O	         O	         O
+           Bush	              -	    I-C-A1	         O	         O	         O	      I-A1	      S-A1	         O	         O	         O
+           that	              -	    I-C-A1	         O	         O	         O	      I-A1	      B-A2	         O	         O	         O
+            the	              -	    I-C-A1	         O	         O	         O	      I-A1	      I-A2	      B-A0	         O	         O
+   conservative	              -	    I-C-A1	         O	         O	         O	      I-A1	      I-A2	      I-A0	         O	         O
+           wing	              -	    I-C-A1	         O	         O	         O	      I-A1	      I-A2	      I-A0	         O	         O
+             of	              -	    I-C-A1	         O	         O	         O	      I-A1	      I-A2	      I-A0	         O	         O
+            the	              -	    I-C-A1	         O	         O	         O	      I-A1	      I-A2	      I-A0	         O	         O
+          party	              -	    I-C-A1	         O	         O	         O	      I-A1	      E-A2	      E-A0	         O	         O
+              ,	              -	    I-C-A1	         O	         O	         O	      I-A1	         O	         O	         O	         O
+             in	              -	    I-C-A1	         O	         O	         O	      I-A1	         O	         O	         O	         O
+     particular	              -	    I-C-A1	         O	         O	         O	      I-A1	         O	         O	         O	         O
+              ,	              -	    I-C-A1	         O	         O	         O	      I-A1	         O	         O	         O	         O
+          would	              -	    I-C-A1	         O	         O	         O	      I-A1	         O	  S-AM-MOD	         O	         O
+         object	         object	    I-C-A1	         O	         O	         O	      I-A1	         O	       S-V	         O	         O
+             if	              -	    I-C-A1	         O	         O	         O	      I-A1	         O	  B-AM-ADV	         O	         O
+             he	              -	    I-C-A1	         O	         O	         O	      I-A1	         O	  I-AM-ADV	      S-A1	      S-A1
+           were	           were	    I-C-A1	         O	         O	         O	      I-A1	         O	  I-AM-ADV	       S-V	         O
+          fired	          fired	    E-C-A1	         O	         O	         O	      E-A1	         O	  E-AM-ADV	      S-A3	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+      Officials	              -	      S-A0	         O
+           said	           said	       S-V	         O
+            the	              -	      B-A1	      B-A0
+      president	              -	      I-A1	      I-A0
+        himself	              -	      I-A1	      E-A0
+            met	            met	      I-A1	       S-V
+           with	              -	      I-A1	      B-A1
+         Sununu	              -	      I-A1	      I-A1
+         Sunday	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+              A	              -	      B-A0	         O
+         source	              -	      E-A0	         O
+           said	           said	       S-V	         O
+            the	              -	      B-A1	      B-A1
+        outcome	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+           that	              -	      I-A1	      I-A1
+        session	              -	      I-A1	      E-A1
+            was	            was	      I-A1	       S-V
+        unclear	              -	      E-A1	      S-A2
+              .	              -	         O	         O
+

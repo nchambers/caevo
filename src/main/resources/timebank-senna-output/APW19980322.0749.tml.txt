@@ -1,0 +1,717 @@
+        BELFAST	              -	      B-A0	         O
+              ,	              -	      I-A0	         O
+       Northern	              -	      I-A0	         O
+        Ireland	              -	      I-A0	         O
+              (	              -	      I-A0	         O
+             AP	              -	      I-A0	         O
+              )	              -	      I-A0	         O
+              _	              -	      I-A0	         O
+         Police	              -	      E-A0	         O
+         seized	         seized	       S-V	         O
+              a	              -	      B-A1	         O
+            car	              -	      I-A1	         O
+           bomb	              -	      E-A1	         O
+          under	              -	  B-AM-LOC	         O
+   construction	              -	  E-AM-LOC	         O
+         Sunday	              -	  S-AM-TMP	         O
+             in	              -	  B-AM-LOC	         O
+              a	              -	  I-AM-LOC	         O
+           town	              -	  I-AM-LOC	         O
+      bordering	      bordering	  I-AM-LOC	       S-V
+       Northern	              -	  I-AM-LOC	      B-A2
+        Ireland	              -	  E-AM-LOC	      E-A2
+             on	              -	  B-AM-PNC	      B-A1
+            the	              -	  I-AM-PNC	      I-A1
+            eve	              -	  I-AM-PNC	      I-A1
+             of	              -	  I-AM-PNC	      I-A1
+            the	              -	  I-AM-PNC	      I-A1
+         return	              -	  I-AM-PNC	      I-A1
+             to	              -	  I-AM-PNC	      I-A1
+          peace	              -	  I-AM-PNC	      I-A1
+          talks	              -	  I-AM-PNC	      I-A1
+             by	              -	  I-AM-PNC	      I-A1
+            the	              -	  I-AM-PNC	      I-A1
+     IRA-allied	              -	  I-AM-PNC	      I-A1
+           Sinn	              -	  I-AM-PNC	      I-A1
+           Fein	              -	  I-AM-PNC	      I-A1
+          party	              -	  E-AM-PNC	      E-A1
+              .	              -	         O	         O
+
+          Chief	              -	      B-A0	         O	         O	         O	         O	         O
+ Superintendent	              -	      I-A0	         O	         O	         O	         O	         O
+             Al	              -	      I-A0	         O	         O	         O	         O	         O
+         McHugh	              -	      E-A0	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A1	      B-A1	      B-A1	      B-A0	      B-A0
+           bomb	              -	      I-A1	      E-A1	      I-A1	      I-A1	      I-A0	      I-A0
+     discovered	     discovered	      I-A1	       S-V	      I-A1	      I-A1	      I-A0	      I-A0
+             in	              -	      I-A1	  B-AM-LOC	      I-A1	      I-A1	      I-A0	      I-A0
+            the	              -	      I-A1	  I-AM-LOC	      I-A1	      I-A1	      I-A0	      I-A0
+          Irish	              -	      I-A1	  I-AM-LOC	      I-A1	      I-A1	      I-A0	      I-A0
+       Republic	              -	      I-A1	  E-AM-LOC	      E-A1	      E-A1	      E-A0	      E-A0
+            was	            was	      I-A1	         O	       S-V	         O	         O	         O
+       destined	       destined	      I-A1	         O	  B-AM-ADV	       S-V	         O	         O
+            for	              -	      I-A1	         O	  I-AM-ADV	      B-A2	         O	         O
+             an	              -	      I-A1	         O	  I-AM-ADV	      I-A2	         O	         O
+        unknown	              -	      I-A1	         O	  I-AM-ADV	      I-A2	         O	         O
+         target	              -	      I-A1	         O	  I-AM-ADV	      I-A2	         O	         O
+             in	              -	      I-A1	         O	  I-AM-ADV	      I-A2	         O	         O
+       Northern	              -	      I-A1	         O	  I-AM-ADV	      I-A2	         O	         O
+        Ireland	              -	      I-A1	         O	  I-AM-ADV	      E-A2	         O	         O
+            and	              -	      I-A1	         O	  I-AM-ADV	         O	         O	         O
+             ``	              -	      I-A1	         O	  I-AM-ADV	         O	         O	         O
+          would	              -	      I-A1	         O	  I-AM-ADV	         O	  S-AM-MOD	  S-AM-MOD
+           have	           have	      I-A1	         O	  I-AM-ADV	         O	       S-V	         O
+         caused	         caused	      I-A1	         O	  I-AM-ADV	         O	      B-A1	       S-V
+        massive	              -	      I-A1	         O	  I-AM-ADV	         O	      I-A1	      B-A1
+    destruction	              -	      E-A1	         O	  E-AM-ADV	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1	         O	         O	         O	         O
+      discovery	              -	      E-A1	      E-A1	         O	         O	         O	         O
+       appeared	       appeared	       S-V	         O	         O	         O	         O	         O
+             to	              -	    B-C-A1	         O	         O	         O	         O	         O
+             be	             be	    I-C-A1	       S-V	         O	         O	         O	         O
+            the	              -	    I-C-A1	      B-A2	         O	         O	         O	         O
+         latest	              -	    I-C-A1	      I-A2	         O	         O	         O	         O
+        attempt	              -	    I-C-A1	      I-A2	         O	         O	         O	         O
+             by	              -	    I-C-A1	      I-A2	         O	         O	         O	         O
+     extremists	              -	    I-C-A1	      I-A2	      S-A0	         O	         O	         O
+        opposed	        opposed	    I-C-A1	      I-A2	       S-V	         O	         O	         O
+             to	              -	    I-C-A1	      I-A2	      B-A1	         O	         O	         O
+            the	              -	    I-C-A1	      I-A2	      I-A1	         O	         O	         O
+            IRA	              -	    I-C-A1	      I-A2	      I-A1	         O	         O	         O
+             's	              -	    I-C-A1	      I-A2	      I-A1	         O	         O	         O
+    8-month-old	              -	    I-C-A1	      I-A2	      I-A1	         O	         O	         O
+          truce	              -	    I-C-A1	      I-A2	      I-A1	         O	         O	         O
+             to	              -	    I-C-A1	      I-A2	      I-A1	         O	         O	         O
+      undermine	      undermine	    I-C-A1	      I-A2	      I-A1	       S-V	         O	         O
+            the	              -	    I-C-A1	      I-A2	      I-A1	      B-A1	         O	         O
+          peace	              -	    I-C-A1	      I-A2	      I-A1	      I-A1	         O	         O
+        process	              -	    I-C-A1	      I-A2	      E-A1	      E-A1	         O	         O
+              ,	              -	    I-C-A1	      I-A2	         O	         O	         O	         O
+            set	            set	    I-C-A1	      I-A2	  B-AM-ADV	         O	       S-V	         O
+             to	              -	    I-C-A1	      I-A2	  I-AM-ADV	         O	  B-AM-PNC	         O
+         resume	         resume	    I-C-A1	      I-A2	  I-AM-ADV	         O	  I-AM-PNC	       S-V
+         Monday	              -	    I-C-A1	      I-A2	  I-AM-ADV	         O	  I-AM-PNC	  S-AM-TMP
+             in	              -	    I-C-A1	      I-A2	  I-AM-ADV	         O	  I-AM-PNC	  B-AM-LOC
+        Belfast	              -	    E-C-A1	      E-A2	  E-AM-ADV	         O	  E-AM-PNC	  E-AM-LOC
+              .	              -	         O	         O	         O	         O	         O	         O
+
+     Extremists	              -	      S-A0	      S-A0	      S-A0	         O	         O	         O
+           have	           have	       S-V	         O	         O	         O	         O	         O
+         bombed	         bombed	      B-A1	       S-V	         O	         O	         O	         O
+            two	              -	      I-A1	      B-A1	         O	         O	         O	         O
+  predominantly	              -	      I-A1	      I-A1	         O	         O	         O	         O
+    pro-British	              -	      I-A1	      I-A1	         O	         O	         O	         O
+     Protestant	              -	      I-A1	      I-A1	         O	         O	         O	         O
+          towns	              -	      E-A1	      E-A1	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O	         O
+          fired	          fired	         O	         O	       S-V	         O	         O	         O
+         mortar	              -	         O	         O	      B-A1	         O	         O	         O
+         shells	              -	         O	         O	      E-A1	         O	         O	         O
+             at	              -	  B-AM-CAU	         O	  B-AM-LOC	         O	         O	         O
+              a	              -	  I-AM-CAU	         O	  I-AM-LOC	         O	         O	         O
+         police	              -	  I-AM-CAU	         O	  I-AM-LOC	         O	         O	         O
+        station	              -	  I-AM-CAU	         O	  E-AM-LOC	         O	         O	         O
+          since	              -	  I-AM-CAU	         O	  B-AM-CAU	         O	         O	         O
+           Sinn	              -	  I-AM-CAU	         O	  I-AM-CAU	      B-A1	      B-A1	         O
+           Fein	              -	  I-AM-CAU	         O	  I-AM-CAU	      E-A1	      E-A1	         O
+            was	            was	  I-AM-CAU	         O	  I-AM-CAU	       S-V	         O	         O
+       expelled	       expelled	  I-AM-CAU	         O	  I-AM-CAU	      B-A1	       S-V	         O
+           from	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	      B-A2	         O
+          peace	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	      I-A2	         O
+          talks	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	      E-A2	         O
+             on	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  B-AM-TMP	         O
+           Feb.	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  I-AM-TMP	         O
+             20	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  E-AM-TMP	         O
+             in	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  B-AM-PNC	         O
+     punishment	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	         O
+            for	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	         O
+            two	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	      B-A2
+       killings	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	      E-A2
+         blamed	         blamed	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	       S-V
+             on	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	      B-A2
+            the	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	      I-A2
+          Irish	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	      I-A2
+     Republican	              -	  I-AM-CAU	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	      I-A2
+           Army	              -	  E-AM-CAU	         O	  E-AM-CAU	      E-A1	  E-AM-PNC	      E-A2
+              .	              -	         O	         O	         O	         O	         O	         O
+
+         Police	              -	      S-A0
+          found	          found	       S-V
+           more	              -	      B-A3
+           than	              -	      I-A3
+          1,300	              -	      I-A3
+         pounds	              -	      I-A3
+              (	              -	      I-A3
+            600	              -	      I-A3
+            kgs	              -	      I-A3
+              )	              -	      I-A3
+             of	              -	      I-A3
+fertilizer-based	              -	      I-A3
+     explosives	              -	      I-A3
+         Sunday	              -	      I-A3
+             in	              -	      I-A3
+              a	              -	      I-A3
+           shed	              -	      I-A3
+             in	              -	      I-A3
+        Dundalk	              -	      I-A3
+              ,	              -	      I-A3
+             50	              -	      I-A3
+          miles	              -	      I-A3
+              (	              -	      I-A3
+             80	              -	      I-A3
+            kms	              -	      I-A3
+              )	              -	      I-A3
+          south	              -	      I-A3
+             of	              -	      I-A3
+        Belfast	              -	      E-A3
+              .	              -	         O
+
+           They	              -	      S-A0	         O	         O	         O	         O
+       arrested	       arrested	       S-V	         O	         O	         O	         O
+            two	              -	      B-A1	         O	         O	         O	         O
+            men	              -	      I-A1	         O	         O	         O	         O
+             in	              -	      I-A1	         O	         O	         O	         O
+     connection	              -	      I-A1	         O	         O	         O	         O
+           with	              -	      I-A1	         O	         O	         O	         O
+            the	              -	      I-A1	      B-A0	         O	         O	         O
+           bomb	              -	      I-A1	      I-A0	         O	         O	         O
+        factory	              -	      I-A1	      E-A0	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+          which	              -	      I-A1	    S-R-A0	    S-R-A0	         O	         O
+           also	              -	      I-A1	  S-AM-DIS	         O	         O	         O
+      contained	      contained	      I-A1	       S-V	         O	         O	         O
+      circuitry	              -	      I-A1	      B-A1	         O	         O	      B-A0
+              ,	              -	      I-A1	      I-A1	         O	         O	      I-A0
+     detonating	     detonating	      I-A1	      I-A1	       S-V	         O	      I-A0
+           cord	              -	      I-A1	      I-A1	      B-A1	         O	      I-A0
+            and	              -	      I-A1	      I-A1	      I-A1	         O	      I-A0
+            the	              -	      I-A1	      I-A1	      I-A1	         O	      I-A0
+     Mitsubishi	              -	      I-A1	      I-A1	      I-A1	         O	      I-A0
+          truck	              -	      I-A1	      I-A1	      I-A1	         O	      E-A0
+           that	              -	      I-A1	      I-A1	      I-A1	    S-R-A0	    S-R-A0
+          would	              -	      I-A1	      I-A1	      I-A1	  S-AM-MOD	  S-AM-MOD
+           have	           have	      I-A1	      I-A1	      I-A1	       S-V	         O
+        carried	        carried	      I-A1	      I-A1	      I-A1	      B-A1	       S-V
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A1	      B-A1
+           bomb	              -	      E-A1	      E-A1	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	      B-A0	      B-A0	         O
+        British	              -	      I-A0	         O	         O	      I-A0	      I-A0	         O
+            and	              -	      I-A0	         O	         O	      I-A0	      I-A0	         O
+          Irish	              -	      I-A0	         O	         O	      I-A0	      I-A0	         O
+    governments	              -	      E-A0	         O	         O	      E-A0	      I-A0	         O
+              ,	              -	         O	         O	         O	         O	      I-A0	         O
+          which	              -	    S-R-A0	         O	         O	         O	      I-A0	         O
+      cosponsor	      cosponsor	       S-V	         O	         O	         O	      I-A0	         O
+            the	              -	      B-A1	      B-A1	      B-A1	      B-A1	      I-A0	         O
+    multi-party	              -	      I-A1	      I-A1	      I-A1	      I-A1	      I-A0	         O
+          talks	              -	      I-A1	      I-A1	      E-A1	      E-A1	      I-A0	         O
+           that	              -	      I-A1	      E-A1	    S-R-A1	    S-R-A1	      I-A0	         O
+            are	            are	      I-A1	       S-V	         O	         O	      I-A0	         O
+       supposed	       supposed	      I-A1	    B-C-A1	       S-V	         O	      I-A0	         O
+             to	              -	      I-A1	    I-C-A1	      B-A2	         O	      I-A0	         O
+       conclude	       conclude	      I-A1	    I-C-A1	      I-A2	       S-V	      I-A0	         O
+             by	              -	      I-A1	    I-C-A1	      I-A2	         O	      I-A0	         O
+            May	              -	      E-A1	    E-C-A1	      E-A2	         O	      I-A0	         O
+              ,	              -	         O	         O	         O	         O	      E-A0	         O
+        invited	        invited	         O	         O	         O	         O	       S-V	         O
+           Sinn	              -	         O	         O	         O	         O	      B-A1	      B-A0
+           Fein	              -	         O	         O	         O	         O	      E-A1	      E-A0
+             to	              -	         O	         O	         O	         O	      B-A2	         O
+         rejoin	         rejoin	         O	         O	         O	         O	      I-A2	       S-V
+            two	              -	         O	         O	         O	         O	      I-A2	  B-AM-TMP
+          weeks	              -	         O	         O	         O	         O	      I-A2	  I-AM-TMP
+            ago	              -	         O	         O	         O	         O	      E-A2	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            But	              -	  S-AM-DIS	         O
+           Sinn	              -	      B-A0	         O
+           Fein	              -	      I-A0	         O
+         leader	              -	      I-A0	         O
+          Gerry	              -	      I-A0	         O
+          Adams	              -	      E-A0	         O
+           kept	           kept	       S-V	         O
+            his	              -	      B-A1	         O
+          party	              -	      E-A1	         O
+            out	              -	      B-A2	         O
+        pending	        pending	      I-A2	       S-V
+       meetings	              -	      I-A2	      S-A1
+           with	              -	      I-A2	         O
+        British	              -	      I-A2	         O
+          Prime	              -	      I-A2	         O
+       Minister	              -	      I-A2	         O
+           Tony	              -	      I-A2	         O
+          Blair	              -	      E-A2	         O
+             10	              -	  B-AM-TMP	         O
+           days	              -	  I-AM-TMP	         O
+            ago	              -	  I-AM-TMP	         O
+            and	              -	  I-AM-TMP	         O
+      President	              -	  I-AM-TMP	         O
+        Clinton	              -	  I-AM-TMP	         O
+           last	              -	  I-AM-TMP	         O
+           week	              -	  E-AM-TMP	         O
+              .	              -	         O	         O
+
+             ``	              -	         O	         O	         O	         O
+             We	              -	      S-A1	      S-A1	         O	      B-A1
+           were	           were	       S-V	         O	         O	      I-A1
+       unjustly	              -	         O	  S-AM-MNR	         O	      I-A1
+         pushed	         pushed	         O	       S-V	         O	      I-A1
+            out	              -	         O	      B-A2	         O	      I-A1
+             of	              -	         O	      I-A2	         O	      I-A1
+            the	              -	         O	      I-A2	         O	      I-A1
+          talks	              -	         O	      E-A2	         O	      I-A1
+             in	              -	         O	  B-AM-TMP	         O	      I-A1
+       February	              -	         O	  E-AM-TMP	         O	      I-A1
+            but	              -	         O	         O	         O	      I-A1
+             we	              -	         O	         O	      S-A1	      I-A1
+            are	            are	         O	         O	       S-V	      I-A1
+           back	              -	         O	         O	  S-AM-DIR	      E-A1
+              ,	              -	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O
+          Adams	              -	         O	         O	         O	      S-A0
+           said	           said	         O	         O	         O	       S-V
+         Sunday	              -	         O	         O	         O	  S-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+             He	              -	      S-A0	         O	         O
+           said	           said	       S-V	         O	         O
+            the	              -	      B-A1	      B-A0	         O
+          north	              -	      I-A1	      I-A0	         O
+             's	              -	      I-A1	      I-A0	         O
+    substantial	              -	      I-A1	      I-A0	         O
+       Catholic	              -	      I-A1	      I-A0	         O
+       minority	              -	      I-A1	      E-A0	         O
+       demanded	       demanded	      I-A1	       S-V	         O
+              a	              -	      I-A1	      B-A1	      B-A0
+     settlement	              -	      I-A1	      I-A1	      E-A0
+           that	              -	      I-A1	      I-A1	    S-R-A0
+          would	              -	      I-A1	      I-A1	  S-AM-MOD
+        promote	        promote	      I-A1	      I-A1	       S-V
+       Northern	              -	      I-A1	      I-A1	      B-A1
+        Ireland	              -	      I-A1	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1	      I-A1
+       eventual	              -	      I-A1	      I-A1	      I-A1
+    unification	              -	      I-A1	      I-A1	      E-A1
+           with	              -	      I-A1	      I-A1	      B-A2
+            the	              -	      I-A1	      I-A1	      I-A2
+          Irish	              -	      I-A1	      I-A1	      I-A2
+       Republic	              -	      E-A1	      E-A1	      E-A2
+              .	              -	         O	         O	         O
+
+             ``	              -	         O
+   Nationalists	              -	      B-A1
+             in	              -	      I-A1
+            the	              -	      I-A1
+          north	              -	      E-A1
+            are	            are	       S-V
+            not	              -	    B-C-A1
+              a	              -	    I-C-A1
+       minority	              -	    E-C-A1
+             in	              -	  B-AM-LOC
+        someone	              -	  I-AM-LOC
+           else	              -	  I-AM-LOC
+             's	              -	  I-AM-LOC
+        country	              -	  E-AM-LOC
+              .	              -	         O
+
+             We	              -	      S-A1	         O	      B-A1	         O	         O	         O	         O
+            are	            are	       S-V	         O	      I-A1	         O	         O	         O	         O
+          Irish	              -	      B-A1	      B-A0	      I-A1	         O	         O	         O	         O
+       citizens	              -	      E-A1	      E-A0	      I-A1	         O	         O	         O	         O
+              ,	              -	         O	         O	      I-A1	         O	         O	         O	         O
+         living	         living	         O	       S-V	      I-A1	         O	         O	         O	         O
+             in	              -	         O	  B-AM-LOC	      I-A1	         O	         O	         O	         O
+            our	              -	         O	  I-AM-LOC	      I-A1	         O	         O	         O	         O
+            own	              -	         O	  I-AM-LOC	      I-A1	         O	         O	         O	         O
+        country	              -	         O	  E-AM-LOC	      E-A1	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O	         O	         O	         O
+          Adams	              -	         O	         O	      S-A0	      S-A0	         O	         O	         O
+           said	           said	         O	         O	       S-V	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+         adding	         adding	         O	         O	  B-AM-ADV	       S-V	         O	         O	         O
+              :	              -	         O	         O	  I-AM-ADV	         O	         O	         O	         O
+             ``	              -	         O	         O	  I-AM-ADV	         O	         O	         O	         O
+   Nationalists	              -	         O	         O	  I-AM-ADV	      B-A1	      S-A0	      S-A1	      S-A0
+           want	           want	         O	         O	  I-AM-ADV	      I-A1	       S-V	         O	         O
+             to	              -	         O	         O	  I-AM-ADV	      I-A1	      B-A1	         O	         O
+           move	           move	         O	         O	  I-AM-ADV	      I-A1	      I-A1	       S-V	         O
+        towards	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	  B-AM-DIR	         O
+          Irish	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	  I-AM-DIR	         O
+          unity	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	  E-AM-DIR	         O
+            and	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	         O	         O
+            see	            see	         O	         O	  I-AM-ADV	      I-A1	      I-A1	         O	       S-V
+           this	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	         O	      B-A1
+        process	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	         O	      E-A1
+             as	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	         O	  B-AM-TMP
+              a	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	         O	  I-AM-TMP
+         bridge	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	         O	  I-AM-TMP
+             in	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	         O	  I-AM-TMP
+           that	              -	         O	         O	  I-AM-ADV	      I-A1	      I-A1	         O	  I-AM-TMP
+      direction	              -	         O	         O	  E-AM-ADV	      E-A1	      E-A1	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O	         O	         O	         O
+
+            But	              -	  S-AM-DIS	  S-AM-DIS	         O	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A0	      B-A0	      B-A0	         O	         O	         O
+          north	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	         O	         O
+             's	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	         O	         O
+    pro-British	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	         O	         O
+     Protestant	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	         O	         O
+       majority	              -	      E-A1	      E-A0	      E-A0	      E-A0	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O	         O	         O	         O
+       bitterly	              -	    B-C-A1	  S-AM-MNR	         O	         O	         O	         O	         O
+        opposed	        opposed	    I-C-A1	       S-V	         O	         O	         O	         O	         O
+             to	              -	    I-C-A1	      B-A1	         O	         O	         O	         O	         O
+        uniting	        uniting	    I-C-A1	      I-A1	       S-V	         O	         O	         O	         O
+        Ireland	              -	    E-C-A1	      E-A1	      S-A1	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O	         O	         O
+        instead	              -	         O	         O	         O	  S-AM-DIS	         O	         O	         O
+          wants	          wants	         O	         O	         O	       S-V	         O	         O	         O
+              a	              -	         O	         O	         O	      B-A1	         O	      B-A1	      B-A1
+         strong	              -	         O	         O	         O	      I-A1	         O	      I-A1	      I-A1
+     government	              -	         O	         O	         O	      I-A1	         O	      E-A1	      E-A1
+            for	              -	         O	         O	         O	      I-A1	         O	         O	         O
+       Northern	              -	         O	         O	         O	      I-A1	      B-A1	      B-A1	      B-A1
+        Ireland	              -	         O	         O	         O	      I-A1	      E-A1	      E-A1	      E-A1
+              ,	              -	         O	         O	         O	      I-A1	         O	         O	         O
+          which	              -	         O	         O	         O	      I-A1	    S-R-A0	    S-R-A1	    S-R-A1
+            has	            has	         O	         O	         O	      I-A1	       S-V	         O	         O
+           been	           been	         O	         O	         O	      I-A1	         O	       S-V	         O
+          ruled	          ruled	         O	         O	         O	      I-A1	         O	    B-C-A1	       S-V
+       directly	              -	         O	         O	         O	      I-A1	         O	    I-C-A1	  S-AM-MNR
+             by	              -	         O	         O	         O	      I-A1	         O	    I-C-A1	      B-A0
+         London	              -	         O	         O	         O	      I-A1	         O	    E-C-A1	      E-A0
+          since	              -	         O	         O	         O	      I-A1	         O	  B-AM-TMP	  B-AM-TMP
+           1972	              -	         O	         O	         O	      E-A1	         O	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+       Northern	              -	      B-A1	      B-A0	      B-A0
+        Ireland	              -	      I-A1	      I-A0	      I-A0
+             's	              -	      I-A1	      I-A0	      I-A0
+        biggest	              -	      I-A1	      I-A0	      I-A0
+     Protestant	              -	      I-A1	      I-A0	      I-A0
+          party	              -	      E-A1	      I-A0	      I-A0
+              ,	              -	         O	      I-A0	      I-A0
+            the	              -	      B-A1	      I-A0	      I-A0
+         Ulster	              -	      I-A1	      I-A0	      I-A0
+      Unionists	              -	      I-A1	      I-A0	      I-A0
+              ,	              -	      E-A1	      E-A0	      E-A0
+             is	             is	       S-V	         O	         O
+    threatening	    threatening	    B-C-A1	       S-V	         O
+             to	              -	    I-C-A1	      B-A1	         O
+           push	           push	    I-C-A1	      I-A1	       S-V
+            for	              -	    I-C-A1	      I-A1	      B-A2
+           Sinn	              -	    I-C-A1	      I-A1	      I-A2
+           Fein	              -	    I-C-A1	      I-A1	      I-A2
+             's	              -	    I-C-A1	      I-A1	      I-A2
+      expulsion	              -	    I-C-A1	      I-A1	      E-A2
+           once	              -	    I-C-A1	      I-A1	  B-AM-TMP
+          again	              -	    E-C-A1	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+           They	              -	      S-A0	         O
+            say	            say	       S-V	         O
+            IRA	              -	      B-A1	      B-A1
+     commanders	              -	      I-A1	      E-A1
+            are	            are	      I-A1	       S-V
+    responsible	              -	      I-A1	      B-A3
+            for	              -	      I-A1	      I-A3
+            the	              -	      I-A1	      I-A3
+         recent	              -	      I-A1	      I-A3
+           bomb	              -	      I-A1	      I-A3
+        attacks	              -	      E-A1	      E-A3
+              .	              -	         O	         O
+
+           Also	              -	  S-AM-DIS
+         Sunday	              -	  S-AM-TMP
+              ,	              -	         O
+           more	              -	      B-A1
+           than	              -	      I-A1
+          2,000	              -	      I-A1
+       Catholic	              -	      I-A1
+     protesters	              -	      E-A1
+        rallied	        rallied	       S-V
+             in	              -	  B-AM-LOC
+      Portadown	              -	  I-AM-LOC
+        against	              -	  I-AM-LOC
+            the	              -	  I-AM-LOC
+         annual	              -	  I-AM-LOC
+        parades	              -	  I-AM-LOC
+             by	              -	  I-AM-LOC
+            the	              -	  I-AM-LOC
+         Orange	              -	  I-AM-LOC
+          Order	              -	  I-AM-LOC
+              ,	              -	  I-AM-LOC
+       Northern	              -	  I-AM-LOC
+        Ireland	              -	  I-AM-LOC
+             's	              -	  I-AM-LOC
+       dominant	              -	  I-AM-LOC
+     Protestant	              -	  I-AM-LOC
+      fraternal	              -	  I-AM-LOC
+          group	              -	  E-AM-LOC
+              .	              -	         O
+
+ Confrontations	              -	         O	      B-A0
+          among	              -	         O	      I-A0
+       Catholic	              -	         O	      I-A0
+     protesters	              -	         O	      I-A0
+              ,	              -	         O	      I-A0
+     Protestant	              -	      B-A0	      I-A0
+       marchers	              -	      I-A0	      I-A0
+            and	              -	      I-A0	      I-A0
+            the	              -	      I-A0	      I-A0
+         police	              -	      E-A0	      E-A0
+           have	           have	       S-V	         O
+       provoked	       provoked	      B-A1	       S-V
+     widespread	              -	      I-A1	      B-A1
+       violence	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+       Northern	              -	      I-A1	      I-A1
+        Ireland	              -	      I-A1	      E-A1
+            for	              -	      I-A1	  B-AM-TMP
+            the	              -	      I-A1	  I-AM-TMP
+           past	              -	      I-A1	  I-AM-TMP
+          three	              -	      I-A1	  I-AM-TMP
+        summers	              -	      E-A1	  E-AM-TMP
+              .	              -	         O	         O
+
+            The	              -	      B-A1	         O
+       crucible	              -	      E-A1	         O
+             is	             is	       S-V	         O
+      Portadown	              -	  B-AM-LOC	         O
+              ,	              -	  I-AM-LOC	         O
+             30	              -	  I-AM-LOC	         O
+          miles	              -	  I-AM-LOC	         O
+              (	              -	  I-AM-LOC	         O
+             50	              -	  I-AM-LOC	         O
+            kms	              -	  I-AM-LOC	         O
+              )	              -	  I-AM-LOC	         O
+      southwest	              -	  I-AM-LOC	         O
+             of	              -	  I-AM-LOC	         O
+        Belfast	              -	  I-AM-LOC	         O
+              ,	              -	  I-AM-LOC	         O
+          where	              -	  I-AM-LOC	         O
+      Orangemen	              -	  I-AM-LOC	      S-A0
+          march	          march	  I-AM-LOC	       S-V
+           each	              -	  I-AM-LOC	  B-AM-TMP
+           July	              -	  I-AM-LOC	  E-AM-TMP
+           from	              -	  I-AM-LOC	      B-A1
+          their	              -	  I-AM-LOC	      I-A1
+          rural	              -	  I-AM-LOC	      I-A1
+         church	              -	  I-AM-LOC	      I-A1
+           back	              -	  I-AM-LOC	      I-A1
+       downtown	              -	  I-AM-LOC	      I-A1
+              _	              -	  I-AM-LOC	      I-A1
+        through	              -	  I-AM-LOC	      I-A1
+            the	              -	  I-AM-LOC	      I-A1
+           town	              -	  I-AM-LOC	      I-A1
+             's	              -	  I-AM-LOC	      I-A1
+           main	              -	  I-AM-LOC	      I-A1
+       Catholic	              -	  I-AM-LOC	      I-A1
+           area	              -	  E-AM-LOC	      E-A1
+              .	              -	         O	         O
+
+     Protesters	              -	      B-A0	      B-A0	         O	      B-A0	         O
+           from	              -	      I-A0	      I-A0	         O	      I-A0	         O
+        several	              -	      I-A0	      I-A0	         O	      I-A0	         O
+       Catholic	              -	      I-A0	      I-A0	         O	      I-A0	         O
+    communities	              -	      E-A0	      E-A0	         O	      E-A0	         O
+        crowded	        crowded	       S-V	         O	         O	         O	         O
+           into	              -	      B-A1	         O	         O	         O	         O
+      Portadown	              -	      I-A1	      B-A0	         O	         O	         O
+             's	              -	      I-A1	      I-A0	         O	         O	         O
+       Catholic	              -	      I-A1	      I-A0	         O	         O	         O
+       Garvaghy	              -	      I-A1	      I-A0	         O	         O	         O
+           Road	              -	      E-A1	      E-A0	         O	         O	         O
+             to	              -	  B-AM-PNC	         O	         O	         O	         O
+           hear	           hear	  I-AM-PNC	       S-V	         O	         O	         O
+       speakers	              -	  E-AM-PNC	      B-A1	      S-A0	      S-A0	      S-A0
+         demand	         demand	         O	      I-A1	       S-V	         O	         O
+   negotiations	              -	         O	      I-A1	      B-A1	         O	         O
+           with	              -	         O	      I-A1	      I-A1	         O	         O
+         Orange	              -	         O	      I-A1	      I-A1	         O	         O
+          Order	              -	         O	      I-A1	      I-A1	         O	         O
+        leaders	              -	         O	      E-A1	      I-A1	         O	         O
+              ,	              -	         O	         O	      I-A1	         O	         O
+            and	              -	         O	         O	      I-A1	         O	         O
+         pledge	         pledge	         O	         O	      I-A1	       S-V	         O
+             to	              -	         O	         O	      I-A1	      B-A1	         O
+    participate	    participate	         O	         O	      I-A1	      I-A1	       S-V
+             in	              -	         O	         O	      I-A1	      I-A1	      B-A1
+           each	              -	         O	         O	      I-A1	      I-A1	      I-A1
+         others	              -	         O	         O	      I-A1	      I-A1	      I-A1
+              '	              -	         O	         O	      I-A1	      I-A1	      I-A1
+  road-blocking	              -	         O	         O	      I-A1	      I-A1	      I-A1
+       protests	              -	         O	         O	      I-A1	      E-A1	      E-A1
+           this	              -	         O	         O	      I-A1	  B-AM-TMP	  B-AM-TMP
+         summer	              -	         O	         O	      E-A1	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O
+
+             ``	              -	         O	         O	         O	         O	         O	         O
+          Small	              -	      B-A1	         O	      B-A1	      B-A1	      B-A1	         O
+    nationalist	              -	      I-A1	         O	      I-A1	      I-A1	      I-A1	         O
+    communities	              -	      E-A1	         O	      E-A1	      E-A1	      I-A1	         O
+            are	            are	       S-V	         O	         O	         O	      I-A1	         O
+            not	              -	    B-C-A1	  S-AM-NEG	         O	         O	      I-A1	         O
+          going	          going	    I-C-A1	       S-V	  S-AM-MOD	  S-AM-MOD	      I-A1	         O
+             to	              -	    I-C-A1	         O	         O	         O	      I-A1	         O
+             be	             be	    I-C-A1	         O	       S-V	         O	      I-A1	         O
+           left	           left	    I-C-A1	         O	         O	       S-V	      I-A1	         O
+             on	              -	    I-C-A1	         O	         O	      B-A2	      I-A1	         O
+          their	              -	    I-C-A1	         O	         O	      I-A2	      I-A1	         O
+            own	              -	    I-C-A1	         O	         O	      E-A2	      I-A1	         O
+           this	              -	    I-C-A1	         O	         O	  B-AM-TMP	      I-A1	         O
+         summer	              -	    E-C-A1	         O	         O	  E-AM-TMP	      E-A1	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O	         O	         O
+           said	           said	         O	         O	         O	         O	       S-V	         O
+         Gerard	              -	         O	         O	         O	         O	      B-A0	         O
+           Rice	              -	         O	         O	         O	         O	      I-A0	         O
+              ,	              -	         O	         O	         O	         O	      I-A0	         O
+              a	              -	         O	         O	         O	         O	      I-A0	      B-A0
+         former	              -	         O	         O	         O	         O	      I-A0	      I-A0
+            IRA	              -	         O	         O	         O	         O	      I-A0	      I-A0
+       prisoner	              -	         O	         O	         O	         O	      I-A0	      E-A0
+            who	              -	         O	         O	         O	         O	      I-A0	    S-R-A0
+          leads	          leads	         O	         O	         O	         O	      I-A0	       S-V
+    anti-Orange	              -	         O	         O	         O	         O	      I-A0	      B-A1
+       protests	              -	         O	         O	         O	         O	      I-A0	      E-A1
+             in	              -	         O	         O	         O	         O	      I-A0	  B-AM-LOC
+              a	              -	         O	         O	         O	         O	      I-A0	  I-AM-LOC
+       Catholic	              -	         O	         O	         O	         O	      I-A0	  I-AM-LOC
+   neighborhood	              -	         O	         O	         O	         O	      I-A0	  I-AM-LOC
+             of	              -	         O	         O	         O	         O	      I-A0	  I-AM-LOC
+          south	              -	         O	         O	         O	         O	      I-A0	  I-AM-LOC
+        Belfast	              -	         O	         O	         O	         O	      E-A0	  E-AM-LOC
+              .	              -	         O	         O	         O	         O	         O	         O
+
+           Riot	              -	      B-A0	         O	         O	         O
+         police	              -	      I-A0	         O	         O	         O
+             in	              -	      I-A0	         O	         O	         O
+        armored	              -	      I-A0	         O	         O	         O
+           cars	              -	      I-A0	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O
+        shields	              -	      I-A0	         O	         O	         O
+            and	              -	      I-A0	         O	         O	         O
+        helmets	              -	      E-A0	         O	         O	         O
+      prevented	      prevented	       S-V	         O	         O	         O
+              a	              -	      B-A1	         O	         O	         O
+            few	              -	      I-A1	         O	         O	         O
+        hundred	              -	      I-A1	         O	         O	         O
+    Protestants	              -	      E-A1	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+           many	              -	  B-AM-ADV	      S-A0	      B-A0	         O
+         waving	         waving	  I-AM-ADV	       S-V	      I-A0	         O
+        British	              -	  I-AM-ADV	      B-A1	      I-A0	         O
+            and	              -	  I-AM-ADV	      I-A1	      I-A0	         O
+         Ulster	              -	  I-AM-ADV	      I-A1	      I-A0	         O
+          flags	              -	  I-AM-ADV	      E-A1	      I-A0	         O
+              ,	              -	  I-AM-ADV	         O	      E-A0	         O
+           from	              -	  I-AM-ADV	         O	         O	         O
+    interfering	    interfering	  I-AM-ADV	         O	       S-V	         O
+           with	              -	  I-AM-ADV	         O	      B-A1	         O
+            the	              -	  I-AM-ADV	         O	      I-A1	         O
+      Catholics	              -	  I-AM-ADV	         O	      E-A1	         O
+             as	              -	  I-AM-ADV	         O	  B-AM-TMP	         O
+           they	              -	  I-AM-ADV	         O	  I-AM-TMP	      S-A0
+        marched	        marched	  I-AM-ADV	         O	  I-AM-TMP	       S-V
+         within	              -	  I-AM-ADV	         O	  I-AM-TMP	  B-AM-LOC
+      Portadown	              -	  I-AM-ADV	         O	  I-AM-TMP	  I-AM-LOC
+             's	              -	  I-AM-ADV	         O	  I-AM-TMP	  I-AM-LOC
+            few	              -	  I-AM-ADV	         O	  I-AM-TMP	  I-AM-LOC
+       Catholic	              -	  I-AM-ADV	         O	  I-AM-TMP	  I-AM-LOC
+        streets	              -	  E-AM-ADV	         O	  E-AM-TMP	  E-AM-LOC
+              .	              -	         O	         O	         O	         O
+
+        Earlier	              -	      B-A0
+         Sunday	              -	      I-A0
+              ,	              -	      I-A0
+         police	              -	      I-A0
+            and	              -	      I-A0
+       militant	              -	      I-A0
+    Protestants	              -	      E-A0
+        clashed	        clashed	       S-V
+             in	              -	      B-A2
+              a	              -	      I-A2
+    religiously	              -	      I-A2
+      polarized	              -	      I-A2
+           part	              -	      I-A2
+             of	              -	      I-A2
+          north	              -	      I-A2
+        Belfast	              -	      E-A2
+              .	              -	         O
+
+         Police	              -	      S-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             an	              -	      B-A1	      B-A1	      B-A1
+       unmarked	              -	      I-A1	      I-A1	      I-A1
+         police	              -	      I-A1	      I-A1	      I-A1
+            car	              -	      I-A1	      E-A1	      E-A1
+            was	            was	      I-A1	       S-V	         O
+            hit	            hit	      I-A1	      B-A2	       S-V
+           with	              -	      I-A1	      I-A2	      B-A2
+       gasoline	              -	      I-A1	      I-A2	      I-A2
+          bombs	              -	      I-A1	      I-A2	      I-A2
+           from	              -	      I-A1	      I-A2	      I-A2
+            the	              -	      I-A1	      I-A2	      I-A2
+     Protestant	              -	      I-A1	      I-A2	      I-A2
+           side	              -	      E-A1	      E-A2	      E-A2
+              .	              -	         O	         O	         O
+
+           Riot	              -	      B-A0	         O
+         police	              -	      E-A0	         O
+      responded	      responded	       S-V	         O
+           with	              -	      B-A2	         O
+              a	              -	      I-A2	         O
+         volley	              -	      I-A2	         O
+             of	              -	      I-A2	         O
+        plastic	              -	      I-A2	      B-A2
+        bullets	              -	      I-A2	      E-A2
+           that	              -	      I-A2	    S-R-A2
+      scattered	      scattered	      I-A2	       S-V
+              a	              -	      I-A2	      B-A1
+      50-strong	              -	      I-A2	      I-A1
+            mob	              -	      E-A2	      E-A1
+              .	              -	         O	         O
+
+             An	              -	      B-A1	      B-A1	         O
+        elderly	              -	      I-A1	      I-A1	         O
+       Catholic	              -	      I-A1	      I-A1	         O
+            man	              -	      E-A1	      E-A1	         O
+            was	            was	       S-V	         O	         O
+   hospitalized	   hospitalized	  B-AM-TMP	       S-V	         O
+           from	              -	  I-AM-TMP	      B-A2	         O
+           cuts	              -	  I-AM-TMP	      E-A2	         O
+          after	              -	  I-AM-TMP	         O	         O
+              a	              -	  I-AM-TMP	         O	      B-A1
+     Protestant	              -	  I-AM-TMP	         O	      I-A1
+       gasoline	              -	  I-AM-TMP	         O	      I-A1
+           bomb	              -	  I-AM-TMP	         O	      E-A1
+         landed	         landed	  I-AM-TMP	         O	       S-V
+             in	              -	  I-AM-TMP	         O	  B-AM-LOC
+            his	              -	  I-AM-TMP	         O	  I-AM-LOC
+           back	              -	  I-AM-TMP	         O	  I-AM-LOC
+           yard	              -	  E-AM-TMP	         O	  E-AM-LOC
+              .	              -	         O	         O	         O
+
+         Police	              -	      S-A0
+       arrested	       arrested	       S-V
+            six	              -	      B-A1
+    Protestants	              -	      E-A1
+             on	              -	      B-A2
+      suspicion	              -	      I-A2
+             of	              -	      I-A2
+        rioting	              -	      E-A2
+              .	              -	         O
+
+              (	              -
+         sp/eml	              -
+              )	              -
+

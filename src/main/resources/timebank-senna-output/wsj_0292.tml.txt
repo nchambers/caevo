@@ -1,0 +1,269 @@
+        Despite	              -	         O	  B-AM-ADV
+     continuing	     continuing	       S-V	  I-AM-ADV
+       problems	              -	      S-A1	  I-AM-ADV
+             in	              -	         O	  I-AM-ADV
+            its	              -	         O	  I-AM-ADV
+      newsprint	              -	         O	  I-AM-ADV
+       business	              -	         O	  E-AM-ADV
+              ,	              -	         O	         O
+ Kimberly-Clark	              -	         O	      B-A0
+          Corp.	              -	         O	      E-A0
+         posted	         posted	         O	       S-V
+              a	              -	         O	      B-A1
+             20	              -	         O	      I-A1
+              %	              -	         O	      I-A1
+           gain	              -	         O	      I-A1
+             in	              -	         O	      I-A1
+  third-quarter	              -	         O	      I-A1
+            net	              -	         O	      I-A1
+         income	              -	         O	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	         O
+consumer-products	              -	      I-A0	         O
+            and	              -	      I-A0	         O
+      newsprint	              -	      I-A0	         O
+        company	              -	      E-A0	         O
+           said	           said	       S-V	         O
+            net	              -	      B-A1	      S-A1
+           rose	           rose	      I-A1	       S-V
+             to	              -	      I-A1	      B-A4
+              $	              -	      I-A1	      I-A4
+          108.8	              -	      I-A1	      I-A4
+        million	              -	      I-A1	      I-A4
+              ,	              -	      I-A1	      I-A4
+             or	              -	      I-A1	      I-A4
+              $	              -	      I-A1	      I-A4
+           1.35	              -	      I-A1	      I-A4
+              a	              -	      I-A1	      I-A4
+          share	              -	      I-A1	      I-A4
+              ,	              -	      I-A1	      E-A4
+           from	              -	      I-A1	      B-A3
+              $	              -	      I-A1	      I-A3
+           90.5	              -	      I-A1	      I-A3
+        million	              -	      I-A1	      I-A3
+              ,	              -	      I-A1	      I-A3
+             or	              -	      I-A1	      I-A3
+              $	              -	      I-A1	      I-A3
+           1.12	              -	      I-A1	      I-A3
+              a	              -	      I-A1	      I-A3
+          share	              -	      I-A1	      E-A3
+              ,	              -	      I-A1	         O
+              a	              -	      I-A1	    B-C-A3
+           year	              -	      I-A1	    I-C-A3
+            ago	              -	      E-A1	    E-C-A3
+              .	              -	         O	         O
+
+          Sales	              -	      S-A1
+           rose	           rose	       S-V
+            6.2	              -	      B-A2
+              %	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+           1.45	              -	      I-A4
+        billion	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+           1.37	              -	      I-A3
+        billion	              -	      E-A3
+              .	              -	         O
+
+          After	              -	         O	  B-AM-TMP	         O
+              a	              -	      B-A1	  I-AM-TMP	         O
+           flat	              -	      I-A1	  I-AM-TMP	         O
+         second	              -	      I-A1	  I-AM-TMP	         O
+        quarter	              -	      E-A1	  I-AM-TMP	         O
+           tied	           tied	       S-V	  I-AM-TMP	         O
+        largely	              -	  S-AM-ADV	  I-AM-TMP	         O
+             to	              -	      B-A1	  I-AM-TMP	         O
+          lower	              -	      I-A1	  I-AM-TMP	         O
+      newsprint	              -	      I-A1	  I-AM-TMP	         O
+       earnings	              -	      E-A1	  E-AM-TMP	         O
+              ,	              -	         O	         O	         O
+ Kimberly-Clark	              -	         O	      S-A0	         O
+     attributed	     attributed	         O	       S-V	         O
+            the	              -	         O	      B-A1	         O
+           gain	              -	         O	      E-A1	         O
+             to	              -	         O	      B-A2	         O
+       improved	       improved	         O	      I-A2	       S-V
+        results	              -	         O	      I-A2	      S-A1
+             in	              -	         O	      I-A2	         O
+            its	              -	         O	      I-A2	         O
+       consumer	              -	         O	      I-A2	         O
+     businesses	              -	         O	      I-A2	         O
+             in	              -	         O	      I-A2	         O
+          North	              -	         O	      I-A2	         O
+        America	              -	         O	      I-A2	         O
+              ,	              -	         O	      I-A2	         O
+         Brazil	              -	         O	      I-A2	         O
+            and	              -	         O	      I-A2	         O
+          Korea	              -	         O	      E-A2	         O
+              .	              -	         O	         O	         O
+
+          Those	              -	      B-A1	         O	      B-A1
+          gains	              -	      E-A1	         O	      I-A1
+           came	           came	       S-V	         O	      I-A1
+           from	              -	      B-A2	         O	      I-A1
+         higher	              -	      I-A2	         O	      I-A1
+         prices	              -	      I-A2	         O	      I-A1
+              ,	              -	      I-A2	         O	      I-A1
+   particularly	              -	      I-A2	         O	      I-A1
+            for	              -	      I-A2	         O	      I-A1
+     disposable	              -	      I-A2	         O	      I-A1
+        diapers	              -	      I-A2	         O	      I-A1
+            and	              -	      I-A2	         O	      I-A1
+         tissue	              -	      I-A2	         O	      I-A1
+       products	              -	      I-A2	         O	      I-A1
+              ,	              -	      I-A2	         O	      I-A1
+            and	              -	      I-A2	         O	      I-A1
+           from	              -	      I-A2	         O	      I-A1
+      increased	      increased	      I-A2	       S-V	      I-A1
+          sales	              -	      I-A2	      S-A1	      I-A1
+              ,	              -	      I-A2	         O	      I-A1
+      primarily	              -	      I-A2	         O	      I-A1
+            for	              -	      I-A2	         O	      I-A1
+  feminine-care	              -	      I-A2	         O	      I-A1
+       products	              -	      E-A2	         O	      E-A1
+              ,	              -	         O	         O	         O
+            the	              -	         O	         O	      B-A0
+        company	              -	         O	         O	      E-A0
+           said	           said	         O	         O	       S-V
+              .	              -	         O	         O	         O
+
+      Newsprint	              -	      B-A1	      B-A1	      B-A1	      B-A1
+        results	              -	      E-A1	      E-A1	      E-A1	      I-A1
+      continued	      continued	       S-V	         O	         O	      I-A1
+             to	              -	    B-C-A1	         O	         O	      I-A1
+             be	             be	    I-C-A1	       S-V	         O	      I-A1
+      depressed	      depressed	    E-C-A1	         O	       S-V	      E-A1
+              ,	              -	         O	         O	         O	         O
+            the	              -	         O	         O	         O	      B-A0
+        company	              -	         O	         O	         O	      E-A0
+          added	          added	         O	         O	         O	       S-V
+              ,	              -	         O	         O	         O	         O
+        because	              -	  B-AM-CAU	  B-AM-CAU	         O	  B-AM-CAU
+             of	              -	  I-AM-CAU	  I-AM-CAU	         O	  I-AM-CAU
+   industrywide	              -	  I-AM-CAU	  I-AM-CAU	         O	  I-AM-CAU
+          price	              -	  I-AM-CAU	  I-AM-CAU	         O	  I-AM-CAU
+    discounting	              -	  E-AM-CAU	  E-AM-CAU	         O	  E-AM-CAU
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1	         O	         O	         O
+quarter-to-quarter	              -	      I-A1	      I-A1	         O	         O	         O
+     comparison	              -	      E-A1	      E-A1	         O	         O	         O
+            was	            was	       S-V	         O	         O	         O	         O
+           also	              -	    B-C-A1	  S-AM-DIS	         O	         O	         O
+       enhanced	       enhanced	    I-C-A1	       S-V	         O	         O	         O
+             by	              -	    I-C-A1	      B-A2	         O	         O	         O
+        charges	              -	    I-C-A1	      I-A2	      S-A1	      B-A2	         O
+          taken	          taken	    I-C-A1	      I-A2	       S-V	      I-A2	         O
+             in	              -	    I-C-A1	      I-A2	  B-AM-TMP	      I-A2	         O
+            the	              -	    I-C-A1	      I-A2	  I-AM-TMP	      I-A2	         O
+   year-earlier	              -	    I-C-A1	      I-A2	  I-AM-TMP	      I-A2	         O
+         period	              -	    I-C-A1	      I-A2	  E-AM-TMP	      E-A2	         O
+              ,	              -	    I-C-A1	      I-A2	         O	         O	         O
+      including	      including	    I-C-A1	      I-A2	         O	       S-V	         O
+              $	              -	    I-C-A1	      I-A2	         O	      B-A1	      B-A1
+             11	              -	    I-C-A1	      I-A2	         O	      I-A1	      I-A1
+        million	              -	    I-C-A1	      I-A2	         O	      I-A1	      E-A1
+        related	        related	    I-C-A1	      I-A2	         O	      I-A1	       S-V
+             to	              -	    I-C-A1	      I-A2	         O	      I-A1	      B-A2
+            the	              -	    I-C-A1	      I-A2	         O	      I-A1	      I-A2
+  modernization	              -	    I-C-A1	      I-A2	         O	      I-A1	      I-A2
+             of	              -	    I-C-A1	      I-A2	         O	      I-A1	      I-A2
+              a	              -	    I-C-A1	      I-A2	         O	      I-A1	      I-A2
+           pulp	              -	    I-C-A1	      I-A2	         O	      I-A1	      I-A2
+            and	              -	    I-C-A1	      I-A2	         O	      I-A1	      I-A2
+      newsprint	              -	    I-C-A1	      I-A2	         O	      I-A1	      I-A2
+           mill	              -	    I-C-A1	      I-A2	         O	      I-A1	      I-A2
+             in	              -	    I-C-A1	      I-A2	         O	      I-A1	      I-A2
+        Alabama	              -	    E-C-A1	      E-A2	         O	      E-A1	      E-A2
+              .	              -	         O	         O	         O	         O	         O
+
+             In	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+           1989	              -	  I-AM-TMP
+         period	              -	  I-AM-TMP
+           also	              -	  E-AM-TMP
+              ,	              -	         O
+       interest	              -	      B-A1
+        expense	              -	      I-A1
+            and	              -	      I-A1
+            tax	              -	      I-A1
+          rates	              -	      E-A1
+           were	           were	       S-V
+          lower	              -	    B-C-A1
+           than	              -	    I-C-A1
+              a	              -	    I-C-A1
+           year	              -	    I-C-A1
+            ago	              -	    E-C-A1
+              .	              -	         O
+
+             In	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+          first	              -	  I-AM-TMP
+           nine	              -	  I-AM-TMP
+         months	              -	  E-AM-TMP
+              ,	              -	         O
+         profit	              -	      S-A1
+           rose	           rose	       S-V
+             10	              -	      B-A2
+              %	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+          313.2	              -	      I-A4
+        million	              -	      I-A4
+              ,	              -	      I-A4
+             or	              -	      I-A4
+              $	              -	      I-A4
+           3.89	              -	      I-A4
+              a	              -	      I-A4
+          share	              -	      I-A4
+              ,	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+          283.9	              -	      I-A3
+        million	              -	      I-A3
+              ,	              -	      I-A3
+             or	              -	      I-A3
+              $	              -	      I-A3
+           3.53	              -	      I-A3
+              a	              -	      I-A3
+          share	              -	      E-A3
+              .	              -	         O
+
+          Sales	              -	      S-A1
+           rose	           rose	       S-V
+            6.7	              -	      B-A2
+              %	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+           4.27	              -	      I-A4
+        billion	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+              4	              -	      I-A3
+        billion	              -	      E-A3
+              .	              -	         O
+
+             In	              -	  B-AM-LOC
+            New	              -	  I-AM-LOC
+           York	              -	  I-AM-LOC
+          Stock	              -	  I-AM-LOC
+       Exchange	              -	  I-AM-LOC
+      composite	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+              ,	              -	         O
+ Kimberly-Clark	              -	      S-A1
+         closed	         closed	       S-V
+             at	              -	  B-AM-EXT
+              $	              -	  I-AM-EXT
+          66.50	              -	  I-AM-EXT
+              a	              -	  I-AM-EXT
+          share	              -	  E-AM-EXT
+              ,	              -	         O
+             up	              -	  B-AM-MNR
+              $	              -	  I-AM-MNR
+           1.50	              -	  E-AM-MNR
+              .	              -	         O
+

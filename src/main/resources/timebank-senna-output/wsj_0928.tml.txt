@@ -1,0 +1,368 @@
+            Sun	              -	      B-A1	      B-A0	         O
+   Microsystems	              -	      I-A1	      I-A0	         O
+           Inc.	              -	      E-A1	      E-A0	         O
+              ,	              -	         O	         O	         O
+       snapping	       snapping	       S-V	  B-AM-ADV	         O
+           back	              -	  S-AM-DIR	  I-AM-ADV	         O
+             to	              -	      B-A2	  I-AM-ADV	         O
+  profitability	              -	      E-A2	  I-AM-ADV	         O
+          after	              -	  B-AM-TMP	  I-AM-ADV	         O
+            its	              -	  I-AM-TMP	  I-AM-ADV	         O
+          first	              -	  I-AM-TMP	  I-AM-ADV	         O
+      quarterly	              -	  I-AM-TMP	  I-AM-ADV	         O
+           loss	              -	  I-AM-TMP	  I-AM-ADV	         O
+             as	              -	  I-AM-TMP	  I-AM-ADV	         O
+              a	              -	  I-AM-TMP	  I-AM-ADV	         O
+         public	              -	  I-AM-TMP	  I-AM-ADV	         O
+           firm	              -	  E-AM-TMP	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O
+           said	           said	         O	       S-V	         O
+             it	              -	         O	      B-A1	      S-A0
+         earned	         earned	         O	      I-A1	       S-V
+              $	              -	         O	      I-A1	      B-A1
+            5.2	              -	         O	      I-A1	      I-A1
+        million	              -	         O	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      I-A1
+             or	              -	         O	      I-A1	      I-A1
+          seven	              -	         O	      I-A1	      I-A1
+          cents	              -	         O	      I-A1	      I-A1
+              a	              -	         O	      I-A1	      I-A1
+          share	              -	         O	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      E-A1
+             in	              -	         O	      I-A1	  B-AM-TMP
+            the	              -	         O	      I-A1	  I-AM-TMP
+         fiscal	              -	         O	      I-A1	  I-AM-TMP
+          first	              -	         O	      I-A1	  I-AM-TMP
+        quarter	              -	         O	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+            Sun	              -	      B-A0	         O
+              ,	              -	      I-A0	         O
+              a	              -	      I-A0	         O
+          maker	              -	      I-A0	         O
+             of	              -	      I-A0	         O
+       computer	              -	      I-A0	         O
+   workstations	              -	      I-A0	         O
+              ,	              -	      E-A0	         O
+       reported	       reported	       S-V	         O
+          sales	              -	      B-A1	         O
+             of	              -	      I-A1	         O
+              $	              -	      I-A1	         O
+          538.5	              -	      I-A1	         O
+        million	              -	      I-A1	         O
+            for	              -	      I-A1	         O
+            the	              -	      I-A1	      B-A1
+        quarter	              -	      I-A1	      E-A1
+          ended	          ended	      I-A1	       S-V
+          Sept.	              -	      I-A1	  B-AM-TMP
+             29	              -	      I-A1	  E-AM-TMP
+              ,	              -	      I-A1	         O
+             up	              -	      I-A1	         O
+             39	              -	      I-A1	         O
+              %	              -	      I-A1	         O
+           from	              -	      I-A1	         O
+              $	              -	      I-A1	         O
+          388.5	              -	      I-A1	         O
+        million	              -	      I-A1	         O
+              a	              -	      I-A1	         O
+           year	              -	      I-A1	         O
+        earlier	              -	      E-A1	         O
+              .	              -	         O	         O
+
+             In	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+           1988	              -	  I-AM-TMP
+         period	              -	  E-AM-TMP
+              ,	              -	         O
+            the	              -	      B-A0
+        company	              -	      E-A0
+         earned	         earned	       S-V
+              $	              -	      B-A1
+           20.6	              -	      I-A1
+        million	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+             26	              -	      I-A1
+          cents	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      E-A1
+              .	              -	         O
+
+            Sun	              -	      B-A1
+             's	              -	      I-A1
+        results	              -	      E-A1
+           were	           were	       S-V
+       slightly	              -	  B-AM-MNR
+         better	              -	  I-AM-MNR
+           than	              -	  I-AM-MNR
+   expectations	              -	  E-AM-MNR
+              .	              -	         O
+
+        Earlier	              -	  B-AM-TMP	         O	         O
+           this	              -	  I-AM-TMP	         O	         O
+          month	              -	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O
+            the	              -	      B-A0	         O	         O
+        company	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             it	              -	      B-A1	      S-A0	      S-A0
+       expected	       expected	      I-A1	       S-V	         O
+             to	              -	      I-A1	      B-A1	         O
+          break	          break	      I-A1	      I-A1	       S-V
+           even	              -	      I-A1	      I-A1	  B-AM-TMP
+            for	              -	      I-A1	      I-A1	  I-AM-TMP
+            the	              -	      I-A1	      I-A1	  I-AM-TMP
+        quarter	              -	      I-A1	      I-A1	  E-AM-TMP
+             on	              -	      I-A1	      I-A1	  B-AM-MNR
+          sales	              -	      I-A1	      I-A1	  I-AM-MNR
+             of	              -	      I-A1	      I-A1	  I-AM-MNR
+              $	              -	      I-A1	      I-A1	  I-AM-MNR
+            530	              -	      I-A1	      I-A1	  I-AM-MNR
+        million	              -	      E-A1	      E-A1	  E-AM-MNR
+              .	              -	         O	         O	         O
+
+             In	              -	  B-AM-LOC	         O	         O	         O
+              a	              -	  I-AM-LOC	         O	         O	         O
+      statement	              -	  E-AM-LOC	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+          Scott	              -	      B-A0	         O	         O	         O
+        McNealy	              -	      I-A0	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O
+            Sun	              -	      I-A0	         O	         O	         O
+             's	              -	      I-A0	         O	         O	         O
+          chief	              -	      I-A0	         O	         O	         O
+      executive	              -	      I-A0	         O	         O	         O
+        officer	              -	      I-A0	         O	         O	         O
+              ,	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            the	              -	      B-A1	      B-A1	      B-A1	         O
+        company	              -	      I-A1	      I-A1	      I-A1	         O
+             's	              -	      I-A1	      I-A1	      I-A1	         O
+    performance	              -	      I-A1	      E-A1	      E-A1	         O
+            was	            was	      I-A1	       S-V	         O	         O
+       hampered	       hampered	      I-A1	  B-AM-CAU	       S-V	         O
+             by	              -	      I-A1	  I-AM-CAU	      B-A0	         O
+       problems	              -	      I-A1	  I-AM-CAU	      I-A0	      S-A1
+           tied	           tied	      I-A1	  I-AM-CAU	      I-A0	       S-V
+             to	              -	      I-A1	  I-AM-CAU	      I-A0	      B-A1
+            the	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1
+   introduction	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1
+             of	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1
+              a	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1
+          major	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1
+            new	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1
+         family	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1
+             of	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1
+      computers	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1
+             in	              -	      I-A1	  I-AM-CAU	      I-A0	      I-A1
+          April	              -	      E-A1	  E-AM-CAU	      E-A0	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            One	              -	      B-A1	      B-A0	         O	      B-A1
+             of	              -	      I-A1	      I-A0	         O	      I-A1
+          those	              -	      I-A1	      I-A0	         O	      I-A1
+            new	              -	      I-A1	      I-A0	         O	      I-A1
+      computers	              -	      E-A1	      I-A0	         O	      I-A1
+              ,	              -	         O	      I-A0	         O	      I-A1
+         called	         called	       S-V	      I-A0	         O	      I-A1
+   Sparcstation	              -	      B-A2	      I-A0	         O	      I-A1
+              1	              -	      E-A2	      I-A0	         O	      I-A1
+              ,	              -	         O	      E-A0	         O	      I-A1
+      accounted	      accounted	         O	       S-V	         O	      I-A1
+            for	              -	         O	      B-A1	         O	      I-A1
+         nearly	              -	         O	      I-A1	         O	      I-A1
+           half	              -	         O	      I-A1	         O	      I-A1
+             of	              -	         O	      I-A1	         O	      I-A1
+            the	              -	         O	      I-A1	      B-A1	      I-A1
+         28,000	              -	         O	      I-A1	      I-A1	      I-A1
+        systems	              -	         O	      I-A1	      E-A1	      I-A1
+            Sun	              -	         O	      I-A1	      S-A0	      I-A1
+        shipped	        shipped	         O	      I-A1	       S-V	      I-A1
+             in	              -	         O	      I-A1	  B-AM-TMP	      I-A1
+            the	              -	         O	      I-A1	  I-AM-TMP	      I-A1
+        quarter	              -	         O	      E-A1	  E-AM-TMP	      E-A1
+              ,	              -	         O	         O	         O	         O
+             he	              -	         O	         O	         O	      S-A0
+           said	           said	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+           More	              -	         O	      B-A1	         O
+           than	              -	         O	      I-A1	         O
+     two-thirds	              -	         O	      I-A1	         O
+             of	              -	         O	      I-A1	         O
+            the	              -	      B-A1	      I-A1	         O
+        systems	              -	      E-A1	      I-A1	         O
+        shipped	        shipped	       S-V	      E-A1	         O
+              ,	              -	         O	         O	         O
+      meanwhile	              -	         O	  S-AM-TMP	         O
+              ,	              -	         O	         O	         O
+           were	           were	         O	       S-V	         O
+       products	              -	         O	      B-A1	      S-A1
+     introduced	     introduced	         O	      I-A1	       S-V
+             in	              -	         O	      I-A1	  B-AM-TMP
+          April	              -	         O	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+            But	              -	         O	         O	  S-AM-DIS	         O
+       problems	              -	         O	         O	      B-A0	         O
+             in	              -	         O	         O	      I-A0	         O
+  manufacturing	              -	         O	         O	      I-A0	         O
+              ,	              -	         O	         O	      I-A0	         O
+    forecasting	    forecasting	       S-V	         O	      I-A0	         O
+         demand	              -	      S-A1	         O	      I-A0	         O
+            and	              -	         O	         O	      I-A0	         O
+        getting	        getting	         O	       S-V	      I-A0	         O
+            the	              -	         O	      B-A1	      I-A0	         O
+           bugs	              -	         O	      E-A1	      I-A0	         O
+            out	              -	         O	      B-A2	      I-A0	         O
+             of	              -	         O	      I-A2	      I-A0	         O
+              a	              -	         O	      I-A2	      I-A0	         O
+            new	              -	         O	      I-A2	      I-A0	         O
+     management	              -	         O	      I-A2	      I-A0	         O
+    information	              -	         O	      I-A2	      I-A0	         O
+         system	              -	         O	      E-A2	      E-A0	         O
+           made	           made	         O	         O	       S-V	         O
+             it	              -	         O	         O	         O	         O
+      extremely	              -	         O	         O	      B-A2	         O
+      difficult	              -	         O	         O	      E-A2	         O
+            for	              -	         O	         O	      B-A1	         O
+            Sun	              -	         O	         O	      I-A1	      S-A0
+             to	              -	         O	         O	      I-A1	         O
+           meet	           meet	         O	         O	      I-A1	       S-V
+         demand	              -	         O	         O	      I-A1	      B-A1
+            for	              -	         O	         O	      I-A1	      I-A1
+            its	              -	         O	         O	      I-A1	      I-A1
+         newest	              -	         O	         O	      I-A1	      I-A1
+      computers	              -	         O	         O	      I-A1	      E-A1
+           well	              -	         O	         O	      I-A1	         O
+           into	              -	         O	         O	      I-A1	         O
+            the	              -	         O	         O	      I-A1	         O
+         summer	              -	         O	         O	      E-A1	         O
+              .	              -	         O	         O	         O	         O
+
+          These	              -	      B-A1	         O	         O
+       problems	              -	      E-A1	         O	         O
+           also	              -	  S-AM-DIS	         O	         O
+       resulted	       resulted	       S-V	         O	         O
+             in	              -	      B-A2	         O	         O
+            Sun	              -	      I-A2	      S-A0	         O
+      reporting	      reporting	      I-A2	       S-V	         O
+              a	              -	      I-A2	      B-A1	         O
+              $	              -	      I-A2	      I-A1	         O
+           20.3	              -	      I-A2	      I-A1	         O
+        million	              -	      I-A2	      I-A1	         O
+           loss	              -	      I-A2	      E-A1	         O
+            for	              -	      I-A2	  B-AM-TMP	         O
+            its	              -	      I-A2	  I-AM-TMP	      B-A1
+         fourth	              -	      I-A2	  I-AM-TMP	      I-A1
+        quarter	              -	      I-A2	  I-AM-TMP	      E-A1
+          ended	          ended	      I-A2	  I-AM-TMP	       S-V
+           June	              -	      I-A2	  I-AM-TMP	  B-AM-TMP
+             30	              -	      E-A2	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+            Mr.	              -	      B-A0	         O	         O	         O	         O
+        McNealy	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A2	      B-A1	         O	         O
+         issues	              -	      I-A1	      E-A2	      I-A1	         O	         O
+           that	              -	      I-A1	    S-R-A2	      I-A1	         O	         O
+           hurt	           hurt	      I-A1	       S-V	      I-A1	         O	         O
+            Sun	              -	      I-A1	      B-A1	      I-A1	         O	         O
+             's	              -	      I-A1	      I-A1	      I-A1	         O	         O
+    performance	              -	      I-A1	      E-A1	      I-A1	         O	         O
+        earlier	              -	      I-A1	  B-AM-TMP	      I-A1	         O	         O
+           this	              -	      I-A1	  I-AM-TMP	      I-A1	         O	         O
+           year	              -	      I-A1	  E-AM-TMP	      E-A1	         O	         O
+            are	            are	      I-A1	         O	       S-V	         O	         O
+            now	              -	      I-A1	         O	  S-AM-TMP	         O	         O
+        largely	              -	      I-A1	         O	    B-C-A1	         O	         O
+         behind	              -	      I-A1	         O	    I-C-A1	         O	         O
+            the	              -	      I-A1	         O	    I-C-A1	         O	         O
+           firm	              -	      I-A1	         O	    E-C-A1	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+            and	              -	      I-A1	         O	         O	         O	         O
+             he	              -	      I-A1	         O	         O	      S-A0	         O
+      indicated	      indicated	      I-A1	         O	         O	       S-V	         O
+           that	              -	      I-A1	         O	         O	      B-A1	         O
+            Sun	              -	      I-A1	         O	         O	      I-A1	      B-A1
+             's	              -	      I-A1	         O	         O	      I-A1	      I-A1
+  profitability	              -	      I-A1	         O	         O	      I-A1	      E-A1
+         should	              -	      I-A1	         O	         O	      I-A1	  S-AM-MOD
+       increase	       increase	      I-A1	         O	         O	      I-A1	       S-V
+     throughout	              -	      I-A1	         O	         O	      I-A1	  B-AM-TMP
+            the	              -	      I-A1	         O	         O	      I-A1	  I-AM-TMP
+         fiscal	              -	      I-A1	         O	         O	      I-A1	  I-AM-TMP
+           year	              -	      E-A1	         O	         O	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O
+
+            Sun	              -	      S-A0
+           also	              -	  S-AM-DIS
+       reported	       reported	       S-V
+              a	              -	      B-A1
+         record	              -	      I-A1
+        backlog	              -	      I-A1
+             of	              -	      I-A1
+         orders	              -	      E-A1
+              .	              -	         O
+
+          While	              -	         O	         O	  B-AM-ADV	         O
+           this	              -	      S-A0	         O	  I-AM-ADV	         O
+      indicates	      indicates	       S-V	         O	  I-AM-ADV	         O
+      continued	      continued	      B-A1	       S-V	  I-AM-ADV	         O
+         strong	              -	      I-A1	      B-A1	  I-AM-ADV	         O
+         demand	              -	      I-A1	      E-A1	  I-AM-ADV	         O
+            for	              -	      I-A1	         O	  I-AM-ADV	         O
+            the	              -	      I-A1	         O	  I-AM-ADV	         O
+        company	              -	      I-A1	         O	  I-AM-ADV	         O
+             's	              -	      I-A1	         O	  I-AM-ADV	         O
+       desk-top	              -	      I-A1	         O	  I-AM-ADV	         O
+      computers	              -	      E-A1	         O	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O	         O
+            Sun	              -	         O	         O	      S-A0	         O
+          faces	          faces	         O	         O	       S-V	         O
+     increasing	     increasing	         O	         O	      B-A1	       S-V
+    competition	              -	         O	         O	      I-A1	      S-A1
+           from	              -	         O	         O	      I-A1	         O
+        Digital	              -	         O	         O	      I-A1	         O
+      Equipment	              -	         O	         O	      I-A1	         O
+          Corp.	              -	         O	         O	      I-A1	         O
+            and	              -	         O	         O	      I-A1	         O
+Hewlett-Packard	              -	         O	         O	      I-A1	         O
+             Co	              -	         O	         O	      E-A1	         O
+              .	              -	         O	         O	         O	         O
+
+       Recently	              -	  S-AM-TMP	  S-AM-TMP	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+       analysts	              -	      S-A0	      S-A0	         O	         O	         O
+           have	           have	       S-V	         O	         O	         O	         O
+           said	           said	      B-A1	       S-V	         O	         O	         O
+            Sun	              -	      I-A1	      B-A1	      S-A1	         O	         O
+           also	              -	      I-A1	      I-A1	  S-AM-DIS	         O	         O
+             is	             is	      I-A1	      I-A1	       S-V	         O	         O
+     vulnerable	              -	      I-A1	      I-A1	      B-A1	         O	         O
+             to	              -	      I-A1	      I-A1	      I-A1	         O	         O
+    competition	              -	      I-A1	      I-A1	      I-A1	         O	         O
+           from	              -	      I-A1	      I-A1	      I-A1	         O	         O
+  International	              -	      I-A1	      I-A1	      I-A1	      B-A0	      B-A0
+       Business	              -	      I-A1	      I-A1	      I-A1	      I-A0	      I-A0
+       Machines	              -	      I-A1	      I-A1	      I-A1	      I-A0	      I-A0
+          Corp.	              -	      I-A1	      I-A1	      I-A1	      E-A0	      E-A0
+              ,	              -	      I-A1	      I-A1	      I-A1	         O	         O
+          which	              -	      I-A1	      I-A1	      I-A1	    S-R-A0	    S-R-A0
+          plans	          plans	      I-A1	      I-A1	      I-A1	       S-V	         O
+             to	              -	      I-A1	      I-A1	      I-A1	      B-A1	         O
+      introduce	      introduce	      I-A1	      I-A1	      I-A1	      I-A1	       S-V
+              a	              -	      I-A1	      I-A1	      I-A1	      I-A1	      B-A1
+          group	              -	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1
+   workstations	              -	      I-A1	      I-A1	      I-A1	      I-A1	      E-A1
+          early	              -	      I-A1	      I-A1	      I-A1	      I-A1	  B-AM-TMP
+           next	              -	      I-A1	      I-A1	      I-A1	      I-A1	  I-AM-TMP
+           year	              -	      E-A1	      I-A1	      I-A1	      E-A1	  E-AM-TMP
+              ,	              -	         O	      I-A1	      I-A1	         O	         O
+            and	              -	         O	      I-A1	      I-A1	         O	         O
+           Next	              -	         O	      I-A1	      I-A1	         O	         O
+            Inc	              -	         O	      E-A1	      E-A1	         O	         O
+              .	              -	         O	         O	         O	         O	         O
+

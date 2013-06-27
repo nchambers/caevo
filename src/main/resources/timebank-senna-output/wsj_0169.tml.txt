@@ -1,0 +1,168 @@
+        Ratners	              -	      B-A0	         O	         O	         O	         O
+          Group	              -	      I-A0	         O	         O	         O	         O
+            PLC	              -	      I-A0	         O	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O	         O
+              a	              -	      I-A0	         O	         O	         O	         O
+   fast-growing	              -	      I-A0	         O	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O	         O
+acquisition-minded	              -	      I-A0	         O	         O	         O	         O
+   London-based	              -	      I-A0	         O	         O	         O	         O
+        jeweler	              -	      I-A0	         O	         O	         O	         O
+              ,	              -	      E-A0	         O	         O	         O	         O
+         raised	         raised	       S-V	         O	         O	         O	         O
+            its	              -	      B-A1	         O	         O	         O	         O
+          price	              -	      I-A1	         O	         O	         O	         O
+            for	              -	      I-A1	         O	         O	         O	         O
+  Seattle-based	              -	      I-A1	         O	         O	         O	         O
+      specialty	              -	      I-A1	         O	         O	         O	         O
+        jeweler	              -	      I-A1	         O	         O	         O	         O
+      Weisfield	              -	      I-A1	         O	         O	         O	         O
+             's	              -	      I-A1	         O	         O	         O	         O
+           Inc.	              -	      E-A1	         O	         O	         O	         O
+             to	              -	      B-A4	         O	         O	         O	         O
+              $	              -	      I-A4	         O	         O	         O	         O
+          57.50	              -	      I-A4	         O	         O	         O	         O
+              a	              -	      I-A4	         O	         O	         O	         O
+          share	              -	      I-A4	         O	         O	         O	         O
+              ,	              -	      I-A4	         O	         O	         O	         O
+             or	              -	      I-A4	         O	         O	         O	         O
+              $	              -	      I-A4	         O	         O	         O	         O
+           62.1	              -	      I-A4	         O	         O	         O	         O
+        million	              -	      E-A4	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+           from	              -	  B-AM-MNR	         O	         O	         O	         O
+              $	              -	  I-AM-MNR	         O	         O	         O	         O
+             50	              -	  I-AM-MNR	         O	         O	         O	         O
+              a	              -	  I-AM-MNR	         O	         O	         O	         O
+          share	              -	  I-AM-MNR	         O	         O	         O	         O
+              ,	              -	  I-AM-MNR	         O	         O	         O	         O
+             or	              -	  I-AM-MNR	         O	         O	         O	         O
+              $	              -	  I-AM-MNR	         O	         O	         O	         O
+             55	              -	  I-AM-MNR	         O	         O	         O	         O
+        million	              -	  E-AM-MNR	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+          after	              -	  B-AM-TMP	         O	         O	         O	         O
+        another	              -	  I-AM-TMP	      B-A0	         O	         O	         O
+        concern	              -	  I-AM-TMP	      E-A0	         O	         O	         O
+           said	           said	  I-AM-TMP	       S-V	         O	         O	         O
+             it	              -	  I-AM-TMP	      B-A1	      S-A1	      S-A1	      S-A0
+          would	              -	  I-AM-TMP	      I-A1	  S-AM-MOD	  S-AM-MOD	         O
+             be	             be	  I-AM-TMP	      I-A1	       S-V	         O	         O
+       prepared	       prepared	  I-AM-TMP	      I-A1	      B-A1	       S-V	         O
+             to	              -	  I-AM-TMP	      I-A1	      I-A1	      B-A2	         O
+         outbid	         outbid	  I-AM-TMP	      I-A1	      I-A1	      I-A2	       S-V
+        Ratners	              -	  I-AM-TMP	      I-A1	      I-A1	      I-A2	      B-A1
+             's	              -	  I-AM-TMP	      I-A1	      I-A1	      I-A2	      I-A1
+        initial	              -	  I-AM-TMP	      I-A1	      I-A1	      I-A2	      I-A1
+          offer	              -	  E-AM-TMP	      E-A1	      E-A1	      E-A2	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1
+          other	              -	      I-A1	      I-A1
+        concern	              -	      E-A1	      E-A1
+            was	            was	       S-V	         O
+            n't	              -	  S-AM-NEG	  S-AM-NEG
+     identified	     identified	         O	       S-V
+              .	              -	         O	         O
+
+        Ratners	              -	      B-A0	         O
+             's	              -	      I-A0	         O
+       chairman	              -	      I-A0	         O
+              ,	              -	      I-A0	         O
+         Gerald	              -	      I-A0	         O
+         Ratner	              -	      I-A0	         O
+              ,	              -	      E-A0	         O
+           said	           said	       S-V	         O
+            the	              -	      B-A1	      B-A1
+           deal	              -	      I-A1	      E-A1
+        remains	        remains	      I-A1	       S-V
+             of	              -	      I-A1	      B-A3
+    substantial	              -	      I-A1	      I-A3
+        benefit	              -	      I-A1	      I-A3
+             to	              -	      I-A1	      I-A3
+        Ratners	              -	      E-A1	      E-A3
+              .	              -	         O	         O
+
+             In	              -	  B-AM-LOC
+         London	              -	  I-AM-LOC
+             at	              -	  I-AM-LOC
+  mid-afternoon	              -	  E-AM-LOC
+      yesterday	              -	  S-AM-TMP
+              ,	              -	         O
+        Ratners	              -	      B-A1
+             's	              -	      I-A1
+         shares	              -	      E-A1
+           were	           were	       S-V
+             up	              -	    B-C-A1
+              2	              -	    I-C-A1
+          pence	              -	    I-C-A1
+              (	              -	    I-C-A1
+           1.26	              -	    I-C-A1
+          cents	              -	    I-C-A1
+              )	              -	    E-C-A1
+              ,	              -	         O
+             at	              -	      B-A3
+            260	              -	      I-A3
+          pence	              -	      I-A3
+              (	              -	      I-A3
+              $	              -	      I-A3
+           1.64	              -	      I-A3
+              )	              -	      E-A3
+              .	              -	         O
+
+            The	              -	         O	      B-A0	         O	         O
+      sweetened	      sweetened	       S-V	      I-A0	         O	         O
+          offer	              -	      S-A1	      E-A0	         O	         O
+            has	            has	         O	       S-V	         O	         O
+    acceptances	              -	         O	      B-A1	         O	         O
+           from	              -	         O	      I-A1	         O	         O
+           more	              -	         O	      I-A1	         O	         O
+           than	              -	         O	      I-A1	         O	         O
+             50	              -	         O	      I-A1	         O	         O
+              %	              -	         O	      I-A1	         O	         O
+             of	              -	         O	      I-A1	         O	         O
+      Weisfield	              -	         O	      I-A1	         O	         O
+             's	              -	         O	      I-A1	         O	         O
+   shareholders	              -	         O	      E-A1	         O	         O
+              ,	              -	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O
+             it	              -	         O	         O	      S-A1	      S-A1
+             is	             is	         O	         O	       S-V	         O
+      scheduled	      scheduled	         O	         O	    B-C-A1	       S-V
+            for	              -	         O	         O	    I-C-A1	      B-A2
+     completion	              -	         O	         O	    E-C-A1	      E-A2
+             by	              -	         O	         O	  B-AM-TMP	  B-AM-TMP
+           Dec.	              -	         O	         O	  I-AM-TMP	  I-AM-TMP
+             10	              -	         O	         O	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0
+    acquisition	              -	      I-A0
+             of	              -	      I-A0
+       87-store	              -	      I-A0
+      Weisfield	              -	      I-A0
+             's	              -	      E-A0
+         raises	         raises	       S-V
+        Ratners	              -	      B-A1
+             's	              -	      I-A1
+           U.S.	              -	      I-A1
+       presence	              -	      E-A1
+             to	              -	      B-A4
+            450	              -	      I-A4
+         stores	              -	      E-A4
+              .	              -	         O
+
+          About	              -	      B-A1	      B-A1
+             30	              -	      I-A1	      I-A1
+              %	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+        Ratners	              -	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1
+         profit	              -	      E-A1	      E-A1
+        already	              -	  S-AM-TMP	  S-AM-TMP
+             is	             is	       S-V	         O
+        derived	        derived	    B-C-A1	       S-V
+           from	              -	    I-C-A1	      B-A2
+            the	              -	    I-C-A1	      I-A2
+           U.S.	              -	    E-C-A1	      E-A2
+

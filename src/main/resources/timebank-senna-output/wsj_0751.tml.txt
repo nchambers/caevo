@@ -1,0 +1,98 @@
+           Dime	              -	      B-A1	      B-A1	      B-A0	      B-A1
+        Savings	              -	      I-A1	      I-A1	      I-A0	      I-A1
+           Bank	              -	      I-A1	      I-A1	      I-A0	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A0	      I-A1
+            New	              -	      I-A1	      I-A1	      I-A0	      I-A1
+           York	              -	      E-A1	      E-A1	      E-A0	      I-A1
+            was	            was	       S-V	         O	         O	      I-A1
+        cleared	        cleared	    B-C-A1	       S-V	         O	      I-A1
+             by	              -	    I-C-A1	      B-A0	         O	      I-A1
+            the	              -	    I-C-A1	      I-A0	         O	      I-A1
+        Federal	              -	    I-C-A1	      I-A0	         O	      I-A1
+        Deposit	              -	    I-C-A1	      I-A0	         O	      I-A1
+      Insurance	              -	    I-C-A1	      I-A0	         O	      I-A1
+          Corp.	              -	    I-C-A1	      I-A0	         O	      I-A1
+             to	              -	    I-C-A1	      I-A0	         O	      I-A1
+        acquire	        acquire	    I-C-A1	      I-A0	       S-V	      I-A1
+     Starpointe	              -	    I-C-A1	      I-A0	      B-A1	      I-A1
+        Savings	              -	    I-C-A1	      I-A0	      I-A1	      I-A1
+           Bank	              -	    I-C-A1	      I-A0	      I-A1	      I-A1
+             of	              -	    I-C-A1	      I-A0	      I-A1	      I-A1
+       Somerset	              -	    I-C-A1	      I-A0	      I-A1	      I-A1
+              ,	              -	    I-C-A1	      I-A0	      I-A1	      I-A1
+           N.J.	              -	    E-C-A1	      I-A0	      I-A1	      E-A1
+              ,	              -	         O	      E-A0	      E-A1	         O
+            the	              -	         O	         O	         O	      B-A0
+          banks	              -	         O	         O	         O	      E-A0
+           said	           said	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+     Starpointe	              -	      B-A0	      B-A0
+        holders	              -	      E-A0	      I-A0
+              ,	              -	         O	      I-A0
+            who	              -	    S-R-A0	      I-A0
+       approved	       approved	       S-V	      I-A0
+            the	              -	      B-A1	      I-A0
+           plan	              -	      E-A1	      I-A0
+           last	              -	  B-AM-TMP	      I-A0
+          April	              -	  E-AM-TMP	      I-A0
+              ,	              -	         O	      E-A0
+           will	              -	         O	  S-AM-MOD
+        receive	        receive	         O	       S-V
+              $	              -	         O	      B-A1
+             21	              -	         O	      I-A1
+             in	              -	         O	      I-A1
+           cash	              -	         O	      I-A1
+              a	              -	         O	      I-A1
+          share	              -	         O	      I-A1
+              ,	              -	         O	      I-A1
+             or	              -	         O	      I-A1
+              a	              -	         O	      I-A1
+          total	              -	         O	      I-A1
+              $	              -	         O	      I-A1
+             63	              -	         O	      I-A1
+        million	              -	         O	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	         O	         O
+           FDIC	              -	      E-A0	         O	         O
+        cleared	        cleared	       S-V	         O	         O
+            the	              -	      B-A1	         O	         O
+           move	              -	      E-A1	         O	         O
+      yesterday	              -	  S-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O
+            and	              -	         O	         O	         O
+            the	              -	         O	      B-A1	      B-A0
+          banks	              -	         O	      E-A1	      E-A0
+           must	              -	         O	  S-AM-MOD	         O
+           wait	           wait	         O	       S-V	         O
+             at	              -	         O	  B-AM-TMP	         O
+          least	              -	         O	  I-AM-TMP	         O
+             30	              -	         O	  I-AM-TMP	         O
+           days	              -	         O	  I-AM-TMP	         O
+         before	              -	         O	  I-AM-TMP	         O
+        closing	        closing	         O	  I-AM-TMP	       S-V
+            the	              -	         O	  I-AM-TMP	      B-A1
+       purchase	              -	         O	  E-AM-TMP	      E-A1
+              .	              -	         O	         O	         O
+
+              A	              -	      B-A1	      B-A1	      B-A1
+        closing	              -	      I-A1	      I-A1	      I-A1
+           date	              -	      E-A1	      E-A1	      E-A1
+            has	            has	       S-V	         O	         O
+            n't	              -	  S-AM-NEG	  S-AM-NEG	  S-AM-NEG
+           been	           been	         O	       S-V	         O
+            set	            set	         O	    S-C-A1	       S-V
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0
+        thrifts	              -	      E-A0
+         agreed	         agreed	       S-V
+             to	              -	      B-A1
+            the	              -	      I-A1
+    transaction	              -	      E-A1
+             in	              -	  B-AM-TMP
+         August	              -	  I-AM-TMP
+           1988	              -	  E-AM-TMP
+              .	              -	         O
+

@@ -43,7 +43,6 @@ public class ReichenbachDG13_1 implements Sieve {
 	
 	// Map tense/aspect pairs to corresponding relation
 	private static final Map<String, TLink.TYPE> tenseAspectToLabel;
-
   static
   {
   	tenseAspectToLabel = new HashMap<String, TLink.TYPE>();

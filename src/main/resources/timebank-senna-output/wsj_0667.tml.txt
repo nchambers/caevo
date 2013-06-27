@@ -1,0 +1,218 @@
+         Shoney	              -	      B-A0	         O	         O
+             's	              -	      I-A0	         O	         O
+           Inc.	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             it	              -	      B-A1	      S-A0	         O
+           will	              -	      I-A1	  S-AM-MOD	         O
+         report	         report	      I-A1	       S-V	         O
+              a	              -	      I-A1	      B-A1	         O
+      write-off	              -	      I-A1	      I-A1	         O
+             of	              -	      I-A1	      I-A1	         O
+              $	              -	      I-A1	      I-A1	         O
+            2.5	              -	      I-A1	      I-A1	         O
+        million	              -	      I-A1	      I-A1	         O
+              ,	              -	      I-A1	      I-A1	         O
+             or	              -	      I-A1	      I-A1	         O
+          seven	              -	      I-A1	      I-A1	         O
+          cents	              -	      I-A1	      I-A1	         O
+              a	              -	      I-A1	      I-A1	         O
+          share	              -	      I-A1	      I-A1	         O
+              ,	              -	      I-A1	      E-A1	         O
+            for	              -	      I-A1	  B-AM-TMP	         O
+            its	              -	      I-A1	  I-AM-TMP	      B-A1
+         fourth	              -	      I-A1	  I-AM-TMP	      I-A1
+        quarter	              -	      I-A1	  I-AM-TMP	      E-A1
+          ended	          ended	      I-A1	  I-AM-TMP	       S-V
+      yesterday	              -	      E-A1	  E-AM-TMP	  S-AM-TMP
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0
+     restaurant	              -	      I-A0
+       operator	              -	      E-A0
+          cited	          cited	       S-V
+    transaction	              -	      B-A1
+          costs	              -	      I-A1
+           from	              -	      I-A1
+            its	              -	      I-A1
+           1988	              -	      I-A1
+recapitalization	              -	      I-A1
+             as	              -	      I-A1
+              a	              -	      I-A1
+         result	              -	      I-A1
+             of	              -	      I-A1
+              a	              -	      I-A1
+              $	              -	      I-A1
+            160	              -	      I-A1
+        million	              -	      I-A1
+  restructuring	              -	      I-A1
+             of	              -	      I-A1
+            its	              -	      I-A1
+           bank	              -	      I-A1
+           debt	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A1	      B-A1
+      write-off	              -	      E-A1	      E-A1
+           will	              -	  S-AM-MOD	  S-AM-MOD
+             be	             be	       S-V	         O
+       reported	       reported	         O	       S-V
+             as	              -	  B-AM-ADV	  B-AM-MNR
+             an	              -	  I-AM-ADV	  I-AM-MNR
+  extraordinary	              -	  I-AM-ADV	  I-AM-MNR
+           item	              -	  I-AM-ADV	  E-AM-MNR
+             in	              -	  I-AM-ADV	  B-AM-LOC
+            the	              -	  I-AM-ADV	  I-AM-LOC
+        company	              -	  I-AM-ADV	  I-AM-LOC
+             's	              -	  I-AM-ADV	  I-AM-LOC
+           1989	              -	  I-AM-ADV	  I-AM-LOC
+      operating	              -	  I-AM-ADV	  I-AM-LOC
+        results	              -	  E-AM-ADV	  E-AM-LOC
+              .	              -	         O	         O
+
+             In	              -	         O	  B-AM-DIS
+       addition	              -	         O	  E-AM-DIS
+              ,	              -	         O	         O
+            the	              -	         O	      B-A1
+      effective	              -	         O	      I-A1
+       interest	              -	         O	      I-A1
+           rate	              -	         O	      I-A1
+             on	              -	         O	      I-A1
+            the	              -	         O	      I-A1
+              $	              -	         O	      I-A1
+            410	              -	         O	      I-A1
+        million	              -	         O	      I-A1
+             of	              -	         O	      I-A1
+          total	              -	         O	      I-A1
+      remaining	      remaining	       S-V	      I-A1
+           bank	              -	      B-A1	      I-A1
+           debt	              -	      E-A1	      I-A1
+          after	              -	         O	      I-A1
+            the	              -	         O	      I-A1
+  restructuring	              -	         O	      E-A1
+             is	             is	         O	       S-V
+          10.66	              -	         O	      B-A2
+              %	              -	         O	      E-A2
+              .	              -	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A0
+       combined	              -	      I-A1	      I-A1	      I-A0
+         effect	              -	      I-A1	      I-A1	      I-A0
+             of	              -	      I-A1	      I-A1	      I-A0
+          these	              -	      I-A1	      I-A1	      I-A0
+        changes	              -	      E-A1	      E-A1	      E-A0
+             is	             is	       S-V	         O	         O
+       expected	       expected	    B-C-A1	       S-V	         O
+             to	              -	    I-C-A1	    B-C-A1	         O
+           save	           save	    I-C-A1	    I-C-A1	       S-V
+            the	              -	    I-C-A1	    I-C-A1	      B-A1
+        company	              -	    I-C-A1	    I-C-A1	      E-A1
+          about	              -	    I-C-A1	    I-C-A1	      B-A3
+              $	              -	    I-C-A1	    I-C-A1	      I-A3
+              4	              -	    I-C-A1	    I-C-A1	      I-A3
+        million	              -	    I-C-A1	    I-C-A1	      I-A3
+             in	              -	    I-C-A1	    I-C-A1	      I-A3
+       interest	              -	    I-C-A1	    I-C-A1	      I-A3
+       expenses	              -	    I-C-A1	    I-C-A1	      I-A3
+           next	              -	    I-C-A1	    I-C-A1	      I-A3
+           year	              -	    I-C-A1	    I-C-A1	      I-A3
+              ,	              -	    I-C-A1	    I-C-A1	      I-A3
+             or	              -	    I-C-A1	    I-C-A1	      I-A3
+            six	              -	    I-C-A1	    I-C-A1	      I-A3
+          cents	              -	    I-C-A1	    I-C-A1	      I-A3
+              a	              -	    I-C-A1	    I-C-A1	      I-A3
+          share	              -	    E-C-A1	    E-C-A1	      E-A3
+              .	              -	         O	         O	         O
+
+         Shoney	              -	      B-A0	         O	         O	         O	         O	         O
+             's	              -	      E-A0	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A0	         O	         O	         O	         O
+         latest	              -	      I-A1	      I-A0	         O	         O	         O	         O
+  restructuring	              -	      I-A1	      E-A0	         O	         O	         O	         O
+       affected	       affected	      I-A1	       S-V	         O	         O	         O	         O
+           bank	              -	      I-A1	      B-A1	      B-A1	      B-A1	      B-A2	         O
+   indebtedness	              -	      I-A1	      I-A1	      E-A1	      E-A1	      E-A2	         O
+           that	              -	      I-A1	      I-A1	    S-R-A1	    S-R-A1	    S-R-A2	         O
+            was	            was	      I-A1	      I-A1	       S-V	         O	         O	         O
+       incurred	       incurred	      I-A1	      I-A1	      B-A1	       S-V	         O	         O
+             to	              -	      I-A1	      I-A1	      I-A1	      B-A2	         O	         O
+        finance	        finance	      I-A1	      I-A1	      I-A1	      I-A2	       S-V	         O
+              $	              -	      I-A1	      I-A1	      I-A1	      I-A2	      B-A1	         O
+            585	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	         O
+        million	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	         O
+             of	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	         O
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	      B-A1
+        company	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	      I-A1
+            728	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	      I-A1
+        million	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	      I-A1
+recapitalization	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	      E-A1
+           that	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	    S-R-A1
+           took	           took	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	       S-V
+          place	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	      S-A2
+             in	              -	      I-A1	      I-A1	      I-A1	      I-A2	      I-A1	  B-AM-TMP
+           1988	              -	      E-A1	      E-A1	      E-A1	      E-A2	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0	         O
+        company	              -	      E-A0	      E-A0	         O
+            has	            has	       S-V	         O	         O
+           made	           made	      B-A1	       S-V	         O
+       payments	              -	      I-A1	      B-A1	         O
+             of	              -	      I-A1	      I-A1	         O
+              $	              -	      I-A1	      I-A1	         O
+            175	              -	      I-A1	      I-A1	         O
+        million	              -	      I-A1	      I-A1	         O
+        against	              -	      I-A1	      I-A1	         O
+            the	              -	      I-A1	      I-A1	         O
+       original	              -	      I-A1	      I-A1	         O
+              $	              -	      I-A1	      I-A1	         O
+            585	              -	      I-A1	      I-A1	         O
+        million	              -	      I-A1	      I-A1	         O
+             of	              -	      I-A1	      I-A1	         O
+           bank	              -	      I-A1	      I-A1	      B-A1
+           debt	              -	      I-A1	      I-A1	      E-A1
+       incurred	       incurred	      I-A1	      I-A1	       S-V
+             in	              -	      I-A1	      I-A1	      B-A2
+     connection	              -	      I-A1	      I-A1	      I-A2
+           with	              -	      I-A1	      I-A1	      I-A2
+            the	              -	      I-A1	      I-A1	      I-A2
+recapitalization	              -	      E-A1	      E-A1	      E-A2
+              .	              -	         O	         O	         O
+
+          These	              -	      B-A1	         O	         O
+       payments	              -	      E-A1	         O	         O
+      consisted	      consisted	       S-V	         O	         O
+             of	              -	      B-A2	         O	         O
+              $	              -	      I-A2	         O	         O
+             54	              -	      I-A2	         O	         O
+        million	              -	      I-A2	         O	         O
+             in	              -	      I-A2	         O	         O
+      scheduled	              -	      I-A2	         O	         O
+       payments	              -	      I-A2	         O	         O
+            and	              -	      I-A2	         O	         O
+              $	              -	      I-A2	      B-A1	         O
+            121	              -	      I-A2	      I-A1	         O
+        million	              -	      I-A2	      I-A1	         O
+             in	              -	      I-A2	      I-A1	         O
+    prepayments	              -	      I-A2	      E-A1	         O
+              ,	              -	      I-A2	         O	         O
+         funded	         funded	      I-A2	       S-V	         O
+             by	              -	      I-A2	      B-A2	         O
+              $	              -	      I-A2	      I-A2	         O
+           82.8	              -	      I-A2	      I-A2	         O
+        million	              -	      I-A2	      I-A2	         O
+           from	              -	      I-A2	      I-A2	         O
+      operating	      operating	      I-A2	      I-A2	       S-V
+           cash	              -	      I-A2	      I-A2	      B-A1
+           flow	              -	      I-A2	      I-A2	      E-A1
+              ,	              -	      I-A2	      I-A2	         O
+    zero-coupon	              -	      I-A2	      I-A2	         O
+   subordinated	              -	      I-A2	      I-A2	         O
+           debt	              -	      I-A2	      I-A2	         O
+            and	              -	      I-A2	      I-A2	         O
+         assets	              -	      I-A2	      I-A2	         O
+          sales	              -	      E-A2	      E-A2	         O
+              .	              -	         O	         O	         O
+

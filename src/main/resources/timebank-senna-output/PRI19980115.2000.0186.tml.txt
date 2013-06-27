@@ -1,0 +1,192 @@
+         Former	              -	      B-A1	      B-A0
+        savings	              -	      I-A1	      I-A0
+            and	              -	      I-A1	      I-A0
+           loan	              -	      I-A1	      I-A0
+          chief	              -	      I-A1	      I-A0
+              ,	              -	      I-A1	      I-A0
+        Charles	              -	      I-A1	      I-A0
+        Keating	              -	      I-A1	      I-A0
+              ,	              -	      E-A1	      E-A0
+             is	             is	       S-V	         O
+         facing	         facing	    B-C-A1	       S-V
+           more	              -	    I-C-A1	      B-A1
+          legal	              -	    I-C-A1	      I-A1
+       troubles	              -	    I-C-A1	      I-A1
+             in	              -	    I-C-A1	      I-A1
+     California	              -	    E-C-A1	      E-A1
+              .	              -	         O	         O
+
+              A	              -	      B-A0	      B-A0
+        federal	              -	      I-A0	      I-A0
+        appeals	              -	      I-A0	      I-A0
+          court	              -	      E-A0	      E-A0
+            has	            has	       S-V	         O
+     reinstated	     reinstated	      B-A1	       S-V
+            his	              -	      I-A1	      B-A1
+          state	              -	      I-A1	      I-A1
+    convictions	              -	      I-A1	      I-A1
+            for	              -	      I-A1	      I-A1
+     securities	              -	      I-A1	      I-A1
+          fraud	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+            NPR	              -	      B-A0
+             's	              -	      I-A0
+         Elaine	              -	      I-A0
+          Corey	              -	      E-A0
+            has	            has	       S-V
+           more	              -	      B-A1
+           from	              -	      I-A1
+            San	              -	      I-A1
+      Francisco	              -	      E-A1
+              .	              -	         O
+
+             In	              -	  B-AM-LOC	  B-AM-LOC	         O	         O	         O	         O
+       nineteen	              -	  I-AM-LOC	  I-AM-LOC	      B-A0	      B-A0	         O	         O
+     ninety-one	              -	  I-AM-LOC	  I-AM-LOC	      I-A0	      I-A0	         O	         O
+        Charles	              -	  I-AM-LOC	  I-AM-LOC	      I-A0	      I-A0	         O	         O
+        Keating	              -	  E-AM-LOC	  E-AM-LOC	      E-A0	      E-A0	         O	         O
+            was	            was	       S-V	         O	         O	         O	         O	         O
+      convicted	      convicted	      B-A3	       S-V	         O	         O	         O	         O
+             in	              -	      I-A3	      B-A2	         O	         O	         O	         O
+          state	              -	      I-A3	      I-A2	         O	         O	         O	         O
+          court	              -	      I-A3	      I-A2	         O	         O	         O	         O
+             of	              -	      I-A3	      I-A2	         O	         O	         O	         O
+        helping	        helping	      I-A3	      I-A2	       S-V	         O	         O	         O
+             to	              -	      I-A3	      I-A2	      B-A1	         O	         O	         O
+        defraud	        defraud	      I-A3	      I-A2	      I-A1	       S-V	         O	         O
+      thousands	              -	      I-A3	      I-A2	      I-A1	      B-A1	         O	         O
+             of	              -	      I-A3	      I-A2	      I-A1	      I-A1	         O	         O
+      investors	              -	      I-A3	      I-A2	      I-A1	      I-A1	      S-A0	         O
+            who	              -	      I-A3	      I-A2	      I-A1	      I-A1	    S-R-A0	         O
+         bought	         bought	      I-A3	      I-A2	      I-A1	      I-A1	       S-V	         O
+           high	              -	      I-A3	      I-A2	      I-A1	      I-A1	      B-A1	      B-A1
+           risk	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      I-A1
+           junk	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      I-A1
+          bonds	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      E-A1
+           sold	           sold	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	       S-V
+             by	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      B-A0
+        Keating	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      I-A0
+             's	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      I-A0
+      employees	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      I-A0
+             at	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      I-A0
+        Lincoln	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      I-A0
+        savings	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      I-A0
+            and	              -	      I-A3	      I-A2	      I-A1	      I-A1	      I-A1	      I-A0
+           loan	              -	      E-A3	      E-A2	      E-A1	      E-A1	      E-A1	      E-A0
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	         O	         O
+          bonds	              -	      E-A1	         O	         O
+         became	         became	       S-V	         O	         O
+      worthless	              -	      S-A2	         O	         O
+           when	              -	  B-AM-TMP	S-R-AM-TMP	S-R-AM-TMP
+            the	              -	  I-AM-TMP	      B-A1	      B-A1
+       bankrupt	              -	  I-AM-TMP	      I-A1	      I-A1
+         thrift	              -	  I-AM-TMP	      E-A1	      E-A1
+            was	            was	  I-AM-TMP	       S-V	         O
+         seized	         seized	  I-AM-TMP	  B-AM-ADV	       S-V
+             by	              -	  I-AM-TMP	  I-AM-ADV	      B-A0
+     government	              -	  I-AM-TMP	  I-AM-ADV	      I-A0
+     regulators	              -	  E-AM-TMP	  E-AM-ADV	      E-A0
+              .	              -	         O	         O	         O
+
+        Keating	              -	      B-A1	      B-A1
+             's	              -	      I-A1	      I-A1
+    convictions	              -	      E-A1	      E-A1
+           were	           were	       S-V	         O
+         thrown	         thrown	    B-C-A1	       B-V
+            out	              -	    I-C-A1	       E-V
+             in	              -	    I-C-A1	      B-A2
+       nineteen	              -	    I-C-A1	      I-A2
+     ninety-six	              -	    I-C-A1	      E-A2
+             on	              -	    I-C-A1	  B-AM-LOC
+              a	              -	    I-C-A1	  I-AM-LOC
+   technicality	              -	    E-C-A1	  E-AM-LOC
+              .	              -	         O	         O
+
+            And	              -	         O	         O	         O
+             on	              -	  B-AM-TMP	  B-AM-ADV	         O
+           that	              -	  I-AM-TMP	  I-AM-ADV	         O
+          basis	              -	  E-AM-TMP	  E-AM-ADV	         O
+        Keating	              -	      S-A1	      S-A1	         O
+            was	            was	       S-V	         O	         O
+       released	       released	    B-C-A1	       S-V	         O
+           from	              -	    I-C-A1	      B-A3	         O
+         prison	              -	    E-C-A1	      E-A3	         O
+         before	              -	  B-AM-TMP	  B-AM-TMP	         O
+             he	              -	  I-AM-TMP	  I-AM-TMP	      S-A1
+            was	            was	  I-AM-TMP	  I-AM-TMP	       S-V
+       eligible	              -	  I-AM-TMP	  I-AM-TMP	    B-C-A1
+            for	              -	  I-AM-TMP	  I-AM-TMP	    I-C-A1
+         parole	              -	  E-AM-TMP	  E-AM-TMP	    E-C-A1
+              .	              -	         O	         O	         O
+
+            Now	              -	  S-AM-TMP	  S-AM-TMP	         O	         O	         O	         O	         O	         O
+            the	              -	      B-A0	      B-A0	         O	         O	         O	         O	         O	         O
+          ninth	              -	      I-A0	      I-A0	         O	         O	         O	         O	         O	         O
+             US	              -	      I-A0	      I-A0	         O	         O	         O	         O	         O	         O
+        circuit	              -	      I-A0	      I-A0	         O	         O	         O	         O	         O	         O
+          court	              -	      I-A0	      I-A0	         O	         O	         O	         O	         O	         O
+             of	              -	      I-A0	      I-A0	         O	         O	         O	         O	         O	         O
+        appeals	              -	      E-A0	      E-A0	         O	         O	         O	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O	         O	         O	         O
+          ruled	          ruled	         O	       S-V	         O	         O	         O	         O	         O	         O
+           that	              -	         O	      B-A1	         O	         O	         O	         O	         O	         O
+            the	              -	      B-A1	      I-A1	      B-A1	      B-A1	         O	         O	         O	         O
+       original	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+         appeal	              -	      I-A1	      I-A1	      E-A1	      E-A1	         O	         O	         O	         O
+            was	            was	      I-A1	      I-A1	       S-V	         O	         O	         O	         O	         O
+         flawed	         flawed	      I-A1	      I-A1	    B-C-A1	       S-V	         O	         O	         O	         O
+          since	              -	      I-A1	      I-A1	    I-C-A1	  B-AM-CAU	         O	         O	         O	         O
+             it	              -	      I-A1	      I-A1	    I-C-A1	  I-AM-CAU	      S-A0	         O	         O	         O
+        brought	        brought	      I-A1	      I-A1	    I-C-A1	  I-AM-CAU	       B-V	         O	         O	         O
+             up	              -	      I-A1	      I-A1	    I-C-A1	  I-AM-CAU	       E-V	         O	         O	         O
+         issues	              -	      I-A1	      I-A1	    I-C-A1	  I-AM-CAU	      B-A1	      S-A0	      S-A1	      S-A1
+           that	              -	      I-A1	      I-A1	    I-C-A1	  I-AM-CAU	      I-A1	    S-R-A0	    S-R-A1	    S-R-A1
+            had	            had	      I-A1	      I-A1	    I-C-A1	  I-AM-CAU	      I-A1	       S-V	         O	         O
+            not	              -	      I-A1	      I-A1	    I-C-A1	  I-AM-CAU	      I-A1	      B-A1	  S-AM-NEG	  S-AM-NEG
+           been	           been	      I-A1	      I-A1	    I-C-A1	  I-AM-CAU	      I-A1	      I-A1	       S-V	         O
+         raised	         raised	      I-A1	      I-A1	    I-C-A1	  I-AM-CAU	      I-A1	      I-A1	         O	       S-V
+         before	              -	      E-A1	      E-A1	    E-C-A1	  E-AM-CAU	      E-A1	      E-A1	         O	  S-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+           That	              -	      S-A0	         O	         O	         O
+          means	          means	       S-V	         O	         O	         O
+            the	              -	      B-A1	      B-A1	         O	         O
+    convictions	              -	      I-A1	      E-A1	         O	         O
+          stand	          stand	      I-A1	       S-V	         O	         O
+              ,	              -	      I-A1	         O	         O	         O
+              a	              -	      I-A1	    B-C-A1	      B-A0	         O
+         ruling	              -	      I-A1	    I-C-A1	      E-A0	         O
+         likely	              -	      I-A1	    I-C-A1	         O	         O
+             to	              -	      I-A1	    I-C-A1	         O	         O
+           send	           send	      I-A1	    I-C-A1	       S-V	         O
+        Keating	              -	      I-A1	    I-C-A1	      B-A1	         O
+             's	              -	      I-A1	    I-C-A1	      I-A1	         O
+        lawyers	              -	      I-A1	    I-C-A1	      E-A1	         O
+           back	              -	      I-A1	    I-C-A1	  B-AM-LOC	         O
+             to	              -	      I-A1	    I-C-A1	  I-AM-LOC	         O
+          state	              -	      I-A1	    I-C-A1	  I-AM-LOC	  B-AM-LOC
+          court	              -	      I-A1	    I-C-A1	  I-AM-LOC	  E-AM-LOC
+          where	              -	      I-A1	    I-C-A1	  I-AM-LOC	S-R-AM-LOC
+           they	              -	      I-A1	    I-C-A1	  I-AM-LOC	      S-A0
+           must	              -	      I-A1	    I-C-A1	  I-AM-LOC	  S-AM-MOD
+          start	          start	      I-A1	    I-C-A1	  I-AM-LOC	       B-V
+           over	              -	      I-A1	    I-C-A1	  I-AM-LOC	       E-V
+           with	              -	      I-A1	    I-C-A1	  I-AM-LOC	  B-AM-MNR
+              a	              -	      I-A1	    I-C-A1	  I-AM-LOC	  I-AM-MNR
+            new	              -	      I-A1	    I-C-A1	  I-AM-LOC	  I-AM-MNR
+         appeal	              -	      E-A1	    E-C-A1	  E-AM-LOC	  E-AM-MNR
+              .	              -	         O	         O	         O	         O
+
+         Elaine	              -
+          Corey	              -
+              ,	              -
+            NPR	              -
+           news	              -
+              ,	              -
+            San	              -
+      Francisco	              -
+              .	              -
+

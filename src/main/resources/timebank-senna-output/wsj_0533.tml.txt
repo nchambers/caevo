@@ -1,0 +1,438 @@
+            Two	              -	      B-A0	      B-A0
+          rival	              -	      I-A0	      I-A0
+        bidders	              -	      I-A0	      I-A0
+            for	              -	      I-A0	      I-A0
+      Connaught	              -	      I-A0	      I-A0
+    BioSciences	              -	      E-A0	      E-A0
+       extended	       extended	       S-V	         O
+          their	              -	      B-A1	         O
+         offers	              -	      I-A1	         O
+             to	              -	      I-A1	         O
+        acquire	        acquire	      I-A1	       S-V
+            the	              -	      I-A1	      B-A1
+  Toronto-based	              -	      I-A1	      I-A1
+        vaccine	              -	      I-A1	      I-A1
+   manufacturer	              -	      E-A1	      E-A1
+         Friday	              -	  S-AM-TMP	  S-AM-TMP
+              .	              -	         O	         O
+
+       Institut	              -	      B-A0	      B-A0	         O	         O
+        Merieux	              -	      I-A0	      I-A0	         O	         O
+           S.A.	              -	      E-A0	      I-A0	         O	         O
+              ,	              -	         O	      I-A0	         O	         O
+          which	              -	    S-R-A0	      I-A0	         O	         O
+        offered	        offered	       S-V	      I-A0	         O	         O
+            942	              -	      B-A2	      I-A0	         O	         O
+        million	              -	      I-A2	      I-A0	         O	         O
+       Canadian	              -	      I-A2	      I-A0	         O	         O
+        dollars	              -	      I-A2	      I-A0	         O	         O
+              (	              -	      I-A2	      I-A0	         O	         O
+            US$	              -	      I-A2	      I-A0	         O	         O
+          801.2	              -	      I-A2	      I-A0	         O	         O
+        million	              -	      I-A2	      I-A0	         O	         O
+              )	              -	      I-A2	      I-A0	         O	         O
+              ,	              -	      I-A2	      I-A0	         O	         O
+             or	              -	      I-A2	      I-A0	         O	         O
+             C$	              -	      I-A2	      I-A0	         O	         O
+             37	              -	      I-A2	      I-A0	         O	         O
+              a	              -	      I-A2	      I-A0	         O	         O
+          share	              -	      E-A2	      I-A0	         O	         O
+            for	              -	      B-A1	      I-A0	         O	         O
+      Connaught	              -	      E-A1	      I-A0	         O	         O
+              ,	              -	         O	      E-A0	         O	         O
+           said	           said	         O	       S-V	         O	         O
+             it	              -	         O	      B-A1	      S-A0	         O
+          would	              -	         O	      I-A1	  S-AM-MOD	         O
+         extend	         extend	         O	      I-A1	       S-V	         O
+            its	              -	         O	      I-A1	      B-A1	      B-A1
+            bid	              -	         O	      I-A1	      I-A1	      E-A1
+              ,	              -	         O	      I-A1	      I-A1	         O
+            due	              -	         O	      I-A1	      I-A1	         O
+             to	              -	         O	      I-A1	      I-A1	         O
+         expire	         expire	         O	      I-A1	      I-A1	       S-V
+           last	              -	         O	      I-A1	      I-A1	  B-AM-TMP
+       Thursday	              -	         O	      I-A1	      I-A1	  E-AM-TMP
+              ,	              -	         O	      I-A1	      E-A1	         O
+             to	              -	         O	      I-A1	      B-A2	         O
+           Nov.	              -	         O	      I-A1	      I-A2	         O
+              6	              -	         O	      E-A1	      E-A2	         O
+              .	              -	         O	         O	         O	         O
+
+              A	              -	         O	      B-A1	      B-A1
+             C$	              -	         O	      I-A1	      I-A1
+     30-a-share	              -	         O	      I-A1	      I-A1
+            bid	              -	         O	      I-A1	      I-A1
+             by	              -	         O	      I-A1	      I-A1
+     Ciba-Geigy	              -	         O	      I-A1	      I-A1
+           Ltd.	              -	         O	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      I-A1
+              a	              -	      B-A1	      I-A1	      I-A1
+ pharmaceutical	              -	      I-A1	      I-A1	      I-A1
+        company	              -	      E-A1	      I-A1	      I-A1
+          based	          based	       S-V	      I-A1	      I-A1
+             in	              -	  B-AM-LOC	      I-A1	      I-A1
+          Basel	              -	  I-AM-LOC	      I-A1	      I-A1
+              ,	              -	  I-AM-LOC	      I-A1	      I-A1
+    Switzerland	              -	  E-AM-LOC	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      I-A1
+            and	              -	         O	      I-A1	      I-A1
+California-based	              -	         O	      I-A1	      I-A1
+         Chiron	              -	         O	      I-A1	      I-A1
+          Corp.	              -	         O	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      I-A1
+              a	              -	         O	      I-A1	      I-A1
+    bioresearch	              -	         O	      I-A1	      I-A1
+        concern	              -	         O	      I-A1	      I-A1
+              ,	              -	         O	      E-A1	      E-A1
+            was	            was	         O	       S-V	         O
+       extended	       extended	         O	    B-C-A1	       S-V
+             to	              -	         O	    I-C-A1	      B-A2
+           Nov.	              -	         O	    I-C-A1	      I-A2
+             16	              -	         O	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O
+
+             It	              -	         O	      S-A1	      S-A1
+            had	            had	       S-V	         O	         O
+           been	           been	      B-A1	       S-V	         O
+            due	              -	      I-A1	    B-C-A1	         O
+             to	              -	      I-A1	    I-C-A1	         O
+         expire	         expire	      I-A1	    E-C-A1	       S-V
+         Friday	              -	      I-A1	  B-AM-TMP	  B-AM-TMP
+        evening	              -	      E-A1	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+        Merieux	              -	      S-A0	         O	         O	         O	         O
+     previously	              -	  S-AM-TMP	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O	         O
+          would	              -	      I-A1	  S-AM-MOD	         O	         O	         O
+         ensure	         ensure	      I-A1	       S-V	         O	         O	         O
+            its	              -	      I-A1	      B-A1	      B-A1	         O	         O
+            bid	              -	      I-A1	      I-A1	      E-A1	         O	         O
+       remained	       remained	      I-A1	      I-A1	       S-V	         O	         O
+           open	              -	      I-A1	      I-A1	      S-A3	         O	         O
+        pending	        pending	      I-A1	      I-A1	  B-AM-ADV	       S-V	         O
+              a	              -	      I-A1	      I-A1	  I-AM-ADV	      B-A1	         O
+          final	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A1	         O
+       decision	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A1	         O
+             by	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A1	         O
+       Canadian	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A1	         O
+     regulators	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A1	         O
+             on	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A1	         O
+        whether	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A1	         O
+             to	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A1	         O
+        approve	        approve	      I-A1	      I-A1	  I-AM-ADV	      I-A1	       S-V
+            the	              -	      I-A1	      I-A1	  I-AM-ADV	      I-A1	      B-A1
+       takeover	              -	      E-A1	      E-A1	  E-AM-ADV	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+        Merieux	              -	         O	      B-A1	      B-A1
+              ,	              -	         O	      I-A1	      I-A1
+              a	              -	      B-A1	      I-A1	      I-A1
+        vaccine	              -	      I-A1	      I-A1	      I-A1
+            and	              -	      I-A1	      I-A1	      I-A1
+    bioresearch	              -	      I-A1	      I-A1	      I-A1
+           firm	              -	      E-A1	      I-A1	      I-A1
+          based	          based	       S-V	      I-A1	      I-A1
+             in	              -	  B-AM-LOC	      I-A1	      I-A1
+           Lyon	              -	  I-AM-LOC	      I-A1	      I-A1
+              ,	              -	  I-AM-LOC	      I-A1	      I-A1
+         France	              -	  E-AM-LOC	      I-A1	      I-A1
+              ,	              -	         O	      E-A1	      E-A1
+             is	             is	         O	       S-V	         O
+     controlled	     controlled	         O	    B-C-A1	       S-V
+           50.1	              -	         O	    I-C-A1	  B-AM-EXT
+              %	              -	         O	    I-C-A1	  E-AM-EXT
+             by	              -	         O	    I-C-A1	      B-A0
+    state-owned	              -	         O	    I-C-A1	      I-A0
+          Rhone	              -	         O	    I-C-A1	      I-A0
+        Poulenc	              -	         O	    I-C-A1	      I-A0
+            S.A	              -	         O	    E-C-A1	      E-A0
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O	         O	         O
+       Canadian	              -	      I-A0	         O	         O	         O	         O	         O	         O
+     government	              -	      E-A0	         O	         O	         O	         O	         O	         O
+     previously	              -	  S-AM-TMP	         O	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O	         O
+        Merieux	              -	      B-A1	      B-A0	      B-A0	      B-A1	      B-A1	      B-A0	         O
+             's	              -	      I-A1	      I-A0	      I-A0	      I-A1	      I-A1	      I-A0	         O
+            bid	              -	      I-A1	      E-A0	      E-A0	      E-A1	      E-A1	      E-A0	         O
+            did	            did	      I-A1	       S-V	         O	         O	         O	         O	         O
+            n't	              -	      I-A1	      B-A1	  S-AM-NEG	         O	         O	  S-AM-NEG	         O
+          offer	          offer	      I-A1	      I-A1	       S-V	         O	         O	         O	         O
+         enough	              -	      I-A1	      I-A1	      B-A1	         O	         O	         O	         O
+            net	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+        benefit	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+             to	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+         Canada	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+             to	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+             be	             be	      I-A1	      I-A1	      I-A1	       S-V	         O	         O	         O
+       approved	       approved	      E-A1	      E-A1	      E-A1	      S-A3	       S-V	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O	         O	         O
+           gave	           gave	         O	         O	         O	         O	         O	       S-V	         O
+        Merieux	              -	         O	         O	         O	         O	         O	      S-A2	         O
+             an	              -	         O	         O	         O	         O	         O	      B-A1	         O
+          until	              -	         O	         O	         O	         O	         O	      I-A1	         O
+   mid-November	              -	         O	         O	         O	         O	         O	      E-A1	         O
+             to	              -	         O	         O	         O	         O	         O	  B-AM-PNC	         O
+         submit	         submit	         O	         O	         O	         O	         O	  I-AM-PNC	       S-V
+     additional	              -	         O	         O	         O	         O	         O	  I-AM-PNC	      B-A1
+    information	              -	         O	         O	         O	         O	         O	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+        Merieux	              -	      B-A0	         O	         O	         O	         O	         O
+      officials	              -	      E-A0	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O
+           last	              -	  B-AM-TMP	         O	         O	         O	         O	         O
+           week	              -	  E-AM-TMP	         O	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O	         O
+           they	              -	      I-A1	      S-A1	         O	         O	         O	         O
+            are	            are	      I-A1	       S-V	         O	         O	         O	         O
+         highly	              -	      I-A1	      B-A1	         O	         O	         O	         O
+      confident	              -	      I-A1	      I-A1	         O	         O	         O	         O
+            the	              -	      I-A1	      I-A1	      B-A1	      B-A1	         O	         O
+          offer	              -	      I-A1	      I-A1	      E-A1	      E-A1	         O	         O
+           will	              -	      I-A1	      I-A1	  S-AM-MOD	  S-AM-MOD	         O	         O
+             be	             be	      I-A1	      I-A1	       S-V	         O	         O	         O
+       approved	       approved	      I-A1	      E-A1	  B-AM-ADV	       S-V	         O	         O
+           once	              -	      I-A1	  B-AM-TMP	  I-AM-ADV	  B-AM-TMP	         O	         O
+             it	              -	      I-A1	  I-AM-TMP	  I-AM-ADV	  I-AM-TMP	      S-A0	         O
+        submits	        submits	      I-A1	  I-AM-TMP	  I-AM-ADV	  I-AM-TMP	       S-V	         O
+        details	              -	      I-A1	  I-AM-TMP	  I-AM-ADV	  I-AM-TMP	      B-A1	         O
+             of	              -	      I-A1	  I-AM-TMP	  I-AM-ADV	  I-AM-TMP	      I-A1	         O
+            its	              -	      I-A1	  I-AM-TMP	  I-AM-ADV	  I-AM-TMP	      I-A1	         O
+       proposed	       proposed	      I-A1	  I-AM-TMP	  I-AM-ADV	  I-AM-TMP	      I-A1	       S-V
+    investments	              -	      I-A1	  I-AM-TMP	  I-AM-ADV	  I-AM-TMP	      E-A1	      S-A1
+             to	              -	      I-A1	  I-AM-TMP	  I-AM-ADV	  I-AM-TMP	      B-A2	         O
+        federal	              -	      I-A1	  I-AM-TMP	  I-AM-ADV	  I-AM-TMP	      I-A2	         O
+     regulators	              -	      E-A1	  E-AM-TMP	  E-AM-ADV	  E-AM-TMP	      E-A2	         O
+              .	              -	         O	         O	         O	         O	         O	         O
+
+           Both	              -	      B-A1	         O	         O	         O
+         offers	              -	      E-A1	         O	         O	         O
+            are	            are	       S-V	         O	         O	         O
+    conditional	              -	  B-AM-ADV	         O	         O	         O
+             on	              -	  I-AM-ADV	         O	         O	         O
+     regulatory	              -	  I-AM-ADV	         O	         O	         O
+      approvals	              -	  I-AM-ADV	         O	         O	         O
+            and	              -	  I-AM-ADV	         O	         O	         O
+         enough	              -	  I-AM-ADV	      B-A1	      B-A1	      B-A0
+         shares	              -	  I-AM-ADV	      E-A1	      E-A1	      E-A0
+          being	          being	  I-AM-ADV	       S-V	         O	         O
+       tendered	       tendered	  I-AM-ADV	         O	       S-V	         O
+             to	              -	  I-AM-ADV	         O	  B-AM-PNC	         O
+           give	           give	  I-AM-ADV	         O	  I-AM-PNC	       S-V
+            the	              -	  I-AM-ADV	         O	  I-AM-PNC	      B-A2
+        bidders	              -	  I-AM-ADV	         O	  I-AM-PNC	      E-A2
+              a	              -	  I-AM-ADV	         O	  I-AM-PNC	      B-A1
+       majority	              -	  I-AM-ADV	         O	  I-AM-PNC	      I-A1
+             of	              -	  I-AM-ADV	         O	  I-AM-PNC	      I-A1
+      Connaught	              -	  I-AM-ADV	         O	  I-AM-PNC	      I-A1
+             's	              -	  I-AM-ADV	         O	  I-AM-PNC	      I-A1
+         shares	              -	  I-AM-ADV	         O	  I-AM-PNC	      I-A1
+    outstanding	              -	  E-AM-ADV	         O	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O
+
+       Institut	              -	      B-A0	      B-A0	         O	         O	         O
+        Merieux	              -	      E-A0	      I-A0	         O	         O	         O
+              ,	              -	         O	      I-A0	         O	         O	         O
+          which	              -	    S-R-A0	      I-A0	         O	         O	         O
+        already	              -	  S-AM-TMP	      I-A0	         O	         O	         O
+          holds	          holds	       S-V	      I-A0	         O	         O	         O
+              a	              -	      B-A1	      I-A0	         O	         O	         O
+           12.5	              -	      I-A1	      I-A0	         O	         O	         O
+              %	              -	      I-A1	      I-A0	         O	         O	         O
+          stake	              -	      I-A1	      I-A0	         O	         O	         O
+             in	              -	      I-A1	      I-A0	         O	         O	         O
+      Connaught	              -	      E-A1	      I-A0	         O	         O	         O
+              ,	              -	         O	      E-A0	         O	         O	         O
+           said	           said	         O	       S-V	         O	         O	         O
+           that	              -	         O	      B-A1	         O	         O	         O
+             at	              -	         O	      I-A1	         O	         O	         O
+            the	              -	         O	      I-A1	         O	         O	         O
+          close	              -	         O	      I-A1	         O	         O	         O
+             of	              -	         O	      I-A1	         O	         O	         O
+       business	              -	         O	      I-A1	         O	         O	         O
+       Thursday	              -	         O	      I-A1	         O	         O	         O
+              ,	              -	         O	      I-A1	         O	         O	         O
+      5,745,188	              -	         O	      I-A1	         O	         O	      B-A1
+         shares	              -	         O	      I-A1	         O	         O	      I-A1
+             of	              -	         O	      I-A1	         O	         O	      I-A1
+      Connaught	              -	         O	      I-A1	         O	         O	      I-A1
+            and	              -	         O	      I-A1	         O	         O	      I-A1
+             C$	              -	         O	      I-A1	         O	         O	      I-A1
+           44.3	              -	         O	      I-A1	         O	         O	      I-A1
+        million	              -	         O	      I-A1	         O	         O	      I-A1
+           face	              -	         O	      I-A1	         O	         O	      I-A1
+         amount	              -	         O	      I-A1	         O	         O	      I-A1
+             of	              -	         O	      I-A1	         O	         O	      I-A1
+     debentures	              -	         O	      I-A1	         O	         O	      I-A1
+              ,	              -	         O	      I-A1	         O	         O	      I-A1
+    convertible	              -	         O	      I-A1	         O	         O	      I-A1
+           into	              -	         O	      I-A1	         O	         O	      I-A1
+      1,826,596	              -	         O	      I-A1	         O	         O	      I-A1
+         common	              -	         O	      I-A1	         O	         O	      I-A1
+         shares	              -	         O	      I-A1	         O	         O	      I-A1
+              ,	              -	         O	      I-A1	         O	         O	      E-A1
+            had	            had	         O	      I-A1	       S-V	         O	         O
+           been	           been	         O	      I-A1	         O	       S-V	         O
+       tendered	       tendered	         O	      I-A1	         O	         O	       S-V
+             to	              -	         O	      I-A1	         O	         O	      B-A2
+            its	              -	         O	      I-A1	         O	         O	      I-A2
+          offer	              -	         O	      E-A1	         O	         O	      E-A2
+              .	              -	         O	         O	         O	         O	         O
+
+             At	              -	  B-AM-TMP	         O	         O	         O
+            the	              -	  I-AM-TMP	         O	         O	         O
+          close	              -	  I-AM-TMP	         O	         O	         O
+             of	              -	  I-AM-TMP	         O	         O	         O
+       business	              -	  I-AM-TMP	         O	         O	         O
+       Thursday	              -	  E-AM-TMP	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+     Ciba-Geigy	              -	      B-A0	         O	         O	         O
+            and	              -	      I-A0	         O	         O	         O
+         Chiron	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+         11,580	              -	      B-A1	      B-A1	      B-A1	      B-A1
+         common	              -	      I-A1	      I-A1	      I-A1	      I-A1
+         shares	              -	      I-A1	      E-A1	      E-A1	      E-A1
+            had	            had	      I-A1	       S-V	         O	         O
+           been	           been	      I-A1	         O	       S-V	         O
+       tendered	       tendered	      I-A1	         O	      B-A3	       S-V
+             to	              -	      I-A1	         O	      I-A3	      B-A2
+          their	              -	      I-A1	         O	      I-A3	      I-A2
+          offer	              -	      E-A1	         O	      E-A3	      E-A2
+              .	              -	         O	         O	         O	         O
+
+             At	              -	  B-AM-LOC
+           last	              -	  I-AM-LOC
+         report	              -	  E-AM-LOC
+              ,	              -	         O
+      Connaught	              -	      S-A0
+            had	            had	       S-V
+           21.8	              -	      B-A1
+        million	              -	      I-A1
+         shares	              -	      I-A1
+    outstanding	              -	      E-A1
+              .	              -	         O
+
+     Separately	              -	  S-AM-ADV	         O	         O
+              ,	              -	         O	         O	         O
+            the	              -	      B-A0	         O	         O
+        Ontario	              -	      I-A0	         O	         O
+        Supreme	              -	      I-A0	         O	         O
+          Court	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             it	              -	      B-A1	      S-A0	         O
+           will	              -	      I-A1	  S-AM-MOD	         O
+       postpone	       postpone	      I-A1	       S-V	         O
+   indefinitely	              -	      I-A1	  S-AM-TMP	         O
+              a	              -	      I-A1	      B-A1	         O
+         ruling	              -	      I-A1	      I-A1	         O
+             on	              -	      I-A1	      I-A1	         O
+            the	              -	      I-A1	      I-A1	      B-A1
+        lawsuit	              -	      I-A1	      I-A1	      E-A1
+       launched	       launched	      I-A1	      I-A1	       S-V
+             by	              -	      I-A1	      I-A1	      B-A0
+            the	              -	      I-A1	      I-A1	      I-A0
+     University	              -	      I-A1	      I-A1	      I-A0
+             of	              -	      I-A1	      I-A1	      I-A0
+        Toronto	              -	      I-A1	      I-A1	      E-A0
+        against	              -	      I-A1	      I-A1	  B-AM-MNR
+      Connaught	              -	      I-A1	      I-A1	  I-AM-MNR
+             in	              -	      I-A1	      I-A1	  I-AM-MNR
+     connection	              -	      I-A1	      I-A1	  I-AM-MNR
+           with	              -	      I-A1	      I-A1	  I-AM-MNR
+            the	              -	      I-A1	      I-A1	  I-AM-MNR
+        Merieux	              -	      I-A1	      I-A1	  I-AM-MNR
+            bid	              -	      E-A1	      E-A1	  E-AM-MNR
+              .	              -	         O	         O	         O
+
+             In	              -	         O	  B-AM-LOC	         O	         O	         O	         O
+              a	              -	      B-A1	  I-AM-LOC	         O	         O	         O	         O
+      statement	              -	      E-A1	  I-AM-LOC	         O	         O	         O	         O
+       prepared	       prepared	       S-V	  I-AM-LOC	         O	         O	         O	         O
+             by	              -	      B-A0	  I-AM-LOC	         O	         O	         O	         O
+        lawyers	              -	      I-A0	  I-AM-LOC	         O	         O	         O	         O
+            for	              -	      I-A0	  I-AM-LOC	         O	         O	         O	         O
+            the	              -	      I-A0	  I-AM-LOC	         O	         O	         O	         O
+     university	              -	      I-A0	  I-AM-LOC	         O	         O	         O	         O
+            and	              -	      I-A0	  I-AM-LOC	         O	         O	         O	         O
+      Connaught	              -	      E-A0	  E-AM-LOC	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+            the	              -	         O	      B-A0	         O	         O	         O	         O
+        parties	              -	         O	      E-A0	         O	         O	         O	         O
+           said	           said	         O	       S-V	         O	         O	         O	         O
+           they	              -	         O	      B-A1	      S-A0	      S-A0	         O	         O
+         agreed	         agreed	         O	      I-A1	       S-V	         O	         O	         O
+           that	              -	         O	      I-A1	      B-A1	         O	         O	         O
+             as	              -	         O	      I-A1	      I-A1	         O	  B-AM-CAU	         O
+              a	              -	         O	      I-A1	      I-A1	         O	  I-AM-CAU	         O
+         result	              -	         O	      I-A1	      I-A1	         O	  I-AM-CAU	         O
+             of	              -	         O	      I-A1	      I-A1	         O	  I-AM-CAU	         O
+       reaching	       reaching	         O	      I-A1	      I-A1	       S-V	  I-AM-CAU	         O
+              a	              -	         O	      I-A1	      I-A1	      B-A1	  I-AM-CAU	         O
+           C415	              -	         O	      I-A1	      I-A1	      I-A1	  I-AM-CAU	         O
+        million	              -	         O	      I-A1	      I-A1	      I-A1	  I-AM-CAU	         O
+       research	              -	         O	      I-A1	      I-A1	      I-A1	  I-AM-CAU	         O
+         accord	              -	         O	      I-A1	      I-A1	      E-A1	  E-AM-CAU	         O
+              ,	              -	         O	      I-A1	      I-A1	         O	         O	         O
+             It	              -	         O	      I-A1	      I-A1	         O	         O	         O
+             is	             is	         O	      I-A1	      I-A1	         O	       S-V	         O
+    unnecessary	              -	         O	      I-A1	      I-A1	         O	      S-A2	         O
+           that	              -	         O	      I-A1	      I-A1	         O	      B-A1	         O
+          there	              -	         O	      I-A1	      I-A1	         O	      I-A1	         O
+             be	             be	         O	      I-A1	      I-A1	         O	      I-A1	       S-V
+              a	              -	         O	      I-A1	      I-A1	         O	      I-A1	      B-A1
+       judgment	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+             on	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+            the	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+         merits	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+              {	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+             of	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+            the	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+           case	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+              }	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+             at	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+           this	              -	         O	      I-A1	      I-A1	         O	      I-A1	      I-A1
+           time	              -	         O	      E-A1	      E-A1	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+        Lawyers	              -	      B-A1
+            for	              -	      I-A1
+            the	              -	      I-A1
+            two	              -	      I-A1
+          sides	              -	      E-A1
+           were	           were	       S-V
+            n't	              -	    B-C-A1
+    immediately	              -	    I-C-A1
+      available	              -	    I-C-A1
+            for	              -	    I-C-A1
+        comment	              -	    E-C-A1
+              .	              -	         O
+
+            The	              -	      B-A0	      B-A0	         O	         O	         O
+     university	              -	      E-A0	      E-A0	         O	         O	         O
+            had	            had	       S-V	         O	         O	         O	         O
+         sought	         sought	      B-A1	       S-V	         O	         O	         O
+             an	              -	      I-A1	      B-A1	      B-A0	         O	         O
+     injunction	              -	      I-A1	      I-A1	      E-A0	         O	         O
+       blocking	       blocking	      I-A1	      I-A1	       S-V	         O	         O
+      Connaught	              -	      I-A1	      I-A1	      B-A1	      B-A0	      B-A0
+             's	              -	      I-A1	      I-A1	      I-A1	      I-A0	      I-A0
+          board	              -	      I-A1	      I-A1	      E-A1	      E-A0	      E-A0
+           from	              -	      I-A1	      I-A1	      B-A3	         O	         O
+   recommending	   recommending	      I-A1	      I-A1	      I-A3	       S-V	         O
+             or	              -	      I-A1	      I-A1	      I-A3	         O	         O
+     supporting	     supporting	      I-A1	      I-A1	      I-A3	         O	       S-V
+             an	              -	      I-A1	      I-A1	      I-A3	      B-A1	      B-A1
+          offer	              -	      I-A1	      I-A1	      I-A3	      I-A1	      I-A1
+            for	              -	      I-A1	      I-A1	      I-A3	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1	      I-A3	      I-A1	      I-A1
+        company	              -	      I-A1	      I-A1	      I-A3	      I-A1	      I-A1
+             by	              -	      I-A1	      I-A1	      I-A3	      I-A1	      I-A1
+        Merieux	              -	      E-A1	      E-A1	      E-A3	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
