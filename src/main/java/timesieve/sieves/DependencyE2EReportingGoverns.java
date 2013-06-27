@@ -92,6 +92,10 @@ public class DependencyE2EReportingGoverns implements Sieve {
 	
 	private ArrayList<TypedDependency> getAllTypedDependencies(String dependencyParseString){
 		ArrayList<TypedDependency> deps = new ArrayList<TypedDependency>();
+		
+		if (dependencyParseString.isEmpty())
+			return deps;
+		
 		String[] depStrings = dependencyParseString.split("\\n");
 		for (int i = 0; i < depStrings.length; i++){
 			TypedDependency td = TreeOperator.stringParensToDependency(depStrings[i]);
