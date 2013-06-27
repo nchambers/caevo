@@ -32,7 +32,7 @@ import timesieve.util.TreeOperator;
  * @author cassidy
  */
 public class ReichenbachDG13_4 implements Sieve {
-	public boolean debug = false;
+	public boolean debug = true;
 	// create TreeFactory to convert a sentence to a tree
 	private static TreeFactory tf = new LabeledScoredTreeFactory();
 	
@@ -142,6 +142,9 @@ public class ReichenbachDG13_4 implements Sieve {
 				if (e2Aspect == null) continue;
 				// Extract tense-aspect profiles, and label the pair accordingly
 				String taProfilePair = e1Tense+"-"+e1Aspect+"/"+e2Tense+"-"+e2Aspect;
+				if (debug == true){
+					System.out.println(taProfilePair);
+				}
 				TLink.TYPE label = taToLabel(taProfilePair);
 				if (label != null){
 				proposed.add(new EventEventLink(e1.eiid(), e2.eiid(), label));
