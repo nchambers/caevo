@@ -486,6 +486,32 @@ public class TreeOperator {
   }
   
   /**
+   * Takes a single sentence's string from the .info file. It is multiple lines, each line is
+   * a typed dependency. Convert this to a list of dependencies.
+   * @param strdeps A single string with newlines, one dependency per line.
+   * @return A single sentence's dependencies.
+   */
+  public static List<TypedDependency> stringToDependencies(String strdeps) {
+    List<TypedDependency> deps = new ArrayList<TypedDependency>();
+    String[] lines = strdeps.split("\n");
+    for( String line : lines ) {
+      line = line.trim();
+      if( line.length() > 0 ) {
+        TypedDependency dep = TreeOperator.stringParensToDependency(line);
+        deps.add(dep);
+      }
+    }
+    return deps;
+  }
+  
+  public static List<List<TypedDependency>> stringsToDependencies(List<String> strdeps) {
+    List<List<TypedDependency>> alldeps = new ArrayList<List<TypedDependency>>();
+    for( String deps : strdeps )
+      alldeps.add(stringToDependencies(deps));
+    return alldeps;
+  }
+  
+  /**
    * Given string representations of the dependency's relation, governor and dependent, create
    * the JavaNLP object.
    * @param strReln e.g., nsubj
