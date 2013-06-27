@@ -1,0 +1,503 @@
+           Some	              -	      B-A0	         O	         O
+          lousy	              -	      I-A0	         O	         O
+       earnings	              -	      I-A0	         O	         O
+        reports	              -	      E-A0	         O	         O
+        whacked	        whacked	       S-V	         O	         O
+            the	              -	      B-A1	         O	         O
+          stock	              -	      I-A1	         O	         O
+         market	              -	      E-A1	         O	         O
+              ,	              -	         O	         O	         O
+            but	              -	         O	         O	         O
+           bond	              -	         O	      B-A1	         O
+         prices	              -	         O	      E-A1	         O
+           fell	           fell	         O	       S-V	         O
+           only	              -	         O	      B-A2	         O
+       slightly	              -	         O	      E-A2	         O
+            and	              -	         O	         O	         O
+            the	              -	         O	         O	      B-A1
+         dollar	              -	         O	         O	      E-A1
+           rose	           rose	         O	         O	       S-V
+              a	              -	         O	         O	      B-A2
+         little	              -	         O	         O	      I-A2
+        against	              -	         O	         O	      I-A2
+           most	              -	         O	         O	      I-A2
+          major	              -	         O	         O	      I-A2
+     currencies	              -	         O	         O	      E-A2
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1
+            Dow	              -	      I-A1
+          Jones	              -	      I-A1
+     Industrial	              -	      I-A1
+        Average	              -	      E-A1
+        tumbled	        tumbled	       S-V
+          39.55	              -	      B-A2
+         points	              -	      E-A2
+              ,	              -	         O
+             to	              -	      B-A4
+        2613.73	              -	      E-A4
+              ,	              -	         O
+             in	              -	  B-AM-LOC
+         active	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+              .	              -	         O
+
+      Long-term	              -	      B-A1
+       Treasury	              -	      I-A1
+          bonds	              -	      E-A1
+          ended	          ended	       S-V
+       slightly	              -	  B-AM-MNR
+         higher	              -	  E-AM-MNR
+              .	              -	         O
+
+            The	              -	      B-A1	      B-A1	         O
+         dollar	              -	      E-A1	      E-A1	         O
+           rose	           rose	       S-V	         O	         O
+       modestly	              -	      S-A2	         O	         O
+        against	              -	  B-AM-ADV	         O	         O
+            the	              -	  I-AM-ADV	         O	         O
+           mark	              -	  I-AM-ADV	         O	         O
+            and	              -	  I-AM-ADV	         O	         O
+            the	              -	  I-AM-ADV	         O	         O
+            yen	              -	  E-AM-ADV	         O	         O
+              ,	              -	         O	         O	         O
+            but	              -	         O	         O	         O
+         soared	         soared	         O	       S-V	         O
+        against	              -	         O	  B-AM-ADV	         O
+            the	              -	         O	  I-AM-ADV	         O
+          pound	              -	         O	  E-AM-ADV	         O
+      following	      following	         O	  B-AM-TMP	       S-V
+            the	              -	         O	  I-AM-TMP	      B-A2
+    resignation	              -	         O	  I-AM-TMP	      I-A2
+             of	              -	         O	  I-AM-TMP	      I-A2
+        Britain	              -	         O	  I-AM-TMP	      I-A2
+             's	              -	         O	  I-AM-TMP	      I-A2
+     chancellor	              -	         O	  I-AM-TMP	      I-A2
+             of	              -	         O	  I-AM-TMP	      I-A2
+            the	              -	         O	  I-AM-TMP	      I-A2
+      Exchequer	              -	         O	  I-AM-TMP	      I-A2
+              ,	              -	         O	  I-AM-TMP	      I-A2
+          Nigel	              -	         O	  I-AM-TMP	      I-A2
+         Lawson	              -	         O	  E-AM-TMP	      E-A2
+              .	              -	         O	         O	         O
+
+       Analysts	              -	      S-A0	      S-A0	         O	         O	         O
+           have	           have	       S-V	         O	         O	         O	         O
+     complained	     complained	      B-A1	       S-V	         O	         O	         O
+           that	              -	      I-A1	      B-A1	         O	         O	         O
+  third-quarter	              -	      I-A1	      I-A1	      B-A0	      B-A1	         O
+      corporate	              -	      I-A1	      I-A1	      I-A0	      I-A1	         O
+       earnings	              -	      I-A1	      I-A1	      E-A0	      E-A1	         O
+           have	           have	      I-A1	      I-A1	       S-V	         O	         O
+            n't	              -	      I-A1	      I-A1	  S-AM-NEG	  S-AM-NEG	         O
+           been	           been	      I-A1	      I-A1	         O	       S-V	         O
+           very	              -	      I-A1	      I-A1	         O	  B-AM-MNR	         O
+           good	              -	      E-A1	      I-A1	         O	  E-AM-MNR	         O
+              ,	              -	         O	      I-A1	         O	         O	         O
+            but	              -	         O	      I-A1	         O	         O	         O
+            the	              -	         O	      I-A1	         O	         O	      B-A1
+         effect	              -	         O	      I-A1	         O	         O	      E-A1
+            hit	            hit	         O	      I-A1	         O	         O	       S-V
+           home	              -	         O	      I-A1	         O	         O	      S-A1
+   particularly	              -	         O	      I-A1	         O	         O	  B-AM-MNR
+           hard	              -	         O	      I-A1	         O	         O	  E-AM-MNR
+      yesterday	              -	         O	      E-A1	         O	         O	  S-AM-TMP
+              .	              -	         O	         O	         O	         O	         O
+
+         Compaq	              -	      B-A1	      B-A0	         O	         O
+       Computer	              -	      E-A1	      E-A0	         O	         O
+     nose-dived	     nose-dived	       S-V	         O	         O	         O
+              $	              -	      B-A2	         O	         O	         O
+          8.625	              -	      I-A2	         O	         O	         O
+              a	              -	      I-A2	         O	         O	         O
+          share	              -	      E-A2	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+             to	              -	      B-A4	         O	         O	         O
+              $	              -	      I-A4	         O	         O	         O
+            100	              -	      E-A4	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O
+         pulled	         pulled	         O	       S-V	         O	         O
+          other	              -	         O	      B-A1	         O	         O
+     technology	              -	         O	      I-A1	         O	         O
+         issues	              -	         O	      E-A1	         O	         O
+          lower	              -	         O	      S-A2	         O	         O
+          after	              -	         O	  B-AM-TMP	         O	         O
+      reporting	      reporting	         O	  I-AM-TMP	       S-V	         O
+lower-than-expected	              -	         O	  I-AM-TMP	      B-A1	         O
+       earnings	              -	         O	  I-AM-TMP	      E-A1	         O
+          after	              -	         O	  I-AM-TMP	  B-AM-TMP	         O
+            the	              -	         O	  I-AM-TMP	  I-AM-TMP	      B-A1
+          stock	              -	         O	  I-AM-TMP	  I-AM-TMP	      I-A1
+         market	              -	         O	  I-AM-TMP	  I-AM-TMP	      E-A1
+         closed	         closed	         O	  I-AM-TMP	  I-AM-TMP	       S-V
+      Wednesday	              -	         O	  E-AM-TMP	  E-AM-TMP	  S-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+          Later	              -	  B-AM-TMP	         O	  B-AM-TMP
+      yesterday	              -	  E-AM-TMP	         O	  I-AM-TMP
+            the	              -	      B-A0	         O	  I-AM-TMP
+         nation	              -	      I-A0	         O	  I-AM-TMP
+             's	              -	      I-A0	         O	  I-AM-TMP
+          major	              -	      I-A0	         O	  I-AM-TMP
+           auto	              -	      I-A0	         O	  I-AM-TMP
+         makers	              -	      E-A0	         O	  I-AM-TMP
+          added	          added	       S-V	         O	  I-AM-TMP
+             to	              -	      B-A2	         O	  I-AM-TMP
+            the	              -	      I-A2	         O	  I-AM-TMP
+          gloom	              -	      E-A2	         O	  E-AM-TMP
+           when	              -	         O	         O	S-R-AM-TMP
+           they	              -	         O	      B-A0	      B-A1
+           each	              -	         O	      E-A0	      I-A1
+       reported	       reported	         O	       S-V	      I-A1
+          their	              -	         O	      B-A1	      I-A1
+           core	              -	         O	      I-A1	      I-A1
+           auto	              -	         O	      I-A1	      I-A1
+     operations	              -	         O	      I-A1	      E-A1
+           were	           were	         O	      I-A1	       S-V
+            net	              -	         O	      I-A1	      B-A1
+         losers	              -	         O	      I-A1	      E-A1
+             in	              -	         O	      I-A1	  B-AM-TMP
+            the	              -	         O	      I-A1	  I-AM-TMP
+          third	              -	         O	      I-A1	  I-AM-TMP
+        quarter	              -	         O	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	         O
+less-than-robust	              -	      I-A1	         O
+  third-quarter	              -	      I-A1	         O
+        results	              -	      E-A1	         O
+           came	           came	       S-V	         O
+           amid	              -	  B-AM-TMP	         O
+        renewed	        renewed	  I-AM-TMP	       S-V
+        concern	              -	  I-AM-TMP	      S-A1
+          about	              -	  I-AM-TMP	         O
+            the	              -	  I-AM-TMP	         O
+     volatility	              -	  I-AM-TMP	         O
+             of	              -	  I-AM-TMP	         O
+          stock	              -	  I-AM-TMP	         O
+         prices	              -	  I-AM-TMP	         O
+            and	              -	  I-AM-TMP	         O
+            the	              -	  I-AM-TMP	         O
+           role	              -	  I-AM-TMP	         O
+             of	              -	  I-AM-TMP	         O
+ computer-aided	              -	  I-AM-TMP	         O
+        program	              -	  I-AM-TMP	         O
+        trading	              -	  E-AM-TMP	         O
+              .	              -	         O	         O
+
+          Taken	          Taken	       S-V	  B-AM-ADV
+       together	              -	  S-AM-MNR	  E-AM-ADV
+              ,	              -	         O	         O
+            the	              -	         O	      B-A0
+        worries	              -	         O	      E-A0
+       prompted	       prompted	         O	       S-V
+              a	              -	         O	      B-A1
+          broad	              -	         O	      I-A1
+       sell-off	              -	         O	      I-A1
+             of	              -	         O	      I-A1
+         stocks	              -	         O	      E-A1
+              .	              -	         O	         O
+
+            The	              -	         O	      B-A0	         O
+         number	              -	         O	      I-A0	         O
+             of	              -	         O	      I-A0	         O
+         stocks	              -	         O	      I-A0	         O
+             on	              -	         O	      I-A0	         O
+            the	              -	         O	      I-A0	         O
+            New	              -	         O	      I-A0	         O
+           York	              -	         O	      I-A0	         O
+          Stock	              -	         O	      I-A0	         O
+       Exchange	              -	         O	      I-A0	         O
+           that	              -	    S-R-A1	      I-A0	         O
+           fell	           fell	       S-V	      I-A0	         O
+             in	              -	      B-A2	      I-A0	         O
+          price	              -	      E-A2	      E-A0	         O
+      yesterday	              -	  B-AM-TMP	  S-AM-TMP	         O
+       exceeded	       exceeded	  I-AM-TMP	       S-V	         O
+          1,000	              -	  E-AM-TMP	      B-A1	         O
+              ,	              -	         O	      I-A1	         O
+              a	              -	         O	      I-A1	         O
+            key	              -	         O	      I-A1	         O
+        measure	              -	         O	      I-A1	         O
+             of	              -	         O	      I-A1	         O
+     underlying	     underlying	         O	      I-A1	       S-V
+      sentiment	              -	         O	      I-A1	      S-A0
+          among	              -	         O	      I-A1	         O
+      technical	              -	         O	      I-A1	         O
+       analysts	              -	         O	      E-A1	         O
+              .	              -	         O	         O	         O
+
+       Although	              -	         O	         O	         O	  B-AM-ADV	         O
+            the	              -	      B-A0	         O	         O	  I-AM-ADV	         O
+     government	              -	      E-A0	         O	         O	  I-AM-ADV	         O
+           said	           said	       S-V	         O	         O	  I-AM-ADV	         O
+            the	              -	      B-A1	      B-A1	         O	  I-AM-ADV	         O
+        economy	              -	      I-A1	      E-A1	         O	  I-AM-ADV	         O
+           grew	           grew	      I-A1	       S-V	         O	  I-AM-ADV	         O
+             an	              -	      I-A1	      B-A2	         O	  I-AM-ADV	         O
+      estimated	      estimated	      I-A1	      I-A2	       S-V	  I-AM-ADV	         O
+            2.5	              -	      I-A1	      I-A2	      B-A1	  I-AM-ADV	         O
+              %	              -	      I-A1	      E-A2	      E-A1	  I-AM-ADV	         O
+             in	              -	      I-A1	  B-AM-TMP	  B-AM-TMP	  I-AM-ADV	         O
+            the	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-ADV	         O
+          third	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-ADV	         O
+        quarter	              -	      E-A1	  E-AM-TMP	  E-AM-TMP	  I-AM-ADV	         O
+              ,	              -	         O	         O	         O	  I-AM-ADV	         O
+             in	              -	         O	  B-AM-CAU	         O	  I-AM-ADV	         O
+           line	              -	         O	  I-AM-CAU	         O	  I-AM-ADV	         O
+           with	              -	         O	  I-AM-CAU	         O	  I-AM-ADV	         O
+   expectations	              -	         O	  I-AM-CAU	         O	  E-AM-ADV	         O
+              ,	              -	         O	  I-AM-CAU	         O	         O	         O
+       analysts	              -	         O	  I-AM-CAU	         O	      S-A1	      S-A0
+            are	            are	         O	  I-AM-CAU	         O	       S-V	         O
+   increasingly	              -	         O	  I-AM-CAU	         O	    B-C-A1	  S-AM-ADV
+     predicting	     predicting	         O	  I-AM-CAU	         O	    I-C-A1	       S-V
+           much	              -	         O	  I-AM-CAU	         O	    I-C-A1	      B-A1
+           more	              -	         O	  I-AM-CAU	         O	    I-C-A1	      I-A1
+       sluggish	              -	         O	  I-AM-CAU	         O	    I-C-A1	      I-A1
+         growth	              -	         O	  I-AM-CAU	         O	    I-C-A1	      E-A1
+             --	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+            and	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+      therefore	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+           more	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+      corporate	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+       earnings	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+disappointments	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+             --	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+            for	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+            the	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+         fourth	              -	         O	  I-AM-CAU	         O	    I-C-A1	         O
+        quarter	              -	         O	  E-AM-CAU	         O	    E-C-A1	         O
+              .	              -	         O	         O	         O	         O	         O
+
+          There	              -	      S-A1	      B-A1
+            are	            are	       S-V	      I-A1
+              a	              -	      B-A1	      I-A1
+            lot	              -	      I-A1	      I-A1
+           more	              -	      I-A1	      I-A1
+       downward	              -	      I-A1	      I-A1
+      revisions	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+       earnings	              -	      I-A1	      I-A1
+      forecasts	              -	      I-A1	      I-A1
+           than	              -	      I-A1	      I-A1
+         upward	              -	      I-A1	      I-A1
+      revisions	              -	      E-A1	      E-A1
+              ,	              -	         O	         O
+           said	           said	         O	       S-V
+           Abby	              -	         O	      B-A0
+         Joseph	              -	         O	      I-A0
+          Cohen	              -	         O	      I-A0
+              ,	              -	         O	      I-A0
+              a	              -	         O	      I-A0
+         market	              -	         O	      I-A0
+     strategist	              -	         O	      I-A0
+             at	              -	         O	      I-A0
+         Drexel	              -	         O	      I-A0
+        Burnham	              -	         O	      I-A0
+        Lambert	              -	         O	      E-A0
+              .	              -	         O	         O
+
+         People	              -	      S-A1	      S-A0
+            are	            are	       S-V	         O
+    questioning	    questioning	    B-C-A1	       S-V
+      corporate	              -	    I-C-A1	      B-A1
+        profits	              -	    I-C-A1	      E-A1
+             as	              -	    I-C-A1	  B-AM-PNC
+              a	              -	    I-C-A1	  I-AM-PNC
+         pillar	              -	    I-C-A1	  I-AM-PNC
+             of	              -	    I-C-A1	  I-AM-PNC
+        support	              -	    I-C-A1	  I-AM-PNC
+            for	              -	    I-C-A1	  I-AM-PNC
+            the	              -	    I-C-A1	  I-AM-PNC
+         equity	              -	    I-C-A1	  I-AM-PNC
+         market	              -	    E-C-A1	  E-AM-PNC
+              .	              -	         O	         O
+
+            The	              -	      B-A1
+           bond	              -	      I-A1
+         market	              -	      E-A1
+            was	            was	       S-V
+        unmoved	              -	  B-AM-ADV
+             by	              -	  I-AM-ADV
+            the	              -	  I-AM-ADV
+       economic	              -	  I-AM-ADV
+     statistics	              -	  E-AM-ADV
+              .	              -	         O
+
+          While	              -	         O	         O	         O	  B-AM-ADV	  B-AM-ADV	         O	         O
+           bond	              -	      B-A0	      B-A0	         O	  I-AM-ADV	  I-AM-ADV	         O	         O
+      investors	              -	      E-A0	      E-A0	         O	  I-AM-ADV	  I-AM-ADV	         O	         O
+          would	              -	  S-AM-MOD	         O	         O	  I-AM-ADV	  I-AM-ADV	         O	         O
+           have	           have	       S-V	         O	         O	  I-AM-ADV	  I-AM-ADV	         O	         O
+      preferred	      preferred	      B-A1	       S-V	      B-A1	  I-AM-ADV	  I-AM-ADV	         O	         O
+         growth	              -	      I-A1	      S-A1	      E-A1	  I-AM-ADV	  I-AM-ADV	         O	         O
+             to	              -	      I-A1	         O	         O	  I-AM-ADV	  I-AM-ADV	         O	         O
+             be	             be	      I-A1	         O	       S-V	  I-AM-ADV	  I-AM-ADV	         O	         O
+              a	              -	      I-A1	         O	  B-AM-MNR	  I-AM-ADV	  I-AM-ADV	         O	         O
+         little	              -	      I-A1	         O	  I-AM-MNR	  I-AM-ADV	  I-AM-ADV	         O	         O
+         slower	              -	      E-A1	         O	  E-AM-MNR	  E-AM-ADV	  E-AM-ADV	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+           they	              -	         O	         O	         O	      S-A1	      S-A1	         O	         O
+           were	           were	         O	         O	         O	       S-V	         O	         O	         O
+        cheered	        cheered	         O	         O	         O	      B-A1	       S-V	         O	         O
+             by	              -	         O	         O	         O	      I-A1	      B-A0	         O	         O
+      inflation	              -	         O	         O	         O	      I-A1	      I-A0	      B-A0	         O
+       measures	              -	         O	         O	         O	      I-A1	      I-A0	      I-A0	         O
+             in	              -	         O	         O	         O	      I-A1	      I-A0	      I-A0	         O
+            the	              -	         O	         O	         O	      I-A1	      I-A0	      I-A0	         O
+           data	              -	         O	         O	         O	      I-A1	      I-A0	      E-A0	         O
+           that	              -	         O	         O	         O	      I-A1	      I-A0	    S-R-A0	         O
+         showed	         showed	         O	         O	         O	      I-A1	      I-A0	       S-V	         O
+         prices	              -	         O	         O	         O	      I-A1	      I-A0	      B-A1	      S-A1
+         rising	         rising	         O	         O	         O	      I-A1	      I-A0	      I-A1	       S-V
+             at	              -	         O	         O	         O	      I-A1	      I-A0	      I-A1	  B-AM-LOC
+              a	              -	         O	         O	         O	      I-A1	      I-A0	      I-A1	  I-AM-LOC
+         modest	              -	         O	         O	         O	      I-A1	      I-A0	      I-A1	  I-AM-LOC
+         annual	              -	         O	         O	         O	      I-A1	      I-A0	      I-A1	  I-AM-LOC
+           rate	              -	         O	         O	         O	      I-A1	      I-A0	      I-A1	  E-AM-LOC
+             of	              -	         O	         O	         O	      I-A1	      I-A0	      I-A1	         O
+            2.9	              -	         O	         O	         O	      I-A1	      I-A0	      I-A1	         O
+              %	              -	         O	         O	         O	      E-A1	      E-A0	      E-A1	         O
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+           That	              -	      S-A1	         O	      B-A1
+             is	             is	       S-V	         O	      I-A1
+        another	              -	      B-A1	         O	      I-A1
+          small	              -	      I-A1	         O	      I-A1
+  encouragement	              -	      I-A1	         O	      I-A1
+            for	              -	      I-A1	         O	      I-A1
+            the	              -	      I-A1	      B-A0	      I-A1
+        Federal	              -	      I-A1	      I-A0	      I-A1
+        Reserve	              -	      I-A1	      E-A0	      I-A1
+             to	              -	      I-A1	         O	      I-A1
+          lower	          lower	      I-A1	       S-V	      I-A1
+       interest	              -	      I-A1	      B-A1	      I-A1
+          rates	              -	      I-A1	      E-A1	      I-A1
+             in	              -	      I-A1	  B-AM-TMP	      I-A1
+         coming	              -	      I-A1	  I-AM-TMP	      I-A1
+          weeks	              -	      E-A1	  E-AM-TMP	      E-A1
+              ,	              -	         O	         O	         O
+           they	              -	         O	         O	      S-A0
+       reasoned	       reasoned	         O	         O	       S-V
+              .	              -	         O	         O	         O
+
+             In	              -	  B-AM-LOC
+          major	              -	  I-AM-LOC
+         market	              -	  I-AM-LOC
+       activity	              -	  E-AM-LOC
+              :	              -	         O
+          Stock	              -	      B-A1
+         prices	              -	      E-A1
+           fell	           fell	       S-V
+        sharply	              -	      S-A2
+             in	              -	  B-AM-LOC
+         active	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+              .	              -	         O
+
+         Volume	              -	      B-A1
+             on	              -	      I-A1
+            the	              -	      I-A1
+            New	              -	      I-A1
+           York	              -	      I-A1
+          Stock	              -	      I-A1
+       Exchange	              -	      E-A1
+        totaled	        totaled	       S-V
+          175.2	              -	      B-A2
+        million	              -	      I-A2
+         shares	              -	      E-A2
+              .	              -	         O
+
+      Declining	      Declining	       S-V	      B-A0
+         issues	              -	      S-A1	      I-A0
+             on	              -	         O	      I-A0
+            the	              -	         O	      I-A0
+            Big	              -	         O	      I-A0
+          Board	              -	         O	      E-A0
+    outstripped	    outstripped	         O	       S-V
+        gainers	              -	         O	      S-A1
+          1,141	              -	         O	  B-AM-TMP
+             to	              -	         O	  I-AM-TMP
+            406	              -	         O	  E-AM-TMP
+              .	              -	         O	         O
+
+           Bond	              -	      B-A1
+         prices	              -	      E-A1
+           were	           were	       S-V
+         barely	              -	    B-C-A1
+         higher	              -	    E-C-A1
+              .	              -	         O
+
+            The	              -	      B-A1
+       Treasury	              -	      I-A1
+             's	              -	      I-A1
+      benchmark	              -	      I-A1
+        30-year	              -	      E-A1
+           rose	           rose	       S-V
+   fractionally	              -	      S-A2
+              .	              -	         O
+
+          Yield	              -	      B-A1
+             on	              -	      I-A1
+            the	              -	      I-A1
+          issue	              -	      E-A1
+            was	            was	       S-V
+           7.88	              -	      B-A2
+              %	              -	      E-A2
+              .	              -	         O
+
+            The	              -	      B-A1
+         dollar	              -	      E-A1
+           rose	           rose	       S-V
+       modestly	              -	      S-A2
+        against	              -	  B-AM-ADV
+           most	              -	  I-AM-ADV
+          major	              -	  I-AM-ADV
+     currencies	              -	  E-AM-ADV
+              .	              -	         O
+
+             In	              -	  B-AM-LOC	         O
+           late	              -	  I-AM-LOC	         O
+            New	              -	  I-AM-LOC	         O
+           York	              -	  I-AM-LOC	         O
+        trading	              -	  E-AM-LOC	         O
+            the	              -	      B-A1	         O
+         dollar	              -	      E-A1	         O
+            was	            was	       S-V	         O
+             at	              -	      B-A2	         O
+         1.8400	              -	      I-A2	      B-A1
+          marks	              -	      I-A2	      I-A1
+            and	              -	      I-A2	      I-A1
+         142.10	              -	      I-A2	      I-A1
+            yen	              -	      E-A2	      E-A1
+       compared	       compared	  B-AM-ADV	       S-V
+           with	              -	  I-AM-ADV	      B-A2
+         1.8353	              -	  I-AM-ADV	      I-A2
+          marks	              -	  I-AM-ADV	      I-A2
+            and	              -	  I-AM-ADV	      I-A2
+         141.52	              -	  I-AM-ADV	      I-A2
+            yen	              -	  I-AM-ADV	      I-A2
+      Wednesday	              -	  E-AM-ADV	      E-A2
+              .	              -	         O	         O
+
+            The	              -	      B-A1	         O	         O
+         dollar	              -	      E-A1	         O	         O
+         soared	         soared	       S-V	         O	         O
+        against	              -	  B-AM-ADV	         O	         O
+            the	              -	  I-AM-ADV	      B-A1	         O
+          pound	              -	  I-AM-ADV	      E-A1	         O
+              ,	              -	  I-AM-ADV	         O	         O
+          which	              -	  I-AM-ADV	    S-R-A1	         O
+            was	            was	  I-AM-ADV	       S-V	         O
+             at	              -	  I-AM-ADV	  B-AM-EXT	      B-A1
+              $	              -	  I-AM-ADV	  I-AM-EXT	      I-A1
+         1.5765	              -	  I-AM-ADV	  E-AM-EXT	      E-A1
+       compared	       compared	  I-AM-ADV	  B-AM-ADV	       S-V
+           with	              -	  I-AM-ADV	  I-AM-ADV	      B-A2
+              $	              -	  I-AM-ADV	  I-AM-ADV	      I-A2
+         1.6145	              -	  I-AM-ADV	  I-AM-ADV	      I-A2
+      Wednesday	              -	  E-AM-ADV	  E-AM-ADV	      E-A2
+              .	              -	         O	         O	         O
+

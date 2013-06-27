@@ -1,0 +1,191 @@
+    BLOCKBUSTER	              -	      B-A0	         O
+  ENTERTAINMENT	              -	      I-A0	         O
+          CORP.	              -	      E-A0	         O
+           said	           said	       S-V	         O
+             it	              -	      B-A1	      S-A0
+         raised	         raised	      I-A1	       S-V
+              $	              -	      I-A1	      B-A1
+             92	              -	      I-A1	      I-A1
+        million	              -	      I-A1	      I-A1
+           from	              -	      I-A1	      I-A1
+             an	              -	      I-A1	      I-A1
+       offering	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+         liquid	              -	      I-A1	      I-A1
+          yield	              -	      I-A1	      I-A1
+         option	              -	      I-A1	      I-A1
+          notes	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+            The	              -	         O	      B-A1	      B-A2	      B-A0	         O	      B-A1
+          gross	              -	         O	      I-A1	      I-A2	      I-A0	         O	      I-A1
+       proceeds	              -	         O	      I-A1	      I-A2	      I-A0	         O	      I-A1
+           from	              -	         O	      I-A1	      I-A2	      I-A0	         O	      I-A1
+            the	              -	         O	      I-A1	      I-A2	      I-A0	         O	      I-A1
+           sale	              -	         O	      I-A1	      I-A2	      I-A0	         O	      I-A1
+             of	              -	         O	      I-A1	      I-A2	      I-A0	         O	      I-A1
+            the	              -	      B-A1	      I-A1	      I-A2	      I-A0	         O	      I-A1
+          notes	              -	      E-A1	      I-A1	      I-A2	      I-A0	         O	      I-A1
+              ,	              -	         O	      I-A1	      I-A2	      I-A0	         O	      I-A1
+          which	              -	    S-R-A1	      I-A1	      I-A2	      I-A0	         O	      I-A1
+           will	              -	  S-AM-MOD	      I-A1	      I-A2	      I-A0	         O	      I-A1
+             be	             be	       S-V	      I-A1	      I-A2	      I-A0	         O	      I-A1
+            due	              -	      S-A3	      I-A1	      I-A2	      I-A0	         O	      I-A1
+             on	              -	  B-AM-TMP	      I-A1	      I-A2	      I-A0	         O	      I-A1
+           Nov.	              -	  I-AM-TMP	      I-A1	      I-A2	      I-A0	         O	      I-A1
+              1	              -	  I-AM-TMP	      I-A1	      I-A2	      I-A0	         O	      I-A1
+              ,	              -	  I-AM-TMP	      I-A1	      I-A2	      I-A0	         O	      I-A1
+           2004	              -	  E-AM-TMP	      I-A1	      I-A2	      I-A0	         O	      I-A1
+              ,	              -	         O	      E-A1	      E-A2	      E-A0	         O	      I-A1
+           will	              -	         O	  S-AM-MOD	  S-AM-MOD	         O	         O	      I-A1
+             be	             be	         O	       S-V	         O	         O	         O	      I-A1
+           used	           used	         O	    B-C-A1	       S-V	         O	         O	      I-A1
+             to	              -	         O	    I-C-A1	      B-A2	         O	         O	      I-A1
+         reduce	         reduce	         O	    I-C-A1	      I-A2	       S-V	         O	      I-A1
+       existing	       existing	         O	    I-C-A1	      I-A2	      B-A1	       S-V	      I-A1
+           debt	              -	         O	    I-C-A1	      I-A2	      E-A1	      S-A1	      I-A1
+            and	              -	         O	    I-C-A1	      I-A2	         O	         O	      I-A1
+            for	              -	         O	    I-C-A1	      I-A2	         O	         O	      I-A1
+        general	              -	         O	    I-C-A1	      I-A2	         O	         O	      I-A1
+      corporate	              -	         O	    I-C-A1	      I-A2	         O	         O	      I-A1
+       purposes	              -	         O	    E-C-A1	      E-A2	         O	         O	      E-A1
+              ,	              -	         O	         O	         O	         O	         O	         O
+            the	              -	         O	         O	         O	         O	         O	      B-A0
+        company	              -	         O	         O	         O	         O	         O	      E-A0
+           said	           said	         O	         O	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A0
+           debt	              -	      I-A1	      I-A1	      I-A0
+      reduction	              -	      E-A1	      E-A1	      E-A0
+             is	             is	       S-V	         O	         O
+       expected	       expected	    B-C-A1	       S-V	         O
+             to	              -	    I-C-A1	    B-C-A1	         O
+           save	           save	    I-C-A1	    I-C-A1	       S-V
+            the	              -	    I-C-A1	    I-C-A1	      B-A1
+           Fort	              -	    I-C-A1	    I-C-A1	      I-A1
+     Lauderdale	              -	    I-C-A1	    I-C-A1	      I-A1
+              ,	              -	    I-C-A1	    I-C-A1	      I-A1
+           Fla.	              -	    I-C-A1	    I-C-A1	      I-A1
+           home	              -	    I-C-A1	    I-C-A1	      I-A1
+          video	              -	    I-C-A1	    I-C-A1	      I-A1
+        concern	              -	    I-C-A1	    I-C-A1	      I-A1
+          about	              -	    I-C-A1	    I-C-A1	      I-A1
+              $	              -	    I-C-A1	    I-C-A1	      I-A1
+              2	              -	    I-C-A1	    I-C-A1	      I-A1
+        million	              -	    I-C-A1	    I-C-A1	      I-A1
+              a	              -	    I-C-A1	    I-C-A1	      I-A1
+           year	              -	    I-C-A1	    I-C-A1	      I-A1
+             in	              -	    I-C-A1	    I-C-A1	      I-A1
+       interest	              -	    I-C-A1	    I-C-A1	      I-A1
+        expense	              -	    E-C-A1	    E-C-A1	      E-A1
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0
+    zero-coupon	              -	      I-A0
+   subordinated	              -	      I-A0
+          notes	              -	      E-A0
+           have	           have	       S-V
+             no	              -	      B-A1
+       periodic	              -	      I-A1
+       interest	              -	      I-A1
+       payments	              -	      E-A1
+              .	              -	         O
+
+           Each	              -	      B-A1	      B-A1	      B-A1	         O
+           note	              -	      E-A1	      E-A1	      E-A1	         O
+             is	             is	       S-V	         O	         O	         O
+          being	          being	    B-C-A1	       S-V	         O	         O
+        offered	        offered	    I-C-A1	         O	       S-V	         O
+             at	              -	    I-C-A1	         O	  B-AM-MNR	         O
+              $	              -	    I-C-A1	         O	  I-AM-MNR	         O
+         308.32	              -	    I-C-A1	         O	  I-AM-MNR	         O
+            per	              -	    I-C-A1	         O	  I-AM-MNR	         O
+              $	              -	    I-C-A1	         O	  I-AM-MNR	         O
+          1,000	              -	    I-C-A1	         O	  I-AM-MNR	         O
+      principal	              -	    I-C-A1	         O	  I-AM-MNR	         O
+         amount	              -	    I-C-A1	         O	  I-AM-MNR	         O
+             at	              -	    I-C-A1	         O	  I-AM-MNR	         O
+       maturity	              -	    E-C-A1	         O	  E-AM-MNR	         O
+              ,	              -	         O	         O	         O	         O
+   representing	   representing	  B-AM-ADV	         O	  B-AM-ADV	       S-V
+             an	              -	  I-AM-ADV	         O	  I-AM-ADV	      B-A1
+              8	              -	  I-AM-ADV	         O	  I-AM-ADV	      I-A1
+              %	              -	  I-AM-ADV	         O	  I-AM-ADV	      I-A1
+          yield	              -	  I-AM-ADV	         O	  I-AM-ADV	      I-A1
+             to	              -	  I-AM-ADV	         O	  I-AM-ADV	      I-A1
+       maturity	              -	  E-AM-ADV	         O	  E-AM-ADV	      E-A1
+              .	              -	         O	         O	         O	         O
+
+             In	              -	  B-AM-DIS	  B-AM-DIS
+       addition	              -	  E-AM-DIS	  E-AM-DIS
+              ,	              -	         O	         O
+           each	              -	      B-A1	      B-A1
+           note	              -	      E-A1	      E-A1
+            can	              -	  S-AM-MOD	  S-AM-MOD
+             be	             be	       S-V	         O
+      converted	      converted	  B-AM-ADV	       S-V
+           into	              -	  I-AM-ADV	      B-A2
+    Blockbuster	              -	  I-AM-ADV	      I-A2
+  Entertainment	              -	  I-AM-ADV	      I-A2
+         common	              -	  I-AM-ADV	      I-A2
+          stock	              -	  I-AM-ADV	      E-A2
+             at	              -	  I-AM-ADV	  B-AM-MNR
+              a	              -	  I-AM-ADV	  I-AM-MNR
+           rate	              -	  I-AM-ADV	  I-AM-MNR
+             of	              -	  I-AM-ADV	  I-AM-MNR
+         13.851	              -	  I-AM-ADV	  I-AM-MNR
+         shares	              -	  I-AM-ADV	  I-AM-MNR
+            per	              -	  I-AM-ADV	  I-AM-MNR
+           note	              -	  E-AM-ADV	  E-AM-MNR
+              .	              -	         O	         O
+
+        Merrill	              -	      B-A1
+          Lynch	              -	      I-A1
+        Capital	              -	      I-A1
+        Markets	              -	      I-A1
+           Inc.	              -	      E-A1
+             is	             is	       S-V
+            the	              -	      B-A1
+           sole	              -	      I-A1
+    underwriter	              -	      I-A1
+            for	              -	      I-A1
+            the	              -	      I-A1
+       offering	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A0
+          notes	              -	      E-A0
+           will	              -	  S-AM-MOD
+           have	           have	       S-V
+              a	              -	      B-A1
+      principal	              -	      I-A1
+         amount	              -	      I-A1
+             of	              -	      I-A1
+              $	              -	      I-A1
+            300	              -	      I-A1
+        million	              -	      I-A1
+             at	              -	      I-A1
+       maturity	              -	      E-A1
+              .	              -	         O
+
+    Blockbuster	              -	      B-A1
+         shares	              -	      E-A1
+         closed	         closed	       S-V
+      yesterday	              -	  S-AM-TMP
+             at	              -	  B-AM-EXT
+              $	              -	  I-AM-EXT
+          18.75	              -	  E-AM-EXT
+              ,	              -	         O
+           down	              -	  B-AM-MNR
+              $	              -	  I-AM-MNR
+          1.125	              -	  E-AM-MNR
+              ,	              -	         O
+             in	              -	  B-AM-LOC
+            New	              -	  I-AM-LOC
+           York	              -	  I-AM-LOC
+          Stock	              -	  I-AM-LOC
+       Exchange	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+              .	              -	         O
+

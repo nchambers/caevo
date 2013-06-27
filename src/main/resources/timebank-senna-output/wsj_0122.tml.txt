@@ -1,0 +1,88 @@
+          Young	              -	      B-A0	         O	         O	         O
+             's	              -	      I-A0	         O	         O	         O
+         Market	              -	      I-A0	         O	         O	         O
+            Co.	              -	      I-A0	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O
+              a	              -	      I-A0	         O	         O	         O
+     wholesaler	              -	      I-A0	         O	         O	         O
+             of	              -	      I-A0	         O	         O	         O
+        spirits	              -	      I-A0	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O
+          wines	              -	      I-A0	         O	         O	         O
+            and	              -	      I-A0	         O	         O	         O
+          other	              -	      I-A0	         O	         O	         O
+          goods	              -	      I-A0	         O	         O	         O
+              ,	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O
+           will	              -	      I-A1	  S-AM-MOD	         O	         O
+          merge	          merge	      I-A1	       S-V	         O	         O
+           with	              -	      I-A1	      B-A1	         O	         O
+              a	              -	      I-A1	      I-A1	      B-A1	      B-A0
+            new	              -	      I-A1	      I-A1	      I-A1	      I-A0
+    corporation	              -	      I-A1	      I-A1	      E-A1	      E-A0
+         formed	         formed	      I-A1	      I-A1	       S-V	         O
+             by	              -	      I-A1	      I-A1	      B-A0	         O
+            the	              -	      I-A1	      I-A1	      I-A0	      B-A0
+      Underwood	              -	      I-A1	      I-A1	      I-A0	      I-A0
+         family	              -	      I-A1	      I-A1	      E-A0	      E-A0
+              ,	              -	      I-A1	      I-A1	         O	         O
+          which	              -	      I-A1	      I-A1	         O	    S-R-A0
+       controls	       controls	      I-A1	      I-A1	         O	       S-V
+          Young	              -	      I-A1	      I-A1	         O	      B-A1
+             's	              -	      E-A1	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+          Under	              -	         O	         O	         O
+          terms	              -	         O	         O	         O
+             of	              -	         O	         O	         O
+            the	              -	         O	         O	         O
+      agreement	              -	         O	         O	         O
+              ,	              -	         O	         O	         O
+   shareholders	              -	      B-A0	         O	         O
+          other	              -	      I-A0	         O	         O
+           than	              -	      I-A0	         O	         O
+            the	              -	      I-A0	         O	         O
+     Underwoods	              -	      E-A0	         O	         O
+           will	              -	  S-AM-MOD	         O	         O
+        receive	        receive	       S-V	         O	         O
+              $	              -	      B-A1	         O	         O
+          3,500	              -	      I-A1	         O	         O
+              a	              -	      I-A1	         O	         O
+          share	              -	      I-A1	         O	         O
+             at	              -	      I-A1	         O	         O
+        closing	              -	      I-A1	      S-A1	      S-A1
+              ,	              -	      I-A1	         O	         O
+          which	              -	      I-A1	    S-R-A1	    S-R-A1
+             is	             is	      I-A1	       S-V	         O
+       expected	       expected	      I-A1	    S-C-A1	       S-V
+             in	              -	      I-A1	  B-AM-TMP	  B-AM-TMP
+       December	              -	      E-A1	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O
+      Underwood	              -	      I-A0	         O	         O	         O
+         family	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O
+        holders	              -	      I-A1	      B-A0	      B-A0	         O
+             of	              -	      I-A1	      I-A0	      I-A0	         O
+           more	              -	      I-A1	      I-A0	      I-A0	         O
+           than	              -	      I-A1	      I-A0	      I-A0	         O
+              a	              -	      I-A1	      I-A0	      I-A0	         O
+       majority	              -	      I-A1	      I-A0	      I-A0	         O
+             of	              -	      I-A1	      I-A0	      I-A0	         O
+            the	              -	      I-A1	      I-A0	      I-A0	         O
+          stock	              -	      I-A1	      I-A0	      I-A0	         O
+             of	              -	      I-A1	      I-A0	      I-A0	         O
+            the	              -	      I-A1	      I-A0	      I-A0	         O
+        company	              -	      I-A1	      E-A0	      E-A0	         O
+           have	           have	      I-A1	       S-V	         O	         O
+       approved	       approved	      I-A1	      B-A1	       S-V	         O
+            the	              -	      I-A1	      I-A1	      B-A1	         O
+    transaction	              -	      I-A1	      I-A1	      E-A1	         O
+             by	              -	      I-A1	      I-A1	  B-AM-MNR	         O
+        written	        written	      I-A1	      I-A1	  I-AM-MNR	       S-V
+        consent	              -	      E-A1	      E-A1	  E-AM-MNR	      S-A1
+              .	              -	         O	         O	         O	         O
+

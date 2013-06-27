@@ -1,0 +1,400 @@
+            IMA	              -	      B-A0	      B-A0
+       Holdings	              -	      I-A0	      I-A0
+          Corp.	              -	      E-A0	      E-A0
+      completed	      completed	       S-V	         O
+            its	              -	      B-A1	         O
+              $	              -	      I-A1	         O
+              3	              -	      I-A1	         O
+        billion	              -	      I-A1	         O
+    acquisition	              -	      I-A1	         O
+             of	              -	      I-A1	         O
+       American	              -	      I-A1	         O
+        Medical	              -	      I-A1	         O
+  International	              -	      I-A1	         O
+           Inc.	              -	      E-A1	         O
+              ,	              -	         O	         O
+     purchasing	     purchasing	  B-AM-ADV	       S-V
+             63	              -	  I-AM-ADV	      B-A1
+        million	              -	  I-AM-ADV	      I-A1
+         shares	              -	  I-AM-ADV	      I-A1
+              ,	              -	  I-AM-ADV	      I-A1
+             or	              -	  I-AM-ADV	      I-A1
+             86	              -	  I-AM-ADV	      I-A1
+              %	              -	  I-AM-ADV	      I-A1
+              ,	              -	  I-AM-ADV	      I-A1
+             of	              -	  I-AM-ADV	      I-A1
+            the	              -	  I-AM-ADV	      I-A1
+            Los	              -	  I-AM-ADV	      I-A1
+  Angeles-based	              -	  I-AM-ADV	      I-A1
+    health-care	              -	  I-AM-ADV	      I-A1
+       services	              -	  I-AM-ADV	      I-A1
+        concern	              -	  I-AM-ADV	      E-A1
+            for	              -	  I-AM-ADV	      B-A3
+              $	              -	  I-AM-ADV	      I-A3
+          26.50	              -	  I-AM-ADV	      I-A3
+              a	              -	  I-AM-ADV	      I-A3
+          share	              -	  E-AM-ADV	      E-A3
+              .	              -	         O	         O
+
+            The	              -	      B-A2
+          price	              -	      E-A2
+           also	              -	  S-AM-DIS
+       includes	       includes	       S-V
+     assumption	              -	      B-A1
+             of	              -	      I-A1
+          about	              -	      I-A1
+              $	              -	      I-A1
+            1.4	              -	      I-A1
+        billion	              -	      I-A1
+             in	              -	      I-A1
+           debt	              -	      E-A1
+              .	              -	         O
+
+            IMA	              -	      S-A0	         O
+             is	             is	       S-V	         O
+              a	              -	      B-A1	      B-A2
+          group	              -	      I-A1	      E-A2
+           that	              -	      I-A1	    S-R-A2
+       includes	       includes	      I-A1	       S-V
+          First	              -	      I-A1	      B-A1
+         Boston	              -	      I-A1	      I-A1
+          Corp.	              -	      I-A1	      I-A1
+            and	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+       Pritzker	              -	      I-A1	      I-A1
+         family	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+        Chicago	              -	      E-A1	      E-A1
+        through	              -	  B-AM-MNR	  B-AM-MNR
+            the	              -	  I-AM-MNR	  I-AM-MNR
+      leveraged	              -	  I-AM-MNR	  I-AM-MNR
+        buy-out	              -	  I-AM-MNR	  I-AM-MNR
+           fund	              -	  I-AM-MNR	  I-AM-MNR
+          Harry	              -	  I-AM-MNR	  I-AM-MNR
+           Gray	              -	  I-AM-MNR	  I-AM-MNR
+         Melvyn	              -	  I-AM-MNR	  I-AM-MNR
+          Klein	              -	  I-AM-MNR	  I-AM-MNR
+            amp	              -	  I-AM-MNR	  I-AM-MNR
+       Partners	              -	  E-AM-MNR	  E-AM-MNR
+              .	              -	         O	         O
+
+          Harry	              -	      B-A1	      B-A1	      B-A0
+             J.	              -	      I-A1	      I-A1	      I-A0
+           Gray	              -	      I-A1	      I-A1	      I-A0
+            and	              -	      I-A1	      I-A1	      I-A0
+         Melvyn	              -	      I-A1	      I-A1	      I-A0
+             N.	              -	      I-A1	      I-A1	      I-A0
+          Klein	              -	      I-A1	      I-A1	      E-A0
+              ,	              -	      I-A1	      I-A1	         O
+          along	              -	      I-A1	      I-A1	         O
+           with	              -	      I-A1	      I-A1	         O
+           five	              -	      I-A1	      I-A1	         O
+          other	              -	      I-A1	      I-A1	         O
+            IMA	              -	      I-A1	      I-A1	         O
+      designees	              -	      I-A1	      I-A1	         O
+              ,	              -	      E-A1	      E-A1	         O
+           were	           were	       S-V	         O	         O
+          named	          named	    B-C-A1	       S-V	         O
+             to	              -	    I-C-A1	      B-A2	         O
+           join	           join	    I-C-A1	      I-A2	       S-V
+       American	              -	    I-C-A1	      I-A2	      B-A1
+        Medical	              -	    I-C-A1	      I-A2	      I-A1
+             's	              -	    I-C-A1	      I-A2	      I-A1
+      10-member	              -	    I-C-A1	      I-A2	      I-A1
+          board	              -	    E-C-A1	      E-A2	      E-A1
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1
+     completion	              -	      I-A1
+             of	              -	      I-A1
+            the	              -	      I-A1
+         merger	              -	      I-A1
+      agreement	              -	      E-A1
+        follows	        follows	       S-V
+         months	              -	      B-A2
+             of	              -	      I-A2
+         twists	              -	      I-A2
+            and	              -	      I-A2
+          turns	              -	      E-A2
+              .	              -	         O
+
+             In	              -	  B-AM-TMP	         O
+        January	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+       American	              -	      B-A0	         O
+        Medical	              -	      E-A0	         O
+        brought	        brought	       B-V	         O
+             in	              -	       E-V	         O
+              a	              -	      B-A1	         O
+            new	              -	      I-A1	         O
+          chief	              -	      I-A1	         O
+      executive	              -	      I-A1	         O
+        officer	              -	      I-A1	         O
+              ,	              -	      I-A1	         O
+        Richard	              -	      I-A1	      B-A1
+             A.	              -	      I-A1	      I-A1
+      Gilleland	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+             45	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      E-A1
+            who	              -	      I-A1	    S-R-A1
+           will	              -	      I-A1	  S-AM-MOD
+         remain	         remain	      I-A1	       S-V
+             as	              -	      I-A1	      B-A3
+       chairman	              -	      I-A1	      I-A3
+              ,	              -	      I-A1	      I-A3
+      president	              -	      I-A1	      I-A3
+            and	              -	      I-A1	      I-A3
+          chief	              -	      I-A1	      I-A3
+      executive	              -	      E-A1	      E-A3
+              .	              -	         O	         O
+
+              A	              -	  B-AM-TMP	         O	         O
+            few	              -	  I-AM-TMP	         O	         O
+           days	              -	  I-AM-TMP	         O	         O
+          later	              -	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O
+       American	              -	      B-A0	      B-A0	         O
+        Medical	              -	      E-A0	      E-A0	         O
+      announced	      announced	       S-V	         O	         O
+        sharply	              -	      B-A1	         O	         O
+          lower	              -	      I-A1	         O	         O
+       earnings	              -	      E-A1	         O	         O
+              ,	              -	         O	         O	         O
+         taking	         taking	  B-AM-ADV	       S-V	         O
+        charges	              -	  I-AM-ADV	      B-A1	         O
+             of	              -	  I-AM-ADV	      I-A1	         O
+              $	              -	  I-AM-ADV	      I-A1	         O
+             24	              -	  I-AM-ADV	      I-A1	         O
+        million	              -	  I-AM-ADV	      E-A1	         O
+            for	              -	  I-AM-ADV	  B-AM-PNC	         O
+      insurance	              -	  I-AM-ADV	  I-AM-PNC	         O
+       reserves	              -	  I-AM-ADV	  I-AM-PNC	         O
+            and	              -	  I-AM-ADV	  I-AM-PNC	         O
+       canceled	       canceled	  I-AM-ADV	  I-AM-PNC	       S-V
+           real	              -	  I-AM-ADV	  I-AM-PNC	      B-A1
+         estate	              -	  I-AM-ADV	  I-AM-PNC	      I-A1
+         leases	              -	  E-AM-ADV	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O
+
+             In	              -	  B-AM-TMP	         O	         O
+          March	              -	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O
+       American	              -	      B-A0	      B-A0	         O
+        Medical	              -	      E-A0	      E-A0	         O
+       received	       received	       S-V	         O	         O
+              a	              -	      B-A1	         O	         O
+              $	              -	      I-A1	         O	         O
+     24-a-share	              -	      I-A1	         O	         O
+          offer	              -	      I-A1	         O	         O
+             to	              -	      I-A1	         O	         O
+           take	           take	      I-A1	       S-V	         O
+            the	              -	      I-A1	      B-A1	         O
+        company	              -	      I-A1	      I-A1	         O
+        private	              -	      I-A1	      E-A1	         O
+           from	              -	      I-A1	      B-A0	         O
+             an	              -	      I-A1	      I-A0	      B-A2
+       investor	              -	      I-A1	      I-A0	      I-A2
+          group	              -	      I-A1	      I-A0	      E-A2
+      including	      including	      I-A1	      I-A0	       S-V
+          large	              -	      I-A1	      I-A0	      B-A1
+         holder	              -	      I-A1	      I-A0	      I-A1
+             M.	              -	      I-A1	      I-A0	      I-A1
+            Lee	              -	      I-A1	      I-A0	      I-A1
+         Pearce	              -	      E-A1	      E-A0	      E-A1
+              .	              -	         O	         O	         O
+
+             It	              -	      S-A1	      S-A0	         O	         O
+           also	              -	  S-AM-DIS	  S-AM-DIS	         O	         O
+            was	            was	       S-V	         O	         O	         O
+    considering	    considering	      B-A1	       S-V	         O	         O
+              a	              -	      I-A1	      B-A1	      B-A0	      B-A0
+  restructuring	              -	      I-A1	      I-A1	      E-A0	      E-A0
+             to	              -	      I-A1	      I-A1	         O	         O
+           help	           help	      I-A1	      I-A1	       S-V	         O
+          boost	          boost	      I-A1	      I-A1	      B-A1	       S-V
+            the	              -	      I-A1	      I-A1	      I-A1	      B-A1
+          stock	              -	      I-A1	      I-A1	      I-A1	      I-A1
+          price	              -	      E-A1	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+              A	              -	      B-A2	      B-A0	         O	         O
+          group	              -	      E-A2	      I-A0	         O	         O
+      including	      including	       S-V	      I-A0	         O	         O
+        several	              -	      B-A1	      I-A0	         O	         O
+        members	              -	      I-A1	      I-A0	         O	         O
+             of	              -	      I-A1	      I-A0	         O	         O
+            the	              -	      I-A1	      I-A0	         O	         O
+            the	              -	      I-A1	      I-A0	         O	         O
+           Bass	              -	      I-A1	      I-A0	         O	         O
+         family	              -	      I-A1	      I-A0	         O	         O
+             of	              -	      I-A1	      I-A0	         O	         O
+          Texas	              -	      E-A1	      E-A0	         O	         O
+          urged	          urged	         O	       S-V	         O	         O
+            the	              -	         O	      B-A1	      B-A0	      B-A0
+        company	              -	         O	      E-A1	      E-A0	      E-A0
+             to	              -	         O	      B-A2	         O	         O
+           take	           take	         O	      I-A2	       S-V	         O
+           some	              -	         O	      I-A2	      B-A1	         O
+          steps	              -	         O	      I-A2	      I-A1	         O
+             to	              -	         O	      I-A2	      I-A1	         O
+       maximize	       maximize	         O	      I-A2	      I-A1	       S-V
+    shareholder	              -	         O	      I-A2	      I-A1	      B-A1
+          value	              -	         O	      E-A2	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	  B-AM-TMP
+      following	              -	  I-AM-TMP
+          month	              -	  E-AM-TMP
+              ,	              -	         O
+            the	              -	      B-A0
+        company	              -	      E-A0
+            put	            put	       S-V
+         itself	              -	      S-A1
+             up	              -	     S-C-V
+            for	              -	      B-A2
+           sale	              -	      E-A2
+              .	              -	         O
+
+             It	              -	      S-A0	         O	         O	         O	         O	         O
+       received	       received	       S-V	         O	         O	         O	         O	         O
+           more	              -	      B-A1	         O	         O	         O	         O	         O
+         offers	              -	      E-A1	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+            but	              -	         O	         O	         O	         O	         O	         O
+            the	              -	         O	      B-A1	      B-A1	         O	         O	         O
+        auction	              -	         O	      E-A1	      E-A1	         O	         O	         O
+            was	            was	         O	       S-V	         O	         O	         O	         O
+   surprisingly	              -	         O	  B-AM-ADV	  S-AM-MNR	         O	         O	         O
+            won	            won	         O	  I-AM-ADV	       S-V	         O	         O	         O
+             by	              -	         O	  I-AM-ADV	      B-A0	         O	         O	         O
+            IMA	              -	         O	  I-AM-ADV	      I-A0	      S-A0	      S-A0	         O
+              ,	              -	         O	  I-AM-ADV	      I-A0	         O	         O	         O
+          which	              -	         O	  I-AM-ADV	      I-A0	    S-R-A0	    S-R-A0	         O
+            bid	            bid	         O	  I-AM-ADV	      I-A0	       S-V	         O	         O
+              $	              -	         O	  I-AM-ADV	      I-A0	      B-A2	         O	         O
+             28	              -	         O	  I-AM-ADV	      I-A0	      I-A2	         O	         O
+              a	              -	         O	  I-AM-ADV	      I-A0	      I-A2	         O	         O
+          share	              -	         O	  I-AM-ADV	      I-A0	      E-A2	         O	         O
+            and	              -	         O	  I-AM-ADV	      I-A0	         O	         O	         O
+          asked	          asked	         O	  I-AM-ADV	      I-A0	         O	       S-V	         O
+            Mr.	              -	         O	  I-AM-ADV	      I-A0	         O	      B-A2	      B-A1
+      Gilleland	              -	         O	  I-AM-ADV	      I-A0	         O	      E-A2	      E-A1
+             to	              -	         O	  I-AM-ADV	      I-A0	         O	      B-A1	         O
+           stay	           stay	         O	  I-AM-ADV	      I-A0	         O	      I-A1	       S-V
+             on	              -	         O	  I-AM-ADV	      I-A0	         O	      I-A1	      B-A3
+             as	              -	         O	  I-AM-ADV	      I-A0	         O	      I-A1	      I-A3
+             an	              -	         O	  I-AM-ADV	      I-A0	         O	      I-A1	      I-A3
+         equity	              -	         O	  I-AM-ADV	      I-A0	         O	      I-A1	      I-A3
+    participant	              -	         O	  E-AM-ADV	      E-A0	         O	      E-A1	      E-A3
+              .	              -	         O	         O	         O	         O	         O	         O
+
+             He	              -	      S-A0	         O	         O	         O
+      indicated	      indicated	       S-V	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O
+           some	              -	      I-A1	      B-A1	      B-A1	      B-A0
+         assets	              -	      I-A1	      E-A1	      E-A1	      E-A0
+          might	              -	      I-A1	  S-AM-MOD	  S-AM-MOD	         O
+             be	             be	      I-A1	       S-V	         O	         O
+           sold	           sold	      I-A1	    B-C-A1	       B-V	         O
+            off	              -	      I-A1	    I-C-A1	       E-V	         O
+             to	              -	      I-A1	    I-C-A1	  B-AM-PNC	         O
+        service	        service	      I-A1	    I-C-A1	  I-AM-PNC	       S-V
+            the	              -	      I-A1	    I-C-A1	  I-AM-PNC	      B-A1
+           debt	              -	      E-A1	    E-C-A1	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O
+
+           Then	              -	         O	         O	  S-AM-TMP
+              ,	              -	         O	         O	         O
+          after	              -	         O	         O	  B-AM-TMP
+      extending	      extending	       S-V	         O	  I-AM-TMP
+            its	              -	      B-A1	         O	  I-AM-TMP
+          offer	              -	      E-A1	         O	  I-AM-TMP
+           four	              -	      B-A2	         O	  I-AM-TMP
+          times	              -	      I-A2	         O	  I-AM-TMP
+        waiting	        waiting	      I-A2	       S-V	  I-AM-TMP
+            for	              -	      I-A2	      B-A2	  I-AM-TMP
+              a	              -	      I-A2	      I-A2	  I-AM-TMP
+  congressional	              -	      I-A2	      I-A2	  I-AM-TMP
+            tax	              -	      I-A2	      I-A2	  I-AM-TMP
+         ruling	              -	      E-A2	      E-A2	  E-AM-TMP
+              ,	              -	         O	         O	         O
+            IMA	              -	      S-A0	         O	      S-A0
+          early	              -	         O	         O	  B-AM-TMP
+           this	              -	         O	         O	  I-AM-TMP
+          month	              -	         O	         O	  E-AM-TMP
+        lowered	        lowered	         O	         O	       S-V
+            its	              -	         O	         O	      B-A1
+          offer	              -	         O	         O	      E-A1
+             to	              -	         O	         O	      B-A4
+              $	              -	         O	         O	      I-A4
+          26.50	              -	         O	         O	      I-A4
+              a	              -	         O	         O	      I-A4
+          share	              -	         O	         O	      E-A4
+           amid	              -	         O	         O	  B-AM-LOC
+     turbulence	              -	         O	         O	  I-AM-LOC
+             in	              -	         O	         O	  I-AM-LOC
+            the	              -	         O	         O	  I-AM-LOC
+           junk	              -	         O	         O	  I-AM-LOC
+           bond	              -	         O	         O	  I-AM-LOC
+         market	              -	         O	         O	  E-AM-LOC
+              .	              -	         O	         O	         O
+
+       American	              -	      B-A0	      B-A0	         O	         O
+        Medical	              -	      E-A0	      E-A0	         O	         O
+       accepted	       accepted	       S-V	         O	         O	         O
+            the	              -	      B-A1	         O	         O	         O
+          offer	              -	      E-A1	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+      meanwhile	              -	  B-AM-TMP	  S-AM-TMP	         O	         O
+     indicating	     indicating	  I-AM-TMP	       S-V	         O	         O
+             it	              -	  I-AM-TMP	      B-A1	         O	      S-A0
+            had	            had	  I-AM-TMP	      I-A1	       S-V	         O
+          heard	          heard	  I-AM-TMP	      I-A1	      B-A1	       S-V
+           from	              -	  I-AM-TMP	      I-A1	      I-A1	      B-A1
+            two	              -	  I-AM-TMP	      I-A1	      I-A1	      I-A1
+          other	              -	  I-AM-TMP	      I-A1	      I-A1	      I-A1
+        suitors	              -	  E-AM-TMP	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            But	              -	  S-AM-DIS	         O
+           they	              -	      S-A1	         O
+          never	              -	  S-AM-TMP	         O
+   materialized	   materialized	       S-V	         O
+            and	              -	         O	         O
+            IMA	              -	         O	      S-A0
+      completed	      completed	         O	       S-V
+            the	              -	         O	      B-A1
+       purchase	              -	         O	      E-A1
+      yesterday	              -	         O	  S-AM-TMP
+              .	              -	         O	         O
+
+          Other	              -	      B-A2
+            new	              -	      I-A2
+          board	              -	      I-A2
+        members	              -	      E-A2
+        include	        include	       S-V
+           John	              -	      B-A1
+             S.	              -	      I-A1
+       Harrison	              -	      I-A1
+            and	              -	      I-A1
+           Mark	              -	      I-A1
+             A.	              -	      I-A1
+          Adley	              -	      I-A1
+             of	              -	      I-A1
+          First	              -	      I-A1
+         Boston	              -	      I-A1
+              ,	              -	      I-A1
+          James	              -	      I-A1
+             F.	              -	      I-A1
+          Lyons	              -	      I-A1
+              ,	              -	      I-A1
+        William	              -	      I-A1
+             S.	              -	      I-A1
+       Goldberg	              -	      I-A1
+            and	              -	      I-A1
+         Harold	              -	      I-A1
+             S.	              -	      I-A1
+     Handelsman	              -	      E-A1
+              .	              -	         O
+

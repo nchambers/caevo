@@ -1,0 +1,340 @@
+        Ralston	              -	      B-A0	         O
+         Purina	              -	      I-A0	         O
+            Co.	              -	      E-A0	         O
+       reported	       reported	       S-V	         O
+              a	              -	      B-A1	      B-A2
+             47	              -	      I-A1	      I-A2
+              %	              -	      I-A1	      I-A2
+        decline	              -	      I-A1	      I-A2
+             in	              -	      I-A1	      I-A2
+ fourth-quarter	              -	      I-A1	      I-A2
+       earnings	              -	      E-A1	      E-A2
+              ,	              -	         O	         O
+     reflecting	     reflecting	  B-AM-ADV	       S-V
+  restructuring	              -	  I-AM-ADV	      B-A1
+          costs	              -	  I-AM-ADV	      I-A1
+             as	              -	  I-AM-ADV	      I-A1
+           well	              -	  I-AM-ADV	      I-A1
+             as	              -	  I-AM-ADV	      I-A1
+              a	              -	  I-AM-ADV	      I-A1
+           more	              -	  I-AM-ADV	      I-A1
+      difficult	              -	  I-AM-ADV	      I-A1
+            pet	              -	  I-AM-ADV	      I-A1
+           food	              -	  I-AM-ADV	      I-A1
+         market	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	         O
+            St.	              -	      I-A0	         O
+          Louis	              -	      I-A0	         O
+        company	              -	      E-A0	         O
+         earned	         earned	       S-V	         O
+              $	              -	      B-A1	      B-A1
+           45.2	              -	      I-A1	      I-A1
+        million	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+             or	              -	      I-A1	      I-A1
+             65	              -	      I-A1	      I-A1
+          cents	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+          share	              -	      I-A1	      E-A1
+              ,	              -	      E-A1	         O
+       compared	       compared	  B-AM-ADV	       S-V
+           with	              -	  I-AM-ADV	      B-A2
+              $	              -	  I-AM-ADV	      I-A2
+           84.9	              -	  I-AM-ADV	      I-A2
+        million	              -	  I-AM-ADV	      I-A2
+              ,	              -	  I-AM-ADV	      I-A2
+             or	              -	  I-AM-ADV	      I-A2
+              $	              -	  I-AM-ADV	      I-A2
+           1.24	              -	  I-AM-ADV	      I-A2
+              a	              -	  I-AM-ADV	      I-A2
+          share	              -	  I-AM-ADV	      I-A2
+              ,	              -	  I-AM-ADV	      I-A2
+              a	              -	  I-AM-ADV	      I-A2
+           year	              -	  I-AM-ADV	      I-A2
+        earlier	              -	  E-AM-ADV	      E-A2
+              .	              -	         O	         O
+
+          Sales	              -	      B-A1
+             in	              -	      I-A1
+            the	              -	      I-A1
+         latest	              -	      I-A1
+         period	              -	      E-A1
+           were	           were	       S-V
+              $	              -	      B-A3
+           1.76	              -	      I-A3
+        billion	              -	      I-A3
+              ,	              -	      I-A3
+              a	              -	      I-A3
+             13	              -	      I-A3
+              %	              -	      I-A3
+       increase	              -	      I-A3
+           from	              -	      I-A3
+           last	              -	      I-A3
+           year	              -	      I-A3
+             's	              -	      I-A3
+              $	              -	      I-A3
+           1.55	              -	      I-A3
+        billion	              -	      E-A3
+              .	              -	         O
+
+            For	              -	         O	  B-AM-TMP
+            the	              -	      B-A1	  I-AM-TMP
+           year	              -	      E-A1	  I-AM-TMP
+          ended	          ended	       S-V	  I-AM-TMP
+          Sept.	              -	  B-AM-TMP	  I-AM-TMP
+             30	              -	  E-AM-TMP	  E-AM-TMP
+              ,	              -	         O	         O
+        Ralston	              -	         O	      S-A0
+         earned	         earned	         O	       S-V
+              $	              -	         O	      B-A1
+          422.5	              -	         O	      I-A1
+        million	              -	         O	      I-A1
+              ,	              -	         O	      I-A1
+             or	              -	         O	      I-A1
+              $	              -	         O	      I-A1
+           6.44	              -	         O	      I-A1
+              a	              -	         O	      I-A1
+          share	              -	         O	      I-A1
+              ,	              -	         O	      I-A1
+             up	              -	         O	      I-A1
+            8.9	              -	         O	      I-A1
+              %	              -	         O	      I-A1
+           from	              -	         O	      I-A1
+              $	              -	         O	      I-A1
+          387.8	              -	         O	      I-A1
+        million	              -	         O	      I-A1
+              ,	              -	         O	      I-A1
+             or	              -	         O	      I-A1
+              $	              -	         O	      I-A1
+           5.63	              -	         O	      I-A1
+              a	              -	         O	      I-A1
+          share	              -	         O	      E-A1
+              .	              -	         O	         O
+
+           This	              -	      B-A2
+           year	              -	      I-A2
+             's	              -	      I-A2
+        results	              -	      E-A2
+       included	       included	       S-V
+              a	              -	      B-A1
+           gain	              -	      I-A1
+             of	              -	      I-A1
+              $	              -	      I-A1
+           70.2	              -	      I-A1
+        million	              -	      I-A1
+             on	              -	      I-A1
+            the	              -	      I-A1
+       disposal	              -	      I-A1
+             of	              -	      I-A1
+        seafood	              -	      I-A1
+     operations	              -	      E-A1
+              .	              -	         O
+
+          Sales	              -	      B-A1
+            for	              -	      I-A1
+            the	              -	      I-A1
+           full	              -	      I-A1
+           year	              -	      E-A1
+           were	           were	       S-V
+              $	              -	      B-A2
+            6.6	              -	      I-A2
+        billion	              -	      E-A2
+              ,	              -	         O
+             up	              -	  B-AM-ADV
+             13	              -	  I-AM-ADV
+              %	              -	  I-AM-ADV
+           from	              -	  I-AM-ADV
+              $	              -	  I-AM-ADV
+            5.8	              -	  I-AM-ADV
+        billion	              -	  E-AM-ADV
+              .	              -	         O
+
+        Ralston	              -	      S-A0	         O
+           said	           said	       S-V	         O
+            its	              -	      B-A1	      B-A2
+  restructuring	              -	      I-A1	      I-A2
+          costs	              -	      I-A1	      E-A2
+        include	        include	      I-A1	       S-V
+            the	              -	      I-A1	      B-A1
+      phase-out	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+        battery	              -	      I-A1	      I-A1
+       facility	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+     Greenville	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+           N.C.	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+         recent	              -	      I-A1	      I-A1
+        closing	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+        Hostess	              -	      I-A1	      I-A1
+           cake	              -	      I-A1	      I-A1
+         bakery	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+     Cincinnati	              -	      I-A1	      I-A1
+            and	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+      reduction	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+          staff	              -	      I-A1	      I-A1
+     throughout	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+        company	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	      B-A1	      B-A1	      B-A1
+        battery	              -	      I-A0	      I-A1	      I-A1	      I-A1
+          plant	              -	      E-A0	      I-A1	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      I-A1	      I-A1
+          which	              -	    S-R-A0	      I-A1	      I-A1	      I-A1
+          makes	          makes	       S-V	      I-A1	      I-A1	      I-A1
+   rechargeable	              -	      B-A1	      I-A1	      I-A1	      I-A1
+         nickel	              -	      I-A1	      I-A1	      I-A1	      I-A1
+        cadmium	              -	      I-A1	      I-A1	      I-A1	      I-A1
+            and	              -	      I-A1	      I-A1	      I-A1	      I-A1
+         carbon	              -	      I-A1	      I-A1	      I-A1	      I-A1
+           zinc	              -	      I-A1	      I-A1	      I-A1	      I-A1
+       products	              -	      E-A1	      I-A1	      I-A1	      I-A1
+              ,	              -	         O	      E-A1	      E-A1	      I-A1
+           will	              -	         O	  S-AM-MOD	  S-AM-MOD	      I-A1
+             be	             be	         O	       S-V	         O	      I-A1
+         closed	         closed	         O	         O	       S-V	      I-A1
+           over	              -	         O	         O	  B-AM-TMP	      I-A1
+            the	              -	         O	         O	  I-AM-TMP	      I-A1
+           next	              -	         O	         O	  I-AM-TMP	      I-A1
+           year	              -	         O	         O	  I-AM-TMP	      I-A1
+             or	              -	         O	         O	  I-AM-TMP	      I-A1
+             so	              -	         O	         O	  E-AM-TMP	      E-A1
+              ,	              -	         O	         O	         O	         O
+              a	              -	         O	         O	         O	      B-A0
+      spokesman	              -	         O	         O	         O	      E-A0
+           said	           said	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+        Ralston	              -	      S-A0	         O
+     attributed	     attributed	       S-V	         O
+            its	              -	      B-A1	         O
+ fourth-quarter	              -	      I-A1	         O
+          slump	              -	      E-A1	         O
+         partly	              -	  S-AM-ADV	         O
+             to	              -	      B-A2	         O
+         higher	              -	      I-A2	         O
+          costs	              -	      I-A2	         O
+             of	              -	      I-A2	         O
+    ingredients	              -	      I-A2	         O
+             in	              -	      I-A2	         O
+            the	              -	      I-A2	         O
+            pet	              -	      I-A2	         O
+           food	              -	      I-A2	         O
+       business	              -	      I-A2	         O
+             as	              -	      I-A2	         O
+           well	              -	      I-A2	         O
+             as	              -	      I-A2	         O
+    competitive	              -	      I-A2	      B-A0
+      pressures	              -	      I-A2	      E-A0
+              ,	              -	      I-A2	         O
+          which	              -	      I-A2	    S-R-A0
+       required	       required	      I-A2	       S-V
+         higher	              -	      I-A2	      B-A1
+    advertising	              -	      I-A2	      I-A1
+       spending	              -	      E-A2	      E-A1
+              .	              -	         O	         O
+
+            For	              -	  B-AM-TMP	      B-A1
+            the	              -	  I-AM-TMP	      I-A1
+           year	              -	  E-AM-TMP	      I-A1
+              ,	              -	         O	      I-A1
+            pet	              -	      B-A1	      I-A1
+           food	              -	      I-A1	      I-A1
+         volume	              -	      E-A1	      I-A1
+            was	            was	       S-V	      I-A1
+           flat	              -	    S-C-A1	      E-A1
+              ,	              -	         O	         O
+            the	              -	         O	      B-A0
+        company	              -	         O	      E-A0
+           said	           said	         O	       S-V
+              .	              -	         O	         O
+
+            Its	              -	      B-A0	      B-A0
+         cereal	              -	      I-A0	      I-A0
+       division	              -	      E-A0	      E-A0
+       realized	       realized	       S-V	         O
+         higher	              -	      B-A1	         O
+      operating	              -	      I-A1	         O
+         profit	              -	      I-A1	         O
+             on	              -	      I-A1	         O
+         volume	              -	      I-A1	         O
+      increases	              -	      E-A1	         O
+              ,	              -	         O	         O
+            but	              -	         O	         O
+           also	              -	         O	  S-AM-DIS
+          spent	          spent	         O	       S-V
+           more	              -	         O	      B-A1
+             on	              -	         O	      I-A1
+      promotion	              -	         O	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A1	         O	      B-A1
+    Continental	              -	      I-A1	         O	      I-A1
+         Baking	              -	      I-A1	         O	      I-A1
+       business	              -	      E-A1	         O	      I-A1
+      benefited	      benefited	       S-V	         O	      I-A1
+           from	              -	  B-AM-MNR	         O	      I-A1
+         higher	              -	  I-AM-MNR	         O	      I-A1
+        margins	              -	  E-AM-MNR	         O	      I-A1
+             on	              -	  B-AM-CAU	         O	      I-A1
+          bread	              -	  I-AM-CAU	         O	      I-A1
+            and	              -	  I-AM-CAU	         O	      I-A1
+             on	              -	  I-AM-CAU	         O	      I-A1
+      increased	      increased	  I-AM-CAU	       S-V	      I-A1
+           cake	              -	  I-AM-CAU	      B-A1	      I-A1
+          sales	              -	  E-AM-CAU	      E-A1	      E-A1
+              ,	              -	         O	         O	         O
+             it	              -	         O	         O	      S-A0
+          added	          added	         O	         O	       S-V
+              .	              -	         O	         O	         O
+
+        Ralston	              -	      S-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            its	              -	      B-A1	      B-A1	      B-A1	         O
+       Eveready	              -	      I-A1	      I-A1	      I-A1	         O
+        battery	              -	      I-A1	      I-A1	      I-A1	         O
+           unit	              -	      I-A1	      E-A1	      E-A1	         O
+            was	            was	      I-A1	       S-V	         O	         O
+           hurt	           hurt	      I-A1	    B-C-A1	       S-V	         O
+             by	              -	      I-A1	    I-C-A1	      B-A2	         O
+     continuing	     continuing	      I-A1	    I-C-A1	      I-A2	       S-V
+       economic	              -	      I-A1	    I-C-A1	      I-A2	      B-A1
+       problems	              -	      I-A1	    I-C-A1	      I-A2	      E-A1
+             in	              -	      I-A1	    I-C-A1	      I-A2	         O
+          South	              -	      I-A1	    I-C-A1	      I-A2	         O
+        America	              -	      E-A1	    E-C-A1	      E-A2	         O
+              .	              -	         O	         O	         O	         O
+
+        Ralston	              -	      B-A1
+         shares	              -	      E-A1
+         closed	         closed	       S-V
+      yesterday	              -	  S-AM-TMP
+             at	              -	  B-AM-EXT
+              $	              -	  I-AM-EXT
+          80.50	              -	  E-AM-EXT
+              ,	              -	         O
+            off	              -	  B-AM-MNR
+              $	              -	  I-AM-MNR
+              1	              -	  E-AM-MNR
+              ,	              -	         O
+             in	              -	  B-AM-LOC
+            New	              -	  I-AM-LOC
+           York	              -	  I-AM-LOC
+          Stock	              -	  I-AM-LOC
+       Exchange	              -	  I-AM-LOC
+      composite	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+              .	              -	         O
+

@@ -1,0 +1,212 @@
+             DD	              -	      B-A1
+    Acquisition	              -	      I-A1
+          Corp.	              -	      E-A1
+              ,	              -	         O
+              a	              -	      B-A1
+    partnership	              -	      I-A1
+             of	              -	      I-A1
+        Unicorp	              -	      I-A1
+         Canada	              -	      I-A1
+          Corp.	              -	      I-A1
+             's	              -	      I-A1
+    Kingsbridge	              -	      I-A1
+        Capital	              -	      I-A1
+          Group	              -	      I-A1
+            and	              -	      I-A1
+           Cara	              -	      I-A1
+     Operations	              -	      I-A1
+           Ltd.	              -	      E-A1
+              ,	              -	         O
+       extended	       extended	       S-V
+             to	              -	      B-A2
+           Nov.	              -	      I-A2
+             20	              -	      E-A2
+            its	              -	      B-A1
+              $	              -	      I-A1
+     45-a-share	              -	      I-A1
+          offer	              -	      I-A1
+            for	              -	      I-A1
+            all	              -	      I-A1
+        Dunkin'	              -	      I-A1
+         Donuts	              -	      I-A1
+           Inc.	              -	      I-A1
+         shares	              -	      I-A1
+    outstanding	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A1	      B-A1	      B-A1	         O	      B-A1	      B-A1
+          offer	              -	      E-A1	      E-A1	      I-A1	         O	      E-A1	      I-A1
+              ,	              -	         O	         O	      I-A1	         O	         O	      I-A1
+          which	              -	    S-R-A1	    S-R-A1	      I-A1	         O	         O	      I-A1
+            was	            was	       S-V	         O	      I-A1	         O	         O	      I-A1
+            due	              -	    B-C-A1	         O	      I-A1	         O	         O	      I-A1
+             to	              -	    I-C-A1	         O	      I-A1	         O	         O	      I-A1
+         expire	         expire	    E-C-A1	       S-V	      I-A1	         O	         O	      I-A1
+      yesterday	              -	  S-AM-TMP	  S-AM-TMP	      I-A1	         O	         O	      I-A1
+              ,	              -	         O	         O	      E-A1	         O	         O	      E-A1
+             is	             is	         O	         O	       S-V	         O	         O	         O
+    conditional	              -	         O	         O	      B-A1	         O	         O	         O
+             on	              -	         O	         O	      I-A1	         O	         O	         O
+           50.1	              -	         O	         O	      I-A1	         O	         O	         O
+              %	              -	         O	         O	      I-A1	         O	         O	         O
+             of	              -	         O	         O	      I-A1	         O	         O	         O
+        Dunkin'	              -	         O	         O	      I-A1	         O	         O	         O
+         common	              -	         O	         O	      I-A1	         O	         O	         O
+         shares	              -	         O	         O	      E-A1	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+             on	              -	         O	         O	  B-AM-ADV	         O	         O	         O
+              a	              -	         O	         O	  I-AM-ADV	         O	         O	         O
+          fully	              -	         O	         O	  I-AM-ADV	  S-AM-EXT	         O	         O
+        diluted	        diluted	         O	         O	  I-AM-ADV	       S-V	         O	         O
+          basis	              -	         O	         O	  I-AM-ADV	      S-A1	         O	         O
+              ,	              -	         O	         O	  I-AM-ADV	         O	         O	         O
+          being	          being	         O	         O	  I-AM-ADV	         O	       S-V	         O
+       tendered	       tendered	         O	         O	  I-AM-ADV	         O	      S-A3	       S-V
+            and	              -	         O	         O	  I-AM-ADV	         O	         O	         O
+             on	              -	         O	         O	  I-AM-ADV	         O	         O	      B-A0
+            the	              -	         O	         O	  I-AM-ADV	         O	         O	      I-A0
+     withdrawal	              -	         O	         O	  I-AM-ADV	         O	         O	      I-A0
+             of	              -	         O	         O	  I-AM-ADV	         O	         O	      I-A0
+            the	              -	         O	         O	  I-AM-ADV	         O	         O	      I-A0
+        company	              -	         O	         O	  I-AM-ADV	         O	         O	      I-A0
+             's	              -	         O	         O	  I-AM-ADV	         O	         O	      I-A0
+         poison	              -	         O	         O	  I-AM-ADV	         O	         O	      I-A0
+           pill	              -	         O	         O	  I-AM-ADV	         O	         O	      I-A0
+         rights	              -	         O	         O	  I-AM-ADV	         O	         O	      I-A0
+           plan	              -	         O	         O	  E-AM-ADV	         O	         O	      E-A0
+              .	              -	         O	         O	         O	         O	         O	         O
+
+    Acquisition	              -	      S-A0	      S-A0	         O	         O	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O	         O	         O
+       launched	       launched	      B-A1	       S-V	         O	         O	         O	         O	         O
+              a	              -	      I-A1	      B-A1	         O	         O	         O	         O	         O
+           suit	              -	      I-A1	      E-A1	         O	         O	         O	         O	         O
+             in	              -	      I-A1	  B-AM-LOC	         O	         O	         O	         O	         O
+              a	              -	      I-A1	  I-AM-LOC	      B-A0	         O	         O	         O	         O
+       Delaware	              -	      I-A1	  I-AM-LOC	      I-A0	         O	         O	         O	         O
+          court	              -	      I-A1	  E-AM-LOC	      E-A0	         O	         O	         O	         O
+        seeking	        seeking	      I-A1	    B-C-A1	       S-V	         O	         O	         O	         O
+            the	              -	      I-A1	    I-C-A1	      B-A1	         O	         O	         O	         O
+     withdrawal	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	         O	         O
+             of	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	         O	         O
+         Dunkin	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	         O	         O
+             's	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	         O	         O
+         poison	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	         O	         O
+           pill	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	         O	         O
+         rights	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	         O	         O
+            and	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	         O	         O
+       employee	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	      B-A1	         O
+          stock	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	      I-A1	         O
+      ownership	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	      I-A1	         O
+          plans	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	      E-A1	         O
+              ,	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	         O	         O
+          which	              -	      I-A1	    I-C-A1	      I-A1	         O	         O	    B-R-A1	         O
+             it	              -	      I-A1	    I-C-A1	      I-A1	      S-A0	         O	    I-R-A1	         O
+         claims	         claims	      I-A1	    I-C-A1	      I-A1	       S-V	         O	    E-R-A1	         O
+           were	           were	      I-A1	    I-C-A1	      I-A1	      B-A1	       S-V	         O	         O
+            put	            put	      I-A1	    I-C-A1	      I-A1	      I-A1	    B-C-A1	       S-V	         O
+             in	              -	      I-A1	    I-C-A1	      I-A1	      I-A1	    I-C-A1	      B-A2	         O
+          place	              -	      I-A1	    I-C-A1	      I-A1	      I-A1	    I-C-A1	      E-A2	         O
+             to	              -	      I-A1	    I-C-A1	      I-A1	      I-A1	    I-C-A1	  B-AM-PNC	         O
+          deter	          deter	      I-A1	    I-C-A1	      I-A1	      I-A1	    I-C-A1	  I-AM-PNC	       S-V
+        bidders	              -	      E-A1	    E-C-A1	      E-A1	      E-A1	    E-C-A1	  E-AM-PNC	      S-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+    Acquisition	              -	      S-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            2.2	              -	      B-A1	      B-A0	      B-A1	      B-A1
+        million	              -	      I-A1	      I-A0	      I-A1	      I-A1
+         shares	              -	      I-A1	      I-A0	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A0	      I-A1	      I-A1
+             or	              -	      I-A1	      I-A0	      I-A1	      I-A1
+          about	              -	      I-A1	      I-A0	      I-A1	      I-A1
+           38.5	              -	      I-A1	      I-A0	      I-A1	      I-A1
+              %	              -	      I-A1	      I-A0	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A0	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A0	      I-A1	      I-A1
+         shares	              -	      I-A1	      I-A0	      I-A1	      I-A1
+    outstanding	              -	      I-A1	      I-A0	      I-A1	      I-A1
+              ,	              -	      I-A1	      E-A0	      E-A1	      E-A1
+           have	           have	      I-A1	       S-V	         O	         O
+           been	           been	      I-A1	         O	       S-V	         O
+       tendered	       tendered	      I-A1	         O	  B-AM-ADV	       S-V
+          under	              -	      I-A1	         O	  I-AM-ADV	  B-AM-LOC
+            its	              -	      I-A1	         O	  I-AM-ADV	  I-AM-LOC
+          offer	              -	      E-A1	         O	  E-AM-ADV	  E-AM-LOC
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O
+       partners	              -	      E-A0	         O
+           said	           said	       S-V	         O
+           they	              -	      B-A1	      S-A0
+        already	              -	      I-A1	  S-AM-TMP
+           hold	           hold	      I-A1	       S-V
+             15	              -	      I-A1	      B-A1
+              %	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+            all	              -	      I-A1	      I-A1
+         shares	              -	      I-A1	      I-A1
+    outstanding	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+        Dunkin'	              -	      S-A0	      S-A0	         O
+            has	            has	       S-V	         O	         O
+            set	            set	      B-A1	       S-V	         O
+           Nov.	              -	      I-A1	      B-A1	         O
+             10	              -	      I-A1	      E-A1	         O
+             as	              -	      I-A1	  B-AM-TMP	         O
+            the	              -	      I-A1	  I-AM-TMP	         O
+       deadline	              -	      I-A1	  E-AM-TMP	         O
+            for	              -	      I-A1	      B-A1	         O
+            the	              -	      I-A1	      I-A1	         O
+        receipt	              -	      I-A1	      I-A1	         O
+             of	              -	      I-A1	      I-A1	         O
+            any	              -	      I-A1	      I-A1	         O
+      competing	      competing	      I-A1	      I-A1	       S-V
+           bids	              -	      E-A1	      E-A1	      S-A0
+              .	              -	         O	         O	         O
+
+             DD	              -	      B-A0	         O	         O	         O	         O
+    Acquisition	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A1	         O	         O	         O
+      extension	              -	      I-A1	      E-A1	         O	         O	         O
+             is	             is	      I-A1	       S-V	         O	         O	         O
+             to	              -	      I-A1	    B-C-A1	         O	         O	         O
+          allow	          allow	      I-A1	    I-C-A1	       S-V	         O	         O
+           this	              -	      I-A1	    I-C-A1	      B-A1	      B-A1	      B-A1
+        process	              -	      I-A1	    I-C-A1	      I-A1	      E-A1	      E-A1
+             to	              -	      I-A1	    I-C-A1	      I-A1	         O	         O
+             be	             be	      I-A1	    I-C-A1	      I-A1	       S-V	         O
+      completed	      completed	      E-A1	    E-C-A1	      E-A1	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+        Dunkin'	              -	      S-A1	      S-A1
+             is	             is	       S-V	         O
+          based	          based	    B-C-A1	       S-V
+             in	              -	    I-C-A1	  B-AM-LOC
+       Randolph	              -	    I-C-A1	  I-AM-LOC
+              ,	              -	    I-C-A1	  I-AM-LOC
+           Mass	              -	    E-C-A1	  E-AM-LOC
+              .	              -	         O	         O
+
+           Cara	              -	         O	      B-A1	      B-A1
+              ,	              -	         O	      I-A1	      I-A1
+              a	              -	         O	      I-A1	      I-A1
+           food	              -	         O	      I-A1	      I-A1
+       services	              -	         O	      I-A1	      I-A1
+          chain	              -	         O	      I-A1	      I-A1
+       operator	              -	         O	      I-A1	      I-A1
+            and	              -	         O	      I-A1	      I-A1
+        Unicorp	              -	         O	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      I-A1
+              a	              -	         O	      I-A1	      I-A1
+        holding	        holding	       S-V	      I-A1	      I-A1
+        company	              -	      S-A0	      I-A1	      I-A1
+              ,	              -	         O	      E-A1	      E-A1
+            are	            are	         O	       S-V	         O
+          based	          based	         O	    B-C-A1	       S-V
+             in	              -	         O	    I-C-A1	  B-AM-LOC
+        Toronto	              -	         O	    E-C-A1	  E-AM-LOC
+              .	              -	         O	         O	         O
+

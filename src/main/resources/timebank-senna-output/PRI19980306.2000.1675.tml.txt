@@ -1,0 +1,173 @@
+            For	              -	  B-AM-ADV
+            The	              -	  I-AM-ADV
+          World	              -	  E-AM-ADV
+              ,	              -	         O
+           this	              -	      S-A1
+             is	             is	       S-V
+         Pamela	              -	      B-A1
+         McCall	              -	      E-A1
+             in	              -	  B-AM-LOC
+            the	              -	  I-AM-LOC
+            BBC	              -	  I-AM-LOC
+           news	              -	  I-AM-LOC
+           room	              -	  I-AM-LOC
+             in	              -	  I-AM-LOC
+         London	              -	  E-AM-LOC
+              .	              -	         O
+
+           More	              -
+          heavy	              -
+        gunfire	              -
+             in	              -
+            the	              -
+        Serbian	              -
+       province	              -
+             of	              -
+         Kosovo	              -
+              .	              -
+
+             It	              -	      S-A0	         O
+             's	             's	       S-V	         O
+            the	              -	  B-AM-TMP	         O
+         second	              -	  I-AM-TMP	         O
+            day	              -	  I-AM-TMP	         O
+             of	              -	  I-AM-TMP	         O
+             an	              -	  I-AM-TMP	         O
+      offensive	              -	  I-AM-TMP	         O
+             by	              -	  I-AM-TMP	         O
+            the	              -	  I-AM-TMP	         O
+       security	              -	  I-AM-TMP	         O
+         forces	              -	  I-AM-TMP	         O
+        against	              -	  I-AM-TMP	         O
+       villages	              -	  I-AM-TMP	      S-A1
+      populated	      populated	  I-AM-TMP	       S-V
+             by	              -	  I-AM-TMP	      B-A0
+         ethnic	              -	  I-AM-TMP	      I-A0
+      Albanians	              -	  E-AM-TMP	      E-A0
+              .	              -	         O	         O
+
+            BBC	              -	      B-A0
+  correspondent	              -	      I-A0
+          Karyn	              -	      I-A0
+        Coleman	              -	      E-A0
+        reports	        reports	       S-V
+           from	              -	      B-A1
+         Kosovo	              -	      E-A1
+              .	              -	         O
+
+          There	              -	      S-A1	         O	         O	         O
+           were	           were	       S-V	         O	         O	         O
+           more	              -	      B-A1	         O	         O	         O
+       accounts	              -	      I-A1	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O
+         people	              -	      I-A1	      S-A0	         O	         O
+        fleeing	        fleeing	      I-A1	       S-V	         O	         O
+           from	              -	      I-A1	      B-A2	         O	         O
+            the	              -	      I-A1	      I-A2	         O	  B-AM-LOC
+       villages	              -	      I-A1	      E-A2	         O	  E-AM-LOC
+           near	              -	      I-A1	         O	         O	B-R-AM-LOC
+          where	              -	      I-A1	         O	         O	E-R-AM-LOC
+            the	              -	      I-A1	         O	      B-A1	      B-A1
+      offensive	              -	      I-A1	         O	      E-A1	      E-A1
+            was	            was	      I-A1	         O	       S-V	         O
+         taking	         taking	      I-A1	         O	    B-C-A1	       S-V
+          place	              -	      E-A1	         O	    E-C-A1	      S-A2
+              .	              -	         O	         O	         O	         O
+
+           They	              -	      S-A1	      S-A1	      S-A0	         O
+           were	           were	       S-V	         O	         O	         O
+            too	              -	    B-C-A1	         O	         O	         O
+         afraid	              -	    I-C-A1	         O	         O	         O
+             to	              -	    I-C-A1	         O	         O	         O
+           stay	           stay	    E-C-A1	       S-V	         O	         O
+              ,	              -	         O	         O	         O	         O
+        fearing	        fearing	  B-AM-ADV	         O	       S-V	         O
+            the	              -	  I-AM-ADV	         O	      B-A1	      B-A0
+         forces	              -	  I-AM-ADV	         O	      E-A1	      E-A0
+            may	              -	  I-AM-ADV	         O	         O	  S-AM-MOD
+           also	              -	  I-AM-ADV	         O	         O	  S-AM-DIS
+           move	           move	  I-AM-ADV	         O	         O	       S-V
+          their	              -	  I-AM-ADV	         O	         O	      B-A1
+     operations	              -	  I-AM-ADV	         O	         O	      E-A1
+        further	              -	  I-AM-ADV	         O	         O	      B-A2
+         afield	              -	  E-AM-ADV	         O	         O	      E-A2
+              .	              -	         O	         O	         O	         O
+
+             By	              -	  B-AM-TMP	  B-AM-TMP	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+            mid	              -	  I-AM-TMP	  I-AM-TMP	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+      afternoon	              -	  E-AM-TMP	  E-AM-TMP	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+       official	              -	      B-A1	      B-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+           Serb	              -	      I-A1	      I-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+        sources	              -	      E-A1	      E-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+           were	           were	       S-V	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+         saying	         saying	    B-C-A1	       S-V	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+            the	              -	    I-C-A1	      B-A1	      B-A1	         O	         O	         O	         O	         O	         O	         O	         O	         O
+      operation	              -	    I-C-A1	      I-A1	      E-A1	         O	         O	         O	         O	         O	         O	         O	         O	         O
+            was	            was	    I-C-A1	      I-A1	       B-V	         O	         O	         O	         O	         O	         O	         O	         O	         O
+           over	              -	    E-C-A1	      I-A1	       E-V	         O	         O	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+            but	              -	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+           that	              -	         O	      I-A1	         O	         O	      S-A1	         O	         O	         O	         O	         O	         O	         O
+            has	            has	         O	      I-A1	         O	       S-V	         O	         O	         O	         O	         O	         O	         O	         O
+            not	              -	         O	      I-A1	         O	      B-A1	  S-AM-NEG	  S-AM-NEG	         O	         O	         O	         O	         O	         O
+            yet	              -	         O	      I-A1	         O	      I-A1	  S-AM-TMP	  S-AM-TMP	         O	         O	         O	         O	         O	         O
+           been	           been	         O	      I-A1	         O	      I-A1	       S-V	         O	         O	         O	         O	         O	         O	         O
+      confirmed	      confirmed	         O	      I-A1	         O	      I-A1	      B-A3	       S-V	         O	         O	         O	         O	         O	         O
+           from	              -	         O	      I-A1	         O	      I-A1	      I-A3	      B-A3	         O	         O	         O	         O	         O	         O
+       Belgrade	              -	         O	      I-A1	         O	      I-A1	      E-A3	      E-A3	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O	         O
+            the	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O	         O
+        capital	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O	         O
+             of	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O	         O
+         Serbia	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	      I-A1	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O	         O
+          which	              -	         O	      I-A1	         O	      I-A1	         O	         O	    S-R-A1	         O	         O	         O	         O	         O
+             is	             is	         O	      I-A1	         O	      I-A1	         O	         O	       S-V	         O	         O	         O	         O	         O
+          where	              -	         O	      I-A1	         O	      I-A1	         O	         O	  B-AM-LOC	         O	         O	         O	         O	         O
+            the	              -	         O	      I-A1	         O	      I-A1	         O	         O	  I-AM-LOC	      B-A1	      B-A1	      B-A1	      B-A1	      B-A1
+          whole	              -	         O	      I-A1	         O	      I-A1	         O	         O	  I-AM-LOC	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1
+         attack	              -	         O	      I-A1	         O	      I-A1	         O	         O	  I-AM-LOC	      E-A1	      E-A1	      E-A1	      E-A1	      E-A1
+             is	             is	         O	      I-A1	         O	      I-A1	         O	         O	  I-AM-LOC	       S-V	         O	         O	         O	         O
+        thought	        thought	         O	      I-A1	         O	      I-A1	         O	         O	  I-AM-LOC	    B-C-A1	       S-V	         O	         O	         O
+             to	              -	         O	      I-A1	         O	      I-A1	         O	         O	  I-AM-LOC	    I-C-A1	    B-C-A1	         O	         O	         O
+           have	           have	         O	      I-A1	         O	      I-A1	         O	         O	  I-AM-LOC	    I-C-A1	    I-C-A1	       S-V	         O	         O
+           been	           been	         O	      I-A1	         O	      I-A1	         O	         O	  I-AM-LOC	    I-C-A1	    I-C-A1	         O	       S-V	         O
+        planned	        planned	         O	      E-A1	         O	      E-A1	         O	         O	  E-AM-LOC	    E-C-A1	    E-C-A1	         O	    S-C-A1	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	         O	         O
+         ethnic	              -	      I-A1	         O	         O
+      Albanians	              -	      I-A1	         O	         O
+           here	              -	      I-A1	         O	         O
+             in	              -	      I-A1	         O	         O
+         Kosovo	              -	      E-A1	         O	         O
+            are	            are	       S-V	         O	         O
+   considerably	              -	  B-AM-ADV	         O	         O
+        worried	              -	  I-AM-ADV	         O	         O
+          about	              -	  I-AM-ADV	         O	         O
+            the	              -	  I-AM-ADV	         O	         O
+         future	              -	  I-AM-ADV	         O	         O
+            and	              -	  I-AM-ADV	         O	         O
+           fear	              -	  I-AM-ADV	         O	         O
+           they	              -	  I-AM-ADV	      S-A1	      S-A0
+            are	            are	  I-AM-ADV	       S-V	         O
+     witnessing	     witnessing	  I-AM-ADV	         O	       S-V
+            the	              -	  I-AM-ADV	         O	      B-A1
+     beginnings	              -	  I-AM-ADV	         O	      I-A1
+             of	              -	  I-AM-ADV	         O	      I-A1
+              a	              -	  I-AM-ADV	         O	      I-A1
+           much	              -	  I-AM-ADV	         O	      I-A1
+          wider	              -	  I-AM-ADV	         O	      I-A1
+       conflict	              -	  E-AM-ADV	         O	      E-A1
+              .	              -	         O	         O	         O
+
+          Karyn	              -
+        Coleman	              -
+              ,	              -
+            BBC	              -
+           news	              -
+              ,	              -
+       Pristina	              -
+              .	              -
+

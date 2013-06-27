@@ -1,0 +1,200 @@
+        Ratners	              -	      B-A0	      B-A0	      B-A0
+          Group	              -	      I-A0	      I-A0	      I-A0
+            PLC	              -	      I-A0	      I-A0	      I-A0
+             's	              -	      I-A0	      I-A0	      I-A0
+           U.S.	              -	      I-A0	      I-A0	      I-A0
+     subsidiary	              -	      E-A0	      E-A0	      E-A0
+            has	            has	       S-V	         O	         O
+         agreed	         agreed	      B-A1	       S-V	         O
+             to	              -	      I-A1	      B-A1	         O
+        acquire	        acquire	      I-A1	      I-A1	       S-V
+        jewelry	              -	      I-A1	      I-A1	      B-A1
+       retailer	              -	      I-A1	      I-A1	      I-A1
+      Weisfield	              -	      I-A1	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1	      I-A1
+           Inc.	              -	      I-A1	      I-A1	      E-A1
+            for	              -	      I-A1	      I-A1	      B-A3
+              $	              -	      I-A1	      I-A1	      I-A3
+             50	              -	      I-A1	      I-A1	      I-A3
+              a	              -	      I-A1	      I-A1	      I-A3
+          share	              -	      I-A1	      I-A1	      I-A3
+              ,	              -	      I-A1	      I-A1	      I-A3
+             or	              -	      I-A1	      I-A1	      I-A3
+          about	              -	      I-A1	      I-A1	      I-A3
+              $	              -	      I-A1	      I-A1	      I-A3
+             55	              -	      I-A1	      I-A1	      I-A3
+        million	              -	      E-A1	      E-A1	      E-A3
+              .	              -	         O	         O	         O
+
+      Weisfield	              -	      B-A1	      B-A1	      B-A1
+             's	              -	      I-A1	      I-A1	      I-A1
+         shares	              -	      E-A1	      E-A1	      E-A1
+         soared	         soared	       S-V	         O	         O
+             on	              -	  B-AM-LOC	         O	         O
+            the	              -	  I-AM-LOC	         O	         O
+   announcement	              -	  E-AM-LOC	         O	         O
+      yesterday	              -	  S-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O
+        closing	        closing	  B-AM-ADV	       B-V	         O
+             up	              -	  I-AM-ADV	       E-V	         O
+              $	              -	  I-AM-ADV	      B-A1	         O
+             11	              -	  I-AM-ADV	      E-A1	         O
+             to	              -	  I-AM-ADV	  B-AM-PNC	         O
+          close	          close	  I-AM-ADV	  I-AM-PNC	       S-V
+             at	              -	  I-AM-ADV	  I-AM-PNC	  B-AM-EXT
+              $	              -	  I-AM-ADV	  I-AM-PNC	  I-AM-EXT
+             50	              -	  I-AM-ADV	  E-AM-PNC	  E-AM-EXT
+             in	              -	  I-AM-ADV	  B-AM-LOC	         O
+       national	              -	  I-AM-ADV	  I-AM-LOC	         O
+over-the-counter	              -	  I-AM-ADV	  I-AM-LOC	         O
+        trading	              -	  E-AM-ADV	  E-AM-LOC	         O
+              .	              -	         O	         O	         O
+
+        Ratners	              -	      B-A0	         O
+            and	              -	      I-A0	         O
+      Weisfield	              -	      I-A0	         O
+             's	              -	      E-A0	         O
+           said	           said	       S-V	         O
+           they	              -	      B-A1	      S-A0
+        reached	        reached	      I-A1	       S-V
+             an	              -	      I-A1	      B-A1
+      agreement	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+      principle	              -	      I-A1	      I-A1
+            for	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+    acquisition	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+      Weisfield	              -	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1
+             by	              -	      I-A1	      I-A1
+       Sterling	              -	      I-A1	      I-A1
+            Inc	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	         O
+      companies	              -	      E-A0	         O
+           said	           said	       S-V	         O
+            the	              -	      B-A1	      B-A1
+    acquisition	              -	      I-A1	      E-A1
+             is	             is	      I-A1	       S-V
+        subject	              -	      I-A1	    B-C-A1
+             to	              -	      I-A1	    I-C-A1
+              a	              -	      I-A1	    I-C-A1
+     definitive	              -	      I-A1	    I-C-A1
+      agreement	              -	      E-A1	    E-C-A1
+              .	              -	         O	         O
+
+           They	              -	      S-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+           they	              -	      B-A1	      S-A0	         O	         O
+         expect	         expect	      I-A1	       S-V	         O	         O
+            the	              -	      I-A1	      B-A1	      B-A1	      B-A1
+    transaction	              -	      I-A1	      I-A1	      E-A1	      E-A1
+             to	              -	      I-A1	      I-A1	         O	         O
+             be	             be	      I-A1	      I-A1	       S-V	         O
+      completed	      completed	      I-A1	      I-A1	         O	       S-V
+             by	              -	      I-A1	      I-A1	         O	  B-AM-TMP
+           Dec.	              -	      I-A1	      I-A1	         O	  I-AM-TMP
+             15	              -	      E-A1	      E-A1	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+      Weisfield	              -	      B-A1	      B-A0
+             's	              -	      E-A1	      I-A0
+              ,	              -	         O	      I-A0
+          based	          based	       S-V	      I-A0
+             in	              -	  B-AM-LOC	      I-A0
+        Seattle	              -	  I-AM-LOC	      I-A0
+              ,	              -	  I-AM-LOC	      I-A0
+          Wash.	              -	  E-AM-LOC	      I-A0
+              ,	              -	         O	      E-A0
+      currently	              -	         O	  S-AM-TMP
+       operates	       operates	         O	       S-V
+             87	              -	         O	      B-A1
+      specialty	              -	         O	      I-A1
+        jewelry	              -	         O	      I-A1
+         stores	              -	         O	      I-A1
+             in	              -	         O	      I-A1
+           nine	              -	         O	      I-A1
+         states	              -	         O	      E-A1
+              .	              -	         O	         O
+
+             In	              -	         O	  B-AM-TMP
+            the	              -	      B-A1	  I-AM-TMP
+         fiscal	              -	      I-A1	  I-AM-TMP
+           year	              -	      E-A1	  I-AM-TMP
+          ended	          ended	       S-V	  I-AM-TMP
+           Jan.	              -	  B-AM-TMP	  I-AM-TMP
+             31	              -	  E-AM-TMP	  E-AM-TMP
+              ,	              -	         O	         O
+            the	              -	         O	      B-A0
+        company	              -	         O	      E-A0
+       reported	       reported	         O	       S-V
+          sales	              -	         O	      B-A1
+             of	              -	         O	      I-A1
+              $	              -	         O	      I-A1
+           59.5	              -	         O	      I-A1
+        million	              -	         O	      I-A1
+            and	              -	         O	      I-A1
+         pretax	              -	         O	      I-A1
+         profit	              -	         O	      I-A1
+             of	              -	         O	      I-A1
+              $	              -	         O	      I-A1
+            2.9	              -	         O	      I-A1
+        million	              -	         O	      E-A1
+              .	              -	         O	         O
+
+        Ratners	              -	      S-A0	      B-A0
+              ,	              -	         O	      I-A0
+          which	              -	    S-R-A0	      I-A0
+       controls	       controls	       S-V	      I-A0
+             25	              -	      B-A1	      I-A0
+              %	              -	      I-A1	      I-A0
+             of	              -	      I-A1	      I-A0
+            the	              -	      I-A1	      I-A0
+        British	              -	      I-A1	      I-A0
+        jewelry	              -	      I-A1	      I-A0
+         market	              -	      E-A1	      I-A0
+              ,	              -	         O	      E-A0
+          would	              -	         O	  S-AM-MOD
+       increase	       increase	         O	       S-V
+            the	              -	         O	      B-A1
+         number	              -	         O	      I-A1
+             of	              -	         O	      I-A1
+            its	              -	         O	      I-A1
+           U.S.	              -	         O	      I-A1
+         stores	              -	         O	      E-A1
+             to	              -	         O	      B-A4
+          about	              -	         O	      I-A4
+            450	              -	         O	      I-A4
+         stores	              -	         O	      E-A4
+           from	              -	         O	      B-A3
+            360	              -	         O	      E-A3
+              .	              -	         O	         O
+
+             It	              -	         O	      S-A0	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O
+           said	           said	      B-A1	       S-V	         O	         O	         O
+             it	              -	      I-A1	      B-A1	      S-A0	      S-A0	         O
+          hopes	          hopes	      I-A1	      I-A1	       S-V	         O	         O
+             to	              -	      I-A1	      I-A1	      B-A1	         O	         O
+        control	        control	      I-A1	      I-A1	      I-A1	       S-V	         O
+              5	              -	      I-A1	      I-A1	      I-A1	      B-A1	         O
+              %	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+             of	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+        jewelry	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+       business	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+             in	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+           U.S.	              -	      I-A1	      I-A1	      I-A1	      E-A1	         O
+             by	              -	      I-A1	      I-A1	      I-A1	  B-AM-TMP	         O
+           1992	              -	      E-A1	      E-A1	      E-A1	  E-AM-TMP	         O
+              ;	              -	         O	         O	         O	         O	         O
+      currently	              -	         O	         O	         O	         O	  S-AM-TMP
+             it	              -	         O	         O	         O	         O	      S-A0
+       controls	       controls	         O	         O	         O	         O	       S-V
+          about	              -	         O	         O	         O	         O	      B-A1
+              2	              -	         O	         O	         O	         O	      I-A1
+              %	              -	         O	         O	         O	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+

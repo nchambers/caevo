@@ -1,0 +1,173 @@
+           A.L.	              -	      B-A1	      B-A1	         O	      B-A1
+       Williams	              -	      I-A1	      I-A1	         O	      I-A1
+          Corp.	              -	      E-A1	      E-A1	         O	      I-A1
+            was	            was	       S-V	         O	         O	      I-A1
+         merged	         merged	    B-C-A1	       S-V	         O	      I-A1
+           into	              -	    I-C-A1	      B-A2	         O	      I-A1
+      Primerica	              -	    I-C-A1	      I-A2	         O	      I-A1
+          Corp.	              -	    I-C-A1	      I-A2	         O	      I-A1
+              ,	              -	    I-C-A1	      I-A2	         O	      I-A1
+            New	              -	    I-C-A1	      I-A2	         O	      I-A1
+           York	              -	    E-C-A1	      I-A2	         O	      I-A1
+              ,	              -	         O	      E-A2	         O	      I-A1
+          after	              -	         O	  B-AM-TMP	         O	      I-A1
+              a	              -	         O	  I-AM-TMP	      B-A0	      I-A1
+        special	              -	         O	  I-AM-TMP	      I-A0	      I-A1
+        meeting	              -	         O	  I-AM-TMP	      I-A0	      I-A1
+             of	              -	         O	  I-AM-TMP	      I-A0	      I-A1
+       Williams	              -	         O	  I-AM-TMP	      I-A0	      I-A1
+   shareholders	              -	         O	  I-AM-TMP	      E-A0	      I-A1
+        cleared	        cleared	         O	  I-AM-TMP	       S-V	      I-A1
+            the	              -	         O	  I-AM-TMP	      B-A1	      I-A1
+    transaction	              -	         O	  E-AM-TMP	      E-A1	      E-A1
+              ,	              -	         O	         O	         O	         O
+            the	              -	         O	         O	         O	      B-A0
+      companies	              -	         O	         O	         O	      E-A0
+           said	           said	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+      Primerica	              -	      S-A1	      S-A0	      B-A0	      B-A1
+              ,	              -	         O	         O	      I-A0	      I-A1
+          which	              -	    S-R-A0	    S-R-A0	      I-A0	      I-A1
+            had	            had	       S-V	         O	      I-A0	      I-A1
+          owned	          owned	      B-A1	       S-V	      I-A0	      I-A1
+         nearly	              -	      I-A1	      B-A1	      I-A0	      I-A1
+             70	              -	      I-A1	      I-A1	      I-A0	      I-A1
+              %	              -	      I-A1	      I-A1	      I-A0	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A0	      I-A1
+       Williams	              -	      E-A1	      E-A1	      I-A0	      I-A1
+              ,	              -	         O	         O	      E-A0	      E-A1
+           will	              -	         O	         O	  S-AM-MOD	         O
+            pay	            pay	         O	         O	       S-V	         O
+          about	              -	         O	         O	      B-A1	      B-A1
+           16.7	              -	         O	         O	      I-A1	      I-A1
+        million	              -	         O	         O	      I-A1	      I-A1
+         shares	              -	         O	         O	      I-A1	      E-A1
+              ,	              -	         O	         O	      I-A1	         O
+      currently	              -	         O	         O	      I-A1	  S-AM-TMP
+         valued	         valued	         O	         O	      I-A1	       S-V
+             at	              -	         O	         O	      I-A1	      B-A2
+         almost	              -	         O	         O	      I-A1	      I-A2
+              $	              -	         O	         O	      I-A1	      I-A2
+            472	              -	         O	         O	      I-A1	      I-A2
+        million	              -	         O	         O	      I-A1	      E-A2
+              ,	              -	         O	         O	      E-A1	         O
+            for	              -	         O	         O	      B-A3	         O
+            the	              -	         O	         O	      I-A3	         O
+           rest	              -	         O	         O	      I-A3	         O
+             of	              -	         O	         O	      I-A3	         O
+       Williams	              -	         O	         O	      E-A3	         O
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0
+financial-services	              -	      I-A0
+        company	              -	      E-A0
+           will	              -	  S-AM-MOD
+            pay	            pay	       S-V
+           0.82	              -	      B-A1
+          share	              -	      E-A1
+            for	              -	      B-A3
+           each	              -	      I-A3
+       Williams	              -	      I-A3
+          share	              -	      E-A3
+              .	              -	         O
+
+       Williams	              -	      B-A1	      B-A1	      B-A1	      B-A1
+         shares	              -	      E-A1	      E-A1	      E-A1	      I-A1
+              ,	              -	         O	         O	         O	      I-A1
+          which	              -	    S-R-A1	    S-R-A1	    S-R-A1	      I-A1
+           were	           were	       S-V	         O	         O	      I-A1
+             to	              -	         O	         O	         O	      I-A1
+             be	             be	         O	       S-V	         O	      I-A1
+       delisted	       delisted	         O	         O	       S-V	      I-A1
+           from	              -	         O	         O	      B-A0	      I-A1
+            the	              -	         O	         O	      I-A0	      I-A1
+            New	              -	         O	         O	      I-A0	      I-A1
+           York	              -	         O	         O	      I-A0	      I-A1
+          Stock	              -	         O	         O	      I-A0	      I-A1
+       Exchange	              -	         O	         O	      E-A0	      I-A1
+          after	              -	         O	  B-AM-TMP	  B-AM-TMP	      I-A1
+            the	              -	         O	  I-AM-TMP	  I-AM-TMP	      I-A1
+          close	              -	         O	  I-AM-TMP	  I-AM-TMP	      I-A1
+             of	              -	         O	  I-AM-TMP	  I-AM-TMP	      I-A1
+      composite	              -	         O	  I-AM-TMP	  I-AM-TMP	      I-A1
+        trading	              -	         O	  I-AM-TMP	  I-AM-TMP	      I-A1
+      yesterday	              -	         O	  E-AM-TMP	  E-AM-TMP	      E-A1
+              ,	              -	         O	         O	         O	         O
+         closed	         closed	         O	         O	         O	       S-V
+             at	              -	         O	         O	         O	  B-AM-EXT
+              $	              -	         O	         O	         O	  I-AM-EXT
+          23.25	              -	         O	         O	         O	  E-AM-EXT
+              ,	              -	         O	         O	         O	         O
+            off	              -	         O	         O	         O	  B-AM-MNR
+           12.5	              -	         O	         O	         O	  I-AM-MNR
+          cents	              -	         O	         O	         O	  E-AM-MNR
+              .	              -	         O	         O	         O	         O
+
+      Primerica	              -	      S-A1
+         closed	         closed	       S-V
+             at	              -	  B-AM-EXT
+              $	              -	  I-AM-EXT
+          28.25	              -	  E-AM-EXT
+              ,	              -	         O
+           down	              -	  B-AM-MNR
+             50	              -	  I-AM-MNR
+          cents	              -	  E-AM-MNR
+              .	              -	         O
+
+       Williams	              -	      B-A0	         O
+              ,	              -	      I-A0	         O
+         Duluth	              -	      I-A0	         O
+              ,	              -	      I-A0	         O
+            Ga.	              -	      I-A0	         O
+              ,	              -	      E-A0	         O
+             is	             is	       S-V	         O
+             an	              -	      B-A1	         O
+      insurance	              -	      I-A1	         O
+            and	              -	      I-A1	         O
+financial-services	              -	      I-A1	      S-A1
+        holding	        holding	      I-A1	       S-V
+        company	              -	      E-A1	      S-A0
+              .	              -	         O	         O
+
+            Its	              -	      B-A1	      B-A1	         O
+   subsidiaries	              -	      I-A1	      I-A1	         O
+              '	              -	      I-A1	      I-A1	         O
+       services	              -	      E-A1	      E-A1	         O
+            are	            are	       S-V	         O	         O
+       marketed	       marketed	    B-C-A1	       S-V	         O
+             by	              -	    I-C-A1	      B-A0	         O
+        closely	              -	    I-C-A1	      I-A0	  S-AM-MNR
+           held	           held	    I-C-A1	      I-A0	       S-V
+           A.L.	              -	    I-C-A1	      I-A0	      B-A1
+       Williams	              -	    I-C-A1	      I-A0	      I-A1
+            amp	              -	    I-C-A1	      I-A0	      I-A1
+     Associates	              -	    E-C-A1	      E-A0	      E-A1
+              .	              -	         O	         O	         O
+
+      Primerica	              -	         O	      S-A0	      S-A0
+              ,	              -	         O	         O	         O
+             as	              -	         O	  B-AM-ADV	  B-AM-ADV
+       expected	       expected	       S-V	  E-AM-ADV	  E-AM-ADV
+              ,	              -	         O	         O	         O
+           also	              -	         O	  S-AM-DIS	         O
+       acquired	       acquired	         O	       S-V	         O
+        certain	              -	         O	      B-A1	         O
+         assets	              -	         O	      I-A1	         O
+             of	              -	         O	      I-A1	         O
+            the	              -	         O	      I-A1	         O
+         agency	              -	         O	      E-A1	         O
+            and	              -	         O	         O	         O
+        assumed	        assumed	         O	         O	       S-V
+        certain	              -	         O	         O	      B-A1
+             of	              -	         O	         O	      I-A1
+            its	              -	         O	         O	      I-A1
+    liabilities	              -	         O	         O	      E-A1
+              .	              -	         O	         O	         O
+
+          Terms	              -	      S-A1	      S-A1
+           were	           were	       S-V	         O
+            n't	              -	    B-C-A1	  S-AM-NEG
+      disclosed	      disclosed	    E-C-A1	       S-V
+              .	              -	         O	         O
+

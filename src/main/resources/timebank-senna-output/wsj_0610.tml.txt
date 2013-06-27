@@ -1,0 +1,1011 @@
+           This	              -	      S-A0	      S-A1
+            has	            has	       S-V	         O
+            n't	              -	  S-AM-NEG	  S-AM-NEG
+           been	           been	         O	       S-V
+        Kellogg	              -	         O	      B-A1
+            Co.	              -	         O	      I-A1
+             's	              -	         O	      I-A1
+           year	              -	         O	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	      B-A1
+       oat-bran	              -	      I-A0	      I-A1
+          craze	              -	      E-A0	      E-A1
+            has	            has	       S-V	         O
+           cost	           cost	      B-A1	       S-V
+            the	              -	      I-A1	      B-A2
+          world	              -	      I-A1	      I-A2
+             's	              -	      I-A1	      I-A2
+        largest	              -	      I-A1	      I-A2
+         cereal	              -	      I-A1	      I-A2
+          maker	              -	      I-A1	      I-A2
+         market	              -	      I-A1	      I-A2
+          share	              -	      E-A1	      E-A2
+              .	              -	         O	         O
+
+            The	              -	      B-A0
+        company	              -	      I-A0
+             's	              -	      I-A0
+      president	              -	      E-A0
+           quit	           quit	       S-V
+       suddenly	              -	  S-AM-MNR
+              .	              -	         O
+
+            And	              -	  S-AM-DIS	  S-AM-DIS	         O	         O
+            now	              -	  S-AM-TMP	  S-AM-TMP	         O	         O
+        Kellogg	              -	      S-A1	      S-A0	         O	         O
+             is	             is	       S-V	         O	         O	         O
+   indefinitely	              -	      B-A1	  S-AM-TMP	         O	         O
+     suspending	     suspending	      I-A1	       S-V	         O	         O
+           work	              -	      I-A1	      B-A1	         O	         O
+             on	              -	      I-A1	      I-A1	         O	         O
+           what	              -	      I-A1	      I-A1	    S-R-A1	    S-R-A1
+            was	            was	      I-A1	      I-A1	       S-V	         O
+             to	              -	      I-A1	      I-A1	         O	         O
+             be	             be	      I-A1	      I-A1	         O	       S-V
+              a	              -	      I-A1	      I-A1	         O	      B-A1
+              $	              -	      I-A1	      I-A1	         O	      I-A1
+              1	              -	      I-A1	      I-A1	         O	      I-A1
+        billion	              -	      I-A1	      I-A1	         O	      I-A1
+         cereal	              -	      I-A1	      I-A1	         O	      I-A1
+          plant	              -	      E-A1	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O
+        company	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             it	              -	      B-A1	      S-A1	      S-A0
+            was	            was	      I-A1	       S-V	         O
+       delaying	       delaying	      I-A1	    B-C-A1	       S-V
+   construction	              -	      I-A1	    E-C-A1	      S-A1
+        because	              -	      I-A1	  B-AM-CAU	  B-AM-CAU
+             of	              -	      I-A1	  I-AM-CAU	  I-AM-CAU
+        current	              -	      I-A1	  I-AM-CAU	  I-AM-CAU
+         market	              -	      I-A1	  I-AM-CAU	  I-AM-CAU
+     conditions	              -	      E-A1	  E-AM-CAU	  E-AM-CAU
+              .	              -	         O	         O	         O
+
+            But	              -	  S-AM-DIS	         O	         O	         O
+            the	              -	      B-A1	      B-A0	      B-A0	         O
+        Memphis	              -	      I-A1	      I-A0	      I-A0	         O
+              ,	              -	      I-A1	      I-A0	      I-A0	         O
+          Tenn.	              -	      I-A1	      I-A0	      I-A0	         O
+              ,	              -	      I-A1	      I-A0	      I-A0	         O
+       facility	              -	      E-A1	      E-A0	      E-A0	         O
+            was	            was	       S-V	         O	         O	         O
+            n't	              -	    B-C-A1	  S-AM-NEG	         O	         O
+             to	              -	    I-C-A1	         O	         O	         O
+          begin	          begin	    I-C-A1	       S-V	         O	         O
+        turning	        turning	    I-C-A1	      B-A1	       B-V	         O
+            out	              -	    I-C-A1	      I-A1	       E-V	         O
+        product	              -	    I-C-A1	      E-A1	      S-A1	         O
+          until	              -	    I-C-A1	  B-AM-TMP	  B-AM-TMP	         O
+           1993	              -	    E-C-A1	  E-AM-TMP	  E-AM-TMP	         O
+              ,	              -	         O	         O	         O	         O
+             so	              -	  B-AM-ADV	         O	         O	         O
+            the	              -	  I-AM-ADV	         O	         O	      B-A0
+       decision	              -	  I-AM-ADV	         O	         O	      E-A0
+            may	              -	  I-AM-ADV	         O	         O	  S-AM-MOD
+         reveal	         reveal	  I-AM-ADV	         O	         O	       S-V
+              a	              -	  I-AM-ADV	         O	         O	      B-A1
+           more	              -	  I-AM-ADV	         O	         O	      I-A1
+    pessimistic	              -	  I-AM-ADV	         O	         O	      I-A1
+      long-term	              -	  I-AM-ADV	         O	         O	      I-A1
+        outlook	              -	  I-AM-ADV	         O	         O	      E-A1
+             as	              -	  I-AM-ADV	         O	         O	  B-AM-DIS
+           well	              -	  E-AM-ADV	         O	         O	  E-AM-DIS
+              .	              -	         O	         O	         O	         O
+
+        Kellogg	              -	      S-A0	      S-A1	      S-A0	      B-A0	      B-A1	      B-A0
+              ,	              -	         O	         O	         O	      I-A0	      I-A1	      I-A0
+          which	              -	    S-R-A0	    S-R-A1	    S-R-A0	      I-A0	      I-A1	      I-A0
+            has	            has	       S-V	         O	         O	      I-A0	      I-A1	      I-A0
+            n't	              -	      B-A1	  S-AM-NEG	         O	      I-A0	      I-A1	      I-A0
+           been	           been	      I-A1	       S-V	         O	      I-A0	      I-A1	      I-A0
+             as	              -	      I-A1	  B-AM-ADV	         O	      I-A0	      I-A1	      I-A0
+     successful	              -	      I-A1	  I-AM-ADV	         O	      I-A0	      I-A1	      I-A0
+             in	              -	      I-A1	  I-AM-ADV	         O	      I-A0	      I-A1	      I-A0
+   capitalizing	   capitalizing	      I-A1	  I-AM-ADV	       S-V	      I-A0	      I-A1	      I-A0
+             on	              -	      I-A1	  I-AM-ADV	      B-A1	      I-A0	      I-A1	      I-A0
+            the	              -	      I-A1	  I-AM-ADV	      I-A1	      I-A0	      I-A1	      I-A0
+         public	              -	      I-A1	  I-AM-ADV	      I-A1	      I-A0	      I-A1	      I-A0
+             's	              -	      I-A1	  I-AM-ADV	      I-A1	      I-A0	      I-A1	      I-A0
+health-oriented	              -	      I-A1	  I-AM-ADV	      I-A1	      I-A0	      I-A1	      I-A0
+         desire	              -	      I-A1	  I-AM-ADV	      I-A1	      I-A0	      I-A1	      I-A0
+            for	              -	      I-A1	  I-AM-ADV	      I-A1	      I-A0	      I-A1	      I-A0
+            oat	              -	      I-A1	  I-AM-ADV	      I-A1	      I-A0	      I-A1	      I-A0
+           bran	              -	      I-A1	  I-AM-ADV	      E-A1	      I-A0	      I-A1	      I-A0
+             as	              -	      I-A1	  I-AM-ADV	         O	      I-A0	      I-A1	      I-A0
+          rival	              -	      I-A1	  I-AM-ADV	         O	      I-A0	      I-A1	      I-A0
+        General	              -	      I-A1	  I-AM-ADV	         O	      I-A0	      I-A1	      I-A0
+          Mills	              -	      I-A1	  I-AM-ADV	         O	      I-A0	      I-A1	      I-A0
+           Inc.	              -	      E-A1	  E-AM-ADV	         O	      I-A0	      I-A1	      I-A0
+              ,	              -	         O	         O	         O	      E-A0	      E-A1	      E-A0
+            has	            has	         O	         O	         O	       S-V	         O	         O
+           been	           been	         O	         O	         O	      B-A1	       S-V	         O
+         losing	         losing	         O	         O	         O	      I-A1	  B-AM-ADV	       S-V
+          share	              -	         O	         O	         O	      I-A1	  I-AM-ADV	      S-A1
+             in	              -	         O	         O	         O	      I-A1	  I-AM-ADV	  B-AM-LOC
+            the	              -	         O	         O	         O	      I-A1	  I-AM-ADV	  I-AM-LOC
+              $	              -	         O	         O	         O	      I-A1	  I-AM-ADV	  I-AM-LOC
+              6	              -	         O	         O	         O	      I-A1	  I-AM-ADV	  I-AM-LOC
+        billion	              -	         O	         O	         O	      I-A1	  I-AM-ADV	  I-AM-LOC
+   ready-to-eat	              -	         O	         O	         O	      I-A1	  I-AM-ADV	  I-AM-LOC
+         cereal	              -	         O	         O	         O	      I-A1	  I-AM-ADV	  I-AM-LOC
+         market	              -	         O	         O	         O	      E-A1	  E-AM-ADV	  E-AM-LOC
+              .	              -	         O	         O	         O	         O	         O	         O
+
+        Kellogg	              -	      B-A1	      B-A1	      B-A1	         O
+             's	              -	      I-A1	      I-A1	      I-A1	         O
+        current	              -	      I-A1	      I-A1	      I-A1	         O
+          share	              -	      E-A1	      E-A1	      E-A1	         O
+             is	             is	       S-V	         O	         O	         O
+       believed	       believed	    B-C-A1	       S-V	         O	         O
+             to	              -	    I-C-A1	    B-C-A1	         O	         O
+             be	             be	    I-C-A1	    I-C-A1	       S-V	         O
+       slightly	              -	    I-C-A1	    I-C-A1	      B-A2	         O
+          under	              -	    I-C-A1	    I-C-A1	      I-A2	         O
+             40	              -	    I-C-A1	    I-C-A1	      I-A2	         O
+              %	              -	    I-C-A1	    E-C-A1	      E-A2	         O
+          while	              -	    I-C-A1	  B-AM-ADV	  B-AM-ADV	         O
+        General	              -	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      B-A1
+          Mills	              -	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      I-A1
+              '	              -	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      I-A1
+          share	              -	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      E-A1
+             is	             is	    I-C-A1	  I-AM-ADV	  I-AM-ADV	       S-V
+          about	              -	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      B-A2
+             27	              -	    I-C-A1	  I-AM-ADV	  I-AM-ADV	      I-A2
+              %	              -	    E-C-A1	  E-AM-ADV	  E-AM-ADV	      E-A2
+              .	              -	         O	         O	         O	         O
+
+            Led	            Led	       S-V	  B-AM-ADV	  B-AM-ADV	         O
+             by	              -	      B-A0	  I-AM-ADV	  I-AM-ADV	         O
+            its	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+      oat-based	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+       Cheerios	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+           line	              -	      E-A0	  E-AM-ADV	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O	         O
+        General	              -	      B-A1	      B-A1	      B-A1	         O
+          Mills	              -	      E-A1	      E-A1	      E-A1	         O
+            has	            has	         O	       S-V	         O	         O
+         gained	         gained	         O	      B-A1	       S-V	         O
+             an	              -	         O	      I-A1	      B-A2	         O
+      estimated	      estimated	         O	      I-A1	      I-A2	       S-V
+              2	              -	         O	      I-A1	      I-A2	      B-A1
+              %	              -	         O	      I-A1	      I-A2	      I-A1
+          share	              -	         O	      I-A1	      E-A2	      E-A1
+             so	              -	         O	      I-A1	  B-AM-TMP	  B-AM-TMP
+            far	              -	         O	      I-A1	  E-AM-TMP	  I-AM-TMP
+           this	              -	         O	      I-A1	  B-AM-TMP	  I-AM-TMP
+           year	              -	         O	      E-A1	  E-AM-TMP	  E-AM-TMP
+              ,	              -	         O	         O	         O	         O
+         mostly	              -	         O	         O	  B-AM-ADV	         O
+             at	              -	         O	         O	  I-AM-ADV	         O
+            the	              -	         O	         O	  I-AM-ADV	         O
+        expense	              -	         O	         O	  I-AM-ADV	         O
+             of	              -	         O	         O	  I-AM-ADV	         O
+        Kellogg	              -	         O	         O	  E-AM-ADV	         O
+              .	              -	         O	         O	         O	         O
+
+           Each	              -	      B-A1
+          share	              -	      I-A1
+          point	              -	      E-A1
+             is	             is	       S-V
+          worth	              -	    B-C-A1
+          about	              -	    I-C-A1
+              $	              -	    I-C-A1
+             60	              -	    I-C-A1
+        million	              -	    I-C-A1
+             in	              -	    I-C-A1
+          sales	              -	    E-C-A1
+              .	              -	         O
+
+       Analysts	              -	      S-A0	         O	         O	         O
+            say	            say	       S-V	         O	         O	         O
+           much	              -	      B-A1	      B-A0	      B-A1	         O
+             of	              -	      I-A1	      I-A0	      I-A1	         O
+        Kellogg	              -	      I-A1	      I-A0	      I-A1	         O
+             's	              -	      I-A1	      I-A0	      I-A1	         O
+        erosion	              -	      I-A1	      E-A0	      E-A1	         O
+            has	            has	      I-A1	       S-V	         O	         O
+           been	           been	      I-A1	    B-C-A1	       S-V	         O
+             in	              -	      I-A1	    I-C-A1	  B-AM-LOC	         O
+           such	              -	      I-A1	    I-C-A1	  I-AM-LOC	         O
+           core	              -	      I-A1	    I-C-A1	  I-AM-LOC	         O
+         brands	              -	      I-A1	    I-C-A1	  I-AM-LOC	         O
+             as	              -	      I-A1	    I-C-A1	  I-AM-LOC	         O
+           Corn	              -	      I-A1	    I-C-A1	  I-AM-LOC	         O
+         Flakes	              -	      I-A1	    E-C-A1	  I-AM-LOC	         O
+              ,	              -	      I-A1	         O	  I-AM-LOC	         O
+           Rice	              -	      I-A1	         O	  I-AM-LOC	         O
+       Krispies	              -	      I-A1	         O	  I-AM-LOC	         O
+            and	              -	      I-A1	         O	  I-AM-LOC	         O
+        Frosted	              -	      I-A1	         O	  I-AM-LOC	         O
+         Flakes	              -	      I-A1	         O	  I-AM-LOC	         O
+              ,	              -	      I-A1	         O	  I-AM-LOC	         O
+          which	              -	      I-A1	         O	  I-AM-LOC	    S-R-A0
+      represent	      represent	      I-A1	         O	  I-AM-LOC	       S-V
+         nearly	              -	      I-A1	         O	  I-AM-LOC	      B-A1
+      one-third	              -	      I-A1	         O	  I-AM-LOC	      I-A1
+             of	              -	      I-A1	         O	  I-AM-LOC	      I-A1
+            its	              -	      I-A1	         O	  I-AM-LOC	      I-A1
+          sales	              -	      I-A1	         O	  I-AM-LOC	      I-A1
+         volume	              -	      E-A1	         O	  E-AM-LOC	      E-A1
+              .	              -	         O	         O	         O	         O
+
+        Kellogg	              -	      S-A1	      S-A0	         O	         O	      B-A1
+             is	             is	       S-V	         O	         O	         O	      I-A1
+             so	              -	  B-AM-CAU	         O	         O	         O	      I-A1
+        anxious	              -	  I-AM-CAU	         O	         O	         O	      I-A1
+             to	              -	  I-AM-CAU	         O	         O	         O	      I-A1
+           turn	           turn	  I-AM-CAU	       B-V	         O	         O	      I-A1
+         around	              -	  I-AM-CAU	       E-V	         O	         O	      I-A1
+           Corn	              -	  I-AM-CAU	      B-A1	         O	         O	      I-A1
+         Flakes	              -	  I-AM-CAU	      I-A1	         O	         O	      I-A1
+          sales	              -	  I-AM-CAU	      E-A1	         O	         O	      I-A1
+           that	              -	  I-AM-CAU	         O	         O	         O	      I-A1
+             it	              -	  I-AM-CAU	         O	      S-A0	      S-A0	      I-A1
+           soon	              -	  I-AM-CAU	         O	  S-AM-TMP	         O	      I-A1
+           will	              -	  I-AM-CAU	         O	  S-AM-MOD	         O	      I-A1
+          begin	          begin	  I-AM-CAU	         O	       S-V	         O	      I-A1
+        selling	        selling	  I-AM-CAU	         O	      B-A1	       S-V	      I-A1
+          boxes	              -	  I-AM-CAU	         O	      I-A1	      S-A1	      I-A1
+            for	              -	  I-AM-CAU	         O	      I-A1	      B-A3	      I-A1
+             as	              -	  I-AM-CAU	         O	      I-A1	      I-A3	      I-A1
+         little	              -	  I-AM-CAU	         O	      I-A1	      I-A3	      I-A1
+             as	              -	  I-AM-CAU	         O	      I-A1	      I-A3	      I-A1
+             99	              -	  I-AM-CAU	         O	      I-A1	      I-A3	      I-A1
+          cents	              -	  I-AM-CAU	         O	      E-A1	      E-A3	      E-A1
+              ,	              -	  I-AM-CAU	         O	         O	         O	         O
+          trade	              -	  I-AM-CAU	         O	         O	         O	      B-A0
+        sources	              -	  I-AM-CAU	         O	         O	         O	      E-A0
+            say	            say	  E-AM-CAU	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+       Cheerios	              -	      B-A0	      B-A0	         O	         O	         O	      B-A1
+            and	              -	      I-A0	      I-A0	         O	         O	         O	      I-A1
+          Honey	              -	      I-A0	      I-A0	         O	         O	         O	      I-A1
+            Nut	              -	      I-A0	      I-A0	         O	         O	         O	      I-A1
+       Cheerios	              -	      E-A0	      E-A0	         O	         O	         O	      I-A1
+           have	           have	       S-V	         O	         O	         O	         O	      I-A1
+          eaten	          eaten	      B-A1	       B-V	         O	         O	         O	      I-A1
+           away	              -	      I-A1	       E-V	         O	         O	         O	      I-A1
+          sales	              -	      I-A1	      B-A1	      S-A1	         O	         O	      I-A1
+       normally	              -	      I-A1	      I-A1	  S-AM-ADV	         O	         O	      I-A1
+          going	          going	      I-A1	      I-A1	       S-V	         O	         O	      I-A1
+             to	              -	      I-A1	      I-A1	         O	         O	         O	      I-A1
+        Kellogg	              -	      I-A1	      I-A1	         O	         O	         O	      I-A1
+             's	              -	      I-A1	      I-A1	         O	         O	         O	      I-A1
+     corn-based	              -	      I-A1	      I-A1	         O	         O	         O	      I-A1
+          lines	              -	      I-A1	      E-A1	         O	         O	         O	      I-A1
+         simply	              -	      I-A1	  B-AM-CAU	         O	         O	         O	      I-A1
+        because	              -	      I-A1	  I-AM-CAU	         O	         O	         O	      I-A1
+           they	              -	      I-A1	  I-AM-CAU	         O	      S-A1	      S-A1	      I-A1
+            are	            are	      I-A1	  I-AM-CAU	         O	       S-V	         O	      I-A1
+           made	           made	      I-A1	  I-AM-CAU	         O	    B-C-A1	       S-V	      I-A1
+             of	              -	      I-A1	  I-AM-CAU	         O	    I-C-A1	      B-A1	      I-A1
+           oats	              -	      E-A1	  E-AM-CAU	         O	    E-C-A1	      E-A1	      E-A1
+              ,	              -	         O	         O	         O	         O	         O	         O
+           says	           says	         O	         O	         O	         O	         O	       S-V
+        Merrill	              -	         O	         O	         O	         O	         O	      B-A0
+          Lynch	              -	         O	         O	         O	         O	         O	      I-A0
+           food	              -	         O	         O	         O	         O	         O	      I-A0
+        analyst	              -	         O	         O	         O	         O	         O	      I-A0
+        William	              -	         O	         O	         O	         O	         O	      I-A0
+        Maguire	              -	         O	         O	         O	         O	         O	      E-A0
+              .	              -	         O	         O	         O	         O	         O	         O
+
+           They	              -	      S-A1
+            are	            are	       S-V
+            not	              -	      B-A1
+              a	              -	      I-A1
+          happy	              -	      I-A1
+          group	              -	      I-A1
+             of	              -	      I-A1
+         people	              -	      E-A1
+             at	              -	  B-AM-LOC
+         Battle	              -	  I-AM-LOC
+          Creek	              -	  E-AM-LOC
+          right	              -	  B-AM-TMP
+            now	              -	  E-AM-TMP
+              .	              -	         O
+
+        Kellogg	              -	      S-A1	      S-A1	         O
+             is	             is	       S-V	         O	         O
+          based	          based	  B-AM-ADV	       S-V	         O
+             in	              -	  I-AM-ADV	  B-AM-LOC	         O
+         Battle	              -	  I-AM-ADV	  I-AM-LOC	         O
+          Creek	              -	  I-AM-ADV	  I-AM-LOC	         O
+              ,	              -	  I-AM-ADV	  I-AM-LOC	         O
+          Mich.	              -	  I-AM-ADV	  I-AM-LOC	         O
+              ,	              -	  I-AM-ADV	  I-AM-LOC	         O
+              a	              -	  I-AM-ADV	  I-AM-LOC	      B-A0
+           city	              -	  I-AM-ADV	  I-AM-LOC	      E-A0
+           that	              -	  I-AM-ADV	  I-AM-LOC	    S-R-A0
+          calls	          calls	  I-AM-ADV	  I-AM-LOC	       S-V
+         itself	              -	  I-AM-ADV	  I-AM-LOC	      S-A1
+            the	              -	  I-AM-ADV	  I-AM-LOC	      B-A2
+      breakfast	              -	  I-AM-ADV	  I-AM-LOC	      I-A2
+        capital	              -	  I-AM-ADV	  I-AM-LOC	      I-A2
+             of	              -	  I-AM-ADV	  I-AM-LOC	      I-A2
+            the	              -	  I-AM-ADV	  I-AM-LOC	      I-A2
+          world	              -	  E-AM-ADV	  E-AM-LOC	      E-A2
+              .	              -	         O	         O	         O
+
+        Another	              -	      B-A0	         O
+        analyst	              -	      I-A0	         O
+              ,	              -	      I-A0	         O
+           John	              -	      I-A0	         O
+             C.	              -	      I-A0	         O
+        Maxwell	              -	      I-A0	         O
+            Jr.	              -	      I-A0	         O
+             of	              -	      I-A0	         O
+          Wheat	              -	      I-A0	         O
+              ,	              -	      I-A0	         O
+          First	              -	      I-A0	         O
+     Securities	              -	      I-A0	         O
+             in	              -	      I-A0	         O
+       Richmond	              -	      I-A0	         O
+              ,	              -	      I-A0	         O
+            Va.	              -	      I-A0	         O
+              ,	              -	      E-A0	         O
+       recently	              -	  S-AM-TMP	         O
+           went	           went	       S-V	         O
+             to	              -	      B-A4	         O
+              a	              -	      I-A4	         O
+           sell	              -	      I-A4	         O
+ recommendation	              -	      I-A4	         O
+             on	              -	      I-A4	         O
+        Kellogg	              -	      I-A4	      B-A1
+          stock	              -	      I-A4	      E-A1
+              ,	              -	      I-A4	         O
+          which	              -	      I-A4	    S-R-A1
+         closed	         closed	      I-A4	       S-V
+         Friday	              -	      I-A4	  S-AM-TMP
+             at	              -	      I-A4	  B-AM-EXT
+              $	              -	      I-A4	  I-AM-EXT
+          71.75	              -	      I-A4	  E-AM-EXT
+              ,	              -	      I-A4	         O
+           down	              -	      I-A4	  B-AM-MNR
+             75	              -	      I-A4	  I-AM-MNR
+          cents	              -	      I-A4	  E-AM-MNR
+              ,	              -	      I-A4	         O
+             in	              -	      I-A4	  B-AM-LOC
+            New	              -	      I-A4	  I-AM-LOC
+           York	              -	      I-A4	  I-AM-LOC
+          Stock	              -	      I-A4	  I-AM-LOC
+       Exchange	              -	      I-A4	  I-AM-LOC
+      composite	              -	      I-A4	  I-AM-LOC
+        trading	              -	      E-A4	  E-AM-LOC
+              .	              -	         O	         O
+
+              I	              -	      S-A0	      S-A0	         O	      B-A1
+             do	             do	       S-V	         O	         O	      I-A1
+            n't	              -	      S-A1	  S-AM-NEG	         O	      I-A1
+          think	          think	         O	       S-V	         O	      I-A1
+        Kellogg	              -	         O	      B-A1	      S-A1	      I-A1
+            can	              -	         O	      I-A1	  S-AM-MOD	      I-A1
+            get	            get	         O	      I-A1	       S-V	      I-A1
+           back	              -	         O	      I-A1	      B-A2	      I-A1
+             to	              -	         O	      I-A1	      I-A2	      I-A1
+             40	              -	         O	      I-A1	      I-A2	      I-A1
+              %	              -	         O	      I-A1	      E-A2	      I-A1
+           this	              -	         O	      I-A1	  B-AM-TMP	      I-A1
+           year	              -	         O	      E-A1	  E-AM-TMP	      E-A1
+              ,	              -	         O	         O	         O	         O
+             he	              -	         O	         O	         O	      S-A0
+           said	           said	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+        Kellogg	              -	      B-A1
+             's	              -	      I-A1
+           main	              -	      I-A1
+        problem	              -	      E-A1
+             is	             is	       S-V
+           life	              -	      B-A1
+          style	              -	      E-A1
+              .	              -	         O
+
+         People	              -	      S-A1	      S-A0	      S-A0	         O	         O
+            are	            are	       S-V	         O	         O	         O	         O
+        reading	        reading	    B-C-A1	       S-V	         O	         O	         O
+            the	              -	    I-C-A1	      B-A1	         O	         O	         O
+          boxes	              -	    E-C-A1	      E-A1	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O
+       deciding	       deciding	         O	         O	       S-V	         O	         O
+           they	              -	         O	         O	      B-A1	      S-A0	         O
+           want	           want	         O	         O	      I-A1	       S-V	         O
+      something	              -	         O	         O	      I-A1	      B-A1	      S-A1
+           that	              -	         O	         O	      I-A1	      I-A1	    S-R-A1
+             's	             's	         O	         O	      I-A1	      I-A1	       S-V
+              `	              -	         O	         O	      I-A1	      I-A1	      B-A2
+        healthy	              -	         O	         O	      I-A1	      I-A1	      I-A2
+              '	              -	         O	         O	      I-A1	      I-A1	      I-A2
+            for	              -	         O	         O	      I-A1	      I-A1	      I-A2
+            you	              -	         O	         O	      I-A1	      I-A1	      I-A2
+             --	              -	         O	         O	      I-A1	      I-A1	      I-A2
+           oats	              -	         O	         O	      I-A1	      I-A1	      I-A2
+              ,	              -	         O	         O	      I-A1	      I-A1	      I-A2
+           bran	              -	         O	         O	      E-A1	      E-A1	      E-A2
+              .	              -	         O	         O	         O	         O	         O
+
+            Mr.	              -	      B-A0	         O	         O	         O
+        Maxwell	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+             he	              -	      B-A1	      S-A1	      S-A1	         O
+          would	              -	      I-A1	  S-AM-MOD	  S-AM-MOD	         O
+            n't	              -	      I-A1	  S-AM-NEG	  S-AM-NEG	         O
+             be	             be	      I-A1	       S-V	         O	         O
+      surprised	      surprised	      I-A1	         O	       S-V	         O
+             if	              -	      I-A1	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O
+           over	              -	      I-A1	  B-AM-TMP	  B-AM-TMP	  B-AM-TMP
+            the	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP
+           next	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP
+            two	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP
+          years	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP
+             or	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP
+             so	              -	      I-A1	  I-AM-TMP	  E-AM-TMP	  E-AM-TMP
+              ,	              -	      I-A1	  I-AM-TMP	         O	         O
+        General	              -	      I-A1	  I-AM-TMP	         O	      B-A1
+          Mills	              -	      I-A1	  I-AM-TMP	         O	      I-A1
+              '	              -	      I-A1	  I-AM-TMP	         O	      I-A1
+          share	              -	      I-A1	  I-AM-TMP	         O	      E-A1
+      increased	      increased	      I-A1	  I-AM-TMP	         O	       S-V
+             to	              -	      I-A1	  I-AM-TMP	         O	      B-A4
+             30	              -	      I-A1	  I-AM-TMP	         O	      I-A4
+              %	              -	      I-A1	  I-AM-TMP	         O	      I-A4
+             or	              -	      I-A1	  I-AM-TMP	         O	      I-A4
+           more	              -	      E-A1	  E-AM-TMP	         O	      E-A4
+              .	              -	         O	         O	         O	         O
+
+             In	              -	         O	      B-A1	         O	  B-AM-ADV
+     announcing	     announcing	       S-V	      I-A1	         O	  I-AM-ADV
+            the	              -	      B-A1	      I-A1	         O	  I-AM-ADV
+          plant	              -	      I-A1	      I-A1	         O	  I-AM-ADV
+          delay	              -	      E-A1	      E-A1	         O	  E-AM-ADV
+              ,	              -	         O	         O	         O	         O
+        Kellogg	              -	      B-A0	      B-A0	         O	         O
+       Chairman	              -	      I-A0	      I-A0	         O	         O
+        William	              -	      I-A0	      I-A0	         O	         O
+             E.	              -	      I-A0	      I-A0	         O	         O
+        LaMothe	              -	      E-A0	      E-A0	         O	         O
+           said	           said	         O	       S-V	         O	         O
+              ,	              -	         O	         O	         O	         O
+         Cereal	              -	         O	    B-C-A1	      B-A0	      B-A0
+         volume	              -	         O	    I-C-A1	      I-A0	      I-A0
+         growth	              -	         O	    I-C-A1	      I-A0	      I-A0
+             in	              -	         O	    I-C-A1	      I-A0	      I-A0
+            the	              -	         O	    I-C-A1	      I-A0	      I-A0
+           U.S.	              -	         O	    I-C-A1	      E-A0	      E-A0
+            has	            has	         O	    I-C-A1	       S-V	         O
+            not	              -	         O	    I-C-A1	      B-A1	  S-AM-NEG
+            met	            met	         O	    I-C-A1	      I-A1	       S-V
+            our	              -	         O	    I-C-A1	      I-A1	      B-A1
+   expectations	              -	         O	    I-C-A1	      I-A1	      E-A1
+            for	              -	         O	    I-C-A1	      I-A1	  B-AM-TMP
+           1989	              -	         O	    E-C-A1	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+             He	              -	      S-A0	         O	         O
+           said	           said	       S-V	         O	         O
+   construction	              -	      B-A1	      S-A1	         O
+          would	              -	      I-A1	  S-AM-MOD	         O
+            n't	              -	      I-A1	  S-AM-NEG	         O
+         resume	         resume	      I-A1	       S-V	         O
+          until	              -	      I-A1	  B-AM-TMP	         O
+         market	              -	      I-A1	  I-AM-TMP	      B-A0
+     conditions	              -	      I-A1	  I-AM-TMP	      E-A0
+        warrant	        warrant	      I-A1	  I-AM-TMP	       S-V
+             it	              -	      E-A1	  E-AM-TMP	      S-A1
+              .	              -	         O	         O	         O
+
+        Kellogg	              -	      S-A0	         O	         O	         O
+      indicated	      indicated	       S-V	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O
+             it	              -	      I-A1	      S-A0	      S-A1	      S-A0
+            has	            has	      I-A1	       S-V	         O	         O
+           room	              -	      I-A1	      B-A1	      S-A1	         O
+             to	              -	      I-A1	      I-A1	         O	         O
+           grow	           grow	      I-A1	      I-A1	       S-V	         O
+        without	              -	      I-A1	      I-A1	         O	         O
+         adding	         adding	      I-A1	      I-A1	         O	       S-V
+     facilities	              -	      E-A1	      E-A1	         O	      S-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O
+        company	              -	      E-A0	         O	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O
+           five	              -	      B-A1	      B-A2	         O	         O	         O
+          other	              -	      I-A1	      I-A2	         O	         O	         O
+           U.S.	              -	      I-A1	      I-A2	         O	         O	         O
+         plants	              -	      I-A1	      E-A2	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+      including	      including	      I-A1	       S-V	         O	         O	         O
+              a	              -	      I-A1	      B-A1	      B-A1	         O	         O
+         modern	              -	      I-A1	      I-A1	      I-A1	         O	         O
+       facility	              -	      I-A1	      I-A1	      E-A1	         O	         O
+             at	              -	      I-A1	      I-A1	         O	         O	         O
+            its	              -	      I-A1	      I-A1	         O	         O	         O
+         Battle	              -	      I-A1	      I-A1	         O	         O	         O
+          Creek	              -	      I-A1	      I-A1	         O	         O	         O
+   headquarters	              -	      I-A1	      I-A1	         O	         O	         O
+          known	          known	      I-A1	      I-A1	       S-V	         O	         O
+             as	              -	      I-A1	      I-A1	      B-A2	         O	         O
+       Building	              -	      I-A1	      I-A1	      I-A2	         O	         O
+            100	              -	      I-A1	      I-A1	      I-A2	         O	         O
+              ,	              -	      I-A1	      I-A1	      I-A2	         O	         O
+          which	              -	      I-A1	      I-A1	      I-A2	    S-R-A1	    S-R-A0
+             is	             is	      I-A1	      I-A1	      I-A2	       S-V	         O
+             to	              -	      I-A1	      I-A1	      I-A2	         O	         O
+            add	            add	      I-A1	      I-A1	      I-A2	         O	       S-V
+bran-processing	              -	      I-A1	      I-A1	      I-A2	         O	      B-A1
+            and	              -	      I-A1	      I-A1	      I-A2	         O	      I-A1
+rice-processing	              -	      I-A1	      I-A1	      I-A2	         O	      I-A1
+       capacity	              -	      I-A1	      I-A1	      I-A2	         O	      E-A1
+           next	              -	      I-A1	      I-A1	      I-A2	         O	  B-AM-TMP
+           year	              -	      E-A1	      E-A1	      E-A2	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O
+
+        General	              -	      B-A0	         O	         O	         O	         O
+          Mills	              -	      E-A0	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+      meanwhile	              -	  S-AM-TMP	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+          finds	          finds	       S-V	         O	         O	         O	         O
+         itself	              -	      S-A1	      S-A1	         O	         O	         O
+    constrained	    constrained	      B-A3	       S-V	         O	         O	         O
+           from	              -	      I-A3	      B-A2	         O	         O	         O
+       boosting	       boosting	      I-A3	      I-A2	       S-V	         O	         O
+          sales	              -	      I-A3	      I-A2	      S-A1	         O	         O
+        further	              -	      I-A3	      E-A2	         O	         O	         O
+        because	              -	      I-A3	  B-AM-CAU	         O	         O	         O
+            its	              -	      I-A3	  I-AM-CAU	         O	      B-A1	      B-A1
+         plants	              -	      I-A3	  I-AM-CAU	         O	      E-A1	      E-A1
+            are	            are	      I-A3	  I-AM-CAU	         O	       S-V	         O
+      operating	      operating	      I-A3	  I-AM-CAU	         O	    B-C-A1	       S-V
+             at	              -	      I-A3	  I-AM-CAU	         O	    I-C-A1	  B-AM-MNR
+       capacity	              -	      E-A3	  E-AM-CAU	         O	    E-C-A1	  E-AM-MNR
+              .	              -	         O	         O	         O	         O	         O
+
+              A	              -	      B-A1	      B-A1
+          large	              -	      I-A1	      I-A1
+          plant	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+      Covington	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+            Ga.	              -	      I-A1	      I-A1
+              ,	              -	      E-A1	      E-A1
+             is	             is	       S-V	         O
+             to	              -	    B-C-A1	         O
+           come	           come	    I-C-A1	       S-V
+             on	              -	    I-C-A1	      B-A2
+           line	              -	    I-C-A1	      E-A2
+           next	              -	    I-C-A1	  B-AM-TMP
+           year	              -	    E-C-A1	  E-AM-TMP
+              .	              -	         O	         O
+
+              A	              -	      B-A0	      B-A1	      B-A1	      B-A0	         O	         O	         O	         O
+        Kellogg	              -	      I-A0	      I-A1	      I-A1	      I-A0	         O	         O	         O	         O
+        officer	              -	      E-A0	      E-A1	      E-A1	      I-A0	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	      I-A0	         O	         O	         O	         O
+            who	              -	    S-R-A0	    S-R-A1	    S-R-A1	      I-A0	         O	         O	         O	         O
+          asked	          asked	       S-V	         O	         O	      I-A0	         O	         O	         O	         O
+            not	              -	      B-A1	  S-AM-NEG	  S-AM-NEG	      I-A0	         O	         O	         O	         O
+             to	              -	      I-A1	         O	         O	      I-A0	         O	         O	         O	         O
+             be	             be	      I-A1	       S-V	         O	      I-A0	         O	         O	         O	         O
+          named	          named	      E-A1	      S-A3	       S-V	      I-A0	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	      E-A0	         O	         O	         O	         O
+           said	           said	         O	         O	         O	       S-V	         O	         O	         O	         O
+            the	              -	         O	         O	         O	      B-A1	      B-A1	      B-A1	         O	         O
+        Memphis	              -	         O	         O	         O	      I-A1	      I-A1	      I-A1	         O	         O
+        project	              -	         O	         O	         O	      I-A1	      E-A1	      E-A1	         O	         O
+            was	            was	         O	         O	         O	      I-A1	       S-V	         O	         O	         O
+         pulled	         pulled	         O	         O	         O	      I-A1	      B-A1	       B-V	         O	         O
+             in	              -	         O	         O	         O	      I-A1	      I-A1	       E-V	         O	         O
+            for	              -	         O	         O	         O	      I-A1	      I-A1	      B-A2	         O	         O
+              a	              -	         O	         O	         O	      I-A1	      I-A1	      I-A2	         O	         O
+reconsideration	              -	         O	         O	         O	      I-A1	      I-A1	      I-A2	         O	         O
+             of	              -	         O	         O	         O	      I-A1	      I-A1	      I-A2	         O	         O
+          costs	              -	         O	         O	         O	      I-A1	      I-A1	      E-A2	         O	         O
+              ,	              -	         O	         O	         O	      I-A1	      I-A1	         O	         O	         O
+             an	              -	         O	         O	         O	      I-A1	      I-A1	  B-AM-ADV	         O	         O
+     indication	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	         O	         O
+           that	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	         O	         O
+            the	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	      B-A1	      B-A1
+      ambitious	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	      I-A1	      I-A1
+          plans	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	      E-A1	      E-A1
+          might	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	  S-AM-MOD	  S-AM-MOD
+             be	             be	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	       S-V	         O
+         scaled	         scaled	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	      B-A2	       S-V
+           back	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	      I-A2	  S-AM-DIR
+             in	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	      I-A2	  B-AM-LOC
+            any	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	      I-A2	  I-AM-LOC
+         future	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-ADV	      I-A2	  I-AM-LOC
+   construction	              -	         O	         O	         O	      E-A1	      E-A1	  E-AM-ADV	      E-A2	  E-AM-LOC
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+        Initial	              -	         O	         O	         O	         O	      B-A1
+           cost	              -	         O	         O	         O	         O	      I-A1
+      estimates	              -	         O	         O	         O	         O	      I-A1
+            for	              -	         O	         O	         O	         O	      I-A1
+            the	              -	      B-A1	      B-A1	      B-A1	      B-A1	      I-A1
+          plant	              -	      E-A1	      E-A1	      E-A1	      E-A1	      I-A1
+              ,	              -	         O	         O	         O	         O	      I-A1
+          which	              -	    S-R-A1	    S-R-A1	    S-R-A1	    S-R-A1	      I-A1
+            was	            was	       S-V	         O	         O	         O	      I-A1
+             to	              -	         O	         O	         O	         O	      I-A1
+           have	           have	         O	       S-V	         O	         O	      I-A1
+           been	           been	         O	         O	       S-V	         O	      I-A1
+          built	          built	         O	         O	         O	       S-V	      I-A1
+             in	              -	         O	         O	         O	  B-AM-LOC	      I-A1
+         phases	              -	         O	         O	         O	  E-AM-LOC	      I-A1
+              ,	              -	         O	         O	         O	         O	      E-A1
+         ranged	         ranged	         O	         O	         O	         O	       S-V
+           from	              -	         O	         O	         O	         O	      B-A4
+              $	              -	         O	         O	         O	         O	      I-A4
+              1	              -	         O	         O	         O	         O	      I-A4
+        billion	              -	         O	         O	         O	         O	      I-A4
+             to	              -	         O	         O	         O	         O	      I-A4
+              $	              -	         O	         O	         O	         O	      I-A4
+            1.2	              -	         O	         O	         O	         O	      I-A4
+        billion	              -	         O	         O	         O	         O	      E-A4
+              .	              -	         O	         O	         O	         O	         O
+
+              A	              -	      B-A0	         O	         O	         O
+        company	              -	      I-A0	         O	         O	         O
+      spokesman	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+             it	              -	      B-A1	         O	         O	         O
+            was	            was	      I-A1	       S-V	         O	         O
+       possible	              -	      I-A1	      B-A1	         O	         O
+              ,	              -	      I-A1	      I-A1	         O	         O
+            but	              -	      I-A1	      I-A1	         O	         O
+         highly	              -	      I-A1	      I-A1	         O	         O
+       unlikely	              -	      I-A1	      I-A1	         O	         O
+              ,	              -	      I-A1	      I-A1	         O	         O
+           that	              -	      I-A1	      I-A1	         O	         O
+            the	              -	      I-A1	      I-A1	      B-A1	      B-A1
+          plant	              -	      I-A1	      I-A1	      E-A1	      E-A1
+          might	              -	      I-A1	      I-A1	  S-AM-MOD	  S-AM-MOD
+          never	              -	      I-A1	      I-A1	  S-AM-NEG	  S-AM-TMP
+             be	             be	      I-A1	      I-A1	       S-V	         O
+          built	          built	      E-A1	      E-A1	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+             As	              -	         O	         O	         O	         O	         O	         O	  B-AM-TMP	         O	      B-A1
+             we	              -	      S-A0	         O	         O	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+         regain	         regain	       S-V	         O	         O	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+            our	              -	      B-A1	         O	         O	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+     leadership	              -	      I-A1	         O	         O	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+          level	              -	      I-A1	         O	         O	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+          where	              -	      I-A1	         O	S-R-AM-LOC	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+             we	              -	      I-A1	      S-A0	      S-A1	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+           have	           have	      I-A1	       S-V	         O	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+           been	           been	      E-A1	      S-A1	       S-V	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+              ,	              -	         O	         O	         O	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+            and	              -	         O	         O	         O	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+             as	              -	         O	         O	         O	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+             we	              -	         O	         O	         O	      S-A0	      S-A0	      S-A0	  I-AM-TMP	         O	      I-A1
+       continue	       continue	         O	         O	         O	       S-V	         O	         O	  I-AM-TMP	         O	      I-A1
+             to	              -	         O	         O	         O	      B-A1	         O	         O	  I-AM-TMP	         O	      I-A1
+            put	            put	         O	         O	         O	      I-A1	       S-V	         O	  I-AM-TMP	         O	      I-A1
+            new	              -	         O	         O	         O	      I-A1	      B-A1	         O	  I-AM-TMP	         O	      I-A1
+       products	              -	         O	         O	         O	      I-A1	      E-A1	         O	  I-AM-TMP	         O	      I-A1
+           into	              -	         O	         O	         O	      I-A1	      B-A2	         O	  I-AM-TMP	         O	      I-A1
+            the	              -	         O	         O	         O	      I-A1	      I-A2	         O	  I-AM-TMP	         O	      I-A1
+    marketplace	              -	         O	         O	         O	      E-A1	      E-A2	         O	  I-AM-TMP	         O	      I-A1
+            and	              -	         O	         O	         O	         O	         O	         O	  I-AM-TMP	         O	      I-A1
+           need	           need	         O	         O	         O	         O	         O	       S-V	  I-AM-TMP	         O	      I-A1
+     additional	              -	         O	         O	         O	         O	         O	      B-A1	  I-AM-TMP	         O	      I-A1
+       capacity	              -	         O	         O	         O	         O	         O	      E-A1	  E-AM-TMP	         O	      I-A1
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	      I-A1
+             we	              -	         O	         O	         O	         O	         O	         O	      S-A0	      S-A0	      I-A1
+           will	              -	         O	         O	         O	         O	         O	         O	  S-AM-MOD	         O	      I-A1
+           look	           look	         O	         O	         O	         O	         O	         O	       S-V	         O	      I-A1
+             at	              -	         O	         O	         O	         O	         O	         O	      B-A1	         O	      I-A1
+       resuming	       resuming	         O	         O	         O	         O	         O	         O	      I-A1	       S-V	      I-A1
+            our	              -	         O	         O	         O	         O	         O	         O	      I-A1	      B-A1	      I-A1
+    involvement	              -	         O	         O	         O	         O	         O	         O	      I-A1	      I-A1	      I-A1
+           with	              -	         O	         O	         O	         O	         O	         O	      I-A1	      I-A1	      I-A1
+            our	              -	         O	         O	         O	         O	         O	         O	      I-A1	      I-A1	      I-A1
+           plan	              -	         O	         O	         O	         O	         O	         O	      E-A1	      E-A1	      E-A1
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+             he	              -	         O	         O	         O	         O	         O	         O	         O	         O	      S-A0
+           said	           said	         O	         O	         O	         O	         O	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A0	      B-A1
+            new	              -	      I-A1	      I-A0	      I-A1
+       facility	              -	      E-A1	      E-A0	      E-A1
+            was	            was	       S-V	         O	         O
+             to	              -	    B-C-A1	         O	         O
+           have	           have	    I-C-A1	       S-V	         O
+           been	           been	    I-C-A1	         O	       S-V
+            the	              -	    I-C-A1	      B-A1	      B-A1
+          world	              -	    I-C-A1	      I-A1	      I-A1
+             's	              -	    I-C-A1	      I-A1	      I-A1
+           most	              -	    I-C-A1	      I-A1	      I-A1
+       advanced	              -	    I-C-A1	      I-A1	      I-A1
+         cereal	              -	    I-C-A1	      I-A1	      I-A1
+  manufacturing	              -	    I-C-A1	      I-A1	      I-A1
+          plant	              -	    E-C-A1	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      I-A1
+            and	              -	         O	      I-A1	      I-A1
+        Kellogg	              -	         O	      I-A1	      I-A1
+             's	              -	         O	      I-A1	      I-A1
+        largest	              -	         O	      I-A1	      I-A1
+   construction	              -	         O	      I-A1	      I-A1
+        project	              -	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0
+        company	              -	      E-A0	      E-A0
+            had	            had	       S-V	         O
+       retained	       retained	      B-A1	       S-V
+            the	              -	      I-A1	      B-A1
+          Fluor	              -	      I-A1	      I-A1
+         Daniel	              -	      I-A1	      I-A1
+           unit	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+          Fluor	              -	      I-A1	      I-A1
+          Corp.	              -	      I-A1	      E-A1
+             as	              -	      I-A1	      B-A3
+        general	              -	      I-A1	      I-A3
+     contractor	              -	      E-A1	      E-A3
+              .	              -	         O	         O
+
+            But	              -	         O	         O	         O
+             in	              -	  B-AM-TMP	         O	         O
+         recent	              -	  I-AM-TMP	         O	         O
+          weeks	              -	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O
+construction-industry	              -	      B-A0	         O	         O
+        sources	              -	      E-A0	         O	         O
+       reported	       reported	       S-V	         O	         O
+           that	              -	      B-A1	         O	         O
+          early	              -	      I-A1	      B-A1	      B-A1
+    preparation	              -	      I-A1	      I-A1	      I-A1
+           work	              -	      I-A1	      E-A1	      E-A1
+            was	            was	      I-A1	       S-V	         O
+        slowing	        slowing	      I-A1	         O	       S-V
+             at	              -	      I-A1	         O	  B-AM-LOC
+            the	              -	      I-A1	         O	  I-AM-LOC
+       185-acre	              -	      I-A1	         O	  I-AM-LOC
+           site	              -	      E-A1	         O	  E-AM-LOC
+              .	              -	         O	         O	         O
+
+ Subcontractors	              -	      S-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+           they	              -	      B-A1	      S-A1	      S-A2	         O	         O
+           were	           were	      I-A1	       S-V	         O	         O	         O
+           told	           told	      I-A1	         O	       S-V	         O	         O
+           that	              -	      I-A1	         O	         O	         O	         O
+      equipment	              -	      I-A1	         O	      B-A1	      B-A1	      B-A1
+         orders	              -	      I-A1	         O	      I-A1	      E-A1	      E-A1
+          would	              -	      I-A1	         O	      I-A1	  S-AM-MOD	  S-AM-MOD
+             be	             be	      I-A1	         O	      I-A1	       S-V	         O
+        delayed	        delayed	      E-A1	         O	      E-A1	    S-C-A1	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+          Fluor	              -	      B-A0	      B-A0	      B-A1
+         Daniel	              -	      E-A0	      E-A0	      I-A1
+        already	              -	  S-AM-TMP	  S-AM-TMP	      I-A1
+            has	            has	       S-V	         O	      I-A1
+     reassigned	     reassigned	      B-A1	       S-V	      I-A1
+           most	              -	      I-A1	      B-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+            its	              -	      I-A1	      I-A1	      I-A1
+           work	              -	      I-A1	      I-A1	      I-A1
+           crew	              -	      E-A1	      E-A1	      E-A1
+              ,	              -	         O	         O	         O
+            the	              -	         O	         O	      B-A0
+        sources	              -	         O	         O	      E-A0
+           said	           said	         O	         O	       S-V
+              .	              -	         O	         O	         O
+
+           Last	              -	      B-A1	         O	         O	         O
+         Friday	              -	      I-A1	         O	         O	         O
+             's	              -	      I-A1	         O	         O	         O
+   announcement	              -	      E-A1	         O	         O	         O
+            was	            was	       S-V	         O	         O	         O
+            the	              -	      B-A1	         O	         O	         O
+          first	              -	      I-A1	         O	         O	         O
+       official	              -	      I-A1	         O	         O	         O
+           word	              -	      I-A1	         O	         O	         O
+           that	              -	      I-A1	         O	         O	         O
+            the	              -	      I-A1	      B-A1	         O	         O
+        project	              -	      I-A1	      E-A1	         O	         O
+            was	            was	      I-A1	       S-V	         O	         O
+             in	              -	      I-A1	  B-AM-MNR	         O	         O
+        trouble	              -	      I-A1	  E-AM-MNR	         O	         O
+            and	              -	      I-A1	         O	         O	         O
+           that	              -	      I-A1	         O	         O	         O
+            the	              -	      I-A1	         O	      B-A0	      B-A1
+        company	              -	      I-A1	         O	      I-A0	      I-A1
+             's	              -	      I-A1	         O	      I-A0	      I-A1
+          plans	              -	      I-A1	         O	      I-A0	      I-A1
+            for	              -	      I-A1	         O	      I-A0	      I-A1
+              a	              -	      I-A1	         O	      I-A0	      I-A1
+          surge	              -	      I-A1	         O	      I-A0	      I-A1
+             in	              -	      I-A1	         O	      I-A0	      I-A1
+         market	              -	      I-A1	         O	      I-A0	      I-A1
+          share	              -	      I-A1	         O	      E-A0	      E-A1
+            may	              -	      I-A1	         O	  S-AM-MOD	  S-AM-MOD
+           have	           have	      I-A1	         O	       S-V	         O
+           been	           been	      I-A1	         O	         O	       S-V
+         overly	              -	      I-A1	         O	         O	      B-A2
+     optimistic	              -	      E-A1	         O	         O	      E-A2
+              .	              -	         O	         O	         O	         O
+
+          Until	              -	  B-AM-TMP	  B-AM-TMP	  B-AM-TMP	         O	         O	         O
+       recently	              -	  E-AM-TMP	  E-AM-TMP	  E-AM-TMP	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+        Kellogg	              -	      S-A0	      S-A1	      S-A0	         O	         O	         O
+            had	            had	       S-V	         O	         O	         O	         O	         O
+           been	           been	         O	       S-V	         O	         O	         O	         O
+        telling	        telling	         O	  B-AM-ADV	       S-V	         O	         O	         O
+            its	              -	         O	  I-AM-ADV	      B-A2	         O	         O	         O
+          sales	              -	         O	  I-AM-ADV	      I-A2	         O	         O	         O
+          force	              -	         O	  I-AM-ADV	      I-A2	         O	         O	         O
+            and	              -	         O	  I-AM-ADV	      I-A2	         O	         O	         O
+           Wall	              -	         O	  I-AM-ADV	      I-A2	         O	         O	         O
+         Street	              -	         O	  I-AM-ADV	      E-A2	         O	         O	         O
+           that	              -	         O	  I-AM-ADV	      B-A1	         O	         O	         O
+             by	              -	         O	  I-AM-ADV	      I-A1	  B-AM-TMP	         O	         O
+           1992	              -	         O	  I-AM-ADV	      I-A1	  E-AM-TMP	         O	         O
+             it	              -	         O	  I-AM-ADV	      I-A1	      S-A0	      S-A0	         O
+       intended	       intended	         O	  I-AM-ADV	      I-A1	       S-V	         O	         O
+             to	              -	         O	  I-AM-ADV	      I-A1	      B-A1	         O	         O
+        achieve	        achieve	         O	  I-AM-ADV	      I-A1	      I-A1	       S-V	         O
+              a	              -	         O	  I-AM-ADV	      I-A1	      I-A1	      B-A1	      B-A1
+             50	              -	         O	  I-AM-ADV	      I-A1	      I-A1	      I-A1	      I-A1
+              %	              -	         O	  I-AM-ADV	      I-A1	      I-A1	      I-A1	      I-A1
+          share	              -	         O	  I-AM-ADV	      I-A1	      I-A1	      I-A1	      I-A1
+             of	              -	         O	  I-AM-ADV	      I-A1	      I-A1	      I-A1	      I-A1
+         market	              -	         O	  I-AM-ADV	      I-A1	      I-A1	      I-A1	      E-A1
+              ,	              -	         O	  I-AM-ADV	      I-A1	      I-A1	      I-A1	         O
+       measured	       measured	         O	  I-AM-ADV	      I-A1	      I-A1	      I-A1	       S-V
+             in	              -	         O	  I-AM-ADV	      I-A1	      I-A1	      I-A1	      B-A2
+         dollar	              -	         O	  I-AM-ADV	      I-A1	      I-A1	      I-A1	      I-A2
+         volume	              -	         O	  E-AM-ADV	      E-A1	      E-A1	      E-A1	      E-A2
+              .	              -	         O	         O	         O	         O	         O	         O
+
+       Although	              -	         O	  B-AM-ADV
+             he	              -	      S-A0	  I-AM-ADV
+         called	         called	       S-V	  I-AM-ADV
+        current	              -	      B-A1	  I-AM-ADV
+         market	              -	      I-A1	  I-AM-ADV
+     conditions	              -	      E-A1	  I-AM-ADV
+         highly	              -	      B-A2	  I-AM-ADV
+    competitive	              -	      E-A2	  E-AM-ADV
+              ,	              -	         O	         O
+            Mr.	              -	         O	      B-A0
+        LaMothe	              -	         O	      I-A0
+              ,	              -	         O	      I-A0
+        Kellogg	              -	         O	      I-A0
+             's	              -	         O	      I-A0
+       chairman	              -	         O	      I-A0
+            and	              -	         O	      I-A0
+          chief	              -	         O	      I-A0
+      executive	              -	         O	      I-A0
+        officer	              -	         O	      I-A0
+              ,	              -	         O	      E-A0
+       forecast	       forecast	         O	       S-V
+             an	              -	         O	      B-A1
+       earnings	              -	         O	      I-A1
+       increase	              -	         O	      I-A1
+            for	              -	         O	      I-A1
+            the	              -	         O	      I-A1
+           full	              -	         O	      I-A1
+           year	              -	         O	      E-A1
+              .	              -	         O	         O
+
+           Last	              -	  B-AM-TMP
+           year	              -	  E-AM-TMP
+              ,	              -	         O
+            the	              -	      B-A0
+        company	              -	      E-A0
+         earned	         earned	       S-V
+              $	              -	      B-A1
+          480.4	              -	      I-A1
+        million	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+              $	              -	      I-A1
+           3.90	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      I-A1
+              ,	              -	      E-A1
+             on	              -	  B-AM-MNR
+          sales	              -	  I-AM-MNR
+             of	              -	  I-AM-MNR
+              $	              -	  I-AM-MNR
+            4.3	              -	  I-AM-MNR
+        billion	              -	  E-AM-MNR
+              .	              -	         O
+
+             As	              -	         O	  B-AM-ADV
+       expected	       expected	       S-V	  E-AM-ADV
+              ,	              -	         O	         O
+        Kellogg	              -	         O	      S-A0
+       reported	       reported	         O	       S-V
+          lower	              -	         O	      B-A1
+  third-quarter	              -	         O	      I-A1
+       earnings	              -	         O	      E-A1
+              .	              -	         O	         O
+
+            Net	              -	      S-A1
+           fell	           fell	       S-V
+             16	              -	      B-A2
+              %	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+          123.1	              -	      I-A4
+        million	              -	      I-A4
+              ,	              -	      I-A4
+             or	              -	      I-A4
+              $	              -	      I-A4
+           1.02	              -	      I-A4
+              a	              -	      I-A4
+          share	              -	      I-A4
+              ,	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+          145.7	              -	      I-A3
+        million	              -	      I-A3
+              ,	              -	      I-A3
+             or	              -	      I-A3
+              $	              -	      I-A3
+           1.18	              -	      I-A3
+              a	              -	      I-A3
+          share	              -	      E-A3
+              .	              -	         O
+
+          Sales	              -	      S-A1
+           rose	           rose	       S-V
+            4.8	              -	      B-A2
+              %	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+           1.20	              -	      I-A4
+        billion	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+           1.14	              -	      I-A3
+        billion	              -	      E-A3
+              .	              -	         O
+
+            The	              -	      B-A0	         O
+        company	              -	      E-A0	         O
+            had	            had	       S-V	         O
+              a	              -	      B-A1	      B-A2
+       one-time	              -	      I-A1	      I-A2
+         charge	              -	      I-A1	      I-A2
+             of	              -	      I-A1	      I-A2
+              $	              -	      I-A1	      I-A2
+           14.8	              -	      I-A1	      I-A2
+        million	              -	      E-A1	      I-A2
+             in	              -	  B-AM-TMP	      I-A2
+            the	              -	  I-AM-TMP	      I-A2
+         latest	              -	  I-AM-TMP	      I-A2
+        quarter	              -	  E-AM-TMP	      E-A2
+       covering	       covering	    B-C-A1	       S-V
+            the	              -	    I-C-A1	      B-A1
+    disposition	              -	    I-C-A1	      I-A1
+             of	              -	    I-C-A1	      I-A1
+        certain	              -	    I-C-A1	      I-A1
+         assets	              -	    E-C-A1	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	      B-A0
+        company	              -	      E-A0	      E-A0
+          would	              -	  S-AM-MOD	         O
+            n't	              -	  S-AM-NEG	         O
+      elaborate	      elaborate	       S-V	         O
+              ,	              -	         O	         O
+         citing	         citing	  B-AM-ADV	       S-V
+    competitive	              -	  I-AM-ADV	      B-A1
+        reasons	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+

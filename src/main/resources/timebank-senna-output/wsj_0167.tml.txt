@@ -1,0 +1,166 @@
+            RMS	              -	      B-A0	      B-A0	         O	         O
+  International	              -	      I-A0	      I-A0	         O	         O
+           Inc.	              -	      I-A0	      I-A0	         O	         O
+              ,	              -	      I-A0	      I-A0	         O	         O
+       Hasbrouk	              -	      I-A0	      I-A0	         O	         O
+        Heights	              -	      I-A0	      I-A0	         O	         O
+              ,	              -	      I-A0	      I-A0	         O	         O
+           N.J.	              -	      I-A0	      I-A0	         O	         O
+              ,	              -	      E-A0	      I-A0	         O	         O
+         facing	         facing	       S-V	      I-A0	         O	         O
+              a	              -	      B-A1	      I-A0	         O	         O
+      cash-flow	              -	      I-A1	      I-A0	         O	         O
+        squeeze	              -	      E-A1	      I-A0	         O	         O
+              ,	              -	         O	      E-A0	         O	         O
+           said	           said	         O	       S-V	         O	         O
+             it	              -	         O	      B-A1	      S-A1	      S-A0
+             is	             is	         O	      I-A1	       S-V	         O
+        seeking	        seeking	         O	      I-A1	      B-A1	       S-V
+          other	              -	         O	      I-A1	      I-A1	      B-A1
+      financing	              -	         O	      I-A1	      I-A1	      I-A1
+        sources	              -	         O	      I-A1	      I-A1	      I-A1
+            and	              -	         O	      I-A1	      I-A1	      I-A1
+        waivers	              -	         O	      I-A1	      I-A1	      E-A1
+           from	              -	         O	      I-A1	      I-A1	      B-A2
+      debenture	              -	         O	      I-A1	      I-A1	      I-A2
+        holders	              -	         O	      E-A1	      E-A1	      E-A2
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O
+        company	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O
+        because	              -	      I-A1	         O	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O	         O
+      softening	      softening	      I-A1	       S-V	         O	         O	         O
+          sales	              -	      I-A1	      S-A1	         O	         O	         O
+             it	              -	      I-A1	         O	      S-A1	         O	         O
+             is	             is	      I-A1	         O	       S-V	         O	         O
+            n't	              -	      I-A1	         O	  S-AM-NEG	         O	         O
+             in	              -	      I-A1	         O	  B-AM-MNR	         O	         O
+     compliance	              -	      I-A1	         O	  I-AM-MNR	         O	         O
+           with	              -	      I-A1	         O	  I-AM-MNR	         O	         O
+   requirements	              -	      I-A1	         O	  I-AM-MNR	         O	         O
+           that	              -	      I-A1	         O	  I-AM-MNR	         O	         O
+             it	              -	      I-A1	         O	  I-AM-MNR	      S-A0	         O
+       maintain	       maintain	      I-A1	         O	  I-AM-MNR	       S-V	         O
+              $	              -	      I-A1	         O	  I-AM-MNR	      B-A1	         O
+              3	              -	      I-A1	         O	  I-AM-MNR	      I-A1	         O
+        million	              -	      I-A1	         O	  I-AM-MNR	      I-A1	         O
+             in	              -	      I-A1	         O	  I-AM-MNR	      I-A1	         O
+        working	        working	      I-A1	         O	  I-AM-MNR	      I-A1	       S-V
+        capital	              -	      E-A1	         O	  E-AM-MNR	      E-A1	      S-A0
+              .	              -	         O	         O	         O	         O	         O
+
+            RMS	              -	      S-A0	      S-A0
+    distributes	    distributes	       S-V	         O
+     electronic	              -	      B-A1	         O
+        devices	              -	      E-A1	         O
+            and	              -	         O	         O
+       produces	       produces	         O	       S-V
+          power	              -	         O	      B-A1
+       supplies	              -	         O	      I-A1
+            and	              -	         O	      I-A1
+        plastic	              -	         O	      I-A1
+     literature	              -	         O	      I-A1
+       displays	              -	         O	      E-A1
+              .	              -	         O	         O
+
+            RMS	              -	      S-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             it	              -	      B-A1	      S-A0	         O
+            had	            had	      I-A1	       S-V	         O
+              a	              -	      I-A1	      B-A1	      B-A1
+           loss	              -	      I-A1	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A1	      I-A1
+        158,666	              -	      I-A1	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1	      I-A1
+             or	              -	      I-A1	      I-A1	      I-A1
+             10	              -	      I-A1	      I-A1	      I-A1
+          cents	              -	      I-A1	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1	      I-A1
+          share	              -	      I-A1	      I-A1	      I-A1
+              ,	              -	      I-A1	      E-A1	      I-A1
+             in	              -	      I-A1	  B-AM-TMP	      I-A1
+            the	              -	      I-A1	  I-AM-TMP	      I-A1
+          third	              -	      I-A1	  I-AM-TMP	      I-A1
+        quarter	              -	      I-A1	  E-AM-TMP	      E-A1
+              ,	              -	      I-A1	         O	         O
+       compared	       compared	      I-A1	  B-AM-ADV	       S-V
+           with	              -	      I-A1	  I-AM-ADV	      B-A2
+              a	              -	      I-A1	  I-AM-ADV	      I-A2
+   year-earlier	              -	      I-A1	  I-AM-ADV	      I-A2
+           loss	              -	      I-A1	  I-AM-ADV	      I-A2
+             of	              -	      I-A1	  I-AM-ADV	      I-A2
+              $	              -	      I-A1	  I-AM-ADV	      I-A2
+         26,956	              -	      I-A1	  I-AM-ADV	      I-A2
+              ,	              -	      I-A1	  I-AM-ADV	      I-A2
+             or	              -	      I-A1	  I-AM-ADV	      I-A2
+            two	              -	      I-A1	  I-AM-ADV	      I-A2
+          cents	              -	      I-A1	  I-AM-ADV	      I-A2
+              a	              -	      I-A1	  I-AM-ADV	      I-A2
+          share	              -	      E-A1	  E-AM-ADV	      E-A2
+              .	              -	         O	         O	         O
+
+          Sales	              -	      S-A1
+           rose	           rose	       S-V
+             to	              -	      B-A4
+              $	              -	      I-A4
+              3	              -	      I-A4
+        million	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+            2.9	              -	      I-A3
+        million	              -	      E-A3
+              .	              -	         O
+
+            For	              -	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	         O
+           nine	              -	  I-AM-TMP	         O
+         months	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+            the	              -	      B-A0	         O
+        company	              -	      E-A0	         O
+       reported	       reported	       S-V	         O
+              a	              -	      B-A1	      B-A1
+            net	              -	      I-A1	      I-A1
+           loss	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A1
+        608,413	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+             or	              -	      I-A1	      I-A1
+             39	              -	      I-A1	      I-A1
+          cents	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+          share	              -	      I-A1	      E-A1
+              ,	              -	      I-A1	         O
+       compared	       compared	      I-A1	       S-V
+           with	              -	      I-A1	      B-A2
+   year-earlier	              -	      I-A1	      I-A2
+            net	              -	      I-A1	      I-A2
+         income	              -	      I-A1	      I-A2
+             of	              -	      I-A1	      I-A2
+              $	              -	      I-A1	      I-A2
+        967,809	              -	      I-A1	      I-A2
+              ,	              -	      I-A1	      I-A2
+             or	              -	      I-A1	      I-A2
+             62	              -	      I-A1	      I-A2
+          cents	              -	      I-A1	      I-A2
+              a	              -	      I-A1	      I-A2
+          share	              -	      E-A1	      E-A2
+              .	              -	         O	         O
+
+          Sales	              -	      S-A1
+           rose	           rose	       S-V
+             to	              -	      B-A4
+              $	              -	      I-A4
+            9.8	              -	      I-A4
+        million	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+            8.9	              -	      I-A3
+        million	              -	      E-A3
+              .	              -	         O
+

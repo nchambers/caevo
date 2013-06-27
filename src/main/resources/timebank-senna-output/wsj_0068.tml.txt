@@ -1,0 +1,98 @@
+          GOODY	              -	      B-A0
+       PRODUCTS	              -	      I-A0
+           Inc.	              -	      E-A0
+            cut	            cut	       S-V
+            its	              -	      B-A1
+      quarterly	              -	      I-A1
+       dividend	              -	      E-A1
+             to	              -	      B-A4
+           five	              -	      I-A4
+          cents	              -	      I-A4
+              a	              -	      I-A4
+          share	              -	      E-A4
+           from	              -	      B-A3
+           11.5	              -	      I-A3
+          cents	              -	      I-A3
+              a	              -	      I-A3
+          share	              -	      E-A3
+              .	              -	         O
+
+            The	              -	         O	      B-A1
+        reduced	        reduced	       S-V	      I-A1
+       dividend	              -	      S-A1	      E-A1
+             is	             is	         O	       S-V
+        payable	              -	         O	    B-C-A1
+           Jan.	              -	         O	    I-C-A1
+              2	              -	         O	    I-C-A1
+             to	              -	         O	    I-C-A1
+          stock	              -	         O	    I-C-A1
+             of	              -	         O	    I-C-A1
+         record	              -	         O	    I-C-A1
+           Dec.	              -	         O	    I-C-A1
+             15	              -	         O	    E-C-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	         O
+         Kearny	              -	      I-A0	         O
+              ,	              -	      I-A0	         O
+     N.J.-based	              -	      I-A0	         O
+          maker	              -	      I-A0	         O
+             of	              -	      I-A0	         O
+           hair	              -	      I-A0	         O
+    accessories	              -	      I-A0	         O
+            and	              -	      I-A0	         O
+          other	              -	      I-A0	         O
+       cosmetic	              -	      I-A0	         O
+       products	              -	      E-A0	         O
+           said	           said	       S-V	         O
+             it	              -	      B-A1	      S-A0
+            cut	            cut	      I-A1	       S-V
+            the	              -	      I-A1	      B-A1
+       dividend	              -	      I-A1	      E-A1
+            due	              -	      I-A1	      B-A4
+             to	              -	      I-A1	      I-A4
+            its	              -	      I-A1	      I-A4
+  third-quarter	              -	      I-A1	      I-A4
+           loss	              -	      I-A1	      I-A4
+             of	              -	      I-A1	      I-A4
+              $	              -	      I-A1	      I-A4
+        992,000	              -	      I-A1	      I-A4
+              ,	              -	      I-A1	      I-A4
+             or	              -	      I-A1	      I-A4
+             15	              -	      I-A1	      I-A4
+          cents	              -	      I-A1	      I-A4
+              a	              -	      I-A1	      I-A4
+          share	              -	      E-A1	      E-A4
+              .	              -	         O	         O
+
+             In	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+       year-ago	              -	  I-AM-TMP
+        quarter	              -	  E-AM-TMP
+              ,	              -	         O
+            the	              -	      B-A0
+        company	              -	      E-A0
+       reported	       reported	       S-V
+            net	              -	      B-A1
+         income	              -	      I-A1
+             of	              -	      I-A1
+              $	              -	      I-A1
+            1.9	              -	      I-A1
+        million	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+             29	              -	      I-A1
+          cents	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A0
+        company	              -	      E-A0
+           also	              -	  S-AM-DIS
+        adopted	        adopted	       S-V
+             an	              -	      B-A1
+  anti-takeover	              -	      I-A1
+           plan	              -	      E-A1
+              .	              -	         O
+

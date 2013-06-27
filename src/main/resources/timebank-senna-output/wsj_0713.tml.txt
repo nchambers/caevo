@@ -1,0 +1,148 @@
+           West	              -	      B-A0	      B-A0	      B-A1
+         German	              -	      I-A0	      I-A0	      I-A1
+            and	              -	      I-A0	      I-A0	      I-A1
+         French	              -	      I-A0	      I-A0	      I-A1
+    authorities	              -	      E-A0	      E-A0	      I-A1
+           have	           have	       S-V	         O	      I-A1
+        cleared	        cleared	      B-A1	       S-V	      I-A1
+       Dresdner	              -	      I-A1	      B-A1	      I-A1
+           Bank	              -	      I-A1	      I-A1	      I-A1
+             AG	              -	      I-A1	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1	      I-A1
+       takeover	              -	      I-A1	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1	      I-A1
+       majority	              -	      I-A1	      I-A1	      I-A1
+          stake	              -	      I-A1	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1	      I-A1
+         Banque	              -	      I-A1	      I-A1	      I-A1
+ Internationale	              -	      I-A1	      I-A1	      I-A1
+             de	              -	      I-A1	      I-A1	      I-A1
+      Placement	              -	      I-A1	      I-A1	      I-A1
+              (	              -	      I-A1	      I-A1	      I-A1
+            BIP	              -	      I-A1	      I-A1	      I-A1
+              )	              -	      E-A1	      E-A1	      E-A1
+              ,	              -	         O	         O	         O
+       Dresdner	              -	         O	         O	      B-A0
+           Bank	              -	         O	         O	      E-A0
+           said	           said	         O	         O	       S-V
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A1	      B-A0	         O
+       approval	              -	      E-A1	      E-A1	      E-A1	      I-A0	         O
+              ,	              -	         O	         O	         O	      I-A0	         O
+          which	              -	    S-R-A0	    S-R-A1	    S-R-A1	      I-A0	         O
+            had	            had	       S-V	         O	         O	      I-A0	         O
+           been	           been	         O	       S-V	         O	      I-A0	         O
+       expected	       expected	         O	      S-A2	       S-V	      I-A0	         O
+              ,	              -	         O	         O	         O	      E-A0	         O
+        permits	        permits	         O	         O	         O	       S-V	         O
+           West	              -	         O	         O	         O	      B-A1	      B-A0
+        Germany	              -	         O	         O	         O	      I-A1	      I-A0
+             's	              -	         O	         O	         O	      I-A1	      I-A0
+ second-largest	              -	         O	         O	         O	      I-A1	      I-A0
+           bank	              -	         O	         O	         O	      I-A1	      E-A0
+             to	              -	         O	         O	         O	      I-A1	         O
+        acquire	        acquire	         O	         O	         O	      I-A1	       S-V
+         shares	              -	         O	         O	         O	      I-A1	      B-A1
+             of	              -	         O	         O	         O	      I-A1	      I-A1
+            the	              -	         O	         O	         O	      I-A1	      I-A1
+         French	              -	         O	         O	         O	      I-A1	      I-A1
+     investment	              -	         O	         O	         O	      I-A1	      I-A1
+           bank	              -	         O	         O	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+             In	              -	  B-AM-TMP
+              a	              -	  I-AM-TMP
+          first	              -	  I-AM-TMP
+           step	              -	  E-AM-TMP
+              ,	              -	         O
+       Dresdner	              -	      B-A0
+           Bank	              -	      E-A0
+           will	              -	  S-AM-MOD
+            buy	            buy	       S-V
+          32.99	              -	      B-A1
+              %	              -	      I-A1
+             of	              -	      I-A1
+            BIP	              -	      E-A1
+            for	              -	      B-A3
+          1,015	              -	      I-A3
+         French	              -	      I-A3
+         francs	              -	      I-A3
+              (	              -	      I-A3
+              $	              -	      I-A3
+            162	              -	      I-A3
+              )	              -	      I-A3
+              a	              -	      I-A3
+          share	              -	      I-A3
+              ,	              -	      I-A3
+             or	              -	      I-A3
+            528	              -	      I-A3
+        million	              -	      I-A3
+         francs	              -	      I-A3
+              (	              -	      I-A3
+              $	              -	      I-A3
+           84.7	              -	      I-A3
+        million	              -	      I-A3
+              )	              -	      E-A3
+              .	              -	         O
+
+       Dresdner	              -	      B-A0	         O	         O
+           Bank	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             it	              -	      B-A1	      S-A0	         O
+           will	              -	      I-A1	  S-AM-MOD	         O
+           also	              -	      I-A1	  S-AM-DIS	         O
+            buy	            buy	      I-A1	       S-V	         O
+            all	              -	      I-A1	      B-A1	      B-A1
+         shares	              -	      I-A1	      I-A1	      E-A1
+       tendered	       tendered	      I-A1	      I-A1	       S-V
+             by	              -	      I-A1	      I-A1	      B-A0
+   shareholders	              -	      I-A1	      I-A1	      E-A0
+             on	              -	      I-A1	      I-A1	  B-AM-LOC
+            the	              -	      I-A1	      I-A1	  I-AM-LOC
+          Paris	              -	      I-A1	      I-A1	  I-AM-LOC
+          Stock	              -	      I-A1	      I-A1	  I-AM-LOC
+       Exchange	              -	      I-A1	      I-A1	  E-AM-LOC
+             at	              -	      I-A1	      I-A1	         O
+            the	              -	      I-A1	      I-A1	         O
+           same	              -	      I-A1	      I-A1	         O
+          price	              -	      I-A1	      E-A1	         O
+           from	              -	      I-A1	         O	         O
+          today	              -	      I-A1	         O	         O
+        through	              -	      I-A1	         O	         O
+           Nov.	              -	      I-A1	         O	         O
+             17	              -	      E-A1	         O	         O
+              .	              -	         O	         O	         O
+
+             In	              -	  B-AM-DIS	         O
+       addition	              -	  E-AM-DIS	         O
+              ,	              -	         O	         O
+            the	              -	      B-A0	      B-A0
+           bank	              -	      E-A0	      E-A0
+            has	            has	       S-V	         O
+             an	              -	      B-A1	         O
+         option	              -	      I-A1	         O
+             to	              -	      I-A1	         O
+            buy	            buy	      I-A1	       S-V
+              a	              -	      I-A1	      B-A1
+          30.84	              -	      I-A1	      I-A1
+              %	              -	      I-A1	      I-A1
+          stake	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+            BIP	              -	      I-A1	      E-A1
+           from	              -	      I-A1	      B-A2
+        Societe	              -	      I-A1	      I-A2
+       Generale	              -	      I-A1	      E-A2
+          after	              -	      I-A1	  B-AM-TMP
+           Jan.	              -	      I-A1	  I-AM-TMP
+              1	              -	      I-A1	  I-AM-TMP
+              ,	              -	      I-A1	  I-AM-TMP
+           1990	              -	      I-A1	  E-AM-TMP
+             at	              -	      I-A1	      B-A3
+          1,015	              -	      I-A1	      I-A3
+         francs	              -	      I-A1	      I-A3
+              a	              -	      I-A1	      I-A3
+          share	              -	      E-A1	      E-A3
+              .	              -	         O	         O
+

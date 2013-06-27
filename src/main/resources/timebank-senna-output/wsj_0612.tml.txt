@@ -1,0 +1,243 @@
+            The	              -	      B-A1	         O	         O	         O
+      following	              -	      E-A1	         O	         O	         O
+           were	           were	       S-V	         O	         O	         O
+          among	              -	  B-AM-LOC	         O	         O	         O
+         Friday	              -	  I-AM-LOC	      B-A1	         O	         O
+             's	              -	  I-AM-LOC	      I-A1	         O	         O
+      offerings	              -	  I-AM-LOC	      I-A1	         O	         O
+            and	              -	  I-AM-LOC	      I-A1	         O	         O
+       pricings	              -	  I-AM-LOC	      I-A1	         O	         O
+             in	              -	  I-AM-LOC	      I-A1	         O	         O
+            the	              -	  I-AM-LOC	      I-A1	         O	         O
+           U.S.	              -	  I-AM-LOC	      I-A1	         O	         O
+            and	              -	  I-AM-LOC	      I-A1	         O	         O
+       non-U.S.	              -	  I-AM-LOC	      I-A1	         O	         O
+        capital	              -	  I-AM-LOC	      I-A1	         O	         O
+        markets	              -	  E-AM-LOC	      E-A1	         O	         O
+              ,	              -	         O	         O	         O	         O
+           with	              -	  B-AM-MNR	         O	         O	         O
+          terms	              -	  I-AM-MNR	         O	         O	         O
+            and	              -	  I-AM-MNR	         O	         O	         O
+      syndicate	              -	  I-AM-MNR	         O	         O	         O
+        manager	              -	  I-AM-MNR	         O	         O	         O
+              ,	              -	  I-AM-MNR	         O	         O	         O
+             as	              -	  I-AM-MNR	         O	         O	         O
+       compiled	       compiled	  I-AM-MNR	       S-V	         O	         O
+             by	              -	  I-AM-MNR	      B-A0	         O	         O
+            Dow	              -	  I-AM-MNR	      I-A0	         O	         O
+          Jones	              -	  I-AM-MNR	      I-A0	         O	         O
+        Capital	              -	  I-AM-MNR	      I-A0	         O	         O
+        Markets	              -	  I-AM-MNR	      I-A0	         O	         O
+         Report	              -	  I-AM-MNR	      E-A0	         O	         O
+              :	              -	  I-AM-MNR	         O	         O	         O
+              @	              -	  I-AM-MNR	         O	         O	         O
+     CORPORATES	              -	  I-AM-MNR	         O	         O	         O
+            Sun	              -	  I-AM-MNR	         O	         O	         O
+   Microsystems	              -	  I-AM-MNR	         O	         O	         O
+           Inc.	              -	  I-AM-MNR	         O	         O	         O
+             --	              -	  I-AM-MNR	         O	         O	         O
+              $	              -	  I-AM-MNR	         O	         O	         O
+            125	              -	  I-AM-MNR	         O	         O	         O
+        million	              -	  I-AM-MNR	         O	         O	         O
+             of	              -	  I-AM-MNR	         O	         O	         O
+              6	              -	  I-AM-MNR	         O	         O	         O
+            3/8	              -	  I-AM-MNR	         O	         O	         O
+              %	              -	  I-AM-MNR	         O	         O	         O
+    convertible	              -	  I-AM-MNR	         O	         O	         O
+   subordinated	              -	  I-AM-MNR	         O	         O	         O
+     debentures	              -	  I-AM-MNR	         O	         O	         O
+            due	              -	  I-AM-MNR	         O	         O	         O
+           Oct.	              -	  I-AM-MNR	         O	         O	         O
+             15	              -	  I-AM-MNR	         O	         O	         O
+              ,	              -	  I-AM-MNR	         O	         O	         O
+           1999	              -	  I-AM-MNR	         O	         O	         O
+              ,	              -	  I-AM-MNR	         O	         O	         O
+         priced	         priced	  I-AM-MNR	         O	       S-V	         O
+             at	              -	  I-AM-MNR	         O	      B-A2	         O
+          84.90	              -	  I-AM-MNR	         O	      E-A2	         O
+             to	              -	  I-AM-MNR	         O	  B-AM-PNC	         O
+          yield	          yield	  I-AM-MNR	         O	  I-AM-PNC	       S-V
+           7.51	              -	  I-AM-MNR	         O	  I-AM-PNC	      B-A1
+              %	              -	  E-AM-MNR	         O	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A0
+     debentures	              -	      E-A1	      E-A0
+            are	            are	       S-V	         O
+    convertible	              -	  B-AM-ADV	         O
+           into	              -	  I-AM-ADV	         O
+         common	              -	  I-AM-ADV	         O
+          stock	              -	  I-AM-ADV	         O
+             at	              -	  I-AM-ADV	         O
+              $	              -	  I-AM-ADV	         O
+             25	              -	  I-AM-ADV	         O
+              a	              -	  I-AM-ADV	         O
+          share	              -	  I-AM-ADV	         O
+              ,	              -	  I-AM-ADV	         O
+   representing	   representing	  I-AM-ADV	       S-V
+              a	              -	  I-AM-ADV	      B-A1
+             24	              -	  I-AM-ADV	      I-A1
+              %	              -	  I-AM-ADV	      I-A1
+     conversion	              -	  I-AM-ADV	      I-A1
+        premium	              -	  I-AM-ADV	      I-A1
+           over	              -	  I-AM-ADV	      I-A1
+       Thursday	              -	  I-AM-ADV	      I-A1
+             's	              -	  I-AM-ADV	      I-A1
+        closing	              -	  I-AM-ADV	      I-A1
+          price	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+          Rated	          Rated	       S-V	  B-AM-ADV	  B-AM-ADV	         O
+     single-B-1	              -	      S-A2	  I-AM-ADV	  I-AM-ADV	         O
+             by	              -	      B-A0	  I-AM-ADV	  I-AM-ADV	         O
+          Moody	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+             's	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+      Investors	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+        Service	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+           Inc.	              -	      E-A0	  I-AM-ADV	  I-AM-ADV	         O
+            and	              -	         O	  I-AM-ADV	  I-AM-ADV	         O
+  single-B-plus	              -	      S-A2	  I-AM-ADV	  I-AM-ADV	         O
+             by	              -	      B-A0	  I-AM-ADV	  I-AM-ADV	         O
+       Standard	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+            amp	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+           Poor	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+             's	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+          Corp.	              -	      E-A0	  E-AM-ADV	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A1	      B-A1	         O
+          issue	              -	      E-A1	      E-A1	      E-A1	         O
+           will	              -	         O	  S-AM-MOD	  S-AM-MOD	         O
+             be	             be	         O	       S-V	         O	         O
+           sold	           sold	         O	  B-AM-MNR	       S-V	         O
+        through	              -	         O	  I-AM-MNR	  B-AM-MNR	         O
+   underwriters	              -	         O	  I-AM-MNR	  I-AM-MNR	      S-A1
+            led	            led	         O	  I-AM-MNR	  I-AM-MNR	       S-V
+             by	              -	         O	  I-AM-MNR	  I-AM-MNR	      B-A0
+        Goldman	              -	         O	  I-AM-MNR	  I-AM-MNR	      I-A0
+              ,	              -	         O	  I-AM-MNR	  I-AM-MNR	      I-A0
+          Sachs	              -	         O	  I-AM-MNR	  I-AM-MNR	      I-A0
+            amp	              -	         O	  I-AM-MNR	  I-AM-MNR	      I-A0
+             Co	              -	         O	  E-AM-MNR	  E-AM-MNR	      E-A0
+              .	              -	         O	         O	         O	         O
+
+          Hertz	              -	         O	         O
+          Corp.	              -	         O	         O
+             --	              -	         O	         O
+              $	              -	      B-A1	      B-A0
+            100	              -	      I-A1	      I-A0
+        million	              -	      I-A1	      I-A0
+             of	              -	      I-A1	      I-A0
+         senior	              -	      I-A1	      I-A0
+          notes	              -	      I-A1	      E-A0
+            due	              -	      I-A1	         O
+           Nov.	              -	      I-A1	         O
+              1	              -	      I-A1	         O
+              ,	              -	      I-A1	         O
+           2009	              -	      E-A1	         O
+              ,	              -	         O	         O
+         priced	         priced	       S-V	         O
+             at	              -	      B-A2	         O
+            par	              -	      E-A2	         O
+             to	              -	  B-AM-PNC	         O
+          yield	          yield	  I-AM-PNC	       S-V
+              9	              -	  I-AM-PNC	      B-A1
+              %	              -	  E-AM-PNC	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A1
+          issue	              -	      E-A1	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      I-A1
+          which	              -	    S-R-A1	      I-A1	      I-A1
+             is	             is	       S-V	      I-A1	      I-A1
+       puttable	              -	    B-C-A1	      I-A1	      I-A1
+           back	              -	    I-C-A1	      I-A1	      I-A1
+             to	              -	    I-C-A1	      I-A1	      I-A1
+            the	              -	    I-C-A1	      I-A1	      I-A1
+        company	              -	    E-C-A1	      I-A1	      I-A1
+             in	              -	  B-AM-TMP	      I-A1	      I-A1
+           1999	              -	  E-AM-TMP	      I-A1	      I-A1
+              ,	              -	         O	      E-A1	      E-A1
+            was	            was	         O	       S-V	         O
+         priced	         priced	         O	    B-C-A1	       S-V
+             at	              -	         O	    I-C-A1	      B-A2
+              a	              -	         O	    I-C-A1	      I-A2
+         spread	              -	         O	    I-C-A1	      I-A2
+             of	              -	         O	    I-C-A1	      I-A2
+            110	              -	         O	    I-C-A1	      I-A2
+          basis	              -	         O	    I-C-A1	      I-A2
+         points	              -	         O	    I-C-A1	      I-A2
+          above	              -	         O	    I-C-A1	      I-A2
+            the	              -	         O	    I-C-A1	      I-A2
+       Treasury	              -	         O	    I-C-A1	      I-A2
+             's	              -	         O	    I-C-A1	      I-A2
+        10-year	              -	         O	    I-C-A1	      I-A2
+           note	              -	         O	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O
+
+          Rated	          Rated	       S-V	  B-AM-ADV	  B-AM-ADV	         O
+     single-A-3	              -	      S-A2	  I-AM-ADV	  I-AM-ADV	         O
+             by	              -	      B-A0	  I-AM-ADV	  I-AM-ADV	         O
+          Moody	              -	      I-A0	  I-AM-ADV	  I-AM-ADV	         O
+             's	              -	      E-A0	  I-AM-ADV	  I-AM-ADV	         O
+            and	              -	         O	  I-AM-ADV	  I-AM-ADV	         O
+       triple-B	              -	      S-A2	  I-AM-ADV	  I-AM-ADV	         O
+             by	              -	      B-A0	  I-AM-ADV	  I-AM-ADV	         O
+          SampP	              -	      E-A0	  E-AM-ADV	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A1	      B-A1	         O
+          issue	              -	      E-A1	      E-A1	      E-A1	         O
+           will	              -	         O	  S-AM-MOD	  S-AM-MOD	         O
+             be	             be	         O	       S-V	         O	         O
+           sold	           sold	         O	  B-AM-MNR	       S-V	         O
+        through	              -	         O	  I-AM-MNR	  B-AM-MNR	         O
+   underwriters	              -	         O	  I-AM-MNR	  I-AM-MNR	      S-A1
+            led	            led	         O	  I-AM-MNR	  I-AM-MNR	       S-V
+             by	              -	         O	  I-AM-MNR	  I-AM-MNR	      B-A0
+        Merrill	              -	         O	  I-AM-MNR	  I-AM-MNR	      I-A0
+          Lynch	              -	         O	  I-AM-MNR	  I-AM-MNR	      I-A0
+        Capital	              -	         O	  I-AM-MNR	  I-AM-MNR	      I-A0
+        Markets	              -	         O	  E-AM-MNR	  E-AM-MNR	      E-A0
+              .	              -	         O	         O	         O	         O
+
+              @	              -	         O	         O
+      EUROBONDS	              -	         O	         O
+       Canadian	              -	         O	         O
+       Imperial	              -	         O	         O
+           Bank	              -	         O	         O
+             of	              -	         O	         O
+       Commerce	              -	         O	         O
+              (	              -	         O	         O
+         Canada	              -	         O	         O
+              )	              -	         O	         O
+             --	              -	         O	         O
+             10	              -	         O	         O
+        billion	              -	         O	         O
+            yen	              -	         O	         O
+             of	              -	         O	         O
+            5.7	              -	      B-A1	      B-A0
+              %	              -	      I-A1	      I-A0
+          bonds	              -	      I-A1	      E-A0
+            due	              -	      I-A1	         O
+           Nov.	              -	      I-A1	         O
+             17	              -	      I-A1	         O
+              ,	              -	      I-A1	         O
+           1992	              -	      E-A1	         O
+              ,	              -	         O	         O
+         priced	         priced	       S-V	         O
+             at	              -	      B-A2	         O
+            101	              -	      I-A2	         O
+            1/4	              -	      E-A2	         O
+             to	              -	  B-AM-PNC	         O
+          yield	          yield	  I-AM-PNC	       S-V
+           5.75	              -	  I-AM-PNC	      B-A1
+              %	              -	  I-AM-PNC	      I-A1
+           less	              -	  I-AM-PNC	      I-A1
+           full	              -	  I-AM-PNC	      I-A1
+           fees	              -	  E-AM-PNC	      E-A1
+              ,	              -	         O	         O
+            via	              -	  B-AM-MNR	         O
+           LTCB	              -	  I-AM-MNR	         O
+  International	              -	  I-AM-MNR	         O
+            Ltd	              -	  E-AM-MNR	         O
+              .	              -	         O	         O
+

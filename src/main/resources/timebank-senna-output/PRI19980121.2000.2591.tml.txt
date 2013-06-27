@@ -1,0 +1,180 @@
+            Now	              -
+            for	              -
+          today	              -
+             's	              -
+      geography	              -
+           quiz	              -
+              .	              -
+
+             We	              -	      S-A1
+            're	            're	       B-V
+            off	              -	       E-V
+             in	              -	  B-AM-LOC
+         search	              -	  I-AM-LOC
+             of	              -	  I-AM-LOC
+             an	              -	  I-AM-LOC
+        ancient	              -	  I-AM-LOC
+            and	              -	  I-AM-LOC
+         exotic	              -	  I-AM-LOC
+           city	              -	  E-AM-LOC
+              .	              -	         O
+
+             An	              -	         O
+     officially	              -	  S-AM-MNR
+     sanctioned	     sanctioned	       S-V
+            one	              -	      S-A1
+              ,	              -	         O
+            too	              -	         O
+              .	              -	         O
+
+         UNESCO	              -	      S-A0
+       declared	       declared	       S-V
+             it	              -	      S-A1
+              a	              -	      B-A2
+      protected	              -	      I-A2
+           site	              -	      I-A2
+            for	              -	      I-A2
+            its	              -	      I-A2
+         beauty	              -	      I-A2
+            and	              -	      I-A2
+            its	              -	      I-A2
+     historical	              -	      I-A2
+   significance	              -	      E-A2
+              .	              -	         O
+
+            The	              -	      B-A0	      B-A0	         O
+           city	              -	      E-A0	      E-A0	         O
+          could	              -	  S-AM-MOD	  S-AM-MOD	         O
+           have	           have	       S-V	         O	         O
+           used	           used	      B-A1	       S-V	         O
+           some	              -	      I-A1	      B-A1	         O
+        special	              -	      I-A1	      I-A1	         O
+     protection	              -	      E-A1	      E-A1	         O
+             in	              -	         O	      B-A2	         O
+       nineteen	              -	         O	      I-A2	         O
+   seventy-nine	              -	         O	      E-A2	         O
+           when	              -	         O	  B-AM-TMP	         O
+            the	              -	         O	  I-AM-TMP	      B-A0
+         Soviet	              -	         O	  I-AM-TMP	      I-A0
+          Union	              -	         O	  I-AM-TMP	      E-A0
+        invaded	        invaded	         O	  I-AM-TMP	       S-V
+    Afghanistan	              -	         O	  E-AM-TMP	      S-A1
+              .	              -	         O	         O	         O
+
+           Most	              -	      B-A1	      B-A1	      B-A2	         O	         O
+             of	              -	      I-A1	      I-A1	      I-A2	         O	         O
+            the	              -	      I-A1	      I-A1	      I-A2	         O	         O
+           city	              -	      I-A1	      I-A1	      I-A2	         O	         O
+             's	              -	      I-A1	      I-A1	      I-A2	         O	         O
+      monuments	              -	      E-A1	      E-A1	      E-A2	         O	         O
+           were	           were	       S-V	         O	         O	         O	         O
+      destroyed	      destroyed	      B-A3	       S-V	         O	         O	         O
+              ,	              -	      I-A3	         O	         O	         O	         O
+      including	      including	      I-A3	  B-AM-ADV	       S-V	         O	         O
+              a	              -	      I-A3	  I-AM-ADV	      B-A1	         O	      B-A0
+    magnificent	              -	      I-A3	  I-AM-ADV	      I-A1	         O	      I-A0
+          tiled	          tiled	      I-A3	  I-AM-ADV	      I-A1	       S-V	      I-A0
+         mosque	              -	      I-A3	  I-AM-ADV	      I-A1	      S-A1	      E-A0
+              ,	              -	      I-A3	  I-AM-ADV	      I-A1	         O	         O
+          which	              -	      I-A3	  I-AM-ADV	      I-A1	         O	    S-R-A0
+      dominated	      dominated	      I-A3	  I-AM-ADV	      I-A1	         O	       S-V
+            the	              -	      I-A3	  I-AM-ADV	      I-A1	         O	      B-A1
+        skyline	              -	      I-A3	  I-AM-ADV	      I-A1	         O	      E-A1
+            for	              -	      I-A3	  I-AM-ADV	      I-A1	         O	  B-AM-TMP
+      centuries	              -	      E-A3	  E-AM-ADV	      E-A1	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A0
+         people	              -	      I-A1	      I-A0
+           here	              -	      E-A1	      E-A0
+            are	            are	       S-V	         O
+         famous	              -	      B-A2	         O
+     throughout	              -	      I-A2	         O
+        central	              -	      I-A2	         O
+           Asia	              -	      E-A2	         O
+            for	              -	  B-AM-ADV	         O
+          their	              -	  I-AM-ADV	         O
+          skill	              -	  I-AM-ADV	         O
+             in	              -	  I-AM-ADV	         O
+     fashioning	     fashioning	  I-AM-ADV	       S-V
+        pottery	              -	  I-AM-ADV	      B-A1
+            and	              -	  I-AM-ADV	      I-A1
+           tile	              -	  I-AM-ADV	      I-A1
+              ,	              -	  I-AM-ADV	      I-A1
+          glass	              -	  I-AM-ADV	      E-A1
+            too	              -	  E-AM-ADV	         O
+              .	              -	         O	         O
+
+           Some	              -	      B-A0	      B-A0	         O
+       families	              -	      E-A0	      E-A0	         O
+           have	           have	       S-V	         O	         O
+           kept	           kept	      B-A1	       S-V	         O
+          their	              -	      I-A1	      B-A1	         O
+          glass	              -	      I-A1	      I-A1	         O
+        working	        working	      I-A1	      I-A1	       S-V
+        secrets	              -	      I-A1	      E-A1	      S-A0
+            for	              -	      I-A1	  B-AM-TMP	         O
+           more	              -	      I-A1	  I-AM-TMP	         O
+           than	              -	      I-A1	  I-AM-TMP	         O
+            two	              -	      I-A1	  I-AM-TMP	         O
+       thousand	              -	      I-A1	  I-AM-TMP	         O
+          years	              -	      E-A1	  E-AM-TMP	         O
+              .	              -	         O	         O	         O
+
+           Even	              -	         O	  B-AM-ADV	  B-AM-ADV	  B-AM-ADV	         O
+         though	              -	         O	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	         O
+           this	              -	      B-A1	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	         O
+           city	              -	      E-A1	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	         O
+             is	             is	       S-V	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	         O
+             in	              -	  B-AM-LOC	  I-AM-ADV	  I-AM-ADV	  I-AM-ADV	         O
+    Afghanistan	              -	  E-AM-LOC	  E-AM-ADV	  E-AM-ADV	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O	         O	         O
+           most	              -	         O	      B-A0	      B-A0	      B-A0	         O
+         people	              -	         O	      I-A0	      I-A0	      I-A0	         O
+           here	              -	         O	      E-A0	      E-A0	      E-A0	         O
+          speak	          speak	         O	       S-V	         O	         O	         O
+              a	              -	         O	      B-A1	         O	         O	         O
+        dialect	              -	         O	      I-A1	         O	         O	         O
+             of	              -	         O	      I-A1	         O	         O	         O
+            the	              -	         O	      I-A1	         O	         O	         O
+        Persian	              -	         O	      I-A1	         O	         O	         O
+       language	              -	         O	      E-A1	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O
+           have	           have	         O	         O	       S-V	         O	         O
+           long	              -	         O	         O	      B-A1	  S-AM-TMP	         O
+       standing	       standing	         O	         O	      I-A1	       S-V	         O
+       cultural	              -	         O	         O	      I-A1	      B-A1	         O
+           ties	              -	         O	         O	      I-A1	      E-A1	         O
+           with	              -	         O	         O	      I-A1	      B-A2	         O
+    neighboring	    neighboring	         O	         O	      I-A1	      I-A2	       S-V
+           Iran	              -	         O	         O	      E-A1	      E-A2	      S-A1
+              .	              -	         O	         O	         O	         O	         O
+
+          Think	          Think	       S-V	         O
+            you	              -	      B-A1	      S-A0
+            got	            got	      I-A1	       S-V
+             it	              -	      E-A1	      S-A1
+              ?	              -	         O	         O
+
+           Well	              -	  S-AM-DIS	         O	         O
+              ,	              -	         O	         O	         O
+        frankly	              -	  S-AM-MNR	         O	         O
+              ,	              -	         O	         O	         O
+              I	              -	      S-A0	         O	         O
+             do	             do	       S-V	         O	         O
+            n't	              -	      S-A1	         O	         O
+              ,	              -	         O	         O	         O
+            but	              -	         O	         O	         O
+            the	              -	         O	      B-A1	      B-A1
+         answer	              -	         O	      E-A1	      E-A1
+             is	             is	         O	       S-V	         O
+         coming	         coming	         O	    B-C-A1	       B-V
+             up	              -	         O	    I-C-A1	       E-V
+             in	              -	         O	    I-C-A1	  B-AM-TMP
+           just	              -	         O	    I-C-A1	  I-AM-TMP
+              a	              -	         O	    I-C-A1	  I-AM-TMP
+            few	              -	         O	    I-C-A1	  I-AM-TMP
+        minutes	              -	         O	    E-C-A1	  E-AM-TMP
+              .	              -	         O	         O	         O
+

@@ -1,0 +1,235 @@
+   Poughkeepsie	              -	      B-A0	         O	         O
+        Savings	              -	      I-A0	         O	         O
+           Bank	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+              a	              -	      B-A1	         O	      B-A1
+           plan	              -	      I-A1	         O	      I-A1
+             to	              -	      I-A1	         O	      I-A1
+           sell	           sell	      I-A1	       S-V	      I-A1
+            its	              -	      I-A1	      B-A1	      I-A1
+          South	              -	      I-A1	      I-A1	      I-A1
+       Carolina	              -	      I-A1	      I-A1	      I-A1
+         branch	              -	      I-A1	      I-A1	      I-A1
+        offices	              -	      I-A1	      E-A1	      I-A1
+             to	              -	      I-A1	      B-A2	      I-A1
+          First	              -	      I-A1	      I-A2	      I-A1
+       Citizens	              -	      I-A1	      I-A2	      I-A1
+           Bank	              -	      I-A1	      I-A2	      I-A1
+              ,	              -	      I-A1	      I-A2	      I-A1
+             of	              -	      I-A1	      I-A2	      I-A1
+       Columbia	              -	      I-A1	      I-A2	      I-A1
+              ,	              -	      I-A1	      I-A2	      I-A1
+           S.C.	              -	      I-A1	      I-A2	      I-A1
+              ,	              -	      I-A1	      E-A2	      E-A1
+           fell	           fell	      I-A1	         O	       S-V
+        through	              -	      E-A1	         O	  S-AM-DIR
+              .	              -	         O	         O	         O
+
+   Poughkeepsie	              -	      S-A0	      S-A0	         O
+           also	              -	  S-AM-DIS	         O	         O
+        expects	        expects	       S-V	         O	         O
+             to	              -	      B-A1	         O	         O
+           post	           post	      I-A1	       S-V	         O
+              a	              -	      I-A1	      B-A1	      B-A1
+       one-time	              -	      I-A1	      I-A1	      I-A1
+         charge	              -	      I-A1	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A1	      I-A1
+            8.3	              -	      I-A1	      I-A1	      I-A1
+        million	              -	      I-A1	      E-A1	      E-A1
+              ,	              -	      I-A1	         O	         O
+      resulting	      resulting	      I-A1	  B-AM-ADV	       S-V
+             in	              -	      I-A1	  I-AM-ADV	      B-A2
+              a	              -	      I-A1	  I-AM-ADV	      I-A2
+            net	              -	      I-A1	  I-AM-ADV	      I-A2
+           loss	              -	      I-A1	  I-AM-ADV	      I-A2
+            for	              -	      I-A1	  I-AM-ADV	      I-A2
+            the	              -	      I-A1	  I-AM-ADV	      I-A2
+          third	              -	      I-A1	  I-AM-ADV	      I-A2
+        quarter	              -	      E-A1	  E-AM-ADV	      E-A2
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O
+         charge	              -	      E-A0	         O	         O	         O	         O
+     represents	     represents	       S-V	         O	         O	         O	         O
+              a	              -	      B-A1	         O	         O	         O	         O
+     write-down	              -	      I-A1	         O	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O	         O
+            the	              -	      I-A1	      B-A1	         O	         O	         O
+       goodwill	              -	      I-A1	      E-A1	         O	         O	         O
+     associated	     associated	      I-A1	       S-V	         O	         O	         O
+           with	              -	      I-A1	      B-A2	         O	         O	         O
+   Poughkeepsie	              -	      I-A1	      I-A2	         O	         O	         O
+             's	              -	      I-A1	      I-A2	         O	         O	         O
+     investment	              -	      I-A1	      I-A2	         O	         O	         O
+             in	              -	      I-A1	      I-A2	         O	         O	         O
+            the	              -	      I-A1	      I-A2	         O	         O	      B-A1
+          banks	              -	      I-A1	      I-A2	         O	         O	      E-A1
+             it	              -	      I-A1	      I-A2	         O	      S-A0	      S-A0
+             is	             is	      I-A1	      I-A2	       S-V	         O	         O
+         trying	         trying	      I-A1	      I-A2	    B-C-A1	       S-V	         O
+             to	              -	      I-A1	      I-A2	    I-C-A1	      B-A1	         O
+           sell	           sell	      I-A1	      I-A2	    E-C-A1	      I-A1	       S-V
+            and	              -	      I-A1	      I-A2	         O	      I-A1	         O
+            its	              -	      I-A1	      I-A2	         O	      I-A1	         O
+          North	              -	      I-A1	      I-A2	         O	      I-A1	         O
+       Carolina	              -	      I-A1	      I-A2	         O	      I-A1	         O
+       branches	              -	      I-A1	      I-A2	         O	      I-A1	         O
+             as	              -	      I-A1	      I-A2	         O	      I-A1	         O
+           well	              -	      E-A1	      E-A2	         O	      E-A1	         O
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0
+         thrift	              -	      E-A0
+      announced	      announced	       S-V
+            the	              -	      B-A1
+           plan	              -	      E-A1
+           Aug.	              -	  B-AM-TMP
+             21	              -	  E-AM-TMP
+              .	              -	         O
+
+          Among	              -	         O	  B-AM-DIS	      B-A1
+          other	              -	         O	  I-AM-DIS	      I-A1
+        reasons	              -	         O	  E-AM-DIS	      I-A1
+              ,	              -	         O	         O	      I-A1
+           high	              -	      B-A1	      B-A0	      I-A1
+           fees	              -	      E-A1	      I-A0	      I-A1
+     regulators	              -	      S-A0	      I-A0	      I-A1
+        imposed	        imposed	       S-V	      I-A0	      I-A1
+             on	              -	      B-A2	      I-A0	      I-A1
+        certain	              -	      I-A2	      I-A0	      I-A1
+      transfers	              -	      I-A2	      I-A0	      I-A1
+             of	              -	      I-A2	      I-A0	      I-A1
+         thrift	              -	      I-A2	      I-A0	      I-A1
+       deposits	              -	      I-A2	      I-A0	      I-A1
+             to	              -	      I-A2	      I-A0	      I-A1
+     commercial	              -	      I-A2	      I-A0	      I-A1
+          banks	              -	      E-A2	      E-A0	      I-A1
+  substantially	              -	         O	  S-AM-MNR	      I-A1
+        altered	        altered	         O	       S-V	      I-A1
+            the	              -	         O	      B-A1	      I-A1
+      economics	              -	         O	      I-A1	      I-A1
+             of	              -	         O	      I-A1	      I-A1
+            the	              -	         O	      I-A1	      I-A1
+    transaction	              -	         O	      E-A1	      I-A1
+            for	              -	         O	  B-AM-PNC	      I-A1
+           both	              -	         O	  I-AM-PNC	      I-A1
+        parties	              -	         O	  E-AM-PNC	      E-A1
+              ,	              -	         O	         O	         O
+   Poughkeepsie	              -	         O	         O	      S-A0
+           said	           said	         O	         O	       S-V
+              .	              -	         O	         O	         O
+
+   Additionally	              -	  S-AM-DIS	  S-AM-DIS
+              ,	              -	         O	         O
+            the	              -	      B-A1	      B-A0
+           bank	              -	      E-A1	      E-A0
+             is	             is	       S-V	         O
+     increasing	     increasing	      B-A1	       S-V
+            its	              -	      I-A1	      B-A1
+      loan-loss	              -	      I-A1	      I-A1
+       reserves	              -	      I-A1	      E-A1
+            for	              -	      I-A1	  B-AM-TMP
+            the	              -	      I-A1	  I-AM-TMP
+          third	              -	      I-A1	  I-AM-TMP
+        quarter	              -	      I-A1	  E-AM-TMP
+             by	              -	      I-A1	      B-A2
+              $	              -	      I-A1	      I-A2
+            8.5	              -	      I-A1	      I-A2
+        million	              -	      I-A1	      I-A2
+         before	              -	      I-A1	      I-A2
+          taxes	              -	      E-A1	      E-A2
+              .	              -	         O	         O
+
+             In	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+   year-earlier	              -	  I-AM-TMP
+          third	              -	  I-AM-TMP
+        quarter	              -	  E-AM-TMP
+              ,	              -	         O
+   Poughkeepsie	              -	      B-A0
+        Savings	              -	      E-A0
+            had	            had	       S-V
+            net	              -	      B-A1
+         income	              -	      I-A1
+             of	              -	      I-A1
+              $	              -	      I-A1
+            2.8	              -	      I-A1
+        million	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+             77	              -	      I-A1
+          cents	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      E-A1
+              .	              -	         O
+
+   Poughkeepsie	              -	      S-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A1	      S-A0	      S-A0	      S-A0
+             is	             is	      I-A1	       S-V	         O	         O	         O
+     continuing	     continuing	      I-A1	      B-A1	       S-V	         O	         O
+             to	              -	      I-A1	      I-A1	      B-A1	         O	         O
+            try	            try	      I-A1	      I-A1	      I-A1	       S-V	         O
+             to	              -	      I-A1	      I-A1	      I-A1	      B-A1	         O
+           sell	           sell	      I-A1	      I-A1	      I-A1	      I-A1	       S-V
+         itself	              -	      I-A1	      I-A1	      I-A1	      I-A1	      S-A1
+              ,	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+          under	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+              a	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+           June	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+      agreement	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+           with	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+              a	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+dissident-shareholder	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O
+          group	              -	      E-A1	      E-A1	      E-A1	      E-A1	         O
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O
+           bank	              -	      E-A0	         O	         O	         O
+           also	              -	  S-AM-DIS	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            its	              -	      B-A1	      B-A1	         O	         O
+         effort	              -	      I-A1	      E-A1	         O	         O
+          would	              -	      I-A1	  S-AM-MOD	         O	         O
+       continue	       continue	      I-A1	       S-V	         O	         O
+           past	              -	      I-A1	  B-AM-TMP	         O	         O
+            the	              -	      I-A1	  I-AM-TMP	      B-A1	         O
+           Nov.	              -	      I-A1	  I-AM-TMP	      I-A1	         O
+              1	              -	      I-A1	  I-AM-TMP	      I-A1	         O
+       deadline	              -	      I-A1	  I-AM-TMP	      E-A1	         O
+            set	            set	      I-A1	  I-AM-TMP	       S-V	         O
+             in	              -	      I-A1	  I-AM-TMP	      B-A2	         O
+           that	              -	      I-A1	  I-AM-TMP	      I-A2	         O
+      agreement	              -	      I-A1	  E-AM-TMP	      E-A2	         O
+            and	              -	      I-A1	         O	         O	         O
+           that	              -	      I-A1	         O	         O	         O
+            the	              -	      I-A1	         O	         O	      B-A1
+     litigation	              -	      I-A1	         O	         O	      I-A1
+        between	              -	      I-A1	         O	         O	      I-A1
+            the	              -	      I-A1	         O	         O	      I-A1
+            two	              -	      I-A1	         O	         O	      I-A1
+          sides	              -	      I-A1	         O	         O	      E-A1
+          might	              -	      I-A1	         O	         O	  S-AM-MOD
+         resume	         resume	      I-A1	         O	         O	       S-V
+             as	              -	      I-A1	         O	         O	  B-AM-CAU
+              a	              -	      I-A1	         O	         O	  I-AM-CAU
+         result	              -	      E-A1	         O	         O	  E-AM-CAU
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0
+         thrift	              -	      I-A0	      I-A0
+            and	              -	      I-A0	      I-A0
+            the	              -	      I-A0	      I-A0
+        holders	              -	      E-A0	      E-A0
+            had	            had	       S-V	         O
+      suspended	      suspended	      B-A1	       S-V
+          their	              -	      I-A1	      B-A1
+       lawsuits	              -	      I-A1	      E-A1
+             as	              -	      I-A1	  B-AM-ADV
+           part	              -	      I-A1	  I-AM-ADV
+             of	              -	      I-A1	  I-AM-ADV
+            the	              -	      I-A1	  I-AM-ADV
+      agreement	              -	      E-A1	  E-AM-ADV
+              .	              -	         O	         O
+

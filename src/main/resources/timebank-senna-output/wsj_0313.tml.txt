@@ -1,0 +1,211 @@
+          Ocean	              -	      B-A0	      B-A0	         O
+       Drilling	              -	      I-A0	      I-A0	         O
+            amp	              -	      I-A0	      I-A0	         O
+    Exploration	              -	      I-A0	      I-A0	         O
+            Co.	              -	      E-A0	      E-A0	         O
+           will	              -	  S-AM-MOD	         O	         O
+           sell	           sell	       S-V	         O	         O
+            its	              -	      B-A1	         O	         O
+contract-drilling	              -	      I-A1	         O	         O
+       business	              -	      E-A1	         O	         O
+              ,	              -	         O	         O	         O
+            and	              -	         O	         O	         O
+           took	           took	         O	       S-V	         O
+              a	              -	         O	      B-A1	         O
+              $	              -	         O	      I-A1	         O
+           50.9	              -	         O	      I-A1	         O
+        million	              -	         O	      I-A1	         O
+           loss	              -	         O	      I-A1	         O
+           from	              -	         O	      I-A1	         O
+   discontinued	   discontinued	         O	      I-A1	       S-V
+     operations	              -	         O	      E-A1	      S-A1
+             in	              -	         O	  B-AM-TMP	         O
+            the	              -	         O	  I-AM-TMP	         O
+          third	              -	         O	  I-AM-TMP	         O
+        quarter	              -	         O	  E-AM-TMP	         O
+        because	              -	         O	  B-AM-CAU	         O
+             of	              -	         O	  I-AM-CAU	         O
+            the	              -	         O	  I-AM-CAU	         O
+        planned	              -	         O	  I-AM-CAU	         O
+           sale	              -	         O	  E-AM-CAU	         O
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O
+            New	              -	      I-A0	         O	         O
+        Orleans	              -	      I-A0	         O	         O
+            oil	              -	      I-A0	         O	         O
+            and	              -	      I-A0	         O	         O
+            gas	              -	      I-A0	         O	         O
+    exploration	              -	      I-A0	         O	         O
+            and	              -	      I-A0	         O	         O
+         diving	              -	      I-A0	         O	         O
+     operations	              -	      I-A0	         O	         O
+        company	              -	      E-A0	         O	         O
+          added	          added	       S-V	         O	         O
+           that	              -	      B-A1	         O	         O
+             it	              -	      I-A1	      S-A0	      S-A0
+           does	           does	      I-A1	       S-V	         O
+            n't	              -	      I-A1	      B-A1	  S-AM-NEG
+         expect	         expect	      I-A1	      I-A1	       S-V
+            any	              -	      I-A1	      I-A1	      B-A1
+        further	              -	      I-A1	      I-A1	      I-A1
+        adverse	              -	      I-A1	      I-A1	      I-A1
+      financial	              -	      I-A1	      I-A1	      I-A1
+         impact	              -	      I-A1	      I-A1	      I-A1
+           from	              -	      I-A1	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1	      I-A1
+  restructuring	              -	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+             In	              -	         O	         O	  B-AM-TMP	         O	         O
+            the	              -	         O	         O	  I-AM-TMP	         O	         O
+          third	              -	         O	         O	  I-AM-TMP	         O	         O
+        quarter	              -	         O	         O	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A1	      B-A0	         O	         O
+        company	              -	      E-A1	      E-A1	      I-A0	         O	         O
+              ,	              -	         O	         O	      I-A0	         O	         O
+          which	              -	    S-R-A1	    S-R-A1	      I-A0	         O	         O
+             is	             is	       S-V	         O	      I-A0	         O	         O
+             61	              -	      B-A2	         O	      I-A0	         O	         O
+              %	              -	      E-A2	         O	      I-A0	         O	         O
+              -	              -	         O	         O	      I-A0	         O	         O
+          owned	          owned	         O	       S-V	      I-A0	         O	         O
+             by	              -	         O	      B-A0	      I-A0	         O	         O
+         Murphy	              -	         O	      I-A0	      I-A0	         O	         O
+            Oil	              -	         O	      I-A0	      I-A0	         O	         O
+          Corp.	              -	         O	      I-A0	      I-A0	         O	         O
+             of	              -	         O	      I-A0	      I-A0	         O	         O
+       Arkansas	              -	         O	      E-A0	      I-A0	         O	         O
+              ,	              -	         O	         O	      E-A0	         O	         O
+            had	            had	         O	         O	       S-V	         O	         O
+              a	              -	         O	         O	      B-A1	      B-A1	         O
+            net	              -	         O	         O	      I-A1	      I-A1	         O
+           loss	              -	         O	         O	      I-A1	      I-A1	         O
+             of	              -	         O	         O	      I-A1	      I-A1	         O
+              $	              -	         O	         O	      I-A1	      I-A1	         O
+           46.9	              -	         O	         O	      I-A1	      I-A1	         O
+        million	              -	         O	         O	      I-A1	      I-A1	         O
+              ,	              -	         O	         O	      I-A1	      I-A1	         O
+             or	              -	         O	         O	      I-A1	      I-A1	         O
+             91	              -	         O	         O	      I-A1	      I-A1	         O
+          cents	              -	         O	         O	      I-A1	      I-A1	         O
+              a	              -	         O	         O	      I-A1	      I-A1	         O
+          share	              -	         O	         O	      E-A1	      E-A1	         O
+              ,	              -	         O	         O	         O	         O	         O
+       compared	       compared	         O	         O	  B-AM-ADV	       S-V	         O
+           with	              -	         O	         O	  I-AM-ADV	      B-A2	         O
+              a	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+       restated	       restated	         O	         O	  I-AM-ADV	      I-A2	       S-V
+           loss	              -	         O	         O	  I-AM-ADV	      I-A2	      S-A1
+             of	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+              $	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+              9	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+        million	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+              ,	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+             or	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+             18	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+          cents	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+              a	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+          share	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+              ,	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+              a	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+           year	              -	         O	         O	  I-AM-ADV	      I-A2	         O
+            ago	              -	         O	         O	  E-AM-ADV	      E-A2	         O
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O
+         latest	              -	      I-A0	         O
+         period	              -	      E-A0	         O
+            had	            had	       S-V	         O
+         profit	              -	      B-A1	         O
+           from	              -	      I-A1	         O
+     continuing	     continuing	      I-A1	       S-V
+     operations	              -	      I-A1	      S-A1
+             of	              -	      I-A1	         O
+              $	              -	      I-A1	         O
+              4	              -	      I-A1	         O
+        million	              -	      E-A1	         O
+              .	              -	         O	         O
+
+        Revenue	              -	      S-A1
+         gained	         gained	       S-V
+             13	              -	      B-A2
+              %	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+           77.3	              -	      I-A4
+        million	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+           68.5	              -	      I-A3
+        million	              -	      E-A3
+              .	              -	         O
+
+          Ocean	              -	      B-A0	         O
+       Drilling	              -	      E-A0	         O
+           said	           said	       S-V	         O
+             it	              -	      B-A1	      S-A0
+           will	              -	      I-A1	  S-AM-MOD
+          offer	          offer	      I-A1	       S-V
+             15	              -	      I-A1	      B-A1
+              %	              -	      I-A1	      I-A1
+             to	              -	      I-A1	      I-A1
+             20	              -	      I-A1	      I-A1
+              %	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+contract-drilling	              -	      I-A1	      I-A1
+       business	              -	      I-A1	      E-A1
+        through	              -	      I-A1	  B-AM-MNR
+             an	              -	      I-A1	  I-AM-MNR
+        initial	              -	      I-A1	  I-AM-MNR
+         public	              -	      I-A1	  I-AM-MNR
+       offering	              -	      I-A1	  E-AM-MNR
+             in	              -	      I-A1	  B-AM-TMP
+            the	              -	      I-A1	  I-AM-TMP
+           near	              -	      I-A1	  I-AM-TMP
+         future	              -	      E-A1	  E-AM-TMP
+              .	              -	         O	         O
+
+             It	              -	      S-A0	      S-A1	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O
+           long	              -	      B-A1	  S-AM-TMP	  S-AM-TMP	         O	         O
+           been	           been	      I-A1	       S-V	         O	         O	         O
+        rumored	        rumored	      I-A1	         O	       S-V	         O	         O
+           that	              -	      I-A1	         O	      B-A1	         O	         O
+          Ocean	              -	      I-A1	      B-A1	      I-A1	      B-A0	      B-A0
+       Drilling	              -	      I-A1	      I-A1	      I-A1	      E-A0	      E-A0
+          would	              -	      I-A1	      I-A1	      I-A1	  S-AM-MOD	         O
+           sell	           sell	      I-A1	      I-A1	      I-A1	       S-V	         O
+            the	              -	      I-A1	      I-A1	      I-A1	      B-A1	         O
+           unit	              -	      I-A1	      I-A1	      I-A1	      E-A1	         O
+             to	              -	      I-A1	      I-A1	      I-A1	  B-AM-PNC	         O
+    concentrate	    concentrate	      I-A1	      I-A1	      I-A1	  I-AM-PNC	       S-V
+             on	              -	      I-A1	      I-A1	      I-A1	  I-AM-PNC	      B-A1
+            its	              -	      I-A1	      I-A1	      I-A1	  I-AM-PNC	      I-A1
+           core	              -	      I-A1	      I-A1	      I-A1	  I-AM-PNC	      I-A1
+            oil	              -	      I-A1	      I-A1	      I-A1	  I-AM-PNC	      I-A1
+            and	              -	      I-A1	      I-A1	      I-A1	  I-AM-PNC	      I-A1
+            gas	              -	      I-A1	      I-A1	      I-A1	  I-AM-PNC	      I-A1
+       business	              -	      E-A1	      E-A1	      E-A1	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+          Ocean	              -	      B-A0	         O
+       Drilling	              -	      E-A0	         O
+           said	           said	       S-V	         O
+             it	              -	      B-A1	      S-A0
+             wo	              -	      I-A1	  S-AM-MOD
+            n't	              -	      I-A1	  S-AM-NEG
+           hold	           hold	      I-A1	       S-V
+            any	              -	      I-A1	      B-A1
+         shares	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+            new	              -	      I-A1	      I-A1
+        company	              -	      I-A1	      E-A1
+          after	              -	      I-A1	  B-AM-TMP
+            the	              -	      I-A1	  I-AM-TMP
+  restructuring	              -	      E-A1	  E-AM-TMP
+              .	              -	         O	         O
+

@@ -1,0 +1,86 @@
+            Sun	              -	      B-A0
+   Microsystems	              -	      I-A0
+           Inc.	              -	      I-A0
+              ,	              -	      I-A0
+              a	              -	      I-A0
+       computer	              -	      I-A0
+          maker	              -	      I-A0
+              ,	              -	      E-A0
+      announced	      announced	       S-V
+            the	              -	      B-A1
+  effectiveness	              -	      I-A1
+             of	              -	      I-A1
+            its	              -	      I-A1
+   registration	              -	      I-A1
+      statement	              -	      I-A1
+            for	              -	      I-A1
+              $	              -	      I-A1
+            125	              -	      I-A1
+        million	              -	      I-A1
+             of	              -	      I-A1
+              6	              -	      I-A1
+            3/8	              -	      I-A1
+              %	              -	      I-A1
+    convertible	              -	      I-A1
+   subordinated	              -	      I-A1
+     debentures	              -	      I-A1
+            due	              -	      I-A1
+           Oct.	              -	      I-A1
+             15	              -	      I-A1
+              ,	              -	      I-A1
+           1999	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O
+        company	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A1	      B-A1	      B-A1	      B-A1
+     debentures	              -	      I-A1	      E-A1	      E-A1	      E-A1	      E-A1
+            are	            are	      I-A1	       S-V	         O	         O	         O
+          being	          being	      I-A1	      B-A3	       S-V	         O	         O
+         issued	         issued	      I-A1	      I-A3	         O	       S-V	         O
+             at	              -	      I-A1	      I-A3	         O	      B-A3	         O
+             an	              -	      I-A1	      I-A3	         O	      I-A3	         O
+          issue	              -	      I-A1	      I-A3	         O	      I-A3	         O
+          price	              -	      I-A1	      I-A3	         O	      I-A3	         O
+             of	              -	      I-A1	      I-A3	         O	      I-A3	         O
+              $	              -	      I-A1	      I-A3	         O	      I-A3	         O
+            849	              -	      I-A1	      I-A3	         O	      I-A3	         O
+            for	              -	      I-A1	      I-A3	         O	      I-A3	         O
+           each	              -	      I-A1	      I-A3	         O	      I-A3	         O
+              $	              -	      I-A1	      I-A3	         O	      I-A3	         O
+          1,000	              -	      I-A1	      I-A3	         O	      I-A3	         O
+      principal	              -	      I-A1	      I-A3	         O	      I-A3	         O
+         amount	              -	      I-A1	      E-A3	         O	      E-A3	         O
+            and	              -	      I-A1	         O	         O	         O	         O
+            are	            are	      I-A1	         O	         O	         O	       S-V
+    convertible	              -	      I-A1	         O	         O	         O	      S-A2
+             at	              -	      I-A1	         O	         O	         O	         O
+            any	              -	      I-A1	         O	         O	         O	         O
+           time	              -	      I-A1	         O	         O	         O	         O
+          prior	              -	      I-A1	         O	         O	         O	  B-AM-TMP
+             to	              -	      I-A1	         O	         O	         O	  I-AM-TMP
+       maturity	              -	      I-A1	         O	         O	         O	  I-AM-TMP
+             at	              -	      I-A1	         O	         O	         O	  I-AM-TMP
+              a	              -	      I-A1	         O	         O	         O	  I-AM-TMP
+     conversion	              -	      I-A1	         O	         O	         O	  I-AM-TMP
+          price	              -	      I-A1	         O	         O	         O	  I-AM-TMP
+             of	              -	      I-A1	         O	         O	         O	  I-AM-TMP
+              $	              -	      I-A1	         O	         O	         O	  I-AM-TMP
+             25	              -	      I-A1	         O	         O	         O	  I-AM-TMP
+              a	              -	      I-A1	         O	         O	         O	  I-AM-TMP
+          share	              -	      E-A1	         O	         O	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1
+     debentures	              -	      E-A1
+            are	            are	       S-V
+      available	              -	  B-AM-MNR
+        through	              -	  I-AM-MNR
+        Goldman	              -	  I-AM-MNR
+              ,	              -	  I-AM-MNR
+          Sachs	              -	  I-AM-MNR
+            amp	              -	  I-AM-MNR
+             Co	              -	  E-AM-MNR
+              .	              -	         O
+

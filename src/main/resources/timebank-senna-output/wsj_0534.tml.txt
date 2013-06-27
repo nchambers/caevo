@@ -1,0 +1,114 @@
+        Conseco	              -	      B-A0	         O	         O	         O	         O
+           Inc.	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A1	      S-A0	         O	         O
+             is	             is	      I-A1	       S-V	         O	         O	         O
+        calling	        calling	      I-A1	      B-A1	       S-V	         O	         O
+            for	              -	      I-A1	      I-A1	      B-A1	         O	         O
+            the	              -	      I-A1	      I-A1	      I-A1	         O	         O
+     redemption	              -	      I-A1	      E-A1	      E-A1	         O	         O
+             on	              -	      I-A1	  B-AM-TMP	  B-AM-TMP	         O	         O
+           Dec.	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+              7	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+             of	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+            all	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+            the	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+        800,000	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+      remaining	      remaining	      I-A1	  I-AM-TMP	  I-AM-TMP	       S-V	         O
+         shares	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	      S-A1	         O
+    outstanding	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+             of	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+            its	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+              $	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+          1.875	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+         Series	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+              A	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+    convertible	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+      preferred	      preferred	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	       S-V
+          stock	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	      S-A1
+             at	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+              $	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+         26.805	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+              a	              -	      I-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+          share	              -	      E-A1	  E-AM-TMP	  E-AM-TMP	         O	         O
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O
+      insurance	              -	      I-A0	         O
+        concern	              -	      E-A0	         O
+           said	           said	       S-V	         O
+            all	              -	      B-A1	      B-A1
+     conversion	              -	      I-A1	      I-A1
+         rights	              -	      I-A1	      I-A1
+             on	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+          stock	              -	      I-A1	      E-A1
+           will	              -	      I-A1	  S-AM-MOD
+      terminate	      terminate	      I-A1	       S-V
+             on	              -	      I-A1	  B-AM-TMP
+           Nov.	              -	      I-A1	  I-AM-TMP
+             30	              -	      E-A1	  E-AM-TMP
+              .	              -	         O	         O
+
+          Until	              -	  B-AM-TMP	         O	         O
+           then	              -	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O
+        Conseco	              -	      S-A0	         O	         O
+           said	           said	       S-V	         O	         O
+            the	              -	      B-A1	      B-A1	         O
+          stock	              -	      I-A1	      E-A1	         O
+        remains	        remains	      I-A1	       S-V	         O
+    convertible	              -	      I-A1	      B-A3	         O
+           into	              -	      I-A1	      I-A3	         O
+         common	              -	      I-A1	      I-A3	         O
+          stock	              -	      I-A1	      I-A3	         O
+             at	              -	      I-A1	      I-A3	         O
+            the	              -	      I-A1	      I-A3	         O
+           rate	              -	      I-A1	      I-A3	         O
+             of	              -	      I-A1	      I-A3	         O
+          1.439	              -	      I-A1	      I-A3	         O
+         shares	              -	      I-A1	      I-A3	         O
+             of	              -	      I-A1	      I-A3	         O
+         common	              -	      I-A1	      I-A3	         O
+          stock	              -	      I-A1	      I-A3	         O
+            for	              -	      I-A1	      I-A3	         O
+           each	              -	      I-A1	      I-A3	         O
+          share	              -	      I-A1	      I-A3	         O
+             of	              -	      I-A1	      I-A3	         O
+      preferred	              -	      I-A1	      I-A3	      B-A1
+          stock	              -	      I-A1	      I-A3	      E-A1
+              ,	              -	      I-A1	      I-A3	         O
+          which	              -	      I-A1	      I-A3	    S-R-A1
+             is	             is	      I-A1	      I-A3	       S-V
+     equivalent	              -	      I-A1	      I-A3	      B-A2
+             to	              -	      I-A1	      I-A3	      I-A2
+              a	              -	      I-A1	      I-A3	      I-A2
+     conversion	              -	      I-A1	      I-A3	      I-A2
+          price	              -	      I-A1	      I-A3	      I-A2
+             of	              -	      I-A1	      I-A3	      I-A2
+              $	              -	      I-A1	      I-A3	      I-A2
+          17.50	              -	      I-A1	      I-A3	      I-A2
+              a	              -	      I-A1	      I-A3	      I-A2
+         common	              -	      I-A1	      I-A3	      I-A2
+          share	              -	      E-A1	      E-A3	      E-A2
+              .	              -	         O	         O	         O
+
+             In	              -	  B-AM-LOC
+            New	              -	  I-AM-LOC
+           York	              -	  I-AM-LOC
+          Stock	              -	  I-AM-LOC
+       Exchange	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+         Friday	              -	  S-AM-TMP
+              ,	              -	         O
+        Conseco	              -	      S-A1
+         closed	         closed	       S-V
+             at	              -	  B-AM-EXT
+              $	              -	  I-AM-EXT
+          19.50	              -	  E-AM-EXT
+              ,	              -	         O
+           down	              -	  B-AM-MNR
+             25	              -	  I-AM-MNR
+          cents	              -	  E-AM-MNR
+              .	              -	         O
+

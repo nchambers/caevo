@@ -1,0 +1,225 @@
+          Major	              -	         O	         O	         O
+            job	              -	         O	         O	         O
+           cuts	              -	         O	         O	         O
+             at	              -	         O	         O	         O
+             AT	              -	         O	         O	         O
+            and	              -	         O	         O	         O
+             T.	              -	         O	         O	         O
+            The	              -	         O	         O	         O
+           long	              -	         O	         O	         O
+       distance	              -	         O	         O	         O
+          giant	              -	         O	         O	         O
+       slashing	       slashing	       S-V	         O	         O
+             up	              -	      B-A1	         O	         O
+             to	              -	      I-A1	         O	         O
+       eighteen	              -	      I-A1	         O	         O
+       thousand	              -	      I-A1	         O	         O
+           jobs	              -	      E-A1	         O	         O
+              ,	              -	         O	         O	         O
+       freezing	       freezing	         O	       S-V	         O
+      executive	              -	         O	      B-A1	         O
+       salaries	              -	         O	      E-A1	         O
+            and	              -	         O	         O	         O
+        shaking	        shaking	         O	         O	       B-V
+             up	              -	         O	         O	       E-V
+     management	              -	         O	         O	      S-A1
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	         O
+        changes	              -	      E-A1	         O
+            are	            are	       S-V	         O
+           part	              -	  B-AM-TMP	         O
+             of	              -	  I-AM-TMP	         O
+              a	              -	  I-AM-TMP	         O
+            one	              -	  I-AM-TMP	         O
+          point	              -	  I-AM-TMP	         O
+            six	              -	  I-AM-TMP	         O
+        billion	              -	  I-AM-TMP	         O
+         dollar	              -	  I-AM-TMP	         O
+           cost	              -	  I-AM-TMP	         O
+        cutting	              -	  I-AM-TMP	         O
+     initiative	              -	  I-AM-TMP	         O
+             to	              -	  I-AM-TMP	         O
+     revitalize	     revitalize	  I-AM-TMP	       S-V
+            its	              -	  I-AM-TMP	      B-A1
+       position	              -	  I-AM-TMP	      I-A1
+             in	              -	  I-AM-TMP	      I-A1
+            the	              -	  I-AM-TMP	      I-A1
+telecommunications	              -	  I-AM-TMP	      I-A1
+       business	              -	  E-AM-TMP	      E-A1
+              .	              -	         O	         O
+
+        Earlier	              -	  B-AM-TMP
+             AT	              -	  I-AM-TMP
+            and	              -	  I-AM-TMP
+              T	              -	  E-AM-TMP
+           also	              -	  S-AM-DIS
+      announced	      announced	       S-V
+             an	              -	      B-A1
+       eighteen	              -	      I-A1
+        percent	              -	      I-A1
+           drop	              -	      I-A1
+             in	              -	      I-A1
+        profits	              -	      I-A1
+            for	              -	      I-A1
+            the	              -	      I-A1
+         fourth	              -	      I-A1
+        quarter	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A0
+        company	              -	      I-A0
+             's	              -	      I-A0
+          sales	              -	      I-A0
+          force	              -	      E-A0
+      applauded	      applauded	       S-V
+            the	              -	      B-A1
+          shake	              -	      E-A1
+             up	              -	     S-C-V
+              .	              -	         O
+
+             It	              -	      S-A1	         O	         O
+             's	             's	       S-V	         O	         O
+            not	              -	  B-AM-MNR	         O	         O
+      something	              -	  I-AM-MNR	         O	         O
+             we	              -	  I-AM-MNR	      S-A1	      S-A1
+            're	            're	  I-AM-MNR	       S-V	         O
+            not	              -	  I-AM-MNR	    B-C-A1	  S-AM-NEG
+           used	           used	  I-AM-MNR	    I-C-A1	       S-V
+             to	              -	  I-AM-MNR	    I-C-A1	      B-A2
+             in	              -	  I-AM-MNR	    I-C-A1	      I-A2
+            the	              -	  I-AM-MNR	    I-C-A1	      I-A2
+       industry	              -	  E-AM-MNR	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O
+
+            But	              -	         O	         O	         O	         O
+              I	              -	      S-A0	         O	         O	         O
+          think	          think	       S-V	         O	         O	         O
+          right	              -	  B-AM-TMP	         O	         O	         O
+            now	              -	  E-AM-TMP	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+            for	              -	         O	  B-AM-ADV	         O	         O
+             AT	              -	         O	  I-AM-ADV	         O	         O
+            and	              -	         O	  I-AM-ADV	         O	         O
+              T	              -	         O	  I-AM-ADV	         O	         O
+            and	              -	         O	  I-AM-ADV	         O	         O
+            the	              -	         O	  I-AM-ADV	         O	         O
+         people	              -	         O	  I-AM-ADV	         O	         O
+           here	              -	         O	  E-AM-ADV	         O	         O
+              ,	              -	         O	         O	         O	         O
+             it	              -	         O	         O	         O	         O
+             's	             's	         O	       S-V	         O	         O
+         fairly	              -	         O	  B-AM-MNR	         O	         O
+        intense	              -	         O	  E-AM-MNR	         O	         O
+             as	              -	         O	  B-AM-TMP	         O	         O
+            you	              -	         O	  I-AM-TMP	      S-A1	      S-A0
+          might	              -	         O	  I-AM-TMP	  S-AM-MOD	  S-AM-MOD
+              w	              w	         O	  I-AM-TMP	       S-V	         O
+              -	              -	         O	  I-AM-TMP	         O	         O
+           well	              -	         O	  I-AM-TMP	         O	  S-AM-MNR
+        imagine	        imagine	         O	  E-AM-TMP	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+              I	              -	      S-A0
+           mean	           mean	       S-V
+           look	              -	      B-A1
+             at	              -	      I-A1
+            the	              -	      I-A1
+          stock	              -	      E-A1
+              .	              -	         O
+
+            You	              -	      S-A0	         O	         O	         O	         O	         O	         O
+           know	           know	       S-V	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+          since	              -	         O	         O	         O	  B-AM-TMP	  B-AM-TMP	         O	         O
+             he	              -	         O	      S-A1	      S-A1	  I-AM-TMP	  I-AM-TMP	         O	         O
+             's	             's	         O	       S-V	         O	  I-AM-TMP	  I-AM-TMP	         O	         O
+           been	           been	         O	         O	       S-V	  I-AM-TMP	  I-AM-TMP	         O	         O
+           here	              -	         O	         O	  B-AM-LOC	  E-AM-TMP	  I-AM-TMP	         O	         O
+            the	              -	         O	         O	  I-AM-LOC	      B-A1	  I-AM-TMP	         O	         O
+          stock	              -	         O	         O	  I-AM-LOC	      E-A1	  I-AM-TMP	         O	         O
+    skyrocketed	    skyrocketed	         O	         O	  I-AM-LOC	       S-V	  I-AM-TMP	         O	         O
+             so	              -	         O	         O	  E-AM-LOC	      S-A1	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+           Yeah	              -	         O	         O	         O	         O	  S-AM-TMP	         O	         O
+              I	              -	         O	         O	         O	         O	      S-A0	         O	         O
+          think	          think	         O	         O	         O	         O	       S-V	         O	         O
+             he	              -	         O	         O	         O	         O	      B-A1	      S-A0	      S-A0
+             's	             's	         O	         O	         O	         O	      I-A1	       S-V	         O
+          doing	          doing	         O	         O	         O	         O	      I-A1	      B-A1	       S-V
+            the	              -	         O	         O	         O	         O	      I-A1	      I-A1	      B-A1
+          right	              -	         O	         O	         O	         O	      I-A1	      I-A1	      I-A1
+          thing	              -	         O	         O	         O	         O	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+              I	              -	      S-A0	         O	         O	         O	         O	         O	         O	         O
+          think	          think	       S-V	         O	         O	         O	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O	         O	         O	         O	         O
+             's	             's	      I-A1	       S-V	         O	         O	         O	         O	         O	         O
+              a	              -	      I-A1	      B-A1	         O	         O	         O	         O	         O	         O
+           good	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+          thing	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+           that	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+           they	              -	      I-A1	      I-A1	      S-A1	         O	      S-A1	      S-A0	         O	         O
+            're	            're	      I-A1	      I-A1	       S-V	         O	         O	         O	         O	         O
+        finally	              -	      I-A1	      I-A1	  S-AM-TMP	         O	  S-AM-TMP	         O	         O	         O
+          going	          going	      I-A1	      I-A1	         O	       S-V	  S-AM-MOD	  S-AM-MOD	         O	         O
+             to	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+             be	             be	      I-A1	      I-A1	         O	         O	       S-V	         O	         O	         O
+     downsizing	     downsizing	      I-A1	      I-A1	         O	         O	    B-C-A1	       S-V	         O	         O
+            you	              -	      I-A1	      I-A1	         O	         O	    I-C-A1	      S-A1	      S-A0	         O
+           know	           know	      I-A1	      I-A1	         O	         O	    I-C-A1	      B-A2	       S-V	         O
+           some	              -	      I-A1	      I-A1	         O	         O	    I-C-A1	      I-A2	      B-A1	         O
+     management	              -	      I-A1	      I-A1	         O	         O	    E-C-A1	      E-A2	      E-A1	         O
+        because	              -	      I-A1	      I-A1	         O	         O	  B-AM-CAU	  B-AM-CAU	  B-AM-CAU	         O
+          there	              -	      I-A1	      I-A1	         O	         O	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU	      S-A0
+             is	             is	      I-A1	      I-A1	         O	         O	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU	       S-V
+              a	              -	      I-A1	      I-A1	         O	         O	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU	      B-A1
+          whole	              -	      I-A1	      I-A1	         O	         O	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU	      I-A1
+            lot	              -	      I-A1	      I-A1	         O	         O	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU	      I-A1
+             of	              -	      I-A1	      I-A1	         O	         O	  I-AM-CAU	  I-AM-CAU	  I-AM-CAU	      I-A1
+          waste	              -	      E-A1	      E-A1	         O	         O	  E-AM-CAU	  E-AM-CAU	  E-AM-CAU	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+           Good	              -
+           news	              -
+            for	              -
+             AT	              -
+            and	              -
+              T	              -
+          today	              -
+              .	              -
+
+              I	              -	      S-A0	         O
+          think	          think	       S-V	         O
+             it	              -	      B-A1	      S-A1
+             's	             's	      I-A1	       S-V
+      excellent	              -	      I-A1	      B-A3
+            for	              -	      I-A1	      I-A3
+            the	              -	      I-A1	      I-A3
+        company	              -	      E-A1	      E-A3
+              .	              -	         O	         O
+
+            But	              -	  S-AM-DIS	  S-AM-DIS
+      investors	              -	      S-A1	      S-A1
+            are	            are	       S-V	         O
+    approaching	    approaching	    B-C-A1	       S-V
+            the	              -	    I-C-A1	      B-A2
+        changes	              -	    I-C-A1	      I-A2
+           with	              -	    I-C-A1	      I-A2
+        caution	              -	    I-C-A1	      I-A2
+         shares	              -	    I-C-A1	      I-A2
+             of	              -	    I-C-A1	      I-A2
+             AT	              -	    I-C-A1	      I-A2
+            and	              -	    I-C-A1	      I-A2
+              T	              -	    I-C-A1	      I-A2
+           down	              -	    I-C-A1	      I-A2
+         nearly	              -	    I-C-A1	      I-A2
+           four	              -	    I-C-A1	      I-A2
+             at	              -	    I-C-A1	      I-A2
+      sixty-one	              -	    I-C-A1	      I-A2
+            and	              -	    I-C-A1	      I-A2
+              a	              -	    I-C-A1	      I-A2
+           half	              -	    E-C-A1	      E-A2
+              .	              -	         O	         O
+
