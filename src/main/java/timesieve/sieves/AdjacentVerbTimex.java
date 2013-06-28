@@ -1,5 +1,6 @@
 package timesieve.sieves;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.*;
@@ -11,6 +12,7 @@ import timesieve.TextEvent;
 import timesieve.Timex;
 import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
+import timesieve.util.TimeSieveProperties;
 import timesieve.util.TreeOperator;
 
 import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
@@ -20,7 +22,7 @@ import edu.stanford.nlp.trees.TreeFactory;
 /**
  * Returns IS_INCLUDED for event, timex pairs for which
  * (1) event directly precedes timex
- * (2) timex if of type DATE
+ * (2) timex is of type DATE
  * 
  * Only considers event/time pairs in the same sentence.
  * 
@@ -34,47 +36,68 @@ public class AdjacentVerbTimex implements Sieve {
 	public boolean debug = false;
 	private String valQuarterRegex = "\\d{4}-Q\\d";
 	private Pattern valQuarter = Pattern.compile(valQuarterRegex);
-	private static TreeFactory tf = new LabeledScoredTreeFactory();
 	/**
 	 * The main function. All sieves must have this.
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
-		// The size of the list is the number of sentences in the document.
-		// The inner list is the events in textual order.
-		List<List<TextEvent>> allEvents = doc.getEventsBySentence();
-		List<List<Timex>> allTimexes = doc.getTimexesBySentence();
-		List<Tree> allTrees = doc.getAllParseTrees();
+		// PROPERTIES CODE
+		// 1. get adjacency type. this restricts acceptable verb-timex order
+		// VerbTimex, TimexVerb, or unordered are the possible values.
+		// VerbTimex is default; any value reverts to VerbTimex.
 		
+		// load properties file
+		try {
+			TimeSieveProperties.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		// fill in properties values
+		String adjType = null;
+		
+		try {
+			adjType = TimeSieveProperties.getString("AdjacentVerbTimex", "VerbTimex");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		// SIEVE CODE
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
 		
-		// Make BEFORE links between all intra-sentence pairs.
-		int sid = 0;
+		// 
 		List<SieveSentence> sentList = doc.getSentences();
-		
 		for( SieveSentence sent : sentList ) {
 			if (debug == true) {
 				System.out.println("DEBUG: adding tlinks from " + doc.getDocname() + " sentence " + sent.sentence());
 				}
 			// get parse tree from sentence to calculate POS
-			Tree sentParseTree = allTrees.get(sid);
+			Tree tree = null;
 			// check timex, event pairs against rule criteria
-			for (Timex timex : allTimexes.get(sid)) {
-				for (TextEvent event : allEvents.get(sid)) {
-					// if event directly precedes timex,
-					// timex is a date but isn't a quarter,
-					// and event is a verb, add an event-to-time is_included tlink
-					if (timex.offset() - 1 == event.index() && validateTimex(timex) &&
-							posTagFromTree(sentParseTree, event.index()).startsWith("VB")) {
-						if (debug == true) {
-							System.out.println("DEBUGPOS: " + event.string() + "/" + posTagFromTree(sentParseTree, event.index()) + " " + timex.text() + "/" + timex.value());
+			for (Timex timex : sent.timexes()) {
+				for (TextEvent event : sent.events()) {
+					// set adjacency setting based on adjacency type 
+					boolean adjSetting;
+					if (adjType.equals("unordered")) adjSetting = (Math.abs(timex.offset() - event.index()) == 1);
+					else if (adjType.equals("TimexVerb")) adjSetting = (timex.offset() + 1 == event.index());
+					else adjSetting = (timex.offset() - 1 == event.index()); 
+					
+					// if the event/timex pair satisfies the adjacency setting,
+					// and the event is a verb, then label the pair is_included
+					if (adjSetting) { 
+						String pos = posTagFromTree(tree, sent, event.index());
+						if (pos.startsWith("VB")) {
+							if (debug == true) {
+								System.out.println("DEBUGPOS: " + event.string() + "/" + pos + " " + timex.text() + "/" + timex.value());
 							}
-						proposed.add(new EventTimeLink(event.eiid() , timex.tid(), TLink.TYPE.IS_INCLUDED));
+							proposed.add(new EventTimeLink(event.eiid() , timex.tid(), TLink.TYPE.IS_INCLUDED));
 						}
 					}
 				}
-			sid++;
 			}
+		}
 		if (debug == true) {
 			System.out.println("TLINKS: " + proposed);
 			}
@@ -91,16 +114,16 @@ public class AdjacentVerbTimex implements Sieve {
 		else return false;
 	}
 	
-	private String posTagFromTree(Tree sentParseTree, int tokenIndex){
-		String posTag = TreeOperator.indexToPOSTag(sentParseTree, tokenIndex);
-		return posTag;
-	}
+	// given a sentence parse tree and an (sentence) index, return
+	// the pos of the corresponding word.
 	
-	private Tree sidToTree(int sid, List<String> allParseStrings) {
-		String sentParseString = allParseStrings.get(sid);
-		Tree sentParseTree = TreeOperator.stringToTree(sentParseString, tf);
-		return sentParseTree;
+	private String posTagFromTree(Tree tree, SieveSentence sent, int index) {
+		// tree might be null; we keep it null until we need a pos for the first time for a given sentence
+		if (tree == null) tree = sent.getParseTree(); 
+		String pos = TreeOperator.indexToPOSTag(tree, index);
+		return pos;
 	}
+
 	/**
 	 * No training. Just rule-based.
 	 */
