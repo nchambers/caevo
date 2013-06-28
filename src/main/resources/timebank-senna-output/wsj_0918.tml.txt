@@ -1,0 +1,831 @@
+             Du	              -	      B-A0	         O
+           Pont	              -	      I-A0	         O
+            Co.	              -	      E-A0	         O
+       reported	       reported	       S-V	         O
+           that	              -	      B-A1	         O
+  third-quarter	              -	      I-A1	      B-A1
+         profit	              -	      I-A1	      E-A1
+           grew	           grew	      I-A1	       S-V
+              a	              -	      I-A1	      B-A2
+         robust	              -	      I-A1	      I-A2
+             19	              -	      I-A1	      I-A2
+              %	              -	      I-A1	      E-A2
+           from	              -	      I-A1	  B-AM-TMP
+              a	              -	      I-A1	  I-AM-TMP
+           year	              -	      I-A1	  I-AM-TMP
+            ago	              -	      I-A1	  E-AM-TMP
+             on	              -	      I-A1	  B-AM-MNR
+            the	              -	      I-A1	  I-AM-MNR
+       strength	              -	      I-A1	  I-AM-MNR
+             of	              -	      I-A1	  I-AM-MNR
+            the	              -	      I-A1	  I-AM-MNR
+        company	              -	      I-A1	  I-AM-MNR
+             's	              -	      I-A1	  I-AM-MNR
+     operations	              -	      I-A1	  I-AM-MNR
+             in	              -	      I-A1	  I-AM-MNR
+        various	              -	      I-A1	  I-AM-MNR
+      chemicals	              -	      I-A1	  I-AM-MNR
+            and	              -	      I-A1	  I-AM-MNR
+         fibers	              -	      I-A1	  I-AM-MNR
+              ,	              -	      I-A1	  I-AM-MNR
+            and	              -	      I-A1	  I-AM-MNR
+             in	              -	      I-A1	  I-AM-MNR
+      petroleum	              -	      E-A1	  E-AM-MNR
+              .	              -	         O	         O
+
+             Du	              -	      B-A0	         O	         O
+           Pont	              -	      E-A0	         O	         O
+           also	              -	  S-AM-DIS	         O	         O
+         raised	         raised	       S-V	         O	         O
+            its	              -	      B-A1	         O	         O
+      quarterly	              -	      I-A1	         O	         O
+       dividend	              -	      E-A1	         O	         O
+             to	              -	      B-A4	         O	         O
+              $	              -	      I-A4	         O	         O
+           1.20	              -	      I-A4	         O	         O
+              a	              -	      I-A4	         O	         O
+          share	              -	      E-A4	         O	         O
+           from	              -	      B-A3	         O	         O
+              $	              -	      I-A3	         O	         O
+           1.05	              -	      E-A3	         O	         O
+              ,	              -	         O	         O	         O
+              a	              -	  B-AM-ADV	      B-A0	         O
+         change	              -	  I-AM-ADV	      E-A0	         O
+           that	              -	  I-AM-ADV	    S-R-A0	         O
+           will	              -	  I-AM-ADV	  S-AM-MOD	         O
+       increase	       increase	  I-AM-ADV	       S-V	         O
+            the	              -	  I-AM-ADV	      B-A1	         O
+     annualized	     annualized	  I-AM-ADV	      I-A1	       S-V
+         payout	              -	  I-AM-ADV	      I-A1	      S-A1
+             to	              -	  I-AM-ADV	      I-A1	         O
+   shareholders	              -	  I-AM-ADV	      E-A1	         O
+             by	              -	  I-AM-ADV	      B-A2	         O
+           some	              -	  I-AM-ADV	      I-A2	         O
+              $	              -	  I-AM-ADV	      I-A2	         O
+            140	              -	  I-AM-ADV	      I-A2	         O
+        million	              -	  E-AM-ADV	      E-A2	         O
+              .	              -	         O	         O	         O
+
+             Du	              -	         O	      B-A1	      B-A1
+           Pont	              -	         O	      E-A1	      E-A1
+              ,	              -	         O	         O	         O
+         unlike	              -	         O	  B-AM-ADV	  B-AM-ADV
+      companies	              -	      S-A1	  I-AM-ADV	  I-AM-ADV
+           hurt	           hurt	       S-V	  I-AM-ADV	  I-AM-ADV
+          badly	              -	  S-AM-MNR	  I-AM-ADV	  I-AM-ADV
+             by	              -	      B-A2	  I-AM-ADV	  I-AM-ADV
+          sharp	              -	      I-A2	  I-AM-ADV	  I-AM-ADV
+          price	              -	      I-A2	  I-AM-ADV	  I-AM-ADV
+       declines	              -	      I-A2	  I-AM-ADV	  I-AM-ADV
+            for	              -	      I-A2	  I-AM-ADV	  I-AM-ADV
+          basic	              -	      I-A2	  I-AM-ADV	  I-AM-ADV
+      chemicals	              -	      I-A2	  I-AM-ADV	  I-AM-ADV
+            and	              -	      I-A2	  I-AM-ADV	  I-AM-ADV
+       plastics	              -	      E-A2	  E-AM-ADV	  E-AM-ADV
+              ,	              -	         O	         O	         O
+             is	             is	         O	       S-V	         O
+     benefiting	     benefiting	         O	  B-AM-ADV	       S-V
+           from	              -	         O	  I-AM-ADV	      B-A0
+            its	              -	         O	  I-AM-ADV	      I-A0
+          broad	              -	         O	  I-AM-ADV	      I-A0
+          range	              -	         O	  I-AM-ADV	      I-A0
+             of	              -	         O	  I-AM-ADV	      I-A0
+     businesses	              -	         O	  E-AM-ADV	      E-A0
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1	         O	         O	         O	         O
+         profit	              -	      I-A1	      I-A1	         O	         O	         O	         O
+           gain	              -	      E-A1	      E-A1	         O	         O	         O	         O
+            was	            was	       S-V	         O	         O	         O	         O	         O
+           made	           made	  B-AM-TMP	       S-V	         O	         O	         O	         O
+        despite	              -	  I-AM-TMP	         O	         O	         O	         O	         O
+              a	              -	  I-AM-TMP	      B-A0	         O	         O	         O	         O
+      weakening	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+             in	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+            the	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+        housing	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+         market	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+              ,	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+            for	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+          which	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+            the	              -	  I-AM-TMP	      I-A0	      B-A1	         O	         O	         O
+        company	              -	  I-AM-TMP	      I-A0	      E-A1	         O	         O	         O
+             is	             is	  I-AM-TMP	      I-A0	       S-V	         O	         O	         O
+              a	              -	  I-AM-TMP	      I-A0	      B-A1	         O	         O	         O
+       supplier	              -	  I-AM-TMP	      I-A0	      E-A1	         O	         O	         O
+              ,	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+            and	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+              a	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+  strengthening	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+             in	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+            the	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+         dollar	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+              ,	              -	  I-AM-TMP	      I-A0	         O	         O	         O	         O
+          which	              -	  I-AM-TMP	      I-A0	         O	    S-R-A0	         O	         O
+         lowers	         lowers	  I-AM-TMP	      I-A0	         O	       S-V	         O	         O
+            the	              -	  I-AM-TMP	      I-A0	         O	      B-A1	         O	         O
+          value	              -	  I-AM-TMP	      I-A0	         O	      I-A1	         O	         O
+             of	              -	  I-AM-TMP	      I-A0	         O	      I-A1	         O	         O
+       overseas	              -	  I-AM-TMP	      I-A0	         O	      I-A1	         O	         O
+       earnings	              -	  I-AM-TMP	      I-A0	         O	      E-A1	         O	         O
+           when	              -	  I-AM-TMP	      I-A0	         O	  B-AM-TMP	         O	         O
+           they	              -	  I-AM-TMP	      I-A0	         O	  I-AM-TMP	      S-A1	      S-A1
+            are	            are	  I-AM-TMP	      I-A0	         O	  I-AM-TMP	       S-V	         O
+     translated	     translated	  I-AM-TMP	      I-A0	         O	  I-AM-TMP	    B-C-A1	       S-V
+           into	              -	  I-AM-TMP	      I-A0	         O	  I-AM-TMP	    I-C-A1	      B-A2
+        dollars	              -	  E-AM-TMP	      E-A0	         O	  E-AM-TMP	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O
+     Wilmington	              -	      I-A0	         O
+              ,	              -	      I-A0	         O
+           Del.	              -	      I-A0	         O
+              ,	              -	      I-A0	         O
+        company	              -	      E-A0	         O
+       reported	       reported	       S-V	         O
+            net	              -	      B-A1	      B-A1
+             of	              -	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A1
+            547	              -	      I-A1	      I-A1
+        million	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+             or	              -	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A1
+           2.36	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+          share	              -	      I-A1	      E-A1
+              ,	              -	      I-A1	         O
+          which	              -	      I-A1	    S-R-A1
+            was	            was	      I-A1	       S-V
+             in	              -	      I-A1	  B-AM-MNR
+           line	              -	      I-A1	  I-AM-MNR
+           with	              -	      I-A1	  I-AM-MNR
+           Wall	              -	      I-A1	  I-AM-MNR
+         Street	              -	      I-A1	  I-AM-MNR
+      estimates	              -	      E-A1	  E-AM-MNR
+              .	              -	         O	         O
+
+             In	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+   year-earlier	              -	  I-AM-TMP
+         period	              -	  E-AM-TMP
+              ,	              -	         O
+            the	              -	      B-A0
+        company	              -	      E-A0
+         earned	         earned	       S-V
+              $	              -	      B-A1
+            461	              -	      I-A1
+        million	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+              $	              -	      I-A1
+           1.91	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      E-A1
+              .	              -	         O
+
+          Sales	              -	      B-A1
+             in	              -	      I-A1
+            the	              -	      I-A1
+         latest	              -	      I-A1
+        quarter	              -	      E-A1
+           were	           were	       S-V
+              $	              -	      B-A2
+           8.59	              -	      I-A2
+        billion	              -	      E-A2
+              ,	              -	         O
+             up	              -	  B-AM-ADV
+            9.4	              -	  I-AM-ADV
+              %	              -	  I-AM-ADV
+           from	              -	  I-AM-ADV
+              $	              -	  I-AM-ADV
+           7.85	              -	  I-AM-ADV
+        billion	              -	  E-AM-ADV
+              .	              -	         O
+
+            The	              -	      B-A1	         O	         O
+       dividend	              -	      I-A1	         O	         O
+       increase	              -	      E-A1	         O	         O
+            was	            was	       S-V	         O	         O
+             Du	              -	      B-A3	         O	         O
+           Pont	              -	      I-A3	         O	         O
+             's	              -	      I-A3	         O	         O
+         second	              -	      I-A3	         O	         O
+           this	              -	      I-A3	         O	         O
+           year	              -	      I-A3	         O	         O
+              ,	              -	      I-A3	         O	         O
+             an	              -	      I-A3	         O	         O
+    affirmation	              -	      I-A3	         O	         O
+             of	              -	      I-A3	         O	         O
+     statements	              -	      I-A3	         O	         O
+             by	              -	      I-A3	         O	         O
+            top	              -	      I-A3	         O	         O
+     executives	              -	      I-A3	         O	         O
+           that	              -	      I-A3	         O	         O
+           they	              -	      I-A3	      S-A0	      S-A0
+         intend	         intend	      I-A3	       S-V	         O
+             to	              -	      I-A3	      B-A1	         O
+       increase	       increase	      I-A3	      I-A1	       S-V
+        rewards	              -	      I-A3	      I-A1	      B-A1
+             to	              -	      I-A3	      I-A1	      I-A1
+   shareholders	              -	      E-A3	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+             We	              -	      S-A0	      S-A0	         O	         O	         O
+           have	           have	       S-V	         O	         O	         O	         O
+            n't	              -	      B-A1	  S-AM-NEG	         O	         O	         O
+      benefited	      benefited	      I-A1	       S-V	         O	         O	         O
+            the	              -	      I-A1	      B-A1	         O	         O	         O
+    shareholder	              -	      I-A1	      E-A1	         O	         O	         O
+             as	              -	      I-A1	  B-AM-TMP	         O	         O	         O
+           much	              -	      I-A1	  I-AM-TMP	         O	         O	         O
+             as	              -	      I-A1	  I-AM-TMP	         O	         O	         O
+             we	              -	      I-A1	  I-AM-TMP	      S-A0	      S-A0	         O
+           need	           need	      I-A1	  I-AM-TMP	       S-V	         O	         O
+             to	              -	      E-A1	  I-AM-TMP	      S-A1	         O	         O
+              ,	              -	         O	  I-AM-TMP	         O	         O	         O
+           said	           said	         O	  I-AM-TMP	         O	       S-V	         O
+          Edgar	              -	         O	  I-AM-TMP	         O	      B-A0	         O
+        Woolard	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+            Jr.	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+              ,	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+             Du	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+           Pont	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+             's	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+       chairman	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+            and	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+          chief	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+      executive	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+        officer	              -	         O	  I-AM-TMP	         O	      I-A0	         O
+              ,	              -	         O	  I-AM-TMP	         O	      E-A0	         O
+             in	              -	         O	  I-AM-TMP	         O	  B-AM-TMP	         O
+             an	              -	         O	  I-AM-TMP	         O	  I-AM-TMP	         O
+      interview	              -	         O	  I-AM-TMP	         O	  I-AM-TMP	         O
+        several	              -	         O	  I-AM-TMP	         O	  I-AM-TMP	         O
+         months	              -	         O	  I-AM-TMP	         O	  I-AM-TMP	         O
+         before	              -	         O	  I-AM-TMP	         O	  I-AM-TMP	         O
+             he	              -	         O	  I-AM-TMP	         O	  I-AM-TMP	      S-A0
+        entered	        entered	         O	  I-AM-TMP	         O	  I-AM-TMP	       S-V
+            his	              -	         O	  I-AM-TMP	         O	  I-AM-TMP	      B-A1
+        current	              -	         O	  I-AM-TMP	         O	  I-AM-TMP	      I-A1
+       position	              -	         O	  I-AM-TMP	         O	  I-AM-TMP	      E-A1
+             in	              -	         O	  I-AM-TMP	         O	  I-AM-TMP	  B-AM-TMP
+          April	              -	         O	  E-AM-TMP	         O	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	         O
+        largest	              -	      I-A1	         O
+    beneficiary	              -	      E-A1	         O
+           will	              -	  S-AM-MOD	         O
+             be	             be	       S-V	         O
+        Seagram	              -	      B-A2	      B-A0
+            Co.	              -	      I-A2	      E-A0
+              ,	              -	      I-A2	         O
+          which	              -	      I-A2	    S-R-A0
+           owns	           owns	      I-A2	       S-V
+          about	              -	      I-A2	      B-A1
+             23	              -	      I-A2	      I-A1
+              %	              -	      I-A2	      I-A1
+             of	              -	      I-A2	      I-A1
+             Du	              -	      I-A2	      I-A1
+           Pont	              -	      E-A2	      E-A1
+              .	              -	         O	         O
+
+              A	              -	         O	      B-A0	         O
+      spokesman	              -	         O	      I-A0	         O
+            for	              -	         O	      I-A0	         O
+        Seagram	              -	         O	      I-A0	         O
+              ,	              -	         O	      I-A0	         O
+            the	              -	      B-A1	      I-A0	         O
+       Montreal	              -	      I-A1	      I-A0	         O
+           wine	              -	      I-A1	      I-A0	         O
+            and	              -	      I-A1	      I-A0	         O
+        spirits	              -	      I-A1	      I-A0	         O
+        concern	              -	      E-A1	      I-A0	         O
+     controlled	     controlled	       S-V	      I-A0	         O
+             by	              -	      B-A0	      I-A0	         O
+            the	              -	      I-A0	      I-A0	         O
+       Bronfman	              -	      I-A0	      I-A0	         O
+         family	              -	      E-A0	      I-A0	         O
+              ,	              -	         O	      E-A0	         O
+           said	           said	         O	       S-V	         O
+            the	              -	         O	      B-A1	      B-A0
+        company	              -	         O	      I-A1	      E-A0
+           will	              -	         O	      I-A1	  S-AM-MOD
+           post	           post	         O	      I-A1	       S-V
+     additional	              -	         O	      I-A1	      B-A1
+         pretax	              -	         O	      I-A1	      I-A1
+         profit	              -	         O	      I-A1	      I-A1
+             of	              -	         O	      I-A1	      I-A1
+          about	              -	         O	      I-A1	      I-A1
+              $	              -	         O	      I-A1	      I-A1
+             33	              -	         O	      I-A1	      I-A1
+        million	              -	         O	      I-A1	      I-A1
+              a	              -	         O	      I-A1	      I-A1
+           year	              -	         O	      I-A1	      E-A1
+        because	              -	         O	      I-A1	         O
+             of	              -	         O	      I-A1	         O
+            the	              -	         O	      I-A1	         O
+     additional	              -	         O	      I-A1	         O
+             Du	              -	         O	      I-A1	         O
+           Pont	              -	         O	      I-A1	         O
+      dividends	              -	         O	      E-A1	         O
+              .	              -	         O	         O	         O
+
+             Du	              -	      B-A0	         O	         O
+           Pont	              -	      E-A0	         O	         O
+           also	              -	  S-AM-DIS	         O	         O
+      announced	      announced	       S-V	         O	         O
+          plans	              -	      B-A1	         O	         O
+            for	              -	      I-A1	         O	         O
+              a	              -	      I-A1	         O	         O
+        3-for-1	              -	      I-A1	         O	         O
+          stock	              -	      I-A1	         O	         O
+          split	              -	      E-A1	         O	         O
+              ,	              -	         O	         O	         O
+       although	              -	  B-AM-ADV	         O	         O
+            the	              -	  I-AM-ADV	      B-A1	      B-A1
+        initial	              -	  I-AM-ADV	      I-A1	      I-A1
+         higher	              -	  I-AM-ADV	      I-A1	      I-A1
+       dividend	              -	  I-AM-ADV	      E-A1	      E-A1
+           will	              -	  I-AM-ADV	  S-AM-MOD	  S-AM-MOD
+             be	             be	  I-AM-ADV	       S-V	         O
+           paid	           paid	  I-AM-ADV	      B-A3	       S-V
+             on	              -	  I-AM-ADV	      I-A3	      B-A2
+      pre-split	              -	  I-AM-ADV	      I-A3	      I-A2
+         shares	              -	  E-AM-ADV	      E-A3	      E-A2
+              .	              -	         O	         O	         O
+
+             Du	              -	      B-A1	      B-A1
+           Pont	              -	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1
+          stock	              -	      E-A1	      E-A1
+           rose	           rose	       S-V	         O
+              $	              -	      B-A2	         O
+           2.50	              -	      I-A2	         O
+              a	              -	      I-A2	         O
+          share	              -	      E-A2	         O
+             to	              -	  B-AM-PNC	         O
+          close	          close	  I-AM-PNC	       S-V
+             at	              -	  I-AM-PNC	  B-AM-EXT
+              $	              -	  I-AM-PNC	  I-AM-EXT
+        117.375	              -	  E-AM-PNC	  E-AM-EXT
+             in	              -	  B-AM-LOC	         O
+            New	              -	  I-AM-LOC	         O
+           York	              -	  I-AM-LOC	         O
+          Stock	              -	  I-AM-LOC	         O
+       Exchange	              -	  I-AM-LOC	         O
+      composite	              -	  I-AM-LOC	         O
+        trading	              -	  E-AM-LOC	         O
+      yesterday	              -	  S-AM-TMP	         O
+              .	              -	         O	         O
+
+        Seagram	              -	      S-A1
+         closed	         closed	       S-V
+             at	              -	  B-AM-EXT
+              $	              -	  I-AM-EXT
+          84.75	              -	  E-AM-EXT
+              ,	              -	         O
+             up	              -	  B-AM-MNR
+           12.5	              -	  I-AM-MNR
+          cents	              -	  I-AM-MNR
+              a	              -	  I-AM-MNR
+          share	              -	  E-AM-MNR
+             in	              -	  B-AM-LOC
+            Big	              -	  I-AM-LOC
+          Board	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+              .	              -	         O
+
+        Leading	        Leading	       S-V	  B-AM-ADV	         O
+            the	              -	      B-A1	  I-AM-ADV	         O
+          gains	              -	      I-A1	  I-AM-ADV	         O
+            for	              -	      I-A1	  I-AM-ADV	         O
+             Du	              -	      I-A1	  I-AM-ADV	         O
+           Pont	              -	      E-A1	  E-AM-ADV	         O
+             in	              -	  B-AM-TMP	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	  I-AM-TMP	         O
+         latest	              -	  I-AM-TMP	  I-AM-TMP	         O
+        quarter	              -	  E-AM-TMP	  E-AM-TMP	         O
+            was	            was	         O	       S-V	         O
+            its	              -	      B-A0	      B-A1	      B-A1
+     industrial	              -	      I-A0	      I-A1	      I-A1
+       products	              -	      I-A0	      I-A1	      I-A1
+        segment	              -	      I-A0	      I-A1	      E-A1
+              ,	              -	      I-A0	      I-A1	         O
+          where	              -	      I-A0	      I-A1	S-R-AM-LOC
+         profit	              -	      I-A0	      I-A1	      S-A1
+         soared	         soared	      I-A0	      I-A1	       S-V
+             to	              -	      I-A0	      I-A1	      B-A4
+              $	              -	      I-A0	      I-A1	      I-A4
+            155	              -	      I-A0	      I-A1	      I-A4
+        million	              -	      I-A0	      I-A1	      E-A4
+           from	              -	      I-A0	      I-A1	      B-A3
+              $	              -	      I-A0	      I-A1	      I-A3
+             99	              -	      I-A0	      I-A1	      I-A3
+        million	              -	      I-A0	      I-A1	      I-A3
+              a	              -	      I-A0	      I-A1	      I-A3
+           year	              -	      I-A0	      I-A1	      I-A3
+        earlier	              -	      E-A0	      E-A1	      E-A3
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	         O	         O
+        company	              -	      E-A1	         O	         O
+      benefited	      benefited	       S-V	         O	         O
+           from	              -	      B-A0	         O	         O
+      continued	      continued	      I-A0	       S-V	         O
+         strong	              -	      I-A0	      B-A1	         O
+         demand	              -	      I-A0	      E-A1	         O
+            and	              -	      I-A0	         O	         O
+         higher	              -	      I-A0	         O	         O
+        selling	              -	      I-A0	         O	         O
+         prices	              -	      I-A0	         O	         O
+            for	              -	      I-A0	         O	         O
+       titanium	              -	      I-A0	         O	         O
+        dioxide	              -	      I-A0	         O	         O
+              ,	              -	      I-A0	         O	         O
+              a	              -	      I-A0	         O	      B-A1
+          white	              -	      I-A0	         O	      I-A1
+        pigment	              -	      I-A0	         O	      E-A1
+           used	           used	      I-A0	         O	       S-V
+             in	              -	      I-A0	         O	  B-AM-LOC
+         paints	              -	      I-A0	         O	  I-AM-LOC
+              ,	              -	      I-A0	         O	  I-AM-LOC
+          paper	              -	      I-A0	         O	  I-AM-LOC
+            and	              -	      I-A0	         O	  I-AM-LOC
+       plastics	              -	      E-A0	         O	  E-AM-LOC
+              .	              -	         O	         O	         O
+
+          James	              -	      B-A0	         O	         O	         O	         O
+         Fallon	              -	      I-A0	         O	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O	         O
+              a	              -	      I-A0	         O	         O	         O	         O
+            New	              -	      I-A0	         O	         O	         O	         O
+     Providence	              -	      I-A0	         O	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O	         O
+           N.J.	              -	      I-A0	         O	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O	         O
+      marketing	              -	      I-A0	         O	         O	         O	         O
+     consultant	              -	      I-A0	         O	         O	         O	         O
+             to	              -	      I-A0	         O	         O	         O	         O
+            the	              -	      I-A0	         O	         O	         O	         O
+      chemicals	              -	      I-A0	         O	         O	         O	         O
+       industry	              -	      I-A0	         O	         O	         O	         O
+              ,	              -	      E-A0	         O	         O	         O	         O
+           says	           says	       S-V	         O	         O	         O	         O
+             Du	              -	      B-A1	      B-A0	      B-A0	         O	         O
+           Pont	              -	      I-A1	      E-A0	      E-A0	         O	         O
+          still	              -	      I-A1	  S-AM-TMP	         O	         O	         O
+          holds	          holds	      I-A1	       S-V	         O	         O	         O
+             an	              -	      I-A1	      B-A1	         O	         O	         O
+           edge	              -	      I-A1	      E-A1	         O	         O	         O
+             in	              -	      I-A1	  B-AM-MNR	         O	         O	         O
+         making	         making	      I-A1	  I-AM-MNR	       S-V	         O	         O
+            the	              -	      I-A1	  I-AM-MNR	      B-A1	         O	         O
+        pigment	              -	      I-A1	  E-AM-MNR	      E-A1	         O	         O
+        because	              -	      I-A1	  B-AM-CAU	         O	         O	         O
+            the	              -	      I-A1	  I-AM-CAU	         O	      B-A1	         O
+        company	              -	      I-A1	  I-AM-CAU	         O	      E-A1	         O
+            was	            was	      I-A1	  I-AM-CAU	         O	       S-V	         O
+          first	              -	      I-A1	  I-AM-CAU	         O	  S-AM-TMP	         O
+             in	              -	      I-A1	  I-AM-CAU	         O	  B-AM-CAU	         O
+           with	              -	      I-A1	  I-AM-CAU	         O	  I-AM-CAU	         O
+            the	              -	      I-A1	  I-AM-CAU	         O	  I-AM-CAU	         O
+     technology	              -	      I-A1	  I-AM-CAU	         O	  I-AM-CAU	         O
+             to	              -	      I-A1	  I-AM-CAU	         O	  I-AM-CAU	         O
+          lower	          lower	      I-A1	  I-AM-CAU	         O	  I-AM-CAU	       S-V
+          costs	              -	      E-A1	  E-AM-CAU	         O	  E-AM-CAU	      S-A1
+              .	              -	         O	         O	         O	         O	         O
+
+             He	              -	      S-A0	         O	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O	         O
+             Du	              -	      B-A1	      B-A0	         O	         O	         O	         O	         O
+           Pont	              -	      I-A1	      E-A0	         O	         O	         O	         O	         O
+          holds	          holds	      I-A1	       S-V	         O	         O	         O	         O	         O
+          about	              -	      I-A1	      B-A1	         O	         O	         O	         O	         O
+             23	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+              %	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+             of	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+            the	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+     world-wide	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+         market	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+              ,	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+            the	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+        largest	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+         single	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+          share	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+              ,	              -	      I-A1	      E-A1	         O	         O	         O	         O	         O
+             at	              -	      I-A1	  B-AM-TMP	         O	         O	         O	         O	         O
+              a	              -	      I-A1	  I-AM-TMP	         O	         O	  B-AM-TMP	         O	         O
+           time	              -	      I-A1	  I-AM-TMP	         O	         O	  E-AM-TMP	         O	         O
+           when	              -	      I-A1	  I-AM-TMP	         O	         O	S-R-AM-TMP	         O	         O
+        growing	        growing	      I-A1	  I-AM-TMP	       S-V	      B-A1	      B-A0	         O	         O
+           uses	              -	      I-A1	  I-AM-TMP	      S-A1	      I-A1	      I-A0	         O	         O
+            for	              -	      I-A1	  I-AM-TMP	         O	      I-A1	      I-A0	         O	         O
+            the	              -	      I-A1	  I-AM-TMP	         O	      I-A1	      I-A0	         O	         O
+        pigment	              -	      I-A1	  I-AM-TMP	         O	      E-A1	      E-A0	         O	         O
+           have	           have	      I-A1	  I-AM-TMP	         O	       S-V	         O	         O	         O
+           kept	           kept	      I-A1	  I-AM-TMP	         O	         O	       S-V	         O	         O
+             it	              -	      I-A1	  I-AM-TMP	         O	         O	      B-A1	         O	         O
+             in	              -	      I-A1	  I-AM-TMP	         O	         O	      I-A1	         O	         O
+          tight	              -	      I-A1	  I-AM-TMP	         O	         O	      I-A1	         O	         O
+         supply	              -	      I-A1	  I-AM-TMP	         O	         O	      E-A1	         O	         O
+              ,	              -	      I-A1	  I-AM-TMP	         O	         O	         O	         O	         O
+       although	              -	      I-A1	  I-AM-TMP	         O	         O	         O	         O	         O
+         others	              -	      I-A1	  I-AM-TMP	         O	         O	         O	      S-A1	      S-A0
+            are	            are	      I-A1	  I-AM-TMP	         O	         O	         O	       S-V	         O
+            now	              -	      I-A1	  I-AM-TMP	         O	         O	         O	  S-AM-TMP	  S-AM-TMP
+         adding	         adding	      I-A1	  I-AM-TMP	         O	         O	         O	  B-AM-ADV	       S-V
+       low-cost	              -	      I-A1	  I-AM-TMP	         O	         O	         O	  I-AM-ADV	      B-A1
+     production	              -	      I-A1	  I-AM-TMP	         O	         O	         O	  I-AM-ADV	      I-A1
+       capacity	              -	      E-A1	  E-AM-TMP	         O	         O	         O	  E-AM-ADV	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+         Profit	              -	      S-A1	         O	         O
+        climbed	        climbed	       S-V	         O	         O
+             to	              -	      B-A4	         O	         O
+              $	              -	      I-A4	         O	         O
+             98	              -	      I-A4	         O	         O
+        million	              -	      E-A4	         O	         O
+           from	              -	      B-A3	         O	         O
+              $	              -	      I-A3	         O	         O
+             71	              -	      I-A3	         O	         O
+        million	              -	      I-A3	         O	         O
+             in	              -	      I-A3	         O	         O
+            the	              -	      I-A3	         O	         O
+      petroleum	              -	      I-A3	         O	         O
+        segment	              -	      E-A3	         O	         O
+              ,	              -	         O	         O	         O
+             as	              -	  B-AM-ADV	         O	         O
+             Du	              -	  I-AM-ADV	      B-A1	      B-A0
+           Pont	              -	  I-AM-ADV	      I-A1	      I-A0
+             's	              -	  I-AM-ADV	      I-A1	      I-A0
+         Conoco	              -	  I-AM-ADV	      I-A1	      I-A0
+           Inc.	              -	  I-AM-ADV	      I-A1	      I-A0
+            oil	              -	  I-AM-ADV	      I-A1	      I-A0
+        company	              -	  I-AM-ADV	      E-A1	      E-A0
+            was	            was	  I-AM-ADV	       S-V	         O
+         helped	         helped	  I-AM-ADV	    B-C-A1	       S-V
+             by	              -	  I-AM-ADV	    I-C-A1	      B-A0
+          crude	              -	  I-AM-ADV	    I-C-A1	      I-A0
+            oil	              -	  I-AM-ADV	    I-C-A1	      I-A0
+         prices	              -	  I-AM-ADV	    I-C-A1	      I-A0
+         higher	              -	  I-AM-ADV	    I-C-A1	      I-A0
+           than	              -	  I-AM-ADV	    I-C-A1	      I-A0
+              a	              -	  I-AM-ADV	    I-C-A1	      I-A0
+           year	              -	  I-AM-ADV	    I-C-A1	      I-A0
+            ago	              -	  I-AM-ADV	    E-C-A1	      E-A0
+            and	              -	  I-AM-ADV	         O	         O
+             by	              -	  I-AM-ADV	         O	      B-A0
+         higher	              -	  I-AM-ADV	         O	      I-A0
+        natural	              -	  I-AM-ADV	         O	      I-A0
+            gas	              -	  I-AM-ADV	         O	      I-A0
+         prices	              -	  I-AM-ADV	         O	      I-A0
+            and	              -	  I-AM-ADV	         O	      I-A0
+         volume	              -	  E-AM-ADV	         O	      E-A0
+              .	              -	         O	         O	         O
+
+             In	              -	         O	  B-AM-LOC
+            the	              -	      B-A2	  I-AM-LOC
+     diversifed	              -	      I-A2	  I-AM-LOC
+     businesses	              -	      I-A2	  I-AM-LOC
+        segment	              -	      E-A2	  I-AM-LOC
+              ,	              -	         O	  I-AM-LOC
+          which	              -	    S-R-A2	  I-AM-LOC
+       includes	       includes	       S-V	  I-AM-LOC
+     herbicides	              -	      S-A1	  I-AM-LOC
+              ,	              -	         O	  E-AM-LOC
+         profit	              -	         O	      S-A1
+           grew	           grew	         O	       S-V
+             to	              -	         O	      B-A4
+              $	              -	         O	      I-A4
+             64	              -	         O	      I-A4
+        million	              -	         O	      E-A4
+           from	              -	         O	      B-A3
+              $	              -	         O	      I-A3
+             27	              -	         O	      I-A3
+        million	              -	         O	      E-A3
+              .	              -	         O	         O
+
+              A	              -	      B-A0	         O	         O	         O
+      spokesman	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+      herbicide	              -	      B-A1	      B-A1	      B-A1	         O
+            use	              -	      I-A1	      I-A1	      I-A1	         O
+             in	              -	      I-A1	      I-A1	      I-A1	         O
+           some	              -	      I-A1	      I-A1	      I-A1	         O
+          areas	              -	      I-A1	      I-A1	      I-A1	         O
+             of	              -	      I-A1	      I-A1	      I-A1	         O
+            the	              -	      I-A1	      I-A1	      I-A1	         O
+           U.S.	              -	      I-A1	      E-A1	      E-A1	         O
+            was	            was	      I-A1	       S-V	         O	         O
+        delayed	        delayed	      I-A1	    B-C-A1	       S-V	         O
+        earlier	              -	      I-A1	    I-C-A1	  B-AM-TMP	         O
+             in	              -	      I-A1	    I-C-A1	  I-AM-TMP	         O
+            the	              -	      I-A1	    I-C-A1	  I-AM-TMP	         O
+           year	              -	      I-A1	    I-C-A1	  E-AM-TMP	         O
+             by	              -	      I-A1	    I-C-A1	      B-A0	         O
+          heavy	              -	      I-A1	    I-C-A1	      I-A0	         O
+          rains	              -	      I-A1	    I-C-A1	      E-A0	         O
+              ,	              -	      I-A1	    I-C-A1	         O	         O
+           thus	              -	      I-A1	    I-C-A1	         O	  S-AM-DIS
+     increasing	     increasing	      I-A1	    I-C-A1	         O	       S-V
+          sales	              -	      I-A1	    I-C-A1	         O	      S-A1
+             in	              -	      I-A1	    I-C-A1	         O	  B-AM-TMP
+            the	              -	      I-A1	    I-C-A1	         O	  I-AM-TMP
+          third	              -	      I-A1	    I-C-A1	         O	  I-AM-TMP
+        quarter	              -	      E-A1	    E-C-A1	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+             In	              -	  B-AM-LOC	         O
+            the	              -	  I-AM-LOC	         O
+         fibers	              -	  I-AM-LOC	         O
+        segment	              -	  E-AM-LOC	         O
+              ,	              -	         O	         O
+         profit	              -	      S-A1	         O
+           rose	           rose	       S-V	         O
+             to	              -	      B-A4	         O
+              $	              -	      I-A4	         O
+            180	              -	      I-A4	         O
+        million	              -	      E-A4	         O
+           from	              -	      B-A3	         O
+              $	              -	      I-A3	         O
+            155	              -	      I-A3	         O
+        million	              -	      E-A3	         O
+              ,	              -	         O	         O
+              a	              -	  B-AM-ADV	      B-A1
+           gain	              -	  I-AM-ADV	      E-A1
+             Du	              -	  I-AM-ADV	      B-A0
+           Pont	              -	  I-AM-ADV	      E-A0
+     attributed	     attributed	  I-AM-ADV	       S-V
+             to	              -	  I-AM-ADV	      B-A2
+         higher	              -	  I-AM-ADV	      I-A2
+         demand	              -	  I-AM-ADV	      I-A2
+             in	              -	  I-AM-ADV	      I-A2
+            the	              -	  I-AM-ADV	      I-A2
+           U.S.	              -	  I-AM-ADV	      I-A2
+            for	              -	  I-AM-ADV	      I-A2
+           most	              -	  I-AM-ADV	      I-A2
+        textile	              -	  I-AM-ADV	      I-A2
+       products	              -	  E-AM-ADV	      E-A2
+              .	              -	         O	         O
+
+            Two	              -	      B-A0
+       segments	              -	      E-A0
+         posted	         posted	       S-V
+          lower	              -	      B-A1
+       earnings	              -	      E-A1
+            for	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+        quarter	              -	  E-AM-TMP
+              .	              -	         O
+
+         Profit	              -	      B-A1
+           from	              -	      I-A1
+           coal	              -	      E-A1
+           fell	           fell	       S-V
+             to	              -	      B-A4
+              $	              -	      I-A4
+             41	              -	      I-A4
+        million	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+             58	              -	      I-A3
+        million	              -	      E-A3
+              ,	              -	         O
+         partly	              -	  B-AM-CAU
+        because	              -	  I-AM-CAU
+             of	              -	  I-AM-CAU
+              a	              -	  I-AM-CAU
+         miners	              -	  I-AM-CAU
+              '	              -	  I-AM-CAU
+         strike	              -	  E-AM-CAU
+              .	              -	         O
+
+            And	              -	         O	         O	         O
+         profit	              -	      B-A1	         O	         O
+           from	              -	      I-A1	         O	         O
+       polymers	              -	      E-A1	         O	         O
+        dropped	        dropped	       S-V	         O	         O
+             to	              -	      B-A4	         O	         O
+              $	              -	      I-A4	         O	         O
+            107	              -	      I-A4	         O	         O
+        million	              -	      E-A4	         O	         O
+           from	              -	      B-A3	         O	         O
+              $	              -	      I-A3	         O	         O
+            122	              -	      I-A3	         O	         O
+        million	              -	      E-A3	         O	         O
+           amid	              -	  B-AM-LOC	         O	         O
+           what	              -	  I-AM-LOC	    S-R-A1	         O
+             Du	              -	  I-AM-LOC	      B-A0	      B-A0
+           Pont	              -	  I-AM-LOC	      E-A0	      E-A0
+         called	         called	  I-AM-LOC	       S-V	         O
+          lower	              -	  I-AM-LOC	      B-A1	         O
+         demand	              -	  I-AM-LOC	      I-A1	         O
+            and	              -	  I-AM-LOC	      I-A1	         O
+        selling	        selling	  I-AM-LOC	      I-A1	       S-V
+         prices	              -	  I-AM-LOC	      E-A1	      S-A1
+             in	              -	  I-AM-LOC	  B-AM-LOC	         O
+        certain	              -	  I-AM-LOC	  I-AM-LOC	         O
+      packaging	              -	  I-AM-LOC	  I-AM-LOC	         O
+            and	              -	  I-AM-LOC	  I-AM-LOC	         O
+     industrial	              -	  I-AM-LOC	  I-AM-LOC	         O
+        markets	              -	  E-AM-LOC	  E-AM-LOC	         O
+              .	              -	         O	         O	         O
+
+            For	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+           nine	              -	  I-AM-TMP
+         months	              -	  E-AM-TMP
+              ,	              -	         O
+             Du	              -	      B-A0
+           Pont	              -	      E-A0
+         earned	         earned	       S-V
+              $	              -	      B-A1
+              2	              -	      I-A1
+        billion	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+              $	              -	      I-A1
+           8.46	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      I-A1
+              ,	              -	      I-A1
+             up	              -	      I-A1
+             18	              -	      I-A1
+              %	              -	      I-A1
+           from	              -	      I-A1
+              $	              -	      I-A1
+           1.69	              -	      I-A1
+        billion	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+              $	              -	      I-A1
+           7.03	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      I-A1
+              ,	              -	      I-A1
+              a	              -	      I-A1
+           year	              -	      I-A1
+        earlier	              -	      E-A1
+              .	              -	         O
+
+          Sales	              -	      S-A1
+      increased	      increased	       S-V
+             10	              -	      B-A2
+              %	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+          26.54	              -	      I-A4
+        billion	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+          24.05	              -	      I-A3
+        billion	              -	      E-A3
+              .	              -	         O
+
+            The	              -	         O	      B-A1	      B-A1
+      increased	      increased	       S-V	      I-A1	      I-A1
+       dividend	              -	      S-A1	      E-A1	      E-A1
+           will	              -	         O	  S-AM-MOD	  S-AM-MOD
+             be	             be	         O	       S-V	         O
+           paid	           paid	         O	    B-C-A1	       S-V
+           Dec.	              -	         O	    I-C-A1	  B-AM-TMP
+             14	              -	         O	    I-C-A1	  E-AM-TMP
+             to	              -	         O	    I-C-A1	      B-A2
+        holders	              -	         O	    I-C-A1	      I-A2
+             of	              -	         O	    I-C-A1	      I-A2
+         record	              -	         O	    I-C-A1	      I-A2
+           Nov.	              -	         O	    I-C-A1	      I-A2
+             15	              -	         O	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A1
+          stock	              -	      I-A1	      I-A1	      I-A1
+          split	              -	      E-A1	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      I-A1
+          which	              -	    S-R-A1	      I-A1	      I-A1
+             is	             is	       S-V	      I-A1	      I-A1
+        subject	              -	      B-A2	      I-A1	      I-A1
+             to	              -	      I-A2	      I-A1	      I-A1
+         holder	              -	      I-A2	      I-A1	      I-A1
+       approval	              -	      E-A2	      I-A1	      I-A1
+              ,	              -	         O	      E-A1	      E-A1
+          would	              -	         O	  S-AM-MOD	  S-AM-MOD
+             be	             be	         O	       S-V	         O
+           paid	           paid	         O	    B-C-A1	       S-V
+             on	              -	         O	    I-C-A1	  B-AM-TMP
+              a	              -	         O	    I-C-A1	  I-AM-TMP
+          still	              -	         O	    I-C-A1	  I-AM-TMP
+    unspecified	              -	         O	    I-C-A1	  I-AM-TMP
+           date	              -	         O	    I-C-A1	  E-AM-TMP
+             in	              -	         O	    I-C-A1	  B-AM-TMP
+        January	              -	         O	    I-C-A1	  E-AM-TMP
+             to	              -	         O	    I-C-A1	      B-A2
+        holders	              -	         O	    I-C-A1	      I-A2
+             of	              -	         O	    I-C-A1	      I-A2
+         record	              -	         O	    I-C-A1	      I-A2
+           Dec.	              -	         O	    I-C-A1	      I-A2
+             21	              -	         O	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O
+

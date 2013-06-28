@@ -1,0 +1,404 @@
+        Reuters	              -	      B-A0	         O	         O	         O
+       Holdings	              -	      I-A0	         O	         O	         O
+            PLC	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+        Michael	              -	      B-A1	      B-A0	      B-A0	         O
+         Reupke	              -	      I-A1	      E-A0	      E-A0	         O
+       resigned	       resigned	      I-A1	       S-V	         O	         O
+             as	              -	      I-A1	      B-A1	         O	         O
+        general	              -	      I-A1	      I-A1	         O	         O
+        manager	              -	      I-A1	      I-A1	         O	         O
+             to	              -	      I-A1	      I-A1	         O	         O
+         pursue	         pursue	      I-A1	      I-A1	       S-V	         O
+    unspecified	              -	      I-A1	      I-A1	      B-A1	         O
+      interests	              -	      I-A1	      I-A1	      E-A1	         O
+              ,	              -	      I-A1	      I-A1	         O	         O
+              a	              -	      I-A1	      I-A1	         O	      B-A0
+           move	              -	      I-A1	      I-A1	         O	      I-A0
+            the	              -	      I-A1	      I-A1	         O	      I-A0
+           news	              -	      I-A1	      I-A1	         O	      I-A0
+   organization	              -	      I-A1	      I-A1	         O	      E-A0
+         termed	         termed	      I-A1	      I-A1	         O	       S-V
+             an	              -	      I-A1	      I-A1	         O	      B-A1
+       amicable	              -	      I-A1	      I-A1	         O	      I-A1
+     separation	              -	      E-A1	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            Mr.	              -	      B-A0	      B-A1
+         Reupke	              -	      I-A0	      I-A1
+              ,	              -	      I-A0	      I-A1
+             52	              -	      I-A0	      I-A1
+          years	              -	      I-A0	      I-A1
+            old	              -	      I-A0	      I-A1
+            and	              -	      I-A0	      I-A1
+              a	              -	      I-A0	      I-A1
+        27-year	              -	      I-A0	      I-A1
+        Reuters	              -	      I-A0	      I-A1
+        veteran	              -	      I-A0	      I-A1
+              ,	              -	      E-A0	      E-A1
+            had	            had	       S-V	         O
+           been	           been	      B-A1	       S-V
+            the	              -	      I-A1	      B-A1
+information-services	              -	      I-A1	      I-A1
+        company	              -	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1
+        general	              -	      I-A1	      I-A1
+        manager	              -	      I-A1	      E-A1
+            for	              -	      I-A1	  B-AM-TMP
+           only	              -	      I-A1	  I-AM-TMP
+            six	              -	      I-A1	  I-AM-TMP
+         months	              -	      E-A1	  E-AM-TMP
+              .	              -	         O	         O
+
+            His	              -	      B-A0	      B-A2
+    appointment	              -	      I-A0	      I-A2
+             to	              -	      I-A0	      I-A2
+           that	              -	      I-A0	      I-A2
+           post	              -	      E-A0	      I-A2
+              ,	              -	         O	      I-A2
+          which	              -	    S-R-A0	      I-A2
+            has	            has	       S-V	      I-A2
+         senior	              -	      B-A1	      I-A2
+ administrative	              -	      I-A1	      I-A2
+              ,	              -	      I-A1	      I-A2
+          staff	              -	      I-A1	      I-A2
+            and	              -	      I-A1	      I-A2
+         policy	              -	      I-A1	      I-A2
+responsibilities	              -	      E-A1	      I-A2
+              ,	              -	         O	      E-A2
+       followed	       followed	         O	       S-V
+              a	              -	         O	      B-A2
+   several-year	              -	         O	      I-A2
+         tenure	              -	         O	      I-A2
+             as	              -	         O	      I-A2
+        Reuters	              -	         O	      I-A2
+             's	              -	         O	      I-A2
+         editor	              -	         O	      I-A2
+             in	              -	         O	      I-A2
+          chief	              -	         O	      E-A2
+              .	              -	         O	         O
+
+             No	              -	      B-A1	      B-A1	         O	         O	      B-A1
+      successor	              -	      E-A1	      E-A1	         O	         O	      I-A1
+            was	            was	       S-V	         O	         O	         O	      I-A1
+          named	          named	    S-C-A1	       S-V	         O	         O	      I-A1
+              ,	              -	         O	         O	         O	         O	      I-A1
+            and	              -	         O	         O	         O	         O	      I-A1
+            Mr.	              -	         O	         O	      B-A1	      B-A1	      I-A1
+         Reupke	              -	         O	         O	      I-A1	      I-A1	      I-A1
+             's	              -	         O	         O	      I-A1	      I-A1	      I-A1
+         duties	              -	         O	         O	      E-A1	      E-A1	      I-A1
+           will	              -	         O	         O	  S-AM-MOD	  S-AM-MOD	      I-A1
+             be	             be	         O	         O	       S-V	         O	      I-A1
+          split	          split	         O	         O	    B-C-A1	       S-V	      I-A1
+          among	              -	         O	         O	    I-C-A1	      B-A2	      I-A1
+          three	              -	         O	         O	    I-C-A1	      I-A2	      I-A1
+          other	              -	         O	         O	    I-C-A1	      I-A2	      I-A1
+         senior	              -	         O	         O	    I-C-A1	      I-A2	      I-A1
+        Reuters	              -	         O	         O	    I-C-A1	      I-A2	      I-A1
+     executives	              -	         O	         O	    E-C-A1	      E-A2	      E-A1
+              ,	              -	         O	         O	         O	         O	         O
+            the	              -	         O	         O	         O	         O	      B-A0
+        company	              -	         O	         O	         O	         O	      E-A0
+           said	           said	         O	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+             In	              -	  B-AM-LOC	         O	         O	         O
+              a	              -	  I-AM-LOC	         O	         O	         O
+      telephone	              -	  I-AM-LOC	         O	         O	         O
+      interview	              -	  E-AM-LOC	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+            Mr.	              -	      B-A0	         O	         O	         O
+         Reupke	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            his	              -	      B-A1	      B-A1	         O	         O
+      departure	              -	      I-A1	      E-A1	         O	         O
+            was	            was	      I-A1	       S-V	         O	         O
+            for	              -	      I-A1	  B-AM-CAU	         O	         O
+       personal	              -	      I-A1	  I-AM-CAU	         O	         O
+        reasons	              -	      I-A1	  I-AM-CAU	         O	         O
+              ,	              -	      I-A1	  I-AM-CAU	         O	         O
+          which	              -	      I-A1	  I-AM-CAU	         O	    S-R-A1
+             he	              -	      I-A1	  I-AM-CAU	      S-A0	      S-A0
+       declined	       declined	      I-A1	  I-AM-CAU	       S-V	         O
+             to	              -	      I-A1	  I-AM-CAU	      B-A1	         O
+        specify	        specify	      E-A1	  E-AM-CAU	      E-A1	       S-V
+              .	              -	         O	         O	         O	         O
+
+          There	              -	      S-A1	      B-A1
+             is	             is	       S-V	      I-A1
+             no	              -	      B-A1	      I-A1
+       business	              -	      I-A1	      I-A1
+         reason	              -	      I-A1	      I-A1
+            for	              -	      I-A1	      I-A1
+             my	              -	      I-A1	      I-A1
+      departure	              -	      E-A1	      I-A1
+              ,	              -	         O	      I-A1
+            nor	              -	         O	      I-A1
+            any	              -	         O	      I-A1
+   disagreement	              -	         O	      I-A1
+           over	              -	         O	      I-A1
+         policy	              -	         O	      E-A1
+              ,	              -	         O	         O
+             he	              -	         O	      S-A0
+          added	          added	         O	       S-V
+              .	              -	         O	         O
+
+             He	              -	      S-A0	         O	         O	         O
+           also	              -	  S-AM-DIS	         O	         O	         O
+       rejected	       rejected	       S-V	         O	         O	         O
+        reports	              -	      B-A1	         O	         O	         O
+           that	              -	      I-A1	         O	         O	         O
+            his	              -	      I-A1	      B-A1	         O	         O
+      departure	              -	      I-A1	      E-A1	         O	         O
+        stemmed	        stemmed	      I-A1	       S-V	         O	         O
+           from	              -	      I-A1	      B-A2	         O	         O
+ disappointment	              -	      I-A1	      I-A2	      S-A1	         O
+            the	              -	      I-A1	      I-A2	      B-A0	      B-A0
+        general	              -	      I-A1	      I-A2	      I-A0	      I-A0
+        manager	              -	      I-A1	      I-A2	      I-A0	      I-A0
+             's	              -	      I-A1	      I-A2	      I-A0	      I-A0
+           post	              -	      I-A1	      I-A2	      E-A0	      E-A0
+            had	            had	      I-A1	      I-A2	       S-V	         O
+            n't	              -	      I-A1	      I-A2	  S-AM-NEG	  S-AM-NEG
+           also	              -	      I-A1	      I-A2	         O	  S-AM-DIS
+            led	            led	      I-A1	      I-A2	         O	       S-V
+             to	              -	      I-A1	      I-A2	         O	      B-A1
+              a	              -	      I-A1	      I-A2	         O	      I-A1
+          board	              -	      I-A1	      I-A2	         O	      I-A1
+   directorship	              -	      I-A1	      I-A2	         O	      I-A1
+             at	              -	      I-A1	      I-A2	         O	      I-A1
+            the	              -	      I-A1	      I-A2	         O	      I-A1
+   London-based	              -	      I-A1	      I-A2	         O	      I-A1
+           news	              -	      I-A1	      I-A2	         O	      I-A1
+   organization	              -	      E-A1	      E-A2	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            Mr.	              -	      B-A1	         O	         O
+         Reupke	              -	      E-A1	         O	         O
+            was	            was	       S-V	         O	         O
+            one	              -	      B-A1	         O	         O
+             of	              -	      I-A1	         O	         O
+          three	              -	      I-A1	      B-A0	      B-A0
+     executives	              -	      I-A1	      E-A0	      I-A0
+             on	              -	      I-A1	         O	      I-A0
+        Reuters	              -	      I-A1	      B-A0	      I-A0
+             's	              -	      I-A1	      I-A0	      I-A0
+   eight-person	              -	      I-A1	      I-A0	      I-A0
+      executive	              -	      I-A1	      I-A0	      I-A0
+      committee	              -	      I-A1	      E-A0	      E-A0
+            who	              -	      I-A1	    S-R-A0	    S-R-A0
+            did	            did	      I-A1	       S-V	         O
+            n't	              -	      I-A1	      B-A1	  S-AM-NEG
+           also	              -	      I-A1	      I-A1	  S-AM-DIS
+          serve	          serve	      I-A1	      I-A1	       S-V
+             on	              -	      I-A1	      I-A1	      B-A1
+            the	              -	      I-A1	      I-A1	      I-A1
+        company	              -	      I-A1	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1	      I-A1
+          board	              -	      I-A1	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+      directors	              -	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+             If	              -	         O	         O	  B-AM-ADV	  B-AM-ADV	         O	      B-A1
+              I	              -	      S-A1	      S-A0	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+           were	           were	       S-V	         O	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+       choosing	       choosing	    B-C-A1	       S-V	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+            the	              -	    I-C-A1	      B-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+         people	              -	    I-C-A1	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+             of	              -	    I-C-A1	      I-A1	  I-AM-ADV	  I-AM-ADV	         O	      I-A1
+       tomorrow	              -	    E-C-A1	      E-A1	  E-AM-ADV	  E-AM-ADV	         O	      I-A1
+              ,	              -	         O	         O	         O	         O	         O	      I-A1
+              I	              -	         O	         O	      S-A0	      S-A0	         O	      I-A1
+          would	              -	         O	         O	  S-AM-MOD	  S-AM-MOD	         O	      I-A1
+           have	           have	         O	         O	       S-V	         O	         O	      I-A1
+         chosen	         chosen	         O	         O	      B-A1	       S-V	         O	      I-A1
+            the	              -	         O	         O	      I-A1	      B-A1	      B-A1	      I-A1
+         people	              -	         O	         O	      I-A1	      I-A1	      E-A1	      I-A1
+            who	              -	         O	         O	      I-A1	      I-A1	    S-R-A1	      I-A1
+            are	            are	         O	         O	      I-A1	      I-A1	       S-V	      I-A1
+            now	              -	         O	         O	      I-A1	      I-A1	  S-AM-TMP	      I-A1
+             on	              -	         O	         O	      I-A1	      I-A1	  B-AM-LOC	      I-A1
+            the	              -	         O	         O	      I-A1	      I-A1	  I-AM-LOC	      I-A1
+          board	              -	         O	         O	      E-A1	      E-A1	  E-AM-LOC	      E-A1
+              ,	              -	         O	         O	         O	         O	         O	         O
+             he	              -	         O	         O	         O	         O	         O	      S-A0
+           said	           said	         O	         O	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O
+
+              A	              -	      B-A0	         O
+        Reuters	              -	      I-A0	         O
+      spokesman	              -	      E-A0	         O
+           said	           said	       S-V	         O
+            the	              -	      B-A1	      B-A2
+      departure	              -	      I-A1	      E-A2
+       reflects	       reflects	      I-A1	       S-V
+             no	              -	      I-A1	      B-A1
+         change	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+       strategy	              -	      I-A1	      I-A1
+             or	              -	      I-A1	      I-A1
+        profits	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+           Mark	              -	      B-A0	         O	         O
+       Shepperd	              -	      I-A0	         O	         O
+              ,	              -	      I-A0	         O	         O
+             an	              -	      I-A0	         O	         O
+        analyst	              -	      I-A0	         O	         O
+             at	              -	      I-A0	         O	         O
+            UBS	              -	      I-A0	         O	         O
+       Phillips	              -	      I-A0	         O	         O
+            amp	              -	      I-A0	         O	         O
+           Drew	              -	      I-A0	         O	         O
+             in	              -	      I-A0	         O	         O
+         London	              -	      I-A0	         O	         O
+              ,	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+              ,	              -	         O	         O	         O
+              I	              -	    B-C-A1	      S-A0	         O
+        suspect	        suspect	    I-C-A1	       S-V	         O
+              (	              -	    I-C-A1	      B-A1	         O
+            the	              -	    I-C-A1	      I-A1	      B-A1
+      departure	              -	    E-C-A1	      I-A1	      I-A1
+              )	              -	         O	      I-A1	      E-A1
+           will	              -	         O	      I-A1	  S-AM-MOD
+             be	             be	         O	      I-A1	       S-V
+         fairly	              -	         O	      I-A1	      B-A3
+     irrelevant	              -	         O	      I-A1	      I-A3
+            for	              -	         O	      I-A1	      I-A3
+            the	              -	         O	      I-A1	      I-A3
+        company	              -	         O	      E-A1	      E-A3
+              .	              -	         O	         O	         O
+
+              I	              -	      S-A1	         O	         O	         O
+          would	              -	  S-AM-MOD	         O	         O	         O
+             be	             be	       S-V	         O	         O	         O
+           very	              -	      B-A2	  S-AM-EXT	         O	         O
+      surprised	      surprised	      E-A2	       S-V	         O	         O
+             if	              -	  B-AM-ADV	      B-A0	         O	         O
+            his	              -	  I-AM-ADV	      I-A0	      B-A0	         O
+      departure	              -	  I-AM-ADV	      I-A0	      E-A0	         O
+        signals	        signals	  I-AM-ADV	      I-A0	       S-V	         O
+            any	              -	  I-AM-ADV	      I-A0	      B-A1	         O
+         change	              -	  I-AM-ADV	      I-A0	      I-A1	         O
+             in	              -	  I-AM-ADV	      I-A0	      I-A1	         O
+       strategy	              -	  I-AM-ADV	      I-A0	      E-A1	         O
+             or	              -	  I-AM-ADV	      I-A0	         O	         O
+         change	         change	  I-AM-ADV	      I-A0	         O	       S-V
+             in	              -	  I-AM-ADV	      I-A0	         O	  B-AM-MNR
+         profit	              -	  I-AM-ADV	      I-A0	         O	  I-AM-MNR
+   expectations	              -	  E-AM-ADV	      E-A0	         O	  E-AM-MNR
+              .	              -	         O	         O	         O	         O
+
+             On	              -	  B-AM-LOC
+         London	              -	  I-AM-LOC
+             's	              -	  I-AM-LOC
+          Stock	              -	  I-AM-LOC
+       Exchange	              -	  E-AM-LOC
+              ,	              -	         O
+        Reuters	              -	      B-A1
+         shares	              -	      E-A1
+           rose	           rose	       S-V
+           five	              -	      B-A2
+          pence	              -	      E-A2
+             to	              -	      B-A4
+            913	              -	      I-A4
+          pence	              -	      I-A4
+              (	              -	      I-A4
+              $	              -	      I-A4
+          14.43	              -	      I-A4
+              )	              -	      E-A4
+              .	              -	         O
+
+             In	              -	         O	  B-AM-LOC
+            the	              -	         O	  I-AM-LOC
+           U.S.	              -	         O	  I-AM-LOC
+over-the-counter	              -	         O	  I-AM-LOC
+         market	              -	         O	  E-AM-LOC
+              ,	              -	         O	         O
+       American	              -	         O	      B-A1
+     depositary	              -	         O	      I-A1
+         shares	              -	         O	      I-A1
+            for	              -	         O	      I-A1
+        Reuters	              -	         O	      I-A1
+              ,	              -	         O	      I-A1
+           each	              -	         O	      I-A1
+   representing	   representing	       S-V	      I-A1
+          three	              -	      B-A1	      I-A1
+         shares	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+         London	              -	      I-A1	      I-A1
+         market	              -	      E-A1	      I-A1
+              ,	              -	         O	      E-A1
+         closed	         closed	         O	       S-V
+      unchanged	              -	         O	  S-AM-MNR
+             at	              -	         O	  B-AM-EXT
+              $	              -	         O	  I-AM-EXT
+         43.875	              -	         O	  E-AM-EXT
+              .	              -	         O	         O
+
+            The	              -	         O	      B-A1
+         senior	              -	         O	      I-A1
+             of	              -	         O	      I-A1
+            the	              -	      B-A0	      I-A1
+          three	              -	      I-A0	      I-A1
+     executives	              -	      E-A0	      I-A1
+            who	              -	    S-R-A0	      I-A1
+           will	              -	  S-AM-MOD	      I-A1
+         assume	         assume	       S-V	      I-A1
+            Mr.	              -	      B-A1	      I-A1
+         Reupke	              -	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1
+         duties	              -	      E-A1	      E-A1
+             is	             is	         O	       S-V
+          Nigel	              -	         O	      B-A1
+          Judah	              -	         O	      I-A1
+              ,	              -	         O	      I-A1
+             58	              -	         O	      I-A1
+              ,	              -	         O	      I-A1
+        finance	              -	         O	      I-A1
+       director	              -	         O	      I-A1
+            and	              -	         O	      I-A1
+              a	              -	         O	      I-A1
+        Reuters	              -	         O	      I-A1
+          board	              -	         O	      I-A1
+       director	              -	         O	      E-A1
+              .	              -	         O	         O
+
+          Peter	              -	      B-A1
+        Holland	              -	      I-A1
+              ,	              -	      I-A1
+             45	              -	      I-A1
+              ,	              -	      I-A1
+         deputy	              -	      I-A1
+        general	              -	      I-A1
+        manager	              -	      I-A1
+              ,	              -	      E-A1
+        becomes	        becomes	       S-V
+       director	              -	      B-A2
+             of	              -	      I-A2
+      corporate	              -	      I-A2
+        affairs	              -	      E-A2
+              .	              -	         O
+
+            And	              -	         O
+        Patrick	              -	      B-A1
+         Mannix	              -	      I-A1
+              ,	              -	      I-A1
+             46	              -	      I-A1
+              ,	              -	      I-A1
+  international	              -	      I-A1
+      technical	              -	      I-A1
+        manager	              -	      I-A1
+              ,	              -	      E-A1
+        becomes	        becomes	       S-V
+       director	              -	      B-A2
+             of	              -	      I-A2
+          group	              -	      I-A2
+        quality	              -	      I-A2
+       programs	              -	      E-A2
+              .	              -	         O
+

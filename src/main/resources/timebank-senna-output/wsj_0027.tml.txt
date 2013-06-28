@@ -1,0 +1,286 @@
+          Magna	              -	      B-A0	      B-A1	      B-A1	         O	         O	      B-A1
+  International	              -	      I-A0	      I-A1	      I-A1	         O	         O	      I-A1
+           Inc.	              -	      I-A0	      I-A1	      I-A1	         O	         O	      I-A1
+             's	              -	      I-A0	      I-A1	      I-A1	         O	         O	      I-A1
+          chief	              -	      I-A0	      I-A1	      I-A1	         O	         O	      I-A1
+      financial	              -	      I-A0	      I-A1	      I-A1	         O	         O	      I-A1
+        officer	              -	      I-A0	      I-A1	      I-A1	         O	         O	      I-A1
+              ,	              -	      I-A0	      I-A1	      I-A1	         O	         O	      I-A1
+          James	              -	      I-A0	      I-A1	      I-A1	         O	         O	      I-A1
+       McAlpine	              -	      I-A0	      I-A1	      I-A1	         O	         O	      I-A1
+              ,	              -	      E-A0	      I-A1	      I-A1	         O	         O	      I-A1
+       resigned	       resigned	       S-V	      I-A1	      I-A1	         O	         O	      I-A1
+            and	              -	         O	      I-A1	      I-A1	         O	         O	      I-A1
+            its	              -	         O	      I-A1	      I-A1	         O	         O	      I-A1
+       chairman	              -	         O	      I-A1	      I-A1	         O	         O	      I-A1
+              ,	              -	         O	      I-A1	      I-A1	         O	         O	      I-A1
+          Frank	              -	      B-A1	      I-A1	      I-A1	         O	         O	      I-A1
+       Stronach	              -	      E-A1	      I-A1	      I-A1	         O	         O	      I-A1
+              ,	              -	         O	      E-A1	      E-A1	         O	         O	      I-A1
+             is	             is	         O	       S-V	         O	         O	         O	      I-A1
+       stepping	       stepping	         O	      B-A1	       B-V	         O	         O	      I-A1
+             in	              -	         O	      I-A1	       E-V	         O	         O	      I-A1
+             to	              -	         O	      I-A1	  B-AM-PNC	         O	         O	      I-A1
+           help	           help	         O	      I-A1	  I-AM-PNC	       S-V	         O	      I-A1
+           turn	           turn	         O	      I-A1	  I-AM-PNC	      B-A1	       S-V	      I-A1
+            the	              -	         O	      I-A1	  I-AM-PNC	      I-A1	      B-A1	      I-A1
+automotive-parts	              -	         O	      I-A1	  I-AM-PNC	      I-A1	      I-A1	      I-A1
+   manufacturer	              -	         O	      I-A1	  I-AM-PNC	      I-A1	      E-A1	      I-A1
+         around	              -	         O	      E-A1	  E-AM-PNC	      E-A1	  S-AM-DIR	      E-A1
+              ,	              -	         O	         O	         O	         O	         O	         O
+            the	              -	         O	         O	         O	         O	         O	      B-A0
+        company	              -	         O	         O	         O	         O	         O	      E-A0
+           said	           said	         O	         O	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            Mr.	              -	      B-A0	      B-A0	      B-A0	         O	         O	         O	      B-A1
+       Stronach	              -	      E-A0	      E-A0	      E-A0	         O	         O	         O	      I-A1
+           will	              -	  S-AM-MOD	         O	         O	         O	         O	         O	      I-A1
+         direct	         direct	       S-V	         O	         O	         O	         O	         O	      I-A1
+             an	              -	      B-A1	         O	         O	      B-A1	         O	         O	      I-A1
+         effort	              -	      I-A1	         O	         O	      I-A1	         O	         O	      I-A1
+             to	              -	      I-A1	         O	         O	      I-A1	         O	         O	      I-A1
+         reduce	         reduce	      I-A1	       S-V	         O	      I-A1	         O	         O	      I-A1
+       overhead	              -	      I-A1	      S-A1	         O	      I-A1	         O	         O	      I-A1
+            and	              -	      I-A1	         O	         O	      I-A1	         O	         O	      I-A1
+           curb	           curb	      I-A1	         O	       S-V	      I-A1	         O	         O	      I-A1
+        capital	              -	      I-A1	         O	      B-A1	      I-A1	         O	         O	      I-A1
+       spending	              -	      E-A1	         O	      E-A1	      I-A1	         O	         O	      I-A1
+          until	              -	  B-AM-PNC	         O	  B-AM-TMP	      I-A1	         O	         O	      I-A1
+              a	              -	  I-AM-PNC	         O	  I-AM-TMP	      I-A1	      B-A1	      B-A1	      I-A1
+           more	              -	  I-AM-PNC	         O	  I-AM-TMP	      I-A1	      I-A1	      I-A1	      I-A1
+   satisfactory	              -	  I-AM-PNC	         O	  I-AM-TMP	      I-A1	      I-A1	      I-A1	      I-A1
+          level	              -	  I-AM-PNC	         O	  I-AM-TMP	      I-A1	      I-A1	      I-A1	      I-A1
+             of	              -	  I-AM-PNC	         O	  I-AM-TMP	      I-A1	      I-A1	      I-A1	      I-A1
+         profit	              -	  I-AM-PNC	         O	  I-AM-TMP	      E-A1	      E-A1	      E-A1	      I-A1
+             is	             is	  I-AM-PNC	         O	  I-AM-TMP	       S-V	         O	         O	      I-A1
+       achieved	       achieved	  I-AM-PNC	         O	  I-AM-TMP	         O	       S-V	         O	      I-A1
+            and	              -	  I-AM-PNC	         O	  I-AM-TMP	         O	         O	         O	      I-A1
+     maintained	     maintained	  E-AM-PNC	         O	  E-AM-TMP	         O	         O	       S-V	      E-A1
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+          Magna	              -	         O	         O	         O	         O	         O	         O	      S-A0
+           said	           said	         O	         O	         O	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+        Stephen	              -	      B-A0
+      Akerfeldt	              -	      I-A0
+              ,	              -	      I-A0
+      currently	              -	      I-A0
+           vice	              -	      I-A0
+      president	              -	      I-A0
+        finance	              -	      I-A0
+              ,	              -	      E-A0
+           will	              -	  S-AM-MOD
+        succeed	        succeed	       S-V
+            Mr.	              -	      B-A1
+       McAlpine	              -	      E-A1
+              .	              -	         O
+
+             An	              -	      B-A1	      B-A0	         O
+      ambitious	              -	      I-A1	      I-A0	         O
+      expansion	              -	      E-A1	      E-A0	         O
+            has	            has	       S-V	         O	         O
+           left	           left	      B-A1	       S-V	         O
+          Magna	              -	      I-A1	      S-A2	         O
+           with	              -	      I-A1	      B-A1	         O
+         excess	              -	      I-A1	      I-A1	         O
+       capacity	              -	      I-A1	      I-A1	         O
+            and	              -	      I-A1	      I-A1	         O
+              a	              -	      I-A1	      I-A1	         O
+          heavy	              -	      I-A1	      I-A1	         O
+           debt	              -	      I-A1	      I-A1	         O
+           load	              -	      I-A1	      E-A1	         O
+             as	              -	      I-A1	  B-AM-TMP	         O
+            the	              -	      I-A1	  I-AM-TMP	      B-A0
+     automotive	              -	      I-A1	  I-AM-TMP	      I-A0
+       industry	              -	      I-A1	  I-AM-TMP	      E-A0
+         enters	         enters	      I-A1	  I-AM-TMP	       S-V
+              a	              -	      I-A1	  I-AM-TMP	      B-A1
+       downturn	              -	      E-A1	  E-AM-TMP	      E-A1
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0
+        company	              -	      E-A0	      E-A0
+            has	            has	       S-V	         O
+       reported	       reported	      B-A1	       S-V
+       declines	              -	      I-A1	      B-A1
+             in	              -	      I-A1	      I-A1
+      operating	              -	      I-A1	      I-A1
+         profit	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+           each	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+           past	              -	      I-A1	      I-A1
+          three	              -	      I-A1	      I-A1
+          years	              -	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1
+        despite	              -	      I-A1	      I-A1
+         steady	              -	      I-A1	      I-A1
+          sales	              -	      I-A1	      I-A1
+         growth	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+          Magna	              -	      S-A0	         O	         O
+       recently	              -	  S-AM-TMP	         O	         O
+            cut	            cut	       S-V	         O	         O
+            its	              -	      B-A1	         O	         O
+      quarterly	              -	      I-A1	         O	         O
+       dividend	              -	      E-A1	         O	         O
+             in	              -	  B-AM-TMP	         O	         O
+           half	              -	  E-AM-TMP	         O	         O
+            and	              -	         O	         O	         O
+            the	              -	         O	      B-A1	      B-A1
+        company	              -	         O	      I-A1	      I-A1
+             's	              -	         O	      I-A1	      I-A1
+          Class	              -	         O	      I-A1	      I-A1
+              A	              -	         O	      I-A1	      I-A1
+         shares	              -	         O	      E-A1	      E-A1
+            are	            are	         O	       S-V	         O
+      wallowing	      wallowing	         O	    B-C-A1	       S-V
+            far	              -	         O	    I-C-A1	      B-A2
+          below	              -	         O	    I-C-A1	      I-A2
+          their	              -	         O	    I-C-A1	      I-A2
+        52-week	              -	         O	    I-C-A1	      I-A2
+           high	              -	         O	    I-C-A1	      I-A2
+             of	              -	         O	    I-C-A1	      I-A2
+         16.125	              -	         O	    I-C-A1	      I-A2
+       Canadian	              -	         O	    I-C-A1	      I-A2
+        dollars	              -	         O	    I-C-A1	      I-A2
+              (	              -	         O	    I-C-A1	      I-A2
+            US$	              -	         O	    I-C-A1	      I-A2
+          13.73	              -	         O	    I-C-A1	      I-A2
+              )	              -	         O	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O
+
+             On	              -	  B-AM-LOC
+            the	              -	  I-AM-LOC
+        Toronto	              -	  I-AM-LOC
+          Stock	              -	  I-AM-LOC
+       Exchange	              -	  E-AM-LOC
+      yesterday	              -	  S-AM-TMP
+              ,	              -	         O
+          Magna	              -	      B-A1
+         shares	              -	      E-A1
+         closed	         closed	       S-V
+             up	              -	  B-AM-MNR
+           37.5	              -	  I-AM-MNR
+       Canadian	              -	  I-AM-MNR
+          cents	              -	  I-AM-MNR
+             to	              -	  I-AM-MNR
+             C$	              -	  I-AM-MNR
+          9.625	              -	  E-AM-MNR
+              .	              -	         O
+
+            Mr.	              -	         O	      B-A0	      B-A0
+       Stronach	              -	         O	      I-A0	      I-A0
+              ,	              -	         O	      I-A0	      I-A0
+        founder	              -	         O	      I-A0	      I-A0
+            and	              -	         O	      I-A0	      I-A0
+    controlling	    controlling	       S-V	      I-A0	      I-A0
+    shareholder	              -	      B-A1	      I-A0	      I-A0
+             of	              -	      I-A1	      I-A0	      I-A0
+          Magna	              -	      E-A1	      I-A0	      I-A0
+              ,	              -	         O	      E-A0	      E-A0
+       resigned	       resigned	         O	       S-V	         O
+             as	              -	         O	      B-A1	         O
+          chief	              -	         O	      I-A1	      B-A0
+      executive	              -	         O	      I-A1	      I-A0
+        officer	              -	         O	      E-A1	      E-A0
+           last	              -	         O	  B-AM-TMP	         O
+           year	              -	         O	  E-AM-TMP	         O
+             to	              -	         O	  B-AM-PNC	         O
+           seek	           seek	         O	  I-AM-PNC	       S-V
+              ,	              -	         O	  I-AM-PNC	         O
+ unsuccessfully	              -	         O	  I-AM-PNC	  S-AM-MNR
+              ,	              -	         O	  I-AM-PNC	         O
+              a	              -	         O	  I-AM-PNC	      B-A1
+           seat	              -	         O	  I-AM-PNC	      I-A1
+             in	              -	         O	  I-AM-PNC	      I-A1
+         Canada	              -	         O	  I-AM-PNC	      I-A1
+             's	              -	         O	  I-AM-PNC	      I-A1
+     Parliament	              -	         O	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O
+
+       Analysts	              -	      S-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            Mr.	              -	      B-A1	      B-A0	      B-A0	      B-A0
+       Stronach	              -	      I-A1	      E-A0	      E-A0	      E-A0
+          wants	          wants	      I-A1	       S-V	         O	         O
+             to	              -	      I-A1	      B-A1	         O	         O
+         resume	         resume	      I-A1	      I-A1	       S-V	         O
+              a	              -	      I-A1	      I-A1	      B-A1	         O
+           more	              -	      I-A1	      I-A1	      I-A1	         O
+    influential	              -	      I-A1	      I-A1	      I-A1	         O
+           role	              -	      I-A1	      I-A1	      I-A1	         O
+             in	              -	      I-A1	      I-A1	      I-A1	         O
+        running	        running	      I-A1	      I-A1	      I-A1	       S-V
+            the	              -	      I-A1	      I-A1	      I-A1	      B-A1
+        company	              -	      E-A1	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+           They	              -	      S-A0	         O
+         expect	         expect	       S-V	         O
+            him	              -	      B-A1	      S-A0
+             to	              -	      I-A1	         O
+            cut	            cut	      I-A1	       S-V
+          costs	              -	      I-A1	      B-A1
+     throughout	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+   organization	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	         O	         O
+        company	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+            Mr.	              -	      B-A1	      B-A0	         O
+       Stronach	              -	      I-A1	      E-A0	         O
+           will	              -	      I-A1	  S-AM-MOD	         O
+     personally	              -	      I-A1	  S-AM-MNR	         O
+         direct	         direct	      I-A1	       S-V	         O
+            the	              -	      I-A1	      B-A1	      B-A1
+  restructuring	              -	      I-A1	      E-A1	      E-A1
+              ,	              -	      I-A1	         O	         O
+       assisted	       assisted	      I-A1	         O	       S-V
+             by	              -	      I-A1	         O	      B-A0
+        Manfred	              -	      I-A1	         O	      I-A0
+          Gingl	              -	      I-A1	         O	      I-A0
+              ,	              -	      I-A1	         O	      I-A0
+      president	              -	      I-A1	         O	      I-A0
+            and	              -	      I-A1	         O	      I-A0
+          chief	              -	      I-A1	         O	      I-A0
+      executive	              -	      E-A1	         O	      E-A0
+              .	              -	         O	         O	         O
+
+        Neither	              -	      B-A1	      B-A1
+           they	              -	      I-A1	      I-A1
+            nor	              -	      I-A1	      I-A1
+            Mr.	              -	      I-A1	      I-A1
+       McAlpine	              -	      E-A1	      E-A1
+          could	              -	  S-AM-MOD	  S-AM-MOD
+             be	             be	       S-V	         O
+        reached	        reached	      B-A2	       S-V
+            for	              -	      I-A2	  B-AM-PNC
+        comment	              -	      E-A2	  E-AM-PNC
+              .	              -	         O	         O
+
+          Magna	              -	      S-A0	         O	         O
+           said	           said	       S-V	         O	         O
+            Mr.	              -	      B-A1	      B-A0	      B-A0
+       McAlpine	              -	      I-A1	      E-A0	      E-A0
+       resigned	       resigned	      I-A1	       S-V	         O
+             to	              -	      I-A1	  B-AM-PNC	         O
+         pursue	         pursue	      I-A1	  I-AM-PNC	       S-V
+              a	              -	      I-A1	  I-AM-PNC	      B-A1
+     consulting	              -	      I-A1	  I-AM-PNC	      I-A1
+         career	              -	      I-A1	  I-AM-PNC	      E-A1
+              ,	              -	      I-A1	  I-AM-PNC	         O
+           with	              -	      I-A1	  I-AM-PNC	  B-AM-MNR
+          Magna	              -	      I-A1	  I-AM-PNC	  I-AM-MNR
+             as	              -	      I-A1	  I-AM-PNC	  I-AM-MNR
+            one	              -	      I-A1	  I-AM-PNC	  I-AM-MNR
+             of	              -	      I-A1	  I-AM-PNC	  I-AM-MNR
+            his	              -	      I-A1	  I-AM-PNC	  I-AM-MNR
+        clients	              -	      E-A1	  E-AM-PNC	  E-AM-MNR
+              .	              -	         O	         O	         O
+

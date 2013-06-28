@@ -1,0 +1,264 @@
+              A	              -	      B-A0	      B-A0	         O	         O	         O	         O
+           unit	              -	      I-A0	      I-A0	         O	         O	         O	         O
+             of	              -	      I-A0	      I-A0	         O	         O	         O	         O
+            DPC	              -	      I-A0	      I-A0	         O	         O	         O	         O
+    Acquisition	              -	      I-A0	      I-A0	         O	         O	         O	         O
+       Partners	              -	      E-A0	      E-A0	         O	         O	         O	         O
+       launched	       launched	       S-V	         O	         O	         O	         O	         O
+              a	              -	      B-A1	         O	         O	         O	         O	         O
+              $	              -	      I-A1	         O	         O	         O	         O	         O
+     10-a-share	              -	      I-A1	         O	         O	         O	         O	         O
+         tender	              -	      I-A1	         O	         O	         O	         O	         O
+          offer	              -	      I-A1	         O	         O	         O	         O	         O
+            for	              -	      I-A1	         O	         O	         O	         O	         O
+            the	              -	      I-A1	         O	         O	         O	         O	         O
+         shares	              -	      I-A1	         O	         O	         O	         O	         O
+    outstanding	              -	      I-A1	         O	         O	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O	         O	         O
+   Dataproducts	              -	      I-A1	         O	         O	         O	         O	         O
+          Corp.	              -	      E-A1	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O	         O
+           said	           said	         O	       S-V	         O	         O	         O	         O
+             it	              -	         O	      B-A1	      S-A0	      S-A0	         O	         O
+          would	              -	         O	      I-A1	  S-AM-MOD	         O	         O	         O
+           seek	           seek	         O	      I-A1	       S-V	         O	         O	         O
+             to	              -	         O	      I-A1	      B-A1	         O	         O	         O
+      liquidate	      liquidate	         O	      I-A1	      I-A1	       S-V	         O	         O
+            the	              -	         O	      I-A1	      I-A1	      B-A1	         O	         O
+computer-printer	              -	         O	      I-A1	      I-A1	      I-A1	         O	         O
+          maker	              -	         O	      I-A1	      I-A1	      E-A1	         O	         O
+             as	              -	         O	      I-A1	      I-A1	  B-AM-TMP	         O	         O
+           soon	              -	         O	      I-A1	      I-A1	  I-AM-TMP	         O	         O
+             as	              -	         O	      I-A1	      I-A1	  I-AM-TMP	         O	         O
+       possible	              -	         O	      I-A1	      E-A1	  E-AM-TMP	         O	         O
+              ,	              -	         O	      I-A1	         O	         O	         O	         O
+           even	              -	         O	      I-A1	  B-AM-ADV	         O	         O	         O
+             if	              -	         O	      I-A1	  I-AM-ADV	         O	         O	         O
+              a	              -	         O	      I-A1	  I-AM-ADV	         O	      B-A1	      B-A1
+         merger	              -	         O	      I-A1	  I-AM-ADV	         O	      E-A1	      E-A1
+             is	             is	         O	      I-A1	  I-AM-ADV	         O	       S-V	         O
+            n't	              -	         O	      I-A1	  I-AM-ADV	         O	  S-AM-NEG	  S-AM-NEG
+    consummated	    consummated	         O	      E-A1	  E-AM-ADV	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            DPC	              -	      B-A1	      B-A1
+    Acquisition	              -	      E-A1	      E-A1
+             is	             is	       S-V	         O
+     controlled	     controlled	    B-C-A1	       S-V
+             by	              -	    I-C-A1	      B-A0
+       Crescott	              -	    I-C-A1	      I-A0
+     Investment	              -	    I-C-A1	      I-A0
+     Associates	              -	    I-C-A1	      I-A0
+              ,	              -	    I-C-A1	      I-A0
+         Wilson	              -	    I-C-A1	      I-A0
+     Investment	              -	    I-C-A1	      I-A0
+          Group	              -	    I-C-A1	      I-A0
+              ,	              -	    I-C-A1	      I-A0
+         Kernel	              -	    I-C-A1	      I-A0
+          Corp.	              -	    I-C-A1	      I-A0
+            and	              -	    I-C-A1	      I-A0
+       Catalyst	              -	    I-C-A1	      I-A0
+       Partners	              -	    E-C-A1	      E-A0
+              .	              -	         O	         O
+
+            The	              -	      B-A0
+       investor	              -	      I-A0
+          group	              -	      E-A0
+           owns	           owns	       S-V
+      1,534,600	              -	      B-A1
+   Dataproducts	              -	      I-A1
+         common	              -	      I-A1
+         shares	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+              a	              -	      I-A1
+            7.6	              -	      I-A1
+              %	              -	      I-A1
+          stake	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A1	      B-A1	         O	         O
+          offer	              -	      E-A1	      E-A1	         O	         O
+             is	             is	       S-V	         O	         O	         O
+          based	          based	  B-AM-ADV	       S-V	         O	         O
+             on	              -	  I-AM-ADV	      B-A2	         O	         O
+        several	              -	  I-AM-ADV	      I-A2	      B-A2	         O
+     conditions	              -	  I-AM-ADV	      I-A2	      E-A2	         O
+              ,	              -	  I-AM-ADV	      I-A2	         O	         O
+      including	      including	  I-AM-ADV	      I-A2	       S-V	         O
+      obtaining	      obtaining	  I-AM-ADV	      I-A2	      B-A1	       S-V
+      financing	              -	  E-AM-ADV	      E-A2	      E-A1	      S-A1
+              .	              -	         O	         O	         O	         O
+
+            DPC	              -	      B-A0	         O	         O	         O	         O
+    Acquisition	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	      S-A0	         O	         O
+            had	            had	      I-A1	       S-V	         O	         O	         O
+       received	       received	      I-A1	      B-A1	       S-V	         O	         O
+            the	              -	      I-A1	      I-A1	      B-A1	         O	         O
+     reasonable	              -	      I-A1	      I-A1	      I-A1	         O	         O
+      assurance	              -	      I-A1	      I-A1	      I-A1	         O	         O
+             of	              -	      I-A1	      I-A1	      I-A1	         O	         O
+          Chase	              -	      I-A1	      I-A1	      I-A1	         O	         O
+      Manhattan	              -	      I-A1	      I-A1	      I-A1	         O	         O
+           Bank	              -	      I-A1	      I-A1	      I-A1	         O	         O
+           N.A.	              -	      I-A1	      I-A1	      I-A1	         O	         O
+           that	              -	      I-A1	      I-A1	      I-A1	         O	         O
+            the	              -	      I-A1	      I-A1	      I-A1	      B-A1	      B-A1
+      financing	              -	      I-A1	      I-A1	      I-A1	      E-A1	      E-A1
+            can	              -	      I-A1	      I-A1	      I-A1	  S-AM-MOD	  S-AM-MOD
+             be	             be	      I-A1	      I-A1	      I-A1	       S-V	         O
+       obtained	       obtained	      E-A1	      E-A1	      E-A1	      S-A3	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+             In	              -	  B-AM-LOC	         O	         O	         O	         O
+              a	              -	  I-AM-LOC	         O	         O	         O	         O
+         filing	              -	  I-AM-LOC	         O	         O	         O	         O
+           with	              -	  I-AM-LOC	         O	         O	         O	         O
+            the	              -	  I-AM-LOC	         O	         O	         O	         O
+     Securities	              -	  I-AM-LOC	         O	         O	         O	         O
+            and	              -	  I-AM-LOC	         O	         O	         O	         O
+       Exchange	              -	  I-AM-LOC	         O	         O	         O	         O
+     Commission	              -	  E-AM-LOC	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            DPC	              -	      B-A0	         O	         O	         O	         O
+    Acquisition	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O	         O
+        expects	        expects	      I-A1	       S-V	         O	         O	         O
+             it	              -	      I-A1	      B-A1	      S-A0	      S-A0	      S-A0
+           will	              -	      I-A1	      I-A1	  S-AM-MOD	         O	         O
+           need	           need	      I-A1	      I-A1	       S-V	         O	         O
+          about	              -	      I-A1	      I-A1	      B-A1	         O	         O
+              $	              -	      I-A1	      I-A1	      I-A1	         O	         O
+            215	              -	      I-A1	      I-A1	      I-A1	         O	         O
+        million	              -	      I-A1	      I-A1	      E-A1	         O	         O
+             to	              -	      I-A1	      I-A1	  B-AM-PNC	         O	         O
+            buy	            buy	      I-A1	      I-A1	  I-AM-PNC	       S-V	         O
+            the	              -	      I-A1	      I-A1	  I-AM-PNC	      B-A1	         O
+         shares	              -	      I-A1	      I-A1	  I-AM-PNC	      E-A1	         O
+            and	              -	      I-A1	      I-A1	  I-AM-PNC	         O	         O
+            pay	            pay	      I-A1	      I-A1	  I-AM-PNC	         O	       S-V
+        related	              -	      I-A1	      I-A1	  I-AM-PNC	         O	      B-A1
+           fees	              -	      I-A1	      I-A1	  I-AM-PNC	         O	      I-A1
+            and	              -	      I-A1	      I-A1	  I-AM-PNC	         O	      I-A1
+       expenses	              -	      E-A1	      E-A1	  E-AM-PNC	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            DPC	              -	      B-A0	         O	         O	      B-A0	         O	         O	         O
+    Acquisition	              -	      E-A0	         O	         O	      E-A0	         O	         O	         O
+          added	          added	       S-V	         O	         O	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O	         O	         O
+             it	              -	      I-A1	      S-A0	      S-A0	         O	         O	         O	         O
+            has	            has	      I-A1	       S-V	         O	         O	         O	         O	         O
+            not	              -	      I-A1	      B-A1	  S-AM-NEG	         O	         O	         O	         O
+          begun	          begun	      I-A1	      I-A1	       S-V	         O	         O	         O	         O
+    discussions	              -	      I-A1	      I-A1	      B-A1	         O	         O	         O	         O
+           with	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+      financing	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O
+        sources	              -	      E-A1	      E-A1	      E-A1	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O	         O	         O
+           said	           said	         O	         O	         O	       S-V	         O	         O	         O
+             it	              -	         O	         O	         O	      B-A1	      S-A0	      S-A0	         O
+       expected	       expected	         O	         O	         O	      I-A1	       S-V	         O	         O
+             to	              -	         O	         O	         O	      I-A1	      B-A1	         O	         O
+          repay	          repay	         O	         O	         O	      I-A1	      I-A1	       S-V	         O
+            the	              -	         O	         O	         O	      I-A1	      I-A1	      B-A1	      B-A1
+        amounts	              -	         O	         O	         O	      I-A1	      I-A1	      I-A1	      E-A1
+       borrowed	       borrowed	         O	         O	         O	      I-A1	      I-A1	      E-A1	       S-V
+        through	              -	         O	         O	         O	      I-A1	      I-A1	  B-AM-MNR	         O
+       proceeds	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-MNR	         O
+             of	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-MNR	         O
+            the	              -	         O	         O	         O	      I-A1	      I-A1	  I-AM-MNR	         O
+    liquidation	              -	         O	         O	         O	      E-A1	      E-A1	  E-AM-MNR	         O
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+   Dataproducts	              -	      B-A0	      B-A0	      B-A0	         O	         O	         O	         O	         O
+      officials	              -	      E-A0	      E-A0	      E-A0	         O	         O	         O	         O	         O
+       declined	       declined	       S-V	         O	         O	         O	         O	         O	         O	         O
+             to	              -	      B-A1	         O	         O	         O	         O	         O	         O	         O
+        comment	        comment	      E-A1	       S-V	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O	         O	         O	         O
+           said	           said	         O	         O	       S-V	         O	         O	         O	         O	         O
+           they	              -	         O	         O	      B-A1	      S-A0	      S-A0	         O	         O	         O
+            had	            had	         O	         O	      I-A1	       S-V	         O	         O	         O	         O
+            not	              -	         O	         O	      I-A1	      B-A1	  S-AM-NEG	         O	         O	         O
+            yet	              -	         O	         O	      I-A1	      I-A1	  S-AM-TMP	         O	         O	         O
+           seen	           seen	         O	         O	      I-A1	      I-A1	       S-V	         O	         O	         O
+              a	              -	         O	         O	      I-A1	      I-A1	      B-A1	      B-A1	         O	         O
+           suit	              -	         O	         O	      I-A1	      I-A1	      I-A1	      E-A1	         O	         O
+          filed	          filed	         O	         O	      I-A1	      I-A1	      I-A1	       S-V	         O	         O
+             in	              -	         O	         O	      I-A1	      I-A1	      I-A1	      B-A2	         O	         O
+        federal	              -	         O	         O	      I-A1	      I-A1	      I-A1	      I-A2	         O	         O
+          court	              -	         O	         O	      I-A1	      I-A1	      I-A1	      E-A2	         O	         O
+             by	              -	         O	         O	      I-A1	      I-A1	      I-A1	      B-A0	         O	         O
+            DPC	              -	         O	         O	      I-A1	      I-A1	      I-A1	      I-A0	         O	         O
+    Acquisition	              -	         O	         O	      I-A1	      I-A1	      I-A1	      E-A0	         O	         O
+           that	              -	         O	         O	      I-A1	      I-A1	      I-A1	    B-C-A1	    S-R-A0	    S-R-A0
+          seeks	          seeks	         O	         O	      I-A1	      I-A1	      I-A1	    I-C-A1	       S-V	         O
+             to	              -	         O	         O	      I-A1	      I-A1	      I-A1	    I-C-A1	      B-A1	         O
+        nullify	        nullify	         O	         O	      I-A1	      I-A1	      I-A1	    I-C-A1	      I-A1	       S-V
+              a	              -	         O	         O	      I-A1	      I-A1	      I-A1	    I-C-A1	      I-A1	      B-A1
+     standstill	              -	         O	         O	      I-A1	      I-A1	      I-A1	    I-C-A1	      I-A1	      I-A1
+      agreement	              -	         O	         O	      I-A1	      I-A1	      I-A1	    I-C-A1	      I-A1	      I-A1
+        between	              -	         O	         O	      I-A1	      I-A1	      I-A1	    I-C-A1	      I-A1	      I-A1
+            DPC	              -	         O	         O	      I-A1	      I-A1	      I-A1	    I-C-A1	      I-A1	      I-A1
+    Acquisition	              -	         O	         O	      I-A1	      I-A1	      I-A1	    I-C-A1	      I-A1	      I-A1
+            and	              -	         O	         O	      I-A1	      I-A1	      I-A1	    I-C-A1	      I-A1	      I-A1
+   Dataproducts	              -	         O	         O	      E-A1	      E-A1	      E-A1	    E-C-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+        Earlier	              -	  B-AM-TMP	         O	         O	         O	         O
+           this	              -	  I-AM-TMP	         O	         O	         O	         O
+           year	              -	  E-AM-TMP	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            DPC	              -	      B-A0	         O	         O	         O	         O
+    Acquisition	              -	      E-A0	         O	         O	         O	         O
+           made	           made	       S-V	         O	         O	         O	         O
+              a	              -	      B-A1	         O	         O	         O	         O
+              $	              -	      I-A1	         O	         O	         O	         O
+     15-a-share	              -	      I-A1	         O	         O	         O	         O
+          offer	              -	      I-A1	         O	         O	         O	         O
+            for	              -	      I-A1	         O	         O	         O	         O
+   Dataproducts	              -	      I-A1	         O	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+          which	              -	      I-A1	         O	         O	         O	         O
+            the	              -	      I-A1	      B-A0	         O	         O	         O
+   Dataproducts	              -	      I-A1	      I-A0	         O	         O	         O
+          board	              -	      I-A1	      E-A0	         O	         O	         O
+           said	           said	      I-A1	       S-V	         O	         O	         O
+             it	              -	      I-A1	      B-A1	      S-A0	         O	         O
+       rejected	       rejected	      I-A1	      I-A1	       S-V	         O	         O
+        because	              -	      I-A1	      I-A1	  B-AM-CAU	         O	         O
+            the	              -	      I-A1	      I-A1	  I-AM-CAU	      B-A1	      B-A1
+              $	              -	      I-A1	      I-A1	  I-AM-CAU	      I-A1	      I-A1
+          283.7	              -	      I-A1	      I-A1	  I-AM-CAU	      I-A1	      I-A1
+        million	              -	      I-A1	      I-A1	  I-AM-CAU	      I-A1	      I-A1
+          offer	              -	      I-A1	      I-A1	  I-AM-CAU	      E-A1	      E-A1
+            was	            was	      I-A1	      I-A1	  I-AM-CAU	       S-V	         O
+            not	              -	      I-A1	      I-A1	  I-AM-CAU	    B-C-A1	  S-AM-NEG
+          fully	              -	      I-A1	      I-A1	  I-AM-CAU	    I-C-A1	  S-AM-MNR
+       financed	       financed	      E-A1	      E-A1	  E-AM-CAU	    E-C-A1	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+   Dataproducts	              -	      S-A0	      S-A0	      S-A0	      S-A0	         O
+            has	            has	       S-V	         O	         O	         O	         O
+          since	              -	  S-AM-TMP	  S-AM-TMP	         O	         O	         O
+        started	        started	         O	       S-V	         O	         O	         O
+              a	              -	         O	      B-A1	         O	         O	         O
+  restructuring	              -	         O	      E-A1	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O
+            has	            has	         O	         O	       S-V	         O	         O
+           said	           said	         O	         O	         O	       S-V	         O
+             it	              -	         O	         O	         O	      B-A1	      S-A1
+             is	             is	         O	         O	         O	      I-A1	       S-V
+            not	              -	         O	         O	         O	      I-A1	      B-A1
+            for	              -	         O	         O	         O	      I-A1	      I-A1
+           sale	              -	         O	         O	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+

@@ -1,0 +1,188 @@
+          Xerox	              -	      B-A0	      B-A0	         O	         O
+          Corp.	              -	      E-A0	      E-A0	         O	         O
+            has	            has	       S-V	         O	         O	         O
+           told	           told	      B-A1	       S-V	         O	         O
+      employees	              -	      I-A1	      B-A2	         O	         O
+             in	              -	      I-A1	      I-A2	         O	         O
+            its	              -	      I-A1	      I-A2	         O	         O
+           Crum	              -	      I-A1	      I-A2	         O	         O
+            amp	              -	      I-A1	      I-A2	         O	         O
+        Forster	              -	      I-A1	      I-A2	         O	         O
+       personal	              -	      I-A1	      I-A2	         O	         O
+      insurance	              -	      I-A1	      I-A2	         O	         O
+     operations	              -	      I-A1	      E-A2	         O	         O
+           that	              -	      I-A1	      B-A1	         O	         O
+             it	              -	      I-A1	      I-A1	      S-A1	      S-A0
+             is	             is	      I-A1	      I-A1	       S-V	         O
+         laying	         laying	      I-A1	      I-A1	    B-C-A1	       B-V
+            off	              -	      I-A1	      I-A1	    I-C-A1	       E-V
+          about	              -	      I-A1	      I-A1	    I-C-A1	      B-A1
+            300	              -	      I-A1	      I-A1	    I-C-A1	      I-A1
+         people	              -	      I-A1	      I-A1	    I-C-A1	      I-A1
+              ,	              -	      I-A1	      I-A1	    I-C-A1	      I-A1
+             or	              -	      I-A1	      I-A1	    I-C-A1	      I-A1
+             25	              -	      I-A1	      I-A1	    I-C-A1	      I-A1
+              %	              -	      I-A1	      I-A1	    I-C-A1	      I-A1
+             of	              -	      I-A1	      I-A1	    I-C-A1	      I-A1
+            the	              -	      I-A1	      I-A1	    I-C-A1	      I-A1
+          staff	              -	      E-A1	      E-A1	    E-C-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+              A	              -	      B-A0	         O	         O	         O	         O	         O
+    spokeswoman	              -	      I-A0	         O	         O	         O	         O	         O
+            for	              -	      I-A0	         O	         O	         O	         O	         O
+           Crum	              -	      I-A0	         O	         O	         O	         O	         O
+            amp	              -	      I-A0	         O	         O	         O	         O	         O
+        Forster	              -	      E-A0	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O
+      employees	              -	      B-A1	      S-A1	      S-A2	         O	         O	         O
+           were	           were	      I-A1	       S-V	         O	         O	         O	         O
+           told	           told	      I-A1	    B-C-A1	       S-V	         O	         O	         O
+          early	              -	      I-A1	    I-C-A1	  B-AM-TMP	         O	         O	         O
+           this	              -	      I-A1	    I-C-A1	  I-AM-TMP	         O	         O	         O
+           week	              -	      I-A1	    I-C-A1	  E-AM-TMP	         O	         O	         O
+           that	              -	      I-A1	    I-C-A1	      B-A1	         O	         O	         O
+       numerous	              -	      I-A1	    I-C-A1	      I-A1	      B-A1	         O	      B-A1
+          staff	              -	      I-A1	    I-C-A1	      I-A1	      I-A1	         O	      I-A1
+      functions	              -	      I-A1	    I-C-A1	      I-A1	      I-A1	         O	      I-A1
+            for	              -	      I-A1	    I-C-A1	      I-A1	      I-A1	         O	      I-A1
+            the	              -	      I-A1	    I-C-A1	      I-A1	      I-A1	         O	      I-A1
+       personal	              -	      I-A1	    I-C-A1	      I-A1	      I-A1	         O	      I-A1
+      insurance	              -	      I-A1	    I-C-A1	      I-A1	      I-A1	         O	      I-A1
+          lines	              -	      I-A1	    I-C-A1	      I-A1	      E-A1	         O	      E-A1
+           were	           were	      I-A1	    I-C-A1	      I-A1	       S-V	         O	         O
+          going	          going	      I-A1	    I-C-A1	      I-A1	    B-C-A1	       S-V	  S-AM-MOD
+             to	              -	      I-A1	    I-C-A1	      I-A1	    I-C-A1	         O	         O
+             be	             be	      I-A1	    I-C-A1	      I-A1	    I-C-A1	         O	       S-V
+    centralized	              -	      I-A1	    I-C-A1	      I-A1	    I-C-A1	         O	      B-A3
+             as	              -	      I-A1	    I-C-A1	      I-A1	    I-C-A1	         O	      I-A3
+              a	              -	      I-A1	    I-C-A1	      I-A1	    I-C-A1	         O	      I-A3
+   cost-cutting	              -	      I-A1	    I-C-A1	      I-A1	    I-C-A1	         O	      I-A3
+           move	              -	      E-A1	    E-C-A1	      E-A1	    E-C-A1	         O	      E-A3
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            She	              -	      S-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            the	              -	      B-A1	      B-A1	         O	         O
+           move	              -	      I-A1	      E-A1	         O	         O
+          would	              -	      I-A1	  S-AM-MOD	         O	         O
+         result	         result	      I-A1	       S-V	         O	         O
+             in	              -	      I-A1	      B-A2	         O	         O
+              a	              -	      I-A1	      I-A2	      B-A1	      B-A1
+      after-tax	              -	      I-A1	      I-A2	      I-A1	      I-A1
+         charge	              -	      I-A1	      I-A2	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A2	      I-A1	      I-A1
+           less	              -	      I-A1	      I-A2	      I-A1	      I-A1
+           than	              -	      I-A1	      I-A2	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A2	      I-A1	      I-A1
+              4	              -	      I-A1	      I-A2	      I-A1	      I-A1
+        million	              -	      I-A1	      I-A2	      E-A1	      E-A1
+             to	              -	      I-A1	      I-A2	         O	         O
+             be	             be	      I-A1	      I-A2	       S-V	         O
+         spread	         spread	      I-A1	      I-A2	         O	       S-V
+           over	              -	      I-A1	      I-A2	         O	  B-AM-TMP
+            the	              -	      I-A1	      I-A2	         O	  I-AM-TMP
+           next	              -	      I-A1	      I-A2	         O	  I-AM-TMP
+          three	              -	      I-A1	      I-A2	         O	  I-AM-TMP
+       quarters	              -	      E-A1	      E-A2	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+             By	              -	  B-AM-DIS
+     comparison	              -	  E-AM-DIS
+              ,	              -	         O
+            for	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+          first	              -	  I-AM-TMP
+           nine	              -	  I-AM-TMP
+         months	              -	  E-AM-TMP
+              ,	              -	         O
+          Xerox	              -	      S-A0
+         earned	         earned	       S-V
+              $	              -	      B-A1
+            492	              -	      I-A1
+        million	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+              $	              -	      I-A1
+           4.55	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      I-A1
+              ,	              -	      E-A1
+             on	              -	  B-AM-MNR
+        revenue	              -	  I-AM-MNR
+             of	              -	  I-AM-MNR
+              $	              -	  I-AM-MNR
+          12.97	              -	  I-AM-MNR
+        billion	              -	  E-AM-MNR
+              .	              -	         O
+
+       Earnings	              -	      B-A1	         O	         O	         O	         O
+             at	              -	      I-A1	         O	         O	         O	         O
+          Xerox	              -	      I-A1	         O	         O	         O	         O
+             's	              -	      I-A1	         O	         O	         O	         O
+financial-services	              -	      I-A1	         O	         O	         O	         O
+     operations	              -	      E-A1	         O	         O	         O	         O
+       actually	              -	  S-AM-ADV	         O	         O	         O	         O
+           rose	           rose	       S-V	         O	         O	         O	         O
+       slightly	              -	      S-A2	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            but	              -	         O	         O	         O	         O	         O
+           that	              -	         O	      S-A1	         O	         O	         O
+            was	            was	         O	       S-V	         O	         O	         O
+        largely	              -	         O	  B-AM-CAU	         O	         O	         O
+        because	              -	         O	  I-AM-CAU	         O	         O	         O
+        capital	              -	         O	  I-AM-CAU	      B-A2	         O	         O
+          gains	              -	         O	  I-AM-CAU	      I-A2	         O	         O
+             at	              -	         O	  I-AM-CAU	      I-A2	         O	         O
+           Crum	              -	         O	  I-AM-CAU	      I-A2	         O	         O
+            amp	              -	         O	  I-AM-CAU	      I-A2	         O	         O
+        Forster	              -	         O	  I-AM-CAU	      E-A2	         O	         O
+         offset	         offset	         O	  I-AM-CAU	       S-V	         O	         O
+      Hurricane	              -	         O	  I-AM-CAU	      B-A1	         O	         O
+           Hugo	              -	         O	  I-AM-CAU	      I-A1	         O	         O
+       payments	              -	         O	  I-AM-CAU	      I-A1	         O	         O
+            and	              -	         O	  I-AM-CAU	      I-A1	         O	         O
+            the	              -	         O	  I-AM-CAU	      I-A1	      B-A1	      B-A0
+       reserves	              -	         O	  I-AM-CAU	      I-A1	      E-A1	      E-A0
+            set	            set	         O	  I-AM-CAU	      I-A1	       B-V	         O
+             up	              -	         O	  I-AM-CAU	      I-A1	       E-V	         O
+             to	              -	         O	  I-AM-CAU	      I-A1	  B-AM-PNC	         O
+          cover	          cover	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	       S-V
+         future	              -	         O	  I-AM-CAU	      I-A1	  I-AM-PNC	      B-A1
+       payments	              -	         O	  E-AM-CAU	      E-A1	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+Property/casualty	              -	      B-A0	      B-A1	         O	         O	         O	         O
+      insurance	              -	      E-A0	      E-A1	         O	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O	         O
+           been	           been	      B-A1	       S-V	         O	         O	         O	         O
+              a	              -	      I-A1	      B-A2	         O	         O	         O	         O
+          tough	              -	      I-A1	      I-A2	         O	         O	         O	         O
+       business	              -	      I-A1	      E-A2	         O	         O	         O	         O
+             in	              -	      I-A1	  B-AM-TMP	         O	         O	         O	         O
+         recent	              -	      I-A1	  I-AM-TMP	         O	         O	         O	         O
+       quarters	              -	      E-A1	  E-AM-TMP	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+             as	              -	         O	  B-AM-ADV	         O	         O	         O	  B-AM-ADV
+        pricing	              -	         O	  I-AM-ADV	      S-A0	      S-A1	         O	  I-AM-ADV
+            has	            has	         O	  I-AM-ADV	       S-V	         O	         O	  I-AM-ADV
+           been	           been	         O	  I-AM-ADV	         O	       S-V	         O	  I-AM-ADV
+      cutthroat	              -	         O	  I-AM-ADV	         O	  B-AM-LOC	         O	  I-AM-ADV
+            and	              -	         O	  I-AM-ADV	         O	  I-AM-LOC	         O	  I-AM-ADV
+        natural	              -	         O	  I-AM-ADV	         O	  I-AM-LOC	         O	  I-AM-ADV
+      disasters	              -	         O	  I-AM-ADV	         O	  I-AM-LOC	         O	  I-AM-ADV
+           such	              -	         O	  I-AM-ADV	         O	  I-AM-LOC	         O	  I-AM-ADV
+             as	              -	         O	  I-AM-ADV	         O	  I-AM-LOC	         O	  I-AM-ADV
+      Hurricane	              -	         O	  I-AM-ADV	         O	  I-AM-LOC	      B-A0	  I-AM-ADV
+           Hugo	              -	         O	  I-AM-ADV	         O	  E-AM-LOC	      I-A0	  I-AM-ADV
+            and	              -	         O	  I-AM-ADV	         O	         O	      I-A0	  I-AM-ADV
+            the	              -	         O	  I-AM-ADV	         O	         O	      I-A0	  I-AM-ADV
+     California	              -	         O	  I-AM-ADV	         O	         O	      I-A0	  I-AM-ADV
+     earthquake	              -	         O	  I-AM-ADV	         O	         O	      E-A0	  E-AM-ADV
+           have	           have	         O	  I-AM-ADV	         O	         O	       S-V	         O
+       resulted	       resulted	         O	  I-AM-ADV	         O	         O	         O	       S-V
+             in	              -	         O	  I-AM-ADV	         O	         O	         O	      B-A2
+           huge	              -	         O	  I-AM-ADV	         O	         O	         O	      I-A2
+       payments	              -	         O	  E-AM-ADV	         O	         O	         O	      E-A2
+              .	              -	         O	         O	         O	         O	         O	         O
+

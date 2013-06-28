@@ -1,0 +1,533 @@
+       MALAYSIA	              -	      B-A1
+             's	              -	      I-A1
+     aggressive	              -	      I-A1
+           move	              -	      I-A1
+           into	              -	      I-A1
+            the	              -	      I-A1
+    information	              -	      I-A1
+            age	              -	      E-A1
+          could	              -	  S-AM-MOD
+            not	              -	  S-AM-NEG
+           come	           come	       S-V
+             in	              -	  B-AM-TMP
+              a	              -	  I-AM-TMP
+           more	              -	  I-AM-TMP
+      opportune	              -	  I-AM-TMP
+           time	              -	  E-AM-TMP
+              .	              -	         O
+
+           With	              -	         O	         O	  B-AM-MNR	  B-AM-ADV	         O	         O	         O
+            the	              -	         O	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+    convergence	              -	         O	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+             of	              -	         O	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+ communications	              -	         O	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+            and	              -	         O	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+    information	              -	         O	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+   technologies	              -	         O	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+              (	              -	         O	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+             IT	              -	      S-A1	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+              )	              -	         O	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+        coupled	        coupled	       S-V	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+           with	              -	      B-A2	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+            the	              -	      I-A2	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+         coming	         coming	      I-A2	       S-V	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+             of	              -	      I-A2	      B-A1	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+            age	              -	      I-A2	      E-A1	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+            for	              -	      I-A2	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+            the	              -	      I-A2	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+       Internet	              -	      I-A2	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+            and	              -	      I-A2	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+            its	              -	      I-A2	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+        related	              -	      I-A2	         O	  I-AM-MNR	  I-AM-ADV	         O	         O	         O
+   technologies	              -	      E-A2	         O	  E-AM-MNR	  E-AM-ADV	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+            the	              -	         O	         O	      B-A1	      B-A1	         O	         O	         O
+          stage	              -	         O	         O	      E-A1	      E-A1	         O	         O	         O
+             is	             is	         O	         O	       S-V	         O	         O	         O	         O
+            set	            set	         O	         O	    B-C-A1	       S-V	         O	         O	         O
+            for	              -	         O	         O	    I-C-A1	  B-AM-PNC	         O	         O	         O
+     Malaysians	              -	         O	         O	    I-C-A1	  I-AM-PNC	      S-A0	      S-A0	         O
+             to	              -	         O	         O	    I-C-A1	  I-AM-PNC	         O	         O	         O
+          seize	          seize	         O	         O	    I-C-A1	  I-AM-PNC	       S-V	         O	         O
+            the	              -	         O	         O	    I-C-A1	  I-AM-PNC	      B-A1	         O	         O
+         chance	              -	         O	         O	    I-C-A1	  I-AM-PNC	      I-A1	         O	         O
+             to	              -	         O	         O	    I-C-A1	  I-AM-PNC	      I-A1	         O	         O
+      transform	      transform	         O	         O	    I-C-A1	  I-AM-PNC	      I-A1	       S-V	         O
+           into	              -	         O	         O	    I-C-A1	  I-AM-PNC	      I-A1	      B-A2	         O
+              a	              -	         O	         O	    I-C-A1	  I-AM-PNC	      I-A1	      I-A2	         O
+      knowledge	              -	         O	         O	    I-C-A1	  I-AM-PNC	      I-A1	      I-A2	         O
+        society	              -	         O	         O	    I-C-A1	  I-AM-PNC	      E-A1	      E-A2	         O
+            and	              -	         O	         O	    I-C-A1	  I-AM-PNC	         O	         O	         O
+         become	         become	         O	         O	    I-C-A1	  I-AM-PNC	         O	         O	       S-V
+         worthy	              -	         O	         O	    I-C-A1	  I-AM-PNC	         O	         O	      B-A2
+opponents/players	              -	         O	         O	    I-C-A1	  I-AM-PNC	         O	         O	      E-A2
+             in	              -	         O	         O	    I-C-A1	  I-AM-PNC	         O	         O	  B-AM-TMP
+            the	              -	         O	         O	    I-C-A1	  I-AM-PNC	         O	         O	  I-AM-TMP
+         global	              -	         O	         O	    I-C-A1	  I-AM-PNC	         O	         O	  I-AM-TMP
+         market	              -	         O	         O	    I-C-A1	  I-AM-PNC	         O	         O	  I-AM-TMP
+          space	              -	         O	         O	    E-C-A1	  E-AM-PNC	         O	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A0	      B-A0	      B-A0	         O	      B-A0	         O
+       Internet	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	      I-A0	         O
+              ,	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	      I-A0	         O
+            the	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	      I-A0	         O
+         global	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	      I-A0	         O
+        network	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	      I-A0	         O
+             of	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	      I-A0	         O
+      computers	              -	      I-A1	      I-A0	      I-A0	      I-A0	         O	      I-A0	         O
+              ,	              -	      E-A1	      E-A0	      I-A0	      E-A0	         O	      E-A0	         O
+             is	             is	       S-V	         O	      I-A0	         O	         O	         O	         O
+            now	              -	  B-AM-TMP	  B-AM-TMP	      I-A0	         O	         O	         O	         O
+            far	              -	  I-AM-TMP	  E-AM-TMP	      I-A0	         O	         O	         O	         O
+       reaching	       reaching	  I-AM-TMP	       S-V	      I-A0	         O	         O	         O	         O
+           into	              -	  I-AM-TMP	      B-A1	      I-A0	         O	         O	         O	         O
+            the	              -	  I-AM-TMP	      I-A1	      I-A0	         O	         O	         O	         O
+        country	              -	  I-AM-TMP	      E-A1	      E-A0	         O	         O	         O	         O
+              -	              -	  I-AM-TMP	         O	         O	         O	         O	         O	         O
+      extending	      extending	  I-AM-TMP	         O	       S-V	         O	         O	         O	         O
+            its	              -	  I-AM-TMP	         O	      B-A1	         O	         O	         O	         O
+        embrace	              -	  I-AM-TMP	         O	      I-A1	         O	         O	         O	         O
+             to	              -	  I-AM-TMP	         O	      I-A1	         O	         O	         O	         O
+        include	        include	  I-AM-TMP	         O	      I-A1	       S-V	         O	         O	         O
+          every	              -	  I-AM-TMP	         O	      I-A1	      B-A1	         O	         O	         O
+           nook	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+            and	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+         cranny	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+             of	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+            the	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+         nation	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+              -	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+        opening	        opening	  I-AM-TMP	         O	      I-A1	      I-A1	       S-V	         O	         O
+          doors	              -	  I-AM-TMP	         O	      I-A1	      I-A1	      S-A1	         O	         O
+             to	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+            not	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+           only	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+              a	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+        diverse	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+          range	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+             of	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+    information	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+        sources	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+            but	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+           also	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+             an	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+     exhaustive	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+           list	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+             of	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+  possibilities	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+             to	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	         O	         O
+         create	         create	  I-AM-TMP	         O	      I-A1	      I-A1	         O	       S-V	         O
+            new	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	      B-A1	         O
+   applications	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	      I-A1	         O
+          which	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	      I-A1	    S-R-A0
+            add	            add	  I-AM-TMP	         O	      I-A1	      I-A1	         O	      I-A1	       S-V
+          value	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	      I-A1	      S-A1
+             to	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	      I-A1	      B-A2
+         people	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	      I-A1	      I-A2
+             's	              -	  I-AM-TMP	         O	      I-A1	      I-A1	         O	      I-A1	      I-A2
+          lives	              -	  E-AM-TMP	         O	      E-A1	      E-A1	         O	      E-A1	      E-A2
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+             In	              -	  B-AM-LOC	  B-AM-LOC	         O	         O
+            the	              -	  I-AM-LOC	  I-AM-LOC	         O	         O
+       business	              -	  I-AM-LOC	  I-AM-LOC	         O	         O
+          world	              -	  E-AM-LOC	  E-AM-LOC	         O	         O
+              ,	              -	         O	         O	         O	         O
+            the	              -	         O	      B-A1	         O	         O
+       Internet	              -	         O	      I-A1	         O	         O
+              -	              -	         O	      I-A1	         O	         O
+        through	              -	         O	      I-A1	         O	         O
+       intranet	              -	         O	      I-A1	         O	         O
+            and	              -	         O	      I-A1	         O	         O
+       extranet	              -	         O	      I-A1	         O	         O
+      solutions	              -	         O	      E-A1	         O	         O
+              -	              -	         O	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O
+         become	         become	      B-A1	       S-V	         O	         O
+             an	              -	      I-A1	      B-A2	         O	         O
+     invaluable	              -	      I-A1	      I-A2	         O	         O
+           tool	              -	      I-A1	      I-A2	         O	         O
+            for	              -	      I-A1	      I-A2	         O	         O
+      companies	              -	      I-A1	      I-A2	      S-A0	      S-A0
+             to	              -	      I-A1	      I-A2	         O	         O
+        harness	        harness	      I-A1	      I-A2	       S-V	         O
+             so	              -	      I-A1	      I-A2	  B-AM-PNC	         O
+             as	              -	      I-A1	      I-A2	  I-AM-PNC	         O
+             to	              -	      I-A1	      I-A2	  I-AM-PNC	         O
+           gain	           gain	      I-A1	      I-A2	  I-AM-PNC	       S-V
+              a	              -	      I-A1	      I-A2	  I-AM-PNC	      B-A1
+    competitive	              -	      I-A1	      I-A2	  I-AM-PNC	      I-A1
+           edge	              -	      E-A1	      E-A2	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A1	         O	         O	         O
+      solutions	              -	      E-A1	         O	         O	         O
+            are	            are	       S-V	         O	         O	         O
+           also	              -	    B-C-A1	         O	         O	         O
+          vital	              -	    I-C-A1	         O	         O	         O
+     components	              -	    I-C-A1	         O	         O	         O
+             in	              -	    I-C-A1	         O	         O	         O
+     developing	     developing	    I-C-A1	       S-V	         O	         O
+            the	              -	    I-C-A1	      B-A1	      B-A1	         O
+     borderless	              -	    I-C-A1	      I-A1	      I-A1	         O
+      marketing	              -	    I-C-A1	      I-A1	      I-A1	         O
+       flagship	              -	    I-C-A1	      I-A1	      I-A1	         O
+    application	              -	    I-C-A1	      I-A1	      I-A1	         O
+          which	              -	    I-C-A1	      I-A1	      E-A1	         O
+             is	             is	    I-C-A1	      I-A1	       S-V	         O
+              a	              -	    I-C-A1	      I-A1	      B-A1	         O
+          vital	              -	    I-C-A1	      I-A1	      I-A1	         O
+        element	              -	    I-C-A1	      I-A1	      I-A1	         O
+            for	              -	    I-C-A1	      I-A1	      I-A1	         O
+   spearheading	   spearheading	    I-C-A1	      I-A1	      I-A1	       S-V
+            the	              -	    I-C-A1	      I-A1	      I-A1	      B-A1
+    development	              -	    I-C-A1	      I-A1	      I-A1	      I-A1
+             of	              -	    I-C-A1	      I-A1	      I-A1	      I-A1
+            the	              -	    I-C-A1	      I-A1	      I-A1	      I-A1
+     Multimedia	              -	    I-C-A1	      I-A1	      I-A1	      I-A1
+          Super	              -	    I-C-A1	      I-A1	      I-A1	      I-A1
+       Corridor	              -	    I-C-A1	      I-A1	      I-A1	      I-A1
+              (	              -	    I-C-A1	      I-A1	      I-A1	      I-A1
+            MSC	              -	    I-C-A1	      I-A1	      I-A1	      I-A1
+              )	              -	    I-C-A1	      I-A1	      I-A1	      I-A1
+        project	              -	    E-C-A1	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O
+    application	              -	      E-A0	         O
+           will	              -	  S-AM-MOD	         O
+         create	         create	       S-V	         O
+            the	              -	      B-A1	         O
+      necessary	              -	      I-A1	         O
+      framework	              -	      I-A1	         O
+            and	              -	      I-A1	         O
+ infrastructure	              -	      I-A1	         O
+             to	              -	      I-A1	         O
+        support	        support	      I-A1	       S-V
+     electronic	              -	      I-A1	      B-A1
+       commerce	              -	      I-A1	      I-A1
+              (	              -	      I-A1	      I-A1
+     e-commerce	              -	      I-A1	      I-A1
+              )	              -	      I-A1	      I-A1
+    initiatives	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+        country	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+        However	              -	  S-AM-DIS	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+             it	              -	      S-A1	         O	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O	         O
+      important	              -	      B-A1	         O	         O	         O	         O
+             to	              -	      I-A1	         O	         O	         O	         O
+           note	           note	      I-A1	       S-V	         O	         O	         O
+           that	              -	      I-A1	      B-A1	         O	         O	         O
+     installing	     installing	      I-A1	      I-A1	       S-V	         O	      B-A0
+             or	              -	      I-A1	      I-A1	         O	         O	      I-A0
+   implementing	   implementing	      I-A1	      I-A1	         O	       S-V	      I-A0
+       Internet	              -	      I-A1	      I-A1	      B-A1	      B-A1	      I-A0
+   technologies	              -	      I-A1	      I-A1	      E-A1	      I-A1	      I-A0
+            for	              -	      I-A1	      I-A1	  B-AM-PNC	      I-A1	      I-A0
+     technology	              -	      I-A1	      I-A1	  I-AM-PNC	      I-A1	      I-A0
+             's	              -	      I-A1	      I-A1	  I-AM-PNC	      I-A1	      I-A0
+           sake	              -	      I-A1	      I-A1	  E-AM-PNC	      E-A1	      E-A0
+          would	              -	      I-A1	      I-A1	         O	         O	  S-AM-MOD
+            not	              -	      I-A1	      I-A1	         O	         O	  S-AM-NEG
+         ensure	         ensure	      I-A1	      I-A1	         O	         O	       S-V
+        instant	              -	      I-A1	      I-A1	         O	         O	      B-A1
+        success	              -	      E-A1	      E-A1	         O	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+            For	              -	         O	         O	         O	  B-AM-ADV	         O
+     e-commerce	              -	      S-A1	         O	         O	  I-AM-ADV	         O
+             to	              -	         O	         O	         O	  I-AM-ADV	         O
+       flourish	       flourish	       S-V	         O	         O	  I-AM-ADV	         O
+           with	              -	      B-A2	         O	         O	  I-AM-ADV	         O
+     full-blown	              -	      I-A2	         O	         O	  I-AM-ADV	         O
+     end-to-end	              -	      I-A2	         O	         O	  I-AM-ADV	         O
+       business	              -	      I-A2	         O	         O	  I-AM-ADV	         O
+   transactions	              -	      E-A2	         O	         O	  I-AM-ADV	         O
+              ,	              -	         O	         O	         O	  I-AM-ADV	         O
+      strategic	              -	         O	      B-A0	         O	  I-AM-ADV	         O
+       planning	              -	         O	      E-A0	         O	  I-AM-ADV	         O
+          which	              -	         O	    S-R-A0	         O	  I-AM-ADV	         O
+   incorporates	   incorporates	         O	       S-V	         O	  I-AM-ADV	         O
+           both	              -	         O	      B-A1	      B-A1	  I-AM-ADV	         O
+       business	              -	         O	      I-A1	      I-A1	  I-AM-ADV	         O
+            and	              -	         O	      I-A1	      I-A1	  I-AM-ADV	         O
+     technology	              -	         O	      I-A1	      I-A1	  I-AM-ADV	         O
+          plans	              -	         O	      I-A1	      I-A1	  I-AM-ADV	         O
+           that	              -	         O	      I-A1	      E-A1	  I-AM-ADV	         O
+            are	            are	         O	      I-A1	       S-V	  I-AM-ADV	         O
+  complementary	              -	         O	      I-A1	    B-C-A1	  E-AM-ADV	         O
+             is	             is	         O	      I-A1	    I-C-A1	       S-V	         O
+      necessary	              -	         O	      I-A1	    I-C-A1	      S-A3	         O
+            for	              -	         O	      I-A1	    I-C-A1	  B-AM-PNC	         O
+             an	              -	         O	      I-A1	    I-C-A1	  I-AM-PNC	      B-A0
+   organisation	              -	         O	      I-A1	    I-C-A1	  I-AM-PNC	      E-A0
+             to	              -	         O	      I-A1	    I-C-A1	  I-AM-PNC	         O
+            see	            see	         O	      I-A1	    I-C-A1	  I-AM-PNC	       S-V
+       feasible	              -	         O	      I-A1	    I-C-A1	  I-AM-PNC	      B-A1
+        returns	              -	         O	      I-A1	    I-C-A1	  I-AM-PNC	      I-A1
+             on	              -	         O	      I-A1	    I-C-A1	  I-AM-PNC	      I-A1
+     investment	              -	         O	      E-A1	    E-C-A1	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+      Intranets	              -	      B-A1	      B-A1	         O	         O	      S-A0
+              ,	              -	      I-A1	      I-A1	         O	         O	         O
+        through	              -	      I-A1	      I-A1	         O	         O	         O
+            the	              -	      I-A1	      I-A1	         O	         O	         O
+            use	              -	      I-A1	      I-A1	         O	         O	         O
+             of	              -	      I-A1	      I-A1	         O	         O	         O
+       Internet	              -	      I-A1	      I-A1	         O	         O	         O
+     technology	              -	      I-A1	      I-A1	         O	         O	         O
+              ,	              -	      E-A1	      E-A1	         O	         O	         O
+            are	            are	       S-V	         O	         O	         O	         O
+     positioned	     positioned	    B-C-A1	       S-V	         O	         O	         O
+             as	              -	    I-C-A1	      B-A2	         O	         O	         O
+              a	              -	    I-C-A1	      I-A2	         O	         O	         O
+       platform	              -	    I-C-A1	      I-A2	         O	         O	         O
+            for	              -	    I-C-A1	      I-A2	         O	         O	         O
+      companies	              -	    I-C-A1	      I-A2	      S-A0	         O	      S-A0
+             to	              -	    I-C-A1	      I-A2	         O	         O	         O
+       optimise	       optimise	    I-C-A1	      I-A2	       S-V	         O	         O
+              ,	              -	    I-C-A1	      I-A2	         O	         O	         O
+         expand	         expand	    I-C-A1	      I-A2	         O	       S-V	         O
+            and	              -	    I-C-A1	      I-A2	         O	         O	         O
+      transform	      transform	    I-C-A1	      I-A2	         O	         O	       S-V
+            new	              -	    I-C-A1	      I-A2	      B-A1	      B-A1	      B-A1
+       channels	              -	    I-C-A1	      I-A2	      I-A1	      I-A1	      I-A1
+             of	              -	    I-C-A1	      I-A2	      I-A1	      I-A1	      I-A1
+       business	              -	    E-C-A1	      E-A2	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+           When	              -	         O	  B-AM-TMP	         O
+  strategically	              -	  S-AM-MNR	  I-AM-TMP	         O
+    implemented	    implemented	       S-V	  E-AM-TMP	         O
+              ,	              -	         O	         O	         O
+             an	              -	         O	      B-A0	         O
+       intranet	              -	         O	      I-A0	         O
+       solution	              -	         O	      E-A0	         O
+           will	              -	         O	  S-AM-MOD	         O
+        provide	        provide	         O	       S-V	         O
+            the	              -	         O	      B-A1	         O
+        ability	              -	         O	      I-A1	         O
+             to	              -	         O	      I-A1	         O
+        mediate	        mediate	         O	      I-A1	       S-V
+mission-critical	              -	         O	      I-A1	      B-A1
+              ,	              -	         O	      I-A1	      I-A1
+       decision	              -	         O	      I-A1	      I-A1
+        support	              -	         O	      I-A1	      I-A1
+      functions	              -	         O	      I-A1	      I-A1
+             in	              -	         O	      I-A1	      I-A1
+  organisations	              -	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+             It	              -	      S-A0	         O
+           will	              -	  S-AM-MOD	         O
+           also	              -	  S-AM-DIS	         O
+           help	           help	       S-V	         O
+        further	              -	      B-A1	         O
+        improve	        improve	      I-A1	       S-V
+ communications	              -	      I-A1	      B-A1
+            and	              -	      I-A1	      I-A1
+  collaboration	              -	      I-A1	      E-A1
+             at	              -	      I-A1	  B-AM-MNR
+            all	              -	      I-A1	  I-AM-MNR
+         levels	              -	      I-A1	  I-AM-MNR
+             in	              -	      I-A1	  I-AM-MNR
+             an	              -	      I-A1	  I-AM-MNR
+   organisation	              -	      E-A1	  E-AM-MNR
+              .	              -	         O	         O
+
+           With	              -	  B-AM-ADV	         O
+      intranets	              -	  I-AM-ADV	         O
+             in	              -	  I-AM-ADV	         O
+          place	              -	  E-AM-ADV	         O
+              ,	              -	         O	         O
+             it	              -	      S-A1	         O
+             is	             is	       S-V	         O
+           only	              -	  B-AM-TMP	         O
+        logical	              -	  I-AM-TMP	         O
+            for	              -	  I-AM-TMP	         O
+  organisations	              -	  I-AM-TMP	      S-A0
+             to	              -	  I-AM-TMP	         O
+   respectively	              -	  I-AM-TMP	         O
+           link	           link	  I-AM-TMP	       S-V
+            the	              -	  I-AM-TMP	      B-A1
+        network	              -	  I-AM-TMP	      E-A1
+             to	              -	  I-AM-TMP	      B-A2
+          other	              -	  I-AM-TMP	      I-A2
+      companies	              -	  I-AM-TMP	      I-A2
+              '	              -	  I-AM-TMP	      E-A2
+            for	              -	  I-AM-TMP	  B-AM-PNC
+       extended	              -	  I-AM-TMP	  I-AM-PNC
+       business	              -	  I-AM-TMP	  I-AM-PNC
+       purposes	              -	  I-AM-TMP	  I-AM-PNC
+        through	              -	  I-AM-TMP	  I-AM-PNC
+      extranets	              -	  E-AM-TMP	  E-AM-PNC
+              .	              -	         O	         O
+
+          While	              -	         O	         O	         O	         O	         O
+           this	              -	      S-A0	         O	         O	         O	         O
+           will	              -	  S-AM-MOD	         O	         O	         O	         O
+         enable	         enable	       S-V	         O	         O	         O	         O
+            the	              -	      B-A1	         O	         O	         O	         O
+        sharing	              -	      I-A1	         O	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O	         O
+    information	              -	      I-A1	         O	         O	         O	         O
+          among	              -	      I-A1	         O	         O	         O	         O
+    enterprises	              -	      I-A1	         O	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+       security	              -	      I-A1	         O	         O	         O	         O
+         issues	              -	      I-A1	         O	         O	         O	         O
+           such	              -	      I-A1	         O	         O	         O	         O
+             as	              -	      I-A1	         O	         O	         O	         O
+      firewalls	              -	      I-A1	         O	         O	         O	         O
+            and	              -	      I-A1	         O	         O	         O	         O
+     encryption	              -	      I-A1	         O	         O	         O	         O
+             as	              -	      I-A1	         O	         O	         O	         O
+           well	              -	      I-A1	         O	         O	         O	         O
+             as	              -	      I-A1	         O	         O	         O	         O
+         access	              -	      I-A1	         O	         O	         O	         O
+            and	              -	      I-A1	         O	         O	         O	         O
+        control	              -	      I-A1	         O	         O	         O	         O
+     procedures	              -	      E-A1	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O
+            the	              -	         O	         O	      B-A0	         O	         O
+          trust	              -	         O	         O	      I-A0	         O	         O
+         levels	              -	         O	         O	      I-A0	         O	         O
+           that	              -	         O	         O	      I-A0	         O	         O
+    enterprises	              -	         O	         O	      I-A0	         O	         O
+           have	           have	         O	       S-V	      I-A0	         O	         O
+           with	              -	         O	         O	      I-A0	         O	         O
+           each	              -	         O	         O	      I-A0	         O	         O
+          other	              -	         O	         O	      E-A0	         O	         O
+           will	              -	         O	         O	  S-AM-MOD	         O	         O
+         emerge	         emerge	         O	         O	       S-V	         O	         O
+            and	              -	         O	         O	         O	         O	         O
+          there	              -	         O	         O	         O	         O	         O
+           will	              -	         O	         O	         O	  S-AM-MOD	         O
+             be	             be	         O	         O	         O	       S-V	         O
+              a	              -	         O	         O	         O	      B-A1	         O
+           need	              -	         O	         O	         O	      I-A1	         O
+             to	              -	         O	         O	         O	      I-A1	         O
+        address	        address	         O	         O	         O	      I-A1	       S-V
+           them	              -	         O	         O	         O	      E-A1	      S-A1
+              .	              -	         O	         O	         O	         O	         O
+
+          Other	              -	  B-AM-ADV	  B-AM-ADV	         O
+           than	              -	  I-AM-ADV	  I-AM-ADV	         O
+          usage	              -	  I-AM-ADV	  I-AM-ADV	         O
+             in	              -	  I-AM-ADV	  I-AM-ADV	         O
+       business	              -	  E-AM-ADV	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O
+       Internet	              -	      B-A1	      B-A1	      B-A0
+     technology	              -	      E-A1	      E-A1	      E-A0
+             is	             is	       S-V	         O	         O
+           also	              -	    B-C-A1	  S-AM-DIS	         O
+      beginning	      beginning	    I-C-A1	       S-V	         O
+             to	              -	    I-C-A1	      B-A1	         O
+     infiltrate	     infiltrate	    I-C-A1	      I-A1	       S-V
+            the	              -	    I-C-A1	      I-A1	      B-A1
+      lifestyle	              -	    I-C-A1	      I-A1	      I-A1
+         domain	              -	    E-C-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+             ``	              -	         O	         O	         O
+          Smart	              -	      B-A0	      B-A0	      B-A0
+          homes	              -	      E-A0	      E-A0	      E-A0
+             ''	              -	         O	         O	         O
+           have	           have	       S-V	         O	         O
+        emerged	        emerged	         O	       S-V	         O
+       bringing	       bringing	         O	  B-AM-ADV	       S-V
+              a	              -	         O	  I-AM-ADV	      B-A1
+         wealth	              -	         O	  I-AM-ADV	      I-A1
+             of	              -	         O	  I-AM-ADV	      I-A1
+    information	              -	         O	  I-AM-ADV	      I-A1
+            and	              -	         O	  I-AM-ADV	      I-A1
+  entertainment	              -	         O	  I-AM-ADV	      I-A1
+             to	              -	         O	  I-AM-ADV	      I-A1
+       families	              -	         O	  I-AM-ADV	      I-A1
+           over	              -	         O	  I-AM-ADV	      I-A1
+telecommunications	              -	         O	  I-AM-ADV	      I-A1
+          lines	              -	         O	  E-AM-ADV	      E-A1
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	      B-A0	         O	         O	         O
+            art	              -	      I-A1	      I-A0	         O	         O	         O
+             of	              -	      I-A1	      I-A0	         O	         O	         O
+    socialising	              -	      E-A1	      E-A0	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O	         O
+           also	              -	    B-C-A1	  S-AM-DIS	         O	         O	         O
+   experiencing	   experiencing	    I-C-A1	       S-V	         O	         O	         O
+              a	              -	    I-C-A1	      B-A1	         O	         O	         O
+         change	              -	    I-C-A1	      I-A1	         O	         O	         O
+          where	              -	    I-C-A1	      I-A1	         O	         O	         O
+    Net/virtual	              -	    I-C-A1	      I-A1	      B-A1	      B-A1	      B-A1
+  relationships	              -	    I-C-A1	      I-A1	      E-A1	      E-A1	      E-A1
+            are	            are	    I-C-A1	      I-A1	       S-V	         O	         O
+           fast	              -	    I-C-A1	      I-A1	    B-C-A1	  S-AM-MNR	         O
+     overtaking	     overtaking	    I-C-A1	      I-A1	    E-C-A1	       S-V	         O
+             or	              -	    I-C-A1	      I-A1	         O	         O	         O
+       becoming	       becoming	    I-C-A1	      I-A1	         O	         O	       S-V
+       parallel	              -	    I-C-A1	      I-A1	         O	         O	      S-A2
+           with	              -	    I-C-A1	      I-A1	         O	         O	  B-AM-ADV
+            the	              -	    I-C-A1	      I-A1	         O	         O	  I-AM-ADV
+         normal	              -	    I-C-A1	      I-A1	         O	         O	  I-AM-ADV
+          human	              -	    I-C-A1	      I-A1	         O	         O	  I-AM-ADV
+  relationships	              -	    E-C-A1	      E-A1	         O	         O	  E-AM-ADV
+              .	              -	         O	         O	         O	         O	         O
+
+        Whether	              -	         O	      B-A1	      B-A1	      B-A1
+           this	              -	      S-A1	      I-A1	      I-A1	      I-A1
+          would	              -	  S-AM-MOD	      I-A1	      I-A1	      I-A1
+          prove	          prove	       S-V	      I-A1	      I-A1	      I-A1
+       positive	              -	      S-A1	      I-A1	      I-A1	      I-A1
+             or	              -	         O	      I-A1	      I-A1	      I-A1
+      otherwise	              -	         O	      I-A1	      I-A1	      I-A1
+        towards	              -	         O	      I-A1	      I-A1	      I-A1
+        society	              -	         O	      I-A1	      I-A1	      I-A1
+             in	              -	         O	      I-A1	      I-A1	      I-A1
+            the	              -	         O	      I-A1	      I-A1	      I-A1
+         future	              -	         O	      E-A1	      E-A1	      E-A1
+             is	             is	         O	       S-V	         O	         O
+            yet	              -	         O	  S-AM-TMP	         O	         O
+             to	              -	         O	    B-C-A1	         O	         O
+             be	             be	         O	    I-C-A1	       S-V	         O
+           seen	           seen	         O	    E-C-A1	    S-C-A1	       S-V
+              .	              -	         O	         O	         O	         O
+
+            All	              -	  B-AM-ADV	         O
+             in	              -	  I-AM-ADV	         O
+            all	              -	  E-AM-ADV	         O
+              ,	              -	         O	         O
+            the	              -	      B-A0	      B-A0
+       Internet	              -	      E-A0	      E-A0
+            has	            has	       S-V	         O
+              a	              -	      B-A1	      B-A1
+            lot	              -	      I-A1	      E-A1
+             to	              -	      I-A1	         O
+          offer	          offer	      E-A1	       S-V
+              .	              -	         O	         O
+
+        However	              -	  S-AM-DIS	         O
+              ,	              -	         O	         O
+            its	              -	      B-A1	         O
+          value	              -	      I-A1	         O
+            and	              -	      I-A1	         O
+       benefits	              -	      E-A1	         O
+            are	            are	       S-V	         O
+           only	              -	    B-C-A1	         O
+             as	              -	    I-C-A1	         O
+           good	              -	    E-C-A1	         O
+             as	              -	  B-AM-ADV	         O
+            how	              -	  I-AM-ADV	S-R-AM-MNR
+             we	              -	  I-AM-ADV	      S-A0
+            use	            use	  I-AM-ADV	       S-V
+             it	              -	  E-AM-ADV	      S-A1
+              .	              -	         O	         O
+

@@ -1,0 +1,46 @@
+        Pacific	              -	      B-A0	         O
+          First	              -	      I-A0	         O
+      Financial	              -	      I-A0	         O
+          Corp.	              -	      E-A0	         O
+           said	           said	       S-V	         O
+   shareholders	              -	      B-A1	      S-A0
+       approved	       approved	      I-A1	       S-V
+            its	              -	      I-A1	      B-A1
+    acquisition	              -	      I-A1	      I-A1
+             by	              -	      I-A1	      I-A1
+          Royal	              -	      I-A1	      I-A1
+        Trustco	              -	      I-A1	      I-A1
+           Ltd.	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+        Toronto	              -	      I-A1	      E-A1
+            for	              -	      I-A1	      B-A3
+              $	              -	      I-A1	      I-A3
+             27	              -	      I-A1	      I-A3
+              a	              -	      I-A1	      I-A3
+          share	              -	      I-A1	      I-A3
+              ,	              -	      I-A1	      I-A3
+             or	              -	      I-A1	      I-A3
+              $	              -	      I-A1	      I-A3
+            212	              -	      I-A1	      I-A3
+        million	              -	      E-A1	      E-A3
+              .	              -	         O	         O
+
+            The	              -	         O	      B-A0	         O	         O	         O
+         thrift	              -	      S-A1	      I-A0	         O	         O	         O
+        holding	        holding	       S-V	      I-A0	         O	         O	         O
+        company	              -	      S-A0	      E-A0	         O	         O	         O
+           said	           said	         O	       S-V	         O	         O	         O
+             it	              -	         O	      B-A1	      S-A0	      S-A0	      S-A0
+        expects	        expects	         O	      I-A1	       S-V	         O	         O
+             to	              -	         O	      I-A1	      B-A1	         O	         O
+         obtain	         obtain	         O	      I-A1	      I-A1	       S-V	         O
+     regulatory	              -	         O	      I-A1	      I-A1	      B-A1	         O
+       approval	              -	         O	      I-A1	      I-A1	      E-A1	         O
+            and	              -	         O	      I-A1	      I-A1	         O	         O
+       complete	       complete	         O	      I-A1	      I-A1	         O	       S-V
+            the	              -	         O	      I-A1	      I-A1	         O	      B-A1
+    transaction	              -	         O	      I-A1	      I-A1	         O	      E-A1
+             by	              -	         O	      I-A1	      I-A1	         O	  B-AM-MNR
+       year-end	              -	         O	      E-A1	      E-A1	         O	  E-AM-MNR
+              .	              -	         O	         O	         O	         O	         O
+

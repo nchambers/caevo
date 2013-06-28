@@ -1,0 +1,608 @@
+        PROGRAM	              -	      B-A1	      B-A1	      B-A1	         O	         O	         O	         O
+        TRADING	              -	      E-A1	      E-A1	      E-A1	         O	         O	         O	         O
+             is	             is	       S-V	         O	         O	         O	         O	         O	         O
+          being	          being	    B-C-A1	       S-V	         O	         O	         O	         O	         O
+         curbed	         curbed	    I-C-A1	    B-C-A1	       S-V	         O	         O	         O	         O
+             by	              -	    I-C-A1	    I-C-A1	      B-A0	         O	         O	         O	         O
+           more	              -	    I-C-A1	    I-C-A1	      I-A0	         O	         O	         O	         O
+     securities	              -	    I-C-A1	    I-C-A1	      I-A0	         O	         O	         O	         O
+          firms	              -	    E-C-A1	    E-C-A1	      E-A0	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+            but	              -	         O	         O	         O	         O	         O	         O	         O
+            big	              -	         O	         O	         O	      B-A1	      B-A1	      B-A0	      B-A0
+  institutional	              -	         O	         O	         O	      I-A1	      I-A1	      I-A0	      I-A0
+      investors	              -	         O	         O	         O	      E-A1	      E-A1	      E-A0	      E-A0
+            are	            are	         O	         O	         O	       S-V	         O	         O	         O
+       expected	       expected	         O	         O	         O	    B-C-A1	       S-V	         O	         O
+             to	              -	         O	         O	         O	    I-C-A1	    B-C-A1	         O	         O
+       continue	       continue	         O	         O	         O	    I-C-A1	    I-C-A1	       S-V	         O
+            the	              -	         O	         O	         O	    I-C-A1	    I-C-A1	      B-A1	         O
+       practice	              -	         O	         O	         O	    I-C-A1	    I-C-A1	      E-A1	         O
+              ,	              -	         O	         O	         O	    I-C-A1	    I-C-A1	         O	         O
+        further	              -	         O	         O	         O	    I-C-A1	    I-C-A1	  B-AM-ADV	  S-AM-MNR
+        roiling	        roiling	         O	         O	         O	    I-C-A1	    I-C-A1	  I-AM-ADV	       S-V
+            the	              -	         O	         O	         O	    I-C-A1	    I-C-A1	  I-AM-ADV	      B-A1
+          stock	              -	         O	         O	         O	    I-C-A1	    I-C-A1	  I-AM-ADV	      I-A1
+         market	              -	         O	         O	         O	    E-C-A1	    E-C-A1	  E-AM-ADV	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+         Bowing	         Bowing	       S-V	  B-AM-ADV	         O
+             to	              -	      B-A1	  I-AM-ADV	         O
+      criticism	              -	      E-A1	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O
+           Bear	              -	      B-A0	      B-A0	      B-A0
+        Stearns	              -	      I-A0	      I-A0	      I-A0
+              ,	              -	      I-A0	      I-A0	      I-A0
+         Morgan	              -	      I-A0	      I-A0	      I-A0
+        Stanley	              -	      I-A0	      I-A0	      I-A0
+            and	              -	      I-A0	      I-A0	      I-A0
+    Oppenheimer	              -	      E-A0	      E-A0	      E-A0
+         joined	         joined	         O	       S-V	         O
+    PaineWebber	              -	         O	      S-A1	         O
+             in	              -	         O	  B-AM-PRD	         O
+     suspending	     suspending	         O	  I-AM-PRD	       S-V
+    stock-index	              -	         O	  I-AM-PRD	      B-A1
+      arbitrage	              -	         O	  I-AM-PRD	      I-A1
+        trading	              -	         O	  I-AM-PRD	      I-A1
+            for	              -	         O	  I-AM-PRD	      I-A1
+          their	              -	         O	  I-AM-PRD	      I-A1
+            own	              -	         O	  I-AM-PRD	      I-A1
+       accounts	              -	         O	  E-AM-PRD	      E-A1
+              .	              -	         O	         O	         O
+
+          Still	              -	  S-AM-DIS	  S-AM-DIS	         O	         O
+              ,	              -	         O	         O	         O	         O
+    stock-index	              -	      B-A1	      B-A1	      B-A0	      B-A0
+          funds	              -	      E-A1	      E-A1	      E-A0	      E-A0
+            are	            are	       S-V	         O	         O	         O
+       expected	       expected	    B-C-A1	       S-V	         O	         O
+             to	              -	    I-C-A1	    B-C-A1	         O	         O
+       continue	       continue	    I-C-A1	    I-C-A1	       S-V	         O
+      launching	      launching	    I-C-A1	    I-C-A1	      B-A1	       S-V
+            big	              -	    I-C-A1	    I-C-A1	      I-A1	      B-A1
+       programs	              -	    I-C-A1	    I-C-A1	      I-A1	      E-A1
+        through	              -	    I-C-A1	    I-C-A1	      I-A1	  B-AM-MNR
+            the	              -	    I-C-A1	    I-C-A1	      I-A1	  I-AM-MNR
+         market	              -	    E-C-A1	    E-C-A1	      E-A1	  E-AM-MNR
+              .	              -	         O	         O	         O	         O
+
+        Several	              -	      B-A1	      B-A0	      B-A0
+            Big	              -	      I-A1	      I-A0	      I-A0
+          Board	              -	      I-A1	      I-A0	      I-A0
+          firms	              -	      E-A1	      E-A0	      E-A0
+            are	            are	       S-V	         O	         O
+     organizing	     organizing	    B-C-A1	       S-V	         O
+             to	              -	    I-C-A1	  B-AM-PNC	         O
+       complain	       complain	    I-C-A1	  I-AM-PNC	       S-V
+          about	              -	    I-C-A1	  I-AM-PNC	      B-A1
+        program	              -	    I-C-A1	  I-AM-PNC	      I-A1
+        trading	              -	    I-C-A1	  I-AM-PNC	      I-A1
+            and	              -	    I-C-A1	  I-AM-PNC	      I-A1
+            the	              -	    I-C-A1	  I-AM-PNC	      I-A1
+       exchange	              -	    I-C-A1	  I-AM-PNC	      I-A1
+             's	              -	    I-C-A1	  I-AM-PNC	      I-A1
+           role	              -	    I-C-A1	  I-AM-PNC	      I-A1
+             in	              -	    I-C-A1	  I-AM-PNC	      I-A1
+             it	              -	    E-C-A1	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A1
+         effort	              -	      E-A1	      E-A1	      E-A1
+             is	             is	       S-V	         O	         O
+          being	          being	    B-C-A1	       S-V	         O
+            led	            led	    I-C-A1	    B-C-A1	       S-V
+             by	              -	    I-C-A1	    I-C-A1	      B-A0
+         Contel	              -	    E-C-A1	    E-C-A1	      E-A0
+              .	              -	         O	         O	         O
+
+       Personal	              -	      B-A1
+       spending	              -	      E-A1
+           rose	           rose	       S-V
+            0.2	              -	      B-A2
+              %	              -	      E-A2
+             in	              -	  B-AM-TMP
+      September	              -	  I-AM-TMP
+              ,	              -	  I-AM-TMP
+            the	              -	  I-AM-TMP
+       smallest	              -	  I-AM-TMP
+           gain	              -	  I-AM-TMP
+             in	              -	  I-AM-TMP
+              a	              -	  I-AM-TMP
+           year	              -	  E-AM-TMP
+              .	              -	         O
+
+            The	              -	      B-A0	         O
+       slowdown	              -	      E-A0	         O
+         raises	         raises	       S-V	         O
+      questions	              -	      B-A1	         O
+          about	              -	      I-A1	         O
+            the	              -	      I-A1	         O
+        economy	              -	      I-A1	         O
+             's	              -	      I-A1	         O
+       strength	              -	      E-A1	         O
+        because	              -	  B-AM-CAU	         O
+       spending	              -	  I-AM-CAU	      S-A2
+         fueled	         fueled	  I-AM-CAU	       S-V
+           much	              -	  I-AM-CAU	      B-A1
+             of	              -	  I-AM-CAU	      I-A1
+            the	              -	  I-AM-CAU	      I-A1
+  third-quarter	              -	  I-AM-CAU	      I-A1
+            GNP	              -	  I-AM-CAU	      I-A1
+         growth	              -	  E-AM-CAU	      E-A1
+              .	              -	         O	         O
+
+      Meanwhile	              -	  S-AM-TMP
+              ,	              -	         O
+       personal	              -	      B-A1
+         income	              -	      E-A1
+          edged	          edged	       S-V
+             up	              -	      S-A5
+            0.3	              -	      B-A2
+              %	              -	      E-A2
+              .	              -	         O
+
+        Factory	              -	      B-A1	      B-A0	      B-A1
+         owners	              -	      E-A1	      E-A0	      I-A1
+            are	            are	       S-V	         O	      I-A1
+         buying	         buying	      B-A1	       S-V	      I-A1
+            new	              -	      I-A1	      B-A1	      I-A1
+      machinery	              -	      I-A1	      E-A1	      I-A1
+             at	              -	      I-A1	  B-AM-MNR	      I-A1
+              a	              -	      I-A1	  I-AM-MNR	      I-A1
+        healthy	              -	      I-A1	  I-AM-MNR	      I-A1
+           rate	              -	      E-A1	  E-AM-MNR	      I-A1
+           this	              -	  B-AM-TMP	  B-AM-TMP	      I-A1
+           fall	              -	  E-AM-TMP	  E-AM-TMP	      E-A1
+              ,	              -	         O	         O	         O
+   machine-tool	              -	         O	         O	      B-A0
+         makers	              -	         O	         O	      E-A0
+            say	            say	         O	         O	       S-V
+              .	              -	         O	         O	         O
+
+            But	              -	  S-AM-DIS
+           weak	              -	      B-A0
+            car	              -	      I-A0
+          sales	              -	      E-A0
+          raise	          raise	       S-V
+      questions	              -	      B-A1
+          about	              -	      I-A1
+         future	              -	      I-A1
+         demand	              -	      I-A1
+           from	              -	      I-A1
+            the	              -	      I-A1
+           auto	              -	      I-A1
+         sector	              -	      E-A1
+              .	              -	         O
+
+       Southern	              -	      B-A0	      B-A0	         O
+             's	              -	      I-A0	      I-A0	         O
+           Gulf	              -	      I-A0	      I-A0	         O
+          Power	              -	      I-A0	      I-A0	         O
+           unit	              -	      E-A0	      E-A0	         O
+            may	              -	  S-AM-MOD	         O	         O
+          plead	          plead	       S-V	         O	         O
+         guilty	              -	      S-A1	         O	         O
+           this	              -	  B-AM-TMP	         O	         O
+           week	              -	  E-AM-TMP	         O	         O
+             to	              -	         O	         O	         O
+        charges	        charges	         O	       S-V	         O
+             it	              -	         O	      B-A1	      S-A0
+      illegally	              -	         O	      I-A1	  S-AM-MNR
+        steered	        steered	         O	      I-A1	       S-V
+        company	              -	         O	      I-A1	      B-A1
+          money	              -	         O	      I-A1	      E-A1
+             to	              -	         O	      I-A1	      B-A2
+    politicians	              -	         O	      I-A1	      E-A2
+        through	              -	         O	      I-A1	  B-AM-MNR
+          third	              -	         O	      I-A1	  I-AM-MNR
+        parties	              -	         O	      E-A1	  E-AM-MNR
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0
+      tentative	              -	      I-A0
+           pact	              -	      E-A0
+          would	              -	  S-AM-MOD
+        resolve	        resolve	       S-V
+           part	              -	      B-A1
+             of	              -	      I-A1
+              a	              -	      I-A1
+          broad	              -	      I-A1
+  investigation	              -	      I-A1
+             of	              -	      I-A1
+            the	              -	      I-A1
+  Atlanta-based	              -	      I-A1
+        company	              -	      I-A1
+             in	              -	      I-A1
+            the	              -	      I-A1
+           past	              -	      I-A1
+           year	              -	      E-A1
+              .	              -	         O
+
+            LIN	              -	      B-A0	      B-A0	      B-A0
+   Broadcasting	              -	      I-A0	      I-A0	      I-A0
+            and	              -	      I-A0	      I-A0	      I-A0
+      BellSouth	              -	      E-A0	      E-A0	      E-A0
+      sweetened	      sweetened	       S-V	         O	         O
+          their	              -	      B-A1	         O	         O
+           plan	              -	      I-A1	         O	         O
+             to	              -	      I-A1	         O	         O
+          merge	          merge	      I-A1	       S-V	         O
+       cellular	              -	      I-A1	      B-A1	         O
+          phone	              -	      I-A1	      I-A1	         O
+     operations	              -	      E-A1	      E-A1	         O
+              ,	              -	         O	         O	         O
+       offering	       offering	  B-AM-ADV	         O	       S-V
+            LIN	              -	  I-AM-ADV	         O	      B-A2
+        holders	              -	  I-AM-ADV	         O	      E-A2
+              a	              -	  I-AM-ADV	         O	      B-A1
+        special	              -	  I-AM-ADV	         O	      I-A1
+              $	              -	  I-AM-ADV	         O	      I-A1
+     42-a-share	              -	  I-AM-ADV	         O	      I-A1
+         payout	              -	  E-AM-ADV	         O	      E-A1
+              .	              -	         O	         O	         O
+
+            But	              -	         O	         O	         O
+            the	              -	      B-A0	      B-A1	      B-A0
+            new	              -	      I-A0	      I-A1	      I-A0
+           pact	              -	      E-A0	      E-A1	      E-A0
+           will	              -	  S-AM-MOD	         O	         O
+          force	          force	       S-V	         O	         O
+           huge	              -	      B-A1	         O	         O
+           debt	              -	      E-A1	         O	         O
+             on	              -	      B-A2	         O	         O
+            the	              -	      I-A2	         O	         O
+            new	              -	      I-A2	         O	         O
+           firm	              -	      E-A2	         O	         O
+            and	              -	         O	         O	         O
+          could	              -	         O	  S-AM-MOD	         O
+          still	              -	         O	  S-AM-TMP	         O
+           fail	           fail	         O	       S-V	         O
+             to	              -	         O	      B-A2	         O
+         thwart	         thwart	         O	      I-A2	       S-V
+          rival	              -	         O	      I-A2	      B-A1
+         suitor	              -	         O	      I-A2	      I-A1
+          McCaw	              -	         O	      I-A2	      I-A1
+       Cellular	              -	         O	      E-A2	      E-A1
+              .	              -	         O	         O	         O
+
+         Unisys	              -	      S-A0	         O	         O	         O
+         posted	         posted	       S-V	         O	         O	         O
+              a	              -	      B-A1	         O	         O	         O
+              $	              -	      I-A1	         O	         O	         O
+          648.2	              -	      I-A1	         O	         O	         O
+        million	              -	      I-A1	         O	         O	         O
+           loss	              -	      E-A1	         O	         O	         O
+            for	              -	  B-AM-TMP	         O	         O	         O
+            the	              -	  I-AM-TMP	         O	         O	         O
+          third	              -	  I-AM-TMP	         O	         O	         O
+        quarter	              -	  E-AM-TMP	         O	         O	         O
+             as	              -	  B-AM-TMP	         O	         O	         O
+             it	              -	  I-AM-TMP	      S-A1	      S-A0	      S-A0
+          moved	          moved	  I-AM-TMP	       S-V	         O	         O
+        quickly	              -	  I-AM-TMP	  S-AM-MNR	         O	         O
+             to	              -	  I-AM-TMP	      B-A1	         O	         O
+           take	           take	  I-AM-TMP	      I-A1	       S-V	         O
+     write-offs	              -	  I-AM-TMP	      I-A1	      S-A1	         O
+            for	              -	  I-AM-TMP	      I-A1	  B-AM-PNC	         O
+        various	              -	  I-AM-TMP	      I-A1	  I-AM-PNC	         O
+       problems	              -	  I-AM-TMP	      I-A1	  E-AM-PNC	         O
+            and	              -	  I-AM-TMP	      I-A1	         O	         O
+        prepare	        prepare	  I-AM-TMP	      I-A1	         O	       S-V
+            for	              -	  I-AM-TMP	      I-A1	         O	      B-A2
+              a	              -	  I-AM-TMP	      I-A1	         O	      I-A2
+     turnaround	              -	  E-AM-TMP	      E-A1	         O	      E-A2
+              .	              -	         O	         O	         O	         O
+
+            But	              -	  S-AM-DIS	         O
+           some	              -	      B-A0	         O
+       analysts	              -	      E-A0	         O
+         wonder	         wonder	       S-V	         O
+            how	              -	      B-A1	         O
+         strong	              -	      I-A1	         O
+            the	              -	      I-A1	      B-A1
+       recovery	              -	      I-A1	      E-A1
+           will	              -	      I-A1	  S-AM-MOD
+             be	             be	      E-A1	       S-V
+              .	              -	         O	         O
+
+            RJR	              -	      B-A0	      B-A0
+        Nabisco	              -	      E-A0	      E-A0
+         agreed	         agreed	       S-V	         O
+             to	              -	      B-A1	         O
+           sell	           sell	      I-A1	       S-V
+          three	              -	      I-A1	      B-A1
+          candy	              -	      I-A1	      I-A1
+     businesses	              -	      I-A1	      E-A1
+             to	              -	      I-A1	      B-A2
+         Nestle	              -	      I-A1	      E-A2
+            for	              -	      I-A1	      B-A3
+              $	              -	      I-A1	      I-A3
+            370	              -	      I-A1	      I-A3
+        million	              -	      E-A1	      E-A3
+              .	              -	         O	         O
+
+            The	              -	      B-A0	         O	      B-A0
+         accord	              -	      E-A0	         O	      E-A0
+          helps	          helps	       S-V	         O	         O
+            RJR	              -	      B-A1	      S-A0	         O
+            pay	            pay	      I-A1	       B-V	         O
+            off	              -	      I-A1	       E-V	         O
+           debt	              -	      E-A1	      S-A1	         O
+            and	              -	         O	         O	         O
+         boosts	         boosts	         O	         O	       S-V
+         Nestle	              -	         O	         O	      B-A1
+             's	              -	         O	         O	      I-A1
+              7	              -	         O	         O	      I-A1
+              %	              -	         O	         O	      I-A1
+          share	              -	         O	         O	      I-A1
+             of	              -	         O	         O	      I-A1
+            the	              -	         O	         O	      I-A1
+           U.S.	              -	         O	         O	      I-A1
+          candy	              -	         O	         O	      I-A1
+         market	              -	         O	         O	      E-A1
+             to	              -	         O	         O	      B-A4
+             12	              -	         O	         O	      I-A4
+              %	              -	         O	         O	      E-A4
+              .	              -	         O	         O	         O
+
+             GM	              -	      B-A1	      B-A1	      B-A1	      B-A0	      B-A0
+            and	              -	      I-A1	      I-A1	      I-A1	      I-A0	      I-A0
+           Ford	              -	      E-A1	      E-A1	      E-A1	      E-A0	      E-A0
+            are	            are	       S-V	         O	         O	         O	         O
+       expected	       expected	    B-C-A1	       S-V	         O	         O	         O
+             to	              -	    I-C-A1	    B-C-A1	         O	         O	         O
+             go	             go	    I-C-A1	    I-C-A1	       S-V	         O	         O
+           head	              -	    I-C-A1	    I-C-A1	      S-A2	         O	         O
+             to	              -	    I-C-A1	    I-C-A1	      B-A4	         O	         O
+           head	           head	    I-C-A1	    I-C-A1	      I-A4	       S-V	         O
+             in	              -	    I-C-A1	    I-C-A1	      I-A4	      B-A1	         O
+            the	              -	    I-C-A1	    I-C-A1	      I-A4	      I-A1	         O
+        markets	              -	    I-C-A1	    I-C-A1	      E-A4	      I-A1	         O
+             to	              -	    I-C-A1	    I-C-A1	  B-AM-PNC	      I-A1	         O
+            buy	            buy	    I-C-A1	    I-C-A1	  I-AM-PNC	      I-A1	       B-V
+             up	              -	    I-C-A1	    I-C-A1	  I-AM-PNC	      I-A1	       E-V
+          rival	              -	    I-C-A1	    I-C-A1	  I-AM-PNC	      I-A1	      B-A1
+             15	              -	    I-C-A1	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1
+              %	              -	    I-C-A1	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1
+         stakes	              -	    I-C-A1	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1
+             in	              -	    I-C-A1	    I-C-A1	  I-AM-PNC	      I-A1	      I-A1
+         Jaguar	              -	    E-C-A1	    E-C-A1	  E-AM-PNC	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+             GM	              -	      S-A0	         O	      S-A0
+      confirmed	      confirmed	       S-V	         O	         O
+             it	              -	      B-A1	      S-A0	      S-A0
+       received	       received	      I-A1	       S-V	         O
+           U.S.	              -	      I-A1	      B-A1	         O
+      antitrust	              -	      I-A1	      I-A1	         O
+      clearance	              -	      I-A1	      I-A1	         O
+             to	              -	      I-A1	      I-A1	         O
+          boost	          boost	      I-A1	      I-A1	       S-V
+            its	              -	      I-A1	      I-A1	      B-A1
+        holding	              -	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+         Sansui	              -	      B-A0	      B-A0
+       Electric	              -	      E-A0	      E-A0
+         agreed	         agreed	       S-V	         O
+             to	              -	      B-A1	         O
+           sell	           sell	      I-A1	       S-V
+              a	              -	      I-A1	      B-A1
+             51	              -	      I-A1	      I-A1
+              %	              -	      I-A1	      I-A1
+          stake	              -	      I-A1	      E-A1
+             to	              -	      I-A1	      B-A2
+          Polly	              -	      I-A1	      I-A2
+           Peck	              -	      I-A1	      I-A2
+             of	              -	      I-A1	      I-A2
+        Britain	              -	      I-A1	      E-A2
+            for	              -	      I-A1	      B-A3
+              $	              -	      I-A1	      I-A3
+            110	              -	      I-A1	      I-A3
+        million	              -	      E-A1	      E-A3
+              .	              -	         O	         O
+
+          Still	              -	  S-AM-DIS	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+       analysts	              -	      S-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A0	      B-A0	         O	         O
+         accord	              -	      I-A1	      E-A0	      E-A0	         O	         O
+           does	           does	      I-A1	       S-V	         O	         O	         O
+            n't	              -	      I-A1	      B-A1	  S-AM-NEG	         O	         O
+        suggest	        suggest	      I-A1	      I-A1	       S-V	         O	         O
+          Japan	              -	      I-A1	      I-A1	      B-A1	      S-A1	      S-A0
+             is	             is	      I-A1	      I-A1	      I-A1	       S-V	         O
+        opening	        opening	      I-A1	      I-A1	      I-A1	    B-C-A1	       B-V
+             up	              -	      I-A1	      I-A1	      I-A1	    I-C-A1	       E-V
+             to	              -	      I-A1	      I-A1	      I-A1	    I-C-A1	      B-A3
+           more	              -	      I-A1	      I-A1	      I-A1	    I-C-A1	      I-A3
+        foreign	              -	      I-A1	      I-A1	      I-A1	    I-C-A1	      I-A3
+      takeovers	              -	      E-A1	      E-A1	      E-A1	    E-C-A1	      E-A3
+              .	              -	         O	         O	         O	         O	         O
+
+        Kellogg	              -	      S-A0	      S-A0	         O	         O	         O
+      suspended	      suspended	       S-V	         O	         O	         O	         O
+           work	              -	      B-A1	         O	         O	         O	         O
+             on	              -	      I-A1	         O	         O	         O	         O
+              a	              -	      I-A1	         O	         O	         O	         O
+              $	              -	      I-A1	         O	         O	         O	         O
+              1	              -	      I-A1	         O	         O	         O	         O
+        billion	              -	      I-A1	         O	         O	         O	         O
+         cereal	              -	      I-A1	         O	         O	         O	         O
+          plant	              -	      E-A1	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+     indicating	     indicating	  B-AM-ADV	       S-V	         O	         O	         O
+              a	              -	  I-AM-ADV	      B-A1	         O	         O	         O
+    pessimistic	              -	  I-AM-ADV	      I-A1	         O	         O	         O
+        outlook	              -	  I-AM-ADV	      I-A1	         O	         O	         O
+             by	              -	  I-AM-ADV	      I-A1	         O	         O	         O
+            the	              -	  I-AM-ADV	      I-A1	      B-A0	      B-A1	      B-A0
+         cereal	              -	  I-AM-ADV	      I-A1	      I-A0	      I-A1	      I-A0
+          maker	              -	  I-AM-ADV	      I-A1	      E-A0	      E-A1	      E-A0
+              ,	              -	  I-AM-ADV	      I-A1	         O	         O	         O
+          which	              -	  I-AM-ADV	      I-A1	    S-R-A0	    S-R-A1	    S-R-A0
+            has	            has	  I-AM-ADV	      I-A1	       S-V	         O	         O
+           been	           been	  I-AM-ADV	      I-A1	    B-C-A1	       S-V	         O
+         losing	         losing	  I-AM-ADV	      I-A1	    I-C-A1	    B-C-A1	       S-V
+         market	              -	  I-AM-ADV	      I-A1	    I-C-A1	    I-C-A1	      B-A1
+          share	              -	  E-AM-ADV	      E-A1	    E-C-A1	    E-C-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+       Insurers	              -	      S-A0	         O
+          could	              -	  S-AM-MOD	         O
+            see	            see	       S-V	         O
+         claims	              -	      B-A1	      S-A1
+       totaling	       totaling	      I-A1	       S-V
+         nearly	              -	      I-A1	      B-A2
+              $	              -	      I-A1	      I-A2
+              1	              -	      I-A1	      I-A2
+        billion	              -	      I-A1	      I-A2
+           from	              -	      I-A1	      I-A2
+            the	              -	      I-A1	      I-A2
+            San	              -	      I-A1	      I-A2
+      Francisco	              -	      I-A1	      I-A2
+     earthquake	              -	      I-A1	      E-A2
+              ,	              -	      I-A1	         O
+            far	              -	      I-A1	         O
+           less	              -	      I-A1	         O
+           than	              -	      I-A1	         O
+            the	              -	      I-A1	         O
+              $	              -	      I-A1	         O
+              4	              -	      I-A1	         O
+        billion	              -	      I-A1	         O
+           from	              -	      I-A1	         O
+      Hurricane	              -	      I-A1	         O
+           Hugo	              -	      E-A1	         O
+              .	              -	         O	         O
+
+         Nashua	              -	      S-A0	      S-A0	         O	         O	         O
+   strengthened	   strengthened	       S-V	         O	         O	         O	         O
+            its	              -	      B-A1	         O	         O	         O	         O
+    poison-pill	              -	      I-A1	         O	         O	         O	         O
+           plan	              -	      E-A1	         O	         O	         O	         O
+          after	              -	  B-AM-TMP	         O	         O	         O	         O
+     announcing	     announcing	  I-AM-TMP	       S-V	         O	         O	         O
+              a	              -	  I-AM-TMP	      B-A1	      B-A1	      B-A0	      B-A0
+          Dutch	              -	  I-AM-TMP	      I-A1	      I-A1	      I-A0	      I-A0
+           firm	              -	  I-AM-TMP	      I-A1	      E-A1	      E-A0	      E-A0
+             is	             is	  I-AM-TMP	      I-A1	       S-V	         O	         O
+        seeking	        seeking	  I-AM-TMP	      I-A1	    B-C-A1	       S-V	         O
+             to	              -	  I-AM-TMP	      I-A1	    I-C-A1	      B-A1	         O
+            buy	            buy	  I-AM-TMP	      I-A1	    I-C-A1	      I-A1	       S-V
+             up	              -	  I-AM-TMP	      I-A1	    I-C-A1	      I-A1	      B-A1
+             to	              -	  I-AM-TMP	      I-A1	    I-C-A1	      I-A1	      I-A1
+             25	              -	  I-AM-TMP	      I-A1	    I-C-A1	      I-A1	      I-A1
+              %	              -	  I-AM-TMP	      I-A1	    I-C-A1	      I-A1	      I-A1
+             of	              -	  I-AM-TMP	      I-A1	    I-C-A1	      I-A1	      I-A1
+            the	              -	  I-AM-TMP	      I-A1	    I-C-A1	      I-A1	      I-A1
+            New	              -	  I-AM-TMP	      I-A1	    I-C-A1	      I-A1	      I-A1
+      Hampshire	              -	  I-AM-TMP	      I-A1	    I-C-A1	      I-A1	      I-A1
+         copier	              -	  I-AM-TMP	      I-A1	    I-C-A1	      I-A1	      I-A1
+        company	              -	  E-AM-TMP	      E-A1	    E-C-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+          Mobil	              -	      S-A1	      S-A0
+             is	             is	       S-V	         O
+        cutting	        cutting	    B-C-A1	       B-V
+           back	              -	    I-C-A1	       E-V
+            its	              -	    I-C-A1	      B-A1
+           U.S.	              -	    I-C-A1	      I-A1
+            oil	              -	    I-C-A1	      I-A1
+            and	              -	    I-C-A1	      I-A1
+            gas	              -	    I-C-A1	      I-A1
+    exploration	              -	    I-C-A1	      I-A1
+            and	              -	    I-C-A1	      I-A1
+     production	              -	    I-C-A1	      I-A1
+          group	              -	    I-C-A1	      E-A1
+             by	              -	    I-C-A1	      B-A2
+             up	              -	    I-C-A1	      I-A2
+             to	              -	    I-C-A1	      I-A2
+             15	              -	    I-C-A1	      I-A2
+              %	              -	    I-C-A1	      E-A2
+             as	              -	    I-C-A1	  B-AM-ADV
+           part	              -	    I-C-A1	  I-AM-ADV
+             of	              -	    I-C-A1	  I-AM-ADV
+              a	              -	    I-C-A1	  I-AM-ADV
+  restructuring	              -	    I-C-A1	  I-AM-ADV
+             of	              -	    I-C-A1	  I-AM-ADV
+            the	              -	    I-C-A1	  I-AM-ADV
+       business	              -	    E-C-A1	  E-AM-ADV
+              .	              -	         O	         O
+
+        Markets	              -
+         Stocks	              -
+              :	              -
+         Volume	              -
+    170,330,000	              -
+         shares	              -
+              .	              -
+
+            Dow	              -
+          Jones	              -
+    industrials	              -
+        2596.72	              -
+              ,	              -
+            off	              -
+          17.01	              -
+              ;	              -
+ transportation	              -
+        1190.43	              -
+              ,	              -
+            off	              -
+          14.76	              -
+              ;	              -
+      utilities	              -
+         215.86	              -
+              ,	              -
+             up	              -
+           0.19	              -
+              .	              -
+
+          Bonds	              -
+              :	              -
+       Shearson	              -
+         Lehman	              -
+         Hutton	              -
+       Treasury	              -
+          index	              -
+        3406.31	              -
+              ,	              -
+            off	              -
+          19.29	              -
+              .	              -
+
+    Commodities	              -
+              :	              -
+            Dow	              -
+          Jones	              -
+        futures	              -
+          index	              -
+         129.49	              -
+              ,	              -
+             up	              -
+           0.27	              -
+              ;	              -
+           spot	              -
+          index	              -
+         130.80	              -
+              ,	              -
+            off	              -
+           0.24	              -
+              .	              -
+
+         Dollar	              -
+              :	              -
+         141.65	              -
+            yen	              -
+              ,	              -
+            off	              -
+           0.45	              -
+              ;	              -
+         1.8300	              -
+          marks	              -
+              ,	              -
+            off	              -
+         0.0100	              -
+              .	              -
+

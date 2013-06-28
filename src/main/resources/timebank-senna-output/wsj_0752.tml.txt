@@ -1,0 +1,86 @@
+            AEP	              -	      B-A0
+     INDUSTRIES	              -	      I-A0
+           Inc.	              -	      I-A0
+      directors	              -	      E-A0
+     authorized	     authorized	       S-V
+              a	              -	      B-A1
+        3-for-2	              -	      I-A1
+          split	              -	      I-A1
+             of	              -	      I-A1
+            the	              -	      I-A1
+         common	              -	      I-A1
+              ,	              -	      I-A1
+        payable	              -	      I-A1
+           Dec.	              -	      I-A1
+              7	              -	      I-A1
+             to	              -	      I-A1
+          stock	              -	      I-A1
+             of	              -	      I-A1
+         record	              -	      I-A1
+           Nov.	              -	      I-A1
+             22	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A1	      B-A1	         O	      B-A1
+          split	              -	      E-A1	      E-A1	         O	      I-A1
+            was	            was	       S-V	         O	         O	      I-A1
+          aimed	          aimed	    B-C-A1	       S-V	         O	      I-A1
+             at	              -	    I-C-A1	      B-A2	         O	      I-A1
+       boosting	       boosting	    I-C-A1	      I-A2	       S-V	      I-A1
+            the	              -	    I-C-A1	      I-A2	      B-A1	      I-A1
+          stock	              -	    I-C-A1	      I-A2	      I-A1	      I-A1
+             's	              -	    I-C-A1	      I-A2	      I-A1	      I-A1
+      liquidity	              -	    E-C-A1	      E-A2	      E-A1	      E-A1
+              ,	              -	         O	         O	         O	         O
+           said	           said	         O	         O	         O	       S-V
+        Brendan	              -	         O	         O	         O	      B-A0
+          Barba	              -	         O	         O	         O	      I-A0
+              ,	              -	         O	         O	         O	      I-A0
+       chairman	              -	         O	         O	         O	      I-A0
+             of	              -	         O	         O	         O	      I-A0
+            the	              -	         O	         O	         O	      I-A0
+      Moonachie	              -	         O	         O	         O	      I-A0
+              ,	              -	         O	         O	         O	      I-A0
+           N.J.	              -	         O	         O	         O	      I-A0
+              ,	              -	         O	         O	         O	      I-A0
+          maker	              -	         O	         O	         O	      I-A0
+             of	              -	         O	         O	         O	      I-A0
+        plastic	              -	         O	         O	         O	      I-A0
+           film	              -	         O	         O	         O	      I-A0
+       products	              -	         O	         O	         O	      E-A0
+              .	              -	         O	         O	         O	         O
+
+          After	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+          split	              -	  E-AM-TMP
+              ,	              -	         O
+            the	              -	      B-A0
+        company	              -	      E-A0
+           will	              -	  S-AM-MOD
+           have	           have	       S-V
+           more	              -	      B-A1
+           than	              -	      I-A1
+            4.7	              -	      I-A1
+        million	              -	      I-A1
+         shares	              -	      I-A1
+    outstanding	              -	      E-A1
+              .	              -	         O
+
+             In	              -	  B-AM-LOC
+       national	              -	  I-AM-LOC
+over-the-counter	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+      yesterday	              -	  S-AM-TMP
+              ,	              -	         O
+            AEP	              -	      B-A1
+         shares	              -	      E-A1
+         closed	         closed	       S-V
+             at	              -	  B-AM-EXT
+              $	              -	  I-AM-EXT
+          21.25	              -	  E-AM-EXT
+              ,	              -	         O
+           down	              -	  B-AM-MNR
+             50	              -	  I-AM-MNR
+          cents	              -	  E-AM-MNR
+              .	              -	         O
+

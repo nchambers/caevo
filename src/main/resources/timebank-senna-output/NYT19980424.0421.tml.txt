@@ -1,0 +1,442 @@
+            The	              -	      B-A0	         O	         O	         O	         O	         O
+            New	              -	      I-A0	         O	         O	         O	         O	         O
+           York	              -	      I-A0	         O	         O	         O	         O	         O
+          Times	              -	      E-A0	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O
+             in	              -	  B-AM-LOC	         O	         O	         O	         O	         O
+             an	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+      editorial	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+             on	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+       Saturday	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+              ,	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+          April	              -	  I-AM-LOC	         O	         O	         O	         O	         O
+             25	              -	  E-AM-LOC	         O	         O	         O	         O	         O
+              :	              -	         O	         O	         O	         O	         O	         O
+            The	              -	         O	      B-A0	         O	         O	         O	         O
+        Supreme	              -	         O	      I-A0	         O	         O	         O	         O
+          Court	              -	         O	      E-A0	         O	         O	         O	         O
+           took	           took	         O	       S-V	         O	         O	         O	         O
+              a	              -	         O	      B-A1	         O	         O	         O	         O
+         detour	              -	         O	      E-A1	         O	         O	         O	         O
+           this	              -	         O	  B-AM-TMP	         O	         O	         O	         O
+           week	              -	         O	  E-AM-TMP	         O	         O	         O	         O
+           from	              -	         O	  B-AM-ADV	         O	         O	         O	         O
+            the	              -	         O	  I-AM-ADV	         O	         O	         O	         O
+           core	              -	         O	  I-AM-ADV	         O	         O	         O	         O
+      principle	              -	         O	  I-AM-ADV	         O	         O	         O	         O
+             of	              -	         O	  I-AM-ADV	         O	         O	         O	         O
+         gender	              -	         O	  I-AM-ADV	      B-A1	         O	         O	         O
+       fairness	              -	         O	  I-AM-ADV	      E-A1	         O	         O	         O
+             it	              -	         O	  I-AM-ADV	      S-A0	         O	         O	         O
+     vindicated	     vindicated	         O	  I-AM-ADV	       S-V	         O	         O	         O
+            two	              -	         O	  I-AM-ADV	  B-AM-TMP	         O	         O	         O
+          years	              -	         O	  I-AM-ADV	  I-AM-TMP	         O	         O	         O
+            ago	              -	         O	  I-AM-ADV	  E-AM-TMP	         O	         O	         O
+             in	              -	         O	  I-AM-ADV	  B-AM-LOC	         O	         O	         O
+            its	              -	         O	  I-AM-ADV	  I-AM-LOC	         O	         O	         O
+         ruling	              -	         O	  I-AM-ADV	  I-AM-LOC	         O	         O	         O
+   invalidating	   invalidating	         O	  I-AM-ADV	  I-AM-LOC	       S-V	         O	         O
+            the	              -	         O	  I-AM-ADV	  I-AM-LOC	      B-A1	         O	         O
+            use	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	         O	         O
+             of	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	         O	         O
+         sexual	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	         O	         O
+    stereotypes	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	         O	         O
+             to	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	         O	         O
+        justify	        justify	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	       S-V	         O
+        denying	        denying	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	      B-A1	       S-V
+          women	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	      I-A1	      B-A1
+      admission	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+             to	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+            the	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+       Virginia	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+       Military	              -	         O	  I-AM-ADV	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+      Institute	              -	         O	  E-AM-ADV	  E-AM-LOC	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+             By	              -	  B-AM-MNR	         O	         O	         O
+              a	              -	  I-AM-MNR	         O	         O	         O
+            6-3	              -	  I-AM-MNR	         O	         O	         O
+           vote	              -	  E-AM-MNR	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+            the	              -	      B-A0	         O	         O	         O
+          court	              -	      E-A0	         O	         O	         O
+         upheld	         upheld	       S-V	         O	         O	         O
+              a	              -	      B-A1	      B-A0	         O	         O
+ discriminatory	              -	      I-A1	      I-A0	         O	         O
+    immigration	              -	      I-A1	      I-A0	         O	         O
+            law	              -	      I-A1	      E-A0	         O	         O
+           that	              -	      I-A1	    S-R-A0	         O	         O
+          gives	          gives	      I-A1	       S-V	         O	         O
+              a	              -	      I-A1	      B-A1	      B-A0	         O
+          child	              -	      I-A1	      I-A1	      E-A0	         O
+           born	           born	      I-A1	      I-A1	       S-V	         O
+       overseas	              -	      I-A1	      E-A1	  S-AM-LOC	         O
+             to	              -	      I-A1	      B-A2	         O	         O
+             an	              -	      I-A1	      I-A2	         O	         O
+      unmarried	              -	      I-A1	      I-A2	         O	         O
+       American	              -	      I-A1	      I-A2	         O	         O
+          woman	              -	      I-A1	      E-A2	         O	         O
+              a	              -	      I-A1	      B-A1	         O	         O
+         better	              -	      I-A1	      I-A1	         O	         O
+         chance	              -	      I-A1	      I-A1	         O	         O
+             at	              -	      I-A1	      I-A1	         O	         O
+    citizenship	              -	      I-A1	      I-A1	         O	         O
+           than	              -	      I-A1	      I-A1	         O	         O
+              a	              -	      I-A1	      I-A1	         O	      B-A1
+          child	              -	      I-A1	      I-A1	         O	      E-A1
+           born	           born	      I-A1	      I-A1	         O	       S-V
+             to	              -	      I-A1	      I-A1	         O	      B-A2
+             an	              -	      I-A1	      I-A1	         O	      I-A2
+      unmarried	              -	      I-A1	      I-A1	         O	      I-A2
+       American	              -	      I-A1	      I-A1	         O	      I-A2
+            man	              -	      E-A1	      E-A1	         O	      E-A2
+              .	              -	         O	         O	         O	         O
+
+          Under	              -	         O	  B-AM-LOC	  B-AM-LOC
+            the	              -	         O	  I-AM-LOC	  I-AM-LOC
+        statute	              -	         O	  E-AM-LOC	  E-AM-LOC
+              ,	              -	         O	         O	         O
+              a	              -	      B-A1	      B-A1	      B-A0
+          child	              -	      E-A1	      I-A1	      I-A0
+           born	           born	       S-V	      I-A1	      I-A0
+         abroad	              -	  S-AM-LOC	      I-A1	      I-A0
+             to	              -	         O	      I-A1	      I-A0
+             an	              -	         O	      I-A1	      I-A0
+          unwed	              -	         O	      I-A1	      I-A0
+       American	              -	         O	      I-A1	      I-A0
+         mother	              -	         O	      E-A1	      E-A0
+             is	             is	         O	       S-V	         O
+  automatically	              -	         O	    B-C-A1	  S-AM-MNR
+     considered	     considered	         O	    I-C-A1	       S-V
+              a	              -	         O	    I-C-A1	      B-A2
+           U.S.	              -	         O	    I-C-A1	      I-A2
+        citizen	              -	         O	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O
+
+            But	              -	  S-AM-DIS	         O	         O	         O	         O	         O
+            the	              -	      B-A0	         O	         O	         O	         O	         O
+          child	              -	      I-A0	         O	         O	         O	         O	         O
+             of	              -	      I-A0	         O	         O	         O	         O	         O
+             an	              -	      I-A0	         O	         O	         O	         O	         O
+          unwed	              -	      I-A0	         O	         O	         O	         O	         O
+       American	              -	      I-A0	         O	         O	         O	         O	         O
+         father	              -	      E-A0	         O	         O	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O	         O
+             no	              -	      B-A1	         O	         O	         O	         O	         O
+    citizenship	              -	      I-A1	         O	         O	         O	         O	         O
+         rights	              -	      E-A1	         O	         O	         O	         O	         O
+         unless	              -	  B-AM-ADV	         O	         O	         O	         O	         O
+            the	              -	  I-AM-ADV	      B-A0	      B-A0	      B-A0	      B-A0	         O
+         father	              -	  I-AM-ADV	      E-A0	      E-A0	      E-A0	      E-A0	         O
+          takes	          takes	  I-AM-ADV	       S-V	         O	         O	         O	         O
+            the	              -	  I-AM-ADV	      B-A1	         O	         O	         O	         O
+    affirmative	              -	  I-AM-ADV	      I-A1	         O	         O	         O	         O
+           step	              -	  I-AM-ADV	      I-A1	         O	         O	         O	         O
+             of	              -	  I-AM-ADV	      I-A1	         O	         O	         O	         O
+  acknowledging	  acknowledging	  I-AM-ADV	      I-A1	       S-V	         O	         O	         O
+      paternity	              -	  I-AM-ADV	      E-A1	      S-A1	         O	         O	         O
+            and	              -	  I-AM-ADV	         O	         O	         O	         O	         O
+       formally	              -	  I-AM-ADV	         O	         O	  S-AM-MNR	         O	         O
+         agrees	         agrees	  I-AM-ADV	         O	         O	       S-V	         O	         O
+             to	              -	  I-AM-ADV	         O	         O	      B-A1	         O	         O
+        provide	        provide	  I-AM-ADV	         O	         O	      I-A1	       S-V	         O
+        support	              -	  I-AM-ADV	         O	         O	      I-A1	      S-A1	         O
+          until	              -	  I-AM-ADV	         O	         O	      I-A1	  B-AM-TMP	         O
+            the	              -	  I-AM-ADV	         O	         O	      I-A1	  I-AM-TMP	      B-A1
+          child	              -	  I-AM-ADV	         O	         O	      I-A1	  I-AM-TMP	      E-A1
+          turns	          turns	  I-AM-ADV	         O	         O	      I-A1	  I-AM-TMP	       S-V
+             18	              -	  E-AM-ADV	         O	         O	      E-A1	  E-AM-TMP	      S-A2
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1	      B-A1	         O	         O	         O
+       majority	              -	      I-A1	      I-A1	         O	         O	         O
+             's	              -	      I-A1	      I-A1	         O	         O	         O
+          views	              -	      E-A1	      E-A1	         O	         O	         O
+           were	           were	       S-V	         O	         O	         O	         O
+      expressed	      expressed	    B-C-A1	       S-V	         O	         O	         O
+             in	              -	    I-C-A1	  B-AM-LOC	         O	         O	         O
+          three	              -	    I-C-A1	  I-AM-LOC	         O	         O	         O
+       separate	              -	    I-C-A1	  I-AM-LOC	         O	         O	         O
+       opinions	              -	    E-C-A1	  E-AM-LOC	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            the	              -	         O	      B-A0	      B-A1	    B-R-A1	         O
+           most	              -	         O	      I-A0	      I-A1	    I-R-A1	         O
+    disquieting	              -	         O	      I-A0	      I-A1	    I-R-A1	         O
+             of	              -	         O	      I-A0	      I-A1	    I-R-A1	         O
+          which	              -	         O	      I-A0	      I-A1	    E-R-A1	         O
+            was	            was	         O	      I-A0	      I-A1	         O	         O
+        written	        written	         O	      I-A0	      I-A1	       S-V	         O
+             by	              -	         O	      I-A0	      I-A1	      B-A0	         O
+              a	              -	         O	      I-A0	      I-A1	      I-A0	         O
+        liberal	              -	         O	      I-A0	      I-A1	      I-A0	         O
+         member	              -	         O	      I-A0	      I-A1	      I-A0	         O
+              ,	              -	         O	      I-A0	      I-A1	      I-A0	         O
+        Justice	              -	         O	      I-A0	      I-A1	      I-A0	         O
+           John	              -	         O	      I-A0	      I-A1	      I-A0	         O
+           Paul	              -	         O	      I-A0	      I-A1	      I-A0	         O
+        Stevens	              -	         O	      I-A0	      I-A1	      I-A0	         O
+              ,	              -	         O	      I-A0	      I-A1	      I-A0	         O
+            and	              -	         O	      I-A0	      I-A1	      I-A0	         O
+         joined	         joined	         O	      I-A0	      I-A1	      I-A0	       S-V
+             by	              -	         O	      I-A0	      I-A1	      I-A0	      B-A0
+              a	              -	         O	      I-A0	      I-A1	      I-A0	      I-A0
+   conservative	              -	         O	      I-A0	      I-A1	      I-A0	      I-A0
+              ,	              -	         O	      I-A0	      I-A1	      I-A0	      I-A0
+          Chief	              -	         O	      I-A0	      I-A1	      I-A0	      I-A0
+        Justice	              -	         O	      I-A0	      I-A1	      I-A0	      I-A0
+        William	              -	         O	      I-A0	      I-A1	      I-A0	      I-A0
+      Rehnquist	              -	         O	      E-A0	      E-A1	      E-A0	      E-A0
+              .	              -	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0	         O	         O	         O
+        opinion	              -	      E-A0	      I-A0	         O	         O	         O
+              ,	              -	         O	      I-A0	         O	         O	         O
+          which	              -	    S-R-A0	      I-A0	         O	         O	         O
+          found	          found	       S-V	      I-A0	         O	         O	         O
+            the	              -	      B-A1	      I-A0	         O	         O	         O
+         gender	              -	      I-A1	      I-A0	         O	         O	         O
+    distinction	              -	      I-A1	      I-A0	         O	         O	         O
+     reasonable	              -	      E-A1	      I-A0	         O	         O	         O
+              ,	              -	         O	      E-A0	         O	         O	         O
+         relied	         relied	         O	       S-V	         O	         O	         O
+        heavily	              -	         O	  S-AM-MNR	         O	         O	         O
+             on	              -	         O	      B-A2	         O	         O	         O
+       outmoded	              -	         O	      I-A2	         O	         O	         O
+   generalities	              -	         O	      I-A2	         O	         O	         O
+          about	              -	         O	      I-A2	         O	         O	         O
+         family	              -	         O	      I-A2	      B-A2	         O	         O
+          roles	              -	         O	      I-A2	      E-A2	         O	         O
+              ,	              -	         O	      I-A2	         O	         O	         O
+      including	      including	         O	      I-A2	       S-V	         O	         O
+            the	              -	         O	      I-A2	      B-A1	         O	         O
+         flawed	              -	         O	      I-A2	      I-A1	         O	         O
+    presumption	              -	         O	      I-A2	      I-A1	         O	         O
+           that	              -	         O	      I-A2	      I-A1	         O	         O
+        mothers	              -	         O	      I-A2	      I-A1	      S-A0	         O
+           have	           have	         O	      I-A2	      I-A1	       S-V	         O
+              a	              -	         O	      I-A2	      I-A1	      B-A1	         O
+         closer	              -	         O	      I-A2	      I-A1	      I-A1	         O
+   relationship	              -	         O	      I-A2	      I-A1	      I-A1	         O
+             to	              -	         O	      I-A2	      I-A1	      I-A1	         O
+          their	              -	         O	      I-A2	      I-A1	      I-A1	         O
+       children	              -	         O	      I-A2	      I-A1	      I-A1	         O
+           than	              -	         O	      I-A2	      I-A1	      I-A1	         O
+        fathers	              -	         O	      I-A2	      I-A1	      I-A1	      S-A0
+             do	             do	         O	      E-A2	      E-A1	      E-A1	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+             As	              -	         O	         O	         O	         O	         O	         O	         O	         O
+        Justice	              -	      B-A0	         O	         O	         O	         O	         O	         O	         O
+        Stephen	              -	      I-A0	         O	         O	         O	         O	         O	         O	         O
+         Breyer	              -	      E-A0	         O	         O	         O	         O	         O	         O	         O
+          asked	          asked	       S-V	         O	         O	         O	         O	         O	         O	         O
+             in	              -	      B-A2	         O	         O	         O	         O	         O	         O	         O
+              a	              -	      I-A2	         O	         O	         O	         O	         O	         O	         O
+         strong	              -	      I-A2	         O	         O	         O	         O	         O	         O	         O
+        dissent	              -	      E-A2	         O	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O
+             ``	              -	         O	         O	         O	         O	         O	         O	         O	         O
+           what	              -	         O	    B-R-A0	    B-R-A1	         O	         O	         O	         O	         O
+          sense	              -	         O	    E-R-A0	    E-R-A1	         O	         O	         O	         O	         O
+           does	           does	         O	       S-V	         O	         O	         O	         O	         O	         O
+             it	              -	         O	      S-A1	      S-A0	         O	         O	         O	         O	         O
+           make	           make	         O	      S-A2	       S-V	         O	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O	         O	         O	         O	         O
+             to	              -	         O	         O	         O	         O	         O	         O	         O	         O
+          apply	          apply	         O	         O	         O	       S-V	         O	         O	         O	         O
+    citizenship	              -	         O	         O	         O	      B-A1	         O	         O	         O	         O
+       barriers	              -	         O	         O	         O	      E-A1	         O	         O	         O	         O
+             ``	              -	         O	         O	         O	         O	         O	         O	         O	         O
+           only	              -	         O	         O	         O	      B-A2	         O	         O	         O	         O
+             to	              -	         O	         O	         O	      I-A2	         O	         O	         O	         O
+        fathers	              -	         O	         O	         O	      I-A2	         O	         O	         O	         O
+            and	              -	         O	         O	         O	      I-A2	         O	         O	         O	         O
+            not	              -	         O	         O	         O	      I-A2	         O	         O	         O	         O
+             to	              -	         O	         O	         O	      I-A2	         O	         O	         O	         O
+        mothers	              -	         O	         O	         O	      I-A2	         O	         O	         O	         O
+             in	              -	         O	         O	         O	      I-A2	         O	         O	         O	         O
+          today	              -	         O	         O	         O	      I-A2	  B-AM-LOC	         O	         O	         O
+             's	              -	         O	         O	         O	      I-A2	  I-AM-LOC	         O	         O	         O
+          world	              -	         O	         O	         O	      I-A2	  I-AM-LOC	         O	         O	         O
+              _	              -	         O	         O	         O	      I-A2	  E-AM-LOC	         O	         O	         O
+          where	              -	         O	         O	         O	      I-A2	S-R-AM-LOC	         O	         O	         O
+      paternity	              -	         O	         O	         O	      I-A2	      S-A1	      S-A1	         O	         O
+            can	              -	         O	         O	         O	      I-A2	  S-AM-MOD	  S-AM-MOD	         O	         O
+        readily	              -	         O	         O	         O	      I-A2	  S-AM-MNR	  S-AM-ADV	         O	         O
+             be	             be	         O	         O	         O	      I-A2	       S-V	         O	         O	         O
+         proved	         proved	         O	         O	         O	      I-A2	         O	       S-V	         O	         O
+            and	              -	         O	         O	         O	      I-A2	         O	         O	         O	         O
+          where	              -	         O	         O	         O	      I-A2	         O	         O	         O	         O
+          women	              -	         O	         O	         O	      I-A2	         O	         O	      B-A1	      B-A0
+            and	              -	         O	         O	         O	      I-A2	         O	         O	      I-A1	      I-A0
+            men	              -	         O	         O	         O	      E-A2	         O	         O	      I-A1	      I-A0
+           both	              -	         O	         O	         O	         O	         O	         O	      E-A1	      E-A0
+            are	            are	         O	         O	         O	         O	         O	         O	       S-V	         O
+         likely	              -	         O	         O	         O	         O	         O	         O	         O	         O
+             to	              -	         O	         O	         O	         O	         O	         O	         O	         O
+           earn	           earn	         O	         O	         O	         O	         O	         O	         O	       S-V
+              a	              -	         O	         O	         O	         O	         O	         O	         O	      B-A1
+         living	              -	         O	         O	         O	         O	         O	         O	         O	      I-A1
+             in	              -	         O	         O	         O	         O	         O	         O	         O	      I-A1
+            the	              -	         O	         O	         O	         O	         O	         O	         O	      I-A1
+      workplace	              -	         O	         O	         O	         O	         O	         O	         O	      E-A1
+              ?	              -	         O	         O	         O	         O	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O	         O	         O	         O	         O
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+       Justices	              -	      B-A1	      B-A0	         O
+         Sandra	              -	      I-A1	      I-A0	         O
+            Day	              -	      I-A1	      I-A0	         O
+       O'Connor	              -	      I-A1	      I-A0	         O
+            and	              -	      I-A1	      I-A0	         O
+        Anthony	              -	      I-A1	      I-A0	         O
+        Kennedy	              -	      E-A1	      E-A0	         O
+         seemed	         seemed	       S-V	         O	         O
+             to	              -	    B-C-A1	         O	         O
+          agree	          agree	    I-C-A1	       S-V	         O
+           that	              -	    I-C-A1	      B-A1	         O
+            the	              -	    I-C-A1	      I-A1	      B-A1
+            law	              -	    I-C-A1	      I-A1	      E-A1
+       amounted	       amounted	    I-C-A1	      I-A1	       S-V
+             to	              -	    I-C-A1	      I-A1	      B-A2
+unconstitutional	              -	    I-C-A1	      I-A1	      I-A2
+            sex	              -	    I-C-A1	      I-A1	      I-A2
+ discrimination	              -	    E-C-A1	      E-A1	      E-A2
+              .	              -	         O	         O	         O
+
+     Butinstead	              -	      S-A0	         O	  B-AM-ADV	         O	         O	         O	         O	         O	         O
+             of	              -	         O	         O	  I-AM-ADV	         O	         O	         O	         O	         O	         O
+      providing	      providing	       S-V	         O	  I-AM-ADV	         O	         O	         O	         O	         O	         O
+            the	              -	      B-A1	         O	  I-AM-ADV	         O	         O	         O	         O	         O	         O
+          votes	              -	      I-A1	         O	  I-AM-ADV	         O	         O	         O	         O	         O	         O
+             to	              -	      I-A1	         O	  I-AM-ADV	         O	         O	         O	         O	         O	         O
+         strike	         strike	      I-A1	       S-V	  I-AM-ADV	         O	         O	         O	         O	         O	         O
+             it	              -	      I-A1	      S-A1	  I-AM-ADV	         O	         O	         O	         O	         O	         O
+           down	              -	      E-A1	     S-C-V	  E-AM-ADV	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+           they	              -	      S-A0	         O	      S-A0	      S-A0	         O	         O	         O	         O	         O
+          chose	          chose	         O	         O	       S-V	         O	         O	         O	         O	         O	         O
+             to	              -	         O	         O	      B-A1	         O	         O	         O	         O	         O	         O
+         uphold	         uphold	         O	         O	      I-A1	       S-V	         O	         O	         O	         O	         O
+             it	              -	         O	         O	      I-A1	      B-A1	         O	         O	         O	         O	         O
+             on	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O	         O	         O
+            the	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O	         O	         O
+         flimsy	              -	         O	         O	      I-A1	      I-A1	         O	         O	         O	         O	         O
+         ground	              -	         O	         O	      E-A1	      I-A1	         O	         O	         O	         O	         O
+           that	              -	         O	         O	         O	      I-A1	         O	         O	         O	         O	         O
+        because	              -	         O	         O	  B-AM-CAU	      I-A1	         O	  B-AM-CAU	  B-AM-CAU	         O	         O
+            the	              -	         O	         O	  I-AM-CAU	      I-A1	      B-A0	  I-AM-CAU	  I-AM-CAU	         O	         O
+            sex	              -	         O	         O	  I-AM-CAU	      I-A1	      I-A0	  I-AM-CAU	  I-AM-CAU	         O	         O
+             of	              -	         O	         O	  I-AM-CAU	      I-A1	      I-A0	  I-AM-CAU	  I-AM-CAU	         O	         O
+            the	              -	         O	         O	  I-AM-CAU	      I-A1	      I-A0	  I-AM-CAU	  I-AM-CAU	         O	         O
+         parent	              -	         O	         O	  I-AM-CAU	      I-A1	      I-A0	  I-AM-CAU	  I-AM-CAU	         O	         O
+            and	              -	         O	         O	  I-AM-CAU	      I-A1	      I-A0	  I-AM-CAU	  I-AM-CAU	         O	         O
+            not	              -	         O	         O	  I-AM-CAU	      I-A1	      I-A0	  I-AM-CAU	  I-AM-CAU	         O	         O
+            the	              -	         O	         O	  I-AM-CAU	      I-A1	      I-A0	  I-AM-CAU	  I-AM-CAU	         O	         O
+          child	              -	         O	         O	  I-AM-CAU	      I-A1	      E-A0	  I-AM-CAU	  I-AM-CAU	         O	         O
+           made	           made	         O	         O	  I-AM-CAU	      I-A1	       S-V	  I-AM-CAU	  I-AM-CAU	         O	         O
+            the	              -	         O	         O	  I-AM-CAU	      I-A1	      B-A1	  I-AM-CAU	  I-AM-CAU	         O	         O
+     difference	              -	         O	         O	  I-AM-CAU	      I-A1	      E-A1	  I-AM-CAU	  I-AM-CAU	         O	         O
+          under	              -	         O	         O	  I-AM-CAU	      I-A1	  B-AM-LOC	  I-AM-CAU	  I-AM-CAU	         O	         O
+            the	              -	         O	         O	  I-AM-CAU	      I-A1	  I-AM-LOC	  I-AM-CAU	  I-AM-CAU	         O	         O
+            law	              -	         O	         O	  I-AM-CAU	      I-A1	  E-AM-LOC	  E-AM-CAU	  E-AM-CAU	         O	         O
+              ,	              -	         O	         O	  I-AM-CAU	      I-A1	         O	         O	         O	         O	         O
+            the	              -	         O	         O	  I-AM-CAU	      I-A1	         O	      B-A0	      B-A0	      B-A0	      B-A0
+      plaintiff	              -	         O	         O	  I-AM-CAU	      I-A1	         O	      E-A0	      E-A0	      E-A0	      E-A0
+            did	            did	         O	         O	  I-AM-CAU	      I-A1	         O	       S-V	         O	         O	         O
+            not	              -	         O	         O	  I-AM-CAU	      I-A1	         O	    B-C-A1	  S-AM-NEG	  S-AM-NEG	         O
+           have	           have	         O	         O	  I-AM-CAU	      I-A1	         O	    I-C-A1	       S-V	         O	         O
+       standing	       standing	         O	         O	  I-AM-CAU	      I-A1	         O	    I-C-A1	      B-A1	       S-V	         O
+             to	              -	         O	         O	  I-AM-CAU	      I-A1	         O	    I-C-A1	      I-A1	      B-A2	         O
+          bring	          bring	         O	         O	  I-AM-CAU	      I-A1	         O	    I-C-A1	      I-A1	      I-A2	       S-V
+            the	              -	         O	         O	  I-AM-CAU	      I-A1	         O	    I-C-A1	      I-A1	      I-A2	      B-A1
+           case	              -	         O	         O	  E-AM-CAU	      E-A1	         O	    E-C-A1	      E-A1	      E-A2	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0	      B-A0
+        Justice	              -	      I-A0	      I-A0	      I-A0
+     Department	              -	      E-A0	      I-A0	      I-A0
+              ,	              -	         O	      I-A0	      I-A0
+          which	              -	    S-R-A0	      I-A0	      I-A0
+      supported	      supported	       S-V	      I-A0	      I-A0
+            the	              -	      B-A1	      I-A0	      I-A0
+        statute	              -	      E-A1	      I-A0	      I-A0
+              ,	              -	         O	      E-A0	      E-A0
+            did	            did	         O	       S-V	         O
+            not	              -	         O	      B-A1	  S-AM-NEG
+          cover	          cover	         O	      I-A1	       S-V
+         itself	              -	         O	      I-A1	      S-A1
+           with	              -	         O	      I-A1	      B-A2
+          glory	              -	         O	      I-A1	      E-A2
+         either	              -	         O	      E-A1	  S-AM-DIS
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O	         O
+     department	              -	      E-A0	         O	         O	         O	         O
+      retreated	      retreated	       S-V	         O	         O	         O	         O
+           from	              -	      B-A1	         O	         O	         O	         O
+            its	              -	      I-A1	         O	         O	         O	         O
+       position	              -	      I-A1	         O	         O	         O	         O
+             in	              -	      I-A1	         O	         O	         O	         O
+            the	              -	      I-A1	         O	         O	         O	         O
+            VMI	              -	      I-A1	         O	         O	         O	         O
+           case	              -	      E-A1	         O	         O	         O	         O
+           when	              -	  B-AM-TMP	         O	         O	         O	         O
+             it	              -	  I-AM-TMP	      S-A0	         O	         O	         O
+         argued	         argued	  I-AM-TMP	       S-V	         O	         O	         O
+           that	              -	  I-AM-TMP	      B-A1	         O	         O	         O
+            the	              -	  I-AM-TMP	      I-A1	      B-A0	         O	         O
+     government	              -	  I-AM-TMP	      I-A1	      E-A0	         O	         O
+          could	              -	  I-AM-TMP	      I-A1	  S-AM-MOD	         O	         O
+            not	              -	  I-AM-TMP	      I-A1	  S-AM-NEG	         O	         O
+           make	           make	  I-AM-TMP	      I-A1	       S-V	         O	         O
+         policy	              -	  I-AM-TMP	      I-A1	      S-A1	      S-A1	         O
+          based	          based	  I-AM-TMP	      I-A1	      B-A2	       S-V	         O
+             on	              -	  I-AM-TMP	      I-A1	      I-A2	      B-A2	         O
+    stereotypes	              -	  I-AM-TMP	      I-A1	      E-A2	      E-A2	         O
+             ``	              -	  I-AM-TMP	      I-A1	         O	         O	         O
+           even	              -	  I-AM-TMP	      I-A1	  B-AM-TMP	         O	         O
+           when	              -	  I-AM-TMP	      I-A1	  I-AM-TMP	         O	         O
+          those	              -	  I-AM-TMP	      I-A1	  I-AM-TMP	         O	      B-A2
+    stereotypes	              -	  I-AM-TMP	      I-A1	  I-AM-TMP	         O	      E-A2
+        reflect	        reflect	  I-AM-TMP	      I-A1	  I-AM-TMP	         O	       S-V
+        current	              -	  I-AM-TMP	      I-A1	  I-AM-TMP	         O	      B-A1
+      realities	              -	  E-AM-TMP	      E-A1	  E-AM-TMP	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O	         O
+
+             As	              -	  B-AM-ADV	         O	         O	         O	         O
+            for	              -	  I-AM-ADV	         O	         O	         O	         O
+            the	              -	  I-AM-ADV	         O	         O	         O	         O
+          court	              -	  E-AM-ADV	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+             it	              -	      S-A0	      S-A0	      S-A0	         O	      S-A0
+        managed	        managed	       S-V	         O	         O	         O	         O
+           with	              -	      B-A1	         O	         O	         O	         O
+            its	              -	      I-A1	         O	         O	         O	         O
+     splintered	              -	      I-A1	         O	         O	         O	         O
+         ruling	              -	      I-A1	         O	         O	         O	         O
+             to	              -	      I-A1	         O	         O	         O	         O
+           cast	           cast	      I-A1	       S-V	         O	         O	         O
+          doubt	          doubt	      I-A1	      S-A1	       S-V	         O	         O
+           both	              -	      I-A1	      B-A2	      B-A1	         O	         O
+             on	              -	      I-A1	      I-A2	      I-A1	         O	         O
+            the	              -	      I-A1	      I-A2	      I-A1	         O	         O
+constitutionality	              -	      I-A1	      I-A2	      I-A1	         O	         O
+             of	              -	      I-A1	      I-A2	      I-A1	         O	         O
+            the	              -	      I-A1	      I-A2	      I-A1	      B-A1	         O
+    immigration	              -	      I-A1	      I-A2	      I-A1	      I-A1	         O
+     provisions	              -	      I-A1	      I-A2	      I-A1	      E-A1	         O
+             it	              -	      I-A1	      I-A2	      I-A1	      S-A0	         O
+         upheld	         upheld	      I-A1	      I-A2	      I-A1	       S-V	         O
+            and	              -	      I-A1	      I-A2	      I-A1	         O	         O
+             on	              -	      I-A1	      I-A2	      I-A1	         O	         O
+            its	              -	      I-A1	      I-A2	      I-A1	         O	         O
+           true	              -	      I-A1	      I-A2	      I-A1	         O	         O
+     commitment	              -	      I-A1	      I-A2	      I-A1	         O	         O
+             to	              -	      I-A1	      I-A2	      I-A1	         O	         O
+       fighting	       fighting	      I-A1	      I-A2	      I-A1	         O	       S-V
+         gender	              -	      I-A1	      I-A2	      I-A1	         O	      B-A1
+    stereotypes	              -	      E-A1	      E-A2	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+

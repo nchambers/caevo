@@ -1,0 +1,148 @@
+       UNIFIRST	              -	      B-A0
+          Corp.	              -	      E-A0
+       declared	       declared	       S-V
+              a	              -	      B-A1
+        2-for-1	              -	      I-A1
+          stock	              -	      I-A1
+          split	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A0	         O
+     Wilmington	              -	      I-A0	         O
+              ,	              -	      I-A0	         O
+          Mass.	              -	      I-A0	         O
+              ,	              -	      I-A0	         O
+        garment	              -	      I-A0	         O
+        service	              -	      I-A0	         O
+        company	              -	      E-A0	         O
+           also	              -	  S-AM-DIS	         O
+        boosted	        boosted	       S-V	         O
+            its	              -	      B-A1	         O
+      quarterly	              -	      I-A1	         O
+       dividend	              -	      E-A1	         O
+             20	              -	      B-A2	         O
+              %	              -	      E-A2	         O
+             to	              -	      B-A4	         O
+          three	              -	      I-A4	      B-A1
+          cents	              -	      I-A4	      I-A1
+              a	              -	      I-A4	      I-A1
+          share	              -	      I-A4	      E-A1
+       adjusted	       adjusted	      I-A4	       S-V
+            for	              -	      I-A4	      B-A4
+            the	              -	      I-A4	      I-A4
+          split	              -	      E-A4	      E-A4
+              .	              -	         O	         O
+
+            The	              -	      B-A1	      B-A1
+       dividend	              -	      E-A1	      E-A1
+            had	            had	       S-V	         O
+           been	           been	    B-C-A1	       S-V
+           five	              -	    I-C-A1	      B-A3
+          cents	              -	    I-C-A1	      I-A3
+              a	              -	    I-C-A1	      I-A3
+          share	              -	    E-C-A1	      E-A3
+              .	              -	         O	         O
+
+            The	              -	      B-A1	      B-A1
+          split	              -	      I-A1	      I-A1
+            and	              -	      I-A1	      I-A1
+      quarterly	              -	      I-A1	      I-A1
+       dividend	              -	      E-A1	      I-A1
+           will	              -	  S-AM-MOD	      I-A1
+             be	             be	       S-V	      I-A1
+        payable	              -	    B-C-A1	      I-A1
+           Jan.	              -	    I-C-A1	      I-A1
+              3	              -	    I-C-A1	      I-A1
+             to	              -	    I-C-A1	      I-A1
+          stock	              -	    I-C-A1	      I-A1
+             of	              -	    I-C-A1	      I-A1
+         record	              -	    I-C-A1	      I-A1
+           Nov.	              -	    I-C-A1	      I-A1
+             16	              -	    E-C-A1	      E-A1
+              ,	              -	         O	         O
+            the	              -	         O	      B-A0
+        company	              -	         O	      E-A0
+           said	           said	         O	       S-V
+              .	              -	         O	         O
+
+            The	              -	      B-A0
+          split	              -	      E-A0
+           will	              -	  S-AM-MOD
+          raise	          raise	       S-V
+            the	              -	      B-A1
+         number	              -	      I-A1
+             of	              -	      I-A1
+         shares	              -	      I-A1
+    outstanding	              -	      E-A1
+             to	              -	      B-A4
+          about	              -	      I-A4
+           10.2	              -	      I-A4
+        million	              -	      E-A4
+              .	              -	         O
+
+     Separately	              -	  S-AM-ADV	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+       UniFirst	              -	      S-A0	         O	         O	         O
+       reported	       reported	       S-V	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O
+            net	              -	      I-A1	      B-A1	         O	         O
+         income	              -	      I-A1	      E-A1	         O	         O
+           rose	           rose	      I-A1	       S-V	         O	         O
+             21	              -	      I-A1	      B-A2	         O	         O
+              %	              -	      I-A1	      E-A2	         O	         O
+             to	              -	      I-A1	      B-A4	         O	         O
+              $	              -	      I-A1	      I-A4	         O	         O
+              3	              -	      I-A1	      I-A4	         O	         O
+        million	              -	      I-A1	      I-A4	         O	         O
+              ,	              -	      I-A1	      I-A4	         O	         O
+             or	              -	      I-A1	      I-A4	         O	         O
+             29	              -	      I-A1	      I-A4	      B-A1	         O
+          cents	              -	      I-A1	      I-A4	      I-A1	         O
+              a	              -	      I-A1	      I-A4	      I-A1	         O
+          share	              -	      I-A1	      I-A4	      E-A1	         O
+       adjusted	       adjusted	      I-A1	      I-A4	       S-V	         O
+            for	              -	      I-A1	      I-A4	      B-A4	         O
+            the	              -	      I-A1	      I-A4	      I-A4	         O
+          split	              -	      I-A1	      E-A4	      E-A4	         O
+              ,	              -	      I-A1	         O	         O	         O
+            for	              -	      I-A1	         O	         O	         O
+            the	              -	      I-A1	         O	         O	      B-A1
+         fourth	              -	      I-A1	         O	         O	      I-A1
+        quarter	              -	      I-A1	         O	         O	      E-A1
+          ended	          ended	      I-A1	         O	         O	       S-V
+           Aug.	              -	      I-A1	         O	         O	  B-AM-TMP
+             26	              -	      E-A1	         O	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+              A	              -	      B-A0	         O
+           year	              -	      I-A0	         O
+        earlier	              -	      I-A0	         O
+       UniFirst	              -	      E-A0	         O
+         earned	         earned	       S-V	         O
+              $	              -	      B-A1	         O
+            2.4	              -	      I-A1	         O
+        million	              -	      I-A1	         O
+              ,	              -	      I-A1	         O
+             or	              -	      I-A1	         O
+             24	              -	      I-A1	      B-A1
+          cents	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+          share	              -	      I-A1	      E-A1
+       adjusted	       adjusted	      I-A1	       S-V
+            for	              -	      I-A1	      B-A4
+            the	              -	      I-A1	      I-A4
+          split	              -	      E-A1	      E-A4
+              .	              -	         O	         O
+
+          Sales	              -	      S-A1
+           rose	           rose	       S-V
+             to	              -	      B-A4
+              $	              -	      I-A4
+           52.4	              -	      I-A4
+        million	              -	      E-A4
+           from	              -	      B-A3
+              $	              -	      I-A3
+           50.1	              -	      I-A3
+        million	              -	      E-A3
+              .	              -	         O
+

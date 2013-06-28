@@ -1,0 +1,151 @@
+      Thousands	              -	      B-A0	      B-A1	      B-A2
+             of	              -	      I-A0	      I-A1	      I-A2
+         people	              -	      I-A0	      I-A1	      I-A2
+             in	              -	      I-A0	      I-A1	      I-A2
+        Germany	              -	      E-A0	      E-A1	      E-A2
+           have	           have	       S-V	         O	         O
+           been	           been	      B-A1	       S-V	         O
+  demonstrating	  demonstrating	      I-A1	  B-AM-ADV	       S-V
+          today	              -	      I-A1	  I-AM-ADV	  S-AM-TMP
+        against	              -	      I-A1	  I-AM-ADV	      B-A1
+            the	              -	      I-A1	  I-AM-ADV	      I-A1
+           high	              -	      I-A1	  I-AM-ADV	      I-A1
+          level	              -	      I-A1	  I-AM-ADV	      I-A1
+             of	              -	      I-A1	  I-AM-ADV	      I-A1
+   unemployment	              -	      I-A1	  I-AM-ADV	      I-A1
+             in	              -	      I-A1	  I-AM-ADV	      I-A1
+            the	              -	      I-A1	  I-AM-ADV	      I-A1
+        country	              -	      E-A1	  E-AM-ADV	      E-A1
+              .	              -	         O	         O	         O
+
+         Latest	              -	      B-A0
+        figures	              -	      E-A0
+           show	           show	       S-V
+              a	              -	      B-A1
+          sharp	              -	      I-A1
+           rise	              -	      E-A1
+              ,	              -	         O
+           with	              -	  B-AM-ADV
+         nearly	              -	  I-AM-ADV
+           five	              -	  I-AM-ADV
+        million	              -	  I-AM-ADV
+        Germans	              -	  I-AM-ADV
+            out	              -	  I-AM-ADV
+             of	              -	  I-AM-ADV
+           work	              -	  E-AM-ADV
+              .	              -	         O
+
+       Caroline	              -
+          Wyatt	              -
+        reports	              -
+              .	              -
+
+       Chanting	       Chanting	       S-V	         O	         O	         O
+         Helmut	              -	      B-A0	      B-A0	         O	         O
+           Kohl	              -	      E-A0	      E-A0	         O	         O
+           must	              -	         O	  S-AM-MOD	         O	         O
+             go	             go	         O	       S-V	         O	         O
+            the	              -	         O	      B-A1	         O	         O
+     unemployed	              -	         O	      E-A1	         O	         O
+           took	           took	         O	         O	       S-V	         O
+             to	              -	         O	         O	  B-AM-DIR	         O
+            the	              -	         O	         O	  I-AM-DIR	         O
+        streets	              -	         O	         O	  I-AM-DIR	         O
+             of	              -	         O	         O	  I-AM-DIR	         O
+            the	              -	         O	         O	  I-AM-DIR	         O
+         German	              -	         O	         O	  I-AM-DIR	         O
+        capital	              -	         O	         O	  I-AM-DIR	         O
+              ,	              -	         O	         O	  I-AM-DIR	         O
+         Berlin	              -	         O	         O	  I-AM-DIR	         O
+              ,	              -	         O	         O	  I-AM-DIR	         O
+      mirroring	      mirroring	         O	         O	  I-AM-DIR	       S-V
+       protests	              -	         O	         O	  I-AM-DIR	      B-A1
+         around	              -	         O	         O	  I-AM-DIR	      I-A1
+            the	              -	         O	         O	  I-AM-DIR	      I-A1
+        country	              -	         O	         O	  E-AM-DIR	      E-A1
+              .	              -	         O	         O	         O	         O
+
+    Joblessness	              -	      S-A1
+             is	             is	       S-V
+            now	              -	  S-AM-TMP
+             at	              -	  B-AM-LOC
+            its	              -	  I-AM-LOC
+        highest	              -	  I-AM-LOC
+          level	              -	  E-AM-LOC
+             in	              -	  B-AM-LOC
+        Germany	              -	  E-AM-LOC
+          since	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+         second	              -	  I-AM-TMP
+          world	              -	  I-AM-TMP
+            war	              -	  E-AM-TMP
+              .	              -	         O
+
+           With	              -	  B-AM-ADV	  B-AM-ADV
+            the	              -	  I-AM-ADV	  I-AM-ADV
+        general	              -	  I-AM-ADV	  I-AM-ADV
+       election	              -	  I-AM-ADV	  I-AM-ADV
+            due	              -	  I-AM-ADV	  I-AM-ADV
+           this	              -	  I-AM-ADV	  I-AM-ADV
+      September	              -	  E-AM-ADV	  E-AM-ADV
+              ,	              -	         O	         O
+         record	              -	      B-A1	      B-A1
+        figures	              -	      E-A1	      E-A1
+          could	              -	  S-AM-MOD	  S-AM-MOD
+            n't	              -	  S-AM-NEG	  S-AM-NEG
+           have	           have	       S-V	         O
+           come	           come	         O	       S-V
+             at	              -	         O	  B-AM-TMP
+              a	              -	         O	  I-AM-TMP
+          worst	              -	         O	  I-AM-TMP
+           time	              -	         O	  I-AM-TMP
+            for	              -	         O	  I-AM-TMP
+     Chancellor	              -	         O	  I-AM-TMP
+           Kohl	              -	         O	  E-AM-TMP
+              .	              -	         O	         O
+
+            His	              -	      B-A0	         O	      B-A1
+        promise	              -	      I-A0	         O	      I-A1
+             to	              -	      I-A0	         O	      I-A1
+           half	              -	      I-A0	         O	      I-A1
+   unemployment	              -	      I-A0	         O	      I-A1
+             by	              -	      I-A0	         O	      I-A1
+            the	              -	      I-A0	  B-AM-TMP	      I-A1
+           year	              -	      I-A0	  E-AM-TMP	      I-A1
+            two	              -	      I-A0	      B-A1	      I-A1
+       thousand	              -	      E-A0	      E-A1	      E-A1
+            has	            has	       S-V	         O	         O
+            now	              -	  S-AM-TMP	  S-AM-TMP	  S-AM-TMP
+           been	           been	         O	       S-V	         O
+      abandoned	      abandoned	         O	    S-C-A1	       S-V
+              .	              -	         O	         O	         O
+
+            And	              -	         O	         O	         O
+            the	              -	      B-A1	      B-A0	         O
+         German	              -	      I-A1	      I-A0	         O
+     electorate	              -	      E-A1	      E-A0	         O
+        appears	        appears	       S-V	         O	         O
+   increasingly	              -	    B-C-A1	         O	         O
+          eager	              -	    I-C-A1	         O	         O
+             to	              -	    I-C-A1	         O	         O
+       dispense	       dispense	    I-C-A1	       S-V	         O
+           with	              -	    I-C-A1	      B-A1	         O
+            the	              -	    I-C-A1	      I-A1	         O
+       services	              -	    I-C-A1	      I-A1	         O
+             of	              -	    I-C-A1	      I-A1	         O
+         Europe	              -	    I-C-A1	      I-A1	         O
+             's	              -	    I-C-A1	      I-A1	         O
+        longest	              -	    I-C-A1	      I-A1	         O
+        serving	        serving	    I-C-A1	      I-A1	       S-V
+         leader	              -	    E-C-A1	      E-A1	      S-A0
+              .	              -	         O	         O	         O
+
+       Caroline	              -
+          Wyatt	              -
+              ,	              -
+            BBC	              -
+           news	              -
+              ,	              -
+           Bonn	              -
+              .	              -
+

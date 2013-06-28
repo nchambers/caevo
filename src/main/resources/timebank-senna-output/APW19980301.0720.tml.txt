@@ -1,0 +1,589 @@
+      JERUSALEM	              -	      B-A0	         O	         O	         O	         O	         O
+              (	              -	      I-A0	         O	         O	         O	         O	         O
+             AP	              -	      I-A0	         O	         O	         O	         O	         O
+              )	              -	      I-A0	         O	         O	         O	         O	         O
+              _	              -	      I-A0	         O	         O	         O	         O	         O
+            Top	              -	      I-A0	         O	         O	         O	         O	         O
+        Israeli	              -	      I-A0	         O	         O	         O	         O	         O
+      officials	              -	      E-A0	         O	         O	         O	         O	         O
+           sent	           sent	       S-V	         O	         O	         O	         O	         O
+         strong	              -	      B-A1	         O	         O	         O	         O	         O
+            new	              -	      I-A1	         O	         O	         O	         O	         O
+        signals	              -	      E-A1	         O	         O	         O	         O	         O
+         Sunday	              -	  S-AM-TMP	         O	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O	         O
+         Israel	              -	      I-A1	      S-A0	      S-A0	         O	         O	         O
+          wants	          wants	      I-A1	       S-V	         O	         O	         O	         O
+             to	              -	      I-A1	      B-A1	         O	         O	         O	         O
+       withdraw	       withdraw	      I-A1	      I-A1	       S-V	         O	         O	         O
+           from	              -	      I-A1	      I-A1	      B-A1	         O	         O	         O
+       southern	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O
+        Lebanon	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O
+              ,	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O
+          where	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O
+              a	              -	      I-A1	      I-A1	      I-A1	      B-A1	      B-A1	      B-A0
+         costly	              -	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1	      I-A0
+            war	              -	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1	      I-A0
+             of	              -	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1	      I-A0
+      attrition	              -	      I-A1	      I-A1	      I-A1	      E-A1	      E-A1	      E-A0
+            has	            has	      I-A1	      I-A1	      I-A1	       S-V	         O	         O
+           been	           been	      I-A1	      I-A1	      I-A1	         O	       S-V	         O
+       steadily	              -	      I-A1	      I-A1	      I-A1	         O	    B-C-A1	  S-AM-MNR
+       claiming	       claiming	      I-A1	      I-A1	      I-A1	         O	    I-C-A1	       S-V
+       soldiers	              -	      I-A1	      I-A1	      I-A1	         O	    I-C-A1	      B-A1
+              '	              -	      I-A1	      I-A1	      I-A1	         O	    I-C-A1	      I-A1
+          lives	              -	      E-A1	      E-A1	      E-A1	         O	    E-C-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+          Prime	              -	      B-A0	         O	         O	         O	         O	         O
+       Minister	              -	      I-A0	         O	         O	         O	         O	         O
+       Benjamin	              -	      I-A0	         O	         O	         O	         O	         O
+      Netanyahu	              -	      E-A0	         O	         O	         O	         O	         O
+           told	           told	       S-V	         O	         O	         O	         O	         O
+            his	              -	      B-A2	         O	         O	         O	         O	         O
+        Cabinet	              -	      E-A2	         O	         O	         O	         O	         O
+             on	              -	  B-AM-TMP	         O	         O	         O	         O	         O
+         Sunday	              -	  E-AM-TMP	         O	         O	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O	         O	         O
+         Israel	              -	      I-A1	      S-A1	      S-A0	         O	         O	         O
+            was	            was	      I-A1	       S-V	         O	         O	         O	         O
+        willing	              -	      I-A1	      B-A3	         O	         O	         O	         O
+             to	              -	      I-A1	      I-A3	         O	         O	         O	         O
+       withdraw	       withdraw	      I-A1	      I-A3	       S-V	         O	         O	         O
+           from	              -	      I-A1	      I-A3	      B-A2	         O	         O	         O
+       southern	              -	      I-A1	      I-A3	      I-A2	      B-A0	         O	         O
+        Lebanon	              -	      I-A1	      E-A3	      E-A2	      E-A0	         O	         O
+       provided	       provided	      I-A1	         O	         O	       S-V	         O	         O
+         Israel	              -	      I-A1	         O	         O	      B-A1	      B-A1	      B-A1
+             's	              -	      I-A1	         O	         O	      I-A1	      I-A1	      I-A1
+       northern	              -	      I-A1	         O	         O	      I-A1	      I-A1	      I-A1
+       frontier	              -	      I-A1	         O	         O	      I-A1	      E-A1	      E-A1
+          could	              -	      I-A1	         O	         O	      I-A1	  S-AM-MOD	  S-AM-MOD
+             be	             be	      I-A1	         O	         O	      I-A1	       S-V	         O
+        secured	        secured	      E-A1	         O	         O	      E-A1	    S-C-A1	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O
+
+             ``	              -	         O	         O	         O	         O	         O
+             If	              -	         O	         O	  B-AM-ADV	         O	      B-A1
+            the	              -	      B-A0	      B-A0	  I-AM-ADV	         O	      I-A1
+       Lebanese	              -	      I-A0	      I-A0	  I-AM-ADV	         O	      I-A1
+     government	              -	      E-A0	      E-A0	  I-AM-ADV	         O	      I-A1
+           will	              -	  S-AM-MOD	         O	  I-AM-ADV	         O	      I-A1
+      cooperate	      cooperate	       S-V	         O	  I-AM-ADV	         O	      I-A1
+           with	              -	      B-A1	         O	  I-AM-ADV	         O	      I-A1
+             us	              -	      E-A1	         O	  I-AM-ADV	         O	      I-A1
+             in	              -	      B-A2	         O	  I-AM-ADV	         O	      I-A1
+         making	         making	      I-A2	       S-V	  I-AM-ADV	         O	      I-A1
+    appropriate	              -	      I-A2	      B-A1	  I-AM-ADV	         O	      I-A1
+       security	              -	      I-A2	      I-A1	  I-AM-ADV	         O	      I-A1
+   arrangements	              -	      I-A2	      E-A1	  I-AM-ADV	         O	      I-A1
+             in	              -	      I-A2	  B-AM-LOC	  I-AM-ADV	         O	      I-A1
+          south	              -	      I-A2	  I-AM-LOC	  I-AM-ADV	         O	      I-A1
+        Lebanon	              -	      E-A2	  E-AM-LOC	  E-AM-ADV	         O	      I-A1
+              ,	              -	         O	         O	         O	         O	      I-A1
+             we	              -	         O	         O	      S-A1	      S-A1	      I-A1
+           will	              -	         O	         O	  S-AM-MOD	         O	      I-A1
+             be	             be	         O	         O	       S-V	         O	      I-A1
+          happy	              -	         O	         O	      B-A1	         O	      I-A1
+             to	              -	         O	         O	      I-A1	         O	      I-A1
+            get	            get	         O	         O	      I-A1	       B-V	      I-A1
+            out	              -	         O	         O	      I-A1	       E-V	      I-A1
+             of	              -	         O	         O	      I-A1	      B-A1	      I-A1
+        Lebanon	              -	         O	         O	      I-A1	      E-A1	      I-A1
+             in	              -	         O	         O	      I-A1	      B-A2	      I-A1
+            the	              -	         O	         O	      I-A1	      I-A2	      I-A1
+      framework	              -	         O	         O	      I-A1	      I-A2	      I-A1
+             of	              -	         O	         O	      I-A1	      I-A2	      I-A1
+ implementation	              -	         O	         O	      I-A1	      I-A2	      I-A1
+             of	              -	         O	         O	      I-A1	      I-A2	      I-A1
+           U.N.	              -	         O	         O	      I-A1	      I-A2	      I-A1
+     Resolution	              -	         O	         O	      I-A1	      I-A2	      I-A1
+            425	              -	         O	         O	      E-A1	      E-A2	      E-A1
+              ,	              -	         O	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O	         O
+      Netanyahu	              -	         O	         O	         O	         O	      S-A0
+           told	           told	         O	         O	         O	         O	       S-V
+            his	              -	         O	         O	         O	         O	      B-A2
+      ministers	              -	         O	         O	         O	         O	      E-A2
+              .	              -	         O	         O	         O	         O	         O
+
+           That	              -	      B-A0	         O	         O
+           1978	              -	      I-A0	         O	         O
+     resolution	              -	      E-A0	         O	         O
+          calls	          calls	       S-V	         O	         O
+            for	              -	      B-A1	         O	         O
+         Israel	              -	      I-A1	         O	         O
+             's	              -	      I-A1	         O	         O
+  unconditional	              -	      I-A1	         O	         O
+     withdrawal	              -	      I-A1	         O	         O
+           from	              -	      I-A1	         O	         O
+            the	              -	      I-A1	      B-A1	         O
+  self-declared	              -	      I-A1	      I-A1	         O
+       security	              -	      I-A1	      I-A1	         O
+           zone	              -	      I-A1	      E-A1	         O
+             it	              -	      I-A1	      S-A0	         O
+       occupies	       occupies	      I-A1	       S-V	         O
+             in	              -	      I-A1	  B-AM-LOC	         O
+          south	              -	      I-A1	  I-AM-LOC	         O
+        Lebanon	              -	      I-A1	  E-AM-LOC	         O
+              ,	              -	      I-A1	         O	         O
+            and	              -	      I-A1	         O	         O
+            for	              -	      I-A1	         O	         O
+            the	              -	      I-A1	         O	         O
+     deployment	              -	      I-A1	         O	         O
+             of	              -	      I-A1	         O	         O
+            the	              -	      I-A1	         O	      B-A0
+       Lebanese	              -	      I-A1	         O	      I-A0
+           army	              -	      I-A1	         O	      I-A0
+            and	              -	      I-A1	         O	      I-A0
+           U.N.	              -	      I-A1	         O	      I-A0
+         forces	              -	      I-A1	         O	      E-A0
+             to	              -	      I-A1	         O	         O
+         ensure	         ensure	      I-A1	         O	       S-V
+       security	              -	      I-A1	         O	      B-A1
+          along	              -	      I-A1	         O	      I-A1
+            the	              -	      I-A1	         O	      I-A1
+Lebanese-Israeli	              -	      I-A1	         O	      I-A1
+         border	              -	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O
+
+             On	              -	  B-AM-TMP	         O	         O	         O
+         Friday	              -	  E-AM-TMP	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+      Netanyahu	              -	      S-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+             he	              -	      B-A1	      S-A0	      S-A0	         O
+            had	            had	      I-A1	       S-V	         O	         O
+             ``	              -	      I-A1	      B-A1	         O	         O
+             no	              -	      I-A1	      I-A1	         O	         O
+         qualms	              -	      I-A1	      I-A1	         O	         O
+             ''	              -	      I-A1	      I-A1	         O	         O
+          about	              -	      I-A1	      I-A1	         O	         O
+   implementing	   implementing	      I-A1	      I-A1	       S-V	         O
+            the	              -	      I-A1	      I-A1	      B-A1	         O
+           U.N.	              -	      I-A1	      I-A1	      I-A1	         O
+     resolution	              -	      I-A1	      I-A1	      E-A1	         O
+              ,	              -	      I-A1	      I-A1	         O	         O
+             as	              -	      I-A1	      I-A1	         O	         O
+           long	              -	      I-A1	      I-A1	         O	         O
+             as	              -	      I-A1	      I-A1	         O	         O
+         Israel	              -	      I-A1	      I-A1	         O	      S-A0
+            had	            had	      I-A1	      I-A1	         O	       S-V
+             ``	              -	      I-A1	      I-A1	         O	         O
+            the	              -	      I-A1	      I-A1	         O	      B-A1
+      necessary	              -	      I-A1	      I-A1	         O	      I-A1
+       security	              -	      I-A1	      I-A1	         O	      I-A1
+     safeguards	              -	      E-A1	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O
+
+        Cabinet	              -	      B-A0	         O
+       minister	              -	      I-A0	         O
+        Michael	              -	      I-A0	         O
+          Eitan	              -	      E-A0	         O
+           said	           said	       S-V	         O
+         Sunday	              -	  S-AM-TMP	         O
+           that	              -	      B-A1	         O
+      Netanyahu	              -	      I-A1	      B-A0
+             's	              -	      I-A1	      I-A0
+        remarks	              -	      I-A1	      E-A0
+         marked	         marked	      I-A1	       S-V
+              a	              -	      I-A1	      B-A1
+    substantive	              -	      I-A1	      I-A1
+         change	              -	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1
+         Israel	              -	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1
+       position	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+             ``	              -	         O	         O
+             We	              -	      S-A0	      B-A1
+           will	              -	  S-AM-MOD	      I-A1
+         defend	         defend	       S-V	      I-A1
+            our	              -	      B-A1	      I-A1
+          north	              -	      E-A1	      I-A1
+           from	              -	      B-A3	      I-A1
+            the	              -	      I-A3	      I-A1
+  international	              -	      I-A3	      I-A1
+         border	              -	      E-A3	      E-A1
+              ,	              -	         O	         O
+             ''	              -	         O	         O
+           said	           said	         O	       S-V
+          Eitan	              -	         O	      B-A0
+              ,	              -	         O	      I-A0
+            the	              -	         O	      I-A0
+        science	              -	         O	      I-A0
+       minister	              -	         O	      E-A0
+              .	              -	         O	         O
+
+             ``	              -	         O	         O	         O	         O
+             No	              -	      B-A0	      B-A1	         O	         O
+            one	              -	      E-A0	      E-A1	         O	         O
+          wants	          wants	       S-V	         O	         O	         O
+             to	              -	      B-A1	         O	         O	         O
+           stay	           stay	      I-A1	       S-V	         O	         O
+             in	              -	      I-A1	      B-A3	         O	         O
+        Lebanon	              -	      E-A1	      E-A3	         O	         O
+              ;	              -	         O	         O	         O	         O
+           thus	              -	         O	         O	  S-AM-DIS	         O
+             we	              -	         O	         O	      S-A0	         O
+          think	          think	         O	         O	       S-V	         O
+             it	              -	         O	         O	      B-A1	      S-A1
+         better	              -	         O	         O	      I-A1	         O
+             to	              -	         O	         O	      I-A1	         O
+       withdraw	       withdraw	         O	         O	      E-A1	       S-V
+              .	              -	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O
+
+            Uri	              -	      B-A0	         O	         O
+        Lubrani	              -	      I-A0	         O	         O
+              ,	              -	      I-A0	         O	         O
+         Israel	              -	      I-A0	         O	         O
+             's	              -	      I-A0	         O	         O
+            top	              -	      I-A0	         O	         O
+       official	              -	      I-A0	         O	         O
+            for	              -	      I-A0	         O	         O
+        Lebanon	              -	      I-A0	         O	         O
+        affairs	              -	      I-A0	         O	         O
+              ,	              -	      E-A0	         O	         O
+           also	              -	  S-AM-DIS	         O	         O
+      suggested	      suggested	       S-V	         O	         O
+         Israel	              -	      B-A1	      S-A1	      S-A0
+            was	            was	      I-A1	       S-V	         O
+        willing	              -	      I-A1	      B-A1	         O
+             to	              -	      I-A1	      I-A1	         O
+         modify	         modify	      I-A1	      I-A1	       S-V
+            its	              -	      I-A1	      I-A1	      B-A1
+      political	              -	      I-A1	      I-A1	      I-A1
+          goals	              -	      I-A1	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1	      I-A1
+        Lebanon	              -	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+             ``	              -	         O	         O	         O	         O	         O
+           This	              -	      S-A1	         O	         O	         O	      B-A1
+             is	             is	       S-V	         O	         O	         O	      I-A1
+              a	              -	      B-A1	         O	         O	         O	      I-A1
+            new	              -	      I-A1	         O	         O	         O	      I-A1
+          thing	              -	      E-A1	         O	         O	         O	      I-A1
+            ...	              -	         O	         O	         O	         O	      I-A1
+             it	              -	         O	      S-A0	         O	         O	      I-A1
+          means	          means	         O	       S-V	         O	         O	      I-A1
+           that	              -	         O	      B-A1	         O	         O	      I-A1
+             we	              -	         O	      I-A1	      S-A1	      S-A0	      I-A1
+            are	            are	         O	      I-A1	       S-V	         O	      I-A1
+        willing	              -	         O	      I-A1	      B-A1	         O	      I-A1
+             to	              -	         O	      I-A1	      I-A1	         O	      I-A1
+           talk	           talk	         O	      I-A1	      I-A1	       S-V	      I-A1
+          today	              -	         O	      I-A1	      I-A1	      B-A1	      I-A1
+              _	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+           full	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+           stop	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+              _	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+          about	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1
+       security	              -	         O	      E-A1	      E-A1	      E-A1	      E-A1
+              ,	              -	         O	         O	         O	         O	         O
+             ''	              -	         O	         O	         O	         O	         O
+        Lubrani	              -	         O	         O	         O	         O	      S-A0
+           told	           told	         O	         O	         O	         O	       S-V
+         Israel	              -	         O	         O	         O	         O	      B-A2
+             's	              -	         O	         O	         O	         O	      I-A2
+        Channel	              -	         O	         O	         O	         O	      I-A2
+            One	              -	         O	         O	         O	         O	      E-A2
+              .	              -	         O	         O	         O	         O	         O
+
+             ``	              -	         O	         O
+             We	              -	      S-A0	      S-A0
+           have	           have	       S-V	         O
+         gotten	         gotten	      B-A1	       B-V
+            off	              -	      I-A1	       E-V
+            the	              -	      I-A1	      B-A1
+          issue	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+          peace	              -	      I-A1	      E-A1
+              ,	              -	      I-A1	         O
+            off	              -	      I-A1	  B-AM-MNR
+            the	              -	      I-A1	  I-AM-MNR
+          issue	              -	      I-A1	  I-AM-MNR
+             of	              -	      I-A1	  I-AM-MNR
+  normalization	              -	      E-A1	  E-AM-MNR
+              .	              -	         O	         O
+             ''	              -	         O	         O
+
+             As	              -	         O	         O	  B-AM-TMP	  B-AM-TMP	  B-AM-TMP	         O	         O
+            the	              -	      B-A0	      B-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	         O
+          death	              -	      I-A0	      I-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	         O
+           toll	              -	      I-A0	      I-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	         O
+             in	              -	      I-A0	      I-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	         O
+        Lebanon	              -	      E-A0	      E-A1	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	         O
+            has	            has	       S-V	         O	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	         O
+        mounted	        mounted	      S-A1	       S-V	  E-AM-TMP	  E-AM-TMP	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+            the	              -	         O	         O	      B-A0	      B-A1	      B-A0	         O	      B-A0
+        Israeli	              -	         O	         O	      I-A0	      I-A1	      I-A0	         O	      I-A0
+     government	              -	         O	         O	      E-A0	      E-A1	      E-A0	         O	      E-A0
+            has	            has	         O	         O	       S-V	         O	         O	         O	         O
+           been	           been	         O	         O	    B-C-A1	       S-V	         O	         O	         O
+          faced	          faced	         O	         O	    I-C-A1	  B-AM-ADV	       S-V	         O	         O
+           with	              -	         O	         O	    I-C-A1	  I-AM-ADV	      B-A0	         O	         O
+              a	              -	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	         O	      B-A0
+        growing	        growing	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	       S-V	      I-A0
+     grassroots	              -	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	      B-A1	      I-A0
+       movement	              -	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	      E-A1	      E-A0
+        calling	        calling	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	         O	       S-V
+            for	              -	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	         O	      B-A1
+         Israel	              -	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	         O	      I-A1
+             's	              -	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	         O	      I-A1
+     unilateral	              -	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	         O	      I-A1
+     withdrawal	              -	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	         O	      I-A1
+           from	              -	         O	         O	    I-C-A1	  I-AM-ADV	      I-A0	         O	      I-A1
+        Lebanon	              -	         O	         O	    E-C-A1	  E-AM-ADV	      E-A0	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+          Since	              -	         O	         O	         O	  B-AM-TMP	  B-AM-TMP	         O
+           1985	              -	         O	         O	         O	  I-AM-TMP	  I-AM-TMP	         O
+              _	              -	         O	         O	         O	  E-AM-TMP	  I-AM-TMP	         O
+           when	              -	         O	         O	         O	S-R-AM-TMP	  I-AM-TMP	         O
+            the	              -	      B-A0	      B-A0	         O	      B-A1	  I-AM-TMP	         O
+       Israelis	              -	      E-A0	      I-A0	         O	      I-A1	  I-AM-TMP	         O
+        created	        created	       S-V	      I-A0	         O	      I-A1	  I-AM-TMP	         O
+              a	              -	      B-A1	      I-A0	         O	      I-A1	  I-AM-TMP	         O
+       security	              -	      I-A1	      I-A0	         O	      I-A1	  I-AM-TMP	         O
+         buffer	              -	      I-A1	      I-A0	         O	      I-A1	  I-AM-TMP	         O
+           zone	              -	      I-A1	      I-A0	         O	      I-A1	  I-AM-TMP	         O
+       southern	              -	      I-A1	      I-A0	         O	      I-A1	  I-AM-TMP	         O
+        Lebanon	              -	      E-A1	      E-A0	         O	      I-A1	  I-AM-TMP	         O
+              _	              _	         O	       S-V	         O	      I-A1	  E-AM-TMP	         O
+         nearly	              -	         O	      B-A1	      B-A1	      I-A1	      B-A1	      B-A0
+            200	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1	      I-A0
+        Israeli	              -	         O	      I-A1	      I-A1	      I-A1	      I-A1	      I-A0
+       soldiers	              -	         O	      I-A1	      E-A1	      E-A1	      E-A1	      E-A0
+           have	           have	         O	      I-A1	       S-V	         O	         O	         O
+           been	           been	         O	      I-A1	    B-C-A1	       S-V	         O	         O
+         killed	         killed	         O	      I-A1	    I-C-A1	    B-C-A1	       S-V	         O
+       fighting	       fighting	         O	      I-A1	    I-C-A1	    I-C-A1	      B-A1	       S-V
+      Hezbollah	              -	         O	      I-A1	    I-C-A1	    I-C-A1	      I-A1	      B-A1
+            and	              -	         O	      I-A1	    I-C-A1	    I-C-A1	      I-A1	      I-A1
+          other	              -	         O	      I-A1	    I-C-A1	    I-C-A1	      I-A1	      I-A1
+     guerrillas	              -	         O	      E-A1	    E-C-A1	    E-C-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O
+
+           Last	              -	  B-AM-TMP	         O
+           week	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+      Hezbollah	              -	      B-A0	         O
+       fighters	              -	      E-A0	         O
+         killed	         killed	       S-V	         O
+          three	              -	      B-A1	         O
+        Israeli	              -	      I-A1	         O
+       soldiers	              -	      I-A1	         O
+            and	              -	      I-A1	         O
+      seriously	              -	      I-A1	  S-AM-MNR
+        wounded	        wounded	      I-A1	       S-V
+            six	              -	      I-A1	      B-A1
+         others	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0
+       Israelis	              -	      E-A0
+       suffered	       suffered	       S-V
+              a	              -	      B-A1
+         record	              -	      I-A1
+             39	              -	      I-A1
+         deaths	              -	      E-A1
+             in	              -	  B-AM-LOC
+       southern	              -	  I-AM-LOC
+        Lebanon	              -	  E-AM-LOC
+           last	              -	  B-AM-TMP
+           year	              -	  E-AM-TMP
+              .	              -	         O
+
+             In	              -	  B-AM-DIS	  B-AM-DIS	         O
+       addition	              -	  E-AM-DIS	  E-AM-DIS	         O
+              ,	              -	         O	         O	         O
+             73	              -	      B-A1	      B-A1	         O
+       soldiers	              -	      E-A1	      E-A1	         O
+           were	           were	       S-V	         O	         O
+         killed	         killed	    B-C-A1	       S-V	         O
+             en	              -	    I-C-A1	      B-A1	         O
+          route	              -	    I-C-A1	      I-A1	         O
+             to	              -	    I-C-A1	      I-A1	         O
+        Lebanon	              -	    E-C-A1	      E-A1	         O
+           when	              -	  B-AM-TMP	  B-AM-TMP	S-R-AM-TMP
+            two	              -	  I-AM-TMP	  I-AM-TMP	      B-A1
+       military	              -	  I-AM-TMP	  I-AM-TMP	      I-A1
+    helicopters	              -	  I-AM-TMP	  I-AM-TMP	      E-A1
+        crashed	        crashed	  I-AM-TMP	  I-AM-TMP	       S-V
+           last	              -	  I-AM-TMP	  I-AM-TMP	  B-AM-TMP
+       February	              -	  E-AM-TMP	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O
+         Maariv	              -	      I-A0	         O	         O	         O
+      newspaper	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+         Sunday	              -	  S-AM-TMP	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O
+      Netanyahu	              -	      I-A1	      B-A1	         O	         O
+             's	              -	      I-A1	      I-A1	         O	         O
+       comments	              -	      I-A1	      I-A1	         O	         O
+           last	              -	      I-A1	      I-A1	         O	         O
+           week	              -	      I-A1	      E-A1	         O	         O
+           were	           were	      I-A1	       S-V	         O	         O
+             in	              -	      I-A1	  B-AM-PNC	         O	         O
+       response	              -	      I-A1	  I-AM-PNC	         O	         O
+             to	              -	      I-A1	  I-AM-PNC	         O	         O
+        signals	              -	      I-A1	  I-AM-PNC	         O	         O
+           from	              -	      I-A1	  I-AM-PNC	         O	         O
+          Syria	              -	      I-A1	  I-AM-PNC	         O	         O
+           that	              -	      I-A1	  I-AM-PNC	         O	         O
+             it	              -	      I-A1	  I-AM-PNC	      S-A0	      S-A0
+          wants	          wants	      I-A1	  I-AM-PNC	       S-V	         O
+             to	              -	      I-A1	  I-AM-PNC	      B-A1	         O
+          renew	          renew	      I-A1	  I-AM-PNC	      I-A1	       S-V
+            the	              -	      I-A1	  I-AM-PNC	      I-A1	      B-A1
+   long-stalled	              -	      I-A1	  I-AM-PNC	      I-A1	      I-A1
+          peace	              -	      I-A1	  I-AM-PNC	      I-A1	      I-A1
+          talks	              -	      I-A1	  I-AM-PNC	      I-A1	      I-A1
+        between	              -	      I-A1	  I-AM-PNC	      I-A1	      I-A1
+            the	              -	      I-A1	  I-AM-PNC	      I-A1	      I-A1
+            two	              -	      I-A1	  I-AM-PNC	      I-A1	      I-A1
+      countries	              -	      E-A1	  E-AM-PNC	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0	         O	         O	         O	         O
+      newspaper	              -	      E-A0	      I-A0	         O	         O	         O	         O
+              ,	              -	         O	      I-A0	         O	         O	         O	         O
+        quoting	        quoting	       S-V	      I-A0	         O	         O	         O	         O
+             ``	              -	         O	      I-A0	         O	         O	         O	         O
+         secret	              -	      B-A1	      I-A0	         O	         O	         O	         O
+        reports	              -	      E-A1	      I-A0	         O	         O	         O	         O
+              ,	              -	         O	      I-A0	         O	         O	         O	         O
+             ''	              -	         O	      E-A0	         O	         O	         O	         O
+           said	           said	         O	       S-V	         O	         O	         O	         O
+          Syria	              -	         O	      B-A1	      S-A0	      S-A0	      S-A0	         O
+            had	            had	         O	      I-A1	       S-V	         O	         O	         O
+      indicated	      indicated	         O	      I-A1	      B-A1	       S-V	         O	         O
+            its	              -	         O	      I-A1	      I-A1	      B-A1	         O	         O
+       interest	              -	         O	      I-A1	      I-A1	      I-A1	         O	         O
+             in	              -	         O	      I-A1	      I-A1	      I-A1	         O	         O
+       resuming	       resuming	         O	      I-A1	      I-A1	      I-A1	       S-V	         O
+          talks	              -	         O	      I-A1	      I-A1	      I-A1	      S-A1	      B-A1
+             in	              -	         O	      I-A1	      I-A1	      I-A1	         O	      I-A1
+        remarks	              -	         O	      I-A1	      I-A1	      I-A1	         O	      E-A1
+           made	           made	         O	      I-A1	      I-A1	      I-A1	         O	       S-V
+           last	              -	         O	      I-A1	      I-A1	      I-A1	         O	  B-AM-TMP
+           week	              -	         O	      I-A1	      I-A1	      I-A1	         O	  E-AM-TMP
+             by	              -	         O	      I-A1	      I-A1	      I-A1	         O	      B-A0
+            the	              -	         O	      I-A1	      I-A1	      I-A1	         O	      I-A0
+         Syrian	              -	         O	      I-A1	      I-A1	      I-A1	         O	      I-A0
+     ambassador	              -	         O	      I-A1	      I-A1	      I-A1	         O	      I-A0
+             to	              -	         O	      I-A1	      I-A1	      I-A1	         O	      I-A0
+     Washington	              -	         O	      E-A1	      E-A1	      E-A1	         O	      E-A0
+              ,	              -	         O	         O	         O	         O	         O	         O
+          Walid	              -	         O	         O	         O	         O	         O	         O
+         Mualem	              -	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+             in	              -	         O	         O	         O	         O	         O	         O
+              a	              -	         O	         O	         O	         O	         O	         O
+        lecture	              -	         O	         O	         O	         O	         O	         O
+             to	              -	         O	         O	         O	         O	         O	         O
+              a	              -	         O	         O	         O	         O	         O	         O
+         closed	              -	         O	         O	         O	         O	         O	         O
+          forum	              -	         O	         O	         O	         O	         O	         O
+             in	              -	         O	         O	         O	         O	         O	         O
+      Baltimore	              -	         O	         O	         O	         O	         O	         O
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            Two	              -	      B-A0	      B-A0	      B-A1
+            top	              -	      I-A0	      I-A0	      I-A1
+          aides	              -	      I-A0	      I-A0	      I-A1
+             to	              -	      I-A0	      I-A0	      I-A1
+      Netanyahu	              -	      I-A0	      I-A0	      I-A1
+              ,	              -	      I-A0	      I-A0	      I-A1
+      political	              -	      I-A0	      I-A0	      I-A1
+        adviser	              -	      I-A0	      I-A0	      I-A1
+            Uzi	              -	      I-A0	      I-A0	      I-A1
+           Arad	              -	      I-A0	      I-A0	      I-A1
+            and	              -	      I-A0	      I-A0	      I-A1
+        Cabinet	              -	      I-A0	      I-A0	      I-A1
+      Secretary	              -	      I-A0	      I-A0	      I-A1
+          Danny	              -	      I-A0	      I-A0	      I-A1
+          Naveh	              -	      I-A0	      E-A0	      I-A1
+              ,	              -	      E-A0	         O	      I-A1
+           left	           left	       S-V	         O	      I-A1
+            for	              -	      B-A1	         O	      I-A1
+         Europe	              -	      E-A1	         O	      I-A1
+             on	              -	  B-AM-TMP	         O	      I-A1
+         Sunday	              -	  E-AM-TMP	         O	      I-A1
+              ,	              -	         O	         O	      I-A1
+     apparently	              -	  B-AM-PNC	         O	      I-A1
+             to	              -	  I-AM-PNC	         O	      I-A1
+    investigate	    investigate	  I-AM-PNC	       S-V	      I-A1
+            the	              -	  I-AM-PNC	      B-A1	      I-A1
+         Syrian	              -	  I-AM-PNC	      I-A1	      I-A1
+          issue	              -	  E-AM-PNC	      E-A1	      E-A1
+              ,	              -	         O	         O	         O
+            the	              -	         O	         O	      B-A0
+      newspaper	              -	         O	         O	      E-A0
+           said	           said	         O	         O	       S-V
+              .	              -	         O	         O	         O
+
+  Israel-Syrian	              -	      B-A1	      B-A1	      B-A1
+          talks	              -	      E-A1	      E-A1	      E-A1
+           have	           have	       S-V	         O	         O
+           been	           been	    B-C-A1	       S-V	         O
+            cut	            cut	    I-C-A1	    B-C-A1	       B-V
+            off	              -	    I-C-A1	    I-C-A1	       E-V
+            for	              -	    I-C-A1	    I-C-A1	  B-AM-TMP
+         nearly	              -	    I-C-A1	    I-C-A1	  I-AM-TMP
+            two	              -	    I-C-A1	    I-C-A1	  I-AM-TMP
+          years	              -	    E-C-A1	    E-C-A1	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+        Defense	              -	      B-A1	         O	      B-A0	         O	         O	         O	         O
+       Minister	              -	      I-A1	         O	      I-A0	         O	         O	         O	         O
+        Yitzhak	              -	      I-A1	         O	      I-A0	         O	         O	         O	         O
+      Mordechai	              -	      E-A1	         O	      E-A0	         O	         O	         O	         O
+            was	            was	       S-V	         O	         O	         O	         O	         O	         O
+            the	              -	      B-A1	         O	         O	         O	         O	         O	         O
+          first	              -	      I-A1	         O	         O	         O	         O	         O	         O
+         senior	              -	      I-A1	         O	         O	         O	         O	         O	         O
+        Israeli	              -	      I-A1	         O	         O	         O	         O	         O	         O
+       official	              -	      I-A1	         O	         O	         O	         O	         O	         O
+             to	              -	      I-A1	         O	         O	         O	         O	         O	         O
+          refer	          refer	      I-A1	       S-V	         O	         O	         O	         O	         O
+             to	              -	      I-A1	      B-A1	         O	         O	         O	         O	         O
+           U.N.	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+     resolution	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+            425	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+             in	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+              a	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+         speech	              -	      I-A1	      E-A1	         O	         O	         O	         O	         O
+            six	              -	      I-A1	  B-AM-TMP	         O	         O	         O	         O	         O
+          weeks	              -	      I-A1	  I-AM-TMP	         O	         O	         O	         O	         O
+            ago	              -	      E-A1	  E-AM-TMP	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+         saying	         saying	  B-AM-ADV	         O	       S-V	         O	         O	         O	         O
+             at	              -	  I-AM-ADV	         O	  B-AM-TMP	         O	         O	         O	         O
+            the	              -	  I-AM-ADV	         O	  I-AM-TMP	         O	         O	         O	         O
+           time	              -	  I-AM-ADV	         O	  E-AM-TMP	         O	         O	         O	         O
+             he	              -	  I-AM-ADV	         O	      B-A1	      S-A1	      S-A0	         O	         O
+            was	            was	  I-AM-ADV	         O	      I-A1	       S-V	         O	         O	         O
+        willing	              -	  I-AM-ADV	         O	      I-A1	         O	         O	         O	         O
+             to	              -	  I-AM-ADV	         O	      I-A1	         O	         O	         O	         O
+       withdraw	       withdraw	  I-AM-ADV	         O	      I-A1	         O	       S-V	         O	         O
+         troops	              -	  I-AM-ADV	         O	      I-A1	         O	      S-A1	         O	         O
+             in	              -	  I-AM-ADV	         O	      I-A1	         O	         O	         O	         O
+       exchange	              -	  I-AM-ADV	         O	      I-A1	         O	         O	         O	         O
+            for	              -	  I-AM-ADV	         O	      I-A1	         O	         O	         O	         O
+     guarantees	              -	  I-AM-ADV	         O	      I-A1	         O	         O	         O	         O
+           that	              -	  I-AM-ADV	         O	      I-A1	         O	         O	         O	         O
+         Israel	              -	  I-AM-ADV	         O	      I-A1	         O	         O	      S-A1	      S-A1
+          would	              -	  I-AM-ADV	         O	      I-A1	         O	         O	  S-AM-MOD	  S-AM-MOD
+            not	              -	  I-AM-ADV	         O	      I-A1	         O	         O	  S-AM-NEG	  S-AM-NEG
+             be	             be	  I-AM-ADV	         O	      I-A1	         O	         O	       S-V	         O
+       attacked	       attacked	  E-AM-ADV	         O	      E-A1	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+

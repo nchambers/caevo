@@ -28,7 +28,7 @@ public class Evaluate {
 				return true;
 			}
 		}
-		
+	
 		return false;
 	}
 	

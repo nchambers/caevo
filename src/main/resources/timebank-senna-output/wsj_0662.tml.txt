@@ -1,0 +1,174 @@
+         Jayark	              -	      B-A0	      B-A0	      B-A0	         O
+          Corp.	              -	      E-A0	      E-A0	      E-A0	         O
+         agreed	         agreed	       S-V	         O	         O	         O
+             to	              -	      B-A1	         O	         O	         O
+            pay	            pay	      I-A1	       S-V	         O	         O
+              $	              -	      I-A1	      B-A1	         O	         O
+              4	              -	      I-A1	      I-A1	         O	         O
+        million	              -	      I-A1	      I-A1	         O	         O
+             in	              -	      I-A1	      I-A1	         O	         O
+           cash	              -	      I-A1	      I-A1	         O	         O
+              ,	              -	      I-A1	      I-A1	         O	         O
+              $	              -	      I-A1	      I-A1	         O	         O
+              2	              -	      I-A1	      I-A1	         O	         O
+        million	              -	      I-A1	      I-A1	         O	         O
+             of	              -	      I-A1	      I-A1	         O	         O
+             12	              -	      I-A1	      I-A1	         O	         O
+              %	              -	      I-A1	      I-A1	         O	         O
+    convertible	              -	      I-A1	      I-A1	         O	         O
+     debentures	              -	      I-A1	      I-A1	         O	         O
+              ,	              -	      I-A1	      I-A1	         O	         O
+            and	              -	      I-A1	      I-A1	         O	         O
+            1.6	              -	      I-A1	      I-A1	         O	         O
+        million	              -	      I-A1	      I-A1	         O	         O
+         common	              -	      I-A1	      I-A1	         O	         O
+         shares	              -	      I-A1	      E-A1	         O	         O
+             to	              -	      I-A1	      B-A3	         O	         O
+        acquire	        acquire	      I-A1	      I-A3	       S-V	         O
+        closely	              -	      I-A1	      I-A3	      B-A1	  S-AM-MNR
+           held	           held	      I-A1	      I-A3	      I-A1	       S-V
+         Kofcoh	              -	      I-A1	      I-A3	      I-A1	      B-A1
+        Imports	              -	      I-A1	      I-A3	      I-A1	      I-A1
+            Inc	              -	      E-A1	      E-A3	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+             In	              -	  B-AM-LOC	  B-AM-LOC
+over-the-counter	              -	  I-AM-LOC	  I-AM-LOC
+        trading	              -	  E-AM-LOC	  E-AM-LOC
+         Friday	              -	  S-AM-TMP	  S-AM-TMP
+              ,	              -	         O	         O
+         Jayark	              -	      S-A1	      S-A1
+            was	            was	       S-V	         O
+         quoted	         quoted	  B-AM-MNR	       S-V
+             at	              -	  I-AM-MNR	      B-A2
+           87.5	              -	  I-AM-MNR	      I-A2
+          cents	              -	  I-AM-MNR	      I-A2
+            bid	              -	  I-AM-MNR	      I-A2
+              ,	              -	  I-AM-MNR	      I-A2
+           down	              -	  I-AM-MNR	      I-A2
+         15.625	              -	  I-AM-MNR	      I-A2
+          cents	              -	  E-AM-MNR	      E-A2
+              .	              -	         O	         O
+
+             At	              -	  B-AM-LOC	         O
+            the	              -	  I-AM-LOC	         O
+         market	              -	  I-AM-LOC	         O
+          price	              -	  E-AM-LOC	         O
+              ,	              -	         O	         O
+            the	              -	      B-A0	         O
+    transaction	              -	      E-A0	         O
+            has	            has	       S-V	         O
+              a	              -	      B-A1	         O
+          total	              -	      I-A1	         O
+      indicated	      indicated	      I-A1	       S-V
+          value	              -	      I-A1	      S-A1
+             of	              -	      I-A1	         O
+              $	              -	      I-A1	         O
+            7.4	              -	      I-A1	         O
+        million	              -	      E-A1	         O
+              .	              -	         O	         O
+
+         Kofcoh	              -	      S-A1	         O	         O
+             is	             is	       S-V	         O	         O
+              a	              -	    B-C-A1	         O	         O
+            New	              -	    I-C-A1	         O	         O
+           York	              -	    I-C-A1	         O	         O
+        holding	        holding	    I-C-A1	       S-V	         O
+        company	              -	    I-C-A1	      S-A0	         O
+            for	              -	    I-C-A1	         O	         O
+        Rosalco	              -	    I-C-A1	         O	      B-A0
+           Inc.	              -	    I-C-A1	         O	      E-A0
+              ,	              -	    I-C-A1	         O	         O
+          which	              -	    I-C-A1	         O	    S-R-A0
+        imports	        imports	    I-C-A1	         O	       S-V
+      furniture	              -	    I-C-A1	         O	      B-A1
+            and	              -	    I-C-A1	         O	      I-A1
+          other	              -	    I-C-A1	         O	      I-A1
+          items	              -	    E-C-A1	         O	      E-A1
+              .	              -	         O	         O	         O
+
+          David	              -	      B-A0	      B-A1
+             L.	              -	      I-A0	      I-A1
+        Koffman	              -	      I-A0	      I-A1
+              ,	              -	      I-A0	      I-A1
+      president	              -	      I-A0	      I-A1
+            and	              -	      I-A0	      I-A1
+          chief	              -	      I-A0	      I-A1
+      executive	              -	      I-A0	      I-A1
+        officer	              -	      I-A0	      I-A1
+             of	              -	      I-A0	      I-A1
+         Jayark	              -	      I-A0	      I-A1
+              ,	              -	      E-A0	      I-A1
+          holds	          holds	       S-V	      I-A1
+          about	              -	      B-A1	      I-A1
+             40	              -	      I-A1	      I-A1
+              %	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+         Kofcoh	              -	      E-A1	      E-A1
+              ,	              -	         O	         O
+         Jayark	              -	         O	      S-A0
+           said	           said	         O	       S-V
+              .	              -	         O	         O
+
+         Jayark	              -	      B-A0	      B-A0
+              ,	              -	      I-A0	      I-A0
+            New	              -	      I-A0	      I-A0
+           York	              -	      I-A0	      I-A0
+              ,	              -	      E-A0	      E-A0
+    distributes	    distributes	       S-V	         O
+            and	              -	         O	         O
+          rents	          rents	         O	       S-V
+   audio-visual	              -	      B-A1	      B-A1
+      equipment	              -	      I-A1	      E-A1
+            and	              -	      I-A1	         O
+         prints	              -	      I-A1	         O
+    promotional	              -	      I-A1	         O
+            ads	              -	      I-A1	         O
+            for	              -	      I-A1	         O
+      retailers	              -	      E-A1	         O
+              .	              -	         O	         O
+
+             In	              -	         O	  B-AM-TMP
+            the	              -	      B-A1	  I-AM-TMP
+        quarter	              -	      E-A1	  I-AM-TMP
+          ended	          ended	       S-V	  I-AM-TMP
+           July	              -	  B-AM-TMP	  I-AM-TMP
+             31	              -	  E-AM-TMP	  E-AM-TMP
+              ,	              -	         O	         O
+         Jayark	              -	         O	      S-A0
+            had	            had	         O	       S-V
+             an	              -	         O	      B-A1
+        average	              -	         O	      I-A1
+             of	              -	         O	      I-A1
+            5.6	              -	         O	      I-A1
+        million	              -	         O	      I-A1
+         shares	              -	         O	      I-A1
+    outstanding	              -	         O	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A1	      B-A0	         O	         O	         O
+    transaction	              -	      E-A1	      I-A0	         O	         O	         O
+             is	             is	       S-V	      I-A0	         O	         O	         O
+        subject	              -	  B-AM-ADV	      I-A0	         O	         O	         O
+             to	              -	  I-AM-ADV	      I-A0	         O	         O	         O
+       approval	              -	  I-AM-ADV	      I-A0	         O	         O	         O
+             by	              -	  I-AM-ADV	      I-A0	         O	         O	         O
+              a	              -	  I-AM-ADV	      I-A0	         O	         O	         O
+          panel	              -	  I-AM-ADV	      I-A0	         O	         O	         O
+             of	              -	  I-AM-ADV	      I-A0	         O	         O	         O
+  disinterested	              -	  I-AM-ADV	      I-A0	         O	         O	         O
+      directors	              -	  E-AM-ADV	      E-A0	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            the	              -	         O	      B-A0	      B-A0	         O	         O
+        company	              -	         O	      E-A0	      E-A0	         O	         O
+           said	           said	         O	       S-V	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+         adding	         adding	  B-AM-ADV	  B-AM-ADV	       S-V	         O	         O
+           that	              -	  I-AM-ADV	  I-AM-ADV	      B-A1	         O	         O
+    shareholder	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	      B-A1	      B-A1
+       approval	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	      E-A1	      E-A1
+             is	             is	  I-AM-ADV	  I-AM-ADV	      I-A1	       S-V	         O
+            n't	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	  S-AM-NEG	  S-AM-NEG
+         needed	         needed	  E-AM-ADV	  E-AM-ADV	      E-A1	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O
+

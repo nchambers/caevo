@@ -1,0 +1,205 @@
+       Nigerian	              -	      B-A0	         O	         O	         O
+       security	              -	      I-A0	         O	         O	         O
+         forces	              -	      E-A0	         O	         O	         O
+        clashed	        clashed	       S-V	         O	         O	         O
+             in	              -	  B-AM-LOC	         O	         O	         O
+          Lagos	              -	  E-AM-LOC	         O	         O	         O
+           with	              -	      B-A1	         O	         O	         O
+anti-government	              -	      I-A1	      B-A1	      B-A0	         O
+  demonstrators	              -	      I-A1	      E-A1	      E-A0	         O
+            who	              -	      I-A1	    S-R-A1	    S-R-A0	         O
+           were	           were	      I-A1	       S-V	         O	         O
+     protesting	     protesting	      I-A1	      B-A1	       S-V	         O
+          calls	              -	      I-A1	      I-A1	      B-A1	         O
+            for	              -	      I-A1	      I-A1	      I-A1	         O
+       military	              -	      I-A1	      I-A1	      I-A1	      B-A0
+         leader	              -	      I-A1	      I-A1	      I-A1	      I-A0
+           Sani	              -	      I-A1	      I-A1	      I-A1	      I-A0
+         Abacha	              -	      I-A1	      I-A1	      E-A1	      E-A0
+             to	              -	      I-A1	      I-A1	  B-AM-PNC	         O
+            run	            run	      I-A1	      I-A1	  I-AM-PNC	       S-V
+            for	              -	      I-A1	      I-A1	  I-AM-PNC	  B-AM-PNC
+      president	              -	      E-A1	      E-A1	  E-AM-PNC	  E-AM-PNC
+              .	              -	         O	         O	         O	         O
+
+      Meanwhile	              -	  S-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O
+             as	              -	  B-AM-ADV	         O	         O
+            VOA	              -	  I-AM-ADV	      B-A0	         O
+           West	              -	  I-AM-ADV	      I-A0	         O
+         Africa	              -	  I-AM-ADV	      I-A0	         O
+  Correspondent	              -	  I-AM-ADV	      I-A0	         O
+        Purnell	              -	  I-AM-ADV	      I-A0	         O
+        Murdock	              -	  I-AM-ADV	      I-A0	         O
+        reports	              -	  E-AM-ADV	      I-A0	         O
+              ,	              -	         O	      I-A0	         O
+        General	              -	      B-A0	      I-A0	         O
+         Abacha	              -	      I-A0	      I-A0	         O
+             's	              -	      I-A0	      I-A0	         O
+     supporters	              -	      E-A0	      E-A0	         O
+          began	          began	       S-V	         O	         O
+              a	              -	      B-A1	         O	         O
+            two	              -	      I-A1	         O	         O
+            day	              -	      I-A1	         O	         O
+          rally	              -	      I-A1	         O	         O
+             in	              -	      I-A1	         O	         O
+            the	              -	      I-A1	         O	         O
+        capital	              -	      I-A1	         O	         O
+              ,	              -	      I-A1	         O	         O
+          Abuja	              -	      I-A1	         O	         O
+              ,	              -	      E-A1	         O	         O
+             to	              -	  B-AM-PNC	         O	         O
+           urge	           urge	  I-AM-PNC	       S-V	         O
+            him	              -	  I-AM-PNC	      S-A1	      S-A0
+             to	              -	  I-AM-PNC	      B-A2	         O
+        compete	        compete	  I-AM-PNC	      I-A2	       S-V
+             in	              -	  I-AM-PNC	      I-A2	      B-A1
+           this	              -	  I-AM-PNC	      I-A2	      I-A1
+           year	              -	  I-AM-PNC	      I-A2	      I-A1
+             's	              -	  I-AM-PNC	      I-A2	      I-A1
+       election	              -	  E-AM-PNC	      E-A2	      E-A1
+              .	              -	         O	         O	         O
+
+        Nigeria	              -	      B-A0	         O	         O	         O
+          state	              -	      I-A0	         O	         O	         O
+          radio	              -	      E-A0	         O	         O	         O
+           says	           says	       S-V	         O	         O	         O
+      thousands	              -	      B-A1	      B-A1	      B-A1	      B-A0
+             of	              -	      I-A1	      I-A1	      I-A1	      I-A0
+         people	              -	      I-A1	      E-A1	      E-A1	      E-A0
+          began	          began	      I-A1	       S-V	         O	         O
+      gathering	      gathering	      I-A1	    S-C-A1	       S-V	         O
+             in	              -	      I-A1	  B-AM-LOC	  B-AM-LOC	         O
+            the	              -	      I-A1	  I-AM-LOC	  I-AM-LOC	         O
+        capital	              -	      I-A1	  I-AM-LOC	  I-AM-LOC	         O
+          Abuja	              -	      I-A1	  E-AM-LOC	  E-AM-LOC	         O
+          early	              -	      I-A1	  B-AM-TMP	  B-AM-TMP	         O
+        Tuesday	              -	      I-A1	  E-AM-TMP	  E-AM-TMP	         O
+            for	              -	      I-A1	    B-C-A1	      B-A1	         O
+            the	              -	      I-A1	    I-C-A1	      I-A1	         O
+            two	              -	      I-A1	    I-C-A1	      I-A1	         O
+            day	              -	      I-A1	    I-C-A1	      I-A1	         O
+          rally	              -	      I-A1	    I-C-A1	      I-A1	         O
+     supporting	     supporting	      I-A1	    I-C-A1	      I-A1	       S-V
+        General	              -	      I-A1	    I-C-A1	      I-A1	      B-A1
+           Sani	              -	      I-A1	    I-C-A1	      I-A1	      I-A1
+         Abacha	              -	      I-A1	    I-C-A1	      I-A1	      I-A1
+             's	              -	      I-A1	    I-C-A1	      I-A1	      I-A1
+      candidacy	              -	      E-A1	    E-C-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+     Organizers	              -	      S-A0	         O	         O	         O
+          state	          state	       S-V	         O	         O	         O
+            the	              -	      B-A1	         O	         O	         O
+            two	              -	      I-A1	         O	         O	         O
+           days	              -	      I-A1	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O
+          music	              -	      I-A1	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O
+        dancing	              -	      E-A1	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O
+       speeches	              -	         O	      S-A1	      S-A1	      S-A0
+             is	             is	         O	       S-V	         O	         O
+       expected	       expected	         O	    B-C-A1	       S-V	         O
+             to	              -	         O	    I-C-A1	    B-C-A1	         O
+           draw	           draw	         O	    I-C-A1	    I-C-A1	       S-V
+           some	              -	         O	    I-C-A1	    I-C-A1	      B-A1
+            two	              -	         O	    I-C-A1	    I-C-A1	      I-A1
+        million	              -	         O	    I-C-A1	    I-C-A1	      I-A1
+         people	              -	         O	    E-C-A1	    E-C-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            But	              -	         O	  S-AM-DIS	         O	         O
+             as	              -	         O	  B-AM-TMP	         O	         O
+     supporters	              -	      B-A1	  I-AM-TMP	         O	         O
+             of	              -	      I-A1	  I-AM-TMP	         O	         O
+            the	              -	      I-A1	  I-AM-TMP	         O	         O
+       military	              -	      I-A1	  I-AM-TMP	         O	         O
+         leader	              -	      E-A1	  I-AM-TMP	         O	         O
+       gathered	       gathered	       S-V	  I-AM-TMP	         O	         O
+             in	              -	  B-AM-LOC	  I-AM-TMP	         O	         O
+            the	              -	  I-AM-LOC	  I-AM-TMP	         O	         O
+          north	              -	  E-AM-LOC	  E-AM-TMP	         O	         O
+              ,	              -	         O	         O	         O	         O
+           riot	              -	         O	      B-A1	      B-A0	         O
+         police	              -	         O	      E-A1	      E-A0	         O
+       deployed	       deployed	         O	       S-V	         O	         O
+             in	              -	         O	  B-AM-LOC	         O	         O
+        Nigeria	              -	         O	  I-AM-LOC	         O	         O
+             's	              -	         O	  I-AM-LOC	         O	         O
+       southern	              -	         O	  I-AM-LOC	         O	         O
+     commercial	              -	         O	  I-AM-LOC	         O	         O
+        capital	              -	         O	  I-AM-LOC	         O	         O
+          Lagos	              -	         O	  E-AM-LOC	         O	         O
+              ,	              -	         O	         O	         O	         O
+             to	              -	         O	  B-AM-PNC	         O	         O
+          break	          break	         O	  I-AM-PNC	       B-V	         O
+             up	              -	         O	  I-AM-PNC	       E-V	         O
+              a	              -	         O	  I-AM-PNC	      B-A1	      B-A1
+        protest	              -	         O	  I-AM-PNC	      I-A1	      I-A1
+          rally	              -	         O	  I-AM-PNC	      I-A1	      E-A1
+         called	         called	         O	  I-AM-PNC	      I-A1	       S-V
+             by	              -	         O	  I-AM-PNC	      I-A1	      B-A0
+            the	              -	         O	  I-AM-PNC	      I-A1	      I-A0
+      political	              -	         O	  I-AM-PNC	      I-A1	      I-A0
+     opposition	              -	         O	  E-AM-PNC	      E-A1	      E-A0
+              .	              -	         O	         O	         O	         O
+
+       Although	              -	         O	         O	  B-AM-ADV	  B-AM-ADV
+        General	              -	      B-A0	      B-A0	  I-AM-ADV	  I-AM-ADV
+         Abacha	              -	      E-A0	      E-A0	  I-AM-ADV	  I-AM-ADV
+            had	            had	       S-V	         O	  I-AM-ADV	  I-AM-ADV
+            not	              -	      B-A1	  S-AM-NEG	  I-AM-ADV	  I-AM-ADV
+       publicly	              -	      I-A1	  S-AM-MNR	  I-AM-ADV	  I-AM-ADV
+      announced	      announced	      I-A1	       S-V	  I-AM-ADV	  I-AM-ADV
+            his	              -	      I-A1	      B-A1	  I-AM-ADV	  I-AM-ADV
+      candidacy	              -	      E-A1	      E-A1	  E-AM-ADV	  E-AM-ADV
+              ,	              -	         O	         O	         O	         O
+           many	              -	         O	         O	      B-A0	         O
+         people	              -	         O	         O	      E-A0	         O
+        believe	        believe	         O	         O	       S-V	         O
+             an	              -	         O	         O	      B-A1	      B-A1
+         Abacha	              -	         O	         O	      I-A1	      I-A1
+     presidency	              -	         O	         O	      I-A1	      E-A1
+             is	             is	         O	         O	      I-A1	       S-V
+              a	              -	         O	         O	      I-A1	      B-A1
+       foregone	              -	         O	         O	      I-A1	      I-A1
+     conclusion	              -	         O	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+           Some	              -	      B-A0	         O
+       analysts	              -	      E-A0	         O
+            say	            say	       S-V	         O
+            the	              -	      B-A1	      B-A1
+        outcome	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+           face	              -	      I-A1	      I-A1
+            off	              -	      I-A1	      I-A1
+        between	              -	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1
+         police	              -	      I-A1	      I-A1
+            and	              -	      I-A1	      I-A1
+           anti	              -	      I-A1	      I-A1
+         Abacha	              -	      I-A1	      I-A1
+      political	              -	      I-A1	      I-A1
+         groups	              -	      I-A1	      E-A1
+           will	              -	      I-A1	  S-AM-MOD
+             be	             be	      I-A1	       S-V
+              a	              -	      I-A1	      B-A2
+           test	              -	      I-A1	      I-A2
+             of	              -	      I-A1	      I-A2
+            the	              -	      I-A1	      I-A2
+     opposition	              -	      I-A1	      I-A2
+             's	              -	      I-A1	      I-A2
+        resolve	              -	      E-A1	      E-A2
+              .	              -	         O	         O
+
+        Purnell	              -
+        Murdock	              -
+              ,	              -
+            VOA	              -
+           News	              -
+              .	              -
+

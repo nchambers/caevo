@@ -1,0 +1,182 @@
+        Cilcorp	              -	      B-A0	         O	         O
+           Inc.	              -	      I-A0	         O	         O
+              ,	              -	      I-A0	         O	         O
+         Peoria	              -	      I-A0	         O	         O
+              ,	              -	      I-A0	         O	         O
+           Ill.	              -	      I-A0	         O	         O
+              ,	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             it	              -	      B-A1	      S-A0	      S-A0
+         agreed	         agreed	      I-A1	       S-V	         O
+             to	              -	      I-A1	      B-A1	         O
+        acquire	        acquire	      I-A1	      I-A1	       S-V
+            the	              -	      I-A1	      I-A1	      B-A1
+  environmental	              -	      I-A1	      I-A1	      I-A1
+     consulting	              -	      I-A1	      I-A1	      I-A1
+            and	              -	      I-A1	      I-A1	      I-A1
+     analytical	              -	      I-A1	      I-A1	      I-A1
+        service	              -	      I-A1	      I-A1	      I-A1
+     businesses	              -	      I-A1	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+         Hunter	              -	      I-A1	      I-A1	      I-A1
+  Environmental	              -	      I-A1	      I-A1	      I-A1
+       Services	              -	      I-A1	      I-A1	      I-A1
+           Inc.	              -	      I-A1	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+      Southport	              -	      I-A1	      I-A1	      I-A1
+              ,	              -	      I-A1	      I-A1	      I-A1
+           Conn	              -	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+            The	              -	         O	      B-A0	         O	         O
+        utility	              -	      S-A1	      I-A0	         O	         O
+        holding	        holding	       S-V	      I-A0	         O	         O
+        company	              -	      S-A0	      E-A0	         O	         O
+           said	           said	         O	       S-V	         O	         O
+         Hunter	              -	         O	      B-A1	      S-A0	         O
+           will	              -	         O	      I-A1	  S-AM-MOD	         O
+        receive	        receive	         O	      I-A1	       S-V	         O
+        390,000	              -	         O	      I-A1	      B-A1	         O
+         shares	              -	         O	      I-A1	      I-A1	         O
+             of	              -	         O	      I-A1	      I-A1	         O
+              a	              -	         O	      I-A1	      I-A1	         O
+            new	              -	         O	      I-A1	      I-A1	         O
+         series	              -	         O	      I-A1	      I-A1	         O
+             of	              -	         O	      I-A1	      I-A1	         O
+        Cilcorp	              -	         O	      I-A1	      I-A1	         O
+    convertible	              -	         O	      I-A1	      I-A1	         O
+      preferred	      preferred	         O	      I-A1	      I-A1	       S-V
+          stock	              -	         O	      I-A1	      I-A1	      S-A1
+           with	              -	         O	      I-A1	      I-A1	         O
+              a	              -	         O	      I-A1	      I-A1	         O
+           face	              -	         O	      I-A1	      I-A1	         O
+          value	              -	         O	      I-A1	      I-A1	         O
+             of	              -	         O	      I-A1	      I-A1	         O
+              $	              -	         O	      I-A1	      I-A1	         O
+             39	              -	         O	      I-A1	      I-A1	         O
+        million	              -	         O	      I-A1	      E-A1	         O
+            for	              -	         O	      I-A1	      B-A3	         O
+            the	              -	         O	      I-A1	      I-A3	         O
+     businesses	              -	         O	      E-A1	      E-A3	         O
+              .	              -	         O	         O	         O	         O
+
+        Cilcorp	              -	      S-A0	         O
+           will	              -	  S-AM-MOD	         O
+           also	              -	  S-AM-DIS	         O
+         assume	         assume	       S-V	         O
+              $	              -	      B-A1	         O
+             22	              -	      I-A1	         O
+        million	              -	      I-A1	         O
+             of	              -	      I-A1	         O
+         Hunter	              -	      I-A1	         O
+             's	              -	      I-A1	         O
+       existing	       existing	      I-A1	       S-V
+           debt	              -	      E-A1	      S-A1
+              .	              -	         O	         O
+
+             As	              -	  B-AM-ADV	         O	         O
+           part	              -	  I-AM-ADV	         O	         O
+             of	              -	  I-AM-ADV	         O	         O
+            the	              -	  I-AM-ADV	         O	         O
+      agreement	              -	  E-AM-ADV	         O	         O
+              ,	              -	         O	         O	         O
+        Cilcorp	              -	      S-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             it	              -	      B-A1	      S-A0	         O
+           will	              -	      I-A1	  S-AM-MOD	         O
+            pay	            pay	      I-A1	       S-V	         O
+         Hunter	              -	      I-A1	      S-A2	         O
+              $	              -	      I-A1	      B-A1	         O
+              4	              -	      I-A1	      I-A1	         O
+        million	              -	      I-A1	      I-A1	         O
+             in	              -	      I-A1	      I-A1	         O
+       exchange	              -	      I-A1	      E-A1	         O
+            for	              -	      I-A1	      B-A3	         O
+     agreements	              -	      I-A1	      I-A3	         O
+            not	              -	      I-A1	      I-A3	  S-AM-NEG
+             to	              -	      I-A1	      I-A3	         O
+        compete	        compete	      E-A1	      E-A3	       S-V
+              .	              -	         O	         O	         O
+
+        Cilcorp	              -	      S-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+            the	              -	      B-A1	      B-A1	      B-A1	      B-A0	         O
+     businesses	              -	      I-A1	      E-A1	      E-A1	      I-A0	         O
+             to	              -	      I-A1	         O	         O	      I-A0	         O
+             be	             be	      I-A1	       S-V	         O	      I-A0	         O
+       acquired	       acquired	      I-A1	      S-A3	       S-V	      E-A0	         O
+            had	            had	      I-A1	         O	         O	       S-V	         O
+        revenue	              -	      I-A1	         O	         O	      B-A1	         O
+             of	              -	      I-A1	         O	         O	      I-A1	         O
+              $	              -	      I-A1	         O	         O	      I-A1	         O
+             76	              -	      I-A1	         O	         O	      I-A1	         O
+        million	              -	      I-A1	         O	         O	      E-A1	         O
+            for	              -	      I-A1	         O	         O	  B-AM-TMP	         O
+            the	              -	      I-A1	         O	         O	  I-AM-TMP	      B-A1
+           year	              -	      I-A1	         O	         O	  I-AM-TMP	      E-A1
+          ended	          ended	      I-A1	         O	         O	  I-AM-TMP	       S-V
+          March	              -	      I-A1	         O	         O	  I-AM-TMP	  B-AM-TMP
+             31	              -	      E-A1	         O	         O	  E-AM-TMP	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O
+
+     Separately	              -	  S-AM-ADV	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+        Cilcorp	              -	      S-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+             it	              -	      B-A1	      S-A0	      S-A0	         O
+          plans	          plans	      I-A1	       S-V	         O	         O
+             to	              -	      I-A1	      B-A1	         O	         O
+       purchase	       purchase	      I-A1	      I-A1	       S-V	         O
+             as	              -	      I-A1	      I-A1	      B-A1	         O
+           many	              -	      I-A1	      I-A1	      I-A1	         O
+             as	              -	      I-A1	      I-A1	      I-A1	         O
+            1.4	              -	      I-A1	      I-A1	      I-A1	         O
+        million	              -	      I-A1	      I-A1	      I-A1	         O
+         shares	              -	      I-A1	      I-A1	      I-A1	         O
+              ,	              -	      I-A1	      I-A1	      I-A1	         O
+             or	              -	      I-A1	      I-A1	      I-A1	         O
+             10	              -	      I-A1	      I-A1	      I-A1	         O
+              %	              -	      I-A1	      I-A1	      I-A1	         O
+             of	              -	      I-A1	      I-A1	      I-A1	         O
+            its	              -	      I-A1	      I-A1	      I-A1	         O
+         common	              -	      I-A1	      I-A1	      I-A1	         O
+          stock	              -	      I-A1	      I-A1	      I-A1	         O
+    outstanding	              -	      I-A1	      I-A1	      E-A1	         O
+           from	              -	      I-A1	      I-A1	  B-AM-TMP	         O
+           time	              -	      I-A1	      I-A1	  I-AM-TMP	         O
+             to	              -	      I-A1	      I-A1	  I-AM-TMP	         O
+           time	              -	      I-A1	      I-A1	  E-AM-TMP	         O
+             on	              -	      I-A1	      I-A1	  B-AM-MNR	         O
+            the	              -	      I-A1	      I-A1	  I-AM-MNR	         O
+           open	              -	      I-A1	      I-A1	  I-AM-MNR	         O
+         market	              -	      I-A1	      I-A1	  I-AM-MNR	         O
+            and	              -	      I-A1	      I-A1	  I-AM-MNR	         O
+        through	              -	      I-A1	      I-A1	  I-AM-MNR	         O
+      privately	              -	      I-A1	      I-A1	  I-AM-MNR	  S-AM-MNR
+     negotiated	     negotiated	      I-A1	      I-A1	  I-AM-MNR	       S-V
+   transactions	              -	      E-A1	      E-A1	  E-AM-MNR	      S-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0	         O
+        company	              -	      E-A0	      I-A0	         O
+              ,	              -	         O	      I-A0	         O
+          which	              -	    S-R-A0	      I-A0	         O
+      currently	              -	  S-AM-TMP	      I-A0	         O
+            has	            has	       S-V	      I-A0	         O
+           13.5	              -	      B-A1	      I-A0	         O
+        million	              -	      I-A1	      I-A0	         O
+         common	              -	      I-A1	      I-A0	         O
+         shares	              -	      I-A1	      I-A0	         O
+    outstanding	              -	      E-A1	      I-A0	         O
+              ,	              -	         O	      E-A0	         O
+           said	           said	         O	       S-V	         O
+             it	              -	         O	      B-A1	      S-A0
+            has	            has	         O	      I-A1	       S-V
+             no	              -	         O	      I-A1	      B-A1
+       specific	              -	         O	      I-A1	      I-A1
+          plans	              -	         O	      I-A1	      I-A1
+            for	              -	         O	      I-A1	      I-A1
+            the	              -	         O	      I-A1	      I-A1
+         shares	              -	         O	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+

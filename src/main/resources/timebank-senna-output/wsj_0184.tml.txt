@@ -1,0 +1,370 @@
+         Upjohn	              -	      B-A0	         O	         O	         O
+            Co.	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O
+           will	              -	      I-A1	  S-AM-MOD	         O	         O
+          offer	          offer	      I-A1	       S-V	         O	         O
+             an	              -	      I-A1	      B-A1	         O	         O
+          early	              -	      I-A1	      I-A1	         O	         O
+     retirement	              -	      I-A1	      I-A1	         O	         O
+        package	              -	      I-A1	      E-A1	         O	         O
+             to	              -	      I-A1	      B-A3	         O	         O
+             as	              -	      I-A1	      I-A3	         O	         O
+           many	              -	      I-A1	      I-A3	         O	         O
+             as	              -	      I-A1	      I-A3	         O	         O
+          1,100	              -	      I-A1	      I-A3	         O	         O
+      employees	              -	      I-A1	      I-A3	         O	         O
+             in	              -	      I-A1	      I-A3	         O	         O
+              a	              -	      I-A1	      I-A3	      B-A1	      B-A1
+   cost-cutting	              -	      I-A1	      I-A3	      I-A1	      I-A1
+           move	              -	      I-A1	      I-A3	      E-A1	      E-A1
+       expected	       expected	      I-A1	      I-A3	       S-V	         O
+             to	              -	      I-A1	      I-A3	    B-C-A1	         O
+         result	         result	      I-A1	      I-A3	    I-C-A1	       S-V
+             in	              -	      I-A1	      I-A3	    I-C-A1	      B-A2
+              a	              -	      I-A1	      I-A3	    I-C-A1	      I-A2
+ fourth-quarter	              -	      I-A1	      I-A3	    I-C-A1	      I-A2
+         charge	              -	      E-A1	      E-A3	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O	         O
+
+         Upjohn	              -	      B-A0	         O	         O	         O
+      officials	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+           they	              -	      B-A1	      S-A0	         O	         O
+          could	              -	      I-A1	  S-AM-MOD	         O	         O
+            n't	              -	      I-A1	  S-AM-NEG	         O	         O
+       estimate	       estimate	      I-A1	       S-V	         O	         O
+            the	              -	      I-A1	      B-A1	         O	         O
+           size	              -	      I-A1	      I-A1	         O	         O
+             of	              -	      I-A1	      I-A1	         O	         O
+            the	              -	      I-A1	      I-A1	         O	         O
+         charge	              -	      I-A1	      E-A1	         O	         O
+          until	              -	      I-A1	  B-AM-TMP	         O	         O
+           they	              -	      I-A1	  I-AM-TMP	      S-A0	         O
+      determine	      determine	      I-A1	  I-AM-TMP	       S-V	         O
+          which	              -	      I-A1	  I-AM-TMP	      B-A1	         O
+      employees	              -	      I-A1	  I-AM-TMP	      I-A1	         O
+              ,	              -	      I-A1	  I-AM-TMP	      I-A1	         O
+            and	              -	      I-A1	  I-AM-TMP	      I-A1	         O
+            how	              -	      I-A1	  I-AM-TMP	      I-A1	         O
+           many	              -	      I-A1	  I-AM-TMP	      I-A1	         O
+              ,	              -	      I-A1	  I-AM-TMP	      I-A1	         O
+           will	              -	      I-A1	  I-AM-TMP	      I-A1	  S-AM-MOD
+    participate	    participate	      I-A1	  I-AM-TMP	      I-A1	       S-V
+             in	              -	      I-A1	  I-AM-TMP	      I-A1	      B-A1
+            the	              -	      I-A1	  I-AM-TMP	      I-A1	      I-A1
+     retirement	              -	      I-A1	  I-AM-TMP	      I-A1	      I-A1
+           plan	              -	      E-A1	  E-AM-TMP	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            But	              -	  S-AM-DIS	         O	         O	         O
+            the	              -	      B-A0	         O	         O	         O
+ pharmaceutical	              -	      I-A0	         O	         O	         O
+        company	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+             it	              -	      B-A1	      S-A0	         O	         O
+    anticipates	    anticipates	      I-A1	       S-V	         O	         O
+            the	              -	      I-A1	      B-A1	      B-A2	      B-A2
+      long-term	              -	      I-A1	      I-A1	      I-A2	      I-A2
+        savings	              -	      I-A1	      I-A1	      E-A2	      I-A2
+      resulting	      resulting	      I-A1	      I-A1	       S-V	      I-A2
+           from	              -	      I-A1	      I-A1	      B-A1	      I-A2
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A2
+           plan	              -	      I-A1	      I-A1	      I-A1	      I-A2
+             's	              -	      I-A1	      I-A1	      I-A1	      I-A2
+ implementation	              -	      I-A1	      I-A1	      E-A1	      E-A2
+           will	              -	      I-A1	      I-A1	         O	  S-AM-MOD
+           more	              -	      I-A1	      I-A1	         O	  B-AM-ADV
+           than	              -	      I-A1	      I-A1	         O	  E-AM-ADV
+         offset	         offset	      I-A1	      I-A1	         O	       S-V
+     short-term	              -	      I-A1	      I-A1	         O	      B-A1
+          costs	              -	      E-A1	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0
+        program	              -	      I-A0
+              ,	              -	      I-A0
+      available	              -	      I-A0
+             to	              -	      I-A0
+         Upjohn	              -	      I-A0
+      employees	              -	      I-A0
+             55	              -	      I-A0
+          years	              -	      I-A0
+            old	              -	      I-A0
+             or	              -	      I-A0
+          older	              -	      I-A0
+              ,	              -	      E-A0
+          could	              -	  S-AM-MOD
+       increase	       increase	       S-V
+             an	              -	      B-A1
+     individual	              -	      I-A1
+             's	              -	      I-A1
+     retirement	              -	      I-A1
+       benefits	              -	      E-A1
+             10	              -	      B-A2
+              %	              -	      E-A2
+             to	              -	      B-A4
+             20	              -	      I-A4
+              %	              -	      E-A4
+              .	              -	         O
+
+             In	              -	  B-AM-DIS	  B-AM-DIS
+       addition	              -	  E-AM-DIS	  E-AM-DIS
+              ,	              -	         O	         O
+         Upjohn	              -	      S-A1	      S-A0
+             is	             is	       S-V	         O
+       offering	       offering	  B-AM-ADV	       S-V
+              a	              -	  I-AM-ADV	      B-A1
+       one-time	              -	  I-AM-ADV	      I-A1
+     retirement	              -	  I-AM-ADV	      I-A1
+          bonus	              -	  I-AM-ADV	      I-A1
+          equal	              -	  I-AM-ADV	      I-A1
+             to	              -	  I-AM-ADV	      I-A1
+            six	              -	  I-AM-ADV	      I-A1
+         months	              -	  I-AM-ADV	      I-A1
+             of	              -	  I-AM-ADV	      I-A1
+           base	              -	  I-AM-ADV	      I-A1
+            pay	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+       Chairman	              -	      B-A0	      B-A0
+       Theodore	              -	      I-A0	      I-A0
+         Cooper	              -	      E-A0	      E-A0
+         called	         called	       S-V	         O
+            the	              -	      B-A2	         O
+        program	              -	      I-A2	         O
+           part	              -	      I-A2	         O
+             of	              -	      I-A2	         O
+            the	              -	      I-A2	      B-A0
+        company	              -	      I-A2	      I-A0
+             's	              -	      I-A2	      E-A0
+       two-year	              -	      I-A2	         O
+       strategy	              -	      I-A2	         O
+             to	              -	      I-A2	         O
+      implement	      implement	      I-A2	       S-V
+         budget	              -	      I-A2	      B-A1
+    constraints	              -	      I-A2	      E-A1
+            and	              -	      I-A2	         O
+             an	              -	      I-A2	         O
+      effective	              -	      I-A2	         O
+headcount-control	              -	      I-A2	         O
+        program	              -	      E-A2	         O
+              .	              -	         O	         O
+
+            But	              -	  S-AM-DIS	         O	         O	         O	         O
+           some	              -	      B-A0	         O	         O	         O	         O
+       analysts	              -	      E-A0	         O	         O	         O	         O
+     questioned	     questioned	       S-V	         O	         O	         O	         O
+            how	              -	      B-A1	         O	         O	         O	         O
+           much	              -	      I-A1	         O	         O	         O	         O
+             of	              -	      I-A1	         O	         O	         O	         O
+             an	              -	      I-A1	      B-A1	         O	         O	         O
+         impact	              -	      I-A1	      E-A1	         O	         O	         O
+            the	              -	      I-A1	      B-A0	         O	         O	         O
+     retirement	              -	      I-A1	      I-A0	         O	         O	         O
+        package	              -	      I-A1	      E-A0	         O	         O	         O
+           will	              -	      I-A1	  S-AM-MOD	         O	         O	         O
+           have	           have	      I-A1	       S-V	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+        because	              -	      I-A1	         O	         O	         O	         O
+            few	              -	      I-A1	         O	      B-A1	         O	      B-A1
+           jobs	              -	      I-A1	         O	      E-A1	         O	      E-A1
+           will	              -	      I-A1	         O	  S-AM-MOD	         O	         O
+            end	            end	      I-A1	         O	       B-V	         O	         O
+             up	              -	      I-A1	         O	       E-V	         O	         O
+          being	          being	      I-A1	         O	    B-C-A1	       S-V	         O
+     eliminated	     eliminated	      E-A1	         O	    E-C-A1	      S-A3	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+             It	              -	      S-A0	      B-A1
+             's	             's	       S-V	      I-A1
+              a	              -	      B-A1	      I-A1
+       cosmetic	              -	      I-A1	      I-A1
+           move	              -	      E-A1	      E-A1
+              ,	              -	         O	         O
+           said	           said	         O	       S-V
+       Jonathan	              -	         O	      B-A0
+             S.	              -	         O	      I-A0
+         Gelles	              -	         O	      I-A0
+             of	              -	         O	      I-A0
+       Wertheim	              -	         O	      I-A0
+       Schroder	              -	         O	      I-A0
+            amp	              -	         O	      I-A0
+             Co	              -	         O	      E-A0
+              .	              -	         O	         O
+
+      According	      According	       S-V	         O
+             to	              -	      B-A1	         O
+         Upjohn	              -	      I-A1	         O
+             's	              -	      I-A1	         O
+      estimates	              -	      E-A1	         O
+              ,	              -	         O	         O
+           only	              -	      B-A1	      B-A0
+             50	              -	      I-A1	      I-A0
+              %	              -	      I-A1	      I-A0
+             to	              -	      I-A1	      I-A0
+             60	              -	      I-A1	      I-A0
+              %	              -	      I-A1	      I-A0
+             of	              -	      I-A1	      I-A0
+            the	              -	      I-A1	      I-A0
+          1,100	              -	      I-A1	      I-A0
+       eligible	              -	      I-A1	      I-A0
+      employees	              -	      I-A1	      E-A0
+           will	              -	      I-A1	  S-AM-MOD
+           take	           take	      I-A1	       S-V
+      advantage	              -	      I-A1	      S-A1
+             of	              -	      I-A1	      B-A2
+            the	              -	      I-A1	      I-A2
+           plan	              -	      E-A1	      E-A2
+              .	              -	         O	         O
+
+         Upjohn	              -	      S-A0	         O	         O	         O
+        further	              -	  S-AM-ADV	         O	         O	         O
+      estimated	      estimated	       S-V	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O
+          about	              -	      I-A1	         O	      B-A1	      B-A1
+             50	              -	      I-A1	         O	      I-A1	      I-A1
+              %	              -	      I-A1	         O	      I-A1	      I-A1
+             of	              -	      I-A1	         O	      I-A1	      I-A1
+            the	              -	      I-A1	      B-A0	      I-A1	      I-A1
+      employees	              -	      I-A1	      E-A0	      I-A1	      I-A1
+            who	              -	      I-A1	    S-R-A0	      I-A1	      I-A1
+          leave	          leave	      I-A1	       S-V	      I-A1	      I-A1
+            for	              -	      I-A1	      B-A1	      I-A1	      I-A1
+          early	              -	      I-A1	      I-A1	      I-A1	      I-A1
+     retirement	              -	      I-A1	      E-A1	      E-A1	      E-A1
+            may	              -	      I-A1	         O	  S-AM-MOD	  S-AM-MOD
+             be	             be	      I-A1	         O	       S-V	         O
+       replaced	       replaced	      E-A1	         O	    S-C-A1	       S-V
+              .	              -	         O	         O	         O	         O
+
+             As	              -	  B-AM-DIS
+              a	              -	  I-AM-DIS
+         result	              -	  E-AM-DIS
+              ,	              -	         O
+         Upjohn	              -	      S-A0
+           will	              -	  S-AM-MOD
+         likely	              -	  S-AM-ADV
+           trim	           trim	       S-V
+           only	              -	      B-A1
+          about	              -	      I-A1
+            275	              -	      I-A1
+             to	              -	      I-A1
+            350	              -	      I-A1
+             of	              -	      I-A1
+            its	              -	      I-A1
+           more	              -	      I-A1
+           than	              -	      I-A1
+         21,000	              -	      I-A1
+           jobs	              -	      I-A1
+     world-wide	              -	      E-A1
+              .	              -	         O
+
+             In	              -	  B-AM-LOC
+      composite	              -	  I-AM-LOC
+        trading	              -	  I-AM-LOC
+             on	              -	  I-AM-LOC
+            the	              -	  I-AM-LOC
+            New	              -	  I-AM-LOC
+           York	              -	  I-AM-LOC
+          Stock	              -	  I-AM-LOC
+       Exchange	              -	  E-AM-LOC
+      yesterday	              -	  S-AM-TMP
+              ,	              -	         O
+         Upjohn	              -	      B-A1
+         shares	              -	      E-A1
+           rose	           rose	       S-V
+           87.5	              -	      B-A2
+          cents	              -	      E-A2
+             to	              -	      B-A4
+              $	              -	      I-A4
+         38.875	              -	      I-A4
+         apiece	              -	      E-A4
+              .	              -	         O
+
+             An	              -	      B-A0	         O	         O	         O	         O	         O	         O	         O
+         Upjohn	              -	      I-A0	         O	         O	         O	         O	         O	         O	         O
+      spokesman	              -	      E-A0	         O	         O	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O	         O	         O
+             he	              -	      B-A1	      S-A0	      S-A0	      S-A0	         O	         O	         O	         O
+            had	            had	      I-A1	       S-V	         O	         O	         O	         O	         O	         O
+          heard	          heard	      I-A1	      B-A1	       S-V	         O	         O	         O	         O	         O
+        nothing	              -	      I-A1	      I-A1	      B-A1	      S-A0	         O	         O	         O	         O
+             to	              -	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O	         O
+        suggest	        suggest	      I-A1	      I-A1	      I-A1	       S-V	         O	         O	         O	         O
+            the	              -	      I-A1	      I-A1	      I-A1	      B-A1	      B-A1	      B-A1	         O	         O
+          early	              -	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O
+     retirement	              -	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O
+        package	              -	      I-A1	      I-A1	      I-A1	      I-A1	      E-A1	      E-A1	         O	         O
+            was	            was	      I-A1	      I-A1	      I-A1	      I-A1	       S-V	         O	         O	         O
+        spurred	        spurred	      I-A1	      I-A1	      I-A1	      I-A1	         O	       S-V	         O	         O
+             by	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      B-A0	         O	         O
+    shareholder	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	         O
+       pressure	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	         O
+             or	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	         O
+              a	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	         O
+      potential	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	         O
+         bidder	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	         O
+            for	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	         O
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	      B-A0	      B-A0
+        company	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	      E-A0	      E-A0
+              ,	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	         O
+          which	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	    S-R-A0	    S-R-A1
+   occasionally	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	  S-AM-TMP	  S-AM-TMP
+            has	            has	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	       S-V	         O
+           been	           been	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	       S-V
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	      B-A1
+         target	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	      I-A1
+       takeover	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	      I-A0	         O	      I-A1
+    speculation	              -	      E-A1	      E-A1	      E-A1	      E-A1	         O	      E-A0	         O	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	         O
+        company	              -	      E-A0	         O
+        earlier	              -	  B-AM-TMP	         O
+           this	              -	  I-AM-TMP	         O
+           year	              -	  E-AM-TMP	         O
+        adopted	        adopted	       S-V	         O
+              a	              -	      B-A1	         O
+shareholder-rights	              -	      I-A1	         O
+           plan	              -	      I-A1	         O
+             to	              -	      I-A1	         O
+           ward	           ward	      I-A1	       B-V
+            off	              -	      I-A1	       E-V
+       unwanted	              -	      I-A1	      B-A1
+        suitors	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	         O	         O
+      spokesman	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             it	              -	      B-A1	      S-A1	         O
+             is	             is	      I-A1	       S-V	         O
+            the	              -	      I-A1	      B-A1	      B-A1
+          first	              -	      I-A1	      I-A1	      I-A1
+          early	              -	      I-A1	      I-A1	      I-A1
+     retirement	              -	      I-A1	      I-A1	      I-A1
+           plan	              -	      I-A1	      I-A1	      E-A1
+        offered	        offered	      I-A1	      I-A1	       S-V
+          under	              -	      I-A1	      I-A1	  B-AM-MNR
+            its	              -	      I-A1	      I-A1	  I-AM-MNR
+       two-year	              -	      I-A1	      I-A1	  I-AM-MNR
+   cost-control	              -	      I-A1	      I-A1	  I-AM-MNR
+       strategy	              -	      E-A1	      E-A1	  E-AM-MNR
+              .	              -	         O	         O	         O
+
+        Earlier	              -	      B-A1	      B-A0	      B-A1
+staff-reduction	              -	      I-A1	      I-A0	      I-A1
+          moves	              -	      E-A1	      E-A0	      I-A1
+           have	           have	       S-V	         O	      I-A1
+        trimmed	        trimmed	         O	       S-V	      I-A1
+          about	              -	         O	      B-A1	      I-A1
+            300	              -	         O	      I-A1	      I-A1
+           jobs	              -	         O	      E-A1	      E-A1
+              ,	              -	         O	         O	         O
+            the	              -	         O	         O	      B-A0
+      spokesman	              -	         O	         O	      E-A0
+           said	           said	         O	         O	       S-V
+              .	              -	         O	         O	         O
+

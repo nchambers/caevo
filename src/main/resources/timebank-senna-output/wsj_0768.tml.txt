@@ -1,0 +1,999 @@
+       Billions	              -	      B-A1	      B-A1	      B-A0	         O
+             of	              -	      I-A1	      I-A1	      I-A0	         O
+      investors	              -	      I-A1	      I-A1	      I-A0	         O
+              '	              -	      I-A1	      I-A1	      I-A0	         O
+        dollars	              -	      E-A1	      E-A1	      E-A0	         O
+            are	            are	       S-V	         O	         O	         O
+        pouring	        pouring	  B-AM-ADV	       S-V	         O	         O
+            out	              -	  I-AM-ADV	         O	         O	         O
+             of	              -	  I-AM-ADV	      B-A3	         O	         O
+            the	              -	  I-AM-ADV	      I-A3	         O	         O
+         nation	              -	  I-AM-ADV	      I-A3	         O	         O
+             's	              -	  I-AM-ADV	      I-A3	         O	         O
+      junk-bond	              -	  I-AM-ADV	      I-A3	         O	         O
+         mutual	              -	  I-AM-ADV	      I-A3	         O	         O
+          funds	              -	  I-AM-ADV	      E-A3	         O	         O
+              ,	              -	  I-AM-ADV	         O	         O	         O
+    undermining	    undermining	  I-AM-ADV	  B-AM-ADV	       S-V	         O
+              a	              -	  I-AM-ADV	  I-AM-ADV	      B-A1	         O
+         pillar	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	         O
+             of	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	         O
+        support	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	         O
+             in	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	         O
+            the	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	         O
+        already	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	  S-AM-TMP
+        reeling	        reeling	  I-AM-ADV	  I-AM-ADV	      I-A1	       S-V
+           junk	              -	  I-AM-ADV	  I-AM-ADV	      I-A1	      B-A1
+         market	              -	  E-AM-ADV	  E-AM-ADV	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+           Last	              -	  B-AM-TMP	         O
+           week	              -	  I-AM-TMP	         O
+          alone	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+             an	              -	      B-A1	         O
+    eye-popping	              -	      I-A1	         O
+              $	              -	      I-A1	         O
+            1.6	              -	      I-A1	         O
+        billion	              -	      E-A1	         O
+         flowed	         flowed	       S-V	         O
+            out	              -	  B-AM-LOC	         O
+             of	              -	  I-AM-LOC	         O
+            the	              -	  I-AM-LOC	         O
+           junk	              -	  I-AM-LOC	         O
+          funds	              -	  I-AM-LOC	         O
+              ,	              -	  I-AM-LOC	         O
+             or	              -	  I-AM-LOC	         O
+         nearly	              -	  I-AM-LOC	         O
+              5	              -	  I-AM-LOC	         O
+              %	              -	  I-AM-LOC	         O
+             of	              -	  I-AM-LOC	         O
+          their	              -	  I-AM-LOC	         O
+          total	              -	  I-AM-LOC	         O
+         assets	              -	  E-AM-LOC	         O
+              ,	              -	         O	         O
+      according	      according	  B-AM-ADV	       S-V
+             to	              -	  I-AM-ADV	      B-A1
+      estimates	              -	  I-AM-ADV	      I-A1
+             by	              -	  I-AM-ADV	      I-A1
+         Dalbar	              -	  I-AM-ADV	      I-A1
+      Financial	              -	  I-AM-ADV	      I-A1
+       Services	              -	  I-AM-ADV	      I-A1
+           Inc.	              -	  I-AM-ADV	      I-A1
+              ,	              -	  I-AM-ADV	      I-A1
+              a	              -	  I-AM-ADV	      I-A1
+         Boston	              -	  I-AM-ADV	      I-A1
+       research	              -	  I-AM-ADV	      I-A1
+           firm	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+             In	              -	  B-AM-TMP	  B-AM-TMP	      B-A1
+            the	              -	  I-AM-TMP	  I-AM-TMP	      I-A1
+           past	              -	  I-AM-TMP	  I-AM-TMP	      I-A1
+            two	              -	  I-AM-TMP	  I-AM-TMP	      I-A1
+         months	              -	  E-AM-TMP	  E-AM-TMP	      I-A1
+            the	              -	      B-A1	      B-A0	      I-A1
+         nation	              -	      I-A1	      I-A0	      I-A1
+             's	              -	      I-A1	      I-A0	      I-A1
+             88	              -	      I-A1	      I-A0	      I-A1
+           junk	              -	      I-A1	      I-A0	      I-A1
+          funds	              -	      E-A1	      E-A0	      I-A1
+           have	           have	       S-V	         O	      I-A1
+           lost	           lost	    B-C-A1	       S-V	      I-A1
+              a	              -	    I-C-A1	      B-A2	      I-A1
+          total	              -	    I-C-A1	      I-A2	      I-A1
+             of	              -	    I-C-A1	      I-A2	      I-A1
+          about	              -	    I-C-A1	      I-A2	      I-A1
+              $	              -	    I-C-A1	      I-A2	      I-A1
+              6	              -	    I-C-A1	      I-A2	      I-A1
+        billion	              -	    I-C-A1	      I-A2	      I-A1
+             --	              -	    I-C-A1	      I-A2	      I-A1
+           more	              -	    I-C-A1	      I-A2	      I-A1
+           than	              -	    I-C-A1	      I-A2	      I-A1
+             15	              -	    I-C-A1	      I-A2	      I-A1
+              %	              -	    I-C-A1	      I-A2	      I-A1
+             of	              -	    I-C-A1	      I-A2	      I-A1
+         assets	              -	    I-C-A1	      I-A2	      I-A1
+             --	              -	    I-C-A1	      E-A2	      I-A1
+        through	              -	    I-C-A1	  B-AM-MNR	      I-A1
+          sales	              -	    I-C-A1	  I-AM-MNR	      I-A1
+             or	              -	    I-C-A1	  I-AM-MNR	      I-A1
+      transfers	              -	    I-C-A1	  I-AM-MNR	      I-A1
+             of	              -	    I-C-A1	  I-AM-MNR	      I-A1
+      junk-fund	              -	    I-C-A1	  I-AM-MNR	      I-A1
+         shares	              -	    E-C-A1	  E-AM-MNR	      E-A1
+              ,	              -	         O	         O	         O
+         Dalbar	              -	         O	         O	      S-A0
+           says	           says	         O	         O	       S-V
+              .	              -	         O	         O	         O
+
+             It	              -	      S-A0	         O	         O
+           made	           made	       S-V	         O	         O
+            the	              -	      B-A1	      B-A1	         O
+      estimates	              -	      E-A1	      E-A1	         O
+          based	          based	  B-AM-LOC	       S-V	         O
+             on	              -	  I-AM-LOC	      B-A2	         O
+           data	              -	  I-AM-LOC	      I-A2	      S-A1
+      collected	      collected	  I-AM-LOC	      I-A2	       S-V
+           from	              -	  I-AM-LOC	      I-A2	      B-A2
+           more	              -	  I-AM-LOC	      I-A2	      I-A2
+           than	              -	  I-AM-LOC	      I-A2	      I-A2
+              a	              -	  I-AM-LOC	      I-A2	      I-A2
+          dozen	              -	  I-AM-LOC	      I-A2	      I-A2
+            big	              -	  I-AM-LOC	      I-A2	      I-A2
+           junk	              -	  I-AM-LOC	      I-A2	      I-A2
+          funds	              -	  E-AM-LOC	      E-A2	      E-A2
+              .	              -	         O	         O	         O
+
+     Interviews	              -	      B-A0
+           with	              -	      I-A0
+          three	              -	      I-A0
+          major	              -	      I-A0
+           fund	              -	      I-A0
+         groups	              -	      I-A0
+             --	              -	      I-A0
+       Fidelity	              -	      I-A0
+    Investments	              -	      I-A0
+              ,	              -	      I-A0
+       Vanguard	              -	      I-A0
+          Group	              -	      I-A0
+           Inc.	              -	      I-A0
+            and	              -	      I-A0
+             T.	              -	      I-A0
+           Rowe	              -	      I-A0
+          Price	              -	      I-A0
+     Associates	              -	      I-A0
+           Inc.	              -	      I-A0
+             --	              -	      E-A0
+        confirm	        confirm	       S-V
+            the	              -	      B-A1
+          trend	              -	      E-A1
+              .	              -	         O
+
+          Their	              -	      B-A1	      B-A1	      B-A0	         O
+           junk	              -	      I-A1	      I-A1	      I-A0	         O
+          funds	              -	      E-A1	      I-A1	      I-A0	         O
+       combined	       combined	       S-V	      E-A1	      E-A0	         O
+           have	           have	         O	       S-V	         O	         O
+            had	            had	         O	         O	       S-V	         O
+            net	              -	         O	         O	      B-A1	      B-A1
+       outflows	              -	         O	         O	      I-A1	      E-A1
+       totaling	       totaling	         O	         O	      I-A1	       S-V
+         nearly	              -	         O	         O	      I-A1	      B-A2
+              $	              -	         O	         O	      I-A1	      I-A2
+            500	              -	         O	         O	      I-A1	      I-A2
+        million	              -	         O	         O	      I-A1	      I-A2
+              ,	              -	         O	         O	      I-A1	      I-A2
+             or	              -	         O	         O	      I-A1	      I-A2
+          about	              -	         O	         O	      I-A1	      I-A2
+             13	              -	         O	         O	      I-A1	      I-A2
+              %	              -	         O	         O	      I-A1	      I-A2
+             of	              -	         O	         O	      I-A1	      I-A2
+          their	              -	         O	         O	      I-A1	      I-A2
+           junk	              -	         O	         O	      I-A1	      I-A2
+           fund	              -	         O	         O	      I-A1	      I-A2
+         assets	              -	         O	         O	      I-A1	      E-A2
+              ,	              -	         O	         O	      E-A1	         O
+             in	              -	         O	         O	  B-AM-TMP	         O
+            the	              -	         O	         O	  I-AM-TMP	         O
+           past	              -	         O	         O	  I-AM-TMP	         O
+            two	              -	         O	         O	  I-AM-TMP	         O
+         months	              -	         O	         O	  E-AM-TMP	         O
+              .	              -	         O	         O	         O	         O
+
+           Some	              -	      B-A0	         O	         O
+           fund	              -	      I-A0	         O	         O
+       managers	              -	      E-A0	         O	         O
+            say	            say	       S-V	         O	         O
+       negative	              -	      B-A1	      B-A0	      B-A0
+      publicity	              -	      I-A1	      E-A0	      E-A0
+            has	            has	      I-A1	       S-V	         O
+    exacerbated	    exacerbated	      I-A1	      B-A1	       S-V
+      investors	              -	      I-A1	      I-A1	      B-A1
+              '	              -	      I-A1	      I-A1	      I-A1
+        concern	              -	      I-A1	      I-A1	      I-A1
+          about	              -	      I-A1	      I-A1	      I-A1
+         recent	              -	      I-A1	      I-A1	      I-A1
+       declines	              -	      I-A1	      I-A1	      I-A1
+             in	              -	      I-A1	      I-A1	      I-A1
+      junk-bond	              -	      I-A1	      I-A1	      I-A1
+         prices	              -	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O
+
+         People	              -	      S-A0	      S-A1	      S-A0	      S-A0	         O	         O	         O	      B-A1
+           have	           have	       S-V	         O	         O	         O	         O	         O	         O	      I-A1
+           been	           been	         O	       S-V	         O	         O	         O	         O	         O	      I-A1
+         seeing	         seeing	         O	  B-AM-ADV	       S-V	         O	         O	         O	         O	      I-A1
+       headline	              -	         O	  E-AM-ADV	      S-A1	         O	         O	         O	         O	      I-A1
+          after	              -	         O	  B-AM-TMP	  B-AM-TMP	         O	         O	         O	         O	      I-A1
+       headline	              -	         O	  I-AM-TMP	  I-AM-TMP	         O	         O	         O	         O	      I-A1
+          after	              -	         O	  I-AM-TMP	  I-AM-TMP	         O	         O	         O	         O	      I-A1
+       headline	              -	         O	  I-AM-TMP	  I-AM-TMP	         O	         O	         O	         O	      I-A1
+            and	              -	         O	  I-AM-TMP	  I-AM-TMP	         O	         O	         O	         O	      I-A1
+         saying	         saying	         O	  I-AM-TMP	  E-AM-TMP	       S-V	         O	         O	         O	      I-A1
+              :	              -	         O	  I-AM-TMP	         O	         O	         O	         O	         O	      I-A1
+              `	              -	         O	  I-AM-TMP	         O	      B-A1	         O	         O	         O	      I-A1
+              I	              -	         O	  I-AM-TMP	         O	      I-A1	      S-A0	         O	         O	      I-A1
+             ca	              -	         O	  I-AM-TMP	         O	      I-A1	  S-AM-MOD	         O	         O	      I-A1
+            n't	              -	         O	  I-AM-TMP	         O	      I-A1	  S-AM-NEG	         O	         O	      I-A1
+           take	           take	         O	  I-AM-TMP	         O	      I-A1	       S-V	         O	         O	      I-A1
+             it	              -	         O	  I-AM-TMP	         O	      I-A1	      S-A1	         O	         O	      I-A1
+        anymore	              -	         O	  I-AM-TMP	         O	      I-A1	  S-AM-TMP	         O	         O	      I-A1
+             --	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A1
+              I	              -	         O	  I-AM-TMP	         O	      I-A1	         O	      S-A1	      S-A1	      I-A1
+             'm	             'm	         O	  I-AM-TMP	         O	      I-A1	         O	       S-V	         O	      I-A1
+        getting	        getting	         O	  I-AM-TMP	         O	      I-A1	         O	      B-A1	       B-V	      I-A1
+            out	              -	         O	  I-AM-TMP	         O	      I-A1	         O	      E-A1	       E-V	      E-A1
+              ,	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	         O
+              '	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	         O
+           says	           says	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	       S-V
+           Kurt	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      B-A0
+        Brouwer	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A0
+             of	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A0
+        Brouwer	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A0
+            amp	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A0
+    Janachowski	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A0
+              ,	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A0
+              a	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A0
+            San	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A0
+      Francisco	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A0
+     investment	              -	         O	  I-AM-TMP	         O	      I-A1	         O	         O	         O	      I-A0
+        adviser	              -	         O	  E-AM-TMP	         O	      E-A1	         O	         O	         O	      E-A0
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0
+    withdrawals	              -	      E-A0
+          could	              -	  S-AM-MOD
+          spell	          spell	       S-V
+        trouble	              -	      B-A1
+            for	              -	      I-A1
+            the	              -	      I-A1
+              $	              -	      I-A1
+            200	              -	      I-A1
+        billion	              -	      I-A1
+           junk	              -	      I-A1
+         market	              -	      E-A1
+              .	              -	         O
+
+             If	              -	         O	  B-AM-ADV	         O	         O	         O	         O
+            the	              -	      B-A1	  I-AM-ADV	         O	         O	         O	         O
+          heavy	              -	      I-A1	  I-AM-ADV	         O	         O	         O	         O
+       outflows	              -	      E-A1	  I-AM-ADV	         O	         O	         O	         O
+       continue	       continue	       S-V	  E-AM-ADV	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+           fund	              -	         O	      B-A0	         O	      B-A0	      B-A0	         O
+       managers	              -	         O	      E-A0	         O	      E-A0	      E-A0	         O
+           will	              -	         O	  S-AM-MOD	         O	         O	         O	         O
+           face	           face	         O	       S-V	         O	         O	         O	         O
+     increasing	     increasing	         O	      B-A1	       S-V	         O	         O	         O
+       pressure	              -	         O	      I-A1	      B-A1	         O	         O	         O
+             to	              -	         O	      I-A1	      I-A1	         O	         O	         O
+           sell	           sell	         O	      I-A1	      I-A1	       B-V	         O	         O
+            off	              -	         O	      I-A1	      I-A1	       E-V	         O	         O
+           some	              -	         O	      I-A1	      I-A1	      B-A1	         O	         O
+             of	              -	         O	      I-A1	      I-A1	      I-A1	         O	         O
+          their	              -	         O	      I-A1	      I-A1	      I-A1	         O	         O
+           junk	              -	         O	      I-A1	      I-A1	      E-A1	         O	         O
+             to	              -	         O	      I-A1	      I-A1	  B-AM-PNC	         O	         O
+            pay	            pay	         O	      I-A1	      I-A1	  I-AM-PNC	       S-V	         O
+      departing	      departing	         O	      I-A1	      I-A1	  I-AM-PNC	      B-A1	       S-V
+      investors	              -	         O	      I-A1	      I-A1	  I-AM-PNC	      E-A1	      S-A0
+             in	              -	         O	      I-A1	      I-A1	  I-AM-PNC	  B-AM-TMP	         O
+            the	              -	         O	      I-A1	      I-A1	  I-AM-PNC	  I-AM-TMP	         O
+          weeks	              -	         O	      I-A1	      I-A1	  I-AM-PNC	  I-AM-TMP	         O
+          ahead	              -	         O	      E-A1	      E-A1	  E-AM-PNC	  E-AM-TMP	         O
+              .	              -	         O	         O	         O	         O	         O	         O
+
+           Such	              -	      B-A0	         O
+        selling	              -	      E-A0	         O
+          could	              -	  S-AM-MOD	         O
+          erode	          erode	       S-V	         O
+         prices	              -	      B-A1	         O
+             of	              -	      I-A1	         O
+     high-yield	              -	      I-A1	      B-A1
+           junk	              -	      I-A1	      I-A1
+          bonds	              -	      I-A1	      E-A1
+              ,	              -	      I-A1	         O
+        already	              -	      I-A1	  S-AM-TMP
+       weakened	       weakened	      I-A1	       S-V
+             by	              -	      I-A1	      B-A0
+              a	              -	      I-A1	      I-A0
+           rash	              -	      I-A1	      I-A0
+             of	              -	      I-A1	      I-A0
+      corporate	              -	      I-A1	      I-A0
+         credit	              -	      I-A1	      I-A0
+       problems	              -	      E-A1	      E-A0
+              .	              -	         O	         O
+
+         Mutual	              -	      B-A0	      B-A0	      B-A1
+           fund	              -	      I-A0	      I-A0	      I-A1
+         groups	              -	      E-A0	      E-A0	      I-A1
+           have	           have	       S-V	         O	      I-A1
+            n't	              -	      B-A1	  S-AM-NEG	      I-A1
+           lost	           lost	      I-A1	       S-V	      I-A1
+        control	              -	      I-A1	      B-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+           much	              -	      I-A1	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+            the	              -	      I-A1	      I-A1	      I-A1
+       outgoing	              -	      I-A1	      I-A1	      I-A1
+          money	              -	      E-A1	      E-A1	      E-A1
+              ,	              -	         O	         O	         O
+           says	           says	         O	         O	       S-V
+          Louis	              -	         O	         O	      B-A0
+         Harvey	              -	         O	         O	      I-A0
+              ,	              -	         O	         O	      I-A0
+         Dalbar	              -	         O	         O	      I-A0
+             's	              -	         O	         O	      I-A0
+      president	              -	         O	         O	      E-A0
+              .	              -	         O	         O	         O
+
+         Mutual	              -	      B-A0	         O	         O
+           fund	              -	      I-A0	         O	         O
+      officials	              -	      E-A0	         O	         O
+            say	            say	       S-V	         O	         O
+           that	              -	      B-A1	         O	         O
+      investors	              -	      I-A1	      S-A0	      S-A0
+           have	           have	      I-A1	       S-V	         O
+    transferred	    transferred	      I-A1	    B-C-A1	       S-V
+           most	              -	      I-A1	    I-C-A1	      B-A1
+             of	              -	      I-A1	    I-C-A1	      I-A1
+             it	              -	      I-A1	    I-C-A1	      E-A1
+           into	              -	      I-A1	    I-C-A1	      B-A2
+          their	              -	      I-A1	    I-C-A1	      I-A2
+          money	              -	      I-A1	    I-C-A1	      I-A2
+         market	              -	      I-A1	    I-C-A1	      I-A2
+       accounts	              -	      I-A1	    I-C-A1	      E-A2
+              ,	              -	      I-A1	    I-C-A1	         O
+            and	              -	      I-A1	    I-C-A1	         O
+             to	              -	      I-A1	    I-C-A1	      B-A2
+              a	              -	      I-A1	    I-C-A1	      I-A2
+         lesser	              -	      I-A1	    I-C-A1	      I-A2
+         extent	              -	      I-A1	    I-C-A1	      I-A2
+              ,	              -	      I-A1	    I-C-A1	      I-A2
+government-bond	              -	      I-A1	    I-C-A1	      I-A2
+          funds	              -	      E-A1	    E-C-A1	      E-A2
+              .	              -	         O	         O	         O
+
+             So	              -	  S-AM-DIS
+            the	              -	      B-A1
+         impact	              -	      I-A1
+             on	              -	      I-A1
+            the	              -	      I-A1
+              $	              -	      I-A1
+            950	              -	      I-A1
+        billion	              -	      I-A1
+         mutual	              -	      I-A1
+           fund	              -	      I-A1
+       industry	              -	      I-A1
+             as	              -	      I-A1
+              a	              -	      I-A1
+          whole	              -	      E-A1
+       probably	              -	  S-AM-ADV
+           will	              -	  S-AM-MOD
+             be	             be	       S-V
+         slight	              -	    S-C-A1
+              .	              -	         O
+
+            But	              -	  S-AM-DIS	         O	         O	         O
+        tremors	              -	      S-A1	         O	         O	         O
+            are	            are	       S-V	         O	         O	         O
+         likely	              -	    S-C-A1	         O	         O	         O
+             in	              -	  B-AM-LOC	         O	         O	         O
+            the	              -	  I-AM-LOC	      B-A1	      B-A0	      B-A0
+      junk-bond	              -	  I-AM-LOC	      I-A1	      I-A0	      I-A0
+         market	              -	  I-AM-LOC	      E-A1	      E-A0	      E-A0
+              ,	              -	  I-AM-LOC	         O	         O	         O
+          which	              -	  I-AM-LOC	    S-R-A0	    S-R-A0	    S-R-A0
+            has	            has	  I-AM-LOC	       S-V	         O	         O
+         helped	         helped	  I-AM-LOC	      B-A1	       S-V	         O
+             to	              -	  I-AM-LOC	      I-A1	      B-A1	         O
+        finance	        finance	  I-AM-LOC	      I-A1	      I-A1	       S-V
+            the	              -	  I-AM-LOC	      I-A1	      I-A1	      B-A1
+       takeover	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+           boom	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+             of	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+         recent	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+          years	              -	  E-AM-LOC	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O
+
+         Mutual	              -	      B-A1	         O
+          funds	              -	      E-A1	         O
+            are	            are	       S-V	         O
+            the	              -	      B-A3	         O
+          among	              -	      I-A3	         O
+            the	              -	      I-A3	         O
+        largest	              -	      I-A3	         O
+        holders	              -	      I-A3	         O
+             of	              -	      I-A3	         O
+           junk	              -	      E-A3	         O
+              ,	              -	         O	         O
+     accounting	     accounting	  B-AM-ADV	       S-V
+            for	              -	  I-AM-ADV	      B-A1
+           more	              -	  I-AM-ADV	      I-A1
+           than	              -	  I-AM-ADV	      I-A1
+              a	              -	  I-AM-ADV	      I-A1
+        quarter	              -	  I-AM-ADV	      I-A1
+             of	              -	  I-AM-ADV	      I-A1
+            the	              -	  I-AM-ADV	      I-A1
+         entire	              -	  I-AM-ADV	      I-A1
+     high-yield	              -	  I-AM-ADV	      I-A1
+              ,	              -	  I-AM-ADV	      I-A1
+      high-risk	              -	  I-AM-ADV	      I-A1
+         market	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+            The	              -	      B-A0	      B-A0
+             88	              -	      I-A0	      I-A0
+         mutual	              -	      I-A0	      I-A0
+          funds	              -	      E-A0	      I-A0
+      investing	      investing	       S-V	      I-A0
+         solely	              -	  S-AM-ADV	      I-A0
+             in	              -	      B-A2	      I-A0
+           junk	              -	      I-A2	      I-A0
+          bonds	              -	      E-A2	      E-A0
+           hold	           hold	         O	       S-V
+         assets	              -	         O	      B-A1
+             of	              -	         O	      I-A1
+          about	              -	         O	      I-A1
+              $	              -	         O	      I-A1
+             32	              -	         O	      I-A1
+        billion	              -	         O	      E-A1
+              .	              -	         O	         O
+
+          Other	              -	      B-A0
+          funds	              -	      E-A0
+           hold	           hold	       S-V
+              a	              -	      B-A1
+     smattering	              -	      I-A1
+             of	              -	      I-A1
+           junk	              -	      I-A1
+          bonds	              -	      E-A1
+              ,	              -	         O
+            too	              -	  S-AM-DIS
+              .	              -	         O
+
+            The	              -	      B-A1	      B-A0
+              $	              -	      I-A1	      I-A0
+            1.5	              -	      I-A1	      I-A0
+        billion	              -	      I-A1	      I-A0
+       Fidelity	              -	      I-A1	      I-A0
+           High	              -	      I-A1	      I-A0
+         Income	              -	      I-A1	      I-A0
+           Fund	              -	      E-A1	      E-A0
+            has	            has	       S-V	         O
+            had	            had	      B-A1	       S-V
+              a	              -	      I-A1	      B-A1
+            net	              -	      I-A1	      I-A1
+        outflow	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+          about	              -	      I-A1	      I-A1
+              $	              -	      I-A1	      I-A1
+            150	              -	      I-A1	      I-A1
+        million	              -	      I-A1	      E-A1
+             in	              -	      I-A1	  B-AM-TMP
+            the	              -	      I-A1	  I-AM-TMP
+           past	              -	      I-A1	  I-AM-TMP
+            two	              -	      I-A1	  I-AM-TMP
+         months	              -	      E-A1	  E-AM-TMP
+              .	              -	         O	         O
+
+          About	              -	      B-A1	         O
+              $	              -	      I-A1	         O
+             60	              -	      I-A1	         O
+        million	              -	      E-A1	         O
+       streamed	       streamed	       B-V	         O
+            out	              -	       E-V	         O
+           last	              -	  B-AM-TMP	         O
+           week	              -	  I-AM-TMP	         O
+          alone	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+         double	              -	    B-C-A1	         O
+            the	              -	    I-C-A1	         O
+          level	              -	    I-C-A1	         O
+             of	              -	    I-C-A1	         O
+            the	              -	    I-C-A1	         O
+           week	              -	    I-C-A1	         O
+      following	      following	    I-C-A1	       S-V
+           last	              -	    I-C-A1	      B-A2
+          month	              -	    I-C-A1	      I-A2
+             's	              -	    I-C-A1	      I-A2
+        Campeau	              -	    I-C-A1	      I-A2
+          Corp.	              -	    I-C-A1	      I-A2
+         credit	              -	    I-C-A1	      I-A2
+        squeeze	              -	    E-C-A1	      E-A2
+              .	              -	         O	         O
+
+          About	              -	      B-A1	      B-A1	      B-A1	         O
+             98	              -	      I-A1	      I-A1	      I-A1	         O
+              %	              -	      I-A1	      I-A1	      I-A1	         O
+             of	              -	      I-A1	      I-A1	      I-A1	         O
+            the	              -	      I-A1	      I-A1	      I-A1	         O
+        outflow	              -	      E-A1	      E-A1	      I-A1	         O
+            was	            was	       S-V	         O	      I-A1	         O
+    transferred	    transferred	    B-C-A1	       S-V	      I-A1	         O
+             to	              -	    I-C-A1	      B-A2	      I-A1	         O
+          other	              -	    I-C-A1	      I-A2	      I-A1	         O
+       Fidelity	              -	    I-C-A1	      I-A2	      I-A1	         O
+          funds	              -	    E-C-A1	      E-A2	      E-A1	         O
+              ,	              -	         O	         O	         O	         O
+           says	           says	         O	         O	       S-V	         O
+           Neal	              -	         O	         O	      B-A0	         O
+        Litvack	              -	         O	         O	      I-A0	         O
+              ,	              -	         O	         O	      I-A0	         O
+              a	              -	         O	         O	      I-A0	         O
+       Fidelity	              -	         O	         O	      I-A0	         O
+           vice	              -	         O	         O	      I-A0	         O
+      president	              -	         O	         O	      I-A0	         O
+              ,	              -	         O	         O	      I-A0	         O
+      marketing	              -	         O	         O	      I-A0	         O
+              ,	              -	         O	         O	      I-A0	         O
+           with	              -	         O	  B-AM-ADV	      I-A0	         O
+           most	              -	         O	  I-AM-ADV	      I-A0	      S-A1
+          going	          going	         O	  I-AM-ADV	      I-A0	       S-V
+           into	              -	         O	  I-AM-ADV	      I-A0	      B-A2
+          money	              -	         O	  I-AM-ADV	      I-A0	      I-A2
+         market	              -	         O	  I-AM-ADV	      I-A0	      I-A2
+          funds	              -	         O	  E-AM-ADV	      E-A0	      E-A2
+              .	              -	         O	         O	         O	         O
+
+            You	              -	      S-A0	         O	         O	         O	         O	      B-A1
+            get	            get	       S-V	         O	         O	         O	         O	      I-A1
+              a	              -	      B-A1	         O	         O	         O	         O	      I-A1
+           news	              -	      I-A1	         O	         O	         O	         O	      I-A1
+           item	              -	      E-A1	         O	         O	         O	         O	      I-A1
+              ,	              -	         O	         O	         O	         O	         O	      I-A1
+             it	              -	         O	      S-A0	         O	         O	         O	      I-A1
+           hits	           hits	         O	       S-V	         O	         O	         O	      I-A1
+              ,	              -	         O	         O	         O	         O	         O	      I-A1
+            you	              -	         O	         O	      S-A0	         O	         O	      I-A1
+           have	           have	         O	         O	       S-V	         O	         O	      I-A1
+         strong	              -	         O	         O	      B-A1	         O	         O	      I-A1
+    redemptions	              -	         O	         O	      E-A1	         O	         O	      I-A1
+           that	              -	         O	         O	  B-AM-TMP	         O	         O	      I-A1
+            day	              -	         O	         O	  I-AM-TMP	         O	         O	      I-A1
+            and	              -	         O	         O	  I-AM-TMP	         O	         O	      I-A1
+            for	              -	         O	         O	  I-AM-TMP	         O	         O	      I-A1
+            two	              -	         O	         O	  I-AM-TMP	      B-A1	         O	      I-A1
+           days	              -	         O	         O	  I-AM-TMP	      E-A1	         O	      I-A1
+      following	      following	         O	         O	  E-AM-TMP	       S-V	         O	      I-A1
+             --	              -	         O	         O	         O	         O	         O	      I-A1
+           then	              -	         O	         O	         O	         O	  S-AM-TMP	      I-A1
+             go	             go	         O	         O	         O	         O	       S-V	      I-A1
+           back	              -	         O	         O	         O	         O	  S-AM-DIR	      I-A1
+             to	              -	         O	         O	         O	         O	      B-A2	      I-A1
+         normal	              -	         O	         O	         O	         O	      E-A2	      E-A1
+              ,	              -	         O	         O	         O	         O	         O	         O
+           says	           says	         O	         O	         O	         O	         O	       S-V
+            Mr.	              -	         O	         O	         O	         O	         O	      B-A0
+        Litvack	              -	         O	         O	         O	         O	         O	      E-A0
+              .	              -	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A0	      B-A0	         O	      B-A0	      B-A1
+           fund	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+              ,	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+           with	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+              a	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+           cash	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+        cushion	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+             of	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+           more	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+           than	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+             10	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+              %	              -	      I-A0	      I-A0	         O	      I-A0	      I-A1
+              ,	              -	      E-A0	      E-A0	         O	      E-A0	      I-A1
+            has	            has	       S-V	         O	         O	         O	      I-A1
+            met	            met	      B-A1	       S-V	         O	         O	      I-A1
+            all	              -	      I-A1	      B-A1	         O	         O	      I-A1
+            the	              -	      I-A1	      I-A1	         O	         O	      I-A1
+    redemptions	              -	      I-A1	      E-A1	         O	         O	      I-A1
+        without	              -	      I-A1	  B-AM-MNR	         O	         O	      I-A1
+         having	         having	      I-A1	  I-AM-MNR	       S-V	         O	      I-A1
+             to	              -	      I-A1	  I-AM-MNR	         O	         O	      I-A1
+           sell	           sell	      I-A1	  I-AM-MNR	         O	       S-V	      I-A1
+            one	              -	      I-A1	  I-AM-MNR	         O	      B-A1	      I-A1
+          thing	              -	      E-A1	  E-AM-MNR	         O	      E-A1	      E-A1
+              ,	              -	         O	         O	         O	         O	         O
+            Mr.	              -	         O	         O	         O	         O	      B-A0
+        Litvack	              -	         O	         O	         O	         O	      E-A0
+           says	           says	         O	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O	         O
+
+             He	              -	      S-A0	         O	         O
+           adds	           adds	       S-V	         O	         O
+              :	              -	         O	         O	         O
+            Our	              -	      B-A1	      B-A0	      B-A0
+           fund	              -	      I-A1	      E-A0	      E-A0
+            has	            has	      I-A1	       S-V	         O
+            had	            had	      I-A1	      B-A1	       S-V
+              {	              -	      I-A1	      I-A1	      B-A1
+       positive	              -	      I-A1	      I-A1	      I-A1
+              }	              -	      I-A1	      I-A1	      I-A1
+            net	              -	      I-A1	      I-A1	      I-A1
+          sales	              -	      I-A1	      I-A1	      E-A1
+          every	              -	      I-A1	      I-A1	  B-AM-TMP
+          month	              -	      I-A1	      I-A1	  E-AM-TMP
+            for	              -	      I-A1	      I-A1	  B-AM-TMP
+            the	              -	      I-A1	      I-A1	  I-AM-TMP
+           last	              -	      I-A1	      I-A1	  I-AM-TMP
+          three	              -	      I-A1	      I-A1	  I-AM-TMP
+          years	              -	      I-A1	      I-A1	  E-AM-TMP
+             --	              -	      I-A1	      I-A1	         O
+          until	              -	      I-A1	      I-A1	  B-AM-TMP
+           this	              -	      I-A1	      I-A1	  I-AM-TMP
+          month	              -	      E-A1	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+       Vanguard	              -	      B-A0	      B-A0	         O
+             's	              -	      I-A0	      I-A0	         O
+              $	              -	      I-A0	      I-A0	         O
+              1	              -	      I-A0	      I-A0	         O
+        billion	              -	      I-A0	      I-A0	         O
+           High	              -	      I-A0	      I-A0	         O
+          Yield	              -	      I-A0	      I-A0	         O
+           Bond	              -	      I-A0	      I-A0	         O
+      Portfolio	              -	      E-A0	      E-A0	         O
+            has	            has	       S-V	         O	         O
+           seen	           seen	      B-A1	       S-V	         O
+              $	              -	      I-A1	      B-A1	         O
+            161	              -	      I-A1	      I-A1	         O
+        million	              -	      I-A1	      I-A1	         O
+           flow	              -	      I-A1	      I-A1	         O
+            out	              -	      E-A1	      E-A1	         O
+          since	              -	  B-AM-TMP	  B-AM-TMP	         O
+          early	              -	  I-AM-TMP	  I-AM-TMP	         O
+      September	              -	  E-AM-TMP	  E-AM-TMP	         O
+              ;	              -	         O	         O	         O
+              $	              -	         O	         O	      B-A1
+             14	              -	         O	         O	      I-A1
+        million	              -	         O	         O	      I-A1
+             of	              -	         O	         O	      I-A1
+           that	              -	         O	         O	      E-A1
+         seeped	         seeped	         O	         O	       S-V
+            out	              -	         O	         O	  S-AM-DIR
+         Friday	              -	         O	         O	  B-AM-TMP
+           Oct.	              -	         O	         O	  I-AM-TMP
+             13	              -	         O	         O	  I-AM-TMP
+          alone	              -	         O	         O	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+          Still	              -	  S-AM-DIS	  S-AM-DIS	  S-AM-DIS	      B-A1
+              ,	              -	         O	         O	         O	      I-A1
+     two-thirds	              -	      B-A0	      B-A1	      B-A1	      I-A1
+             of	              -	      I-A0	      I-A1	      I-A1	      I-A1
+            the	              -	      I-A0	      I-A1	      I-A1	      I-A1
+        outflow	              -	      E-A0	      E-A1	      E-A1	      I-A1
+            has	            has	       S-V	         O	         O	      I-A1
+           been	           been	    B-C-A1	       S-V	         O	      I-A1
+        steered	        steered	    I-C-A1	    B-C-A1	       S-V	      I-A1
+           into	              -	    I-C-A1	    I-C-A1	      B-A2	      I-A1
+          other	              -	    I-C-A1	    I-C-A1	      I-A2	      I-A1
+       Vanguard	              -	    I-C-A1	    I-C-A1	      I-A2	      I-A1
+     portfolios	              -	    E-C-A1	    E-C-A1	      E-A2	      E-A1
+              ,	              -	         O	         O	         O	         O
+           says	           says	         O	         O	         O	       S-V
+          Brian	              -	         O	         O	         O	      B-A0
+         Mattes	              -	         O	         O	         O	      I-A0
+              ,	              -	         O	         O	         O	      I-A0
+              a	              -	         O	         O	         O	      I-A0
+           vice	              -	         O	         O	         O	      I-A0
+      president	              -	         O	         O	         O	      E-A0
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0
+           fund	              -	      E-A0
+            now	              -	  S-AM-TMP
+          holds	          holds	       S-V
+              a	              -	      B-A1
+           cash	              -	      I-A1
+       position	              -	      I-A1
+             of	              -	      I-A1
+          about	              -	      I-A1
+             15	              -	      I-A1
+              %	              -	      E-A1
+              .	              -	         O
+
+             At	              -	  B-AM-LOC
+            the	              -	  I-AM-LOC
+              $	              -	  I-AM-LOC
+            932	              -	  I-AM-LOC
+        million	              -	  I-AM-LOC
+             T.	              -	  I-AM-LOC
+           Rowe	              -	  I-AM-LOC
+          Price	              -	  I-AM-LOC
+           High	              -	  I-AM-LOC
+          Yield	              -	  I-AM-LOC
+           Fund	              -	  E-AM-LOC
+              ,	              -	         O
+      investors	              -	      S-A0
+         yanked	         yanked	       B-V
+            out	              -	       E-V
+          about	              -	      B-A1
+              $	              -	      I-A1
+            182	              -	      I-A1
+        million	              -	      E-A1
+             in	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+           past	              -	  I-AM-TMP
+            two	              -	  I-AM-TMP
+         months	              -	  E-AM-TMP
+              .	              -	         O
+
+          Those	              -	      B-A1	         O	      B-A2
+    withdrawals	              -	      E-A1	         O	      I-A2
+              ,	              -	         O	         O	      I-A2
+           most	              -	    B-R-A1	    B-R-A1	      I-A2
+             of	              -	    I-R-A1	    I-R-A1	      I-A2
+          which	              -	    E-R-A1	    E-R-A1	      I-A2
+           were	           were	       S-V	         O	      I-A2
+    transferred	    transferred	    B-C-A1	       S-V	      I-A2
+             to	              -	    I-C-A1	      B-A2	      I-A2
+          other	              -	    I-C-A1	      I-A2	      I-A2
+             T.	              -	    I-C-A1	      I-A2	      I-A2
+           Rowe	              -	    I-C-A1	      I-A2	      I-A2
+          Price	              -	    I-C-A1	      I-A2	      I-A2
+          funds	              -	    E-C-A1	      E-A2	      I-A2
+              ,	              -	         O	         O	      E-A2
+       followed	       followed	         O	         O	       S-V
+         little	              -	         O	         O	      B-A2
+         change	              -	         O	         O	      I-A2
+             in	              -	         O	         O	      I-A2
+            the	              -	         O	         O	      I-A2
+           fund	              -	         O	         O	      I-A2
+             's	              -	         O	         O	      I-A2
+          sales	              -	         O	         O	      I-A2
+        picture	              -	         O	         O	      E-A2
+           this	              -	         O	         O	  B-AM-TMP
+           year	              -	         O	         O	  I-AM-TMP
+        through	              -	         O	         O	  I-AM-TMP
+         August	              -	         O	         O	  E-AM-TMP
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	      B-A1	      B-A1
+           last	              -	      I-A0	      I-A1	      I-A1
+            two	              -	      I-A0	      I-A1	      I-A1
+         months	              -	      E-A0	      E-A1	      I-A1
+           have	           have	       S-V	         O	      I-A1
+           been	           been	    B-C-A1	       S-V	      I-A1
+            the	              -	    I-C-A1	      B-A1	      I-A1
+          whole	              -	    I-C-A1	      I-A1	      I-A1
+           ball	              -	    I-C-A1	      I-A1	      I-A1
+           game	              -	    E-C-A1	      E-A1	      E-A1
+              ,	              -	         O	         O	         O
+           says	           says	         O	         O	       S-V
+         Steven	              -	         O	         O	      B-A0
+        Norwitz	              -	         O	         O	      I-A0
+              ,	              -	         O	         O	      I-A0
+              a	              -	         O	         O	      I-A0
+           vice	              -	         O	         O	      I-A0
+      president	              -	         O	         O	      E-A0
+              .	              -	         O	         O	         O
+
+      Junk-fund	              -	      B-A0	      B-A1	         O	         O	         O
+        holders	              -	      E-A0	      E-A1	         O	         O	         O
+           have	           have	       S-V	         O	         O	         O	         O
+         barely	              -	      B-A1	  S-AM-ADV	         O	         O	         O
+         broken	         broken	      I-A1	       S-V	         O	         O	         O
+           even	              -	      I-A1	  B-AM-TMP	         O	         O	         O
+           this	              -	      I-A1	  I-AM-TMP	         O	         O	         O
+           year	              -	      I-A1	  E-AM-TMP	         O	         O	         O
+              ,	              -	      I-A1	         O	         O	         O	         O
+             as	              -	      I-A1	  B-AM-ADV	         O	         O	         O
+            fat	              -	      I-A1	  I-AM-ADV	      B-A0	         O	         O
+       interest	              -	      I-A1	  I-AM-ADV	      I-A0	         O	         O
+       payments	              -	      I-A1	  I-AM-ADV	      E-A0	         O	         O
+         barely	              -	      I-A1	  I-AM-ADV	  S-AM-MNR	         O	         O
+        managed	        managed	      I-A1	  I-AM-ADV	       S-V	         O	         O
+             to	              -	      I-A1	  I-AM-ADV	      B-A1	         O	         O
+         offset	         offset	      I-A1	  I-AM-ADV	      I-A1	       S-V	         O
+      declining	      declining	      I-A1	  I-AM-ADV	      I-A1	      B-A1	       S-V
+         prices	              -	      E-A1	  E-AM-ADV	      E-A1	      E-A1	      S-A1
+              .	              -	         O	         O	         O	         O	         O
+
+        Through	              -	  B-AM-TMP	         O
+           Oct.	              -	  I-AM-TMP	         O
+             19	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+     high-yield	              -	      B-A0	         O
+          funds	              -	      E-A0	         O
+            had	            had	       S-V	         O
+             an	              -	      B-A1	         O
+        average	              -	      I-A1	         O
+           0.85	              -	      I-A1	         O
+              %	              -	      I-A1	         O
+          total	              -	      I-A1	         O
+         return	              -	      I-A1	         O
+              (	              -	      I-A1	         O
+            the	              -	      I-A1	         O
+          price	              -	      I-A1	         O
+         change	              -	      I-A1	         O
+           plus	              -	      I-A1	         O
+      dividends	              -	      I-A1	         O
+             on	              -	      I-A1	         O
+           fund	              -	      I-A1	         O
+         shares	              -	      I-A1	         O
+              )	              -	      E-A1	         O
+              ,	              -	         O	         O
+      according	      according	  B-AM-ADV	       S-V
+             to	              -	  I-AM-ADV	      B-A1
+         Lipper	              -	  I-AM-ADV	      I-A1
+     Analytical	              -	  I-AM-ADV	      I-A1
+       Services	              -	  I-AM-ADV	      I-A1
+            Inc	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+           That	              -	      S-A1
+             's	             's	       S-V
+           even	              -	  B-AM-MNR
+           less	              -	  I-AM-MNR
+           than	              -	  I-AM-MNR
+            the	              -	  I-AM-MNR
+           4.35	              -	  I-AM-MNR
+              %	              -	  I-AM-MNR
+          total	              -	  I-AM-MNR
+         return	              -	  I-AM-MNR
+             of	              -	  I-AM-MNR
+            the	              -	  I-AM-MNR
+        Merrill	              -	  I-AM-MNR
+          Lynch	              -	  I-AM-MNR
+     High-Yield	              -	  I-AM-MNR
+          Index	              -	  E-AM-MNR
+              .	              -	         O
+
+       Fidelity	              -	      B-A0	      B-A1	      B-A1	         O	         O
+             's	              -	      I-A0	      I-A1	      I-A1	         O	         O
+           junk	              -	      I-A0	      I-A1	      I-A1	         O	         O
+           fund	              -	      E-A0	      E-A1	      I-A1	         O	         O
+            has	            has	       S-V	         O	      I-A1	         O	         O
+         fallen	         fallen	      B-A1	       S-V	      I-A1	         O	         O
+           2.08	              -	      I-A1	      B-A2	      I-A1	         O	         O
+              %	              -	      I-A1	      E-A2	      I-A1	         O	         O
+           this	              -	      I-A1	  B-AM-TMP	      I-A1	         O	         O
+           year	              -	      E-A1	  E-AM-TMP	      I-A1	         O	         O
+        through	              -	         O	  B-AM-TMP	      I-A1	         O	         O
+           Oct.	              -	         O	  I-AM-TMP	      I-A1	         O	         O
+             19	              -	         O	  E-AM-TMP	      E-A1	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+         Lipper	              -	         O	         O	      S-A0	         O	         O
+           says	           says	         O	         O	       S-V	         O	         O
+              ;	              -	         O	         O	         O	         O	         O
+            the	              -	         O	         O	         O	      B-A1	         O
+       Vanguard	              -	         O	         O	         O	      I-A1	         O
+           fund	              -	         O	         O	         O	      E-A1	         O
+           rose	           rose	         O	         O	         O	       S-V	         O
+           1.84	              -	         O	         O	         O	      B-A2	         O
+              %	              -	         O	         O	         O	      E-A2	         O
+              ;	              -	         O	         O	         O	         O	         O
+            and	              -	         O	         O	         O	         O	         O
+            the	              -	         O	         O	         O	         O	      B-A1
+             T.	              -	         O	         O	         O	         O	      I-A1
+           Rowe	              -	         O	         O	         O	         O	      I-A1
+          Price	              -	         O	         O	         O	         O	      I-A1
+           fund	              -	         O	         O	         O	         O	      E-A1
+          edged	          edged	         O	         O	         O	         O	       S-V
+             up	              -	         O	         O	         O	         O	      S-A5
+           0.66	              -	         O	         O	         O	         O	      B-A2
+              %	              -	         O	         O	         O	         O	      E-A2
+              .	              -	         O	         O	         O	         O	         O
+
+         People	              -	      S-A1	      B-A1	      B-A0	      B-A1
+            who	              -	    S-R-A1	      I-A1	      I-A0	      I-A1
+         remain	         remain	       S-V	      I-A1	      I-A0	      I-A1
+             in	              -	      B-A3	      I-A1	      I-A0	      I-A1
+           junk	              -	      I-A3	      I-A1	      I-A0	      I-A1
+          funds	              -	      E-A3	      E-A1	      I-A0	      I-A1
+            now	              -	  S-AM-TMP	  S-AM-TMP	      E-A0	      I-A1
+          could	              -	         O	  S-AM-MOD	  S-AM-MOD	      I-A1
+            get	            get	         O	       S-V	         O	      I-A1
+            hit	            hit	         O	      S-A2	       S-V	      I-A1
+          again	              -	         O	  S-AM-TMP	  S-AM-TMP	      E-A1
+              ,	              -	         O	         O	         O	         O
+           some	              -	         O	         O	         O	      B-A0
+       analysts	              -	         O	         O	         O	      I-A0
+            and	              -	         O	         O	         O	      I-A0
+           fund	              -	         O	         O	         O	      I-A0
+    specialists	              -	         O	         O	         O	      E-A0
+            say	            say	         O	         O	         O	       S-V
+              .	              -	         O	         O	         O	         O
+
+           Many	              -	      B-A0	      B-A1	      B-A0	      B-A0	      B-A0
+          funds	              -	      I-A0	      I-A1	      I-A0	      I-A0	      I-A0
+             in	              -	      I-A0	      I-A1	      I-A0	      I-A0	      I-A0
+         recent	              -	      I-A0	      I-A1	      I-A0	      I-A0	      I-A0
+          weeks	              -	      I-A0	      I-A1	      I-A0	      I-A0	      I-A0
+            and	              -	      I-A0	      I-A1	      I-A0	      I-A0	      I-A0
+         months	              -	      E-A0	      E-A1	      E-A0	      E-A0	      E-A0
+           have	           have	       S-V	         O	         O	         O	         O
+           been	           been	      B-A1	       S-V	         O	         O	         O
+        selling	        selling	      I-A1	  B-AM-ADV	       S-V	         O	         O
+          their	              -	      I-A1	  I-AM-ADV	      B-A1	         O	         O
+highest-quality	              -	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+           junk	              -	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+         issues	              -	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+              ,	              -	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+           such	              -	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+             as	              -	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+            RJR	              -	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+        Nabisco	              -	      I-A1	  I-AM-ADV	      I-A1	         O	         O
+              ,	              -	      I-A1	  I-AM-ADV	      E-A1	         O	         O
+             to	              -	      I-A1	  I-AM-ADV	  B-AM-PNC	         O	         O
+          raise	          raise	      I-A1	  I-AM-ADV	  I-AM-PNC	       S-V	         O
+           cash	              -	      I-A1	  I-AM-ADV	  I-AM-PNC	      S-A1	         O
+             to	              -	      I-A1	  I-AM-ADV	  I-AM-PNC	  B-AM-PNC	         O
+           meet	           meet	      I-A1	  I-AM-ADV	  I-AM-PNC	  I-AM-PNC	       S-V
+       expected	              -	      I-A1	  I-AM-ADV	  I-AM-PNC	  I-AM-PNC	      B-A1
+    redemptions	              -	      E-A1	  E-AM-ADV	  E-AM-PNC	  E-AM-PNC	      E-A1
+              .	              -	         O	         O	         O	         O	         O
+
+          Funds	              -	      S-A1	      S-A1	      S-A0	         O
+          might	              -	  S-AM-MOD	  S-AM-MOD	         O	         O
+             be	             be	       S-V	         O	         O	         O
+         forced	         forced	    B-C-A1	       S-V	         O	         O
+             to	              -	    I-C-A1	      B-A2	         O	         O
+         accept	         accept	    I-C-A1	      I-A2	       S-V	         O
+          lower	              -	    I-C-A1	      I-A2	      B-A1	         O
+         prices	              -	    E-C-A1	      I-A2	      E-A1	         O
+             if	              -	  B-AM-ADV	      I-A2	         O	         O
+           they	              -	  I-AM-ADV	      I-A2	         O	      S-A0
+         expand	         expand	  I-AM-ADV	      I-A2	         O	       S-V
+          their	              -	  I-AM-ADV	      I-A2	         O	      B-A1
+        selling	              -	  I-AM-ADV	      I-A2	         O	      E-A1
+             to	              -	  I-AM-ADV	      I-A2	         O	      B-A4
+            the	              -	  I-AM-ADV	      I-A2	         O	      I-A4
+     securities	              -	  I-AM-ADV	      I-A2	         O	      I-A4
+             of	              -	  I-AM-ADV	      I-A2	         O	      I-A4
+less-creditworthy	              -	  I-AM-ADV	      I-A2	         O	      I-A4
+      borrowers	              -	  E-AM-ADV	      E-A2	         O	      E-A4
+              .	              -	         O	         O	         O	         O
+
+            And	              -	  S-AM-DIS	         O
+           then	              -	  S-AM-TMP	         O
+              ,	              -	         O	         O
+          asset	              -	      B-A1	         O
+         values	              -	      I-A1	         O
+             of	              -	      I-A1	         O
+            the	              -	      I-A1	         O
+          funds	              -	      E-A1	         O
+          could	              -	  S-AM-MOD	         O
+         plunge	         plunge	       S-V	         O
+           more	              -	      B-A2	         O
+           than	              -	      I-A2	         O
+           they	              -	      I-A2	      S-A0
+           have	           have	      I-A2	       S-V
+             so	              -	      I-A2	      B-A1
+            far	              -	      E-A2	      E-A1
+              .	              -	         O	         O
+
+           Says	           Says	       S-V	         O	         O	         O
+        Michael	              -	      B-A0	         O	         O	         O
+         Hirsch	              -	      I-A0	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O
+          chief	              -	      I-A0	         O	         O	         O
+     investment	              -	      I-A0	         O	         O	         O
+        officer	              -	      I-A0	         O	         O	         O
+             of	              -	      I-A0	         O	         O	         O
+       Republic	              -	      I-A0	         O	         O	         O
+       National	              -	      I-A0	         O	         O	         O
+           Bank	              -	      I-A0	         O	         O	         O
+            and	              -	      I-A0	         O	         O	         O
+        manager	              -	      I-A0	         O	         O	         O
+             of	              -	      I-A0	         O	         O	         O
+            the	              -	      I-A0	         O	         O	         O
+      FundTrust	              -	      I-A0	         O	         O	         O
+          Group	              -	      I-A0	         O	         O	         O
+             in	              -	      I-A0	         O	         O	         O
+            New	              -	      I-A0	         O	         O	         O
+           York	              -	      E-A0	         O	         O	         O
+              :	              -	         O	         O	         O	         O
+             It	              -	         O	      S-A0	         O	         O
+             's	             's	         O	       S-V	         O	         O
+              a	              -	         O	      B-A1	      B-A1	      B-A1
+           time	              -	         O	      I-A1	      I-A1	      I-A1
+           bomb	              -	         O	      E-A1	      E-A1	      E-A1
+           just	              -	         O	  B-AM-TMP	  S-AM-ADV	         O
+        waiting	        waiting	         O	  I-AM-TMP	       S-V	         O
+             to	              -	         O	  I-AM-TMP	      B-A2	         O
+             go	             go	         O	  I-AM-TMP	      I-A2	       B-V
+            off	              -	         O	  E-AM-TMP	      E-A2	       E-V
+              .	              -	         O	         O	         O	         O
+

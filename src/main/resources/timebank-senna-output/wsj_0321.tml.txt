@@ -1,0 +1,172 @@
+     StatesWest	              -	      B-A0	         O	         O	         O	         O	         O	         O
+       Airlines	              -	      I-A0	         O	         O	         O	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O	         O	         O	         O
+        Phoenix	              -	      I-A0	         O	         O	         O	         O	         O	         O
+              ,	              -	      I-A0	         O	         O	         O	         O	         O	         O
+          Ariz.	              -	      I-A0	         O	         O	         O	         O	         O	         O
+              ,	              -	      E-A0	         O	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	      S-A0	         O	         O	         O	         O
+       withdrew	       withdrew	      I-A1	       S-V	         O	         O	         O	         O	         O
+            its	              -	      I-A1	      B-A1	         O	         O	         O	         O	         O
+          offer	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+             to	              -	      I-A1	      I-A1	         O	         O	         O	         O	         O
+        acquire	        acquire	      I-A1	      I-A1	       S-V	         O	         O	         O	         O
+           Mesa	              -	      I-A1	      I-A1	      B-A1	         O	         O	         O	         O
+       Airlines	              -	      I-A1	      E-A1	      E-A1	         O	         O	         O	         O
+        because	              -	      I-A1	  B-AM-CAU	         O	         O	         O	         O	         O
+            the	              -	      I-A1	  I-AM-CAU	         O	      B-A0	      B-A0	         O	         O
+     Farmington	              -	      I-A1	  I-AM-CAU	         O	      I-A0	      I-A0	         O	         O
+              ,	              -	      I-A1	  I-AM-CAU	         O	      I-A0	      I-A0	         O	         O
+           N.M.	              -	      I-A1	  I-AM-CAU	         O	      I-A0	      I-A0	         O	         O
+              ,	              -	      I-A1	  I-AM-CAU	         O	      I-A0	      I-A0	         O	         O
+        carrier	              -	      I-A1	  I-AM-CAU	         O	      E-A0	      E-A0	         O	         O
+            did	            did	      I-A1	  I-AM-CAU	         O	       S-V	         O	         O	         O
+            n't	              -	      I-A1	  I-AM-CAU	         O	      B-A1	  S-AM-NEG	         O	         O
+        respond	        respond	      I-A1	  I-AM-CAU	         O	      I-A1	       S-V	         O	         O
+             to	              -	      I-A1	  I-AM-CAU	         O	      I-A1	      B-A1	         O	         O
+            its	              -	      I-A1	  I-AM-CAU	         O	      I-A1	      I-A1	         O	         O
+          offer	              -	      I-A1	  I-AM-CAU	         O	      I-A1	      E-A1	         O	         O
+             by	              -	      I-A1	  I-AM-CAU	         O	      I-A1	  B-AM-TMP	         O	         O
+            the	              -	      I-A1	  I-AM-CAU	         O	      I-A1	  I-AM-TMP	         O	         O
+          close	              -	      I-A1	  I-AM-CAU	         O	      I-A1	  I-AM-TMP	         O	         O
+             of	              -	      I-A1	  I-AM-CAU	         O	      I-A1	  I-AM-TMP	         O	         O
+       business	              -	      I-A1	  I-AM-CAU	         O	      I-A1	  I-AM-TMP	         O	         O
+      yesterday	              -	      I-A1	  I-AM-CAU	         O	      E-A1	  I-AM-TMP	         O	         O
+              ,	              -	      I-A1	  I-AM-CAU	         O	         O	  I-AM-TMP	         O	         O
+              a	              -	      I-A1	  I-AM-CAU	         O	         O	  I-AM-TMP	      B-A1	      B-A1
+       deadline	              -	      I-A1	  I-AM-CAU	         O	         O	  I-AM-TMP	      E-A1	      E-A1
+     StatesWest	              -	      I-A1	  I-AM-CAU	         O	         O	  I-AM-TMP	      S-A0	      S-A0
+            had	            had	      I-A1	  I-AM-CAU	         O	         O	  I-AM-TMP	       S-V	         O
+            set	            set	      I-A1	  I-AM-CAU	         O	         O	  I-AM-TMP	      B-A1	       S-V
+            for	              -	      I-A1	  I-AM-CAU	         O	         O	  I-AM-TMP	      I-A1	  B-AM-PNC
+              a	              -	      I-A1	  I-AM-CAU	         O	         O	  I-AM-TMP	      I-A1	  I-AM-PNC
+       response	              -	      E-A1	  E-AM-CAU	         O	         O	  E-AM-TMP	      E-A1	  E-AM-PNC
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+        However	              -	  S-AM-DIS	  S-AM-DIS
+              ,	              -	         O	         O
+     StatesWest	              -	      S-A1	      S-A0
+             is	             is	       S-V	         O
+            n't	              -	  S-AM-NEG	  S-AM-NEG
+     abandoning	     abandoning	  B-AM-ADV	       S-V
+            its	              -	  I-AM-ADV	      B-A1
+        pursuit	              -	  I-AM-ADV	      I-A1
+             of	              -	  I-AM-ADV	      I-A1
+            the	              -	  I-AM-ADV	      I-A1
+    much-larger	              -	  I-AM-ADV	      I-A1
+           Mesa	              -	  E-AM-ADV	      E-A1
+              .	              -	         O	         O
+
+     StatesWest	              -	      S-A0	      B-A0	         O	         O
+              ,	              -	         O	      I-A0	         O	         O
+          which	              -	    S-R-A0	      I-A0	         O	         O
+            has	            has	       S-V	      I-A0	         O	         O
+              a	              -	      B-A1	      I-A0	         O	         O
+           7.25	              -	      I-A1	      I-A0	         O	         O
+              %	              -	      I-A1	      I-A0	         O	         O
+          stake	              -	      I-A1	      I-A0	         O	         O
+             in	              -	      I-A1	      I-A0	         O	         O
+           Mesa	              -	      E-A1	      I-A0	         O	         O
+              ,	              -	         O	      E-A0	         O	         O
+           said	           said	         O	       S-V	         O	         O
+             it	              -	         O	      B-A1	      S-A0	      S-A0
+            may	              -	         O	      I-A1	  S-AM-MOD	  S-AM-MOD
+       purchase	       purchase	         O	      I-A1	       S-V	         O
+           more	              -	         O	      I-A1	      B-A1	         O
+           Mesa	              -	         O	      I-A1	      I-A1	         O
+          stock	              -	         O	      I-A1	      E-A1	         O
+             or	              -	         O	      I-A1	         O	         O
+           make	           make	         O	      I-A1	         O	       S-V
+              a	              -	         O	      I-A1	         O	      B-A1
+         tender	              -	         O	      I-A1	         O	      I-A1
+          offer	              -	         O	      I-A1	         O	      E-A1
+       directly	              -	         O	      I-A1	         O	  S-AM-MNR
+             to	              -	         O	      I-A1	         O	         O
+           Mesa	              -	         O	      I-A1	         O	         O
+   shareholders	              -	         O	      E-A1	         O	         O
+              .	              -	         O	         O	         O	         O
+
+     StatesWest	              -	      S-A0	      S-A0	      S-A0	         O
+            had	            had	       S-V	         O	         O	         O
+       proposed	       proposed	      B-A1	       S-V	         O	         O
+      acquiring	      acquiring	      I-A1	      B-A1	       S-V	         O
+           Mesa	              -	      I-A1	      I-A1	      S-A1	         O
+            for	              -	      I-A1	      I-A1	      B-A3	         O
+              $	              -	      I-A1	      I-A1	      I-A3	         O
+              7	              -	      I-A1	      I-A1	      I-A3	         O
+              a	              -	      I-A1	      I-A1	      I-A3	         O
+          share	              -	      E-A1	      I-A1	      I-A3	         O
+            and	              -	         O	      I-A1	      I-A3	         O
+            one	              -	         O	      I-A1	      I-A3	         O
+          share	              -	         O	      I-A1	      I-A3	         O
+             of	              -	         O	      I-A1	      I-A3	         O
+              a	              -	         O	      I-A1	      I-A3	         O
+            new	              -	         O	      I-A1	      I-A3	         O
+         series	              -	         O	      I-A1	      I-A3	         O
+             of	              -	         O	      I-A1	      I-A3	         O
+     StatesWest	              -	         O	      I-A1	      I-A3	         O
+              6	              -	         O	      I-A1	      I-A3	         O
+              %	              -	         O	      I-A1	      I-A3	         O
+    convertible	              -	         O	      I-A1	      I-A3	         O
+      preferred	              -	         O	      I-A1	      I-A3	         O
+          stock	              -	         O	      I-A1	      I-A3	         O
+             it	              -	         O	      I-A1	      I-A3	      S-A0
+         values	         values	         O	      I-A1	      I-A3	       S-V
+             at	              -	         O	      I-A1	      I-A3	      B-A2
+              $	              -	         O	      I-A1	      I-A3	      I-A2
+              3	              -	         O	      I-A1	      I-A3	      I-A2
+              a	              -	         O	      I-A1	      I-A3	      I-A2
+          share	              -	         O	      E-A1	      E-A3	      E-A2
+              .	              -	         O	         O	         O	         O
+
+        Earlier	              -	  S-AM-TMP	  S-AM-TMP	         O
+              ,	              -	         O	         O	         O
+           Mesa	              -	         O	      S-A0	         O
+            had	            had	       S-V	         O	         O
+       rejected	       rejected	      B-A1	       S-V	         O
+              a	              -	      I-A1	      B-A1	      B-A0
+        general	              -	      I-A1	      I-A1	      I-A0
+       proposal	              -	      I-A1	      I-A1	      E-A0
+           from	              -	      I-A1	      I-A1	         O
+     StatesWest	              -	      I-A1	      I-A1	         O
+             to	              -	      I-A1	      I-A1	         O
+        combine	        combine	      I-A1	      I-A1	       S-V
+            the	              -	      I-A1	      I-A1	      B-A1
+            two	              -	      I-A1	      I-A1	      I-A1
+       carriers	              -	      I-A1	      I-A1	      E-A1
+             in	              -	      I-A1	      I-A1	  B-AM-MNR
+           some	              -	      I-A1	      I-A1	  I-AM-MNR
+            way	              -	      E-A1	      E-A1	  E-AM-MNR
+              .	              -	         O	         O	         O
+
+     StatesWest	              -	      S-A0
+         serves	         serves	       S-V
+             10	              -	      B-A2
+         cities	              -	      I-A2
+             in	              -	      I-A2
+     California	              -	      I-A2
+              ,	              -	      I-A2
+        Arizona	              -	      I-A2
+            and	              -	      I-A2
+         Nevada	              -	      E-A2
+              .	              -	         O
+
+           Mesa	              -	      S-A1
+          flies	          flies	       S-V
+             to	              -	  B-AM-DIR
+             42	              -	  I-AM-DIR
+         cities	              -	  I-AM-DIR
+             in	              -	  I-AM-DIR
+            New	              -	  I-AM-DIR
+         Mexico	              -	  I-AM-DIR
+              ,	              -	  I-AM-DIR
+        Arizona	              -	  I-AM-DIR
+              ,	              -	  I-AM-DIR
+        Wyoming	              -	  I-AM-DIR
+              ,	              -	  I-AM-DIR
+       Colorado	              -	  I-AM-DIR
+            and	              -	  I-AM-DIR
+          Texas	              -	  E-AM-DIR
+              .	              -	         O
+

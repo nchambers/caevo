@@ -1,0 +1,140 @@
+            THE	              -	      B-A0	      B-A0	         O	         O	         O	         O
+          HAGUE	              -	      I-A0	      I-A0	         O	         O	         O	         O
+              ,	              -	      I-A0	      I-A0	         O	         O	         O	         O
+    Netherlands	              -	      I-A0	      I-A0	         O	         O	         O	         O
+              (	              -	      I-A0	      I-A0	         O	         O	         O	         O
+             AP	              -	      I-A0	      I-A0	         O	         O	         O	         O
+              )	              -	      E-A0	      I-A0	         O	         O	         O	         O
+              _	              _	       S-V	      I-A0	         O	         O	         O	         O
+            The	              -	      B-A0	      I-A0	         O	         O	         O	         O
+          World	              -	      I-A0	      I-A0	         O	         O	         O	         O
+          Court	              -	      E-A0	      E-A0	         O	         O	         O	         O
+         Friday	              -	  S-AM-TMP	  S-AM-TMP	         O	         O	         O	         O
+       rejected	       rejected	    B-C-A0	       S-V	         O	         O	         O	         O
+           U.S.	              -	    I-C-A0	      B-A1	         O	         O	         O	         O
+            and	              -	    I-C-A0	      I-A1	         O	         O	         O	         O
+        British	              -	    I-C-A0	      I-A1	         O	         O	         O	         O
+     objections	              -	    I-C-A0	      I-A1	         O	         O	         O	         O
+             to	              -	    I-C-A0	      I-A1	         O	         O	         O	         O
+              a	              -	    I-C-A0	      I-A1	      B-A0	      B-A0	         O	         O
+         Libyan	              -	    I-C-A0	      I-A1	      I-A0	      I-A0	         O	         O
+          World	              -	    I-C-A0	      I-A1	      I-A0	      I-A0	         O	         O
+          Court	              -	    I-C-A0	      I-A1	      I-A0	      I-A0	         O	         O
+           case	              -	    I-C-A0	      I-A1	      E-A0	      E-A0	         O	         O
+           that	              -	    I-C-A0	      I-A1	    S-R-A0	    S-R-A0	         O	         O
+            has	            has	    I-C-A0	      I-A1	       S-V	         O	         O	         O
+        blocked	        blocked	    I-C-A0	      I-A1	      B-A1	       S-V	         O	         O
+            the	              -	    I-C-A0	      I-A1	      I-A1	      B-A1	         O	         O
+          trial	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	         O	         O
+             of	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	         O	         O
+            two	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      B-A0	      B-A0
+        Libyans	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      E-A0	      E-A0
+      suspected	      suspected	    I-C-A0	      I-A1	      I-A1	      I-A1	       S-V	         O
+             of	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      B-A1	         O
+        blowing	        blowing	    I-C-A0	      I-A1	      I-A1	      I-A1	      I-A1	       B-V
+             up	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      I-A1	       E-V
+              a	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      I-A1	      B-A1
+            Pan	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1
+             Am	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1
+          jumbo	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      I-A1	      I-A1
+            jet	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      I-A1	      E-A1
+           over	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      I-A1	  B-AM-DIR
+       Scotland	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      I-A1	  E-AM-DIR
+             in	              -	    I-C-A0	      I-A1	      I-A1	      I-A1	      I-A1	  B-AM-TMP
+           1988	              -	    E-C-A0	      E-A1	      E-A1	      E-A1	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O	         O	         O	         O
+
+          Libya	              -	      S-A0	      B-A0	      B-A0	         O
+              ,	              -	         O	      I-A0	      I-A0	         O
+          which	              -	    S-R-A0	      I-A0	      I-A0	         O
+        brought	        brought	       S-V	      I-A0	      I-A0	         O
+            the	              -	      B-A1	      I-A0	      I-A0	         O
+           case	              -	      I-A1	      I-A0	      I-A0	         O
+             to	              -	      I-A1	      I-A0	      I-A0	         O
+            the	              -	      I-A1	      I-A0	      I-A0	         O
+         United	              -	      I-A1	      I-A0	      I-A0	         O
+        Nations	              -	      I-A1	      I-A0	      I-A0	         O
+              '	              -	      I-A1	      I-A0	      I-A0	         O
+        highest	              -	      I-A1	      I-A0	      I-A0	         O
+       judicial	              -	      I-A1	      I-A0	      I-A0	         O
+           body	              -	      E-A1	      I-A0	      I-A0	         O
+             in	              -	  B-AM-LOC	      I-A0	      I-A0	         O
+            its	              -	  I-AM-LOC	      I-A0	      I-A0	         O
+        dispute	              -	  I-AM-LOC	      I-A0	      I-A0	         O
+           with	              -	  I-AM-LOC	      I-A0	      I-A0	         O
+            the	              -	  I-AM-LOC	      I-A0	      I-A0	         O
+         United	              -	  I-AM-LOC	      I-A0	      I-A0	         O
+         States	              -	  I-AM-LOC	      I-A0	      I-A0	         O
+            and	              -	  I-AM-LOC	      I-A0	      I-A0	         O
+        Britain	              -	  E-AM-LOC	      I-A0	      I-A0	         O
+              ,	              -	         O	      E-A0	      E-A0	         O
+         hailed	         hailed	         O	       S-V	         O	         O
+            the	              -	         O	      B-A1	         O	         O
+         ruling	              -	         O	      E-A1	         O	         O
+            and	              -	         O	         O	         O	         O
+           said	           said	         O	         O	       S-V	         O
+             it	              -	         O	         O	      B-A1	      S-A0
+          would	              -	         O	         O	      I-A1	  S-AM-MOD
+          press	          press	         O	         O	      I-A1	       S-V
+           anew	              -	         O	         O	      I-A1	  B-AM-MNR
+            for	              -	         O	         O	      I-A1	  I-AM-MNR
+              a	              -	         O	         O	      I-A1	  I-AM-MNR
+          trial	              -	         O	         O	      I-A1	  I-AM-MNR
+             in	              -	         O	         O	      I-A1	  I-AM-MNR
+              a	              -	         O	         O	      I-A1	  I-AM-MNR
+          third	              -	         O	         O	      I-A1	  I-AM-MNR
+        neutral	              -	         O	         O	      I-A1	  I-AM-MNR
+        country	              -	         O	         O	      E-A1	  E-AM-MNR
+              .	              -	         O	         O	         O	         O
+
+           Both	              -	      B-A0	      B-A0	         O	         O	         O	         O	         O
+           U.S.	              -	      I-A0	      I-A0	         O	         O	         O	         O	         O
+            and	              -	      I-A0	      I-A0	         O	         O	         O	         O	         O
+        British	              -	      I-A0	      I-A0	         O	         O	         O	         O	         O
+      officials	              -	      E-A0	      E-A0	         O	         O	         O	         O	         O
+          filed	          filed	       S-V	         O	         O	         O	         O	         O	         O
+     objections	              -	      B-A1	         O	         O	         O	         O	         O	         O
+             to	              -	      I-A1	         O	         O	         O	         O	         O	         O
+            the	              -	      I-A1	         O	         O	         O	         O	         O	         O
+          court	              -	      I-A1	         O	         O	         O	         O	         O	         O
+             's	              -	      I-A1	         O	         O	         O	         O	         O	         O
+   jurisdiction	              -	      E-A1	         O	         O	         O	         O	         O	         O
+             in	              -	  B-AM-TMP	         O	         O	         O	         O	         O	         O
+           1995	              -	  E-AM-TMP	         O	         O	         O	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O	         O	         O
+       claiming	       claiming	         O	       S-V	         O	         O	         O	         O	         O
+       Security	              -	         O	      B-A1	      B-A0	      B-A0	         O	         O	         O
+        Council	              -	         O	      I-A1	      I-A0	      I-A0	         O	         O	         O
+    resolutions	              -	         O	      I-A1	      E-A0	      E-A0	         O	         O	         O
+        imposed	        imposed	         O	      I-A1	       S-V	         O	         O	         O	         O
+             on	              -	         O	      I-A1	      B-A2	         O	         O	         O	         O
+          Lybia	              -	         O	      I-A1	      E-A2	         O	         O	         O	         O
+             to	              -	         O	      I-A1	  B-AM-PNC	         O	         O	         O	         O
+          force	          force	         O	      I-A1	  I-AM-PNC	       S-V	         O	         O	         O
+            the	              -	         O	      I-A1	  I-AM-PNC	      B-A1	      B-A0	         O	         O
+       suspects	              -	         O	      I-A1	  I-AM-PNC	      I-A1	      I-A0	         O	         O
+              '	              -	         O	      I-A1	  I-AM-PNC	      I-A1	      I-A0	         O	         O
+    extradition	              -	         O	      I-A1	  E-AM-PNC	      E-A1	      E-A0	         O	         O
+      overruled	      overruled	         O	      I-A1	         O	         O	       S-V	         O	         O
+              a	              -	         O	      I-A1	         O	         O	      B-A1	      B-A0	      B-A0
+           1971	              -	         O	      I-A1	         O	         O	      I-A1	      I-A0	      I-A0
+     Convention	              -	         O	      I-A1	         O	         O	      I-A1	      E-A0	      E-A0
+          which	              -	         O	      I-A1	         O	         O	      I-A1	    S-R-A0	    S-R-A0
+          gives	          gives	         O	      I-A1	         O	         O	      I-A1	       S-V	         O
+          Libya	              -	         O	      I-A1	         O	         O	      I-A1	      S-A2	      S-A0
+            the	              -	         O	      I-A1	         O	         O	      I-A1	      B-A1	         O
+          right	              -	         O	      I-A1	         O	         O	      I-A1	      I-A1	         O
+             to	              -	         O	      I-A1	         O	         O	      I-A1	      I-A1	         O
+            try	            try	         O	      I-A1	         O	         O	      I-A1	      I-A1	       S-V
+            the	              -	         O	      I-A1	         O	         O	      I-A1	      I-A1	      B-A1
+            men	              -	         O	      E-A1	         O	         O	      E-A1	      E-A1	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -
+       decision	              -
+              ,	              -
+            3rd	              -
+           graf	              -
+            pvs	              -
+              .	              -
+

@@ -1,0 +1,66 @@
+       Advanced	              -	      B-A0	         O
+        Medical	              -	      I-A0	         O
+   Technologies	              -	      I-A0	         O
+           Inc.	              -	      E-A0	         O
+           said	           said	       S-V	         O
+             it	              -	      B-A1	      S-A0
+      purchased	      purchased	      I-A1	       S-V
+             93	              -	      I-A1	      B-A1
+              %	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+              a	              -	      I-A1	      I-A1
+           unit	              -	      I-A1	      I-A1
+             of	              -	      I-A1	      I-A1
+         Henley	              -	      I-A1	      I-A1
+          Group	              -	      I-A1	      I-A1
+            Inc	              -	      E-A1	      E-A1
+              .	              -	         O	         O
+
+       Advanced	              -	      B-A0
+        Medical	              -	      E-A0
+           paid	           paid	       S-V
+              $	              -	      B-A1
+            106	              -	      I-A1
+        million	              -	      I-A1
+             in	              -	      I-A1
+           cash	              -	      E-A1
+            for	              -	      B-A3
+            its	              -	      I-A3
+          share	              -	      I-A3
+             in	              -	      I-A3
+              a	              -	      I-A3
+           unit	              -	      I-A3
+             of	              -	      I-A3
+         Henley	              -	      I-A3
+             's	              -	      I-A3
+         Fisher	              -	      I-A3
+     Scientific	              -	      I-A3
+     subsidiary	              -	      E-A3
+              .	              -	         O
+
+            The	              -	      B-A0	         O	      B-A0	         O
+           unit	              -	      E-A0	         O	      E-A0	         O
+          makes	          makes	       S-V	         O	         O	         O
+    intravenous	              -	      B-A1	      B-A1	         O	         O
+          pumps	              -	      I-A1	      E-A1	         O	         O
+           used	           used	      I-A1	       S-V	         O	         O
+             by	              -	      I-A1	      B-A0	         O	         O
+      hospitals	              -	      E-A1	      E-A0	         O	         O
+            and	              -	         O	         O	         O	         O
+            had	            had	         O	         O	       S-V	         O
+           more	              -	         O	         O	      B-A1	      B-A1
+           than	              -	         O	         O	      I-A1	      I-A1
+              $	              -	         O	         O	      I-A1	      I-A1
+            110	              -	         O	         O	      I-A1	      I-A1
+        million	              -	         O	         O	      I-A1	      I-A1
+             in	              -	         O	         O	      I-A1	      I-A1
+          sales	              -	         O	         O	      E-A1	      I-A1
+           last	              -	         O	         O	  B-AM-TMP	      I-A1
+           year	              -	         O	         O	  E-AM-TMP	      E-A1
+              ,	              -	         O	         O	         O	         O
+      according	      according	         O	         O	         O	       S-V
+             to	              -	         O	         O	         O	      B-A2
+       Advanced	              -	         O	         O	         O	      I-A2
+        Medical	              -	         O	         O	         O	      E-A2
+              .	              -	         O	         O	         O	         O
+

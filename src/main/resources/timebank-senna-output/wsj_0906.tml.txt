@@ -1,0 +1,106 @@
+    Diversified	              -	      B-A0	         O	         O	         O	         O
+     Investment	              -	      I-A0	         O	         O	         O	         O
+          Group	              -	      I-A0	         O	         O	         O	         O
+           Inc.	              -	      E-A0	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O
+             it	              -	      B-A1	      S-A0	      S-A1	      S-A1	         O
+         agreed	         agreed	      I-A1	       S-V	         O	         O	         O
+             to	              -	      I-A1	      B-A1	         O	         O	         O
+             be	             be	      I-A1	      I-A1	       S-V	         O	         O
+       acquired	       acquired	      I-A1	      I-A1	      B-A3	       S-V	         O
+             by	              -	      I-A1	      I-A1	      I-A3	      B-A0	         O
+           Star	              -	      I-A1	      I-A1	      I-A3	      I-A0	         O
+         States	              -	      I-A1	      I-A1	      I-A3	      I-A0	         O
+          Corp.	              -	      I-A1	      I-A1	      I-A3	      E-A0	         O
+            for	              -	      I-A1	      I-A1	      I-A3	      B-A3	         O
+          stock	              -	      I-A1	      I-A1	      I-A3	      I-A3	      S-A1
+         valued	         valued	      I-A1	      I-A1	      I-A3	      I-A3	       S-V
+             at	              -	      I-A1	      I-A1	      I-A3	      I-A3	      B-A2
+              $	              -	      I-A1	      I-A1	      I-A3	      I-A3	      I-A2
+          13.75	              -	      I-A1	      I-A1	      I-A3	      I-A3	      I-A2
+              a	              -	      I-A1	      I-A1	      I-A3	      I-A3	      I-A2
+          share	              -	      I-A1	      I-A1	      I-A3	      I-A3	      E-A2
+              ,	              -	      I-A1	      I-A1	      I-A3	      I-A3	         O
+             or	              -	      I-A1	      I-A1	      I-A3	      I-A3	         O
+          about	              -	      I-A1	      I-A1	      I-A3	      I-A3	         O
+              $	              -	      I-A1	      I-A1	      I-A3	      I-A3	         O
+           24.4	              -	      I-A1	      I-A1	      I-A3	      I-A3	         O
+        million	              -	      E-A1	      E-A1	      E-A3	      E-A3	         O
+              .	              -	         O	         O	         O	         O	         O
+
+    Diversified	              -	         O	      B-A0	         O	         O
+              ,	              -	         O	      I-A0	         O	         O
+            the	              -	         O	      I-A0	         O	         O
+        holding	        holding	       S-V	      I-A0	         O	         O
+        company	              -	      S-A0	      I-A0	         O	         O
+            for	              -	         O	      I-A0	         O	         O
+       Fidelity	              -	         O	      I-A0	         O	         O
+        Federal	              -	         O	      I-A0	         O	         O
+        Savings	              -	         O	      I-A0	         O	         O
+            amp	              -	         O	      I-A0	         O	         O
+           Loan	              -	         O	      I-A0	         O	         O
+    Association	              -	         O	      I-A0	         O	         O
+              ,	              -	         O	      E-A0	         O	         O
+           said	           said	         O	       S-V	         O	         O
+            the	              -	         O	      B-A1	      B-A0	         O
+      agreement	              -	         O	      I-A1	      E-A0	         O
+           also	              -	         O	      I-A1	  S-AM-DIS	         O
+          gives	          gives	         O	      I-A1	       S-V	         O
+           Star	              -	         O	      I-A1	      B-A2	      B-A0
+         States	              -	         O	      I-A1	      E-A2	      E-A0
+            the	              -	         O	      I-A1	      B-A1	         O
+         option	              -	         O	      I-A1	      I-A1	         O
+             to	              -	         O	      I-A1	      I-A1	         O
+        acquire	        acquire	         O	      I-A1	      I-A1	       S-V
+        588,300	              -	         O	      I-A1	      I-A1	      B-A1
+             of	              -	         O	      I-A1	      I-A1	      I-A1
+    Diversified	              -	         O	      I-A1	      I-A1	      I-A1
+             's	              -	         O	      I-A1	      I-A1	      I-A1
+      1,774,326	              -	         O	      I-A1	      I-A1	      I-A1
+         shares	              -	         O	      I-A1	      I-A1	      I-A1
+    outstanding	              -	         O	      I-A1	      I-A1	      E-A1
+          under	              -	         O	      I-A1	      I-A1	  B-AM-LOC
+        certain	              -	         O	      I-A1	      I-A1	  I-AM-LOC
+  circumstances	              -	         O	      E-A1	      E-A1	  E-AM-LOC
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A0
+    acquisition	              -	      E-A0
+          would	              -	  S-AM-MOD
+           give	           give	       S-V
+     Wilmington	              -	      B-A2
+              ,	              -	      I-A2
+     Del.-based	              -	      I-A2
+           Star	              -	      I-A2
+         States	              -	      E-A2
+         access	              -	      B-A1
+             to	              -	      I-A1
+            the	              -	      I-A1
+   Pennsylvania	              -	      I-A1
+         market	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A1	         O	         O
+      agreement	              -	      E-A1	         O	         O
+             is	             is	       S-V	         O	         O
+        subject	              -	    B-C-A1	         O	         O
+             to	              -	    I-C-A1	         O	         O
+     regulatory	              -	    I-C-A1	         O	         O
+       approval	              -	    I-C-A1	         O	         O
+            and	              -	    I-C-A1	         O	         O
+     resolution	              -	    I-C-A1	         O	         O
+             of	              -	    I-C-A1	         O	         O
+       lawsuits	              -	    I-C-A1	      S-A1	         O
+        brought	        brought	    I-C-A1	       S-V	         O
+             by	              -	    I-C-A1	      B-A0	         O
+        certain	              -	    I-C-A1	      I-A0	         O
+    Diversified	              -	    I-C-A1	      I-A0	         O
+        holders	              -	    I-C-A1	      E-A0	         O
+             in	              -	    I-C-A1	  B-AM-MNR	         O
+     connection	              -	    I-C-A1	  I-AM-MNR	         O
+           with	              -	    I-C-A1	  I-AM-MNR	         O
+            the	              -	    I-C-A1	  I-AM-MNR	         O
+       proposed	       proposed	    I-C-A1	  I-AM-MNR	       S-V
+         merger	              -	    E-C-A1	  E-AM-MNR	      S-A1
+              .	              -	         O	         O	         O
+

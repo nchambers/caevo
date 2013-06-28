@@ -1,0 +1,65 @@
+            CNW	              -	      B-A0	         O	         O	         O
+          Corp.	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            the	              -	      B-A1	         O	      B-A1	      B-A1
+          final	              -	      I-A1	         O	      I-A1	      I-A1
+           step	              -	      I-A1	         O	      I-A1	      I-A1
+             in	              -	      I-A1	         O	      I-A1	      I-A1
+            the	              -	      I-A1	         O	      I-A1	      I-A1
+    acquisition	              -	      I-A1	         O	      I-A1	      I-A1
+             of	              -	      I-A1	         O	      I-A1	      I-A1
+            the	              -	      I-A1	         O	      I-A1	      I-A1
+        company	              -	      I-A1	         O	      E-A1	      E-A1
+            has	            has	      I-A1	       S-V	         O	         O
+           been	           been	      I-A1	         O	       S-V	         O
+      completed	      completed	      I-A1	         O	         O	       S-V
+           with	              -	      I-A1	         O	  B-AM-ADV	  B-AM-ADV
+            the	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+         merger	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+             of	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+            CNW	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+           with	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+              a	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+     subsidiary	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+             of	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+        Chicago	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+            amp	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+          North	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+        Western	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+       Holdings	              -	      I-A1	         O	  I-AM-ADV	  I-AM-ADV
+           Corp	              -	      E-A1	         O	  E-AM-ADV	  E-AM-ADV
+              .	              -	         O	         O	         O	         O
+
+             As	              -	         O	  B-AM-ADV	         O	         O	         O
+       reported	       reported	       S-V	  E-AM-ADV	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+            CNW	              -	      B-A1	      S-A0	      S-A1	      S-A1	         O
+         agreed	         agreed	      I-A1	       S-V	         O	         O	         O
+             to	              -	      I-A1	      B-A1	         O	         O	         O
+             be	             be	      I-A1	      I-A1	       S-V	         O	         O
+       acquired	       acquired	      I-A1	      I-A1	    B-C-A1	       S-V	         O
+             by	              -	      I-A1	      I-A1	    I-C-A1	      B-A0	         O
+              a	              -	      I-A1	      I-A1	    I-C-A1	      I-A0	         O
+          group	              -	      I-A1	      I-A1	    I-C-A1	      I-A0	         O
+             of	              -	      I-A1	      I-A1	    I-C-A1	      I-A0	         O
+      investors	              -	      I-A1	      I-A1	    I-C-A1	      I-A0	      S-A1
+            led	            led	      I-A1	      I-A1	    I-C-A1	      I-A0	       S-V
+             by	              -	      I-A1	      I-A1	    I-C-A1	      I-A0	      B-A0
+     Blackstone	              -	      I-A1	      I-A1	    I-C-A1	      I-A0	      I-A0
+        Capital	              -	      I-A1	      I-A1	    I-C-A1	      I-A0	      I-A0
+       Partners	              -	      I-A1	      I-A1	    I-C-A1	      I-A0	      I-A0
+        Limited	              -	      I-A1	      I-A1	    I-C-A1	      I-A0	      I-A0
+    Partnership	              -	      I-A1	      I-A1	    I-C-A1	      E-A0	      E-A0
+            for	              -	      I-A1	      I-A1	    I-C-A1	      B-A3	         O
+              $	              -	      I-A1	      I-A1	    I-C-A1	      I-A3	         O
+             50	              -	      I-A1	      I-A1	    I-C-A1	      I-A3	         O
+              a	              -	      I-A1	      I-A1	    I-C-A1	      I-A3	         O
+          share	              -	      I-A1	      I-A1	    I-C-A1	      I-A3	         O
+              ,	              -	      I-A1	      I-A1	    I-C-A1	      I-A3	         O
+             or	              -	      I-A1	      I-A1	    I-C-A1	      I-A3	         O
+          about	              -	      I-A1	      I-A1	    I-C-A1	      I-A3	         O
+              $	              -	      I-A1	      I-A1	    I-C-A1	      I-A3	         O
+            950	              -	      I-A1	      I-A1	    I-C-A1	      I-A3	         O
+        million	              -	      E-A1	      E-A1	    E-C-A1	      E-A3	         O
+              .	              -	         O	         O	         O	         O	         O
+

@@ -1,0 +1,96 @@
+        Italian	              -	      B-A0	         O
+       chemical	              -	      I-A0	         O
+          giant	              -	      I-A0	         O
+     Montedison	              -	      I-A0	         O
+         S.p.A.	              -	      E-A0	         O
+              ,	              -	         O	         O
+        through	              -	  B-AM-MNR	         O
+            its	              -	  I-AM-MNR	         O
+     Montedison	              -	  I-AM-MNR	         O
+    Acquisition	              -	  I-AM-MNR	         O
+           N.V.	              -	  I-AM-MNR	         O
+       indirect	              -	  I-AM-MNR	         O
+           unit	              -	  E-AM-MNR	         O
+              ,	              -	         O	         O
+          began	          began	       S-V	         O
+            its	              -	      B-A1	         O
+              $	              -	      I-A1	         O
+     37-a-share	              -	      I-A1	         O
+         tender	              -	      I-A1	         O
+          offer	              -	      I-A1	         O
+            for	              -	      I-A1	         O
+            all	              -	      I-A1	         O
+            the	              -	      I-A1	         O
+         common	              -	      I-A1	         O
+         shares	              -	      I-A1	         O
+    outstanding	              -	      I-A1	         O
+             of	              -	      I-A1	         O
+       Erbamont	              -	      I-A1	         O
+           N.V.	              -	      I-A1	         O
+              ,	              -	      I-A1	         O
+              a	              -	      I-A1	         O
+          maker	              -	      I-A1	         O
+             of	              -	      I-A1	         O
+pharmaceuticals	              -	      I-A1	      S-A1
+   incorporated	   incorporated	      I-A1	       S-V
+             in	              -	      I-A1	  B-AM-LOC
+            the	              -	      I-A1	  I-AM-LOC
+    Netherlands	              -	      E-A1	  E-AM-LOC
+              .	              -	         O	         O
+
+            The	              -	      B-A1	      B-A1	      B-A1	      B-A1
+          offer	              -	      E-A1	      I-A1	      I-A1	      I-A1
+              ,	              -	         O	      I-A1	      I-A1	      I-A1
+     advertised	     advertised	       S-V	      I-A1	      I-A1	      I-A1
+             in	              -	  B-AM-LOC	      I-A1	      I-A1	      I-A1
+          today	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+             's	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+       editions	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+             of	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+            The	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+           Wall	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+         Street	              -	  I-AM-LOC	      I-A1	      I-A1	      I-A1
+        Journal	              -	  E-AM-LOC	      I-A1	      I-A1	      I-A1
+              ,	              -	         O	      E-A1	      E-A1	      E-A1
+             is	             is	         O	       S-V	         O	         O
+      scheduled	      scheduled	         O	      B-A2	       S-V	         O
+             to	              -	         O	      I-A2	      B-A2	         O
+         expire	         expire	         O	      I-A2	      I-A2	       S-V
+             at	              -	         O	      I-A2	      I-A2	  B-AM-TMP
+            the	              -	         O	      I-A2	      I-A2	  I-AM-TMP
+            the	              -	         O	      I-A2	      I-A2	  I-AM-TMP
+            end	              -	         O	      I-A2	      I-A2	  I-AM-TMP
+             of	              -	         O	      I-A2	      I-A2	  I-AM-TMP
+       November	              -	         O	      E-A2	      E-A2	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+     Montedison	              -	      S-A0
+      currently	              -	  S-AM-TMP
+           owns	           owns	       S-V
+          about	              -	      B-A1
+             72	              -	      I-A1
+              %	              -	      I-A1
+             of	              -	      I-A1
+       Erbamont	              -	      I-A1
+             's	              -	      I-A1
+         common	              -	      I-A1
+         shares	              -	      I-A1
+    outstanding	              -	      E-A1
+              .	              -	         O
+
+            The	              -	      B-A1	      B-A1	      B-A1	         O
+          offer	              -	      E-A1	      E-A1	      E-A1	         O
+             is	             is	       S-V	         O	         O	         O
+          being	          being	    B-C-A1	       S-V	         O	         O
+       launched	       launched	    I-C-A1	    B-C-A1	       S-V	         O
+       pursuant	              -	    I-C-A1	    I-C-A1	  B-AM-MNR	         O
+             to	              -	    I-C-A1	    I-C-A1	  I-AM-MNR	         O
+              a	              -	    I-C-A1	    I-C-A1	  I-AM-MNR	         O
+     previously	              -	    I-C-A1	    I-C-A1	  I-AM-MNR	  S-AM-TMP
+      announced	      announced	    I-C-A1	    I-C-A1	  I-AM-MNR	       S-V
+      agreement	              -	    I-C-A1	    I-C-A1	  I-AM-MNR	      S-A1
+        between	              -	    I-C-A1	    I-C-A1	  I-AM-MNR	         O
+            the	              -	    I-C-A1	    I-C-A1	  I-AM-MNR	         O
+      companies	              -	    E-C-A1	    E-C-A1	  E-AM-MNR	         O
+              .	              -	         O	         O	         O	         O
+

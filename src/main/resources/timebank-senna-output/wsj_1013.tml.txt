@@ -1,0 +1,804 @@
+       Columbia	              -	      B-A1	         O	      B-A0
+        Savings	              -	      I-A1	         O	      I-A0
+            amp	              -	      I-A1	         O	      I-A0
+           Loan	              -	      I-A1	         O	      I-A0
+    Association	              -	      E-A1	         O	      E-A0
+              ,	              -	         O	         O	         O
+        reeling	        reeling	       S-V	         O	  B-AM-ADV
+           from	              -	      B-A2	         O	  I-AM-ADV
+thrift-accounting	              -	      I-A2	      B-A1	  I-AM-ADV
+        changes	              -	      I-A2	      E-A1	  I-AM-ADV
+       mandated	       mandated	      I-A2	       S-V	  I-AM-ADV
+             by	              -	      I-A2	      B-A0	  I-AM-ADV
+       Congress	              -	      I-A2	      E-A0	  I-AM-ADV
+            and	              -	      I-A2	         O	  I-AM-ADV
+            the	              -	      I-A2	         O	  I-AM-ADV
+         recent	              -	      I-A2	         O	  I-AM-ADV
+       collapse	              -	      I-A2	         O	  I-AM-ADV
+             of	              -	      I-A2	         O	  I-AM-ADV
+            the	              -	      I-A2	         O	  I-AM-ADV
+      junk-bond	              -	      I-A2	         O	  I-AM-ADV
+         market	              -	      E-A2	         O	  E-AM-ADV
+              ,	              -	         O	         O	         O
+      announced	      announced	         O	         O	       S-V
+              a	              -	         O	         O	      B-A1
+           loss	              -	         O	         O	      I-A1
+            for	              -	         O	         O	      I-A1
+            the	              -	         O	         O	      I-A1
+          third	              -	         O	         O	      I-A1
+        quarter	              -	         O	         O	      I-A1
+             of	              -	         O	         O	      I-A1
+              $	              -	         O	         O	      I-A1
+          226.3	              -	         O	         O	      I-A1
+        million	              -	         O	         O	      I-A1
+              ,	              -	         O	         O	      I-A1
+             or	              -	         O	         O	      I-A1
+              $	              -	         O	         O	      I-A1
+          11.57	              -	         O	         O	      I-A1
+              a	              -	         O	         O	      I-A1
+          share	              -	         O	         O	      E-A1
+              .	              -	         O	         O	         O
+
+            For	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+        quarter	              -	  I-AM-TMP
+              a	              -	  I-AM-TMP
+           year	              -	  I-AM-TMP
+            ago	              -	  E-AM-TMP
+              ,	              -	         O
+       Columbia	              -	      S-A0
+       reported	       reported	       S-V
+       earnings	              -	      B-A1
+             of	              -	      I-A1
+              $	              -	      I-A1
+           16.3	              -	      I-A1
+        million	              -	      I-A1
+              ,	              -	      I-A1
+             or	              -	      I-A1
+             37	              -	      I-A1
+          cents	              -	      I-A1
+              a	              -	      I-A1
+          share	              -	      E-A1
+              .	              -	         O
+
+          Total	              -	      B-A1
+         assets	              -	      E-A1
+      increased	      increased	       S-V
+             to	              -	      B-A4
+              $	              -	      I-A4
+           12.7	              -	      I-A4
+        billion	              -	      E-A4
+             in	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+         latest	              -	  I-AM-TMP
+        quarter	              -	  E-AM-TMP
+           from	              -	      B-A3
+              $	              -	      I-A3
+           12.4	              -	      I-A3
+        billion	              -	      I-A3
+              a	              -	      I-A3
+           year	              -	      I-A3
+        earlier	              -	      E-A3
+              .	              -	         O
+
+            The	              -	      B-A1	         O
+           loss	              -	      E-A1	         O
+          stems	          stems	       S-V	         O
+           from	              -	      B-A2	         O
+              $	              -	      I-A2	         O
+          357.5	              -	      I-A2	         O
+        million	              -	      I-A2	         O
+             of	              -	      I-A2	         O
+    write-downs	              -	      I-A2	         O
+             on	              -	      I-A2	         O
+       Columbia	              -	      I-A2	      B-A2
+             's	              -	      I-A2	      I-A2
+              $	              -	      I-A2	      I-A2
+            4.4	              -	      I-A2	      I-A2
+        billion	              -	      I-A2	      I-A2
+     high-yield	              -	      I-A2	      I-A2
+     investment	              -	      I-A2	      I-A2
+     securities	              -	      I-A2	      I-A2
+      portfolio	              -	      I-A2	      E-A2
+              ,	              -	      I-A2	         O
+          which	              -	      I-A2	    S-R-A2
+       includes	       includes	      I-A2	       S-V
+          about	              -	      I-A2	      B-A1
+              $	              -	      I-A2	      I-A1
+            3.7	              -	      I-A2	      I-A1
+        billion	              -	      I-A2	      I-A1
+             of	              -	      I-A2	      I-A1
+           junk	              -	      I-A2	      I-A1
+          bonds	              -	      I-A2	      I-A1
+              ,	              -	      I-A2	      I-A1
+              $	              -	      I-A2	      I-A1
+            400	              -	      I-A2	      I-A1
+        million	              -	      I-A2	      I-A1
+             of	              -	      I-A2	      I-A1
+      preferred	              -	      I-A2	      I-A1
+          stock	              -	      I-A2	      I-A1
+              ,	              -	      I-A2	      I-A1
+            and	              -	      I-A2	      I-A1
+       Treasury	              -	      I-A2	      I-A1
+     securities	              -	      E-A2	      E-A1
+              .	              -	         O	         O
+
+       Columbia	              -	      S-A0
+           owes	           owes	       S-V
+            its	              -	      B-A1
+    spectacular	              -	      I-A1
+         growth	              -	      E-A1
+             in	              -	  B-AM-TMP
+         recent	              -	  I-AM-TMP
+          years	              -	  E-AM-TMP
+             to	              -	      B-A2
+            its	              -	      I-A2
+      junk-bond	              -	      I-A2
+      portfolio	              -	      I-A2
+              ,	              -	      I-A2
+            the	              -	      I-A2
+        largest	              -	      I-A2
+             of	              -	      I-A2
+            any	              -	      I-A2
+           U.S.	              -	      I-A2
+         thrift	              -	      E-A2
+              .	              -	         O
+
+           Much	              -	      B-A1	      B-A1	      B-A1
+             of	              -	      I-A1	      I-A1	      I-A1
+       Columbia	              -	      I-A1	      I-A1	      I-A1
+             's	              -	      I-A1	      I-A1	      I-A1
+      junk-bond	              -	      I-A1	      I-A1	      I-A1
+        trading	              -	      E-A1	      E-A1	      E-A1
+            has	            has	       S-V	         O	         O
+           been	           been	      B-A1	       S-V	         O
+           done	           done	      I-A1	  B-AM-ADV	       S-V
+        through	              -	      I-A1	  I-AM-ADV	  B-AM-MNR
+            the	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+     high-yield	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+     department	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+             of	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+            its	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+        Beverly	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+          Hills	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+       neighbor	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+              ,	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+         Drexel	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+        Burnham	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+        Lambert	              -	      I-A1	  I-AM-ADV	  I-AM-MNR
+            Inc	              -	      E-A1	  E-AM-ADV	  E-AM-MNR
+              .	              -	         O	         O	         O
+
+            For	              -	  B-AM-TMP	         O
+            the	              -	  I-AM-TMP	         O
+           nine	              -	  I-AM-TMP	         O
+         months	              -	  E-AM-TMP	         O
+              ,	              -	         O	         O
+         losses	              -	      S-A1	         O
+        totaled	        totaled	       S-V	         O
+              $	              -	      B-A2	      B-A1
+            212	              -	      I-A2	      I-A1
+        million	              -	      I-A2	      I-A1
+              ,	              -	      I-A2	      I-A1
+             or	              -	      I-A2	      I-A1
+              $	              -	      I-A2	      I-A1
+          10.83	              -	      I-A2	      I-A1
+              a	              -	      I-A2	      I-A1
+          share	              -	      E-A2	      E-A1
+              ,	              -	         O	         O
+       compared	       compared	  B-AM-ADV	       S-V
+           with	              -	  I-AM-ADV	      B-A2
+            net	              -	  I-AM-ADV	      I-A2
+         income	              -	  I-AM-ADV	      I-A2
+             of	              -	  I-AM-ADV	      I-A2
+              $	              -	  I-AM-ADV	      I-A2
+           48.7	              -	  I-AM-ADV	      I-A2
+        million	              -	  I-AM-ADV	      I-A2
+              ,	              -	  I-AM-ADV	      I-A2
+             or	              -	  I-AM-ADV	      I-A2
+              $	              -	  I-AM-ADV	      I-A2
+           1.11	              -	  I-AM-ADV	      I-A2
+              a	              -	  I-AM-ADV	      I-A2
+          share	              -	  I-AM-ADV	      I-A2
+              ,	              -	  I-AM-ADV	      I-A2
+              a	              -	  I-AM-ADV	      I-A2
+           year	              -	  I-AM-ADV	      I-A2
+        earlier	              -	  E-AM-ADV	      E-A2
+              .	              -	         O	         O
+
+            The	              -	      B-A2
+        results	              -	      E-A2
+        include	        include	       S-V
+              a	              -	      B-A1
+              $	              -	      I-A1
+          130.2	              -	      I-A1
+        million	              -	      I-A1
+     write-down	              -	      I-A1
+             of	              -	      I-A1
+            the	              -	      I-A1
+     securities	              -	      I-A1
+             in	              -	      I-A1
+            the	              -	      I-A1
+     high-yield	              -	      I-A1
+      portfolio	              -	      I-A1
+             to	              -	      I-A1
+            the	              -	      I-A1
+          lower	              -	      I-A1
+             of	              -	      I-A1
+          their	              -	      I-A1
+           cost	              -	      I-A1
+             or	              -	      I-A1
+         market	              -	      I-A1
+          value	              -	      E-A1
+              .	              -	         O
+
+       Columbia	              -	      S-A0	         O
+           also	              -	  S-AM-DIS	         O
+          added	          added	       S-V	         O
+              $	              -	      B-A1	         O
+          227.3	              -	      I-A1	         O
+        million	              -	      I-A1	         O
+             to	              -	      I-A1	         O
+       reserves	              -	      I-A1	         O
+            for	              -	      I-A1	         O
+         losses	              -	      I-A1	         O
+             on	              -	      I-A1	         O
+            the	              -	      I-A1	         O
+      portfolio	              -	      E-A1	         O
+              ,	              -	         O	         O
+     increasing	     increasing	  B-AM-ADV	       S-V
+        general	              -	  I-AM-ADV	      B-A1
+       reserves	              -	  I-AM-ADV	      E-A1
+             to	              -	  I-AM-ADV	      B-A4
+              $	              -	  I-AM-ADV	      I-A4
+            300	              -	  I-AM-ADV	      I-A4
+        million	              -	  I-AM-ADV	      I-A4
+              ,	              -	  I-AM-ADV	      I-A4
+             or	              -	  I-AM-ADV	      I-A4
+          about	              -	  I-AM-ADV	      I-A4
+            6.7	              -	  I-AM-ADV	      I-A4
+              %	              -	  I-AM-ADV	      I-A4
+             of	              -	  I-AM-ADV	      I-A4
+            the	              -	  I-AM-ADV	      I-A4
+          total	              -	  I-AM-ADV	      I-A4
+      portfolio	              -	  I-AM-ADV	      I-A4
+              ,	              -	  I-AM-ADV	      I-A4
+             as	              -	  I-AM-ADV	      I-A4
+             of	              -	  I-AM-ADV	      I-A4
+          Sept.	              -	  I-AM-ADV	      I-A4
+             30	              -	  E-AM-ADV	      E-A4
+              .	              -	         O	         O
+
+             On	              -	  B-AM-TMP
+           June	              -	  I-AM-TMP
+             30	              -	  E-AM-TMP
+              ,	              -	         O
+           loss	              -	      B-A1
+       reserves	              -	      E-A1
+          stood	          stood	       S-V
+             at	              -	      B-A2
+              $	              -	      I-A2
+          108.3	              -	      I-A2
+        million	              -	      E-A2
+              .	              -	         O
+
+         Thrift	              -	      B-A0	         O	         O	         O
+      officials	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            the	              -	      B-A1	      B-A1	      B-A1	      B-A2
+              $	              -	      I-A1	      I-A1	      I-A1	      I-A2
+            300	              -	      I-A1	      I-A1	      I-A1	      I-A2
+        million	              -	      I-A1	      I-A1	      I-A1	      I-A2
+        reserve	              -	      I-A1	      E-A1	      E-A1	      E-A2
+           will	              -	      I-A1	  S-AM-MOD	  S-AM-MOD	         O
+             be	             be	      I-A1	       S-V	         O	         O
+       adjusted	       adjusted	      I-A1	    B-C-A1	       S-V	         O
+      quarterly	              -	      I-A1	    E-C-A1	  S-AM-TMP	         O
+            and	              -	      I-A1	         O	         O	         O
+           will	              -	      I-A1	         O	         O	  S-AM-MOD
+        reflect	        reflect	      I-A1	         O	         O	       S-V
+            the	              -	      I-A1	         O	         O	      B-A1
+           rate	              -	      I-A1	         O	         O	      I-A1
+             of	              -	      I-A1	         O	         O	      I-A1
+   dispositions	              -	      I-A1	         O	         O	      I-A1
+            and	              -	      I-A1	         O	         O	      I-A1
+         market	              -	      I-A1	         O	         O	      I-A1
+     conditions	              -	      E-A1	         O	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A2	         O	         O	         O
+    adjustments	              -	      E-A2	         O	         O	         O
+         result	         result	       S-V	         O	         O	         O
+           from	              -	      B-A1	         O	         O	         O
+            the	              -	      I-A1	         O	      B-A0	         O
+       recently	              -	      I-A1	  S-AM-TMP	      I-A0	         O
+         passed	         passed	      I-A1	       S-V	      I-A0	         O
+thrift-industry	              -	      I-A1	      B-A1	      I-A0	         O
+        bailout	              -	      I-A1	      I-A1	      I-A0	         O
+    legislation	              -	      I-A1	      E-A1	      E-A0	         O
+              ,	              -	      I-A1	         O	         O	         O
+          which	              -	      I-A1	         O	    S-R-A0	         O
+       requires	       requires	      I-A1	         O	       S-V	         O
+        thrifts	              -	      I-A1	         O	      B-A1	      S-A0
+             to	              -	      I-A1	         O	      I-A1	         O
+         divest	         divest	      I-A1	         O	      I-A1	       S-V
+            all	              -	      I-A1	         O	      I-A1	      B-A1
+     high-yield	              -	      I-A1	         O	      I-A1	      I-A1
+           bond	              -	      I-A1	         O	      I-A1	      I-A1
+    investments	              -	      I-A1	         O	      I-A1	      E-A1
+             by	              -	      I-A1	         O	      I-A1	  B-AM-TMP
+           1994	              -	      E-A1	         O	      E-A1	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+     Previously	              -	  S-AM-TMP	  S-AM-TMP	         O	         O	         O
+              ,	              -	         O	         O	         O	         O	         O
+       Columbia	              -	      S-A0	         O	      S-A0	         O	         O
+            did	            did	       S-V	         O	         O	         O	         O
+            n't	              -	  S-AM-NEG	  S-AM-NEG	         O	         O	         O
+           have	           have	         O	       S-V	         O	         O	         O
+             to	              -	         O	         O	         O	         O	         O
+         adjust	         adjust	         O	         O	       S-V	         O	         O
+            the	              -	         O	         O	      B-A1	      B-A2	         O
+           book	              -	         O	         O	      I-A1	      I-A2	         O
+          value	              -	         O	         O	      I-A1	      I-A2	         O
+             of	              -	         O	         O	      I-A1	      I-A2	         O
+            its	              -	         O	         O	      I-A1	      I-A2	         O
+      junk-bond	              -	         O	         O	      I-A1	      I-A2	         O
+       holdings	              -	         O	         O	      E-A1	      E-A2	         O
+             to	              -	         O	         O	  B-AM-PNC	         O	         O
+        reflect	        reflect	         O	         O	  I-AM-PNC	       S-V	         O
+       declines	              -	         O	         O	  I-AM-PNC	      B-A1	         O
+             in	              -	         O	         O	  I-AM-PNC	      I-A1	         O
+         market	              -	         O	         O	  I-AM-PNC	      I-A1	         O
+         prices	              -	         O	         O	  E-AM-PNC	      E-A1	         O
+              ,	              -	         O	         O	         O	         O	         O
+        because	              -	         O	         O	         O	         O	         O
+             it	              -	         O	         O	         O	         O	      S-A0
+           held	           held	         O	         O	         O	         O	       S-V
+            the	              -	         O	         O	         O	         O	      B-A1
+          bonds	              -	         O	         O	         O	         O	      E-A1
+             as	              -	         O	         O	         O	         O	  B-AM-ADV
+      long-term	              -	         O	         O	         O	         O	  I-AM-ADV
+    investments	              -	         O	         O	         O	         O	  E-AM-ADV
+              .	              -	         O	         O	         O	         O	         O
+
+        Because	              -	         O	  B-AM-CAU	         O
+       Columbia	              -	      S-A0	  I-AM-CAU	         O
+            now	              -	  S-AM-TMP	  I-AM-CAU	         O
+           must	              -	  S-AM-MOD	  I-AM-CAU	         O
+           sell	           sell	       S-V	  I-AM-CAU	         O
+            the	              -	      B-A1	  I-AM-CAU	         O
+          bonds	              -	      E-A1	  I-AM-CAU	         O
+         within	              -	  B-AM-TMP	  I-AM-CAU	         O
+           five	              -	  I-AM-TMP	  I-AM-CAU	         O
+          years	              -	  E-AM-TMP	  E-AM-CAU	         O
+              ,	              -	         O	         O	         O
+     accounting	              -	         O	      B-A0	         O
+          rules	              -	         O	      E-A0	         O
+        require	        require	         O	       S-V	         O
+            the	              -	         O	      B-A2	      B-A0
+         thrift	              -	         O	      E-A2	      E-A0
+             to	              -	         O	      B-A1	         O
+          value	          value	         O	      I-A1	       S-V
+            the	              -	         O	      I-A1	      B-A1
+          bonds	              -	         O	      I-A1	      E-A1
+             at	              -	         O	      I-A1	      B-A2
+            the	              -	         O	      I-A1	      I-A2
+          lower	              -	         O	      I-A1	      I-A2
+             of	              -	         O	      I-A1	      I-A2
+           cost	              -	         O	      I-A1	      I-A2
+             or	              -	         O	      I-A1	      I-A2
+         market	              -	         O	      I-A1	      I-A2
+         prices	              -	         O	      E-A1	      E-A2
+              .	              -	         O	         O	         O
+
+            For	              -	  B-AM-PNC	         O	         O	         O
+            its	              -	  I-AM-PNC	         O	         O	         O
+         future	              -	  I-AM-PNC	         O	         O	         O
+       strategy	              -	  E-AM-PNC	         O	         O	         O
+              ,	              -	         O	         O	         O	         O
+       Columbia	              -	      B-A0	         O	         O	         O
+      officials	              -	      E-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            the	              -	      B-A1	      B-A0	      B-A0	      B-A0
+         thrift	              -	      I-A1	      E-A0	      E-A0	      E-A0
+            may	              -	      I-A1	  S-AM-MOD	         O	         O
+         branch	         branch	      I-A1	       B-V	         O	         O
+            out	              -	      I-A1	       E-V	         O	         O
+           into	              -	      I-A1	      B-A1	         O	         O
+     commercial	              -	      I-A1	      I-A1	         O	         O
+        lending	              -	      I-A1	      I-A1	         O	         O
+             or	              -	      I-A1	      I-A1	         O	         O
+       managing	       managing	      I-A1	      I-A1	       S-V	         O
+        outside	              -	      I-A1	      I-A1	      B-A1	         O
+    investments	              -	      I-A1	      I-A1	      E-A1	         O
+              ,	              -	      I-A1	      I-A1	         O	         O
+             as	              -	      I-A1	      I-A1	         O	         O
+           well	              -	      I-A1	      I-A1	         O	         O
+             as	              -	      I-A1	      I-A1	         O	         O
+        beefing	        beefing	      I-A1	      I-A1	         O	       B-V
+             up	              -	      I-A1	      I-A1	         O	       E-V
+           more	              -	      I-A1	      I-A1	         O	      B-A1
+    traditional	              -	      I-A1	      I-A1	         O	      I-A1
+         thrift	              -	      I-A1	      I-A1	         O	      I-A1
+     activities	              -	      E-A1	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+            The	              -	      B-A2
+      quarterly	              -	      I-A2
+        results	              -	      E-A2
+           also	              -	  S-AM-DIS
+      reflected	      reflected	       S-V
+              $	              -	      B-A1
+           21.4	              -	      I-A1
+        million	              -	      I-A1
+             in	              -	      I-A1
+  non-recurring	              -	      I-A1
+         losses	              -	      I-A1
+           from	              -	      I-A1
+     commercial	              -	      I-A1
+    real-estate	              -	      I-A1
+     activities	              -	      I-A1
+             in	              -	      I-A1
+     California	              -	      E-A1
+              .	              -	         O
+
+         Thomas	              -	      B-A0	         O	         O
+        Spiegel	              -	      I-A0	         O	         O
+              ,	              -	      I-A0	         O	         O
+       Columbia	              -	      I-A0	         O	         O
+             's	              -	      I-A0	         O	         O
+       chairman	              -	      I-A0	         O	         O
+              ,	              -	      E-A0	         O	         O
+           said	           said	       S-V	         O	         O
+             in	              -	  B-AM-LOC	         O	         O
+              a	              -	  I-AM-LOC	         O	         O
+      statement	              -	  E-AM-LOC	         O	         O
+           that	              -	      B-A1	         O	         O
+            the	              -	      I-A1	      B-A1	      B-A1
+         thrift	              -	      I-A1	      E-A1	      E-A1
+            was	            was	      I-A1	       S-V	         O
+   disappointed	   disappointed	      I-A1	  B-AM-CAU	       S-V
+             by	              -	      I-A1	  I-AM-CAU	      B-A0
+            the	              -	      I-A1	  I-AM-CAU	      I-A0
+        effects	              -	      I-A1	  I-AM-CAU	      I-A0
+             of	              -	      I-A1	  I-AM-CAU	      I-A0
+            the	              -	      I-A1	  I-AM-CAU	      I-A0
+     accounting	              -	      I-A1	  I-AM-CAU	      I-A0
+        changes	              -	      E-A1	  E-AM-CAU	      E-A0
+              .	              -	         O	         O	         O
+
+            But	              -	  S-AM-DIS	         O	         O	         O
+             he	              -	      S-A0	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+       Columbia	              -	      B-A1	      S-A1	         O	         O
+        remains	        remains	      I-A1	       S-V	         O	         O
+            one	              -	      I-A1	      B-A3	         O	         O
+             of	              -	      I-A1	      I-A3	         O	         O
+            the	              -	      I-A1	      I-A3	         O	         O
+           most	              -	      I-A1	      I-A3	         O	         O
+       strongly	              -	      I-A1	      I-A3	  S-AM-MNR	         O
+    capitalized	    capitalized	      I-A1	      I-A3	       S-V	         O
+        thrifts	              -	      I-A1	      I-A3	      B-A1	         O
+             in	              -	      I-A1	      I-A3	      I-A1	         O
+            the	              -	      I-A1	      I-A3	      I-A1	         O
+       industry	              -	      I-A1	      I-A3	      I-A1	         O
+              ,	              -	      I-A1	      I-A3	      I-A1	         O
+          based	          based	      I-A1	      I-A3	      I-A1	       S-V
+             on	              -	      I-A1	      I-A3	      I-A1	      B-A2
+            the	              -	      I-A1	      I-A3	      I-A1	      I-A2
+       economic	              -	      I-A1	      I-A3	      I-A1	      I-A2
+          value	              -	      I-A1	      I-A3	      I-A1	      I-A2
+             of	              -	      I-A1	      I-A3	      I-A1	      I-A2
+            its	              -	      I-A1	      I-A3	      I-A1	      I-A2
+         assets	              -	      I-A1	      I-A3	      I-A1	      I-A2
+            and	              -	      I-A1	      I-A3	      I-A1	      I-A2
+       tangible	              -	      I-A1	      I-A3	      I-A1	      I-A2
+        capital	              -	      E-A1	      E-A3	      E-A1	      E-A2
+              .	              -	         O	         O	         O	         O
+
+       Columbia	              -	      S-A0
+      announced	      announced	       S-V
+            the	              -	      B-A1
+        results	              -	      E-A1
+          after	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+          close	              -	  I-AM-TMP
+             of	              -	  I-AM-TMP
+            the	              -	  I-AM-TMP
+          stock	              -	  I-AM-TMP
+         market	              -	  E-AM-TMP
+              .	              -	         O
+
+            Its	              -	      B-A1
+         shares	              -	      E-A1
+         closed	         closed	       S-V
+             at	              -	  B-AM-EXT
+              $	              -	  I-AM-EXT
+          5.125	              -	  I-AM-EXT
+           each	              -	  E-AM-EXT
+             in	              -	  B-AM-LOC
+      composite	              -	  I-AM-LOC
+            New	              -	  I-AM-LOC
+           York	              -	  I-AM-LOC
+          Stock	              -	  I-AM-LOC
+       Exchange	              -	  I-AM-LOC
+        trading	              -	  E-AM-LOC
+              ,	              -	         O
+           down	              -	  B-AM-MNR
+           37.5	              -	  I-AM-MNR
+          cents	              -	  E-AM-MNR
+              .	              -	         O
+
+            The	              -	      B-A0	      B-A1	      B-A1	         O	         O	         O	         O	         O
+          price	              -	      I-A0	      I-A1	      I-A1	         O	         O	         O	         O	         O
+             of	              -	      I-A0	      I-A1	      I-A1	         O	         O	         O	         O	         O
+       Columbia	              -	      I-A0	      I-A1	      I-A1	         O	         O	         O	         O	         O
+         shares	              -	      E-A0	      E-A1	      E-A1	         O	         O	         O	         O	         O
+            has	            has	       S-V	         O	         O	         O	         O	         O	         O	         O
+           been	           been	         O	       S-V	         O	         O	         O	         O	         O	         O
+            cut	            cut	         O	    B-C-A1	       S-V	         O	         O	         O	         O	         O
+         nearly	              -	         O	    I-C-A1	      B-A2	         O	         O	         O	         O	         O
+             in	              -	         O	    I-C-A1	      I-A2	         O	         O	         O	         O	         O
+           half	              -	         O	    E-C-A1	      E-A2	         O	         O	         O	         O	         O
+          since	              -	         O	  B-AM-TMP	  B-AM-TMP	         O	         O	         O	         O	         O
+         August	              -	         O	  I-AM-TMP	  I-AM-TMP	  S-AM-TMP	         O	         O	         O	         O
+              ,	              -	         O	  I-AM-TMP	  I-AM-TMP	         O	         O	         O	         O	         O
+           when	              -	         O	  I-AM-TMP	  I-AM-TMP	         O	         O	         O	         O	         O
+           they	              -	         O	  I-AM-TMP	  I-AM-TMP	      S-A1	         O	         O	         O	         O
+         traded	         traded	         O	  I-AM-TMP	  I-AM-TMP	       S-V	         O	         O	         O	         O
+             at	              -	         O	  I-AM-TMP	  I-AM-TMP	      B-A3	         O	         O	         O	         O
+          about	              -	         O	  I-AM-TMP	  I-AM-TMP	      I-A3	         O	         O	         O	         O
+              $	              -	         O	  I-AM-TMP	  I-AM-TMP	      I-A3	         O	         O	         O	         O
+             10	              -	         O	  I-AM-TMP	  I-AM-TMP	      E-A3	         O	         O	         O	         O
+              ,	              -	         O	  I-AM-TMP	  I-AM-TMP	         O	         O	         O	         O	         O
+             as	              -	  B-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	         O	         O	         O	         O
+      investors	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      S-A0	         O	         O	         O
+     apparently	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	  S-AM-ADV	         O	         O	         O
+       realized	       realized	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	       S-V	         O	         O	         O
+           that	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      B-A1	         O	         O	         O
+            the	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      I-A1	      B-A1	      B-A1	      B-A0
+         thrift	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      I-A1	      E-A1	      E-A1	      E-A0
+          would	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      I-A1	  S-AM-MOD	  S-AM-MOD	         O
+             be	             be	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      I-A1	       S-V	         O	         O
+         forced	         forced	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      I-A1	    B-C-A1	       S-V	         O
+             to	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      I-A1	    I-C-A1	      B-A2	         O
+           take	           take	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      I-A1	    I-C-A1	      I-A2	       S-V
+              a	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      I-A1	    I-C-A1	      I-A2	      B-A1
+            big	              -	  I-AM-TMP	  I-AM-TMP	  I-AM-TMP	         O	      I-A1	    I-C-A1	      I-A2	      I-A1
+     write-down	              -	  E-AM-TMP	  E-AM-TMP	  E-AM-TMP	         O	      E-A1	    E-C-A1	      E-A2	      E-A1
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O
+
+            The	              -	      B-A1
+          stock	              -	      I-A1
+             's	              -	      I-A1
+        decline	              -	      E-A1
+    accelerated	    accelerated	       S-V
+             in	              -	  B-AM-TMP
+            the	              -	  I-AM-TMP
+           past	              -	  I-AM-TMP
+            two	              -	  I-AM-TMP
+          weeks	              -	  E-AM-TMP
+              ,	              -	         O
+           from	              -	      B-A3
+              a	              -	      I-A3
+          price	              -	      I-A3
+             of	              -	      I-A3
+              $	              -	      I-A3
+              8	              -	      I-A3
+              a	              -	      I-A3
+          share	              -	      I-A3
+             on	              -	      I-A3
+           Oct.	              -	      I-A3
+              9	              -	      E-A3
+              .	              -	         O
+
+       Columbia	              -	      B-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O
+      officials	              -	      E-A0	         O	         O	         O	         O	         O	         O	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O	         O	         O	         O	         O	         O	         O
+           they	              -	      B-A1	      S-A0	      S-A0	         O	         O	         O	         O	         O	         O	         O
+             do	             do	      I-A1	       S-V	         O	         O	         O	         O	         O	         O	         O	         O
+            n't	              -	      I-A1	      B-A1	  S-AM-NEG	         O	         O	         O	         O	         O	         O	         O
+           know	           know	      I-A1	      I-A1	       S-V	         O	         O	         O	         O	         O	         O	         O
+            how	              -	      I-A1	      I-A1	      B-A1	  B-AM-MNR	         O	         O	         O	         O	         O	         O
+        quickly	              -	      I-A1	      I-A1	      I-A1	  E-AM-MNR	         O	         O	         O	         O	         O	         O
+           they	              -	      I-A1	      I-A1	      I-A1	      S-A0	         O	         O	         O	         O	         O	         O
+           will	              -	      I-A1	      I-A1	      I-A1	  S-AM-MOD	         O	         O	         O	         O	         O	         O
+        dispose	        dispose	      I-A1	      I-A1	      I-A1	       S-V	         O	         O	         O	         O	         O	         O
+             of	              -	      I-A1	      I-A1	      I-A1	      B-A1	         O	         O	         O	         O	         O	         O
+            the	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+         thrift	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+             's	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+           junk	              -	      I-A1	      I-A1	      I-A1	      I-A1	         O	         O	         O	         O	         O	         O
+          bonds	              -	      I-A1	      E-A1	      I-A1	      E-A1	         O	         O	         O	         O	         O	         O
+              ,	              -	      I-A1	         O	      I-A1	         O	         O	         O	         O	         O	         O	         O
+        because	              -	      I-A1	  B-AM-CAU	      I-A1	         O	         O	         O	         O	         O	         O	         O
+        federal	              -	      I-A1	  I-AM-CAU	      I-A1	         O	         O	         O	         O	      B-A0	      B-A1	      B-A1
+    regulations	              -	      I-A1	  I-AM-CAU	      I-A1	         O	         O	         O	         O	      I-A0	      I-A1	      I-A1
+              ,	              -	      I-A1	  I-AM-CAU	      I-A1	         O	         O	         O	         O	      I-A0	      I-A1	      I-A1
+           such	              -	      I-A1	  I-AM-CAU	      I-A1	         O	         O	         O	         O	      I-A0	      I-A1	      I-A1
+             as	              -	      I-A1	  I-AM-CAU	      I-A1	         O	         O	         O	         O	      I-A0	      I-A1	      I-A1
+          those	              -	      I-A1	  I-AM-CAU	      I-A1	         O	      S-A0	         O	         O	      I-A0	      I-A1	      I-A1
+           that	              -	      I-A1	  I-AM-CAU	      I-A1	         O	    S-R-A0	         O	         O	      I-A0	      I-A1	      I-A1
+          would	              -	      I-A1	  I-AM-CAU	      I-A1	         O	  S-AM-MOD	         O	         O	      I-A0	      I-A1	      I-A1
+          allow	          allow	      I-A1	  I-AM-CAU	      I-A1	         O	       S-V	         O	         O	      I-A0	      I-A1	      I-A1
+        thrifts	              -	      I-A1	  I-AM-CAU	      I-A1	         O	      B-A1	      S-A0	      S-A0	      I-A0	      I-A1	      I-A1
+             to	              -	      I-A1	  I-AM-CAU	      I-A1	         O	      I-A1	         O	         O	      I-A0	      I-A1	      I-A1
+       continue	       continue	      I-A1	  I-AM-CAU	      I-A1	         O	      I-A1	       S-V	         O	      I-A0	      I-A1	      I-A1
+        holding	        holding	      I-A1	  I-AM-CAU	      I-A1	         O	      I-A1	      B-A1	       S-V	      I-A0	      I-A1	      I-A1
+            the	              -	      I-A1	  I-AM-CAU	      I-A1	         O	      I-A1	      I-A1	      B-A1	      I-A0	      I-A1	      I-A1
+          bonds	              -	      I-A1	  I-AM-CAU	      I-A1	         O	      I-A1	      I-A1	      E-A1	      I-A0	      I-A1	      I-A1
+             in	              -	      I-A1	  I-AM-CAU	      I-A1	         O	      I-A1	      I-A1	  B-AM-LOC	      I-A0	      I-A1	      I-A1
+     separately	              -	      I-A1	  I-AM-CAU	      I-A1	         O	      I-A1	      I-A1	  I-AM-LOC	      I-A0	      I-A1	      I-A1
+    capitalized	              -	      I-A1	  I-AM-CAU	      I-A1	         O	      I-A1	      I-A1	  I-AM-LOC	      I-A0	      I-A1	      I-A1
+   subsidiaries	              -	      I-A1	  I-AM-CAU	      I-A1	         O	      E-A1	      E-A1	  E-AM-LOC	      I-A0	      I-A1	      I-A1
+              ,	              -	      I-A1	  I-AM-CAU	      I-A1	         O	         O	         O	         O	      E-A0	      E-A1	      E-A1
+           have	           have	      I-A1	  I-AM-CAU	      I-A1	         O	         O	         O	         O	       S-V	         O	         O
+            n't	              -	      I-A1	  I-AM-CAU	      I-A1	         O	         O	         O	         O	      B-A1	  S-AM-NEG	  S-AM-NEG
+            yet	              -	      I-A1	  I-AM-CAU	      I-A1	         O	         O	         O	         O	      I-A1	  S-AM-TMP	  S-AM-TMP
+           been	           been	      I-A1	  I-AM-CAU	      I-A1	         O	         O	         O	         O	      I-A1	       S-V	         O
+      completed	      completed	      E-A1	  E-AM-CAU	      E-A1	         O	         O	         O	         O	      E-A1	    S-C-A1	       S-V
+              .	              -	         O	         O	         O	         O	         O	         O	         O	         O	         O	         O
+
+       Columbia	              -	      B-A0	         O	         O	         O
+      officials	              -	      E-A0	         O	         O	         O
+           also	              -	  S-AM-DIS	         O	         O	         O
+           said	           said	       S-V	         O	         O	         O
+            the	              -	      B-A1	      B-A0	      B-A0	         O
+         thrift	              -	      I-A1	      E-A0	      E-A0	         O
+         should	              -	      I-A1	  S-AM-MOD	         O	         O
+            n't	              -	      I-A1	  S-AM-NEG	         O	         O
+           face	           face	      I-A1	       S-V	         O	         O
+       problems	              -	      I-A1	      B-A1	         O	         O
+        meeting	        meeting	      I-A1	      I-A1	       S-V	         O
+     regulatory	              -	      I-A1	      I-A1	      B-A1	         O
+        capital	              -	      I-A1	      I-A1	      I-A1	         O
+   requirements	              -	      I-A1	      E-A1	      E-A1	         O
+              ,	              -	      I-A1	         O	         O	         O
+        despite	              -	      I-A1	  B-AM-ADV	         O	         O
+            the	              -	      I-A1	  I-AM-ADV	         O	         O
+          large	              -	      I-A1	  I-AM-ADV	         O	         O
+       reserves	              -	      I-A1	  I-AM-ADV	         O	         O
+            and	              -	      I-A1	  I-AM-ADV	         O	         O
+    write-downs	              -	      I-A1	  I-AM-ADV	         O	      B-A1
+            and	              -	      I-A1	  I-AM-ADV	         O	      I-A1
+        stiffer	              -	      I-A1	  I-AM-ADV	         O	      I-A1
+     regulatory	              -	      I-A1	  I-AM-ADV	         O	      I-A1
+   requirements	              -	      I-A1	  I-AM-ADV	         O	      E-A1
+           that	              -	      I-A1	  I-AM-ADV	         O	    S-R-A1
+         should	              -	      I-A1	  I-AM-ADV	         O	  S-AM-MOD
+             be	             be	      I-A1	  I-AM-ADV	         O	       S-V
+             in	              -	      I-A1	  I-AM-ADV	         O	  B-AM-ADV
+          place	              -	      I-A1	  I-AM-ADV	         O	  E-AM-ADV
+             by	              -	      I-A1	  I-AM-ADV	         O	  B-AM-TMP
+           year	              -	      I-A1	  I-AM-ADV	         O	  I-AM-TMP
+             's	              -	      I-A1	  I-AM-ADV	         O	  I-AM-TMP
+            end	              -	      E-A1	  E-AM-ADV	         O	  E-AM-TMP
+              .	              -	         O	         O	         O	         O
+
+            Its	              -	         O	      B-A1	         O
+          ratio	              -	         O	      I-A1	         O
+             of	              -	         O	      I-A1	         O
+       tangible	              -	         O	      I-A1	         O
+         equity	              -	         O	      I-A1	         O
+             to	              -	         O	      I-A1	         O
+          total	          total	       S-V	      I-A1	         O
+         assets	              -	      S-A1	      I-A1	         O
+             as	              -	  B-AM-TMP	      I-A1	         O
+             of	              -	  I-AM-TMP	      I-A1	         O
+          Sept.	              -	  I-AM-TMP	      I-A1	         O
+             30	              -	  E-AM-TMP	      E-A1	         O
+            was	            was	         O	       S-V	         O
+            3.6	              -	         O	      B-A2	         O
+              %	              -	         O	      E-A2	         O
+              ,	              -	         O	         O	         O
+            and	              -	         O	         O	         O
+          total	              -	         O	         O	      B-A1
+         equity	              -	         O	         O	      E-A1
+            was	            was	         O	         O	       S-V
+              $	              -	         O	         O	      B-A2
+          457.9	              -	         O	         O	      I-A2
+        million	              -	         O	         O	      E-A2
+              .	              -	         O	         O	         O
+
+            The	              -	      B-A0	         O	         O	         O
+         thrift	              -	      E-A0	         O	         O	         O
+     emphasized	     emphasized	       S-V	         O	         O	         O
+           that	              -	      B-A1	         O	         O	         O
+             it	              -	      I-A1	      S-A0	         O	         O
+            has	            has	      I-A1	       S-V	         O	         O
+              a	              -	      I-A1	      B-A1	         O	      B-A0
+          large	              -	      I-A1	      I-A1	         O	      I-A0
+      portfolio	              -	      I-A1	      I-A1	         O	      I-A0
+             of	              -	      I-A1	      I-A1	         O	      I-A0
+         equity	              -	      I-A1	      I-A1	      B-A1	      I-A0
+     securities	              -	      I-A1	      I-A1	      E-A1	      I-A0
+         issued	         issued	      I-A1	      I-A1	       S-V	      I-A0
+             in	              -	      I-A1	      I-A1	  B-AM-MNR	      I-A0
+     connection	              -	      I-A1	      I-A1	  I-AM-MNR	      I-A0
+           with	              -	      I-A1	      I-A1	  I-AM-MNR	      I-A0
+      corporate	              -	      I-A1	      I-A1	  I-AM-MNR	      I-A0
+ restructurings	              -	      I-A1	      I-A1	  I-AM-MNR	      I-A0
+            and	              -	      I-A1	      I-A1	  I-AM-MNR	      I-A0
+      leveraged	              -	      I-A1	      I-A1	  I-AM-MNR	      I-A0
+       buy-outs	              -	      I-A1	      I-A1	  E-AM-MNR	      E-A0
+              ,	              -	      I-A1	      I-A1	         O	         O
+          which	              -	      I-A1	      I-A1	         O	    S-R-A0
+            has	            has	      I-A1	      I-A1	         O	       S-V
+              a	              -	      I-A1	      I-A1	         O	      B-A1
+           book	              -	      I-A1	      I-A1	         O	      I-A1
+          value	              -	      I-A1	      I-A1	         O	      I-A1
+             of	              -	      I-A1	      I-A1	         O	      I-A1
+              $	              -	      I-A1	      I-A1	         O	      I-A1
+             90	              -	      I-A1	      I-A1	         O	      I-A1
+        million	              -	      E-A1	      E-A1	         O	      E-A1
+              .	              -	         O	         O	         O	         O
+
+       Although	              -	         O	         O	         O	         O	  B-AM-ADV	         O
+           many	              -	         O	      B-A0	      B-A1	      B-A1	  I-AM-ADV	         O
+             of	              -	         O	      I-A0	      I-A1	      I-A1	  I-AM-ADV	         O
+            the	              -	      B-A1	      I-A0	      I-A1	      I-A1	  I-AM-ADV	         O
+   transactions	              -	      E-A1	      I-A0	      I-A1	      I-A1	  I-AM-ADV	         O
+        related	        related	       S-V	      I-A0	      I-A1	      I-A1	  I-AM-ADV	         O
+             to	              -	      B-A2	      I-A0	      I-A1	      I-A1	  I-AM-ADV	         O
+          those	              -	      I-A2	      I-A0	      I-A1	      I-A1	  I-AM-ADV	         O
+     securities	              -	      E-A2	      E-A0	      E-A1	      E-A1	  I-AM-ADV	         O
+           have	           have	         O	       S-V	         O	         O	  I-AM-ADV	         O
+            n't	              -	         O	  S-AM-NEG	  S-AM-NEG	  S-AM-NEG	  I-AM-ADV	         O
+           been	           been	         O	         O	       S-V	         O	  I-AM-ADV	         O
+      completed	      completed	         O	         O	    S-C-A1	       S-V	  E-AM-ADV	         O
+              ,	              -	         O	         O	         O	         O	         O	         O
+       Columbia	              -	         O	         O	         O	         O	      S-A0	         O
+           said	           said	         O	         O	         O	         O	       S-V	         O
+            the	              -	         O	         O	         O	         O	      B-A1	      B-A1
+       ultimate	              -	         O	         O	         O	         O	      I-A1	      I-A1
+           gain	              -	         O	         O	         O	         O	      I-A1	      I-A1
+             on	              -	         O	         O	         O	         O	      I-A1	      I-A1
+            the	              -	         O	         O	         O	         O	      I-A1	      I-A1
+           sale	              -	         O	         O	         O	         O	      I-A1	      I-A1
+             of	              -	         O	         O	         O	         O	      I-A1	      I-A1
+          those	              -	         O	         O	         O	         O	      I-A1	      I-A1
+         assets	              -	         O	         O	         O	         O	      I-A1	      E-A1
+           will	              -	         O	         O	         O	         O	      I-A1	  S-AM-MOD
+          range	          range	         O	         O	         O	         O	      I-A1	       S-V
+           from	              -	         O	         O	         O	         O	      I-A1	      B-A3
+              $	              -	         O	         O	         O	         O	      I-A1	      I-A3
+            200	              -	         O	         O	         O	         O	      I-A1	      I-A3
+        million	              -	         O	         O	         O	         O	      I-A1	      E-A3
+             to	              -	         O	         O	         O	         O	      I-A1	      B-A4
+              $	              -	         O	         O	         O	         O	      I-A1	      I-A4
+            300	              -	         O	         O	         O	         O	      I-A1	      I-A4
+        million	              -	         O	         O	         O	         O	      E-A1	      E-A4
+              .	              -	         O	         O	         O	         O	         O	         O
+
+       Columbia	              -	      S-A0
+           also	              -	  S-AM-DIS
+            has	            has	       S-V
+     unrealized	              -	      B-A1
+          gains	              -	      I-A1
+             in	              -	      I-A1
+            its	              -	      I-A1
+         public	              -	      I-A1
+         equity	              -	      I-A1
+     securities	              -	      I-A1
+      portfolio	              -	      I-A1
+             of	              -	      I-A1
+           more	              -	      I-A1
+           than	              -	      I-A1
+              $	              -	      I-A1
+             70	              -	      I-A1
+        million	              -	      E-A1
+              .	              -	         O
+
+          David	              -	      B-A0
+             B.	              -	      I-A0
+         Hilder	              -	      I-A0
+             in	              -	      I-A0
+            New	              -	      I-A0
+           York	              -	      E-A0
+    contributed	    contributed	       S-V
+             to	              -	      B-A2
+           this	              -	      I-A2
+        article	              -	      E-A2
+              .	              -	         O
+
