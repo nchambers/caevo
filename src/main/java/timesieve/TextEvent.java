@@ -61,10 +61,10 @@ public class TextEvent {
   /**
    * Build the object from an XML specification
    */
-  public TextEvent(String sidstr, org.jdom.Element el) {
+  public TextEvent(int sid, org.jdom.Element el) {
     ID = el.getAttributeValue(ID_ELEM);
     addEiidsFromAttributeString(el.getAttributeValue(EIID_ELEM));
-    sid = Integer.valueOf(sidstr);
+    this.sid = sid;
     index = Integer.valueOf(el.getAttributeValue(OFFSET_ELEM));
     text = el.getAttributeValue(STRING_ELEM).replaceAll("\\&\\#.+;", " ").replaceAll("\\n", " "); // replace is new, get rid of newlines
     setTense(el.getAttributeValue(TENSE_ELEM));
@@ -75,6 +75,9 @@ public class TextEvent {
     happened = el.getAttributeValue(HAPPENED_ELEM);
     lowerDuration = el.getAttributeValue(LOWER_DURATION_ELEM);
     upperDuration = el.getAttributeValue(UPPER_DURATION_ELEM);
+  }
+  public TextEvent(String sidstr, org.jdom.Element el) {
+  	this(Integer.valueOf(sidstr), el);
   }
 
   public TextEvent(String id, int sid, int index, Element el) {
