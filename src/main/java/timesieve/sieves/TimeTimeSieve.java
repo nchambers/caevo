@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
 import timesieve.InfoFile;
 import timesieve.Timex;
 import timesieve.tlink.TLink;
@@ -17,10 +20,10 @@ import edu.stanford.nlp.util.Pair;
  */
 public class TimeTimeSieve implements Sieve {
 
-	public List<TLink> annotate(InfoFile info, String docname, List<TLink> currentTLinks) {
-		List<List<Timex>> allTimexes = this.allTimexesBySentencePair(info.getTimexesBySentence(docname));
+	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
+		List<List<Timex>> allTimexes = this.allTimexesBySentencePair(doc.getTimexesBySentence());
 		List<TLink> proposed = new ArrayList<TLink>();
-		Timex creationTime = info.getDocstamp(docname).isEmpty() ? null : info.getDocstamp(docname).get(0);
+		Timex creationTime = doc.getDocstamp().isEmpty() ? null : doc.getDocstamp().get(0);
 		
 		for (List<Timex> closeTimexes : allTimexes) {
 			for (int t1 = 0; t1 < closeTimexes.size(); t1++) {				
@@ -126,7 +129,7 @@ public class TimeTimeSieve implements Sieve {
 	/**
 	 * No training. Just rule-based.
 	 */
-	public void train(InfoFile trainingInfo) {
+	public void train(SieveDocuments trainingInfo) {
 		// no training
 	}
 

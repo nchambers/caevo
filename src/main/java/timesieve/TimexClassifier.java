@@ -33,11 +33,11 @@ public class TimexClassifier {
   boolean debug = false;
   
   AnnotationPipeline timexPipeline = null;
-  InfoFile _infofile;
+  SieveDocuments thedocs;
   
 
-  public TimexClassifier(InfoFile info) {
-    this._infofile = info;
+  public TimexClassifier(SieveDocuments docs) {
+    this.thedocs = docs;
   }
   
 
@@ -57,10 +57,10 @@ public class TimexClassifier {
    * Use the global .info file and destructively mark it up for time expressions.
    */
   public void markupTimex3() {
-    for( String docname : _infofile.getFiles() ) {
-      if( debug ) System.out.println("doc = " + docname);
-      List<Sentence> sentences = _infofile.getSentences(docname);
-      List<Timex> dcts = _infofile.getDocstamp(docname);
+    for( SieveDocument doc : thedocs.getDocuments() ) {
+      if( debug ) System.out.println("doc = " + doc.getDocname());
+      List<SieveSentence> sentences = doc.getSentences();
+      List<Timex> dcts = doc.getDocstamp();
       if( dcts.size() > 1 ) {
         System.out.println("markupTimex3 dct size is " + dcts.size());
         System.exit(1);
@@ -72,13 +72,13 @@ public class TimexClassifier {
       
       // Loop over each sentence and get TLinks.
       int sid = 0;
-      for( Sentence sent : sentences ) {
+      for( SieveSentence sent : sentences ) {
 //        System.out.println("TimexClassifier markupTimex3 tokens = " + sent.tokens());
         List<Timex> stanfordTimex = markupTimex3(sent.tokens(), tid, docDate);
         myRevisedTimex3(stanfordTimex, docDate);
         tid += stanfordTimex.size();
 //        System.out.println("GOT " + stanfordTimex.size() + " new timexes.");
-        _infofile.addTimexes(docname, sid, stanfordTimex);
+        doc.addTimexes(sid, stanfordTimex);
         sid++;
       }
     }

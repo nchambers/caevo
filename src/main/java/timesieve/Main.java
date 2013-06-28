@@ -36,7 +36,7 @@ public class Main {
 	TextEventClassifier eventClassifier;
 	TimexClassifier timexClassifier;
 	
-	InfoFile info;
+	SieveDocuments info;
 	Closure closure;
 	String outpath = "sieve-output.xml";
 	boolean debug = true;
@@ -69,7 +69,7 @@ public class Main {
 
 		if( props.containsKey("info") ) {
 			System.out.println("Checking for infofile at " + props.getProperty("info"));
-			info = new InfoFile(props.getProperty("info"));
+			info = new SieveDocuments(props.getProperty("info"));
 		}
 		
 		init();
@@ -136,15 +136,16 @@ public class Main {
 		runSieves(info);
 	}	
 
-	public void runSieves(InfoFile info) {
+	public void runSieves(SieveDocuments info) {
 		List<TLink> currentTLinks = new ArrayList<TLink>();
 
 		// Create all the sieves first.
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
 		// Do each file independently.
-		for( String docname : info.getFiles() ) {
-			System.out.println("Processing " + docname + "...");
+
+		for( SieveDocument doc : info.getDocuments() ) {
+			System.out.println("Processing " + doc.getDocname() + "...");
 			
 			// Loop over the sieves in order.
 			for( int xx = 0; xx < sieves.length; xx++ ) {
@@ -153,7 +154,7 @@ public class Main {
 				System.out.println("\tSieve " + sieve.getClass().toString());
 
 				// Run this sieve
-				List<TLink> newLinks = sieve.annotate(info, docname, currentTLinks);
+				List<TLink> newLinks = sieve.annotate(doc, currentTLinks);
 
 				if( debug ) System.out.println("\t\t" + newLinks.size() + " new links.");
 //				if( debug ) System.out.println("\t\t" + newLinks);
@@ -174,12 +175,12 @@ public class Main {
 			}
 			
 			// Add links to InfoFile.
-			info.addTlinks(docname, currentTLinks);
+			doc.addTlinks(currentTLinks);
 			currentTLinks.clear();
 		}
 		
 		System.out.println("Writing output: " + outpath);
-		info.writeToFile(new File(outpath));
+		info.writeToXML(new File(outpath));
 	}
 
 	
@@ -203,11 +204,11 @@ public class Main {
 		Counter<String> numIncorrect = new ClassicCounter<String>();
 		
 		// Loop over documents.
-		for( String docname : info.getFiles() ) {
-			System.out.println("doc: " + docname);
+		for( SieveDocument doc : info.getDocuments() ) {
+			System.out.println("doc: " + doc.getDocname());
 			
 			// Gold links.
-			List<TLink> goldLinks = info.getTlinks(docname, true);
+			List<TLink> goldLinks = doc.getTlinks(true);
 			
 			// Loop over sieves.
 			for( int xx = 0; xx < sieveClasses.length; xx++ ) {
@@ -215,7 +216,7 @@ public class Main {
 				if( sieve != null ) {
 					
 					// Run it.
-					List<TLink> proposed = sieve.annotate(info, docname, currentTLinks);
+					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
 					
 //					System.out.println("Proposed: " + proposed);
 //					System.out.println("Gold links: " + goldLinks);
@@ -287,16 +288,16 @@ public class Main {
 	public void markupAll() {
 		markupAll(info);
 	}
-	public void markupAll(InfoFile info) {
+	public void markupAll(SieveDocuments info) {
 		markupEvents(info);
 		markupTimexes(info);
 		runSieves(info);
 	}
 	
 	/**
-	 * Assumes the InfoFile has its text parsed.
+	 * Assumes the SieveDocuments has its text parsed.
 	 */
-	public void markupEvents(InfoFile info) {
+	public void markupEvents(SieveDocuments info) {
 		if( eventClassifier == null ) {
 			eventClassifier = new TextEventClassifier(info);
 			eventClassifier.loadClassifiers();
@@ -305,9 +306,9 @@ public class Main {
 	}
 	
 	/**
-	 * Assumes the InfoFile has its text parsed.
+	 * Assumes the SieveDocuments has its text parsed.
 	 */
-	public void markupTimexes(InfoFile info) {
+	public void markupTimexes(SieveDocuments info) {
 		if( timexClassifier == null )
 			timexClassifier = new TimexClassifier(info);
 		timexClassifier.markupTimex3();
@@ -333,12 +334,12 @@ public class Main {
 			main.runPrecisionGauntlet();
 		}
 		
-		// The given InfoFile only has text and parses, so extract events/times first.
+		// The given SieveDocuments only has text and parses, so extract events/times first.
 		else if( args.length > 0 && args[args.length-1].equalsIgnoreCase("parsed") ) {
 			main.markupAll();
 		}
 		
-		// Run just the TLink Sieve pipeline. Events/Timexes already in the given InfoFile.
+		// Run just the TLink Sieve pipeline. Events/Timexes already in the given SieveDocuments.
 		else {
 			main.runSieves();
 		}

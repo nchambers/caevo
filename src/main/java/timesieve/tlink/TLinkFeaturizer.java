@@ -41,7 +41,7 @@ import net.didion.jwnl.data.Synset;
  *      [-dobethard] [-doturk [<int>]] [-maxtb <int>] [-nosamesent] [-dohappened] [-tempeval] [-tempevalE] [-tempevalF]
  */
 public class TLinkFeaturizer {
-  InfoFile _infoFile;
+  SieveDocuments _infoDocs;
   String _infoPath;
   WordNet _wordnet;
   String _wordnetPath = "/home/nchamber/code/lib/jwnl_file_properties.xml";
@@ -150,35 +150,26 @@ public class TLinkFeaturizer {
   /**
    * Create a datum for each TLink in the given InfoFile.
    * Chooses TLinks to include based on a series of global flags.
-   * @param info The infofile with all of our TimeBank information.
+   * @param infoDocs The infofile with all of our TimeBank information.
    * @param docnames List of documents you want to featurize, or null if you want ALL featurized.
    */
-  public List<TLinkDatum> infoToTLinkFeatures(InfoFile info, Set<String> docnames) {
+  public List<TLinkDatum> infoToTLinkFeatures(SieveDocuments infoDocs, Set<String> docnames) {
     int ii = 0;
     List<TLinkDatum> data = new ArrayList<TLinkDatum>();
     
-    for( String file : info.getFiles() ) {
-      if( docnames == null || docnames.contains(file) ) {
+    for( SieveDocument doc : infoDocs.getDocuments() ) {
+      if( docnames == null || docnames.contains(doc.getDocname()) ) {
         System.out.println("\n--------------------------------------------------");
-        System.out.println("File " + file + " (" + ++ii + " of " + info.getFiles().size() + ")");
+        System.out.println("File " + doc.getDocname() + " (" + ++ii + " of " + infoDocs.getDocuments().size() + ")");
 
-        List<Sentence> sentences = info.getSentences(file);
-        Collection<TLink> tlinks = info.getTlinks(file);
-        List<Timex> dcts = info.getDocstamp(file);
-        List<String> strdeps = info.getDependencies(file);
-
-        List<Tree> trees = new ArrayList<Tree>();
-        List<List<TypedDependency>> alldeps = new ArrayList<List<TypedDependency>>();
-        List<TextEvent> events = new ArrayList<TextEvent>();
-        List<Timex> timexes = new ArrayList<Timex>();
+        List<SieveSentence> sentences = doc.getSentences();
+        Collection<TLink> tlinks = doc.getTlinks();
+        List<Timex> dcts = doc.getDocstamp();
+        List<List<TypedDependency>> alldeps = doc.getAllDependencies();
+        List<Tree> trees = doc.getAllParseTrees();
+        List<TextEvent> events = doc.getEvents();
+        List<Timex> timexes = doc.getTimexes();
         int sid = 0;
-        for( Sentence sent : sentences ) {
-          trees.add(TreeOperator.stringToTree(sent.parse(), _tf));
-          events.addAll(sent.events());
-          timexes.addAll(sent.timexes());
-          alldeps.add(InfoFile.stringToDependencies(strdeps.get(sid++)));
-        }
-
         int numBethard = 0;
         int numTurk = 0;
         int numTimebank = 0;
@@ -279,7 +270,7 @@ public class TLinkFeaturizer {
 
 //                System.out.println("Will create link=" + link);
                 TLinkDatum datum = createTLinkDatum(link, trees, events, alldeps, timexes, isdctlink);
-                datum.setDocSource(file);
+                datum.setDocSource(doc.getDocname());
                 data.add(datum);
                 if( debug ) System.out.println("link: " + link);
                 if( debug ) System.out.println("\tdatum: " + datum);
@@ -288,7 +279,7 @@ public class TLinkFeaturizer {
           }
         }
       
-        System.out.println("Doc " + file + "\tnumbethard=" + numBethard + "\tnumturk=" + numTurk + "\tnumtimebank=" + numTimebank);
+        System.out.println("Doc " + doc.getDocname() + "\tnumbethard=" + numBethard + "\tnumturk=" + numTurk + "\tnumtimebank=" + numTimebank);
       }
       
 //      break;
@@ -1194,9 +1185,9 @@ public class TLinkFeaturizer {
       System.err.println("No info file given");
     else {
       System.out.println("Processing info file " + _infoPath);
-      _infoFile = new InfoFile(_infoPath);
+      _infoDocs = new SieveDocuments(_infoPath);
 
-      List<TLinkDatum> data = infoToTLinkFeatures(_infoFile, null);
+      List<TLinkDatum> data = infoToTLinkFeatures(_infoDocs, null);
       dataToFile(data, _outpath);
     }
   }

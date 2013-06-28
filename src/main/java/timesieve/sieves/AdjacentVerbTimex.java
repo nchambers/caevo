@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.*;
 
-import timesieve.InfoFile;
-import timesieve.Sentence;
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
 import timesieve.TextEvent;
 import timesieve.Timex;
 import timesieve.tlink.EventTimeLink;
@@ -37,26 +38,26 @@ public class AdjacentVerbTimex implements Sieve {
 	/**
 	 * The main function. All sieves must have this.
 	 */
-	public List<TLink> annotate(InfoFile info, String docname, List<TLink> currentTLinks) {
+	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 		// The size of the list is the number of sentences in the document.
 		// The inner list is the events in textual order.
-		List<List<TextEvent>> allEvents = info.getEventsBySentence(docname);
-		List<List<Timex>> allTimexes = info.getTimexesBySentence(docname);
-		List<String> allParseStrings = info.getParses(docname);
+		List<List<TextEvent>> allEvents = doc.getEventsBySentence();
+		List<List<Timex>> allTimexes = doc.getTimexesBySentence();
+		List<Tree> allTrees = doc.getAllParseTrees();
 		
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
 		
 		// Make BEFORE links between all intra-sentence pairs.
 		int sid = 0;
-		List<Sentence> sentList = info.getSentences(docname);
+		List<SieveSentence> sentList = doc.getSentences();
 		
-		for( Sentence sent : sentList ) {
+		for( SieveSentence sent : sentList ) {
 			if (debug == true) {
-				System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+				System.out.println("DEBUG: adding tlinks from " + doc.getDocname() + " sentence " + sent.sentence());
 				}
 			// get parse tree from sentence to calculate POS
-			Tree sentParseTree = sidToTree(sid, allParseStrings);
+			Tree sentParseTree = allTrees.get(sid);
 			// check timex, event pairs against rule criteria
 			for (Timex timex : allTimexes.get(sid)) {
 				for (TextEvent event : allEvents.get(sid)) {
@@ -103,7 +104,7 @@ public class AdjacentVerbTimex implements Sieve {
 	/**
 	 * No training. Just rule-based.
 	 */
-	public void train(InfoFile trainingInfo) {
+	public void train(SieveDocuments trainingInfo) {
 		// no training
 	}
 

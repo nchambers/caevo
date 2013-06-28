@@ -38,8 +38,8 @@ import edu.stanford.nlp.trees.TypedDependency;
  * @author chambers
  */
 public class SieveDocuments {
-	List<SieveDocument> documents;
-	Map<String,SieveDocument> nameToDocument;
+	private List<SieveDocument> documents;
+	private Map<String,SieveDocument> nameToDocument;
 	
 	// XML Constants
 	public static String INFO_NS = "http://chambers.com/corpusinfo";
@@ -66,10 +66,27 @@ public class SieveDocuments {
   /**
    * @return A Vector of String file names
    */
-  public Set<String> getFiles() {
-  	return nameToDocument.keySet();
+  public Set<String> getFileNames() {
+  	if( nameToDocument != null )
+  		return nameToDocument.keySet();
+  	else return null;
+  }
+  
+  public List<SieveDocument> getDocuments() {
+  	return documents;
+  }
+  
+  public SieveDocument getDocument(String docname) {
+  	if( nameToDocument != null )
+  		return nameToDocument.get(docname);
+  	else return null;
   }
 
+  public void addDocument(SieveDocument doc) {
+  	if( documents == null ) documents = new ArrayList<SieveDocument>();
+  	documents.add(doc);
+  }
+  
   public void readFromXML(String path) {
     readFromXML(new File(path));
   }
@@ -131,7 +148,7 @@ public class SieveDocuments {
       e.printStackTrace();
     }
   }
-
+  
   public void outputMarkedUp(String dirpath) {
     // Create the directory.
     try {
@@ -161,7 +178,7 @@ public class SieveDocuments {
   	int total2 = 0;
   	int total3 = 0;
   	int docs = 0;
-    for( String docname : getFiles() ) {
+    for( String docname : getFileNames() ) {
     	SieveDocument doc = nameToDocument.get(docname); 
       List<SieveSentence> sentences = doc.getSentences();
       for( int sid = 0; sid < sentences.size()-1; sid++ ) {

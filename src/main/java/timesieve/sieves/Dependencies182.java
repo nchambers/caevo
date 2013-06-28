@@ -8,6 +8,9 @@ import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
 import edu.stanford.nlp.trees.TreeFactory;
 import edu.stanford.nlp.trees.TypedDependency;
 
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
 import timesieve.InfoFile;
 import timesieve.Sentence;
 import timesieve.TextEvent;
@@ -28,25 +31,21 @@ public class Dependencies182 implements Sieve {
 	/**
 	 * The main function. All sieves must have this.
 	 */
-	public List<TLink> annotate(InfoFile info, String docname, List<TLink> currentTLinks) {
+	public List<TLink> annotate(SieveDocument info, List<TLink> currentTLinks) {
 		// The size of the list is the number of sentences in the document.
 		// The inner list is the events in textual order.
-		List<List<TextEvent>> allEvents = info.getEventsBySentence(docname);
-		// get all dependency parse strings
-		List<String> allDependencyStrings = info.getDependencies(docname);
+		List<List<TextEvent>> allEvents = info.getEventsBySentence();
 		
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
 		
 		// Make BEFORE links between all intra-sentence pairs.
 		int sid = 0;
-		for( Sentence sent : info.getSentences(docname) ) {
+		for( SieveSentence sent : info.getSentences() ) {
 			if (debug == true) {
-				System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+				System.out.println("DEBUG: adding tlinks from " + info.getDocname() + " sentence " + sent.sentence());
 			}
-			String dependencyParseString = allDependencyStrings.get(sid);
-			ArrayList<TypedDependency> deps = getAllTypedDependencies(dependencyParseString);
-			proposed.addAll(allPairsEvents(allEvents.get(sid), deps));
+			proposed.addAll(allPairsEvents(sent.events(), sent.getDeps()));
 			sid++;
 		}
 
@@ -59,7 +58,7 @@ public class Dependencies182 implements Sieve {
 	/**
 	 * All pairs of events are BEFORE relations based on text order!
 	 */
-	private List<TLink> allPairsEvents(List<TextEvent> events, ArrayList<TypedDependency> deps) {
+	private List<TLink> allPairsEvents(List<TextEvent> events, List<TypedDependency> deps) {
 		List<TLink> proposed = new ArrayList<TLink>();
 
 		for( int xx = 0; xx < events.size(); xx++ ) {
@@ -97,7 +96,7 @@ public class Dependencies182 implements Sieve {
 	/**
 	 * No training. Just rule-based.
 	 */
-	public void train(InfoFile trainingInfo) {
+	public void train(SieveDocuments trainingInfo) {
 		// no training
 	}
 

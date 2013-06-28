@@ -7,6 +7,9 @@ import java.util.Map;
 
 import edu.stanford.nlp.trees.Tree;
 
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
 import timesieve.InfoFile;
 import timesieve.Sentence;
 import timesieve.TextEvent;
@@ -67,23 +70,23 @@ public class ReichenbachDG13_3 implements Sieve {
 	/**
 	 * The main function. All sieves must have this.
 	 */
-	public List<TLink> annotate(InfoFile info, String docname, List<TLink> currentTLinks) {
+	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 		// The size of the list is the number of sentences in the document.
 		// The inner list is the events in textual order.
-		List<List<TextEvent>> allEvents = info.getEventsBySentence(docname);
+		List<List<TextEvent>> allEvents = doc.getEventsBySentence();
 		// list of all parse strings for the document
-		List<String> allParseStrings = info.getParses(docname);
+		List<Tree> trees = doc.getAllParseTrees();
 
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
 		
 		// Label event pairs that match sieve criteria
 		int sid = 0;
-		for( Sentence sent : info.getSentences(docname) ) {
+		for( SieveSentence sent : doc.getSentences() ) {
 			if (debug == true) {
-				System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+				System.out.println("DEBUG: adding tlinks from " + doc.getDocname() + " sentence " + sent.sentence());
 			}
-			proposed.addAll(allPairsEvents(allEvents.get(sid), allParseStrings));
+			proposed.addAll(allPairsEvents(allEvents.get(sid), trees));
 			sid++;
 		}
 
@@ -96,7 +99,7 @@ public class ReichenbachDG13_3 implements Sieve {
 	/**
 	 * Extract Tense/Aspect profile and use tenseAspectToLabel to yield before or after
 	 */
-	private List<TLink> allPairsEvents(List<TextEvent> events, List<String> allParseStrings) {
+	private List<TLink> allPairsEvents(List<TextEvent> events, List<Tree> trees) {
 		List<TLink> proposed = new ArrayList<TLink>();
 
 		for( int xx = 0; xx < events.size(); xx++ ) {
@@ -104,7 +107,7 @@ public class ReichenbachDG13_3 implements Sieve {
 			TextEvent e1 = events.get(xx);
 			// only proceed if e1 is a verb...
 			int sid = e1.sid();
-			Tree sentParseTree = sidToTree(sid, allParseStrings);
+			Tree sentParseTree = trees.get(sid);
 			if (!posTagFromTree(sentParseTree, e1.index()).startsWith("VB")) continue;
 			// map e1 tense and aspect to simplified version based on D&G's mapping
 			String e1Tense = simplifyTense(e1.getTense());
@@ -168,16 +171,10 @@ public class ReichenbachDG13_3 implements Sieve {
 		return posTag;
 	}
 	
-	private Tree sidToTree(int sid, List<String> allParseStrings) {
-		String sentParseString = allParseStrings.get(sid);
-		Tree sentParseTree = TreeOperator.stringToTree(sentParseString, tf);
-		return sentParseTree;
-	}
-	
 	/**
 	 * No training. Just rule-based.
 	 */
-	public void train(InfoFile trainingInfo) {
+	public void train(SieveDocuments trainingInfo) {
 		// no training
 	}
 

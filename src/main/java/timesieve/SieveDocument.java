@@ -34,7 +34,8 @@ public class SieveDocument {
 	private List<Timex> dcts;
 	private List<TLink> tlinks;
 	
-  public SieveDocument() {
+  public SieveDocument(String name) {
+  	docname = name;
   }
 
   /**
@@ -91,7 +92,7 @@ public class SieveDocument {
   /**
    * Deletes all the TLinks from the XML file
    */
-  public void deleteTlinks(String file) {
+  public void deleteTlinks() {
   	tlinks.clear();
   }
 
@@ -107,7 +108,7 @@ public class SieveDocument {
     
     return keep;
   }
-  public List<TLink> getTlinks(String file) {
+  public List<TLink> getTlinks() {
   		return tlinks;
   }
 
@@ -169,7 +170,7 @@ public class SieveDocument {
   /**
    * @return A List of all Event objects in one document (file parameter)
    */
-  public List<List<TextEvent>> getEventsBySentence(String file) {
+  public List<List<TextEvent>> getEventsBySentence() {
     List<List<TextEvent>> allEvents = new ArrayList<List<TextEvent>>();
     for( SieveSentence sent : sentences )
     	allEvents.add(sent.events());
@@ -225,14 +226,14 @@ public class SieveDocument {
   /**
    * @return A List of Strings, one string per sentence, representing dependencies.
    */
-  public List<List<TypedDependency>> getAllDependencies(String filename) {
+  public List<List<TypedDependency>> getAllDependencies() {
   	List<List<TypedDependency>> alldeps = new ArrayList<List<TypedDependency>>();
   	for( SieveSentence sent : sentences )
   		alldeps.add(sent.getDeps());
   	return alldeps;
   }
     
-  public String markupOriginalText(String docname) {
+  public String markupOriginalText() {
   	return markupOriginalText(TextEvent.NAME_ELEM, "eid", false, true, true, true);
   }
   
@@ -323,14 +324,12 @@ public class SieveDocument {
   }
 
   public static SieveDocument fromXML(Element el) {
-  	SieveDocument newdoc = new SieveDocument();
+  	String docname = el.getAttributeValue(SieveDocuments.FILENAME_ELEM);
+  	SieveDocument newdoc = new SieveDocument(docname);
   	
     Namespace ns = Namespace.getNamespace(SieveDocuments.INFO_NS);
     SAXBuilder builder = new SAXBuilder();
     try {
-    	// Document name.
-    	newdoc.setDocname(el.getAttributeValue(SieveDocuments.FILENAME_ELEM));
-
     	// Sentences
       List<Element> sentElems = el.getChildren(SieveDocuments.ENTRY_ELEM, ns);
       List<List<TextEvent>> allEvents = new ArrayList<List<TextEvent>>();
@@ -385,14 +384,13 @@ public class SieveDocument {
   
   /**
    * Create a list of strings, each string is one TLink: <TLINK ... />
-   * @param docname The document from which you want all tlinks.
    * @return A list of tlink strings.
    */
-  public List<String> createTLinkStrings(String docname) {
+  public List<String> createTLinkStrings() {
   	List<String> strings = new ArrayList<String>();
   	int counter = 1;
   	
-  	List<TLink> tlinks = getTlinks(docname);
+  	List<TLink> tlinks = getTlinks();
   	for( TLink link : tlinks ) {
   		String str = "<TLINK lid=\"l" + counter + "\" relType=\"" + link.relation().toString() + "\" ";
   		
@@ -424,7 +422,7 @@ public class SieveDocument {
    * @param docname The document from which you want to extract all makeinstances.
    * @return A list of makeinstance strings.
    */
-  public List<String> createMakeInstanceStrings(String docname) {
+  public List<String> createMakeInstanceStrings() {
     List<String> strings = new ArrayList<String>();
 
     for( SieveSentence sent : sentences ) {
@@ -445,7 +443,7 @@ public class SieveDocument {
   
   public void outputMarkedUp(String dirpath) {
   	try {
-  		String outfile = docname;
+  		String outfile = this.docname;
   		// Strip off the ending ".TE3input" if it exists (for TempEval3)
   		//    	  if( outfile.endsWith(".TE3input") ) outfile = outfile.substring(0, outfile.lastIndexOf(".TE3input")); 
 
@@ -465,15 +463,15 @@ public class SieveDocument {
 
   		// The text.
   		writer.write("<TEXT>");
-  		writer.write(markupOriginalText(docname));
+  		writer.write(markupOriginalText());
   		writer.write("</TEXT>\n\n");
 
   		// Event makeinstance list.
-  		List<String> makes = createMakeInstanceStrings(docname);
+  		List<String> makes = createMakeInstanceStrings();
   		for( String make : makes ) writer.write(make + "\n");
 
   		// TLinks.
-  		List<String> tlinks = createTLinkStrings(docname);
+  		List<String> tlinks = createTLinkStrings();
   		for( String tlink : tlinks ) writer.write(tlink + "\n");
 
   		writer.write("\n</TimeML>");

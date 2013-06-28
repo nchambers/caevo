@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.*;
 
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
 import timesieve.InfoFile;
 import timesieve.Sentence;
 import timesieve.TextEvent;
@@ -42,25 +45,25 @@ public class QuarterSieveReporting implements Sieve {
 	/**
 	 * The main function. All sieves must have this.
 	 */
-	public List<TLink> annotate(InfoFile info, String docname, List<TLink> currentTLinks) {
+	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 		// The size of the list is the number of sentences in the document.
 		// The inner list is the events in textual order.
-		List<List<TextEvent>> allEvents = info.getEventsBySentence(docname);
-		List<List<Timex>> allTimexes = info.getTimexesBySentence(docname);
+		List<List<TextEvent>> allEvents = doc.getEventsBySentence();
+		List<List<Timex>> allTimexes = doc.getTimexesBySentence();
 		// list of all parse strings for the document
-		List<String> allParseStrings = info.getParses(docname);
+		List<Tree> trees = doc.getAllParseTrees();
 		
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
 		
 		// check timexes/event pairs in each sentence against sieve criteria.
 		int sid = 0;
-		for( Sentence sent : info.getSentences(docname) ) {
+		for( SieveSentence sent : doc.getSentences() ) {
 			if (debug == true) {
-				System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
+				System.out.println("DEBUG: adding tlinks from " + doc.getDocname() + " sentence " + sent.sentence());
 			}
 			// get parse tree of sentence
-			Tree sentParseTree = sidToTree(sid, allParseStrings);
+			Tree sentParseTree = trees.get(sid);
 			for (Timex timex : allTimexes.get(sid)) {
 				// only proceed if timex is of form YYYY-QX
 				if (!validateTimex(timex)) continue;
@@ -93,7 +96,7 @@ public class QuarterSieveReporting implements Sieve {
 		return proposed;
 	}
 	
-	private String getTokenText(int index, Sentence sent) {
+	private String getTokenText(int index, SieveSentence sent) {
 		List<CoreLabel> tokens = sent.tokens();
 		CoreLabel token = tokens.get(index);
 		return token.originalText();
@@ -148,7 +151,7 @@ public class QuarterSieveReporting implements Sieve {
 	/**
 	 * No training. Just rule-based.
 	 */
-	public void train(InfoFile trainingInfo) {
+	public void train(SieveDocuments trainingInfo) {
 		// no training
 	}
 

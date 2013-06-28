@@ -131,16 +131,16 @@ public class TimebankUtil {
    * Add Bethard's tlink annotations into the full TimeBank corpus.
    * The given infoFile receives the new tlinks destructively.
    * @param path The path to Bethard's single file containing all new tlinks.
-   * @param infoFile The current TimeBank info file.
+   * @param infoDocs The current TimeBank info file.
    */
-  public static void mergeBethard(String path, InfoFile infoFile) {
+  public static void mergeBethard(String path, SieveDocuments infoDocs) {
     BethardAnnotation bethard = new BethardAnnotation(path);
-    for( String doc : infoFile.getFiles() ) {
+    for( SieveDocument doc : infoDocs.getDocuments() ) {
       List<TLink> newlinks = new ArrayList<TLink>();
-      List<TLink> bethardLinks = bethard.getTLinks(doc);
-      List<TLink> tbLinks = infoFile.getTlinks(doc);
+      List<TLink> bethardLinks = bethard.getTLinks(doc.getDocname());
+      List<TLink> tbLinks = doc.getTlinks();
       // Create a reverse EIID to EID lookup table.
-      Map<String,String> eiidToID = eiidToID(infoFile.getEvents(doc));
+      Map<String,String> eiidToID = eiidToID(doc.getEvents());
       
       // Bethard only annotated the WSJ docs, some TimeBank docs will be null.
       if( bethardLinks != null ) {
@@ -183,7 +183,7 @@ public class TimebankUtil {
           }
         }
 
-        infoFile.addTlinks(doc, newlinks);
+        doc.addTlinks(newlinks);
       }
     }
   }

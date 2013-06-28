@@ -11,6 +11,9 @@ import edu.stanford.nlp.trees.TreeFactory;
 
 import net.didion.jwnl.data.POS;
 
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
 import timesieve.InfoFile;
 import timesieve.Sentence;
 import timesieve.TextEvent;
@@ -52,12 +55,12 @@ public class WordNet209 implements Sieve {
 	/* (non-Javadoc)
 	 * @see timesieve.sieves.Sieve#annotate(timesieve.InfoFile, java.lang.String, java.util.List)
 	 */
-	public List<TLink> annotate(InfoFile info, String docname, List<TLink> currentTLinks) {
+	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 		// The size of the list is the number of sentences in the document.
 		// The inner list is the events in textual order.
-		List<List<TextEvent>> allEvents = info.getEventsBySentence(docname);
+		List<List<TextEvent>> allEvents = doc.getEventsBySentence();
 		// list of all parse strings for the document
-		List<String> allParseStrings = info.getParses(docname);
+		List<Tree> allParseTrees = doc.getAllParseTrees();
 		// Use wn to extract WordNet derived information about events
 		WordNet wn = new WordNet(WordNet.findWordnetPath()); 
 			
@@ -65,14 +68,14 @@ public class WordNet209 implements Sieve {
 		List<TLink> proposed = new ArrayList<TLink>();
 		
 		// Obtain all event pairs within one sentence of one another
-		List<Sentence> sentList = info.getSentences(docname);
+		List<SieveSentence> sentList = doc.getSentences();
 		int sid = 0;
 		
-		for ( Sentence sent : sentList ) {
+		for ( SieveSentence sent : sentList ) {
 			if (debug == true) {
-				System.out.println("DEBUG: adding tlinks from " + docname + " sentences:\n" + sent.sentence() + "\n" + sent.sentence());
+				System.out.println("DEBUG: adding tlinks from " + doc.getDocname() + " sentences:\n" + sent.sentence() + "\n" + sent.sentence());
 			}
-			proposed.addAll(allPairsEvents(allEvents.get(sid), allParseStrings, sid, wn));
+			proposed.addAll(allPairsEvents(allEvents.get(sid), allParseTrees, sid, wn));
 			sid ++;
 		}
 		
@@ -86,14 +89,14 @@ public class WordNet209 implements Sieve {
 	 * all pairs of events that are siblings (i.e. their WordNet synsets overlap) 
 	 * are labeled SIMULTANEOUS.
 	 */
-		private List<TLink> allPairsEvents(List<TextEvent> events, List<String> allParseStrings, int sid, WordNet wn) {
+		private List<TLink> allPairsEvents(List<TextEvent> events, List<Tree> trees, int sid, WordNet wn) {
 			List<TLink> proposed = new ArrayList<TLink>();
 			// scan through all pairs of events
 			for( int xx = 0; xx < events.size(); xx++ ) {
 				for( int yy = xx+1; yy < events.size(); yy++ ) {
 					TextEvent e1 = events.get(xx);
 					TextEvent e2 = events.get(yy);
-					Tree sentParseTree = sidToTree(sid, allParseStrings);
+					Tree sentParseTree = trees.get(sid);
 					
 					String postagStr1 = posTagFromTree(sentParseTree, e1.index());
 					String postagStr2 = posTagFromTree(sentParseTree, e2.index());
@@ -132,7 +135,7 @@ public class WordNet209 implements Sieve {
 	/**
 	 * No training. Just rule-based.
 	 */
-	public void train(InfoFile trainingInfo) {
+		public void train(SieveDocuments trainingInfo) {
 		// no training
 	}
 

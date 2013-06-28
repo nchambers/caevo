@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -105,8 +106,8 @@ public class Tempeval3Parser {
   boolean labelRelationsOnly = false; // label known tlink pairs and don't extract anything else
   boolean useEIIDinTLinks = true; // use the eiid if true, use eid if false.
   
-  InfoFile _infofile = null;
-  InfoFile _trainInfofile = null;
+  SieveDocuments _infodocs = null;
+  SieveDocuments _trainInfodocs = null;
 
   boolean debug = false;
   
@@ -161,9 +162,9 @@ public class Tempeval3Parser {
       noauto = true;
     
     if( params.hasFlag("-info") )
-      _infofile = new InfoFile(params.get("-info"));
+      _infodocs = new SieveDocuments(params.get("-info"));
     if( params.hasFlag("-traininfo") )
-      _trainInfofile = new InfoFile(params.get("-traininfo"));
+      _trainInfodocs = new SieveDocuments(params.get("-traininfo"));
     
     props = StringUtils.argsToProperties(args);
   }
@@ -175,8 +176,8 @@ public class Tempeval3Parser {
   public void parse() {
     
     // If there already is an infofile, then we shouldn't reparse everything.
-    if( _infofile == null ) {
-      _infofile = new InfoFile();
+    if( _infodocs == null ) {
+      _infodocs = new SieveDocuments();
       
       // If we are reading in a directory with subdirectories "TimeBank" and "AQUAINT".
       if( new File(baseDir + File.separator + "TimeBank").exists() ) {
@@ -191,51 +192,51 @@ public class Tempeval3Parser {
       
       // Check for Bethard tlinks to merge with tlinks already read in above.
       if( _bethardFile != null && readEventsAndTimes )
-        TimebankUtil.mergeBethard(_bethardFile, _infofile);
+        TimebankUtil.mergeBethard(_bethardFile, _infodocs);
     }
 
     // Don't do anything else to this info file that we just created.
     if( noauto ) { }
     // Automatically identify Events and TLinks using cross fold validation.
-    else if( _trainInfofile != null )
-      autoExtractEventsAndTimesWithFolds(_trainInfofile, _infofile);
+    else if( _trainInfodocs != null )
+      autoExtractEventsAndTimesWithFolds(_trainInfodocs, _infodocs);
     // Label tlink pairs that are already present in the info file.
     else if( labelRelationsOnly )
-      labelRelationsOnly(_infofile);
+      labelRelationsOnly(_infodocs);
     // Identify Events and TLinks using already trained classifiers on disk.
     else
-      autoExtractEventsAndTimes(_infofile);
+      autoExtractEventsAndTimes(_infodocs);
     
     System.out.println("Writing infofile " + outputFile);
-    _infofile.writeToFile(new File(outputFile));
+    _infodocs.writeToXML(outputFile);
   }
   
   private void parseXMLDir(String base) {
   	int numdocs = 0;
-    for( String doc : Directory.getFilesSorted(base) ) {
+    for( String docname : Directory.getFilesSorted(base) ) {
 //    	if( doc.contains("wsj_0073") ) {
     	if( true ) {
-    		doc = base + File.separator + doc;
-    		System.out.println("parsing " + doc);
+    		docname = base + File.separator + docname;
+    		System.out.println("parsing " + docname);
 
     		// Pull out the event attributes from the MAKEINSTANCE elements first.
     		eiidToID = new HashMap<String,String>();
     		idToEiids = new HashMap<String,List<String>>();
     		seenEventIDs = new HashSet<String>();
-    		extractEventAttributes(doc);
+    		extractEventAttributes(docname);
 
     		// Process the sentences, extract events/timexes, and parse.
-    		processXML(doc);
+    		processXML(docname);
 
     		// Get the TLinks
     		if( readTLinks ) {
-    			List<TLink> tlinks = getTLinks(doc);
-    			_infofile.addTlinks(doc, tlinks);
+    			List<TLink> tlinks = getTLinks(docname);
+    			_infodocs.getDocument(docname).addTlinks(tlinks);
     		}
 
     		// Set the document creation time.
-    		Timex dct = getDocumentCreationTime(doc);
-    		if( dct != null ) _infofile.addCreationTime(doc, dct);
+    		Timex dct = getDocumentCreationTime(docname);
+    		if( dct != null ) _infodocs.getDocument(docname).addCreationTime(dct);
 
 //    		if( numdocs % 2 == 1 ) break;
     		numdocs++;
@@ -243,10 +244,12 @@ public class Tempeval3Parser {
     }
   }
   
-  public static Pair<Set<String>,Set<String>> getFold(int fold, int numfolds, List<String> names) {
+  public static Pair<Set<String>,Set<String>> getFold(int fold, int numfolds, Collection<String> setNames) {
     Set<String> train = new HashSet<String>();
     Set<String> test = new HashSet<String>();
-    int foldsize = names.size() / numfolds;
+    int foldsize = setNames.size() / numfolds;
+    
+    List<String> names = new ArrayList<String>(setNames);
     
     for( int xx = 0; xx < names.size(); xx++ ) {
       int foldstart = fold*foldsize;
@@ -264,59 +267,59 @@ public class Tempeval3Parser {
   
   /**
    * Core function to automatically find events, time expressions, and tlinks.
-   * @param trainInfo An infofile that has all gold events, times, and tlinks in it.
-   * @param labelInfo An infofile with no events/tlinks, but all text pre-processing information.
+   * @param trainDocs An infofile that has all gold events, times, and tlinks in it.
+   * @param labelDocs An infofile with no events/tlinks, but all text pre-processing information.
    */
-  public void autoExtractEventsAndTimesWithFolds(InfoFile trainInfo, InfoFile labelInfo) {
+  public void autoExtractEventsAndTimesWithFolds(SieveDocuments trainDocs, SieveDocuments labelDocs) {
     System.out.println("Using cross-fold experiment to extract events and times and tlinks...");
 
     // Identify all time expressions.
     if( sutime ) {
-      TimexClassifier classifier = new TimexClassifier(labelInfo);
+      TimexClassifier classifier = new TimexClassifier(labelDocs);
       classifier.markupTimex3();
     }
 
     // Train on 9 folds and label on the remaining 1 fold.
     int numfolds = 10;
     for( int fold = 0; fold < numfolds; fold++ ) {
-      Pair<Set<String>,Set<String>> trainTest = getFold(fold, numfolds, labelInfo.getFiles());
+      Pair<Set<String>,Set<String>> trainTest = getFold(fold, numfolds, labelDocs.getFileNames());
       System.out.println("--- Fold " + fold + " ---");
       
       // Identify all events.
       if( props.containsKey("events") ) {
         System.out.println("Now training all text events...");
-        TextEventClassifier eventClassifier = new TextEventClassifier(trainInfo);
+        TextEventClassifier eventClassifier = new TextEventClassifier(trainDocs);
         if( props.containsKey("eventmin") ) eventClassifier.setMinFeatureCutoff(Integer.parseInt(props.getProperty("eventmin")));
-        eventClassifier.train(trainInfo, trainTest.first());
+        eventClassifier.train(trainDocs, trainTest.first());
         System.out.println("Now testing all text events...");
-        eventClassifier.extractEvents(labelInfo, trainTest.second());
+        eventClassifier.extractEvents(labelDocs, trainTest.second());
       }
 
       // Identify all tlinks.
       if( props.containsKey("tlinks") || props.containsKey("eesame") || props.containsKey("etsame") || props.containsKey("edct") || props.containsKey("eediff") ) {
         System.out.println("Now training all tlinks...");
-        TLinkClassifier tlinkClassifier = new TLinkClassifier(trainInfo, null, props);
-        tlinkClassifier.trainInfo(trainInfo, trainTest.first());
-        tlinkClassifier.info = labelInfo;
+        TLinkClassifier tlinkClassifier = new TLinkClassifier(trainDocs, null, props);
+        tlinkClassifier.trainInfo(trainDocs, trainTest.first());
+        tlinkClassifier.docs = labelDocs;
         System.out.println("Now testing all tlinks...");
         tlinkClassifier.extractTLinks(trainTest.second());
       }
     }
   }
   
-  public void autoExtractEventsAndTimes(InfoFile info) {
+  public void autoExtractEventsAndTimes(SieveDocuments docs) {
     System.out.println("Extracting events and times and tlinks...");
     
     // Identify all time expressions.
     if( sutime ) {
-      TimexClassifier classifier = new TimexClassifier(info);
+      TimexClassifier classifier = new TimexClassifier(docs);
       classifier.markupTimex3();
     }
     
     // Identify all events.
     if( eventmodelDir != null ) {
       System.out.println("Now labeling all text events automatically...");
-      TextEventClassifier eventClassifier = new TextEventClassifier(info);
+      TextEventClassifier eventClassifier = new TextEventClassifier(docs);
       if( props.containsKey("eventmin") ) eventClassifier.setMinFeatureCutoff(Integer.parseInt(props.getProperty("eventmin")));
       eventClassifier.readClassifiersFromDirectory(eventmodelDir);
       eventClassifier.extractEvents();
@@ -325,7 +328,7 @@ public class Tempeval3Parser {
     // Identify all tlinks.
     if( tlinkmodelDir != null ) {
       System.out.println("Now labeling all TLinks automatically...");
-      TLinkClassifier classifier = new TLinkClassifier(info, tlinkmodelDir, props);
+      TLinkClassifier classifier = new TLinkClassifier(docs, tlinkmodelDir, props);
       classifier.extractTLinks();
     }
   }
@@ -335,7 +338,7 @@ public class Tempeval3Parser {
    * tlinks new labels using our trained classifiers.
    * @param info A fully labeled infofile.
    */
-  private void labelRelationsOnly(InfoFile info) {
+  private void labelRelationsOnly(SieveDocuments info) {
     TLinkClassifier classifier = new TLinkClassifier(info, props.getProperty("tlinks"), props);
     classifier.labelKnownTLinks(null);
   }
@@ -690,7 +693,7 @@ public class Tempeval3Parser {
 //      System.out.println("invertibleTokens:\n" + invertibleTokens);
       List<CoreLabel> cls = new ArrayList<CoreLabel>();
       for( HasWord word : sentence ) cls.add((CoreLabel)word);
-      _infofile.addSentence(docname, sid, buildString(sentence, 0, sentence.size()), cls, parseDep.first(), parseDep.second(), localEvents, localTimex);
+      _infodocs.getDocument(docname).addSentence(buildString(sentence, 0, sentence.size()), cls, parseDep.first(), parseDep.second(), localEvents, localTimex);
       
       sid++;
     }
@@ -1182,7 +1185,7 @@ public class Tempeval3Parser {
    * This function creates an InfoFile object with the parse trees, one for each sentence, and it also
    * dependency parses each sentence using the given tree.
    */
-  public static InfoFile lexParsedFileToDepParsed(String filepath, TreeFactory tf, GrammaticalStructureFactory gsf) {
+  public static SieveDocument lexParsedFileToDepParsed(String filepath, TreeFactory tf, GrammaticalStructureFactory gsf) {
     List<String> lines = Util.readLinesFromFile(filepath);
     List<String> stringParses = new ArrayList<String>();
     for( String line : lines )
@@ -1192,8 +1195,8 @@ public class Tempeval3Parser {
     return lexParsedToDeps(filepath, stringParses, tf, gsf);
   }
   
-  private static InfoFile lexParsedToDeps(String filepath, List<String> stringParses, TreeFactory tf, GrammaticalStructureFactory gsf) {
-  	InfoFile info = new InfoFile();
+  private static SieveDocument lexParsedToDeps(String filepath, List<String> stringParses, TreeFactory tf, GrammaticalStructureFactory gsf) {
+  	SieveDocument doc = new SieveDocument(filepath);
 
   	int sid = 0;
   	for( String strParse : stringParses ) {
@@ -1219,14 +1222,14 @@ public class Tempeval3Parser {
   		if( cls.size() > 1 )
   			cls.get(cls.size()-1).set(CoreAnnotations.AfterAnnotation.class, "\n\n"); // new lines after each sentence
 
-  		info.addSentence(filepath, sid, buildStringFromStrings(tokens), cls, strParse, strDeps, null, null);
+  		doc.addSentence(buildStringFromStrings(tokens), cls, strParse, strDeps, null, null);
   		sid++;
   	}
 
-  	return info; 
+  	return doc; 
   }
   
-  public static InfoFile rawTextFileToParsed(String filepath, LexicalizedParser parser, GrammaticalStructureFactory gsf) {
+  public static SieveDocument rawTextFileToParsed(String filepath, LexicalizedParser parser, GrammaticalStructureFactory gsf) {
     List<String> lines = Util.readLinesFromFile(filepath);
     String bigone = lines.get(0);
     for( int xx = 1; xx < lines.size(); xx++ ) bigone += "\n" + lines.get(xx);
@@ -1234,7 +1237,7 @@ public class Tempeval3Parser {
     return rawTextToParsed(filepath, bigone, parser, gsf);
   }
   
-  private static InfoFile rawTextToParsed(String filepath, String text, LexicalizedParser parser, GrammaticalStructureFactory gsf) {
+  private static SieveDocument rawTextToParsed(String filepath, String text, LexicalizedParser parser, GrammaticalStructureFactory gsf) {
     List<List<HasWord>> sentencesNormInvertible = new ArrayList<List<HasWord>>();
     sentencesNormInvertible.addAll(Ling.getSentencesFromTextNormInvertible(text));
     System.out.println("Got " + sentencesNormInvertible.size() + " sentences.");
@@ -1249,7 +1252,7 @@ public class Tempeval3Parser {
 //    System.out.println("Original:");
 //    System.out.println(text);
 
-    InfoFile info = new InfoFile();
+    SieveDocument info = new SieveDocument(filepath);
 
 //    System.out.println("Tokenized:");
     int sid = 0;
@@ -1258,7 +1261,7 @@ public class Tempeval3Parser {
       Pair<String,String> parseDep = parseDep(sent, parser, gsf);
       List<CoreLabel> cls = new ArrayList<CoreLabel>();
       for( HasWord word : sent ) cls.add((CoreLabel)word);
-      info.addSentence(filepath, sid, buildString(sent, 0, sent.size()), cls, parseDep.first(), parseDep.second(), null, null);
+      info.addSentence(buildString(sent, 0, sent.size()), cls, parseDep.first(), parseDep.second(), null, null);
       sid++;
     }
     

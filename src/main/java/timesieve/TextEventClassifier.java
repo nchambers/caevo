@@ -57,7 +57,7 @@ import timesieve.util.WordNet;
  * 
  */
 public class TextEventClassifier {
-  InfoFile info;
+  SieveDocuments docs;
   WordNet wordnet;
   String wordnetPath = null;
   String serializedGrammar = "/home/nchamber/code/resources/englishPCFG.ser.gz";
@@ -79,7 +79,7 @@ public class TextEventClassifier {
     HandleParameters params = new HandleParameters(args);
     
     if( params.hasFlag("-info") )
-      info = new InfoFile(params.get("-info"));
+      docs = new SieveDocuments(params.get("-info"));
     else if( args.length < 1 || (!args[args.length-1].equalsIgnoreCase("raw") && !args[args.length-1].equalsIgnoreCase("parsed")) ){
       System.out.println("TextEventClassifier [-model <dir>] -info <file> [train]");
       System.exit(1);
@@ -99,8 +99,8 @@ public class TextEventClassifier {
     loadWordNet();
   }
   
-  public TextEventClassifier(InfoFile info) {
-  	this.info = info;
+  public TextEventClassifier(SieveDocuments docs) {
+  	this.docs = docs;
   	loadWordNet();
   }
 
@@ -157,7 +157,7 @@ public class TextEventClassifier {
    * @param wordIndex Starting from 1.
    * @return
    */
-  private Counter<String> getEventFeatures(Sentence sentence, Tree tree, List<TypedDependency> deps, int wordIndex) {
+  private Counter<String> getEventFeatures(SieveSentence sentence, Tree tree, List<TypedDependency> deps, int wordIndex) {
     Counter<String> features = new ClassicCounter<String>();
     String[] tokens = sentence.sentence().toLowerCase().split("\\s+");
     int size = tokens.length;
@@ -215,37 +215,35 @@ public class TextEventClassifier {
   }
   
   public Classifier<String,String> train(Set<String> docnames) {
-  	return train(info, docnames);
+  	return train(docs, docnames);
   }
   
   /**
    * Trains 4 classifiers about events, all using the same features.
    * 1. main event identifier: is a token an event or not?
    * 2-4. Given a token is an event: tense, aspect, and its class.
-   * @param info A pre-processed .info file.
+   * @param docs A pre-processed .info file.
    * @return
    */
-  public Classifier<String,String> train(InfoFile info, Set<String> docnames) {
+  public Classifier<String,String> train(SieveDocuments docs, Set<String> docnames) {
     RVFDataset<String, String> eventDataset  = new RVFDataset<String, String>();
     RVFDataset<String, String> tenseDataset  = new RVFDataset<String, String>();
     RVFDataset<String, String> aspectDataset = new RVFDataset<String, String>();
     RVFDataset<String, String> classDataset  = new RVFDataset<String, String>();
     TreeFactory tf = new LabeledScoredTreeFactory();
 
-    for( String docname : info.getFiles() ) {
-      if( docnames == null || docnames.contains(docname) ) {
-        System.out.println("train docname: " + docname);
-        List<String> strdeps = info.getDependencies(docname);
-        List<List<TypedDependency>> alldeps = new ArrayList<List<TypedDependency>>();
-        for( String str : strdeps ) alldeps.add(InfoFile.stringToDependencies(str));
+    for( SieveDocument doc : docs.getDocuments() ) {
+      if( docnames == null || docnames.contains(doc.getDocname()) ) {
+        System.out.println("train docname: " + doc.getDocname());
+        List<List<TypedDependency>> alldeps = doc.getAllDependencies();
         
-        List<Sentence> sentences = info.getSentences(docname);
+        List<SieveSentence> sentences = doc.getSentences();
         int sid = 0;
-        for( Sentence sentence : sentences ) {
+        for( SieveSentence sentence : sentences ) {
           //        List<CoreLabel> tokens = sentence.tokens();
           String[] tokens = sentence.sentence().split("\\s+");
           List<TextEvent> events = sentence.events();
-          Tree tree = TreeOperator.stringToTree(sentence.parse(), tf);
+          Tree tree = sentence.getParseTree();
 
           // Grab the word indices of each event.
           Map<Integer,TextEvent> index = new HashMap<Integer,TextEvent>();
@@ -324,7 +322,7 @@ public class TextEventClassifier {
    * @param wordi The word index in the sentence, starting from 1
    * @return True if the word at wordi is an event, false otherwise.
    */
-  public boolean isEvent(Classifier<String, String> classifier, Sentence sentence, Tree tree, List<TypedDependency> deps, int wordi) {
+  public boolean isEvent(Classifier<String, String> classifier, SieveSentence sentence, Tree tree, List<TypedDependency> deps, int wordi) {
   	Counter<String> features = getEventFeatures(sentence, tree, deps, wordi);
     RVFDatum<String,String> datum = new RVFDatum<String,String>(features, null);
     String guess = classifier.classOf(datum);
@@ -332,7 +330,7 @@ public class TextEventClassifier {
     return guess.equals("event");
   }
   
-  private RVFDatum<String,String> wordToDatum(Sentence sentence, Tree tree, List<TypedDependency> deps, int wordi) {
+  private RVFDatum<String,String> wordToDatum(SieveSentence sentence, Tree tree, List<TypedDependency> deps, int wordi) {
   	Counter<String> features = getEventFeatures(sentence, tree, deps, wordi);
     RVFDatum<String,String> datum = new RVFDatum<String,String>(features, null);
     return datum;
@@ -373,24 +371,24 @@ public class TextEventClassifier {
   }
   
   public void extractEvents() {
-    extractEvents(info, null);
+    extractEvents(docs, null);
   }
 
-  public void extractEvents(InfoFile info) {
-    extractEvents(info, null);
+  public void extractEvents(SieveDocuments docs) {
+    extractEvents(docs, null);
   }
   
   /**
    * Destructively add events to the global .info file.
    * @param docnames Limit extraction to a set of documents in the info file. Use null if you want all docs.
    */
-  public void extractEvents(InfoFile info, Collection<String> docnames) {
+  public void extractEvents(SieveDocuments docs, Collection<String> docnames) {
   	if( !ruleBased ) {
   		System.out.println("*** Classifier-Based Event Extraction ***");
-  		extractEvents(info, docnames, false);
+  		extractEvents(docs, docnames, false);
   	} else {
   		System.out.println("*** Deterministic Event Extraction ***");
-  		extractEvents(info, docnames, true);
+  		extractEvents(docs, docnames, true);
   	}
   }
   
@@ -399,26 +397,24 @@ public class TextEventClassifier {
    * ASSUMES the InfoFile already has parses and typed dependencies in it.
    * @param docnames Limit extraction to a set of documents in the info file. Use null if you want all docs.
    */
-  public void extractEvents(InfoFile info, Collection<String> docnames, boolean useDeterministic) {
+  public void extractEvents(SieveDocuments docs, Collection<String> docnames, boolean useDeterministic) {
     TreeFactory tf = new LabeledScoredTreeFactory();
     
-    for( String docname : info.getFiles() ) {
-      if( docnames == null || docnames.contains(docname) ) {
-        System.out.println("doc = " + docname);
-        List<Sentence> sentences = info.getSentences(docname);
+    for( SieveDocument doc : docs.getDocuments() ) {
+      if( docnames == null || docnames.contains(doc.getDocname()) ) {
+        System.out.println("doc = " + doc.getDocname());
+        List<SieveSentence> sentences = doc.getSentences();
         int eventi = 1;
         System.out.println(sentences.size() + " sentences.");
 
         // Build the typed dependencies.
-        List<String> strdeps = info.getDependencies(docname);
-        List<List<TypedDependency>> alldeps = new ArrayList<List<TypedDependency>>();
-        for( String str : strdeps ) alldeps.add(InfoFile.stringToDependencies(str));
+        List<List<TypedDependency>> alldeps = doc.getAllDependencies();
         
         // Each sentence.
         int sid = 0;
-        for( Sentence sent : sentences ) {
+        for( SieveSentence sent : sentences ) {
           String[] tokens = sent.sentence().split("\\s+");
-          Tree tree = TreeOperator.stringToTree(sent.parse(), tf);
+          Tree tree = sent.getParseTree();
           List<TextEvent> newevents = new ArrayList<TextEvent>();
           Set<Integer> timexIndices = indicesCoveredByTimexes(sent.timexes());
 
@@ -459,7 +455,7 @@ public class TextEventClassifier {
           }
           // Add the new events to this .info file.
           if( newevents.size() > 0 ) 
-            info.addEvents(docname, sid, newevents);
+            doc.addEvents(sid, newevents);
           sid++;
         }
       }
@@ -474,13 +470,13 @@ public class TextEventClassifier {
    * @param file Name of the file in the InfoFile that you want.
    * @param info The InfoFile itself.
    */
-  public void createEventsOnlyFile(String outpath, String file, InfoFile info) {
+  public void createEventsOnlyFile(String outpath, String file, SieveDocuments docs) {
     try {
       System.out.println("Writing to " + outpath + "...");
       PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(outpath)));
       
       int sid = 0;
-      for( Sentence sent : info.getSentences(file) ) {
+      for( SieveSentence sent : docs.getDocument(file).getSentences() ) {
         for( TextEvent event : sent.events() ) {
           writer.write(sid + "\t" + (event.index()-1) + "\t" + event.string());
 //          writer.write("\t" + event.getTheClass() + "\t" + event.getTense() + "\t" + event.getAspect());
@@ -547,8 +543,8 @@ public class TextEventClassifier {
   	}
   }
   
-  public void infoToFile(String path) {
-    info.writeToFile(new File(path));
+  public void docsToFile(String path) {
+    docs.writeToXML(path);
   }
   
   public void markupRawText(String filepath) {
@@ -558,17 +554,19 @@ public class TextEventClassifier {
     GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
     
     // Parse the file.
-    info = Tempeval3Parser.rawTextFileToParsed(filepath, parser, gsf);
+    SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(filepath, parser, gsf);
+    if( docs == null ) docs = new SieveDocuments();
+    docs.addDocument(doc);
     loadClassifiers();
     extractEvents();
 
     // Output the InfoFile with the events in it.
     String outpath = filepath + ".info.xml";
-    infoToFile(outpath);
+    docsToFile(outpath);
     System.out.println("Created " + outpath);
 
     // Output just the text with the events marked as XML elements.
-    String markup = info.markupOriginalText(filepath);
+    String markup = doc.markupOriginalText();
     outpath = filepath + ".withevents";
     Directory.stringToFile(outpath, markup);
     System.out.println("Created " + outpath);
@@ -598,7 +596,9 @@ public class TextEventClassifier {
    */
   public void markupPreParsedText(String filepath, TreeFactory tf, GrammaticalStructureFactory gsf) {
     // Parse the file.
-    info = Tempeval3Parser.lexParsedFileToDepParsed(filepath, tf, gsf);
+    SieveDocument doc = Tempeval3Parser.lexParsedFileToDepParsed(filepath, tf, gsf);
+    if( docs == null ) docs = new SieveDocuments();
+    docs.addDocument(doc);
     loadClassifiers();
     extractEvents();
 
@@ -610,15 +610,15 @@ public class TextEventClassifier {
     // Output just the text with the events marked as XML elements.
     String markup = "";
     if( coeMarkFormat )
-    	markup = info.markupOriginalText(filepath, "MARK", "ID", true, true, false, true);
+    	markup = doc.markupOriginalText("MARK", "ID", true, true, false, true);
     else
-    	markup = info.markupOriginalText(filepath);
+    	markup = doc.markupOriginalText();
     
     Directory.stringToFile(filepath + ".withevents", markup);
 //    System.out.println("Created " + outpath);
     
     // Output a text file with just event sentence/word indices.
-    createEventsOnlyFile(filepath + ".onlyevents", filepath, info);
+    createEventsOnlyFile(filepath + ".onlyevents", filepath, docs);
   }
   
   /**
@@ -651,7 +651,7 @@ public class TextEventClassifier {
     else {
       classifier.loadClassifiers();
       classifier.extractEvents();
-    	classifier.infoToFile("withevents.info.xml");
+    	classifier.docsToFile("withevents.info.xml");
     	System.out.println("Created withevents.info.xml");
     }
   }

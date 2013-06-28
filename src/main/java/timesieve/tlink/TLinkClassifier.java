@@ -76,7 +76,7 @@ import edu.stanford.nlp.util.StringUtils;
  */
 public class TLinkClassifier {
   Properties props;
-  public InfoFile info;
+  public SieveDocuments docs;
   public TLinkFeaturizer featurizer;
   Classifier<String,String> eeSameSentClassifier; // intra-sentence event-event links.
   Classifier<String,String> eeSameSentExistsClassifier; // binary, is there a link or not?
@@ -98,8 +98,8 @@ public class TLinkClassifier {
   
   public TLinkClassifier() {
   }
-  public TLinkClassifier(InfoFile info, String dir, Properties props) {
-    this.info = info;
+  public TLinkClassifier(SieveDocuments docs, String dir, Properties props) {
+    this.docs = docs;
     this.modelDir = dir;
     this.props = props;
     init();
@@ -113,13 +113,13 @@ public class TLinkClassifier {
   public void trainInfo(String args[]) {
     handleParams(args);
     init();
-    trainInfo(info, null);
+    trainInfo(docs, null);
   }
   
   private void handleParams(String[] args) {
     HandleParameters params = new HandleParameters(args);
     System.out.println("Load .info file from " + params.get("-info"));
-    info = new InfoFile(params.get("-info"));
+    docs = new SieveDocuments(params.get("-info"));
     props = StringUtils.argsToProperties(args);
   }
 
@@ -134,7 +134,7 @@ public class TLinkClassifier {
     featurizer = new TLinkFeaturizer();
   }
   
-  public void trainInfo(InfoFile info, Set<String> docnames) {
+  public void trainInfo(SieveDocuments docs, Set<String> docnames) {
     featurizer._noEventFeats = true;
     
     // Event-Event links in the same sentence.
@@ -149,11 +149,11 @@ public class TLinkClassifier {
       featurizer._eventEventDominates = false;
       if( props.containsKey("bethard") ) featurizer._doBethard = true;
 //      System.out.println("BETHARD FEATURIZER = " + featurizer._doBethard);
-      List<TLinkDatum> data = featurizer.infoToTLinkFeatures(info, docnames);
+      List<TLinkDatum> data = featurizer.infoToTLinkFeatures(docs, docnames);
       System.out.println("Final training data size: " + data.size());
       eeSameSentClassifier = train(data, _featMinOccurrence);
       // Event-event all pairs: classify if a link exists or not.
-      data = createDatasetEventEventSameSentExists(info, docnames);
+      data = createDatasetEventEventSameSentExists(docs, docnames);
       System.out.println("Final event-event exists training data size: " + data.size());
       eeSameSentExistsClassifier = train(data, _featMinOccurrence);
       
@@ -161,13 +161,13 @@ public class TLinkClassifier {
       if( props.containsKey("eesplit") ) {
       	featurizer._eventEventDominates = true;
         if( props.containsKey("bethard") ) featurizer._doBethard = true;
-      	data = featurizer.infoToTLinkFeatures(info, docnames);
+      	data = featurizer.infoToTLinkFeatures(docs, docnames);
       	System.out.println("Final event-event dominates training data size: " + data.size());
       	eeSameSentDominatesClassifier = train(data, _featMinOccurrence);
         featurizer._eventEventDominates = false;
         featurizer._eventEventNoDominates = true;
         if( props.containsKey("bethard") ) featurizer._doBethard = true; // will skip most of these, but some errors might still have Bethard gold labels
-      	data = featurizer.infoToTLinkFeatures(info, docnames);
+      	data = featurizer.infoToTLinkFeatures(docs, docnames);
       	System.out.println("Final event-event doesn't dominate training data size: " + data.size());
       	eeSameSentNoDominatesClassifier = train(data, _featMinOccurrence);
       }
@@ -181,7 +181,7 @@ public class TLinkClassifier {
       featurizer._sameSentenceOnly = false;
       featurizer._diffSentenceOnly = true;
       featurizer._doBethard = false;
-      List<TLinkDatum> data = featurizer.infoToTLinkFeatures(info, docnames);
+      List<TLinkDatum> data = featurizer.infoToTLinkFeatures(docs, docnames);
       System.out.println("Final training data size: " + data.size());
       eeDiffSentClassifier = train(data, _featMinOccurrence);
     }
@@ -195,11 +195,11 @@ public class TLinkClassifier {
       featurizer._sameSentenceOnly = true;
       featurizer._ignoreSameSentence = false;
       featurizer._diffSentenceOnly = false;
-      List<TLinkDatum> data = featurizer.infoToTLinkFeatures(info, docnames);
+      List<TLinkDatum> data = featurizer.infoToTLinkFeatures(docs, docnames);
       System.out.println("Final training data size: " + data.size());
       etSameSentClassifier = train(data, _featMinOccurrence);
       // Event-time all pairs: classify if a link exists or not.
-      data = createDatasetEventTimeSameSentExists(info, docnames);
+      data = createDatasetEventTimeSameSentExists(docs, docnames);
       etSameSentExistsClassifier = train(data, _featMinOccurrence);
     }
     
@@ -215,7 +215,7 @@ public class TLinkClassifier {
       featurizer._diffSentenceOnly = true;
 //      featurizer._neighborSentenceOnly = true;
       featurizer._noEventTimeDiff = false;
-      List<TLinkDatum> data = featurizer.infoToTLinkFeatures(info, docnames);
+      List<TLinkDatum> data = featurizer.infoToTLinkFeatures(docs, docnames);
       System.out.println("Final training data size: " + data.size());
       etDiffSentClassifier = train(data, _featMinOccurrence);
     }
@@ -231,11 +231,11 @@ public class TLinkClassifier {
       featurizer._ignoreSameSentence = false;
       featurizer._diffSentenceOnly = false;
       featurizer._neighborSentenceOnly = false;
-      List<TLinkDatum> data = featurizer.infoToTLinkFeatures(info, docnames);
+      List<TLinkDatum> data = featurizer.infoToTLinkFeatures(docs, docnames);
       System.out.println("Final training data size: " + data.size());
       etDCTClassifier = train(data, _featMinOccurrence);
       // Event-DCT all events: classify if a link exists or not.
-      data = createDatasetEventDCTExists(info, docnames);
+      data = createDatasetEventDCTExists(docs, docnames);
       etDCTExistsClassifier = train(data, _featMinOccurrence);
     }
   }
@@ -359,22 +359,22 @@ public class TLinkClassifier {
    * Creates datums for every possible event-event pair within sentences. Every possible. Those that have
    * a corresponding TLink are marked as OVERLAP. All others are NONE.
    */
-  public List<TLinkDatum> createDatasetEventDCTExists(InfoFile info, Set<String> docnames) {
+  public List<TLinkDatum> createDatasetEventDCTExists(SieveDocuments docs, Set<String> docnames) {
     System.out.println("createDataset Event DCT Exists");
     List<TLinkDatum> alldata = new ArrayList<TLinkDatum>();
     TreeFactory tf = new LabeledScoredTreeFactory();
 
-    for( String file : info.getFiles() ) {
-      if( docnames == null || docnames.contains(file) ) {
+    for( SieveDocument doc : docs.getDocuments() ) {
+      if( docnames == null || docnames.contains(doc.getDocname()) ) {
         System.out.println("\n--------------------------------------------------");
-        System.out.println("File " + file);
+        System.out.println("File " + doc.getDocname());
         List<TLinkDatum> datums = new ArrayList<TLinkDatum>();
-        List<Timex> dcts = info.getDocstamp(file);
+        List<Timex> dcts = doc.getDocstamp();
         String dctid = dcts.get(0).tid(); // assume only the first DCT timex
         
         // Hash the known DCT tlinks.
         Set<String> links = new HashSet<String>();
-        for( TLink link : info.getTlinks(file) ) {
+        for( TLink link : doc.getTlinks() ) {
           if( TimebankUtil.isEventDCTLink(link, dcts) ) {
             if( isNormalLink(link) ) {
               links.add(link.event1() + " " + link.event2());
@@ -384,12 +384,10 @@ public class TLinkClassifier {
         }
         
         // Get parse trees.
-        List<Sentence> sentences = info.getSentences(file);
-        List<Tree> trees = new ArrayList<Tree>();
-        for( Sentence sent : sentences )
-          trees.add(TreeOperator.stringToTree(sent.parse(), tf));
+        List<SieveSentence> sentences = doc.getSentences();
+        List<Tree> trees = doc.getAllParseTrees();
         
-        for( Sentence sent : sentences ) {
+        for( SieveSentence sent : sentences ) {
           List<TextEvent> events = sent.events();
 
           for( int ii = 0; ii < events.size(); ii++ ) {
@@ -414,20 +412,20 @@ public class TLinkClassifier {
    * Creates datums for every possible event-event pair within sentences. Every possible. Those that have
    * a corresponding TLink are marked as OVERLAP. All others are NONE.
    */
-  public List<TLinkDatum> createDatasetEventEventSameSentExists(InfoFile info, Set<String> docnames) {
+  public List<TLinkDatum> createDatasetEventEventSameSentExists(SieveDocuments docs, Set<String> docnames) {
     System.out.println("createDataset Event Event Same Sent Exists");
     List<TLinkDatum> alldata = new ArrayList<TLinkDatum>();
     TreeFactory tf = new LabeledScoredTreeFactory();
 
-    for( String file : info.getFiles() ) {
-      if( docnames == null || docnames.contains(file) ) {
+    for( SieveDocument doc : docs.getDocuments() ) {
+      if( docnames == null || docnames.contains(doc.getDocname()) ) {
         System.out.println("\n--------------------------------------------------");
-        System.out.println("File " + file);
+        System.out.println("File " + doc.getDocname());
         List<TLinkDatum> datums = new ArrayList<TLinkDatum>();
 
         // Hash the known tlinks.
         Set<String> links = new HashSet<String>();
-        for( TLink link : info.getTlinks(file) ) {
+        for( TLink link : doc.getTlinks() ) {
           if( isNormalLink(link) ) {          
             links.add(link.event1() + " " + link.event2());
             links.add(link.event2() + " " + link.event1());
@@ -436,16 +434,13 @@ public class TLinkClassifier {
         }
         
         // Get parse trees.
-        List<Sentence> sentences = info.getSentences(file);
-        List<Tree> trees = new ArrayList<Tree>();
-        for( Sentence sent : sentences )
-          trees.add(TreeOperator.stringToTree(sent.parse(), tf));
-        List<String> siddeps = info.getDependencies(file);
+        List<SieveSentence> sentences = doc.getSentences();
+        List<Tree> trees = doc.getAllParseTrees();
         
         int sid = 0;
-        for( Sentence sent : sentences ) {
+        for( SieveSentence sent : sentences ) {
           List<TextEvent> events = sent.events();
-          List<TypedDependency> deps = InfoFile.stringToDependencies(siddeps.get(sid));
+          List<TypedDependency> deps = sent.getDeps();
           
           for( int ii = 0; ii < events.size()-1; ii++ ) {
             TextEvent event1 = events.get(ii);
@@ -472,20 +467,20 @@ public class TLinkClassifier {
    * Creates datums for every possible event-time pair within sentences. Every possible. Those that have
    * a corresponding TLink are marked as OVERLAP. All others are NONE.
    */
-  public List<TLinkDatum> createDatasetEventTimeSameSentExists(InfoFile info, Set<String> docnames) {
+  public List<TLinkDatum> createDatasetEventTimeSameSentExists(SieveDocuments docs, Set<String> docnames) {
     System.out.println("createDataset Event Time Same Sent Exists");
     List<TLinkDatum> alldata = new ArrayList<TLinkDatum>();
     TreeFactory tf = new LabeledScoredTreeFactory();
 
-    for( String file : info.getFiles() ) {
-      if( docnames == null || docnames.contains(file) ) {
+    for( SieveDocument doc : docs.getDocuments() ) {
+      if( docnames == null || docnames.contains(doc.getDocname()) ) {
         System.out.println("\n--------------------------------------------------");
-        System.out.println("File " + file);
+        System.out.println("File " + doc.getDocname());
         List<TLinkDatum> datums = new ArrayList<TLinkDatum>();
 
         // Hash the known tlinks.
         Set<String> links = new HashSet<String>();
-        for( TLink link : info.getTlinks(file) ) {
+        for( TLink link : doc.getTlinks() ) {
           if( link instanceof EventTimeLink ) {
             if( isNormalLink(link) ) {
               links.add(link.event1() + " " + link.event2());
@@ -495,17 +490,13 @@ public class TLinkClassifier {
         }
         
         // Get parse trees.
-        List<Sentence> sentences = info.getSentences(file);
-        List<Tree> trees = new ArrayList<Tree>();
-        for( Sentence sent : sentences )
-          trees.add(TreeOperator.stringToTree(sent.parse(), tf));
-        List<String> siddeps = info.getDependencies(file);
+        List<Tree> trees = doc.getAllParseTrees();
         
         int sid = 0;
-        for( Sentence sent : sentences ) {
+        for( SieveSentence sent : doc.getSentences() ) {
           List<TextEvent> events = sent.events();
           List<Timex> timexes= sent.timexes();
-          List<TypedDependency> deps = InfoFile.stringToDependencies(siddeps.get(sid));
+          List<TypedDependency> deps = sent.getDeps();
           
           for( TextEvent event : events ) {
             for( Timex timex : timexes ) {
@@ -530,21 +521,20 @@ public class TLinkClassifier {
    * Put event-time links into the global .info file between same sentence event-time links.
    */
   public List<TLink> extractEventDCTLinks(String docname) {
+  	SieveDocument doc = docs.getDocument(docname);
     System.out.println("doc (e-dct) = " + docname);
-    List<Sentence> sentences = info.getSentences(docname);
-    List<Timex> dcts = info.getDocstamp(docname);
+    List<SieveSentence> sentences = doc.getSentences();
+    List<Timex> dcts = doc.getDocstamp();
     System.out.println(sentences.size() + " sentences.");
     List<TLink> tlinks = new ArrayList<TLink>();
 
     if( dcts != null && dcts.size() > 0 ) {
 
       // Grab all the parse trees.
-      List<String> strings = new ArrayList<String>();
-      for( Sentence sent : sentences ) strings.add(sent.parse());
-      List<Tree> trees = TreeOperator.stringsToTrees(strings);
+      List<Tree> trees = doc.getAllParseTrees();
 
       // Loop over each sentence and get TLinks.
-      for( Sentence sent : sentences ) {
+      for( SieveSentence sent : sentences ) {
         List<TextEvent> events = sent.events();
 
         if( events != null && events.size() > 0 ) {
@@ -583,25 +573,21 @@ public class TLinkClassifier {
    * Put event-time links into the global .info file between same sentence event-time links.
    */
   public List<TLink> extractSameSentenceEventTimeLinks(String docname) {
+  	SieveDocument doc = docs.getDocument(docname);
     System.out.println("doc (samesent e-t) = " + docname);
-    List<Sentence> sentences = info.getSentences(docname);
+    List<SieveSentence> sentences = doc.getSentences();
     System.out.println(sentences.size() + " sentences.");
     List<TLink> tlinks = new ArrayList<TLink>();
 
     // Grab all the parse trees.
-    List<String> strings = new ArrayList<String>();
-    for( Sentence sent : sentences ) strings.add(sent.parse());
-    List<Tree> trees = TreeOperator.stringsToTrees(strings);
+    List<Tree> trees = doc.getAllParseTrees();
 
     // Grab the dependencies.
-    List<String> strdeps = info.getDependencies(docname);
-    List<List<TypedDependency>> alldeps = new ArrayList<List<TypedDependency>>();
-    for( String strdep : strdeps )
-      alldeps.add(InfoFile.stringToDependencies(strdep));
+    List<List<TypedDependency>> alldeps = doc.getAllDependencies();
     
     // Loop over each sentence and get TLinks.
     int sid = 0;
-    for( Sentence sent : sentences ) {
+    for( SieveSentence sent : sentences ) {
       List<TextEvent> events = sent.events();
       List<Timex> timexes = sent.timexes();
 
@@ -679,21 +665,18 @@ public class TLinkClassifier {
    */
   public List<TLink> extractSameSentenceEventEventLinks(String docname) {
     System.out.println("doc (same sent e-e)= " + docname);
-    List<Sentence> sentences = info.getSentences(docname);
+    List<SieveSentence> sentences = docs.getDocument(docname).getSentences();
     System.out.println(sentences.size() + " sentences.");
     List<TLink> tlinks = new ArrayList<TLink>();
 
     // Grab all the parse trees.
-    List<String> strings = new ArrayList<String>();
-    for( Sentence sent : sentences ) strings.add(sent.parse());
-    List<Tree> trees = TreeOperator.stringsToTrees(strings);
-    List<String> strdeps = info.getDependencies(docname);
+    List<Tree> trees = docs.getDocument(docname).getAllParseTrees();
 
     // Loop over each sentence and get TLinks.
     int sid = 0;
-    for( Sentence sent : sentences ) {
+    for( SieveSentence sent : sentences ) {
       List<TextEvent> events = sent.events();
-      List<TypedDependency> deps = InfoFile.stringToDependencies(strdeps.get(sid));
+      List<TypedDependency> deps = sent.getDeps();
 
       System.out.println("events: " + events);
       for( int ii = 0; ii < events.size()-1; ii++ ) {
@@ -791,20 +774,18 @@ public class TLinkClassifier {
    */
   public List<TLink> extractNeighborSentenceEventEventLinks(String docname) {
     System.out.println("doc = (diff sent e-e)" + docname);
-    List<Sentence> sentences = info.getSentences(docname);
+    List<SieveSentence> sentences = docs.getDocument(docname).getSentences();
     System.out.println(sentences.size() + " sentences.");
     List<TLink> tlinks = new ArrayList<TLink>();
 
     // Grab all the parse trees.
-    List<String> strings = new ArrayList<String>();
-    for( Sentence sent : sentences ) strings.add(sent.parse());
-    List<Tree> trees = TreeOperator.stringsToTrees(strings);
+    List<Tree> trees = docs.getDocument(docname).getAllParseTrees();
 
-    TextEvent[] mainevents = new TextEvent[strings.size()];
+    TextEvent[] mainevents = new TextEvent[trees.size()];
     int sid = 0;
 
     // Loop over each sentence and get TLinks.
-    for( Sentence sent : sentences ) {
+    for( SieveSentence sent : sentences ) {
       List<TextEvent> events = sent.events();
       System.out.println("TEXT: " + sent.sentence());
       //        System.out.println("EVENTS: " + events);
@@ -924,7 +905,7 @@ public class TLinkClassifier {
   
   public void extractTLinks(Collection<String> docnames) {
     System.out.println("*** Classifier-Based TLink Extraction ***");
-    if( docnames == null ) docnames = info.getFiles();
+    if( docnames == null ) docnames = docs.getFileNames();
     
     for( String doc : docnames ) {
       List<TLink> links = new ArrayList<TLink>();
@@ -948,7 +929,7 @@ public class TLinkClassifier {
         }
         System.out.println();
       }
-      info.addTlinks(doc, keep);
+      docs.getDocument(doc).addTlinks(keep);
     }
     System.out.println("Extracted tlinks, finished.");
   }
@@ -960,17 +941,18 @@ public class TLinkClassifier {
    */
   public void labelKnownTLinks(Collection<String> docnames) {
     System.out.println("*** Classifier-Based TLink Labeling ***");
-    if( docnames == null ) docnames = info.getFiles();
+    if( docnames == null ) docnames = docs.getFileNames();
     int eediff = 0, etdiff = 0, edct = 0, etsame=0, eesame=0, eeneigh=0;
     Counter<String> saids = new ClassicCounter<String>();
     Counter<String> mysaids = new ClassicCounter<String>();
     
-    for( String doc : docnames ) {
-      List<TLink> links = info.getTlinks(doc);
-      List<TextEvent> events = info.getEvents(doc);
-      List<Timex> timexes = info.getTimexes(doc);
-      List<Tree> trees = TreeOperator.stringsToTrees(info.getParses(doc));
-      List<List<TypedDependency>> alldeps = InfoFile.stringsToDependencies(info.getDependencies(doc));
+    for( String docname : docnames ) {
+    	SieveDocument doc = docs.getDocument(docname);
+      List<TLink> links = doc.getTlinks();
+      List<TextEvent> events = doc.getEvents();
+      List<Timex> timexes = doc.getTimexes();
+      List<Tree> trees = doc.getAllParseTrees();
+      List<List<TypedDependency>> alldeps = doc.getAllDependencies();
 
       if( links != null && links.size() > 0 ) {
         Map<String,TextEvent> idToEvent = new HashMap<String,TextEvent>();
@@ -989,9 +971,9 @@ public class TLinkClassifier {
           // Event-Time links.
           if( link instanceof EventTimeLink ) {
             // event-dct
-            if( TimebankUtil.isEventDCTLink(link, info.getDocstamp(doc)) ) {
+            if( TimebankUtil.isEventDCTLink(link, doc.getDocstamp()) ) {
               TextEvent e1 = (link.event1().startsWith("e") ? idToEvent.get(link.event1()) : idToEvent.get(link.event2()));
-              TLinkDatum datum = featurizer.createEventDocumentTimeDatum(e1, info.getDocstamp(doc).get(0), null, trees);
+              TLinkDatum datum = featurizer.createEventDocumentTimeDatum(e1, doc.getDocstamp().get(0), null, trees);
               newLabel = etDCTClassifier.classOf(datum.createRVFDatum());
               edct++;
             }
@@ -1069,8 +1051,8 @@ public class TLinkClassifier {
         }
       }
       
-      info.removeTLinks(doc);
-      info.addTlinks(doc, links);
+      doc.deleteTlinks();
+      doc.addTlinks(links);
     }
     System.out.println("Labeled known tlinks, finished.");
     System.out.println("# event-time inter-sentence = " + etdiff);
@@ -1177,18 +1159,18 @@ public class TLinkClassifier {
     }
     else if( args[args.length-1].equals("testinfo") ) {
       Properties props = StringUtils.argsToProperties(args);
-      TLinkClassifier classifier = new TLinkClassifier(new InfoFile(args[args.length-3]), args[args.length-2], props);
+      TLinkClassifier classifier = new TLinkClassifier(new SieveDocuments(args[args.length-3]), args[args.length-2], props);
       classifier.extractTLinks();
-      classifier.info.writeToFile(new File("tlinks.info.xml"));
+      classifier.docs.writeToXML(new File("tlinks.info.xml"));
     }
     else if( args[args.length-1].equals("testknownlinks") ) {
       Properties props = StringUtils.argsToProperties(args);
-      TLinkClassifier classifier = new TLinkClassifier(new InfoFile(args[args.length-3]), args[args.length-2], props);
+      TLinkClassifier classifier = new TLinkClassifier(new SieveDocuments(args[args.length-3]), args[args.length-2], props);
       classifier.labelKnownTLinks(null);
       String out = "tlinks.info.xml";
       if( props.containsKey("out") ) out = props.getProperty("out");
       System.out.println("Writing to " + out);
-      classifier.info.writeToFile(new File(out));
+      classifier.docs.writeToXML(new File(out));
     }
     else {
       System.out.println("Unknown command!");

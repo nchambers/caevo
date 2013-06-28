@@ -3,6 +3,9 @@ package timesieve.sieves;
 import java.util.ArrayList;
 import java.util.List;
 
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
 import timesieve.InfoFile;
 import timesieve.Sentence;
 import timesieve.TextEvent;
@@ -24,18 +27,18 @@ public class AllVagueSieve implements Sieve {
 	/**
 	 * The main function. All sieves must have this.
 	 */
-	public List<TLink> annotate(InfoFile info, String docname, List<TLink> currentTLinks) {
+	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 		// The size of the list is the number of sentences in the document.
 		// The inner list is the events in textual order.
-		List<List<TextEvent>> allEvents = info.getEventsBySentence(docname);
-		List<List<Timex>> allTimexes = info.getTimexesBySentence(docname);
+		List<List<TextEvent>> allEvents = doc.getEventsBySentence();
+		List<List<Timex>> allTimexes = doc.getTimexesBySentence();
 
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
 		
 		// Make BEFORE links between all intra-sentence pairs.
 		int sid = 0;
-		for( Sentence sent : info.getSentences(docname) ) {
+		for( SieveSentence sent : doc.getSentences() ) {
 //			System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
 			proposed.addAll(allPairs(allEvents.get(sid), (sid+1 < allEvents.size() ? allEvents.get(sid+1) : null), 
 					allTimexes.get(sid), (sid+1 < allTimexes.size() ? allTimexes.get(sid+1) : null)));
@@ -102,7 +105,7 @@ public class AllVagueSieve implements Sieve {
 	/**
 	 * No training. Just rule-based.
 	 */
-	public void train(InfoFile trainingInfo) {
+	public void train(SieveDocuments trainingInfo) {
 		// no training
 	}
 

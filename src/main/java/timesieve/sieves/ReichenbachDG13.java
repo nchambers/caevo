@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 import timesieve.InfoFile;
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
 import timesieve.TextEvent;
 import timesieve.tlink.TLink;
 
@@ -19,7 +21,7 @@ public class ReichenbachDG13 implements Sieve {
 	public boolean debug = false;
 	
 	
-	public List<TLink> annotate(InfoFile info, String docname, List<TLink> currentTLinks) {
+	public List<TLink> annotate(SieveDocument info, List<TLink> currentTLinks) {
 		
 		// proposed will hold all TLinks proposed by the sieve
 		List<TLink> proposed = new ArrayList<TLink>();
@@ -35,7 +37,7 @@ public class ReichenbachDG13 implements Sieve {
 		return proposed;
 	}
 	
-	public void train(InfoFile trainingInfo) {
+	public void train(SieveDocuments trainingInfo) {
 		// no training
 	}
 
