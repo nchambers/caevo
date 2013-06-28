@@ -34,8 +34,12 @@ public class AdjacentVerbTimex implements Sieve {
 	// argument of the event verb, as opposed to serving as a stand-alone
 	// temporal argument of the verb.
 	public boolean debug = false;
+	private String adjType = "VerbTimex";
 	private String valQuarterRegex = "\\d{4}-Q\\d";
 	private Pattern valQuarter = Pattern.compile(valQuarterRegex);
+	
+	
+	
 	/**
 	 * The main function. All sieves must have this.
 	 */
@@ -52,12 +56,10 @@ public class AdjacentVerbTimex implements Sieve {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+	
 		// fill in properties values
-		String adjType = null;
-		
 		try {
-			adjType = TimeSieveProperties.getString("AdjacentVerbTimex", "VerbTimex");
+			adjType = TimeSieveProperties.getString("AdjacentVerbTimex.order", "VerbTimex");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -77,6 +79,7 @@ public class AdjacentVerbTimex implements Sieve {
 			Tree tree = null;
 			// check timex, event pairs against rule criteria
 			for (Timex timex : sent.timexes()) {
+				if (!validateTimex(timex)) continue;
 				for (TextEvent event : sent.events()) {
 					// set adjacency setting based on adjacency type 
 					boolean adjSetting;
@@ -110,7 +113,7 @@ public class AdjacentVerbTimex implements Sieve {
 		String val = timex.value();
 		// Return false if timex value is not a date or is a quarter
 		Matcher m = valQuarter.matcher(val);
-		if (!m.matches() && timex.type().equals("DATE")) return false;
+		if (!m.matches()) return true;
 		else return false;
 	}
 	
