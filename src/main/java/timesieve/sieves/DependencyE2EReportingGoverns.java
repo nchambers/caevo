@@ -15,11 +15,12 @@ import timesieve.tlink.TLink;
 import timesieve.util.TreeOperator;
 
 /**
- * JUST AN EXAMPLE
- * Stupid sieve that shows how to access basic data structures.
- * It generates BEFORE links between all intra-sentence pairs.
+ * This sieve deals with event pairs in a dependency relationship,
+ * when one of the verbs is a reporting verb.
  * 
- * @author chambers
+ * 
+ * 
+ * @author cassidy
  */
 public class DependencyE2EReportingGoverns implements Sieve {
 	public boolean debug = false;
@@ -27,20 +28,18 @@ public class DependencyE2EReportingGoverns implements Sieve {
 	 * The main function. All sieves must have this.
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
-		// The size of the list is the number of sentences in the document.
-		// The inner list is the events in textual order.
-		List<List<TextEvent>> allEvents = doc.getEventsBySentence();
 		
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
 		
-		// Make BEFORE links between all intra-sentence pairs.
+		// For each SieveSentence in the SieveDocument, get its events and dependencies.
+		// Apply sieve criteria to pairs of events that are in a dep relation in addPairsEvents
 		int sid = 0;
 		for( SieveSentence sent : doc.getSentences() ) {
 			if (debug == true) {
 				System.out.println("DEBUG: adding tlinks from " + doc.getDocname() + " sentence " + sent.sentence());
 			}
-			proposed.addAll(allPairsEvents(sent.events(), sent.getDeps()));
+			proposed.addAll(applySieve(sent.events(), sent.getDeps()));
 			sid++;
 		}
 
@@ -51,29 +50,33 @@ public class DependencyE2EReportingGoverns implements Sieve {
 	}
 
 	/**
-	 * All pairs of events are BEFORE relations based on text order!
+	 * For each event-event pair such that one event governs the other in a dep relation,
+	 * classify as follows: if the governor is a past tense reporting verb...
+	 * label the pair AFTER if the dependent is in the past tense, an occurrence, and not
+	 * the progressive aspect. If the dependent is in the future tense, label BEFORE
+	 * regardless of its class or aspect.
 	 */
-	private List<TLink> allPairsEvents(List<TextEvent> events, List<TypedDependency> deps) {
+	private List<TLink> applySieve(List<TextEvent> events, List<TypedDependency> deps) {
 		List<TLink> proposed = new ArrayList<TLink>();
-
+		
 		for( int xx = 0; xx < events.size(); xx++ ) {
 			TextEvent e1 = events.get(xx);
 			for( int yy = xx+1; yy < events.size(); yy++ ) {
 				TextEvent e2 = events.get(yy);
+				// We have a pair of event e1 and e2.
+				// check a given TypedDependency involves both events,
+				// and if so check event properties against criteria.
 				for (TypedDependency td : deps) {
-					if (e1.index() == td.gov().index() && e2.index() == td.dep().index()
-						 && e1.getTheClass().equals("REPORTING") && e1.getTense().equals("PAST")) {
-							if (e2.getTense().equals("PAST") && e2.getTheClass().equals("OCCURRENCE")
-									&& !e2.getAspect().equals("PROGRESSIVE")) {
-							proposed.add(new EventEventLink(events.get(xx).eiid(), events.get(yy).eiid(), TLink.TYPE.AFTER));	
-							}
-							else if (e2.getTense().equals("FUTURE")) {
-								proposed.add(new EventEventLink(events.get(xx).eiid(), events.get(yy).eiid(), TLink.TYPE.BEFORE));	
-							}
-						}
+					if (e1.index() == td.gov().index() && e2.index() == td.dep().index()) {
+						classifyEventPair(e1, e2, proposed);
+					}
+					else if (e2.index() == td.gov().index() && e1.index() == td.dep().index()) {
+						classifyEventPair(e2, e1, proposed);
 					}
 				}
 			}
+		}
+
 		
 		if (debug == true) {
 			System.out.println("events: " + events);
@@ -82,18 +85,27 @@ public class DependencyE2EReportingGoverns implements Sieve {
 		return proposed;
 	}
 	
-	private ArrayList<TypedDependency> getAllTypedDependencies(String dependencyParseString){
-		ArrayList<TypedDependency> deps = new ArrayList<TypedDependency>();
-		
-		if (dependencyParseString.isEmpty())
-			return deps;
-		
-		String[] depStrings = dependencyParseString.split("\\n");
-		for (int i = 0; i < depStrings.length; i++){
-			TypedDependency td = TreeOperator.stringParensToDependency(depStrings[i]);
-			deps.add(td);
+	private void classifyEventPair(TextEvent eGov, TextEvent eDep, List<TLink> proposed ) {
+		if (eGov.getTheClass().equals("REPORTING") && eGov.getTense().equals("PAST")) {
+			if (eDep.getTense().equals("PAST") && eDep.getTheClass().equals("OCCURRENCE")
+					&& !eDep.getAspect().equals("PROGRESSIVE")) {
+						proposed.add(new EventEventLink(eGov.eiid(), eDep.eiid(), TLink.TYPE.AFTER));	
+			}
+			else if (eDep.getTense().equals("FUTURE")) {
+				proposed.add(new EventEventLink(eGov.eiid(), eDep.eiid(), TLink.TYPE.BEFORE));
 		}
-		return deps;
+			// Add anything here?
+			else
+			{}
+		}
+		//else if (eDep.getTense().equals("FUTURE")) {
+			//proposed.add(new EventEventLink(eGov.eiid(), eDep.eiid(), TLink.TYPE.BEFORE));
+		//}
+		// Add anything here?
+		else
+		{}
+
+		
 	}
 	
 	/**
