@@ -38,7 +38,7 @@ public class SieveSentence {
   	this.parent = doc;
   	this.sid = sid;
   	this.sentence = sentence;
-  	this.parseStr = parseStr;
+  	this.parseStr = strParse;
   	this.depsStr = strDeps;
   	this.tokens = tokens;
   	this.events = events;
@@ -88,6 +88,9 @@ public class SieveSentence {
   }
 
   public void addTimexes(List<Timex> newTimexes) {
+  	for (Timex timex : newTimexes)
+  		timex.setSID(this.sid);
+  	
   	timexes.addAll(newTimexes);
   }
   

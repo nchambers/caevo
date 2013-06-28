@@ -61,11 +61,11 @@ public class TimexClassifier {
       if( debug ) System.out.println("doc = " + doc.getDocname());
       List<SieveSentence> sentences = doc.getSentences();
       List<Timex> dcts = doc.getDocstamp();
-      if( dcts.size() > 1 ) {
+      if( dcts != null && dcts.size() > 1 ) {
         System.out.println("markupTimex3 dct size is " + dcts.size());
         System.exit(1);
       }
-      String docDate = (dcts.size() > 0) ? dcts.get(0).value() : null;
+      String docDate = (dcts != null && dcts.size() > 0) ? dcts.get(0).value() : null;
       if( debug ) System.out.println("markupTimex3 docDate = " + docDate);
 //      System.out.println(sentences.size() + " sentences.");
       int tid = 1;

@@ -162,7 +162,8 @@ public class SieveDocument {
       timexes.addAll(sent.timexes());
     
     // Document time stamps.
-    timexes.addAll(dcts);
+    if (dcts != null)
+    	timexes.addAll(dcts);
     
     return timexes;
   }
