@@ -268,7 +268,22 @@ public class Main {
 			builder.append("Time-Time " + ttLink.getRelation() + "\t");
 			builder.append(t1.getTid() + ": " + t1.getValue() + " (" + t1.getText() + ")\t");
 			builder.append(t2.getTid() + ": " + t2.getValue() + " (" + t2.getText() + ")");
-		} 
+		} else {
+			// complex code because Timex and TextEvent don't share a common parent or common APIs
+			String id1 = link.getId1();
+			Timex t1 = doc.getTimexByTid(id1);
+			TextEvent e1 = doc.getEventByEiid(id1);
+			String normId1 = t1 != null ? t1.getTid() : e1.getId();
+			String text1 = t1 != null ? t1.getText() : e1.getString();
+			String id2 = link.getId2();
+			Timex t2 = doc.getTimexByTid(id2);
+			TextEvent e2 = doc.getEventByEiid(id2);
+			String normId2 = t2 != null ? t2.getTid() : e2.getId();
+			String text2 = t2 != null ? t2.getText() : e2.getString();
+			// simple display of relation, anchor texts, and anchor ids.
+			builder.append(String.format("%s(%s[%s],%s[%s])", link.getRelation(),
+					text1, normId1, text2, normId2));
+		}
 		
 		return builder.toString();
 	}
