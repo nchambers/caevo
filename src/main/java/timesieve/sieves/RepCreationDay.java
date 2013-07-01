@@ -1,5 +1,6 @@
 package timesieve.sieves;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.*;
@@ -13,6 +14,7 @@ import timesieve.TextEvent;
 import timesieve.Timex;
 import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
+import timesieve.util.TimeSieveProperties;
 import timesieve.util.TreeOperator;
 
 import edu.stanford.nlp.ling.CoreLabel;
@@ -26,18 +28,41 @@ import edu.stanford.nlp.trees.TreeFactory;
  * 
  * @author cassidy
  */
-public class ReportingCreationDay implements Sieve {
+public class RepCreationDay implements Sieve {
 	public boolean debug = false;
-	private static String creationTime = "(\\d{4}-\\d{2}-\\d{2})T\\d{2}:\\d{2}";
-	private static Pattern creationTimePattern = Pattern.compile(creationTime);
+	private int leftSentWindow = 0;
+	private int rightSentWindow = 0;
+	private boolean considerTA = true;
+	private static String creationTimeRegex = "(\\d{4}-\\d{2}-\\d{2})T\\d{2}:\\d{2}";
+	private static Pattern creationTimePattern = Pattern.compile(creationTimeRegex);
+	
 	/**
 	 * The main function. All sieves must have this.
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
+	// PROPERTIES CODE
+			try {
+				TimeSieveProperties.load();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			try {
+				leftSentWindow = TimeSieveProperties.getInt("RepCreationDay.leftSentWindow", 0);
+				rightSentWindow = TimeSieveProperties.getInt("RepCreationDay.rightSentWindow", 0);
+				considerTA = TimeSieveProperties.getBoolean("RepCreationDay.considerTA", true);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			//Sieve Code
+			
 		// The size of the list is the number of sentences in the document.
 		// The inner list is the events in textual order.
 		List<List<TextEvent>> allEvents = doc.getEventsBySentence();
-		List<List<Timex>> allTimexes = doc.getTimexesBySentence();
+		List<Timex> allTimexes = doc.getTimexes();
 		
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
@@ -48,10 +73,13 @@ public class ReportingCreationDay implements Sieve {
 		if (dctTimexes != null && dctTimexes.size() == 1) {
 			dctTimex = dctTimexes.get(0);
 		}
-		// if we don't know the DCT the sieve won't work
+		
+		// if we don't know the DCT the sieve won't work!
+		// we can use the most common date.
 		else if (dctTimexes == null || dctTimexes.size() == 0) {
 			return proposed;
 		}
+		
 		// if there is more than one DCT, how do we choose?
 		// a better solution may be to go with whichever is mentioned the most, 
 		// followed by whichever appears first in the document, or vice versa
@@ -59,8 +87,10 @@ public class ReportingCreationDay implements Sieve {
 			// for now just use the first one in the list
 			dctTimex = dctTimexes.get(0);
 		}
+		
 		// extract the date of the document creation time
 		String dcd = getDocCreationDate(dctTimex);
+		
 		
 		// check timexes/event pairs in each sentence against sieve criteria.
 		int sid = 0;
@@ -79,8 +109,9 @@ public class ReportingCreationDay implements Sieve {
 					proposed.add(new EventTimeLink(event.getEiid() , timex.getTid(), label));
 					}
 				}
-				sid++;
 			}
+		}
+		
 		if (debug == true) {
 			System.out.println("TLINKS: " + proposed);
 		}
@@ -105,7 +136,12 @@ public class ReportingCreationDay implements Sieve {
 	}
 	
 	private Boolean validateEvent(TextEvent event){
-		if (event.getTheClass()== TextEvent.Class.REPORTING) return true;
+		if (event.getTheClass()=="REPORTING")
+			if (!considerTA) return true;
+			else if (!event.getTense().equals("FUTURE") 
+							 && !(event.getTense().equals("PAST") 
+									 	&& event.getAspect().equals("PERFECTIVE"))) return true;
+			else return false;
 		else return false;
 	}
 	
