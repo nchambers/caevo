@@ -94,12 +94,12 @@ public class RepEventGovEvent implements Sieve {
 				for (TypedDependency td : deps) {
 					// if e1 governs e2
 					if (e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index() 
-							&& e1.getTheClass().equals("REPORTING")) {
+							&& e1.getTheClass().equals(TextEvent.Class.REPORTING)) {
 						classifyEventPair(e1, e2, proposed);
 					}
 					// if e2 governs e1
 					else if (e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index()
-									 && e2.getTheClass().equals("REPORTING")) {
+									 && e2.getTheClass().equals(TextEvent.Class.REPORTING)) {
 						classifyEventPair(e2, e1, proposed);
 					}
 				}
@@ -126,7 +126,7 @@ public class RepEventGovEvent implements Sieve {
 					&& eDepAspect != TextEvent.Aspect.PROGRESSIVE) {
 						proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));	
 			}
-			else if (eDepTense.equals("FUTURE")) {
+			else if (eDepTense == TextEvent.Tense.FUTURE) {
 				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
 		}
 			// Add anything here?
@@ -135,24 +135,24 @@ public class RepEventGovEvent implements Sieve {
 		}
 		
 		// caseGovPres
-		else if (caseGovPres && eGovTense.equals("PRESENT")) {
-			if (eDepTense.equals("PAST") && eDepClass.equals("OCCURRENCE")) {
-				if (!eDepAspect.equals("PROGRESSIVE")) {
+		else if (caseGovPres && eGovTense == TextEvent.Tense.PRESENT) {
+			if (eDepTense == TextEvent.Tense.PAST && eDepClass == TextEvent.Class.OCCURRENCE) {
+				if (eDepAspect != TextEvent.Aspect.PROGRESSIVE) {
 						proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
 				}
 			}
-			else if (eDepTense.equals("PRESENT")) {
+			else if (eDepTense == TextEvent.Tense.PRESENT) {
 				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
 			}
-			else if (eDepTense.equals("FUTURE")) {
+			else if (eDepTense == TextEvent.Tense.FUTURE) {
 					proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
 				}
 		}
 		
 		// caseGovFuture
-		else if (caseGovFuture && eGovTense.equals("FUTURE")) {
-			if (eDepTense.equals("PAST") && eDepClass.equals("OCCURRENCE")
-					&& !eDepAspect.equals("PROGRESSIVE")) {
+		else if (caseGovFuture && eGovTense == TextEvent.Tense.FUTURE) {
+			if (eDepTense == TextEvent.Tense.PAST && eDepClass == TextEvent.Class.OCCURRENCE
+					&& eDepAspect != TextEvent.Aspect.PROGRESSIVE) {
 						proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));	
 			}
 		}
