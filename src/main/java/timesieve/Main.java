@@ -3,8 +3,11 @@ package timesieve;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 
 import timesieve.sieves.Sieve;
 import timesieve.tlink.TLink;
@@ -103,7 +106,7 @@ public class Main {
 	 */
 	private Sieve createSieveInstance(String sieveClass) {
 		try {
-			Class c = Class.forName("timesieve.sieves." + sieveClass);
+			Class<?> c = Class.forName("timesieve.sieves." + sieveClass);
 			Sieve sieve = (Sieve)c.newInstance();
 			return sieve;
 		} catch (InstantiationException e) {
@@ -212,6 +215,10 @@ public class Main {
 			
 			// Gold links.
 			List<TLink> goldLinks = doc.getTlinks(true);
+			Set<Set<String>> goldUnorderedIdPairs = new HashSet<Set<String>>();
+			for (TLink tlink : goldLinks) {
+				goldUnorderedIdPairs.add(unorderedIdPair(tlink));
+			}
 			
 			// Loop over sieves.
 			for( int xx = 0; xx < sieveClasses.length; xx++ ) {
@@ -228,7 +235,9 @@ public class Main {
 					for( TLink pp : proposed ) {
 						if( Evaluate.isLinkCorrect(pp, goldLinks) )
 							numCorrect.incrementCount(sieveClasses[xx]);
-						else {
+						// only mark relations wrong if there's a conflicting human annotation
+						// (if there's no human annotation, we don't know if it's right or wrong)
+						else if (goldUnorderedIdPairs.contains(unorderedIdPair(pp))) {
 							numIncorrect.incrementCount(sieveClasses[xx]);
 							if (debug) {
 								System.out.println("Incorrect Link: " + getLinkDebugInfo(pp, doc));
@@ -352,6 +361,10 @@ public class Main {
 		if( timexClassifier == null )
 			timexClassifier = new TimexClassifier(info);
 		timexClassifier.markupTimex3();
+	}
+	
+	private static Set<String> unorderedIdPair(TLink tlink) {
+		return new HashSet<String>(Arrays.asList(tlink.getId1(), tlink.getId2()));
 	}
 	
 	/**
