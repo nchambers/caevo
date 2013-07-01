@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Properties;
 
 import timesieve.sieves.Sieve;
+import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
 import timesieve.util.Util;
@@ -44,7 +45,7 @@ public class Main {
 	
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
-		  "RepEventGovEvent",
+		  "ReichenbachDG13",
 		  "RepCreationDay",
 			"TimeTimeSieve",
 		  "RepEventGovEvent",
@@ -55,13 +56,8 @@ public class Main {
 			"QuarterSieveReporting",
 			"StupidSieve",
 			"AdjacentVerbTimex",
-			"ReichenbachDG13_1",
-			"ReichenbachDG13_2",
-			"ReichenbachDG13_3",
-			"ReichenbachDG13_4",
-			"WordFeatures64",
+			"WordFeatures64"
 			//"WordNet209",
-			"RepCreationDay"
 	};
 
 	/**
@@ -209,6 +205,7 @@ public class Main {
 		// Loop over documents.
 		for( SieveDocument doc : info.getDocuments() ) {
 			System.out.println("doc: " + doc.getDocname());
+			List<SieveSentence> sents = doc.getSentences();
 			
 			// Gold links.
 			List<TLink> goldLinks = doc.getTlinks(true);
@@ -226,12 +223,17 @@ public class Main {
 					
 					// Check proposed links.
 					for( TLink pp : proposed ) {
-						if( Evaluate.isLinkCorrect(pp, goldLinks) )
+						if( Evaluate.isLinkCorrect(pp, goldLinks) ){
 							numCorrect.incrementCount(sieveClasses[xx]);
+							if (sieveClasses[xx].toString().contains("Reichenbach")){
+							System.out.println(getRbDebugInfo(pp,doc,sents,"Correct"));}
+						}
 						else {
 							numIncorrect.incrementCount(sieveClasses[xx]);
 							if (debug) {
-								System.out.println("Incorrect Link: " + getLinkDebugInfo(pp, doc));
+								//System.out.println("Incorrect Link: " + getLinkDebugInfo(pp, doc));
+								if (sieveClasses[xx].toString().contains("Reichenbach")){
+								System.out.println(getRbDebugInfo(pp,doc,sents,"Incorrect"));}
 							}
 						}
 					}					
@@ -270,7 +272,35 @@ public class Main {
 			builder.append(t2.getTid() + ": " + t2.getValue() + " (" + t2.getText() + ")");
 		} 
 		
+		
 		return builder.toString();
+	}
+
+	private String getRbDebugInfo(TLink link, SieveDocument doc, List<SieveSentence> sents, String result) {
+		StringBuilder builder = new StringBuilder();
+		
+		if (link instanceof EventEventLink) {
+			
+			EventEventLink eeLink = (EventEventLink)link;
+			TextEvent e1 = doc.getEventByEiid(eeLink.getId1());
+			TextEvent e2 = doc.getEventByEiid(eeLink.getId2());
+			int sid1 = e1.getSid();
+			int sid2 = e2.getSid();
+			SieveSentence sent1 = sents.get(sid1);
+			SieveSentence sent2 = sents.get(sid2);
+			
+			builder.append(result + "\t" + eeLink.getRelation() + "\t");
+			builder.append(e1.getString() + "(" + e1.getIndex() + ")\t");
+			builder.append(e1.getTense()+ "-" + e1.getAspect() + "\t");
+			builder.append(e2.getString() + "(" + e2.getIndex() + ")\t");
+			builder.append(e2.getTense() + "-" + e2.getAspect()  + "\t");
+			builder.append(sent1.sentence() + "\t");
+			builder.append(sent2.sentence() + "\t");
+			
+			
+		}	
+			return builder.toString();
+		
 	}
 
 	/**
