@@ -9,7 +9,7 @@ import timesieve.SieveDocuments;
 import timesieve.Timex;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
-import edu.stanford.nlp.util.Pair;
+import timesieve.util.Pair;
 
 /**
  * Order normalized date and time expressions by their Timex values
@@ -42,16 +42,12 @@ public class TimeTimeSieve implements Sieve {
 		if (!t2.type().equals("DATE") && !t2.type().equals("TIME"))
 			return null;
 		*/
-		edu.stanford.nlp.time.Timex timex1 = this.convertToStanfordTimex(t1);
-		edu.stanford.nlp.time.Timex timex2 = this.convertToStanfordTimex(t2);
-		edu.stanford.nlp.time.Timex creationTime = this.convertToStanfordTimex(ct, true);
-		
 		Pair<Calendar, Calendar> interval1 = null;
 		Pair<Calendar, Calendar> interval2 = null;
 		
 		try {
-			interval1 = timex1.getRange(creationTime);
-			interval2 = timex2.getRange(creationTime);
+			interval1 = t1.getRange(ct);
+			interval2 = t2.getRange(ct);
 		} catch (Exception e) { 
 			// System.out.println(t1.text() + "\t" + t2.text() + "\t" + t1.value() + "\t" + t2.value() + "\t" + e.getMessage());
 			return null;
@@ -65,47 +61,28 @@ public class TimeTimeSieve implements Sieve {
 		int endStart = interval1.second().compareTo(interval2.first());
 		int endEnd = interval1.second().compareTo(interval2.second());
 		
-		TLink.TYPE lType = TLink.TYPE.VAGUE;
+		TLink.Type lType = TLink.Type.VAGUE;
 		
 		if (startStart == 0 && endEnd == 0)
-			lType = TLink.TYPE.SIMULTANEOUS;
+			lType = TLink.Type.SIMULTANEOUS;
 		else if (endStart <= 0)
-			lType = TLink.TYPE.BEFORE;
+			lType = TLink.Type.BEFORE;
 		else if (startEnd >= 0)
-			lType = TLink.TYPE.AFTER;
+			lType = TLink.Type.AFTER;
 		else if (startStart < 0 && endEnd > 0)
-			lType = TLink.TYPE.INCLUDES;
+			lType = TLink.Type.INCLUDES;
 		else if (startStart > 0 && endEnd < 0)
-			lType = TLink.TYPE.IS_INCLUDED;
+			lType = TLink.Type.IS_INCLUDED;
 		else if (startStart > 0 && startEnd < 0 && endEnd > 0)
-			lType = TLink.TYPE.VAGUE;
+			lType = TLink.Type.VAGUE;
 		else if (startStart < 0 && endStart > 0 && endEnd < 0)
-			lType = TLink.TYPE.VAGUE;
+			lType = TLink.Type.VAGUE;
 		else
 			return null;
 
 		//System.out.println(timex1.value() + "\t" + timex2.value() + "\t" + lType);
 		
-		return new TimeTimeLink(t1.tid(), t2.tid(), lType);
-	}
-	
-	private edu.stanford.nlp.time.Timex convertToStanfordTimex(Timex timex) {
-		return this.convertToStanfordTimex(timex, false);
-	}
-	
-	private edu.stanford.nlp.time.Timex convertToStanfordTimex(Timex timex, boolean noTime) {
-		if (timex == null)
-			return null;
-		
-		String value = timex.value();
-		String type = timex.type();
-		
-		if (noTime && timex.type().equals("TIME") && value.contains("T")) {
-			value = value.substring(0, value.indexOf("T"));
-			type = "DATE";
-		}
-		
-		return new edu.stanford.nlp.time.Timex(type, value);
+		return new TimeTimeLink(t1.getTid(), t2.getTid(), lType);
 	}
 	
 	private List<List<Timex>> allTimexesBySentencePair(List<List<Timex>> allTimexesBySentence) {

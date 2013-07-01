@@ -22,7 +22,7 @@ import timesieve.tlink.*;
 public class Closure {
   static boolean report = true;
   static String rulePath = "/closure-sieve.dat";
-  HashMap<String,TLink.TYPE> rules[];
+  HashMap<String,TLink.Type> rules[];
 
   public Closure() throws IOException { 
     this(Closure.class.getResource(rulePath));
@@ -40,7 +40,7 @@ public class Closure {
   // 1: A-B C-A
   // 2: B-A A-C
   // 3: B-A C-A
-  private TLink.TYPE closeLinks(TLink.TYPE relation1, TLink.TYPE relation2, int matchCase) {
+  private TLink.Type closeLinks(TLink.Type relation1, TLink.Type relation2, int matchCase) {
     return rules[matchCase].get(relation1 + " " + relation2);
   }
 
@@ -56,7 +56,7 @@ public class Closure {
 
       rules = new HashMap[4];
       for( int i = 0; i < 4; i++ ) {
-        rules[i] = new HashMap<String,TLink.TYPE>();
+        rules[i] = new HashMap<String,TLink.Type>();
       }
 
       while( in.ready() ) {
@@ -73,9 +73,9 @@ public class Closure {
         // e.g. "TLink.SIMULTANEOUS TLink.ENDS TLink.ENDS"
         else if( line.length() > 5 ) {
           String parts[] = line.split("\\s+");
-          TLink.TYPE first  = TLink.TYPE.valueOf(parts[0]);
-          TLink.TYPE second = TLink.TYPE.valueOf(parts[1]);
-          TLink.TYPE closed = TLink.TYPE.valueOf(parts[2]);
+          TLink.Type first  = TLink.Type.valueOf(parts[0]);
+          TLink.Type second = TLink.Type.valueOf(parts[1]);
+          TLink.Type closed = TLink.Type.valueOf(parts[2]);
 
 //          System.out.println("Adding closure rule: " + first + " " + second + " " + closed);
           rules[matchCase].put(first + " " + second, closed);
@@ -100,11 +100,11 @@ public class Closure {
    */    
   public boolean isConsistent(Collection<TLink> relations, TLink link) {
     // Hash what we've seen already
-    HashMap<String,TLink.TYPE> seen = new HashMap<String,TLink.TYPE>();
+    HashMap<String,TLink.Type> seen = new HashMap<String,TLink.Type>();
     for( TLink tlink : relations )
-      seen.put(tlink.event1()+tlink.event2(), tlink.relation());
+      seen.put(tlink.getId1()+tlink.getId2(), tlink.getRelation());
     
-    int status = newLinkStatus(seen, link.event1(), link.event2(), link.relation());
+    int status = newLinkStatus(seen, link.getId1(), link.getId2(), link.getRelation());
 
     if( status == 2 ) return false;
     else return true;
@@ -133,9 +133,9 @@ public class Closure {
     }
 
     // Save what we've seen already
-    HashMap<String,TLink.TYPE> seen = new HashMap<String,TLink.TYPE>();
+    HashMap<String,TLink.Type> seen = new HashMap<String,TLink.Type>();
     for( TLink tlink : relations )
-      seen.put(tlink.event1()+tlink.event2(), tlink.relation());
+      seen.put(tlink.getId1()+tlink.getId2(), tlink.getRelation());
 
     while (!noneAdded) {
       //System.out.println("iter = " + iter);
@@ -145,57 +145,57 @@ public class Closure {
         if (i >= oldsize) start = i + 1;
         else start = oldsize;
         tlink1 = relations.get(i);
-        TLink.TYPE rel1 = tlink1.relation();
-        eid1 = tlink1.event1();
-        eid2 = tlink1.event2();
+        TLink.Type rel1 = tlink1.getRelation();
+        eid1 = tlink1.getId1();
+        eid2 = tlink1.getId2();
 
         for (int j = start; j < size; j++) {
           tlink2 = relations.get(j);
-          TLink.TYPE rel2 = tlink2.relation();
+          TLink.Type rel2 = tlink2.getRelation();
           B = null;
           C = null;
 
           // Find which out of 4 transitive patterns to use
 
           // A-B-Rel, A-C-Rel
-          if( eid1.equals(tlink2.event1()) && !eid2.equals(tlink2.event2()) ) {
+          if( eid1.equals(tlink2.getId1()) && !eid2.equals(tlink2.getId2()) ) {
             matchCase = 0;
             B = eid2;
-            C = tlink2.event2();
+            C = tlink2.getId2();
           }
           // A-B-Rel, C-A-Rel
-          else if( eid1.equals(tlink2.event2()) && !eid2.equals(tlink2.event1()) ) {
+          else if( eid1.equals(tlink2.getId2()) && !eid2.equals(tlink2.getId1()) ) {
             matchCase = 1;
             B = eid2;
-            C = tlink2.event1();
+            C = tlink2.getId1();
           } 
           // B-A-Rel, A-C-Rel
-          else if( eid2.equals(tlink2.event1()) && !eid1.equals(tlink2.event2()) ) {
+          else if( eid2.equals(tlink2.getId1()) && !eid1.equals(tlink2.getId2()) ) {
             matchCase = 2;
             B = eid1;
-            C = tlink2.event2();
+            C = tlink2.getId2();
           } 
           //B-A-Rel, C-A-Rel
-          else if( eid2.equals(tlink2.event2()) && !eid1.equals(tlink2.event1()) ) {
+          else if( eid2.equals(tlink2.getId2()) && !eid1.equals(tlink2.getId1()) ) {
             matchCase = 3;
             B = eid1;
-            C = tlink2.event1();
+            C = tlink2.getId1();
           }
 
           // Ignore closing trivial relations such as A-A-INCL, A-A-SIMUL
           if( eid1.equals(eid2) &&
-              (rel1 == TLink.TYPE.SIMULTANEOUS || rel1 == TLink.TYPE.INCLUDES) ) {
+              (rel1 == TLink.Type.SIMULTANEOUS || rel1 == TLink.Type.INCLUDES) ) {
             matchCase = -1;
           } 
-          else if( tlink2.event2().equals(tlink2.event1()) &&
-              (rel2 == TLink.TYPE.SIMULTANEOUS || rel2 == TLink.TYPE.INCLUDES ) ) {
+          else if( tlink2.getId2().equals(tlink2.getId1()) &&
+              (rel2 == TLink.Type.SIMULTANEOUS || rel2 == TLink.Type.INCLUDES ) ) {
             matchCase = -1;
           }
 
           if( B != null && C != null && matchCase != -1 ) {
 //            System.out.println("Checking B=" + B + " C=" + C + " case=" + matchCase);
             // Find the relation to close it	  
-            TLink.TYPE newrel = closeLinks(rel1, rel2, matchCase);
+            TLink.Type newrel = closeLinks(rel1, rel2, matchCase);
 //            System.out.println(rel1 + " " + rel2 + " newrel=" + newrel);
             if( newrel != null ) {
 //              System.out.println("New link! " + newrel);
@@ -227,11 +227,11 @@ public class Closure {
     List<TLink> newRelations = new ArrayList<TLink>();
     computeClosure(cloned, newRelations, debug);
     return newRelations;
-  }    
+  }
 
-  private TLink.TYPE getClosed(int matchCase, TLink.TYPE relation, TLink.TYPE relation2) {
+  private TLink.Type getClosed(int matchCase, TLink.Type relation, TLink.Type relation2) {
     //    System.out.println("closing..." + relation + " " + relation2);
-    TLink.TYPE rel = closeLinks(relation, relation2, matchCase);
+    TLink.Type rel = closeLinks(relation, relation2, matchCase);
     //    System.out.println("closed..." + rel);
     return rel;
   }
@@ -245,7 +245,7 @@ public class Closure {
    * @param relation The type of relation between A and B
    * @return The new link that was added to the relations list. null if the link was duplicate, or conflicted.
    */
-  private TLink addlink(HashMap<String,TLink.TYPE> seen, List<TLink> relations, String A, String B, TLink.TYPE rel) {
+  private TLink addlink(HashMap<String,TLink.Type> seen, List<TLink> relations, String A, String B, TLink.Type rel) {
     int status = newLinkStatus(seen, A, B, rel);
     
     if( status == 0 ) {
@@ -277,15 +277,15 @@ public class Closure {
    * 1: already exists, or is consistent with existing relation A-B
    * 2: conflicts with existing relation between A-B
    */
-  private int newLinkStatus(HashMap<String,TLink.TYPE> seen, String A, String B, TLink.TYPE rel) {
+  private int newLinkStatus(HashMap<String,TLink.Type> seen, String A, String B, TLink.Type rel) {
     // Make sure we don't already have a relation
     if( seen.containsKey(A+B) ) {
-      TLink.TYPE current = seen.get(A+B);
+      TLink.Type current = seen.get(A+B);
       if( current != rel ) {
 
         // some relation clashes are ok
-        if( (current == TLink.TYPE.BEFORE  && rel == TLink.TYPE.IBEFORE) ||
-            (current == TLink.TYPE.IBEFORE && rel == TLink.TYPE.BEFORE) )
+        if( (current == TLink.Type.BEFORE  && rel == TLink.Type.IBEFORE) ||
+            (current == TLink.Type.IBEFORE && rel == TLink.Type.BEFORE) )
           return 1;
 
         if( report ) {
@@ -298,14 +298,14 @@ public class Closure {
     }
     // Make sure the inverse relation doesn't exist
     else if( seen.containsKey(B+A) ) {
-      TLink.TYPE reverse = seen.get(B+A);
-      TLink.TYPE relReversed = TLink.invertRelation(rel);
+      TLink.Type reverse = seen.get(B+A);
+      TLink.Type relReversed = TLink.invertRelation(rel);
       // inverse simultaneous relations are harmless, just ignore
       if( reverse == relReversed ||
           // INCLUDES and BEGINS/ENDS is ok
-          (rel == TLink.TYPE.INCLUDES && (reverse == TLink.TYPE.BEGINS || reverse == TLink.TYPE.ENDS)) ||
+          (rel == TLink.Type.INCLUDES && (reverse == TLink.Type.BEGINS || reverse == TLink.Type.ENDS)) ||
           // BEGINS/ENDS and INCLUDES is ok
-          (reverse == TLink.TYPE.INCLUDES && (rel == TLink.TYPE.BEGINS || rel == TLink.TYPE.ENDS)) 
+          (reverse == TLink.Type.INCLUDES && (rel == TLink.Type.BEGINS || rel == TLink.Type.ENDS)) 
           )
         return 1;
 
@@ -334,10 +334,10 @@ public class Closure {
 
     // Save the tlinks for quick access
     for( TLink link : tlinks ) {
-      HashSet<String> set = map.get(link.event1());
+      HashSet<String> set = map.get(link.getId1());
       if( set == null ) set = new HashSet<String>();
-      set.add(link.event2());
-      map.put(link.event1(), set);
+      set.add(link.getId2());
+      map.put(link.getId1(), set);
     }
 
     // Generate all pairs of NONE links
@@ -345,9 +345,9 @@ public class Closure {
       for( TextEvent event2 : events ) {
         if( !event1.equals(event2) ) {
           // only event pairs 1 sentence away
-          if( Math.abs(event1.sid() - event2.sid()) < 2 ) {
-            String id1 = event1.eiid();
-            String id2 = event2.eiid();
+          if( Math.abs(event1.getSid() - event2.getSid()) < 2 ) {
+            String id1 = event1.getEiid();
+            String id2 = event2.getEiid();
             if( eiidToID != null && eiidToID.containsKey(id1) ) id1 = eiidToID.get(id1);
             if( eiidToID != null && eiidToID.containsKey(id2) ) id2 = eiidToID.get(id2);
 
@@ -358,7 +358,7 @@ public class Closure {
               String second = id2;
               if( Math.random() < 0.5 ) {
                 first = second;
-                second = event1.eiid();
+                second = event1.getEiid();
               }
 
               // Add to the map

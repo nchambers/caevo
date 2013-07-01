@@ -37,15 +37,15 @@ public class TimebankUtil {
    */
   public static boolean isBeforeInText(TextEvent event1, TextEvent event2) {
     // Same sentence
-    if( event1.sid() == event2.sid() ) {
-      if( event1.index() < event2.index() )
+    if( event1.getSid() == event2.getSid() ) {
+      if( event1.getIndex() < event2.getIndex() )
         return true;
       else
         return false;
     }
     // Different sentence
     else {
-      if( event1.sid() < event2.sid() )
+      if( event1.getSid() < event2.getSid() )
         return true;
       else
         return false;
@@ -54,15 +54,15 @@ public class TimebankUtil {
   
   public static boolean isBeforeInText(TextEvent event1, Timex timex) {
     // Same sentence
-    if( event1.sid() == timex.sid() ) {
-      if( event1.index() < timex.offset() )
+    if( event1.getSid() == timex.getSid() ) {
+      if( event1.getIndex() < timex.getTokenOffset() )
         return true;
       else
         return false;
     }
     // Different sentence
     else {
-      if( event1.sid() < timex.sid() )
+      if( event1.getSid() < timex.getSid() )
         return true;
       else
         return false;
@@ -72,24 +72,24 @@ public class TimebankUtil {
   public static boolean isIntraSentence(TextEvent e1, TextEvent e2) {
     if( e1 == null || e2 == null ) return false;
     
-    return e1.sid() == e2.sid();
+    return e1.getSid() == e2.getSid();
   }
 
   public static boolean isNeighborSentence(TextEvent e1, TextEvent e2) {
     if( e1 == null || e2 == null ) return false;
     
-    return (Math.abs(e1.sid() - e2.sid()) == 1);
+    return (Math.abs(e1.getSid() - e2.getSid()) == 1);
   }
 
   public static boolean isEventDCTLink(TLink link, List<Timex> dcts) {
     boolean isdctlink = false;
     
     if( link instanceof EventTimeLink ) {
-      String tid = link.event1();
-      if( tid.startsWith("e") ) tid = link.event2();
+      String tid = link.getId1();
+      if( tid.startsWith("e") ) tid = link.getId2();
       
       for( Timex dct : dcts )
-        if( dct.tid().equalsIgnoreCase(tid) )
+        if( dct.getTid().equalsIgnoreCase(tid) )
           isdctlink = true;
     }
     
@@ -146,22 +146,22 @@ public class TimebankUtil {
       if( bethardLinks != null ) {
         for( TLink bethardLink : bethardLinks ) {
           // Convert from the instance ID to the event ID.
-          String event1 = eiidToID.get(bethardLink.event1());
-          String event2 = eiidToID.get(bethardLink.event2());
+          String event1 = eiidToID.get(bethardLink.getId1());
+          String event2 = eiidToID.get(bethardLink.getId2());
           if( event1 == null )
-            System.out.println("ERROR: Bethard event1 id unknown " + bethardLink.event1());
+            System.out.println("ERROR: Bethard event1 id unknown " + bethardLink.getId1());
           else if( event2 == null )
-            System.out.println("ERROR: Bethard event2 id unknown " + bethardLink.event2());
+            System.out.println("ERROR: Bethard event2 id unknown " + bethardLink.getId2());
 
           else {
             // Create a new tlink with the event IDs
-            TLink newlink = new EventEventLink(bethardLink.event1(), bethardLink.event2(), bethardLink.relation());
+            TLink newlink = new EventEventLink(bethardLink.getId1(), bethardLink.getId2(), bethardLink.getRelation());
             newlink.setOrigin("bethard");
 
             // Now make sure it is a new tlink.
             boolean duplicate = false;
             for( TLink current : tbLinks ) {
-              if( current.relation() != TLink.TYPE.NONE ) {
+              if( current.getRelation() != TLink.Type.NONE ) {
                 // Conflicts should be skipped.
                 if( newlink.conflictsWith(current) ) {
                   System.out.println("CONFLICTS Bethard: " + newlink + " with previous " + current);
@@ -195,7 +195,7 @@ public class TimebankUtil {
     Map<String,String> eiidToID = new HashMap<String,String>();
     for( TextEvent event : events ) {
       for( String eiid : event.getAllEiids() )
-        eiidToID.put(eiid, event.id());
+        eiidToID.put(eiid, event.getId());
     }
     return eiidToID;
   }

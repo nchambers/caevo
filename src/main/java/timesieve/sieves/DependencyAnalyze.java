@@ -62,7 +62,7 @@ public class DependencyAnalyze implements Sieve {
 		for( int xx = 0; xx < events.size(); xx++ ) {
 			for( int yy = xx+1; yy < events.size(); yy++ ) {
 				for (TypedDependency td : deps) {
-					if (events.get(xx).index() == td.gov().index() && events.get(yy).index() == td.dep().index()) {
+					if (events.get(xx).getIndex() == td.gov().index() && events.get(yy).getIndex() == td.dep().index()) {
 //						System.out.println(docname + "-" + (String) sent.sid());
 //						System.out.println(sent.sentence());
 //						System.out.println(td.toString() + "\n----------");

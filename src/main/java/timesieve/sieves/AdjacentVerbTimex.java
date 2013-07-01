@@ -80,19 +80,19 @@ public class AdjacentVerbTimex implements Sieve {
 				for (TextEvent event : sent.events()) {
 					// set adjacency setting based on adjacency type 
 					boolean adjSetting;
-					if (adjType.equals("unordered")) adjSetting = (Math.abs(timex.offset() - event.index()) == 1);
-					else if (adjType.equals("TimexVerb")) adjSetting = (timex.offset() + 1 == event.index());
-					else adjSetting = (timex.offset() - 1 == event.index()); 
+					if (adjType.equals("unordered")) adjSetting = (Math.abs(timex.getTokenOffset() - event.getIndex()) == 1);
+					else if (adjType.equals("TimexVerb")) adjSetting = (timex.getTokenOffset() + 1 == event.getIndex());
+					else adjSetting = (timex.getTokenOffset() - 1 == event.getIndex()); 
 					
 					// if the event/timex pair satisfies the adjacency setting,
 					// and the event is a verb, then label the pair is_included
 					if (adjSetting) { 
-						String pos = posTagFromTree(tree, sent, event.index());
+						String pos = posTagFromTree(tree, sent, event.getIndex());
 						if (pos.startsWith("VB")) {
 							if (debug == true) {
-								System.out.println("DEBUGPOS: " + event.string() + "/" + pos + " " + timex.text() + "/" + timex.value());
+								System.out.println("DEBUGPOS: " + event.getString() + "/" + pos + " " + timex.getText() + "/" + timex.getValue());
 							}
-							proposed.add(new EventTimeLink(event.eiid() , timex.tid(), TLink.TYPE.IS_INCLUDED));
+							proposed.add(new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.IS_INCLUDED));
 						}
 					}
 				}
@@ -107,10 +107,10 @@ public class AdjacentVerbTimex implements Sieve {
 	
 	// validateTime ensures that timex value meets criteria
 	private Boolean validateTimex(Timex timex){
-		String val = timex.value();
+		String val = timex.getValue();
 		// Return false if timex value is not a date or is a quarter
 		Matcher m = valQuarter.matcher(val);
-		if (!m.matches() && timex.type().equals("DATE")) return false;
+		if (!m.matches() && timex.getType().equals("DATE")) return false;
 		else return false;
 	}
 	

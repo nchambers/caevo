@@ -67,10 +67,10 @@ public class DependencyE2EReportingGoverns implements Sieve {
 				// check a given TypedDependency involves both events,
 				// and if so check event properties against criteria.
 				for (TypedDependency td : deps) {
-					if (e1.index() == td.gov().index() && e2.index() == td.dep().index()) {
+					if (e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index()) {
 						classifyEventPair(e1, e2, proposed);
 					}
-					else if (e2.index() == td.gov().index() && e1.index() == td.dep().index()) {
+					else if (e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index()) {
 						classifyEventPair(e2, e1, proposed);
 					}
 				}
@@ -86,13 +86,13 @@ public class DependencyE2EReportingGoverns implements Sieve {
 	}
 	
 	private void classifyEventPair(TextEvent eGov, TextEvent eDep, List<TLink> proposed ) {
-		if (eGov.getTheClass().equals("REPORTING") && eGov.getTense().equals("PAST")) {
-			if (eDep.getTense().equals("PAST") && eDep.getTheClass().equals("OCCURRENCE")
-					&& !eDep.getAspect().equals("PROGRESSIVE")) {
-						proposed.add(new EventEventLink(eGov.eiid(), eDep.eiid(), TLink.TYPE.AFTER));	
+		if (eGov.getTheClass() == TextEvent.Class.REPORTING && eGov.getTense() == TextEvent.Tense.PAST) {
+			if (eDep.getTense() == TextEvent.Tense.PAST && eDep.getTheClass() == TextEvent.Class.OCCURRENCE
+					&& eDep.getAspect() != TextEvent.Aspect.PROGRESSIVE) {
+						proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));	
 			}
 			else if (eDep.getTense().equals("FUTURE")) {
-				proposed.add(new EventEventLink(eGov.eiid(), eDep.eiid(), TLink.TYPE.BEFORE));
+				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
 		}
 			// Add anything here?
 			else

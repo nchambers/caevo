@@ -98,8 +98,8 @@ public class WordNet209 implements Sieve {
 					TextEvent e2 = events.get(yy);
 					Tree sentParseTree = trees.get(sid);
 					
-					String postagStr1 = posTagFromTree(sentParseTree, e1.index());
-					String postagStr2 = posTagFromTree(sentParseTree, e2.index());
+					String postagStr1 = posTagFromTree(sentParseTree, e1.getIndex());
+					String postagStr2 = posTagFromTree(sentParseTree, e2.getIndex());
 					String postagSimple1 = postagStr1.substring(0,2);
 					String postagSimple2 = postagStr2.substring(0,2);
 					POS pos1 = postagSimpleToPOS.get(postagSimple1);
@@ -107,8 +107,8 @@ public class WordNet209 implements Sieve {
 					// only proceed if pos1 and pos2 are non-null and equal
 					if (pos1 != null && pos2 != null && pos1.equals(pos2)) {
 						// finally check if e1 and e2 are siblings
-						if (wn.areSiblings(e1.string(), e2.string(), pos1)) {
-							proposed.add(new EventEventLink(e1.eiid() , e2.eiid(), TLink.TYPE.SIMULTANEOUS));
+						if (wn.areSiblings(e1.getString(), e2.getString(), pos1)) {
+							proposed.add(new EventEventLink(e1.getEiid() , e2.getEiid(), TLink.Type.SIMULTANEOUS));
 						}
 					}
 				}

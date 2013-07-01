@@ -1,6 +1,10 @@
 package timesieve;
 
+import java.util.Calendar;
+
 import org.jdom.Namespace;
+
+import timesieve.util.Pair;
 
 /**
  * This class represents a sequence of tokens for a Timex. It holds all TimeML attributes.
@@ -11,89 +15,165 @@ import org.jdom.Namespace;
  * @author chambers
  */
 public class Timex {
-  String text;
-  int offset, length, sid;
-  String tid, anchor_tid, type, mod, value, docFunction;
-  boolean temporalFunction = false;
-  String preposition; // feature not in Timebank
-
-  public static String TIMEX_ELEM = "timex";
-  public static String TID_ATT = "tid";
-  public static String ANCHORTID_ATT = "anchortid";
-  public static String TYPE_ATT = "type";
-  public static String MOD_ATT = "mod";
-  public static String VALUE_ATT = "value";
-  public static String DOCFUNC_ATT = "docFunction";
-  public static String TEMPFUNC_ATT = "temporalFunction";
-  public static String TEXT_ATT = "text";
-  public static String OFFSET_ATT = "offset";
-  public static String LENGTH_ATT = "length";
-
-
+  public static final String TIMEX_ELEM = "timex";
+  public static final String TID_ATT = "tid";
+  public static final String ANCHORTID_ATT = "anchortid";
+  public static final String TYPE_ATT = "type";
+  public static final String MOD_ATT = "mod";
+  public static final String VALUE_ATT = "value";
+  public static final String DOCFUNC_ATT = "docFunction";
+  public static final String TEMPFUNC_ATT = "temporalFunction";
+  public static final String TEXT_ATT = "text";
+  public static final String OFFSET_ATT = "offset";
+  public static final String LENGTH_ATT = "length";
+	
+  public enum Type { DATE, TIME, DURATION, SET };
+  public enum DocumentFunction { CREATION_TIME, EXPIRATION_TIME, MODIFICATION_TIME, PUBLICATION_TIME, RELEASE_TIME, RECEPTION_TIME, NONE };
+  public enum Mod { BEFORE, AFTER, ON_OR_BEFORE, ON_OR_AFTER, LESS_THAN, MORE_THAN, EQUAL_OR_LESS, EQUAL_OR_MORE, START, MID, END, APPROX };
+  
+  private String text;
+  private int tokenOffset;
+  private int tokenLength;
+  private int sid;
+  private String tid;
+  private String anchorTid;
+  private Type type;
+  private Mod mod;
+  private String value;
+  private DocumentFunction documentFunction;
+  private boolean temporalFunction = false;
+  private String preposition; // feature not in Timebank
+  
+  private edu.stanford.nlp.time.Timex stanfordHelper;
+  
   public Timex() {
+  
   }
 
   public Timex(org.jdom.Element el) {
-    tid = el.getAttributeValue(TID_ATT);
-    text = el.getAttributeValue(TEXT_ATT);
-    offset = Integer.valueOf(el.getAttributeValue(OFFSET_ATT));
-    length = Integer.valueOf(el.getAttributeValue(LENGTH_ATT));
-    anchor_tid = el.getAttributeValue(ANCHORTID_ATT);
-    type = el.getAttributeValue(TYPE_ATT);
-    mod = el.getAttributeValue(MOD_ATT);
-    value = el.getAttributeValue(VALUE_ATT);
-    docFunction = el.getAttributeValue(DOCFUNC_ATT);
-    String temp = el.getAttributeValue(TEMPFUNC_ATT);
-    if( temp.equalsIgnoreCase("true") ) temporalFunction = true;
-    else temporalFunction = false;
-   }
-
-  public void setText(String text) { this.text = text; }
-  public void setSID(int i) { sid = i; }
-  public void setTID(String id) { tid = id; }
-
-  /**
-   * @param s The integer offset where the timex starts
-   * @param e The integer offset where the timex ends, exclusive
-   */
-  public void setSpan(int s, int e) {
-    offset = s;
-    length = e - s;
+    this.tid = el.getAttributeValue(Timex.TID_ATT);
+    this.text = el.getAttributeValue(Timex.TEXT_ATT);
+    this.tokenOffset = Integer.valueOf(el.getAttributeValue(Timex.OFFSET_ATT));
+    this.tokenLength = Integer.valueOf(el.getAttributeValue(Timex.LENGTH_ATT));
+    this.anchorTid = el.getAttributeValue(Timex.ANCHORTID_ATT);
+    this.type = Type.valueOf(el.getAttributeValue(Timex.TYPE_ATT));
+    this.value = el.getAttributeValue(Timex.VALUE_ATT);
+    
+    String modStr = el.getAttributeValue(Timex.MOD_ATT);
+    if (modStr != null && !modStr.isEmpty())
+    	this.mod = Mod.valueOf(el.getAttributeValue(Timex.MOD_ATT));
+    
+    String docFunStr = el.getAttributeValue(Timex.DOCFUNC_ATT);
+    if (docFunStr != null && !docFunStr.isEmpty())
+    	this.documentFunction = DocumentFunction.valueOf(docFunStr);
+    
+    this.temporalFunction = el.getAttributeValue(Timex.TEMPFUNC_ATT).equalsIgnoreCase("true");
   }
-
-  public void setType(String v) { type = v; }
-  public void setValue(String v) { value = v; }
-  public void setPrep(String prep) { preposition = prep; }
-  public void setDocFunction(String func) { docFunction = func; }
-  public String prep() { return preposition; }
-
+  
   //<TIMEX3 mod="APPROX" endPoint="t42" tid="t39" temporalFunction="false" type="DURATION" functionInDocument="NONE" value="P2Y" >
   public void saveAttributes(org.w3c.dom.Element el) {
-    tid = el.getAttribute("tid");
-    anchor_tid = el.getAttribute("anchorTimeID");
-    type = el.getAttribute("type");
-    mod = el.getAttribute("mod");
-    value = el.getAttribute("value");
-    docFunction = el.getAttribute("functionInDocument");
-    String temp = el.getAttribute("temporalFunction");
-    if( temp != null && temp.equalsIgnoreCase("true") ) temporalFunction = true;
-    else temporalFunction = false;
+    this.tid = el.getAttribute(Timex.TID_ATT);
+    this.anchorTid = el.getAttribute(Timex.ANCHORTID_ATT);
+    this.type = Type.valueOf(el.getAttribute(Timex.TYPE_ATT));
+    this.value = el.getAttribute(Timex.VALUE_ATT);
+    
+    String modStr = el.getAttribute(Timex.MOD_ATT);
+    if (modStr != null && !modStr.isEmpty())
+    	this.mod = Mod.valueOf(modStr);
+    
+    String docFunStr = el.getAttribute(Timex.DOCFUNC_ATT);
+    if (docFunStr != null && !docFunStr.isEmpty())
+    	this.documentFunction = DocumentFunction.valueOf(docFunStr);
+    
+    this.temporalFunction = el.getAttribute(Timex.TEMPFUNC_ATT).equalsIgnoreCase("true");
   }
 
+  public void setText(String text) { 
+  	this.text = text; 
+  }
+  
+  public void setSid(int sid) { 
+  	this.sid = sid; 
+  }
+  
+  public void setTid(String tid) { 
+  	this.tid = tid; 
+  }
+  
+  public void setAnchorTid(String anchorTid) { 
+  	this.anchorTid = anchorTid; 
+  }
 
-  public int offset() { return offset; }
-  public int length() { return length; }
+  /**
+   * @param s The token integer offset where the timex starts within the sentence
+   * @param e The token integer offset where the timex ends, exclusive within the sentence
+   */
+  public void setSpan(int s, int e) {
+  	this.tokenOffset = s;
+  	this.tokenLength = e - s;
+  }
 
-  public int sid() { return sid; }
-  public String tid() { return tid; }
-  public String type() { return type; }
-  public String mod() { return mod; }
-  public String value() { return value; }
-  public String text() { return text; }
-  public String docFunction() { return docFunction; }
-  public boolean temporalFunction() { return temporalFunction; }
+  public void setType(Type type) { 
+  	this.type = type;
+  }
+  
+  public void setValue(String value) { 
+  	this.value = value;
+  }
+  
+  public void setPrep(String prep) { 
+  	this.preposition = prep; 
+  }
+  
+  public void setDocumentFunction(DocumentFunction func) { 
+  	this.documentFunction = func; 
+  }
 
+  public int getTokenOffset() { return this.tokenOffset; }
+  public int getTokenLength() { return this.tokenLength; }
+  public int getSid() { return this.sid; }
+  public String getTid() { return this.tid; }
+  public String getAnchorTid() { return this.anchorTid; }
+  public Type getType() { return this.type; }
+  public Mod getMod() { return this.mod; }
+  public String getValue() { return this.value; }
+  public String getText() { return this.text; }
+  public DocumentFunction getDocumentFunction() { return this.documentFunction; }
+  public boolean getTemporalFunction() { return this.temporalFunction; }
+  public String prep() { return this.preposition; }
 
+  public Pair<Calendar, Calendar> getRange() {
+  	if (this.stanfordHelper == null)
+  		this.stanfordHelper = new edu.stanford.nlp.time.Timex(this.type.toString(), this.value);
+  	edu.stanford.nlp.util.Pair<Calendar, Calendar> range = this.stanfordHelper.getRange();
+  	return new Pair<Calendar, Calendar>(range.first(), range.second());
+  }
+  
+  public Pair<Calendar, Calendar> getRange(Timex documentCreation) {
+  	if (this.stanfordHelper == null)
+  		this.stanfordHelper = this.convertToStanfordTimex(this);
+  	if (documentCreation.stanfordHelper == null)
+  		documentCreation.stanfordHelper = this.convertToStanfordTimex(documentCreation);
+  	
+  	edu.stanford.nlp.util.Pair<Calendar, Calendar> range = this.stanfordHelper.getRange(documentCreation.stanfordHelper);
+  	return new Pair<Calendar, Calendar>(range.first(), range.second());
+  }
+  
+	private edu.stanford.nlp.time.Timex convertToStanfordTimex(Timex timex) {
+		if (timex == null)
+			return null;
+		
+		String stanfordValue = timex.getValue();
+		Timex.Type stanfordType = timex.getType();
+		
+		if (timex.documentFunction == DocumentFunction.CREATION_TIME && timex.getType() == Timex.Type.TIME && value.contains("T")) {
+			stanfordValue = value.substring(0, stanfordValue.indexOf("T"));
+			stanfordType = Timex.Type.DATE;
+		}
+		
+		return new edu.stanford.nlp.time.Timex(stanfordType.toString(), stanfordValue);
+	}
+  
   /**
    * @desc Looks in the "value" attribute of the timexes, and compares the ordering
    *       if they are both DATEs or TIMEs.  The value is a date string "YYYY-MM-DD".
@@ -102,35 +182,35 @@ public class Timex {
    */
   public boolean before(Timex other) {
     // don't bother if we're not a date or time
-    if( (type.equals("DATE") || type.equals("TIME"))  &&
-        (other.type().equals("DATE") || other.type().equals("TIME")) ) {
-      String ovalue = other.value();
+    if( (this.type == Type.DATE || this.type == Type.TIME)
+    && (other.getType() == Type.DATE || other.getType() == Type.TIME) ) {
+    	String ovalue = other.getValue();
 
       // make sure there are values to compare
-      if( value != null  && value.length() > 0  && value.matches("\\d.*") &&
+    	if( this.value != null  && this.value.length() > 0  && this.value.matches("\\d.*") &&
           ovalue != null && ovalue.length() > 0 && ovalue.matches("\\d.*") ) {
 
-        if( value.equalsIgnoreCase(ovalue) ) return false;
+        if( this.value.equalsIgnoreCase(ovalue) ) return false;
         
         try {
           //	  System.out.println("Checking " + value + " and " + ovalue);
           // check years
-          int year  = Integer.valueOf(value.substring(0,4));
+          int year  = Integer.valueOf(this.value.substring(0,4));
           int oyear = Integer.valueOf(ovalue.substring(0,4));
           if( year < oyear ) return true;
           else if( oyear < year ) return false;
 
           // check months
-          if( value.length() > 4 && ovalue.length() > 4 ) {
-            int month  = Integer.valueOf(value.substring(5,7));
+          if( this.value.length() > 4 && ovalue.length() > 4 ) {
+            int month  = Integer.valueOf(this.value.substring(5,7));
             int omonth = Integer.valueOf(ovalue.substring(5,7));
             if( month < omonth ) return true;
             else if( omonth < month ) return false;
           }
 
           // check days - some timexes don't have days e.g. "1998-10"
-          if( value.length() > 7 && ovalue.length() > 7 ) {
-            int day  = Integer.valueOf(value.substring(8,10));
+          if( this.value.length() > 7 && ovalue.length() > 7 ) {
+            int day  = Integer.valueOf(this.value.substring(8,10));
             int oday = Integer.valueOf(ovalue.substring(8,10));
             if( day < oday ) return true;
             else if( oday < day ) return false;
@@ -150,39 +230,39 @@ public class Timex {
    */
   public boolean includes(Timex other) {
     // don't bother if we're not a date or time
-    if( (type.equals("DATE") || type.equals("TIME") || type.equals("DURATION"))  &&
-        (other.type().equals("DATE") || other.type().equals("TIME") || other.type().equals("DURATION")) ) {
-      String ovalue = other.value();
+  	if( (this.type == Type.DATE || this.type == Type.TIME || this.type == Type.DURATION)  &&
+        (other.getType() == Type.DATE || other.getType() == Type.TIME || other.getType() == Type.DURATION) ) {
+      String ovalue = other.getValue();
 
       // make sure there are values to compare
-      if( value != null  && value.length() > 0  && value.matches("\\d.*") &&
+      if( this.value != null  && this.value.length() > 0  && this.value.matches("\\d.*") &&
           ovalue != null && ovalue.length() > 0 && ovalue.matches("\\d.*") ) {
 
         // If the values are exactly the same, then they aren't INCLUDES.
-        if( value.equalsIgnoreCase(ovalue) ) return false;
+        if( this.value.equalsIgnoreCase(ovalue) ) return false;
         
         // If a timex in the document is "now", then it INCLUDES the document's creation time.
-        if( value.equalsIgnoreCase("PRESENT_REF") && other.docFunction().equalsIgnoreCase("CREATION_TIME") )
+        if( this.value.equalsIgnoreCase("PRESENT_REF") && other.getDocumentFunction() == DocumentFunction.CREATION_TIME )
           return true;
         
         try {
           //    System.out.println("Checking " + value + " and " + ovalue);
           // check years
-          int year  = Integer.valueOf(value.substring(0,4));
+          int year  = Integer.valueOf(this.value.substring(0,4));
           int oyear = Integer.valueOf(ovalue.substring(0,4));
           if( year != oyear ) return false;
           else { // same year
 
             // Then this time is a year, and the other is a month in the year. True!
-            if( value.length() == 4 && ovalue.length() > 4 )
+            if( this.value.length() == 4 && ovalue.length() > 4 )
               return true;
 
             // Both have a month, so see if it is the same month.
-            else if( value.length() > 4 && ovalue.length() > 4 ) {
-              int month  = Integer.valueOf(value.substring(5,7));
+            else if( this.value.length() > 4 && ovalue.length() > 4 ) {
+              int month  = Integer.valueOf(this.value.substring(5,7));
               int omonth = Integer.valueOf(ovalue.substring(5,7));
               if( month != omonth ) return false;
-              else if( value.length() == 7 && ovalue.length() > 7 )
+              else if( this.value.length() == 7 && ovalue.length() > 7 )
                 return true;
             }
           }
@@ -200,15 +280,15 @@ public class Timex {
    */
   public String toXMLString() {
   	StringBuffer buf = new StringBuffer();
-  	buf.append("<TIMEX3 tid=\""); buf.append(tid()); buf.append('\"');
-  	buf.append(" type=\""); buf.append(type()); buf.append('\"');
-  	buf.append(" value=\""); buf.append(value()); buf.append('\"');
-  	buf.append(" temporalFunction=\""); buf.append(temporalFunction()); buf.append('\"');
+  	buf.append("<TIMEX3 tid=\""); buf.append(this.getTid()); buf.append('\"');
+  	buf.append(" type=\""); buf.append(this.getType()); buf.append('\"');
+  	buf.append(" value=\""); buf.append(this.getValue()); buf.append('\"');
+  	buf.append(" temporalFunction=\""); buf.append(this.getTemporalFunction()); buf.append('\"');
   	buf.append(" functionInDocument=\""); 
-  	if( docFunction() == null || docFunction().length() == 0 )
+  	if( this.getDocumentFunction() == null )
   	  buf.append("NONE");
   	else 
-  	  buf.append(docFunction()); 
+  	  buf.append(this.getDocumentFunction()); 
   	buf.append('\"');
   	buf.append('>');
 //  	buf.append(text());
@@ -217,21 +297,26 @@ public class Timex {
   }
 
   public org.jdom.Element toElement(Namespace ns) {
-    org.jdom.Element el = new org.jdom.Element(TIMEX_ELEM,ns);
-    el.setAttribute(TID_ATT, tid);
-    el.setAttribute(TEXT_ATT, text);
-    el.setAttribute(OFFSET_ATT, String.valueOf(offset));
-    el.setAttribute(LENGTH_ATT, String.valueOf(length));
-    if( anchor_tid != null ) el.setAttribute(ANCHORTID_ATT, anchor_tid);
-    el.setAttribute(TYPE_ATT, type);
-    if( mod != null ) el.setAttribute(MOD_ATT, mod);
-    if( value != null ) el.setAttribute(VALUE_ATT, value);
-    if( docFunction != null ) el.setAttribute(DOCFUNC_ATT, docFunction);
-    el.setAttribute(TEMPFUNC_ATT, String.valueOf(temporalFunction));
+    org.jdom.Element el = new org.jdom.Element(Timex.TIMEX_ELEM,ns);
+    el.setAttribute(Timex.TID_ATT, tid);
+    el.setAttribute(Timex.TEXT_ATT, text);
+    el.setAttribute(Timex.OFFSET_ATT, String.valueOf(this.tokenOffset));
+    el.setAttribute(Timex.LENGTH_ATT, String.valueOf(this.tokenLength));
+    if( this.anchorTid != null ) el.setAttribute(Timex.ANCHORTID_ATT, this.anchorTid);
+    el.setAttribute(Timex.TYPE_ATT, String.valueOf(type));
+    if( this.mod != null ) el.setAttribute(Timex.MOD_ATT, String.valueOf(this.mod.toString()));
+    if( this.value != null ) el.setAttribute(Timex.VALUE_ATT, this.value);
+    if( this.documentFunction != null ) el.setAttribute(Timex.DOCFUNC_ATT, String.valueOf(this.documentFunction));
+    el.setAttribute(Timex.TEMPFUNC_ATT, String.valueOf(this.temporalFunction));
     return el;
   }
 
   public String toString() {
-    return tid + " " + sid + " " + type + " " + value + " '" + text + "' " + preposition;
+    return this.tid + " " 
+    		 + this.sid + " " 
+    		 + this.type + " " 
+    		 + this.value + " '" 
+    		 + this.text + "' " 
+    		 + this.preposition;
   }
 }

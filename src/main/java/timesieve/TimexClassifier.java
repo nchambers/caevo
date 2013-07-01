@@ -65,7 +65,7 @@ public class TimexClassifier {
         System.out.println("markupTimex3 dct size is " + dcts.size());
         System.exit(1);
       }
-      String docDate = (dcts != null && dcts.size() > 0) ? dcts.get(0).value() : null;
+      String docDate = (dcts != null && dcts.size() > 0) ? dcts.get(0).getValue() : null;
       if( debug ) System.out.println("markupTimex3 docDate = " + docDate);
 //      System.out.println(sentences.size() + " sentences.");
       int tid = 1;
@@ -92,7 +92,7 @@ public class TimexClassifier {
         int month = Integer.parseInt(docDate.substring(4,6));
        
         for( Timex timex : timexes ) {
-          String text = timex.text().toLowerCase();
+          String text = timex.getText().toLowerCase();
           
           // 1.2 F1 improvement on Tempeval-3 training, value attribute.
 //          if( text.equals("a year ago") || text.contains("a year earlier") || text.contains("last year") ) {
@@ -108,13 +108,13 @@ public class TimexClassifier {
           // 0.2 F1 improvement with the following two if statements.
           // SUTime is overly specific on years. Strip off the month and day.
           if( text.equals("last year") )
-            timex.setValue(timex.value().substring(0,4));
+            timex.setValue(timex.getValue().substring(0,4));
           if( text.contains("years ago") )
-            timex.setValue(timex.value().substring(0,4));
+            timex.setValue(timex.getValue().substring(0,4));
 
           // 0.4 F1 improvement. This fixed ~8 errors, and didn't add any errors of its own.
           // SUTime sometimes does "PXM" when there is a clear quarter to choose.
-          if( text.equals("the latest quarter") && timex.value().equals("PXM") ) {
+          if( text.equals("the latest quarter") && timex.getValue().equals("PXM") ) {
             int quarter = determineFiscalQuarter(year, month);
             if( quarter > 0 ) {
               String newvalue = year + "-Q" + quarter;
@@ -196,11 +196,13 @@ public class TimexClassifier {
       edu.stanford.nlp.time.Timex stanfordTimex = label.get(TimeAnnotations.TimexAnnotation.class);
       org.w3c.dom.Element stanfordElement = stanfordTimex.toXmlElement();
       Timex newtimex = new Timex();
-      newtimex.setType(stanfordElement.getAttribute("type"));
+      newtimex.setType(Timex.Type.valueOf(stanfordElement.getAttribute("type")));
       newtimex.setValue(stanfordElement.getAttribute("value"));
-      newtimex.setTID("t" + idcounter++);
+      newtimex.setTid("t" + idcounter++);
       newtimex.setText(stanfordElement.getTextContent());
-      newtimex.setDocFunction(stanfordElement.getAttribute("functionInDocument"));
+      String docFnStr = stanfordElement.getAttribute("functionInDocument");
+      if (docFnStr != null && !docFnStr.isEmpty())
+      	newtimex.setDocumentFunction(Timex.DocumentFunction.valueOf(docFnStr));
       // Stanford Timex starts at index 0 in the sentence, not index 1.
       newtimex.setSpan(label.get(CoreAnnotations.TokenBeginAnnotation.class)+1, label.get(CoreAnnotations.TokenEndAnnotation.class)+1);
       if( debug ) System.out.println("NEW SUTIME TIMEX: " + newtimex);

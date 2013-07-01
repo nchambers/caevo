@@ -18,7 +18,6 @@ import timesieve.TextEvent;
 import timesieve.Timex;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
-import timesieve.tlink.TLink.TYPE;
 import timesieve.tlink.TimeTimeLink;
 import timesieve.util.TreeOperator;
 
@@ -40,30 +39,30 @@ public class ReichenbachDG13_4 implements Sieve {
 	private static TreeFactory tf = new LabeledScoredTreeFactory();
 	
 	// Map tense/aspect pairs to corresponding relation
-	private static final Map<String, TLink.TYPE> tenseAspectToLabel;
+	private static final Map<String, TLink.Type> tenseAspectToLabel;
   static
   {
-  	tenseAspectToLabel = new HashMap<String, TLink.TYPE>();
-  	tenseAspectToLabel.put("PAST-NONE/PAST-PERFECTIVE", TLink.TYPE.AFTER);
-  	tenseAspectToLabel.put("PAST-NONE/FUTURE-NONE", TLink.TYPE.BEFORE);
-  	tenseAspectToLabel.put("PAST-NONE/FUTURE-PERFECTIVE", TLink.TYPE.BEFORE);
-  	tenseAspectToLabel.put("PAST-PERFECTIVE/PAST-NONE", TLink.TYPE.BEFORE);
-  	tenseAspectToLabel.put("PAST-PERFECTIVE/PRES-NONE", TLink.TYPE.BEFORE);
-  	tenseAspectToLabel.put("PAST-PERFECTIVE/PRESENT-PERFECTIVE", TLink.TYPE.BEFORE);
-  	tenseAspectToLabel.put("PAST-PERFECTIVE/FUTURE-NONE", TLink.TYPE.BEFORE);
-  	tenseAspectToLabel.put("PAST-PERFECTIVE/FUTURE-PERFECTIVE", TLink.TYPE.BEFORE);
-  	tenseAspectToLabel.put("PRESENT-NONE/PAST-PERFECTIVE", TLink.TYPE.AFTER);
-  	tenseAspectToLabel.put("PRESENT-NONE/FUTURE-NONE", TLink.TYPE.BEFORE);
-  	tenseAspectToLabel.put("PRESENT-PERFECTIVE/PAST-PERFECTIVE", TLink.TYPE.AFTER);
-  	tenseAspectToLabel.put("PRESENT-PERFECTIVE/FUTURE-NONE", TLink.TYPE.BEFORE);
-  	tenseAspectToLabel.put("PRESENT-PERFECTIVE/FUTURE-PERFECTIVE", TLink.TYPE.BEFORE);
-  	tenseAspectToLabel.put("FUTURE-NONE/PAST-NONE", TLink.TYPE.AFTER);
-  	tenseAspectToLabel.put("FUTURE-NONE/PAST-PERFECTIVE", TLink.TYPE.AFTER);
-  	tenseAspectToLabel.put("FUTURE-NONE/PRESENT-NONE", TLink.TYPE.AFTER);
-  	tenseAspectToLabel.put("FUTURE-NONE/PRESENT-PERFECTIVE", TLink.TYPE.AFTER);
-  	tenseAspectToLabel.put("FUTURE-PERFECTIVE/PAST-NONE", TLink.TYPE.AFTER);
-  	tenseAspectToLabel.put("FUTURE-PERFECTIVE/PAST-PERFECTIVE", TLink.TYPE.AFTER);
-  	tenseAspectToLabel.put("FUTURE-PERFECTIVE/PRESENT-PERFECTIVE", TLink.TYPE.AFTER);
+  	tenseAspectToLabel = new HashMap<String, TLink.Type>();
+  	tenseAspectToLabel.put("PAST-NONE/PAST-PERFECTIVE", TLink.Type.AFTER);
+  	tenseAspectToLabel.put("PAST-NONE/FUTURE-NONE", TLink.Type.BEFORE);
+  	tenseAspectToLabel.put("PAST-NONE/FUTURE-PERFECTIVE", TLink.Type.BEFORE);
+  	tenseAspectToLabel.put("PAST-PERFECTIVE/PAST-NONE", TLink.Type.BEFORE);
+  	tenseAspectToLabel.put("PAST-PERFECTIVE/PRES-NONE", TLink.Type.BEFORE);
+  	tenseAspectToLabel.put("PAST-PERFECTIVE/PRESENT-PERFECTIVE", TLink.Type.BEFORE);
+  	tenseAspectToLabel.put("PAST-PERFECTIVE/FUTURE-NONE", TLink.Type.BEFORE);
+  	tenseAspectToLabel.put("PAST-PERFECTIVE/FUTURE-PERFECTIVE", TLink.Type.BEFORE);
+  	tenseAspectToLabel.put("PRESENT-NONE/PAST-PERFECTIVE", TLink.Type.AFTER);
+  	tenseAspectToLabel.put("PRESENT-NONE/FUTURE-NONE", TLink.Type.BEFORE);
+  	tenseAspectToLabel.put("PRESENT-PERFECTIVE/PAST-PERFECTIVE", TLink.Type.AFTER);
+  	tenseAspectToLabel.put("PRESENT-PERFECTIVE/FUTURE-NONE", TLink.Type.BEFORE);
+  	tenseAspectToLabel.put("PRESENT-PERFECTIVE/FUTURE-PERFECTIVE", TLink.Type.BEFORE);
+  	tenseAspectToLabel.put("FUTURE-NONE/PAST-NONE", TLink.Type.AFTER);
+  	tenseAspectToLabel.put("FUTURE-NONE/PAST-PERFECTIVE", TLink.Type.AFTER);
+  	tenseAspectToLabel.put("FUTURE-NONE/PRESENT-NONE", TLink.Type.AFTER);
+  	tenseAspectToLabel.put("FUTURE-NONE/PRESENT-PERFECTIVE", TLink.Type.AFTER);
+  	tenseAspectToLabel.put("FUTURE-PERFECTIVE/PAST-NONE", TLink.Type.AFTER);
+  	tenseAspectToLabel.put("FUTURE-PERFECTIVE/PAST-PERFECTIVE", TLink.Type.AFTER);
+  	tenseAspectToLabel.put("FUTURE-PERFECTIVE/PRESENT-PERFECTIVE", TLink.Type.AFTER);
   }
 	/**
 	 * The main function. All sieves must have this.
@@ -111,12 +110,12 @@ public class ReichenbachDG13_4 implements Sieve {
 			// Confirm event1's tense-aspect profile could be in the domain of tenseAspectToLabel 
 			TextEvent e1 = events.get(xx);
 			// only proceed if e1 is a verb...
-			int sid1 = e1.sid();
+			int sid1 = e1.getSid();
 			Tree sentParseTree1 = trees.get(sid1);
-			if (!posTagFromTree(sentParseTree1, e1.index()).startsWith("VB")) continue;
+			if (!posTagFromTree(sentParseTree1, e1.getIndex()).startsWith("VB")) continue;
 			// map e1 tense and aspect to simplified version based on D&G's mapping
-			String e1Tense = simplifyTense(e1.getTense());
-			String e1Aspect = simplifyAspect(e1.getAspect());
+			TextEvent.Tense e1Tense = simplifyTense(e1.getTense());
+			TextEvent.Aspect e1Aspect = simplifyAspect(e1.getAspect());
 			// only proceed if e1 has tense and aspect...
 			if (e1Tense == null || e1Aspect == null) continue;
 			for( int yy = xx+1; yy < events.size(); yy++ ) {
@@ -125,7 +124,7 @@ public class ReichenbachDG13_4 implements Sieve {
 				// only proceed if e2 is a verb...
 			// note: we don't know if e1 and e2 are in the same sentence
 				// compare with RBDG_1 and RBDG_3 which assumes that they are
-				int sid2 = e2.sid();
+				int sid2 = e2.getSid();
 				// get sid2's parse tree (it may or may not be sid1's Tree)'
 				Tree sentParseTree2;
 				if (sid1 == sid2) {
@@ -134,13 +133,13 @@ public class ReichenbachDG13_4 implements Sieve {
 				else {
 					sentParseTree2 = trees.get(sid2);
 				}
-				if (!posTagFromTree(sentParseTree2, e2.index()).startsWith("VB")) continue;
+				if (!posTagFromTree(sentParseTree2, e2.getIndex()).startsWith("VB")) continue;
 				// map e2 tense and aspect to simplified version based on D&G's mapping
-				String e2Tense = simplifyTense(e2.getTense());
+				TextEvent.Tense e2Tense = simplifyTense(e2.getTense());
 				// first confirm e2 has the same tense as e1 (Same S-R ordering constraint!)
 				// (provided that e2 has a non-null simplified tense)
 				if (e2Tense == null || !e2Tense.equals(e1Tense)) continue;
-				String e2Aspect = simplifyAspect(e2.getAspect());
+				TextEvent.Aspect e2Aspect = simplifyAspect(e2.getAspect());
 				// only proceed if e2 has aspect...
 				if (e2Aspect == null) continue;
 				// Extract tense-aspect profiles, and label the pair accordingly
@@ -148,9 +147,9 @@ public class ReichenbachDG13_4 implements Sieve {
 				if (debug == true){
 					System.out.println(taProfilePair);
 				}
-				TLink.TYPE label = taToLabel(taProfilePair);
+				TLink.Type label = taToLabel(taProfilePair);
 				if (label != null){
-				proposed.add(new EventEventLink(e1.eiid(), e2.eiid(), label));
+				proposed.add(new EventEventLink(e1.getEiid(), e2.getEiid(), label));
 				}
 			}
 		}
@@ -164,23 +163,23 @@ public class ReichenbachDG13_4 implements Sieve {
 	
 	//Get the label that corresponds to a given 
 	// tense/aspect profile pair
-	private TLink.TYPE taToLabel(String taProfilePair) {
+	private TLink.Type taToLabel(String taProfilePair) {
 		return tenseAspectToLabel.get(taProfilePair);
 	}
 	
 	// apply D&G's mapping to consolidate tense and aspect labels
-	private String simplifyTense(String tense){
-		if (tense.equals("PRESPART")) return "PRESENT";
-		else if (tense.equals("PASTPART")) return "PAST";
-		else if (tense.equals("PAST") || tense.equals("PRESENT") || tense.equals("FUTURE")) {
+	private TextEvent.Tense simplifyTense(TextEvent.Tense tense){
+		if (tense == TextEvent.Tense.PRESPART) return TextEvent.Tense.PRESENT;
+		else if (tense == TextEvent.Tense.PASTPART) return TextEvent.Tense.PAST;
+		else if (tense == TextEvent.Tense.PAST || tense == TextEvent.Tense.PRESENT || tense == TextEvent.Tense.FUTURE) {
 			return tense;
 		}
 		else return null; 
 	}
 		
-	private String simplifyAspect(String aspect){
-		if (aspect.equals("PERFECTIVE_PROGRESSIVE")) return "PERFECTIVE";
-		else if (aspect.equals("IMPERFECTIVE") || aspect.equals("IMPERFECTIVE_PROGRESSIVE") || aspect.equals("NONE")) {
+	private TextEvent.Aspect simplifyAspect(TextEvent.Aspect aspect){
+		if (aspect == TextEvent.Aspect.PERFECTIVE_PROGRESSIVE) return TextEvent.Aspect.PERFECTIVE;
+		else if (aspect == TextEvent.Aspect.IMPERFECTIVE || aspect == TextEvent.Aspect.IMPERFECTIVE_PROGRESSIVE || aspect == TextEvent.Aspect.NONE) {
 			return aspect;
 		}
 		else return null; 

@@ -19,13 +19,13 @@ import edu.stanford.nlp.util.CollectionUtils;
 public class TLinkDatum {
   public static enum TYPE { EESAMENODOMINATE, EESAMEDOMINATES, EEDIFF, EDCT, ETSAME, ETDIFF };
   TYPE _type = null;
-  TLink.TYPE _relation;
+  TLink.Type _relation;
   String _docSource = null;
   Counter<String> _featureCounts = null;
   public TLink _originalTLink = null; // for debugging
   
   public TLinkDatum() { }
-  public TLinkDatum(TLink.TYPE yclass) {
+  public TLinkDatum(TLink.Type yclass) {
     _relation = yclass;
   }
 
@@ -125,7 +125,7 @@ public class TLinkDatum {
   public TLinkDatum valueOf(String str, Set<String> keepFeats) {
     String[] parts = str.split("\t");
     if( parts.length > 1 ) {
-      TLinkDatum datum = new TLinkDatum(TLink.TYPE.valueOf(parts[0]));
+      TLinkDatum datum = new TLinkDatum(TLink.Type.valueOf(parts[0]));
       for( int i = 1; i < parts.length; i += 2 ) {
         try {
           if( keepFeats == null || keepFeats.contains(parts[i]) )
@@ -150,7 +150,7 @@ public class TLinkDatum {
    */
   public void valueFrom(String str, Set<String> keepFeats) {
     String[] parts = str.split("\t");
-    _relation = TLink.TYPE.valueOf(parts[0]);
+    _relation = TLink.Type.valueOf(parts[0]);
     if( parts.length > 1 ) {
       _featureCounts = null;
       for( int i = 1; i < parts.length; i += 2 ) {
@@ -178,7 +178,7 @@ public class TLinkDatum {
     
     try {
       String[] parts = str.split("\t");
-      TLinkDatum datum = new TLinkDatum(TLink.TYPE.valueOf(parts[1]));
+      TLinkDatum datum = new TLinkDatum(TLink.Type.valueOf(parts[1]));
       datum.setDocSource(parts[0]);
       for( int ii = 2; ii < parts.length; ii++ )
         datum.addFeature(parts[ii]);

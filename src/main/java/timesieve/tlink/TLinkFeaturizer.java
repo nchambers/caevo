@@ -210,24 +210,24 @@ public class TLinkFeaturizer {
 
           // Statistics tracking.
           if( !link.closed && !isdctlink && sentenceSpan(link, events, timexes) == 0 ) {
-            if( link.origin() == null ) numTimebank++;
-            else if( link.origin().equals("bethard") ) numBethard++;
-            else if( link.origin().equals("turk") ) numTurk++;
+            if( link.getOrigin() == null ) numTimebank++;
+            else if( link.getOrigin().equals("bethard") ) numBethard++;
+            else if( link.getOrigin().equals("turk") ) numTurk++;
           }
 
           // If we only want TimeBank original files.
-          if( link.origin() == null || link.origin().equals("null")    ||
-              (_doBethard && link.origin().equals("bethard"))          ||
-              (_doTurk && link.origin().equals("turk"))                ||
-              (_doTempeval && link.origin().contains("tempeval"))      ||
-              (tempevalTaskE && link.origin().equals("tempeval-main")) ||
-              (tempevalTaskF && link.origin().equals("tempeval-sub"))
+          if( link.getOrigin() == null || link.getOrigin().equals("null")    ||
+              (_doBethard && link.getOrigin().equals("bethard"))          ||
+              (_doTurk && link.getOrigin().equals("turk"))                ||
+              (_doTempeval && link.getOrigin().contains("tempeval"))      ||
+              (tempevalTaskE && link.getOrigin().equals("tempeval-main")) ||
+              (tempevalTaskF && link.getOrigin().equals("tempeval-sub"))
           ) {
 
             // Skip closed links.
             if( !link.closed ) {
               // Only do links that have labels for now. Skip OVERLAP from Bethard...Tempeval3 does not have this relation.
-              if( link.relation() != TLink.TYPE.NONE && link.relation() != TLink.TYPE.OVERLAP ) {
+              if( link.getRelation() != TLink.Type.NONE && link.getRelation() != TLink.Type.OVERLAP ) {
                 //                 System.out.println("link: " + link);
                 int sentenceSpan = (isdctlink ? -1 : sentenceSpan(link, events, timexes)); 
 
@@ -257,13 +257,13 @@ public class TLinkFeaturizer {
                   continue;
                 
                 // Skip links from Turk if they are greater than our experiment's limited sentence span.
-                if( link.origin() != null && link.origin().equals("turk") && sentenceSpan > _turkMaxSentenceSpan ) {
+                if( link.getOrigin() != null && link.getOrigin().equals("turk") && sentenceSpan > _turkMaxSentenceSpan ) {
                   if( debug ) System.out.println("Skipping turk link " + link + "\n\tIt spans " + sentenceSpan + " sentences.");
                   continue;
                 }
 
                 // Skip links from TimeBank if they are greater than our experiment's limited sentence span.
-                if( !isdctlink && (link.origin() == null || link.origin().equalsIgnoreCase("timebank")) && sentenceSpan > _timebankMaxSentenceSpan ) {
+                if( !isdctlink && (link.getOrigin() == null || link.getOrigin().equalsIgnoreCase("timebank")) && sentenceSpan > _timebankMaxSentenceSpan ) {
                   if( debug ) System.out.println("Skipping timebank link " + link + "\n\tIt spans " + sentenceSpan + " sentences.");
                   continue;
                 }
@@ -290,20 +290,20 @@ public class TLinkFeaturizer {
   
   private int sentenceSpan(TLink link, List<TextEvent> events, List<Timex> timexes) {
     if( link instanceof EventEventLink ) {
-      TextEvent event1 = findEvent(link.event1(), events);
-      TextEvent event2 = findEvent(link.event2(), events);
-      return Math.abs(event1.sid() - event2.sid());
+      TextEvent event1 = findEvent(link.getId1(), events);
+      TextEvent event2 = findEvent(link.getId2(), events);
+      return Math.abs(event1.getSid() - event2.getSid());
     } 
     else if( link instanceof EventTimeLink ) {
       int first = 0, second = 0;
-      if( link.event1().startsWith("e") ) {
-        TextEvent event = findEvent(link.event1(), events);
-        first = event.sid();
-        second = findTimex(link.event2(), timexes).sid();
+      if( link.getId1().startsWith("e") ) {
+        TextEvent event = findEvent(link.getId1(), events);
+        first = event.getSid();
+        second = findTimex(link.getId2(), timexes).getSid();
       } else {
-        TextEvent event = findEvent(link.event2(), events);
-        first = event.sid();
-        second = findTimex(link.event1(), timexes).sid();
+        TextEvent event = findEvent(link.getId2(), events);
+        first = event.getSid();
+        second = findTimex(link.getId1(), timexes).getSid();
       }
       return Math.abs(first - second);
     }
@@ -327,51 +327,51 @@ public class TLinkFeaturizer {
     // Change to TempEval labels.
     if( _tempeval2Mode ) {
       link.fullToTempeval();
-      link.changeMode(TLink.MODE.TEMPEVAL);
+      link.changeMode(TLink.Mode.TEMPEVAL);
     }
     
     // EVENT-EVENT links.
     if( link instanceof EventEventLink ) {
-      TextEvent event1 = findEvent(link.event1(), events);
-      TextEvent event2 = findEvent(link.event2(), events);
-      TLink.TYPE label = link.relation();
+      TextEvent event1 = findEvent(link.getId1(), events);
+      TextEvent event2 = findEvent(link.getId2(), events);
+      TLink.Type label = link.getRelation();
 
       // Sanity check
       if( event1 == null || event2 == null ) {
-        System.out.println("Didn't find event (" + link.event1() + "," + link.event2() + ")! event1=" + event1 + " event2=" + event2);
+        System.out.println("Didn't find event (" + link.getId1() + "," + link.getId2() + ")! event1=" + event1 + " event2=" + event2);
       }
 
-      TLinkDatum datum = createEventEventDatum(event1, event2, label, events, trees, alldeps.get(event1.sid()));
+      TLinkDatum datum = createEventEventDatum(event1, event2, label, events, trees, alldeps.get(event1.getSid()));
       datum.setOriginalTLink(link);
       return datum;
     }
     
     // EVENT-TIME links.
     else if( link instanceof EventTimeLink ) {
-      TLink.TYPE label = link.relation();
+      TLink.Type label = link.getRelation();
 
       TextEvent event = null;
       Timex timex = null;
-      if( link.event1().startsWith("e") ) {
-        event = findEvent(link.event1(), events);
-        timex = findTimex(link.event2(), timexes);
-      } else if( link.event1().startsWith("t") ) {
-        event = findEvent(link.event2(), events);
-        timex = findTimex(link.event1(), timexes);
+      if( link.getId1().startsWith("e") ) {
+        event = findEvent(link.getId1(), events);
+        timex = findTimex(link.getId2(), timexes);
+      } else if( link.getId1().startsWith("t") ) {
+        event = findEvent(link.getId2(), events);
+        timex = findTimex(link.getId1(), timexes);
         label = link.invertRelation(label); // Always make it the (e,t) relation, not the (t,e) relation.
       } else {
-        System.out.println("TLinkFeaturizer: Don't know how to handle this event id: " + link.event1());
+        System.out.println("TLinkFeaturizer: Don't know how to handle this event id: " + link.getId1());
         System.exit(1);
       }
 
       // Sanity check
       if( event == null || (!isdctlink && timex == null) ) {
-        System.out.println("Didn't find event-time (" + link.event1() + "," + link.event2() + ")! event1=" + event + " event2=" + timex);
+        System.out.println("Didn't find event-time (" + link.getId1() + "," + link.getId2() + ")! event1=" + event + " event2=" + timex);
       }
       
       TLinkDatum datum;
       if( isdctlink ) datum = createEventDocumentTimeDatum(event, timex, label, trees);
-      else datum = createEventTimeDatum(event, timex, label, trees, alldeps.get(event.sid()));
+      else datum = createEventTimeDatum(event, timex, label, trees, alldeps.get(event.getSid()));
       datum.setOriginalTLink(link);
       return datum;
     }
@@ -394,7 +394,7 @@ public class TLinkFeaturizer {
    * @param trees All parse trees for the entire document where these two events reside.
    * @return A single TLinkDatum object with relevant features.
    */
-  public TLinkDatum createEventTimeDatum(TextEvent event, Timex time, TLink.TYPE label, List<Tree> trees, List<TypedDependency> deps) {
+  public TLinkDatum createEventTimeDatum(TextEvent event, Timex time, TLink.Type label, List<Tree> trees, List<TypedDependency> deps) {
     Counter<String> feats = new ClassicCounter<String>();
 
     // Sanity check
@@ -419,7 +419,7 @@ public class TLinkFeaturizer {
         
     TLinkDatum datum = new TLinkDatum(label);
     datum.addFeatures(feats);
-    if( event.sid() == time.sid() )
+    if( event.getSid() == time.getSid() )
       datum.setType(TLinkDatum.TYPE.ETSAME);
     else
       datum.setType(TLinkDatum.TYPE.ETDIFF);
@@ -427,7 +427,7 @@ public class TLinkFeaturizer {
     return datum;
   }
   
-  public TLinkDatum createEventDocumentTimeDatum(TextEvent event, Timex time, TLink.TYPE label, List<Tree> trees) {
+  public TLinkDatum createEventDocumentTimeDatum(TextEvent event, Timex time, TLink.Type label, List<Tree> trees) {
     Counter<String> feats = new ClassicCounter<String>();
 
     // Sanity check
@@ -456,7 +456,7 @@ public class TLinkFeaturizer {
    * @param trees All parse trees for the entire document where these two events reside.
    * @return A single TLinkDatum object with relevant features.
    */
-  public TLinkDatum createEventEventDatum(TextEvent event1, TextEvent event2, TLink.TYPE label, List<TextEvent> events, List<Tree> trees, List<TypedDependency> deps) {
+  public TLinkDatum createEventEventDatum(TextEvent event1, TextEvent event2, TLink.Type label, List<TextEvent> events, List<Tree> trees, List<TypedDependency> deps) {
     Counter<String> feats = new ClassicCounter<String>();
 
     // Sanity check
@@ -483,7 +483,7 @@ public class TLinkFeaturizer {
         
     TLinkDatum datum = new TLinkDatum(label);
     datum.addFeatures(feats);
-    if( event1.sid() != event2.sid() )
+    if( event1.getSid() != event2.getSid() )
     	datum.setType(TLinkDatum.TYPE.EEDIFF);
     else if( oneEventDominates(event1, event2, trees) )
     	datum.setType(TLinkDatum.TYPE.EESAMEDOMINATES);
@@ -502,14 +502,14 @@ public class TLinkFeaturizer {
   private Counter<String> getSingleEventPOSFeatures(String featprefix, TextEvent event1, List<Tree> trees) {
     Counter<String> feats = new ClassicCounter<String>();
 
-    Tree tree1 = trees.get(event1.sid());
+    Tree tree1 = trees.get(event1.getSid());
     
-    String pos10 = TreeOperator.indexToPOSTag(tree1, event1.index());
-    String pos11 = TreeOperator.indexToPOSTag(tree1, event1.index()-1);
-    String pos12 = TreeOperator.indexToPOSTag(tree1, event1.index()-2);
-    if( event1.index() == 2 ) {
+    String pos10 = TreeOperator.indexToPOSTag(tree1, event1.getIndex());
+    String pos11 = TreeOperator.indexToPOSTag(tree1, event1.getIndex()-1);
+    String pos12 = TreeOperator.indexToPOSTag(tree1, event1.getIndex()-2);
+    if( event1.getIndex() == 2 ) {
       pos12 = "<s>";
-    } else if( event1.index() == 1 ) {
+    } else if( event1.getIndex() == 1 ) {
       pos11 = "<s>";
       pos12 = "<pre-s>";
     }
@@ -531,10 +531,10 @@ public class TLinkFeaturizer {
     feats.addAll(getSingleEventPOSFeatures("pos2", event2, trees));
 
     // bigram
-    Tree tree1 = trees.get(event1.sid());
-    Tree tree2 = trees.get(event2.sid());
-    String pos10 = TreeOperator.indexToPOSTag(tree1, event1.index());
-    String pos20 = TreeOperator.indexToPOSTag(tree2, event2.index());
+    Tree tree1 = trees.get(event1.getSid());
+    Tree tree2 = trees.get(event2.getSid());
+    String pos10 = TreeOperator.indexToPOSTag(tree1, event1.getIndex());
+    String pos20 = TreeOperator.indexToPOSTag(tree2, event2.getIndex());
     feats.incrementCount("posBi-" + pos10 + "-" + pos20);
     
     return feats;
@@ -549,9 +549,9 @@ public class TLinkFeaturizer {
     if( !_noEventFeats ) {
       feats.incrementCount("ev1Tense-" + event.getTense());
       feats.incrementCount("ev1Aspect-" + event.getAspect());
-      if( event.getModality() != null && event.getModality().length() > 0 ) feats.incrementCount("ev1Modality-" + event.getModality());
+      if( event.getModality() != null ) feats.incrementCount("ev1Modality-" + event.getModality());
       feats.incrementCount("ev1Class-" + event.getTheClass());
-      if( event.getPolarity() != null && event.getPolarity().length() > 0 ) feats.incrementCount("ev1Polarity-" + event.getPolarity());
+      if( event.getPolarity() != null ) feats.incrementCount("ev1Polarity-" + event.getPolarity());
     }
     
     // These are from Turker experiments. Will include if the .info file has them!
@@ -565,22 +565,22 @@ public class TLinkFeaturizer {
   private Counter<String> getEventTimeTokenPathFeature(TextEvent event, Timex time, List<Tree> trees) {
     Counter<String> feats = new ClassicCounter<String>();
    
-    if( event.sid() == time.sid() ) {
+    if( event.getSid() == time.getSid() ) {
       // If they are near each other, grab the intervening n-gram.
-      if( Math.abs(event.index()-time.offset()) < 5 || 
-          Math.abs(event.index()-time.offset()+time.length()-1) < 5 ) {
-        List<String> tokens = TreeOperator.stringLeavesFromTree(trees.get(event.sid()));
+      if( Math.abs(event.getIndex()-time.getTokenOffset()) < 5 || 
+          Math.abs(event.getIndex()-time.getTokenOffset()+time.getTokenLength()-1) < 5 ) {
+        List<String> tokens = TreeOperator.stringLeavesFromTree(trees.get(event.getSid()));
         String ngram = "EVENT";
         String tail = "TIME";
         //      System.out.println("token path! " + tokens);
         //      System.out.println("\t" + event + "\t" + time);
 
         // Figure out if the event or time is first.
-        int start = event.index();
-        int end = time.offset();
-        if( start > time.offset() ) { 
-          start = time.offset()+time.length()-1;
-          end = event.index();
+        int start = event.getIndex();
+        int end = time.getTokenOffset();
+        if( start > time.getTokenOffset() ) { 
+          start = time.getTokenOffset()+time.getTokenLength()-1;
+          end = event.getIndex();
           ngram = "TIME";
           tail = "EVENT";
         }
@@ -610,7 +610,7 @@ public class TLinkFeaturizer {
       feats.incrementCount("ev1Tense-" + event1.getTense());
       feats.incrementCount("ev2Tense-" + event2.getTense());
       feats.incrementCount("tenses-" + event1.getTense() + "-" + event2.getTense());
-      if( event1.getTense().equalsIgnoreCase(event2.getTense()) )
+      if( event1.getTense() == event2.getTense() )
         feats.incrementCount("tensematch-YES");
       else
         feats.incrementCount("tensematch-NO");
@@ -618,7 +618,7 @@ public class TLinkFeaturizer {
       feats.incrementCount("ev1Aspect-" + event1.getAspect());
       feats.incrementCount("ev2Aspect-" + event2.getAspect());
       feats.incrementCount("aspects-" + event1.getAspect() + "-" + event2.getAspect());
-      if( event1.getAspect().equalsIgnoreCase(event2.getAspect()) )
+      if( event1.getAspect() == event2.getAspect() )
         feats.incrementCount("aspectmatch-YES");
       else
         feats.incrementCount("aspectmatch-NO");
@@ -634,7 +634,7 @@ public class TLinkFeaturizer {
       feats.incrementCount("ev1Class-" + event1.getTheClass());
       feats.incrementCount("ev2Class-" + event2.getTheClass());
       feats.incrementCount("classes-" + event1.getTheClass() + "-" + event2.getTheClass());
-      if( event1.getTheClass().equalsIgnoreCase(event2.getTheClass()) )
+      if( event1.getTheClass() == event2.getTheClass() )
         feats.incrementCount("classmatch-YES");
       else
         feats.incrementCount("classmatch-NO");
@@ -642,7 +642,7 @@ public class TLinkFeaturizer {
       feats.incrementCount("ev1Polarity-" + event1.getPolarity());
       feats.incrementCount("ev2Polarity-" + event2.getPolarity());
       feats.incrementCount("polarities-" + event1.getPolarity() + "-" + event2.getPolarity());
-      if( event1.getPolarity().equalsIgnoreCase(event2.getPolarity()) )
+      if( event1.getPolarity() == event2.getPolarity() )
         feats.incrementCount("polaritymatch-YES");
       else
         feats.incrementCount("polaritymatch-NO");
@@ -669,16 +669,16 @@ public class TLinkFeaturizer {
    */
   private Counter<String> getSingleEventNearbyBOWFeatures(TextEvent event, List<Tree> trees) {
     Counter<String> feats = new ClassicCounter<String>();
-    Tree tree = trees.get(event.sid());
+    Tree tree = trees.get(event.getSid());
     List<String> tokens = TreeOperator.stringLeavesFromTree(tree);
     
     int window = 2;
-    int start = Math.max(0, event.index()-1-window);
-    int end = Math.min(tokens.size()-1, event.index()-1+window);
+    int start = Math.max(0, event.getIndex()-1-window);
+    int end = Math.min(tokens.size()-1, event.getIndex()-1+window);
 
     for( int xx = 0; xx < window; xx++ ) {
-      if( start+xx < event.index()-1 ) feats.incrementCount("bow-" + tokens.get(start+xx).toLowerCase());
-      if( end-xx > event.index()-1 )   feats.incrementCount("bow-" + tokens.get(end-xx).toLowerCase());
+      if( start+xx < event.getIndex()-1 ) feats.incrementCount("bow-" + tokens.get(start+xx).toLowerCase());
+      if( end-xx > event.getIndex()-1 )   feats.incrementCount("bow-" + tokens.get(end-xx).toLowerCase());
     }
     
     return feats;
@@ -692,8 +692,8 @@ public class TLinkFeaturizer {
   private Counter<String> getSingleEventTokenFeatures(int eventIndex, TextEvent event1, List<Tree> trees) {
     Counter<String> feats = new ClassicCounter<String>();
     
-    String token = event1.string();
-    String postag = TreeOperator.indexToPOSTag(trees.get(event1.sid()), event1.index());
+    String token = event1.getString();
+    String postag = TreeOperator.indexToPOSTag(trees.get(event1.getSid()), event1.getIndex());
     String lemma = _wordnet.lemmatizeTaggedWord(token, postag);
 
     // Token and Lemma
@@ -714,15 +714,15 @@ public class TLinkFeaturizer {
   
   private Counter<String> getEventEventBigram(TextEvent event1, TextEvent event2, List<TextEvent> events) {
     Counter<String> feats = new ClassicCounter<String>();
-    feats.incrementCount("BI-" + event1.string() + "_" + event2.string());
+    feats.incrementCount("BI-" + event1.getString() + "_" + event2.getString());
 
   	// Bigram with generic "event" tokens between them, based on how many other events separate them.
-    if( event1.sid() == event2.sid() ) {
+    if( event1.getSid() == event2.getSid() ) {
     	int numInterlopers = countInterlopers(event1, event2, events);
-    	String str = "SEQ-" + event1.string();
+    	String str = "SEQ-" + event1.getString();
     	for( int xx = 0; xx < numInterlopers; xx++ )
     		str += "_EVENT";
-    	str += "_" + event2.string();
+    	str += "_" + event2.getString();
     }
     
     return feats;
@@ -743,9 +743,9 @@ public class TLinkFeaturizer {
   
   private Counter<String> getTimexFeatures(Timex timex, List<Tree> trees) {
     Counter<String> feats = new ClassicCounter<String>();
-    List<String> tokens = TreeOperator.stringLeavesFromTree(trees.get(timex.sid()));
-    int start = timex.offset()-1;
-    int end = start + timex.length()-1; // inclusive
+    List<String> tokens = TreeOperator.stringLeavesFromTree(trees.get(timex.getSid()));
+    int start = timex.getTokenOffset()-1;
+    int end = start + timex.getTokenLength()-1; // inclusive
       
     // Leftmost token in the time phrase.
     if( TimebankUtil.isDayOfWeek(tokens.get(end)) )
@@ -754,9 +754,9 @@ public class TLinkFeaturizer {
       feats.incrementCount("timetoken-" + tokens.get(end));
     
     // Entire time phrase.
-    if( timex.length() > 1 ) {
+    if( timex.getTokenLength() > 1 ) {
       String phrase = tokens.get(start);
-      for( int xx = 1; xx < timex.length(); xx++ )
+      for( int xx = 1; xx < timex.getTokenLength(); xx++ )
         phrase += "_" + tokens.get(start+xx);
       feats.incrementCount("timephrase-" + phrase);
     }
@@ -774,23 +774,23 @@ public class TLinkFeaturizer {
    */
   private Counter<String> getEventTimeBigram(TextEvent event, Timex timex, List<Tree> trees) {
     Counter<String> feats = new ClassicCounter<String>();
-    List<String> tokens = TreeOperator.stringLeavesFromTree(trees.get(timex.sid()));
-    String timeToken = tokens.get(timex.offset()-1);
+    List<String> tokens = TreeOperator.stringLeavesFromTree(trees.get(timex.getSid()));
+    String timeToken = tokens.get(timex.getTokenOffset()-1);
     if( TimebankUtil.isDayOfWeek(timeToken) )
       timeToken = "DAYOFWEEK";
     
-    if( event.sid() == timex.sid() && event.index() < timex.offset() )
-      feats.incrementCount("bi-" + tokens.get(event.index()-1) + "_" + timeToken);
-    else if( event.sid() == timex.sid() )
-      feats.incrementCount("bi-" + timeToken + "_" + tokens.get(event.index()-1));
+    if( event.getSid() == timex.getSid() && event.getIndex() < timex.getTokenOffset() )
+      feats.incrementCount("bi-" + tokens.get(event.getIndex()-1) + "_" + timeToken);
+    else if( event.getSid() == timex.getSid() )
+      feats.incrementCount("bi-" + timeToken + "_" + tokens.get(event.getIndex()-1));
 
     // In different sentences.
     else {
-      List<String> eventTokens = TreeOperator.stringLeavesFromTree(trees.get(event.sid()));
-      if( event.sid() < timex.sid() )
-        feats.incrementCount("bi-" + eventTokens.get(event.index()-1) + "_" + timeToken);
+      List<String> eventTokens = TreeOperator.stringLeavesFromTree(trees.get(event.getSid()));
+      if( event.getSid() < timex.getSid() )
+        feats.incrementCount("bi-" + eventTokens.get(event.getIndex()-1) + "_" + timeToken);
       else
-        feats.incrementCount("bi-" + timeToken + "_" + eventTokens.get(event.index()-1));
+        feats.incrementCount("bi-" + timeToken + "_" + eventTokens.get(event.getIndex()-1));
     }
     
     return feats;
@@ -801,8 +801,8 @@ public class TLinkFeaturizer {
    */
   public boolean oneEventDominates(TLink link, List<TextEvent> events, List<Tree> trees) {
   	if( link instanceof EventEventLink ) {
-  		TextEvent event1 = findEvent(link.event1(), events);
-  		TextEvent event2 = findEvent(link.event2(), events);
+  		TextEvent event1 = findEvent(link.getId1(), events);
+  		TextEvent event2 = findEvent(link.getId2(), events);
   		if( event1 == null || event2 == null ) {
   		  System.out.println("null event!! " + event1 + " " + event2 + "\tfrom tlink " + link);
   		  return false;
@@ -814,10 +814,10 @@ public class TLinkFeaturizer {
   
   public boolean oneEventDominates(TextEvent event1, TextEvent event2, List<Tree> trees) {
   	// Must be in the same sentence.
-  	if( event1.sid() == event2.sid() ) {
-  		Tree tree = trees.get(event1.sid());
-  		Tree tree1 = TreeOperator.indexToSubtree(tree, event1.index());
-  		Tree tree2 = TreeOperator.indexToSubtree(tree, event2.index());
+  	if( event1.getSid() == event2.getSid() ) {
+  		Tree tree = trees.get(event1.getSid());
+  		Tree tree1 = TreeOperator.indexToSubtree(tree, event1.getIndex());
+  		Tree tree2 = TreeOperator.indexToSubtree(tree, event2.getIndex());
 
   		// Dominance.
   		if( treeDominates(tree1, tree2, tree) || treeDominates(tree2, tree1, tree) )
@@ -833,10 +833,10 @@ public class TLinkFeaturizer {
     Counter<String> feats = new ClassicCounter<String>();
     
     // Must be in the same sentence.
-    if( event1.sid() == event2.sid() ) {
-      Tree tree = trees.get(event1.sid());
-      Tree tree1 = TreeOperator.indexToSubtree(tree, event1.index());
-      Tree tree2 = TreeOperator.indexToSubtree(tree, event2.index());
+    if( event1.getSid() == event2.getSid() ) {
+      Tree tree = trees.get(event1.getSid());
+      Tree tree1 = TreeOperator.indexToSubtree(tree, event1.getIndex());
+      Tree tree2 = TreeOperator.indexToSubtree(tree, event2.getIndex());
 
       // Dominance
       if( treeDominates(tree1, tree2, tree) )
@@ -855,10 +855,10 @@ public class TLinkFeaturizer {
     Counter<String> feats = new ClassicCounter<String>();
     
     // Must be in the same sentence.
-    if( event.sid() == timex.sid() ) {
-      Tree tree = trees.get(event.sid());
-      Tree tree1 = TreeOperator.indexToSubtree(tree, event.index());
-      Tree tree2 = TreeOperator.indexToSubtree(tree, timex.offset());
+    if( event.getSid() == timex.getSid() ) {
+      Tree tree = trees.get(event.getSid());
+      Tree tree1 = TreeOperator.indexToSubtree(tree, event.getIndex());
+      Tree tree2 = TreeOperator.indexToSubtree(tree, timex.getTokenOffset());
       
       // Dominance
       if( treeDominates(tree1, tree2, tree) )
@@ -872,11 +872,11 @@ public class TLinkFeaturizer {
   
   private Counter<String> getParsePathFeatures(TextEvent event, Timex timex, List<Tree> trees) {
     // Only works for same-sentence.
-    if( event.sid() == timex.sid() ) {
-      if( event.index() < timex.offset() )
-        return getParsePathFeatures(event.index(), timex.offset()+timex.length()-1, "EVENT", "TIME", trees.get(event.sid()));
+    if( event.getSid() == timex.getSid() ) {
+      if( event.getIndex() < timex.getTokenOffset() )
+        return getParsePathFeatures(event.getIndex(), timex.getTokenOffset()+timex.getTokenLength()-1, "EVENT", "TIME", trees.get(event.getSid()));
       else
-        return getParsePathFeatures(timex.offset()+timex.length()-1, event.index(), "TIME", "EVENT", trees.get(event.sid()));
+        return getParsePathFeatures(timex.getTokenOffset()+timex.getTokenLength()-1, event.getIndex(), "TIME", "EVENT", trees.get(event.getSid()));
     }
     else
       return new ClassicCounter<String>();
@@ -884,8 +884,8 @@ public class TLinkFeaturizer {
 
   private Counter<String> getParsePathFeatures(TextEvent event1, TextEvent event2, List<Tree> trees) {
     // Only works for same-sentence.
-    if( event1.sid() == event2.sid() )
-      return getParsePathFeatures(event1.index(), event2.index(), null, null, trees.get(event1.sid()));
+    if( event1.getSid() == event2.getSid() )
+      return getParsePathFeatures(event1.getIndex(), event2.getIndex(), null, null, trees.get(event1.getSid()));
     else
       return new ClassicCounter<String>();
   }
@@ -907,15 +907,15 @@ public class TLinkFeaturizer {
   }
   
   private Counter<String> getDepsPathFeatures(TextEvent event, Timex time, List<TypedDependency> deps) {
-    if( event.sid() == time.sid() )
-      return getDepsPathFeatures(event.index(), time.offset()+time.length()-1, deps);
+    if( event.getSid() == time.getSid() )
+      return getDepsPathFeatures(event.getIndex(), time.getTokenOffset()+time.getTokenLength()-1, deps);
     else
       return new ClassicCounter<String>();
   }
   
   private Counter<String> getDepsPathFeatures(TextEvent event1, TextEvent event2, List<TypedDependency> deps) {
-    if( event1.sid() == event2.sid() )
-      return getDepsPathFeatures(event1.index(), event2.index(), deps);
+    if( event1.getSid() == event2.getSid() )
+      return getDepsPathFeatures(event1.getIndex(), event2.getIndex(), deps);
     else
       return new ClassicCounter<String>();
   }
@@ -954,14 +954,14 @@ public class TLinkFeaturizer {
   private Counter<String> getSyntacticFeatures(TextEvent event1, TextEvent event2, List<Tree> trees) {
     Counter<String> feats = new ClassicCounter<String>();
 
-    Tree tree = trees.get(event1.sid());
-    Tree subtree = TreeOperator.indexToSubtree(tree, event1.index());
+    Tree tree = trees.get(event1.getSid());
+    Tree subtree = TreeOperator.indexToSubtree(tree, event1.getIndex());
     String prep = isPrepClause(tree, subtree);
     if( prep != null )
       feats.incrementCount("prep1-" + prep);
     
-    tree = trees.get(event2.sid());
-    subtree = TreeOperator.indexToSubtree(tree, event2.index());
+    tree = trees.get(event2.getSid());
+    subtree = TreeOperator.indexToSubtree(tree, event2.getIndex());
     prep = isPrepClause(tree, subtree);
     if( prep != null )
       feats.incrementCount("prep2-" + prep);
@@ -976,9 +976,9 @@ public class TLinkFeaturizer {
     Counter<String> feats = new ClassicCounter<String>();
 
     // Same sentence
-    if( event1.sid() == event2.sid() ) {
+    if( event1.getSid() == event2.getSid() ) {
       feats.incrementCount("order-sameSent");
-      if( event1.index() < event2.index() ) {
+      if( event1.getIndex() < event2.getIndex() ) {
         feats.incrementCount("order-before");
         feats.incrementCount("order-sameSent-before");
       }
@@ -990,7 +990,7 @@ public class TLinkFeaturizer {
     // Different sentence
     else {
       feats.incrementCount("order-diffSent");
-      if( event1.sid() < event2.sid() ) {
+      if( event1.getSid() < event2.getSid() ) {
         feats.incrementCount("order-before");
         feats.incrementCount("order-diffSent-before");
       }
@@ -1011,7 +1011,7 @@ public class TLinkFeaturizer {
   private Counter<String> getEventInterferenceFeatures(TextEvent event1, TextEvent event2, List<TextEvent> events) {
     Counter<String> feats = new ClassicCounter<String>();
 
-    if( event1.sid() == event2.sid() ) {
+    if( event1.getSid() == event2.getSid() ) {
     	int numInterlopers = countInterlopers(event1, event2, events);
       
       if( numInterlopers > 0 )
@@ -1028,18 +1028,18 @@ public class TLinkFeaturizer {
    * If different sentences, return -1;
    */
   private int countInterlopers(TextEvent event1, TextEvent event2, List<TextEvent> events) {
-  	if( event1.sid() == event2.sid() ) {
-      int start = event1.index();
-      int end = event2.index();
-      if( event2.index() < start ) {
-        start = event2.index();
-        end = event1.index();
+  	if( event1.getSid() == event2.getSid() ) {
+      int start = event1.getIndex();
+      int end = event2.getIndex();
+      if( event2.getIndex() < start ) {
+        start = event2.getIndex();
+        end = event1.getIndex();
       }
 
       int interlopers = 0;
       for( TextEvent event : events )
-        if( event.sid() == event1.sid() && 
-            event.index() > start && event.index() < end )
+        if( event.getSid() == event1.getSid() && 
+            event.getIndex() > start && event.getIndex() < end )
           interlopers++;
 
       return interlopers;
@@ -1111,7 +1111,7 @@ public class TLinkFeaturizer {
 //    System.out.println("find event eventID=" + eventID);
     if( events != null )
       for( TextEvent event : events )
-        if( eventID.equals(event.id()) || event.containsEiid(eventID) )
+        if( eventID.equals(event.getId()) || event.containsEiid(eventID) )
           return event;
     return null;
   }
@@ -1125,7 +1125,7 @@ public class TLinkFeaturizer {
   public static Timex findTimex(String timeID, List<Timex> timexes) {
     if( timexes != null )
       for( Timex timex : timexes )
-        if( timeID.equals(timex.tid()) )
+        if( timeID.equals(timex.getTid()) )
           return timex;
 //    System.out.println("findTimex null: " + timeID);
     return null;
@@ -1146,7 +1146,7 @@ public class TLinkFeaturizer {
         out.write(strDatum + "\n");
 //        System.out.println(strDatum + "\n");
 
-        outDebug.write(datum._originalTLink.event1() + " " + datum._originalTLink.event2() + "\t");
+        outDebug.write(datum._originalTLink.getId1() + " " + datum._originalTLink.getId2() + "\t");
         outDebug.write(datum.getSourceDoc() + "\t");
         outDebug.write(strDatum + "\n");
       }

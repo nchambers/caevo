@@ -73,17 +73,17 @@ public class QuarterSieveReporting implements Sieve {
 					if (!validateEvent(event)) continue;
 					// check if timex/event pair satisfy positional criteria
 					// (ie that they occur within one word of one another)
-					int timexIndex = timex.offset();
-					int eventIndex = event.index();
+					int timexIndex = timex.getTokenOffset();
+					int eventIndex = event.getIndex();
 					if (timexIndex - 1 == eventIndex) {
-						TLink.TYPE label = TLink.TYPE.IS_INCLUDED;
-						proposed.add(new EventTimeLink(event.eiid() , timex.tid(), label));
+						TLink.Type label = TLink.Type.IS_INCLUDED;
+						proposed.add(new EventTimeLink(event.getEiid() , timex.getTid(), label));
 					}
-					else if (timexIndex - 2 == event.index()) {
+					else if (timexIndex - 2 == event.getIndex()) {
 						int interIndex = timexIndex - 1;
 						String interWord = getTokenText(interIndex, sent);
-						TLink.TYPE label = classifyInter(interWord);
-						proposed.add(new EventTimeLink(event.eiid() , timex.tid(), label));
+						TLink.Type label = classifyInter(interWord);
+						proposed.add(new EventTimeLink(event.getEiid() , timex.getTid(), label));
 					}
 				}
 			}
@@ -105,15 +105,15 @@ public class QuarterSieveReporting implements Sieve {
 	// returns the label appropriate for the word between the verb and quarter timex
 	// could be improved by checking to see if the quarter is to occur in the future,
 	// in which case BEFORE might be more appropriate
-	private TLink.TYPE classifyInter(String interText){
-		if (interText == "in") return TLink.TYPE.IS_INCLUDED;
+	private TLink.Type classifyInter(String interText){
+		if (interText == "in") return TLink.Type.IS_INCLUDED;
 		else {
-			return TLink.TYPE.AFTER;
+			return TLink.Type.AFTER;
 		}
 	}
 	
-	private Boolean validateEvent(TextEvent event){
-		if (event.getTheClass()=="REPORTING") return true;
+	private Boolean validateEvent(TextEvent event) {
+		if (event.getTheClass() == TextEvent.Class.REPORTING) return true;
 		else return false;
 	}
 	
@@ -129,8 +129,8 @@ public class QuarterSieveReporting implements Sieve {
 	 */
 	
 	private Boolean validateTimex(Timex timex){
-		String val = timex.value();
-		String text = timex.text();
+		String val = timex.getValue();
+		String text = timex.getText();
 		// check if value represent a quarter
 		Matcher matchVal = valQuarter.matcher(val);
 		Matcher matchText = valQuarter.matcher(text);

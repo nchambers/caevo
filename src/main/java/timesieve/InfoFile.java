@@ -243,11 +243,11 @@ public class InfoFile {
 
 
   private TLink tlinkFromElement(Element el) {
-    if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.EVENT_EVENT) )
+    if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.EVENT_EVENT_TYPE_VALUE) )
       return new EventEventLink(el);
-    else if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.EVENT_TIME) )
+    else if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.EVENT_TIME_TYPE_VALUE) )
       return new EventTimeLink(el);
-    else if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.TIME_TIME) )
+    else if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.TIME_TIME_TYPE_VALUE) )
       return new TimeTimeLink(el);
     System.err.println("ERROR: tlink element doesn't have a tlink type attribute");
     return null;
@@ -267,7 +267,7 @@ public class InfoFile {
       for( Object obj : children ) {
         if( noclosures ) { // don't add closed links
           TLink link = tlinkFromElement((Element)obj);
-          if( !link.isFromClosure() ) tlinks.add(link);
+          if( !link.getIsFromClosure() ) tlinks.add(link);
         }
         // add all links
         else tlinks.add(tlinkFromElement((Element)obj));
@@ -540,12 +540,12 @@ public class InfoFile {
             // Reset "present references" to the document stamp
             Timex orig1 = time1;
             Timex orig2 = time2;
-            if( time1.value().equals("PRESENT_REF") && docstamp != null ) time1 = docstamp;
-            if( time2.value().equals("PRESENT_REF") && docstamp != null ) time2 = docstamp;
+            if( time1.getValue().equals("PRESENT_REF") && docstamp != null ) time1 = docstamp;
+            if( time2.getValue().equals("PRESENT_REF") && docstamp != null ) time2 = docstamp;
 
             // Comparison
-            if( time1.before(time2) ) links.add(new TimeTimeLink(orig1.tid(), orig2.tid(), TLink.TYPE.BEFORE));
-            else if( time2.before(time1) ) links.add(new TimeTimeLink(orig2.tid(), orig1.tid(), TLink.TYPE.BEFORE));
+            if( time1.before(time2) ) links.add(new TimeTimeLink(orig1.getTid(), orig2.getTid(), TLink.Type.BEFORE));
+            else if( time2.before(time1) ) links.add(new TimeTimeLink(orig2.getTid(), orig1.getTid(), TLink.Type.BEFORE));
           }
         }
       }
@@ -702,21 +702,21 @@ public class InfoFile {
   	
   	List<TLink> tlinks = getTlinks(docname);
   	for( TLink link : tlinks ) {
-  		String str = "<TLINK lid=\"l" + counter + "\" relType=\"" + link.relation().toString() + "\" ";
+  		String str = "<TLINK lid=\"l" + counter + "\" relType=\"" + link.getRelation().toString() + "\" ";
   		
   		if( link instanceof EventEventLink ||
-  				(link instanceof EventTimeLink && link.event1().startsWith("e")) )
+  				(link instanceof EventTimeLink && link.getId1().startsWith("e")) )
   			str += "eventInstanceID=\"";
   		else
   			str += "timeID=\"";
-  		str += link.event1() + "\" ";
+  		str += link.getId1() + "\" ";
   		
   		if( link instanceof EventEventLink ||
-  				(link instanceof EventTimeLink && link.event2().startsWith("e")) )
+  				(link instanceof EventTimeLink && link.getId2().startsWith("e")) )
   			str += "relatedToEventInstance=\"";
   		else
   			str += "relatedToTime=\"";
-  		str += link.event2() + "\"";
+  		str += link.getId2() + "\"";
 
   		str += " />";
   		
@@ -739,11 +739,11 @@ public class InfoFile {
     for( Sentence sent : sentences ) {
       for( TextEvent event : sent.events() ) {
         for( String eiid : event.getAllEiids() ) {
-          strings.add("<MAKEINSTANCE eventID=\"" + event.id() + 
+          strings.add("<MAKEINSTANCE eventID=\"" + event.getId() + 
               "\" eiid=\"" + eiid + 
               "\" tense=\"" + event.getTense() + 
               "\" aspect=\"" + event.getAspect() + 
-              ( event.getPolarity() != null && event.getPolarity().length() > 0 ? ("\" polarity=\"" + event.getPolarity()) : "") + 
+              ( event.getPolarity() != null ? ("\" polarity=\"" + event.getPolarity()) : "") + 
           "\" />");
         }
       }
@@ -776,11 +776,11 @@ public class InfoFile {
   		// Grab the events.
   		Map<Integer,TextEvent> indexToEvents = new HashMap<Integer,TextEvent>();
   		for( TextEvent event : sent.events() )
-  			indexToEvents.put(event.index(), event);
+  			indexToEvents.put(event.getIndex(), event);
   		// Grab the timexes.
   		Map<Integer,Timex> indexToTimexes = new HashMap<Integer,Timex>();
   		for( Timex timex : sent.timexes() )
-  			indexToTimexes.put(timex.offset(), timex);  		
+  			indexToTimexes.put(timex.getTokenOffset(), timex);  		
   		Set<Integer> endTimexes = new HashSet<Integer>();
   		
       int ii = 1;
@@ -794,7 +794,7 @@ public class InfoFile {
   			// If this token is marked as an event.
   			if( indexToEvents.containsKey(ii) ) {
   				TextEvent event = indexToEvents.get(ii);
-  				String eventid = event.id();
+  				String eventid = event.getId();
   				if( numericIDOnly && eventid.startsWith("e") ) eventid = eventid.substring(1);
   				buf.append("<" + eventElemName);
   				buf.append(" " + idAttributeString + "=\"" + eventid + "\"");
@@ -813,7 +813,7 @@ public class InfoFile {
   				Timex timex = indexToTimexes.get(ii);
 //  				System.out.println("timex: " + timex);
   				buf.append(timex.toXMLString());
-  				endTimexes.add(ii+timex.length()-1);
+  				endTimexes.add(ii+timex.getTokenLength()-1);
   			}
 
   			// Print the token.
@@ -896,7 +896,7 @@ public class InfoFile {
         	System.err.println("ERROR: " + filename + " does not have a DCT to write.");
         else {
         	writer.write(dcts.get(0).toXMLString());
-        	writer.write(dcts.get(0).text());
+        	writer.write(dcts.get(0).getText());
         }
         writer.write("</TIMEX3></DCT>\n\n");
         
@@ -931,13 +931,13 @@ public class InfoFile {
       
       for( TLink link : getTlinks(docname) ) {
         if( link instanceof EventTimeLink && TimebankUtil.isEventDCTLink(link, dcts) ) {
-          String eventid = link.event1();
+          String eventid = link.getId1();
           if( !eventid.startsWith("e") )
-            eventid = link.event2();
+            eventid = link.getId2();
           
           for( TextEvent event : allevents )
-            if( event.id().equals(eventid) )
-              count.incrementCount(event.string());
+            if( event.getId().equals(eventid) )
+              count.incrementCount(event.getString());
         }
       }
     }
@@ -1017,8 +1017,8 @@ public class InfoFile {
         Vector<TLink> newlinks = info.computeTimeTimeLinks(filename);
         // Print each new link
         for( TLink link : newlinks ) {
-          System.out.println(filename + " " + link.event1() + " " + 
-              link.event2() + " " + link.relation());
+          System.out.println(filename + " " + link.getId1() + " " + 
+              link.getId2() + " " + link.getRelation());
         }
       }
     }

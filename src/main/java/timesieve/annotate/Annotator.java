@@ -77,18 +77,18 @@ public class Annotator {
 			for( int xx = 0; xx < sent.size(); xx++ ) {
 				// Intra-sentence pairs.
 				for( int yy = xx+1; yy < sent.size(); yy++ ) {
-					TLink link = new EventEventLink(sent.get(xx), sent.get(yy), TLink.TYPE.NONE);
+					TLink link = new EventEventLink(sent.get(xx), sent.get(yy), TLink.Type.NONE);
 					allLinksOrdered.add(link);
-					allLinksHash.add(link.event1() + " " + link.event2());
+					allLinksHash.add(link.getId1() + " " + link.getId2());
 				}
 
 				// Next sentence pairs.
 				if( sid < sentenceEvents.size()-1 ) {
 					List<String> nextSent = sentenceEvents.get(sid+1);
 					for( int yy = 0; yy < nextSent.size(); yy++ ) {
-						TLink link = new EventEventLink(sent.get(xx), nextSent.get(yy), TLink.TYPE.NONE);
+						TLink link = new EventEventLink(sent.get(xx), nextSent.get(yy), TLink.Type.NONE);
 						allLinksOrdered.add(link);
-	          allLinksHash.add(link.event1() + " " + link.event2());
+	          allLinksHash.add(link.getId1() + " " + link.getId2());
 					}
 				}
 				
@@ -123,10 +123,10 @@ public class Annotator {
 //      System.out.println("Added " + newLinks.size() + " transitive links.");
       for( TLink link : newLinks ) {
 //        System.out.println("\t" + link);
-        String keypair = link.event1() + " " + link.event2();
+        String keypair = link.getId1() + " " + link.getId2();
         if( allLinksHash.contains(keypair) ) {
           labeledRelations.add(link);
-          labeledLookup.put(keypair, relationToAbbrev(link.relation()));
+          labeledLookup.put(keypair, relationToAbbrev(link.getRelation()));
           count++;
           added.add(link);
         }
@@ -152,7 +152,7 @@ public class Annotator {
     System.out.println("Valid relations: b a s i ii v");
     
 		for( TLink link : allLinksOrdered ) {
-		  String keypair = link.event1() + " " + link.event2();
+		  String keypair = link.getId1() + " " + link.getId2();
 		  
 		  // If we haven't labeled this pair yet.
 		  if( !labeledLookup.containsKey(keypair) ) {
@@ -181,22 +181,22 @@ public class Annotator {
 		}
 	}
 
-	 private String relationToAbbrev(TLink.TYPE rel) {
-	    if( rel == TLink.TYPE.BEFORE ) return "b";
-	    else if( rel == TLink.TYPE.AFTER ) return "a";
-	    else if( rel == TLink.TYPE.SIMULTANEOUS) return "s";
-	    else if( rel == TLink.TYPE.INCLUDES ) return "i";
-	    else if( rel == TLink.TYPE.IS_INCLUDED ) return "ii";
+	 private String relationToAbbrev(TLink.Type rel) {
+	    if( rel == TLink.Type.BEFORE ) return "b";
+	    else if( rel == TLink.Type.AFTER ) return "a";
+	    else if( rel == TLink.Type.SIMULTANEOUS) return "s";
+	    else if( rel == TLink.Type.INCLUDES ) return "i";
+	    else if( rel == TLink.Type.IS_INCLUDED ) return "ii";
 	    else return "";
 	  }
 	 
-	private TLink.TYPE abbrevToRelation(String abbrev) {
-	  if( abbrev.equalsIgnoreCase("b") ) return TLink.TYPE.BEFORE;
-	  else if( abbrev.equalsIgnoreCase("a") ) return TLink.TYPE.AFTER;
-	  else if( abbrev.equalsIgnoreCase("s") ) return TLink.TYPE.SIMULTANEOUS;
-	  else if( abbrev.equalsIgnoreCase("i") ) return TLink.TYPE.INCLUDES;
-	  else if( abbrev.equalsIgnoreCase("ii") ) return TLink.TYPE.IS_INCLUDED;
-	  else if( abbrev.equalsIgnoreCase("v") ) return TLink.TYPE.VAGUE;
+	private TLink.Type abbrevToRelation(String abbrev) {
+	  if( abbrev.equalsIgnoreCase("b") ) return TLink.Type.BEFORE;
+	  else if( abbrev.equalsIgnoreCase("a") ) return TLink.Type.AFTER;
+	  else if( abbrev.equalsIgnoreCase("s") ) return TLink.Type.SIMULTANEOUS;
+	  else if( abbrev.equalsIgnoreCase("i") ) return TLink.Type.INCLUDES;
+	  else if( abbrev.equalsIgnoreCase("ii") ) return TLink.Type.IS_INCLUDED;
+	  else if( abbrev.equalsIgnoreCase("v") ) return TLink.Type.VAGUE;
 	  else return null;
 	}
 	
@@ -242,10 +242,10 @@ public class Annotator {
 	    PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(path)));
 	    
 	    for( TLink link : allLinksOrdered ) {
-	       String keypair = link.event1() + " " + link.event2();
+	       String keypair = link.getId1() + " " + link.getId2();
 	       String label = labeledLookup.get(keypair);
 	       // Write to file.
-	       writer.write(link.event1() + "\t" + link.event2());
+	       writer.write(link.getId1() + "\t" + link.getId2());
 	       writer.write("\t" + (label == null ? "" : label) + "\n");
 	    }
 	    writer.close();

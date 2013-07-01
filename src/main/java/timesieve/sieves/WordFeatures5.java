@@ -59,18 +59,18 @@ public class WordFeatures5 implements Sieve {
 					TextEvent e1 = events.get(xx);
 					TextEvent e2 = events.get(yy);
 					// Check tense of e2 against criteria
-					if (e2.getTense().equals("PRESENT") && e2.getTense().equals("PRESPART")) {
+					if (e2.getTense() == TextEvent.Tense.PRESENT && e2.getTense() == TextEvent.Tense.PRESPART) {
 						// get e1's context tokens - the 5 words preceding event1 is "before"
 						String sentString = sent.sentence();
 						String delims = "[ ]+";
 						String[] e1SentTokens = sentString.split(delims);
-						int e1EndIndex = e1.index();
+						int e1EndIndex = e1.getIndex();
 						int e1StartIndex = Math.max(1, e1EndIndex - 5);
 						String[] e1ContextTokens = java.util.Arrays.copyOfRange(e1SentTokens, e1StartIndex, e1EndIndex);
 						// check if any of e1's context tokens is "before" - if so, add a tlink
 						for (String token : e1ContextTokens) {
 							if (token == "before") {
-								proposed.add(new EventEventLink(e1.eiid() , e2.eiid(), TLink.TYPE.AFTER));
+								proposed.add(new EventEventLink(e1.getEiid() , e2.getEiid(), TLink.Type.AFTER));
 								break;
 							}
 						}

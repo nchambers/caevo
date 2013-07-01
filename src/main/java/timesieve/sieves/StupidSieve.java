@@ -56,7 +56,7 @@ public class StupidSieve implements Sieve {
 
 		for( int xx = 0; xx < events.size(); xx++ ) {
 			for( int yy = xx+1; yy < events.size(); yy++ ) {
-				proposed.add(new EventEventLink(events.get(xx).eiid(), events.get(yy).eiid(), TLink.TYPE.BEFORE));
+				proposed.add(new EventEventLink(events.get(xx).getEiid(), events.get(yy).getEiid(), TLink.Type.BEFORE));
 			}
 		}
 		
@@ -73,7 +73,7 @@ public class StupidSieve implements Sieve {
 
 		for( int xx = 0; xx < timexes.size(); xx++ ) {
 			for( int yy = xx+1; yy < timexes.size(); yy++ ) {
-				proposed.add(new TimeTimeLink(timexes.get(xx).tid(), timexes.get(yy).tid(), TLink.TYPE.BEFORE));
+				proposed.add(new TimeTimeLink(timexes.get(xx).getTid(), timexes.get(yy).getTid(), TLink.Type.BEFORE));
 			}
 		}
 		

@@ -52,7 +52,7 @@ public class Sentence {
         List children = evel.getChildren(Timex.TIMEX_ELEM,ns);
         for( Object obj : children ) {
           Timex newtimex = new Timex((Element)obj);
-          newtimex.setSID(Integer.parseInt(sid));
+          newtimex.setSid(Integer.parseInt(sid));
           timexes.add(newtimex);
         }
       }

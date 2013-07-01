@@ -45,11 +45,11 @@ public class ReportingCreationDay implements Sieve {
 		// get list of DCT timexes - normally 1, sometimes < > 1
 		List<Timex> dctTimexes = doc.getDocstamp();
 		Timex dctTimex;
-		if (dctTimexes.size() == 1) {
+		if (dctTimexes != null && dctTimexes.size() == 1) {
 			dctTimex = dctTimexes.get(0);
 		}
 		// if we don't know the DCT the sieve won't work
-		else if (dctTimexes.size() == 0) {
+		else if (dctTimexes == null || dctTimexes.size() == 0) {
 			return proposed;
 		}
 		// if there is more than one DCT, how do we choose?
@@ -75,8 +75,8 @@ public class ReportingCreationDay implements Sieve {
 					// only proceed if event is of type REPORTING
 					if (!validateEvent(event)) continue;
 					// label the reporting event as included in the dcd timex
-					TLink.TYPE label = TLink.TYPE.IS_INCLUDED;
-					proposed.add(new EventTimeLink(event.eiid() , timex.tid(), label));
+					TLink.Type label = TLink.Type.IS_INCLUDED;
+					proposed.add(new EventTimeLink(event.getEiid() , timex.getTid(), label));
 					}
 				}
 				sid++;
@@ -89,7 +89,7 @@ public class ReportingCreationDay implements Sieve {
 
 	
 	private String getDocCreationDate(Timex dctTimex) {
-		String value = dctTimex.value();
+		String value = dctTimex.getValue();
 		Matcher matcher = creationTimePattern.matcher(value);
 		if (matcher.matches()) {
 			String dcd = matcher.group(1);
@@ -99,13 +99,13 @@ public class ReportingCreationDay implements Sieve {
 	}
 	
 	private Boolean validateTimex(Timex timex, String dcd){
-		String value = timex.value();
+		String value = timex.getValue();
 		if (value.equals(dcd)) return true;
 		else return false;
 	}
 	
 	private Boolean validateEvent(TextEvent event){
-		if (event.getTheClass()=="REPORTING") return true;
+		if (event.getTheClass()== TextEvent.Class.REPORTING) return true;
 		else return false;
 	}
 	

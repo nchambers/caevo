@@ -248,7 +248,7 @@ public class TextEventClassifier {
           // Grab the word indices of each event.
           Map<Integer,TextEvent> index = new HashMap<Integer,TextEvent>();
           for( TextEvent event : events )
-            index.put(event.index(), event);
+            index.put(event.getIndex(), event);
 
           // Create the dataset!
           for( int xx = 1; xx <= tokens.length; xx++ ) {
@@ -261,15 +261,15 @@ public class TextEventClassifier {
               TextEvent ev = index.get(xx);
 //              System.out.println("event: " + index.get(xx) + "\tt=" + ev.getTense() + "\ta=" + ev.getAspect() + "\tc=" + ev.getTheClass());
               if( ev.getTense() != null ) {
-                datum = new RVFDatum<String,String>(features, ev.getTense());
+                datum = new RVFDatum<String,String>(features, ev.getTense().toString());
                 tenseDataset.add(datum);
               }
               if( ev.getAspect() != null ) {
-                datum = new RVFDatum<String,String>(features, ev.getAspect());
+                datum = new RVFDatum<String,String>(features, ev.getAspect().toString());
                 aspectDataset.add(datum);
               }
               if( ev.getTheClass() != null ) {
-                datum = new RVFDatum<String,String>(features, ev.getTheClass());
+                datum = new RVFDatum<String,String>(features, ev.getTheClass().toString());
                 classDataset.add(datum);
               }
             }
@@ -364,8 +364,8 @@ public class TextEventClassifier {
     Set<Integer> indices = new HashSet<Integer>();
     if( timexes != null )
       for( Timex timex : timexes ) {
-        for( int ii = 0; ii < timex.length(); ii++ )
-          indices.add(timex.offset()+ii);
+        for( int ii = 0; ii < timex.getTokenLength(); ii++ )
+          indices.add(timex.getTokenOffset()+ii);
       }
     return indices;
   }
@@ -441,9 +441,9 @@ public class TextEventClassifier {
           				RVFDatum<String,String> datum = wordToDatum(sent, tree, alldeps.get(sid), wordi);
           				//                System.out.println("datum: " + datum);
           				//                System.out.println("\taspect: " + aspectClassifier.classOf(datum));
-          				event.setTense(tenseClassifier.classOf(datum));
-          				event.setAspect(aspectClassifier.classOf(datum));
-          				event.setTheClass(classClassifier.classOf(datum));
+          				event.setTense(TextEvent.Tense.valueOf(tenseClassifier.classOf(datum)));
+          				event.setAspect(TextEvent.Aspect.valueOf(aspectClassifier.classOf(datum)));
+          				event.setTheClass(TextEvent.Class.valueOf(classClassifier.classOf(datum)));
 
           				newevents.add(event);
           				//                System.out.println("Created event: " + event);
@@ -478,7 +478,7 @@ public class TextEventClassifier {
       int sid = 0;
       for( SieveSentence sent : docs.getDocument(file).getSentences() ) {
         for( TextEvent event : sent.events() ) {
-          writer.write(sid + "\t" + (event.index()-1) + "\t" + event.string());
+          writer.write(sid + "\t" + (event.getIndex()-1) + "\t" + event.getString());
 //          writer.write("\t" + event.getTheClass() + "\t" + event.getTense() + "\t" + event.getAspect());
           writer.write("\t" + event.getTheClass() + "\t" + event.getTense());
           writer.write("\n");

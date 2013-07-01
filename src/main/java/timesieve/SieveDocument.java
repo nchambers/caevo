@@ -34,8 +34,13 @@ public class SieveDocument {
 	private List<Timex> dcts;
 	private List<TLink> tlinks;
 	
+	private HashMap<String, TextEvent> eiidToEvent;
+	private HashMap<String, Timex> tidToTimex;
+	
   public SieveDocument(String name) {
   	docname = name;
+  	eiidToEvent = new HashMap<String, TextEvent>();
+  	tidToTimex = new HashMap<String, Timex>();
   }
 
   /**
@@ -50,15 +55,21 @@ public class SieveDocument {
    * @param tokens These are the tokens in the sentence, listed one per line. Each line has three parts: (1) characters before, (2) original token, (3) characters after.
    */
   public void addSentence(String text, List<CoreLabel> tokens, String parse, String deps, List<TextEvent> events, List<Timex> timexes) {
-  	if( sentences == null ) sentences = new ArrayList<SieveSentence>();
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();
   	int sid = sentences.size();
   	SieveSentence sent = new SieveSentence(this, sid, text, parse, deps, tokens, events, timexes);
+  	
   	sentences.add(sent);
+  	addTimexesToTidMap(timexes);
+  	addEventsToEiidMap(events);
   }
   
   public void addSentence(SieveSentence sent) {
   	if( sentences == null ) sentences = new ArrayList<SieveSentence>();
   	sentences.add(sent);
+  	addTimexesToTidMap(sent.timexes());
+  	addEventsToEiidMap(sent.events());
   }
 
   /**
@@ -66,6 +77,7 @@ public class SieveDocument {
    */
   public void addEvents(int sid, List<TextEvent> events) {
   	sentences.get(sid).addEvents(events);
+  	addEventsToEiidMap(events);
   }
   
   /**
@@ -73,6 +85,21 @@ public class SieveDocument {
    */
   public void addTimexes(int sid, List<Timex> timexes) {
   	sentences.get(sid).addTimexes(timexes);
+  	addTimexesToTidMap(timexes);
+  }
+  
+  private void addEventsToEiidMap (List<TextEvent> events) {
+  	for (TextEvent event : events) {
+  		List<String> eiids = event.getAllEiids();
+  		for (String eiid : eiids)
+  			eiidToEvent.put(eiid, event);
+  	}
+  }
+  
+  private void addTimexesToTidMap (List<Timex> timexes) {
+  	for (Timex timex : timexes) {
+  			tidToTimex.put(timex.getTid(), timex);
+  	}
   }
   
   /**
@@ -80,19 +107,26 @@ public class SieveDocument {
    * @param tlinks Vector of TLink objects
    */
   public void addTlinks(List<TLink> newlinks) {
-  	if( tlinks == null ) tlinks = new ArrayList<TLink>();
+  	if( tlinks == null ) 
+  		tlinks = new ArrayList<TLink>();
   	tlinks.addAll(newlinks);
+  	for (TLink tlink : newlinks)
+  		tlink.setDocument(this);
   }
 
   public void addTlink(TLink newlink) {
-  	if( tlinks == null ) tlinks = new ArrayList<TLink>();
+  	if( tlinks == null ) 
+  		tlinks = new ArrayList<TLink>();
   	tlinks.add(newlink);
+  	newlink.setDocument(this);
   }
 
   /**
    * Deletes all the TLinks from the XML file
    */
   public void deleteTlinks() {
+  	for (TLink tlink : tlinks)
+  		tlink.setDocument(null);
   	tlinks.clear();
   }
 
@@ -103,7 +137,7 @@ public class SieveDocument {
     List<TLink> keep = new ArrayList<TLink>();
 
     for( TLink link : tlinks )
-    	if( !link.isFromClosure() ) 
+    	if( !link.getIsFromClosure() ) 
     		keep.add(link);
     
     return keep;
@@ -168,6 +202,13 @@ public class SieveDocument {
     return timexes;
   }
 
+  public Timex getTimexByTid(String tid) {
+  	if (tidToTimex.containsKey(tid)) 
+  		return tidToTimex.get(tid);
+  	else
+  		return null;
+  }
+  
   /**
    * @return A List of all Event objects in one document (file parameter)
    */
@@ -186,6 +227,13 @@ public class SieveDocument {
     for( SieveSentence sent : sentences )
     	events.addAll(sent.events());
     return events;
+  }
+  
+  public TextEvent getEventByEiid(String eiid) {
+  	if (eiidToEvent.containsKey(eiid)) 
+  		return eiidToEvent.get(eiid);
+  	else
+  		return null;
   }
 
   /**
@@ -256,11 +304,11 @@ public class SieveDocument {
   		// Grab the events.
   		Map<Integer,TextEvent> indexToEvents = new HashMap<Integer,TextEvent>();
   		for( TextEvent event : sent.events() )
-  			indexToEvents.put(event.index(), event);
+  			indexToEvents.put(event.getIndex(), event);
   		// Grab the timexes.
   		Map<Integer,Timex> indexToTimexes = new HashMap<Integer,Timex>();
   		for( Timex timex : sent.timexes() )
-  			indexToTimexes.put(timex.offset(), timex);  		
+  			indexToTimexes.put(timex.getTokenOffset(), timex);  		
   		Set<Integer> endTimexes = new HashSet<Integer>();
   		
       int ii = 1;
@@ -274,7 +322,7 @@ public class SieveDocument {
   			// If this token is marked as an event.
   			if( indexToEvents.containsKey(ii) ) {
   				TextEvent event = indexToEvents.get(ii);
-  				String eventid = event.id();
+  				String eventid = event.getId();
   				if( numericIDOnly && eventid.startsWith("e") ) eventid = eventid.substring(1);
   				buf.append("<" + eventElemName);
   				buf.append(" " + idAttributeString + "=\"" + eventid + "\"");
@@ -293,7 +341,7 @@ public class SieveDocument {
   				Timex timex = indexToTimexes.get(ii);
 //  				System.out.println("timex: " + timex);
   				buf.append(timex.toXMLString());
-  				endTimexes.add(ii+timex.length()-1);
+  				endTimexes.add(ii+timex.getTokenLength()-1);
   			}
 
   			// Print the token.
@@ -314,11 +362,11 @@ public class SieveDocument {
   }
   
   private static TLink tlinkFromElement(Element el) {
-    if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.EVENT_EVENT) )
+    if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.EVENT_EVENT_TYPE_VALUE) )
       return new EventEventLink(el);
-    else if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.EVENT_TIME) )
+    else if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.EVENT_TIME_TYPE_VALUE) )
       return new EventTimeLink(el);
-    else if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.TIME_TIME) )
+    else if( el.getAttributeValue(TLink.TLINK_TYPE_ATT).equals(TLink.TIME_TIME_TYPE_VALUE) )
       return new TimeTimeLink(el);
     System.err.println("ERROR: tlink element doesn't have a tlink type attribute");
     return null;
@@ -393,21 +441,21 @@ public class SieveDocument {
   	
   	List<TLink> tlinks = getTlinks();
   	for( TLink link : tlinks ) {
-  		String str = "<TLINK lid=\"l" + counter + "\" relType=\"" + link.relation().toString() + "\" ";
+  		String str = "<TLINK lid=\"l" + counter + "\" relType=\"" + link.getRelation().toString() + "\" ";
   		
   		if( link instanceof EventEventLink ||
-  				(link instanceof EventTimeLink && link.event1().startsWith("e")) )
+  				(link instanceof EventTimeLink && link.getId1().startsWith("e")) )
   			str += "eventInstanceID=\"";
   		else
   			str += "timeID=\"";
-  		str += link.event1() + "\" ";
+  		str += link.getId1() + "\" ";
   		
   		if( link instanceof EventEventLink ||
-  				(link instanceof EventTimeLink && link.event2().startsWith("e")) )
+  				(link instanceof EventTimeLink && link.getId2().startsWith("e")) )
   			str += "relatedToEventInstance=\"";
   		else
   			str += "relatedToTime=\"";
-  		str += link.event2() + "\"";
+  		str += link.getId2() + "\"";
 
   		str += " />";
   		
@@ -429,11 +477,11 @@ public class SieveDocument {
     for( SieveSentence sent : sentences ) {
       for( TextEvent event : sent.events() ) {
         for( String eiid : event.getAllEiids() ) {
-          strings.add("<MAKEINSTANCE eventID=\"" + event.id() + 
+          strings.add("<MAKEINSTANCE eventID=\"" + event.getId() + 
               "\" eiid=\"" + eiid + 
               "\" tense=\"" + event.getTense() + 
               "\" aspect=\"" + event.getAspect() + 
-              ( event.getPolarity() != null && event.getPolarity().length() > 0 ? ("\" polarity=\"" + event.getPolarity()) : "") + 
+              ( event.getPolarity() != null ? ("\" polarity=\"" + event.getPolarity()) : "") + 
           "\" />");
         }
       }
@@ -458,7 +506,7 @@ public class SieveDocument {
   			System.err.println("ERROR: " + docname + " does not have a DCT to write.");
   		else {
   			writer.write(dcts.get(0).toXMLString());
-  			writer.write(dcts.get(0).text());
+  			writer.write(dcts.get(0).getText());
   		}
   		writer.write("</TIMEX3></DCT>\n\n");
 
@@ -513,8 +561,8 @@ public class SieveDocument {
         Vector<TLink> newlinks = info.computeTimeTimeLinks(filename);
         // Print each new link
         for( TLink link : newlinks ) {
-          System.out.println(filename + " " + link.event1() + " " + 
-              link.event2() + " " + link.relation());
+          System.out.println(filename + " " + link.getId1() + " " + 
+              link.getId2() + " " + link.getRelation());
         }
       }
     }

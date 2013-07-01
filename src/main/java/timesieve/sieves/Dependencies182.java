@@ -64,9 +64,9 @@ public class Dependencies182 implements Sieve {
 		for( int xx = 0; xx < events.size(); xx++ ) {
 			for( int yy = xx+1; yy < events.size(); yy++ ) {
 				for (TypedDependency td : deps) {
-					if (events.get(xx).index() == td.gov().index() && events.get(yy).index() == td.dep().index() 
-						&& events.get(xx).getTheClass().equals("STATE") && events.get(yy).getTheClass().equals("STATE")) {
-						proposed.add(new EventEventLink(events.get(xx).eiid(), events.get(yy).eiid(), TLink.TYPE.SIMULTANEOUS));
+					if (events.get(xx).getIndex() == td.gov().index() && events.get(yy).getIndex() == td.dep().index() 
+						&& events.get(xx).getTheClass() == TextEvent.Class.STATE && events.get(yy).getTheClass() == TextEvent.Class.STATE) {
+						proposed.add(new EventEventLink(events.get(xx).getEiid(), events.get(yy).getEiid(), TLink.Type.SIMULTANEOUS));
 						}
 					}
 				}

@@ -654,7 +654,7 @@ public class Tempeval3Parser {
             TextEvent event = new TextEvent(el.getAttribute("eid"),sid,starti+1,el);
             fillInEventAttributes(event);
 //            eiidToID.put(event.eiid(), event.id()); // used later in TLink creation.
-            seenEventIDs.add(event.id());            
+            seenEventIDs.add(event.getId());            
             if( debug ) System.out.println("created event: " + event);
             localEvents.add(event);
           }
@@ -856,12 +856,12 @@ public class Tempeval3Parser {
 
     // Create my timex object.
     Timex dct = new Timex();
-    dct.setTID(((Element)timex3).getAttribute("tid"));
+    dct.setTid(((Element)timex3).getAttribute("tid"));
     dct.setText("");
     dct.setSpan(0, 1);
-    dct.setType(((Element)timex3).getAttribute("type"));
+    dct.setType(Timex.Type.valueOf(((Element)timex3).getAttribute("type")));
     dct.setValue(((Element)timex3).getAttribute("value"));
-    dct.setDocFunction(((Element)timex3).getAttribute("functionInDocument"));
+    dct.setDocumentFunction(Timex.DocumentFunction.valueOf(((Element)timex3).getAttribute("functionInDocument")));
     
     return dct;
   }
@@ -927,23 +927,23 @@ public class Tempeval3Parser {
     
     // Create the tlink object.
     if( event != null && event.length() > 0 && relatedEvent != null && relatedEvent.length() > 0 ) {
-    	TLink thelink = new EventEventLink(event, relatedEvent, TLink.TYPE.valueOf(relType));
+    	TLink thelink = new EventEventLink(event, relatedEvent, TLink.Type.valueOf(relType));
 //    	thelink.eiid1 = eiid;
 //    	thelink.eiid2 = relatedEiid;
     	return thelink;
     }
     if( event != null && event.length() > 0 && relatedTime != null && relatedTime.length() > 0 ) {
-    	TLink thelink = new EventTimeLink(event, relatedTime, TLink.TYPE.valueOf(relType));
+    	TLink thelink = new EventTimeLink(event, relatedTime, TLink.Type.valueOf(relType));
 //    	thelink.eiid1 = eiid;
     	return thelink;
     }
     if( time != null && time.length() > 0 && relatedEvent != null && relatedEvent.length() > 0 ) {
-    	TLink thelink = new EventTimeLink(time, relatedEvent, TLink.TYPE.valueOf(relType));
+    	TLink thelink = new EventTimeLink(time, relatedEvent, TLink.Type.valueOf(relType));
 //    	thelink.eiid2 = relatedEiid;
     	return thelink;
     }
     if( time != null && time.length() > 0 && relatedTime != null && relatedTime.length() > 0 )
-      return new TimeTimeLink(time, relatedTime, TLink.TYPE.valueOf(relType));
+      return new TimeTimeLink(time, relatedTime, TLink.Type.valueOf(relType));
 
     // Shouldn't reach here.
     System.err.println("ERROR: TLINK didn't have the expected attributes: " + link);
@@ -956,21 +956,21 @@ public class Tempeval3Parser {
    * given TextEvent with all of the attributes.
    */
   private void fillInEventAttributes(TextEvent event) {
-    Map<String,String> atts = idToAttributes.get(event.id());
+    Map<String,String> atts = idToAttributes.get(event.getId());
     if( atts != null ) {
-      event.setTense(atts.get("tense"));
-      event.setAspect(atts.get("aspect"));
-      event.setPolarity(atts.get("polarity"));
+      event.setTense(TextEvent.Tense.valueOf(atts.get("tense")));
+      event.setAspect(TextEvent.Aspect.valueOf(atts.get("aspect")));
+      event.setPolarity(TextEvent.Polarity.valueOf(atts.get("polarity")));
       event.setModality(atts.get("modality"));
       String eiid = atts.get("eiid");
       if( eiid != null && eiid.length() > 0 ) {
         // There might have been multiple MAKEINSTANCEs, so save all the EIIDs in the event.
-      	List<String> eiids = idToEiids.get(event.id());
+      	List<String> eiids = idToEiids.get(event.getId());
       	for( String ee : eiids ) event.addEiid(ee);
       }
       // No MAKEINSTANCE for this event, so make up an eiid 
       else {
-      	String id = event.id();
+      	String id = event.getId();
       	eiid = "ei" + id.substring(1);
       	while( eiidToID.containsKey(eiid) ) eiid = eiid + "2";
       	eiidToID.put(eiid, id);
@@ -980,12 +980,12 @@ public class Tempeval3Parser {
       System.out.println("ERROR: no event attributes from a MAKEINSTANCE for event: " + event);
 
       // This means the annotators messed up, and there is no MAKEINSTANCE in the file! Create dummy fillers.
-      event.setTense("NONE");
-      event.setAspect("NONE");
-      event.setPolarity("POS");
+      event.setTense(TextEvent.Tense.NONE);
+      event.setAspect(TextEvent.Aspect.NONE);
+      event.setPolarity(TextEvent.Polarity.POS);
       event.setModality("");
       // Create a unique eiid for the event based on its id.
-      String id = event.id();
+      String id = event.getId();
       String eiid = "ei" + id.substring(1);
       while( eiidToID.containsKey(eiid) ) eiid = eiid + "2";
       eiidToID.put(eiid, id);

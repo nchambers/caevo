@@ -60,25 +60,25 @@ public class AllVagueSieve implements Sieve {
 			TextEvent e1 = events.get(xx);
 			// Remaining events in this sentence.
 			for( int yy = xx+1; yy < events.size(); yy++ )
-				proposed.add(new EventEventLink(e1.eiid(), events.get(yy).eiid(), TLink.TYPE.VAGUE));
+				proposed.add(new EventEventLink(e1.getEiid(), events.get(yy).getEiid(), TLink.Type.VAGUE));
 
 			// All times in this sentence.
 			for( int yy = 0; yy < timexes.size(); yy++ ) {
-				if( e1.index() < timexes.get(yy).offset() )
-					proposed.add(new EventTimeLink(events.get(xx).eiid(), timexes.get(yy).tid(), TLink.TYPE.VAGUE));
+				if( e1.getIndex() < timexes.get(yy).getTokenOffset() )
+					proposed.add(new EventTimeLink(events.get(xx).getEiid(), timexes.get(yy).getTid(), TLink.Type.VAGUE));
 				else 
-					proposed.add(new EventTimeLink(timexes.get(yy).tid(), events.get(xx).eiid(), TLink.TYPE.VAGUE));
+					proposed.add(new EventTimeLink(timexes.get(yy).getTid(), events.get(xx).getEiid(), TLink.Type.VAGUE));
 			}
 
 			// Events in the next sentence.
 			if( nextSentEvents != null )
 				for( TextEvent next : nextSentEvents )
-					proposed.add(new EventEventLink(e1.eiid(), next.eiid(), TLink.TYPE.VAGUE));
+					proposed.add(new EventEventLink(e1.getEiid(), next.getEiid(), TLink.Type.VAGUE));
 
 			// Times in the next sentence.
 			if( nextSentTimexes != null )
 				for( Timex next : nextSentTimexes )
-					proposed.add(new EventTimeLink(e1.eiid(), next.tid(), TLink.TYPE.VAGUE));
+					proposed.add(new EventTimeLink(e1.getEiid(), next.getTid(), TLink.Type.VAGUE));
 		}
 		
 		// Start from this sentence's times.
@@ -86,17 +86,17 @@ public class AllVagueSieve implements Sieve {
 			Timex t1 = timexes.get(xx);
 			// Remaining times in this sentence.
 			for( int yy = xx+1; yy < timexes.size(); yy++ )
-				proposed.add(new TimeTimeLink(t1.tid(), timexes.get(yy).tid(), TLink.TYPE.VAGUE));
+				proposed.add(new TimeTimeLink(t1.getTid(), timexes.get(yy).getTid(), TLink.Type.VAGUE));
 			
 			// Times in the next sentence.
 			if( nextSentTimexes != null )
 				for( Timex next : nextSentTimexes )
-					proposed.add(new TimeTimeLink(t1.tid(), next.tid(), TLink.TYPE.VAGUE));
+					proposed.add(new TimeTimeLink(t1.getTid(), next.getTid(), TLink.Type.VAGUE));
 			
 			// Events in the next sentence.
 			if( nextSentEvents != null )
 				for( TextEvent next : nextSentEvents )
-					proposed.add(new EventTimeLink(t1.tid(), next.eiid(), TLink.TYPE.VAGUE));
+					proposed.add(new EventTimeLink(t1.getTid(), next.getEiid(), TLink.Type.VAGUE));
 		}
 		
 		return proposed;

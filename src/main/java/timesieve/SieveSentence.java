@@ -75,7 +75,7 @@ public class SieveSentence {
         List children = evel.getChildren(Timex.TIMEX_ELEM,ns);
         for( Object obj : children ) {
           Timex newtimex = new Timex((Element)obj);
-          newtimex.setSID(sid);
+          newtimex.setSid(sid);
           timexes.add(newtimex);
         }
       }
@@ -89,7 +89,7 @@ public class SieveSentence {
 
   public void addTimexes(List<Timex> newTimexes) {
   	for (Timex timex : newTimexes)
-  		timex.setSID(this.sid);
+  		timex.setSid(this.sid);
   	
   	timexes.addAll(newTimexes);
   }

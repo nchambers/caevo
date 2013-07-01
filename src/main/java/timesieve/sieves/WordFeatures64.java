@@ -65,7 +65,7 @@ public class WordFeatures64 implements Sieve {
 					TextEvent e2 = events.get(yy);
 					// Check event pair against rule criteria; add matches to proposed
 					if (e1.getTense() == e2.getTense() && e2.getAspect() == e2.getAspect()) {
-						proposed.add(new EventEventLink(e1.eiid() , e2.eiid(), TLink.TYPE.BEFORE));
+						proposed.add(new EventEventLink(e1.getEiid() , e2.getEiid(), TLink.Type.BEFORE));
 					}
 				}
 			}

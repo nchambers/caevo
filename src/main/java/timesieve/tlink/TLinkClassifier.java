@@ -344,12 +344,12 @@ public class TLinkClassifier {
    */
   private boolean isNormalLink(TLink link) {
     // No closed or empty links.
-    if( !link.closed && link.relation() != TLink.TYPE.NONE ) {
+    if( !link.closed && link.getRelation() != TLink.Type.NONE ) {
       // Only TimeBank or TempEval labeled links.
-      if( link.origin() == null || link.origin().equals("null") ||
-          link.origin().contains("tempeval")      ||
-          link.origin().equals("tempeval-main")   ||
-          link.origin().equals("tempeval-sub") )
+      if( link.getOrigin() == null || link.getOrigin().equals("null") ||
+          link.getOrigin().contains("tempeval")      ||
+          link.getOrigin().equals("tempeval-main")   ||
+          link.getOrigin().equals("tempeval-sub") )
         return true;
     }
     return false;
@@ -370,15 +370,15 @@ public class TLinkClassifier {
         System.out.println("File " + doc.getDocname());
         List<TLinkDatum> datums = new ArrayList<TLinkDatum>();
         List<Timex> dcts = doc.getDocstamp();
-        String dctid = dcts.get(0).tid(); // assume only the first DCT timex
+        String dctid = dcts.get(0).getTid(); // assume only the first DCT timex
         
         // Hash the known DCT tlinks.
         Set<String> links = new HashSet<String>();
         for( TLink link : doc.getTlinks() ) {
           if( TimebankUtil.isEventDCTLink(link, dcts) ) {
             if( isNormalLink(link) ) {
-              links.add(link.event1() + " " + link.event2());
-              links.add(link.event2() + " " + link.event1());
+              links.add(link.getId1() + " " + link.getId2());
+              links.add(link.getId2() + " " + link.getId1());
             } else System.out.println("Skipping event-dct not-normal: " + link);
           }
         }
@@ -392,10 +392,10 @@ public class TLinkClassifier {
 
           for( int ii = 0; ii < events.size(); ii++ ) {
             TextEvent event = events.get(ii);
-            if( links.contains(event.eiid() + " " + dctid) )
-              datums.add(featurizer.createEventDocumentTimeDatum(event, dcts.get(0), TLink.TYPE.OVERLAP, trees));
+            if( links.contains(event.getEiid() + " " + dctid) )
+              datums.add(featurizer.createEventDocumentTimeDatum(event, dcts.get(0), TLink.Type.OVERLAP, trees));
             else
-              datums.add(featurizer.createEventDocumentTimeDatum(event, dcts.get(0), TLink.TYPE.NONE, trees));
+              datums.add(featurizer.createEventDocumentTimeDatum(event, dcts.get(0), TLink.Type.NONE, trees));
           }
         }
 
@@ -427,9 +427,9 @@ public class TLinkClassifier {
         Set<String> links = new HashSet<String>();
         for( TLink link : doc.getTlinks() ) {
           if( isNormalLink(link) ) {          
-            links.add(link.event1() + " " + link.event2());
-            links.add(link.event2() + " " + link.event1());
-            //          System.out.println("Added: *" + link.event1() + " " + link.event2() + "*");
+            links.add(link.getId1() + " " + link.getId2());
+            links.add(link.getId2() + " " + link.getId1());
+            //          System.out.println("Added: *" + link.getId1() + " " + link.getId2() + "*");
           } else System.out.println("Skipping event-event same not-normal: " + link);
         }
         
@@ -446,10 +446,10 @@ public class TLinkClassifier {
             TextEvent event1 = events.get(ii);
             for( int jj = ii+1; jj < events.size(); jj++ ) {
               TextEvent event2 = events.get(jj);
-              if( links.contains(event1.eiid() + " " + event2.eiid()) )
-                datums.add(featurizer.createEventEventDatum(event1, event2, TLink.TYPE.OVERLAP, events, trees, deps));
+              if( links.contains(event1.getEiid() + " " + event2.getEiid()) )
+                datums.add(featurizer.createEventEventDatum(event1, event2, TLink.Type.OVERLAP, events, trees, deps));
               else
-                datums.add(featurizer.createEventEventDatum(event1, event2, TLink.TYPE.NONE, events, trees, deps));
+                datums.add(featurizer.createEventEventDatum(event1, event2, TLink.Type.NONE, events, trees, deps));
             }
           }
           sid++;
@@ -483,8 +483,8 @@ public class TLinkClassifier {
         for( TLink link : doc.getTlinks() ) {
           if( link instanceof EventTimeLink ) {
             if( isNormalLink(link) ) {
-              links.add(link.event1() + " " + link.event2());
-              links.add(link.event2() + " " + link.event1());
+              links.add(link.getId1() + " " + link.getId2());
+              links.add(link.getId2() + " " + link.getId1());
             } else System.out.println("Skipping event-time same not-normal: " + link);
           } 
         }
@@ -500,10 +500,10 @@ public class TLinkClassifier {
           
           for( TextEvent event : events ) {
             for( Timex timex : timexes ) {
-              if( links.contains(event.eiid() + " " + timex.tid()) )
-                datums.add(featurizer.createEventTimeDatum(event, timex, TLink.TYPE.OVERLAP, trees, deps));
+              if( links.contains(event.getEiid() + " " + timex.getTid()) )
+                datums.add(featurizer.createEventTimeDatum(event, timex, TLink.Type.OVERLAP, trees, deps));
               else
-                datums.add(featurizer.createEventTimeDatum(event, timex, TLink.TYPE.NONE, trees, deps));
+                datums.add(featurizer.createEventTimeDatum(event, timex, TLink.Type.NONE, trees, deps));
             }
           }
           sid++;
@@ -550,14 +550,14 @@ public class TLinkClassifier {
               label = etDCTExistsClassifier.classOf(rvf);
 
             // Only label "said" verbs.
-            if( (_onlyDCTSaid && event.string().equalsIgnoreCase("said")) ||
-                (!_onlyDCTSaid && TLink.TYPE.valueOf(label) == TLink.TYPE.OVERLAP) ) {
+            if( (_onlyDCTSaid && event.getString().equalsIgnoreCase("said")) ||
+                (!_onlyDCTSaid && TLink.Type.valueOf(label) == TLink.Type.OVERLAP) ) {
               
               // Get winning label and its probability.
 //              label = etDCTClassifier.classOf(rvf);
               Pair<String,Double> labelProb = getLabelProb(etDCTClassifier, rvf);
               label = labelProb.first();
-              TLink link = new EventTimeLink(event.eiid(), dcts.get(0).tid(), TLink.TYPE.valueOf(label));
+              TLink link = new EventTimeLink(event.getEiid(), dcts.get(0).getTid(), TLink.Type.valueOf(label));
               link.setRelationConfidence(labelProb.second());
               tlinks.add(link);
             }
@@ -600,9 +600,9 @@ public class TLinkClassifier {
               TLinkDatum datum = featurizer.createEventTimeDatum(event, timex, null, trees, alldeps.get(sid));
               RVFDatum rvf = datum.createRVFDatum();
               String label = eeSameSentExistsClassifier.classOf(rvf);
-              if( TLink.TYPE.valueOf(label) == TLink.TYPE.OVERLAP ) {
+              if( TLink.Type.valueOf(label) == TLink.Type.OVERLAP ) {
                 Pair<String,Double> labelProb = getLabelProb(etSameSentClassifier, rvf);
-                TLink link = new EventTimeLink(event.eiid(), timex.tid(), TLink.TYPE.valueOf(labelProb.first()));
+                TLink link = new EventTimeLink(event.getEiid(), timex.getTid(), TLink.Type.valueOf(labelProb.first()));
                 link.setRelationConfidence(labelProb.second());
                 tlinks.add(link);
               }
@@ -616,8 +616,8 @@ public class TLinkClassifier {
             
             // Find the closest event to the left of this timex.
             for( TextEvent event : events )
-              if( event.index() < timex.offset() && (timex.offset()-event.index() < bestdist) && (timex.offset() != event.index()) ) {
-                bestdist = timex.offset()-event.index();
+              if( event.getIndex() < timex.getTokenOffset() && (timex.getTokenOffset()-event.getIndex() < bestdist) && (timex.getTokenOffset() != event.getIndex()) ) {
+                bestdist = timex.getTokenOffset()-event.getIndex();
                 best = event;
               }
 
@@ -627,7 +627,7 @@ public class TLinkClassifier {
               //              System.out.println("e-t datum=" + datum);
               //            String label = etSameSentClassifier.classOf(datum.createRVFDatum());
               Pair<String,Double> labelProb = getLabelProb(etSameSentClassifier, datum.createRVFDatum());
-              TLink link = new EventTimeLink(best.eiid(), timex.tid(), TLink.TYPE.valueOf(labelProb.first()));
+              TLink link = new EventTimeLink(best.getEiid(), timex.getTid(), TLink.Type.valueOf(labelProb.first()));
               link.setRelationConfidence(labelProb.second());
               tlinks.add(link);
             }
@@ -636,8 +636,8 @@ public class TLinkClassifier {
             best = null;
             bestdist = Integer.MAX_VALUE;
             for( TextEvent event : events )
-              if( event.index() > timex.offset() && (event.index()-timex.offset() < bestdist) && (timex.offset() != event.index()) ) {
-                bestdist = timex.offset()-event.index();
+              if( event.getIndex() > timex.getTokenOffset() && (event.getIndex()-timex.getTokenOffset() < bestdist) && (timex.getTokenOffset() != event.getIndex()) ) {
+                bestdist = timex.getTokenOffset()-event.getIndex();
                 best = event;
               }
 
@@ -647,7 +647,7 @@ public class TLinkClassifier {
               //              System.out.println("e-t datum=" + datum);
               //            String label = etSameSentClassifier.classOf(datum.createRVFDatum());
               Pair<String,Double> labelProb = getLabelProb(etSameSentClassifier, datum.createRVFDatum());
-              TLink link = new EventTimeLink(best.eiid(), timex.tid(), TLink.TYPE.valueOf(labelProb.first()));
+              TLink link = new EventTimeLink(best.getEiid(), timex.getTid(), TLink.Type.valueOf(labelProb.first()));
               link.setRelationConfidence(labelProb.second());
               tlinks.add(link);
             }
@@ -690,11 +690,11 @@ public class TLinkClassifier {
             RVFDatum<String,String> rvf = datum.createRVFDatum();
 
             // Check if this event-event pair should receive *any* label at all.
-            String label = TLink.TYPE.OVERLAP.toString();
+            String label = TLink.Type.OVERLAP.toString();
             label = eeSameSentExistsClassifier.classOf(rvf);
 
             // Label it with a temporal relation.
-            if( TLink.TYPE.valueOf(label) == TLink.TYPE.OVERLAP ) {
+            if( TLink.Type.valueOf(label) == TLink.Type.OVERLAP ) {
 //              // Normal, 1 classifier for all event-event links.
 //              Classifier<String,String> targetClassifier = eeSameSentClassifier;
 //
@@ -711,14 +711,14 @@ public class TLinkClassifier {
 //              label = labelProb.first();
 //
 //              // Create the actual link with the classified label.
-//              TLink link = new EventEventLink(event1.eiid(), event2.eiid(), TLink.TYPE.valueOf(label));
+//              TLink link = new EventEventLink(event1.eiid(), event2.eiid(), TLink.Type.valueOf(label));
 //              link.setRelationConfidence(labelProb.second());
 //              tlinks.add(link);
               
               TLink link = createIntraSentenceEELink(event1, event2, events, trees, deps);
               tlinks.add(link);
             }
-            else System.out.println("Skipping event-event same sentence, not exists: " + event1.id() + " " + event2.id());
+            else System.out.println("Skipping event-event same sentence, not exists: " + event1.getId() + " " + event2.getId());
           }
         }
         
@@ -728,8 +728,8 @@ public class TLinkClassifier {
           int bestdist = Integer.MAX_VALUE;
           TextEvent best = null;
           for( TextEvent event2 : events )
-            if( event2.index() < event1.index() && (event1.index()-event2.index() < bestdist) ) {
-              bestdist = event1.index()-event2.index();
+            if( event2.getIndex() < event1.getIndex() && (event1.getIndex()-event2.getIndex() < bestdist) ) {
+              bestdist = event1.getIndex()-event2.getIndex();
               best = event2;
             }
          
@@ -764,7 +764,7 @@ public class TLinkClassifier {
     String label = labelProb.first();
 
     // Create the actual link with the classified label.
-    EventEventLink link = new EventEventLink(event1.eiid(), event2.eiid(), TLink.TYPE.valueOf(label));
+    EventEventLink link = new EventEventLink(event1.getEiid(), event2.getEiid(), TLink.Type.valueOf(label));
     link.setRelationConfidence(labelProb.second());
     return link;
   }
@@ -801,7 +801,7 @@ public class TLinkClassifier {
         int index = findMainEventIndex(trees.get(sid), trees.get(sid));
         if( index > -1 ) {
           for( TextEvent event : events ) {
-            if( event.index() == index )
+            if( event.getIndex() == index )
               mainevents[sid] = event;
           }
 
@@ -810,8 +810,8 @@ public class TLinkClassifier {
             TextEvent closest = null;
             int dist = Integer.MAX_VALUE;
             for( TextEvent event : events ) {
-              if( Math.abs(event.index()-index) < dist ) {
-                dist = Math.abs(event.index()-index);
+              if( Math.abs(event.getIndex()-index) < dist ) {
+                dist = Math.abs(event.getIndex()-index);
                 closest = event;
               }
             }
@@ -834,7 +834,7 @@ public class TLinkClassifier {
         System.out.println("e-e datum=" + datum);
 //        String label = eeDiffSentClassifier.classOf(datum.createRVFDatum());
         Pair<String,Double> labelProb = getLabelProb(eeDiffSentClassifier, datum.createRVFDatum());
-        TLink link = new EventEventLink(mainevents[xx].eiid(), mainevents[xx+1].eiid(), TLink.TYPE.valueOf(labelProb.first()));
+        TLink link = new EventEventLink(mainevents[xx].getEiid(), mainevents[xx+1].getEiid(), TLink.Type.valueOf(labelProb.first()));
         link.setRelationConfidence(labelProb.second());
         tlinks.add(link);
       }
@@ -922,8 +922,8 @@ public class TLinkClassifier {
       links = sortTLinks(links);
       List<TLink> keep = new ArrayList<TLink>();
       for( TLink link : links ) {
-        System.out.print("link: " + link + "\t" + link.relationConfidence());
-        if( link.relationConfidence() >= _tlinkProbabilityCutoff ) {
+        System.out.print("link: " + link + "\t" + link.getRelationConfidence());
+        if( link.getRelationConfidence() >= _tlinkProbabilityCutoff ) {
           keep.add(link);
           System.out.print("**");
         }
@@ -958,11 +958,11 @@ public class TLinkClassifier {
         Map<String,TextEvent> idToEvent = new HashMap<String,TextEvent>();
         Map<String,Timex> idToTimex     = new HashMap<String,Timex>();
         for( TextEvent event : events ) { 
-        	idToEvent.put(event.id(), event);
+        	idToEvent.put(event.getId(), event);
         	for( String eiid : event.getAllEiids() )
         	  idToEvent.put(eiid, event);
         }
-        for( Timex timex : timexes)     idToTimex.put(timex.tid(), timex);
+        for( Timex timex : timexes)     idToTimex.put(timex.getTid(), timex);
         
         for( TLink link : links ) {
           String newLabel = null;
@@ -972,18 +972,18 @@ public class TLinkClassifier {
           if( link instanceof EventTimeLink ) {
             // event-dct
             if( TimebankUtil.isEventDCTLink(link, doc.getDocstamp()) ) {
-              TextEvent e1 = (link.event1().startsWith("e") ? idToEvent.get(link.event1()) : idToEvent.get(link.event2()));
+              TextEvent e1 = (link.getId1().startsWith("e") ? idToEvent.get(link.getId1()) : idToEvent.get(link.getId2()));
               TLinkDatum datum = featurizer.createEventDocumentTimeDatum(e1, doc.getDocstamp().get(0), null, trees);
               newLabel = etDCTClassifier.classOf(datum.createRVFDatum());
               edct++;
             }
             // event-time
             else {
-              TextEvent e1 = (link.event1().startsWith("e") ? idToEvent.get(link.event1()) : idToEvent.get(link.event2()));
-              Timex timex  = (link.event1().startsWith("e") ? idToTimex.get(link.event2()) : idToTimex.get(link.event1()));
+              TextEvent e1 = (link.getId1().startsWith("e") ? idToEvent.get(link.getId1()) : idToEvent.get(link.getId2()));
+              Timex timex  = (link.getId1().startsWith("e") ? idToTimex.get(link.getId2()) : idToTimex.get(link.getId1()));
               System.out.println(e1 + " and " + timex);
-              if( e1.sid() == timex.sid() ) {
-                TLinkDatum datum = featurizer.createEventTimeDatum(e1, timex, null, trees, alldeps.get(e1.sid()));
+              if( e1.getSid() == timex.getSid() ) {
+                TLinkDatum datum = featurizer.createEventTimeDatum(e1, timex, null, trees, alldeps.get(e1.getSid()));
                 newLabel = etSameSentClassifier.classOf(datum.createRVFDatum());
                 etsame++;
               }
@@ -997,8 +997,8 @@ public class TLinkClassifier {
 
           // Event-Event links.
           else if( link instanceof EventEventLink ) {
-            TextEvent e1 = idToEvent.get(link.event1());
-            TextEvent e2 = idToEvent.get(link.event2());
+            TextEvent e1 = idToEvent.get(link.getId1());
+            TextEvent e2 = idToEvent.get(link.getId2());
             if( TimebankUtil.isBeforeInText(e2, e1) ) {
               TextEvent tt = e1;
               e1 = e2;
@@ -1006,12 +1006,12 @@ public class TLinkClassifier {
             }
             
             // Exact same event. Don't auto-label...hardcode simultaneous!
-            if( e1 == e2 || e1.id() == e2.id() )
-              newLabel = TLink.TYPE.SIMULTANEOUS.toString();
+            if( e1 == e2 || e1.getId() == e2.getId() )
+              newLabel = TLink.Type.SIMULTANEOUS.toString();
             
             // event-event same sentence
-            else if( e1.sid() == e2.sid() ) {
-              TLinkDatum datum = featurizer.createEventEventDatum(e1, e2, null, events, trees, alldeps.get(e1.sid()));
+            else if( e1.getSid() == e2.getSid() ) {
+              TLinkDatum datum = featurizer.createEventEventDatum(e1, e2, null, events, trees, alldeps.get(e1.getSid()));
               newLabel = eeSameSentClassifier.classOf(datum.createRVFDatum());     
               eesame++;
             }
@@ -1023,8 +1023,8 @@ public class TLinkClassifier {
               newLabel = eeDiffSentClassifier.classOf(datum.createRVFDatum());
               
               // DEBUG
-              if( e1.string().toLowerCase().equals("said") && e2.string().toLowerCase().equals("said") ) {
-                saids.incrementCount(link.relation().toString());
+              if( e1.getString().toLowerCase().equals("said") && e2.getString().toLowerCase().equals("said") ) {
+                saids.incrementCount(link.getRelation().toString());
                 mysaids.incrementCount(newLabel);
               }
             }
@@ -1032,22 +1032,22 @@ public class TLinkClassifier {
           
           else if( link instanceof TimeTimeLink ) {
             // Get the timexes and do a simple date compare.
-            Timex t1 = idToTimex.get(link.event1());
-            Timex t2 = idToTimex.get(link.event2());
+            Timex t1 = idToTimex.get(link.getId1());
+            Timex t2 = idToTimex.get(link.getId2());
             if( t1.before(t2) )
-              newLabel = TLink.TYPE.BEFORE.toString();
+              newLabel = TLink.Type.BEFORE.toString();
             else if( t2.before(t1) )
-              newLabel = TLink.TYPE.AFTER.toString();
+              newLabel = TLink.Type.AFTER.toString();
             else if( t1.includes(t2) )
-              newLabel = TLink.TYPE.INCLUDES.toString();
+              newLabel = TLink.Type.INCLUDES.toString();
             else if( t2.includes(t1) )
-              newLabel = TLink.TYPE.IS_INCLUDED.toString();
+              newLabel = TLink.Type.IS_INCLUDED.toString();
             else // Just guess this one.
-              newLabel = TLink.TYPE.SIMULTANEOUS.toString();
+              newLabel = TLink.Type.SIMULTANEOUS.toString();
           }
           
           // Set the new relation for this TLink!
-          link.setRelation(TLink.TYPE.valueOf(newLabel));
+          link.setRelation(TLink.Type.valueOf(newLabel));
         }
       }
       
