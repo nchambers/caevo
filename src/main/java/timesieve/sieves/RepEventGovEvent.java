@@ -93,12 +93,12 @@ public class RepEventGovEvent implements Sieve {
 				// and if so check event properties against criteria.
 				for (TypedDependency td : deps) {
 					// if e1 governs e2
-					if (e1.index() == td.gov().index() && e2.index() == td.dep().index() 
+					if (e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index() 
 							&& e1.getTheClass().equals("REPORTING")) {
 						classifyEventPair(e1, e2, proposed);
 					}
 					// if e2 governs e1
-					else if (e2.index() == td.gov().index() && e1.index() == td.dep().index()
+					else if (e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index()
 									 && e2.getTheClass().equals("REPORTING")) {
 						classifyEventPair(e2, e1, proposed);
 					}
@@ -115,16 +115,16 @@ public class RepEventGovEvent implements Sieve {
 	}
 	
 	private void classifyEventPair(TextEvent eGov, TextEvent eDep, List<TLink> proposed ) {
-		String eGovTense = eGov.getTense();
-		String eDepTense = eDep.getTense();
-		String eDepClass = eDep.getTheClass();
-		String eDepAspect = eDep.getAspect();
+		TextEvent.Tense eGovTense = eGov.getTense();
+		TextEvent.Tense eDepTense = eDep.getTense();
+		TextEvent.Class eDepClass = eDep.getTheClass();
+		TextEvent.Aspect eDepAspect = eDep.getAspect();
 		
 		// caseGovPast
-		if (caseGovPast && eGovTense.equals("PAST")) {
-			if (eDepTense.equals("PAST") && eDepClass.equals("OCCURRENCE")
-					&& !eDepAspect.equals("PROGRESSIVE")) {
-						proposed.add(new EventEventLink(eGov.eiid(), eDep.eiid(), TLink.TYPE.AFTER));	
+		if (caseGovPast && eGovTense == TextEvent.Tense.PAST) {
+			if (eDepTense == TextEvent.Tense.PAST && eDepClass == TextEvent.Class.OCCURRENCE
+					&& eDepAspect != TextEvent.Aspect.PROGRESSIVE) {
+						proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));	
 			}
 			else if (eDepTense.equals("FUTURE")) {
 				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
@@ -138,14 +138,14 @@ public class RepEventGovEvent implements Sieve {
 		else if (caseGovPres && eGovTense.equals("PRESENT")) {
 			if (eDepTense.equals("PAST") && eDepClass.equals("OCCURRENCE")) {
 				if (!eDepAspect.equals("PROGRESSIVE")) {
-						proposed.add(new EventEventLink(eGov.eiid(), eDep.eiid(), TLink.TYPE.AFTER));
+						proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
 				}
 			}
 			else if (eDepTense.equals("PRESENT")) {
-				proposed.add(new EventEventLink(eGov.eiid(), eDep.eiid(), TLink.TYPE.IS_INCLUDED));
+				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
 			}
 			else if (eDepTense.equals("FUTURE")) {
-					proposed.add(new EventEventLink(eGov.eiid(), eDep.eiid(), TLink.TYPE.BEFORE));
+					proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
 				}
 		}
 		
@@ -153,7 +153,7 @@ public class RepEventGovEvent implements Sieve {
 		else if (caseGovFuture && eGovTense.equals("FUTURE")) {
 			if (eDepTense.equals("PAST") && eDepClass.equals("OCCURRENCE")
 					&& !eDepAspect.equals("PROGRESSIVE")) {
-						proposed.add(new EventEventLink(eGov.eiid(), eDep.eiid(), TLink.TYPE.AFTER));	
+						proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));	
 			}
 		}
 		// Add anything here?

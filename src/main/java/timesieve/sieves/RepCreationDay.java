@@ -62,7 +62,7 @@ public class RepCreationDay implements Sieve {
 		// The size of the list is the number of sentences in the document.
 		// The inner list is the events in textual order.
 		List<List<TextEvent>> allEvents = doc.getEventsBySentence();
-		List<Timex> allTimexes = doc.getTimexes();
+		List<List<Timex>> allTimexes = doc.getTimexesBySentence();
 		
 		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
@@ -98,6 +98,7 @@ public class RepCreationDay implements Sieve {
 			if (debug == true) {
 				System.out.println("DEBUG: adding tlinks from " + doc.getDocname() + " sentence " + sent.sentence());
 			}
+			
 			for (Timex timex : allTimexes.get(sid)) {
 				// only proceed if timex equals the dcd
 				if (!validateTimex(timex, dcd)) continue;
@@ -107,7 +108,7 @@ public class RepCreationDay implements Sieve {
 					// label the reporting event as included in the dcd timex
 					TLink.Type label = TLink.Type.IS_INCLUDED;
 					proposed.add(new EventTimeLink(event.getEiid() , timex.getTid(), label));
-					}
+					
 				}
 			}
 		}
@@ -136,11 +137,11 @@ public class RepCreationDay implements Sieve {
 	}
 	
 	private Boolean validateEvent(TextEvent event){
-		if (event.getTheClass()=="REPORTING")
+		if (event.getTheClass()== TextEvent.Class.REPORTING)
 			if (!considerTA) return true;
-			else if (!event.getTense().equals("FUTURE") 
-							 && !(event.getTense().equals("PAST") 
-									 	&& event.getAspect().equals("PERFECTIVE"))) return true;
+			else if (event.getTense() != TextEvent.Tense.FUTURE
+							 && !(event.getTense() == TextEvent.Tense.PAST 
+									 	&& event.getAspect() == TextEvent.Aspect.PERFECTIVE)) return true;
 			else return false;
 		else return false;
 	}
