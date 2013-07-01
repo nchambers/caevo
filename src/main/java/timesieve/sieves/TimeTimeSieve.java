@@ -13,6 +13,8 @@ import timesieve.util.Pair;
 
 /**
  * Order normalized date and time expressions by their Timex values
+ * 	- Currently does not consider durations or sets
+ * 		- Durations require start and end times that we currently don't have
  * 
  * @author Bill McDowell
  */
@@ -36,20 +38,20 @@ public class TimeTimeSieve implements Sieve {
 		return proposed;
 	}
 
-	private TLink orderTimexes(Timex t1, Timex t2, Timex ct) {		
-		/*if (!t1.type().equals("DATE") && !t1.type().equals("TIME"))
+	private TLink orderTimexes(Timex t1, Timex t2, Timex ct) {				
+		if (t1.getType() != Timex.Type.DATE && t1.getType() != Timex.Type.TIME)
 			return null;
-		if (!t2.type().equals("DATE") && !t2.type().equals("TIME"))
+		if (t2.getType() != Timex.Type.DATE && t2.getType() != Timex.Type.TIME)
 			return null;
-		*/
+		
 		Pair<Calendar, Calendar> interval1 = null;
 		Pair<Calendar, Calendar> interval2 = null;
 		
 		try {
 			interval1 = t1.getRange(ct);
 			interval2 = t2.getRange(ct);
-		} catch (Exception e) { 
-			// System.out.println(t1.text() + "\t" + t2.text() + "\t" + t1.value() + "\t" + t2.value() + "\t" + e.getMessage());
+		} catch (Exception e) {
+			System.out.println("TimeTimeSieve Error: " + e.getMessage());
 			return null;
 		}
 		

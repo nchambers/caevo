@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import timesieve.sieves.Sieve;
 import timesieve.tlink.TLink;
+import timesieve.tlink.TimeTimeLink;
 import timesieve.util.Util;
 
 import edu.stanford.nlp.stats.ClassicCounter;
@@ -43,9 +44,9 @@ public class Main {
 	
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
-		"RepEventGovEvent",
-		"RepCreationDay",
-			"TimeTimeSieve"/*,
+		  "RepEventGovEvent",
+		  "RepCreationDay",
+			"TimeTimeSieve",
 		  "RepEventGovEvent",
 		  "DependencyAnalyze",
 		  "Dependencies182",
@@ -60,7 +61,7 @@ public class Main {
 			"ReichenbachDG13_4",
 			"WordFeatures64",
 			//"WordNet209",
-			"RepCreationDay"*/
+			"RepCreationDay"
 	};
 
 	/**
@@ -227,8 +228,12 @@ public class Main {
 					for( TLink pp : proposed ) {
 						if( Evaluate.isLinkCorrect(pp, goldLinks) )
 							numCorrect.incrementCount(sieveClasses[xx]);
-						else
+						else {
 							numIncorrect.incrementCount(sieveClasses[xx]);
+							if (debug) {
+								System.out.println("Incorrect Link: " + getLinkDebugInfo(pp, doc));
+							}
+						}
 					}					
 				}
 			}
@@ -248,6 +253,24 @@ public class Main {
 			for( int tt = 0; tt < numtabs; tt++ ) System.out.print("\t");
 			System.out.printf("p=%.2f\t%.0f of %.0f\n", precision.getCount(key), numCorrect.getCount(key), total);
 		}
+	}
+	
+	private String getLinkDebugInfo(TLink link, SieveDocument doc) {
+		StringBuilder builder = new StringBuilder();
+		
+		if (link instanceof TimeTimeLink) {
+			
+			
+			TimeTimeLink ttLink = (TimeTimeLink)link;
+			Timex t1 = doc.getTimexByTid(ttLink.getId1());
+			Timex t2 = doc.getTimexByTid(ttLink.getId2());
+			
+			builder.append("Time-Time " + ttLink.getRelation() + "\t");
+			builder.append(t1.getTid() + ": " + t1.getValue() + " (" + t1.getText() + ")\t");
+			builder.append(t2.getTid() + ": " + t2.getValue() + " (" + t2.getText() + ")");
+		} 
+		
+		return builder.toString();
 	}
 
 	/**
