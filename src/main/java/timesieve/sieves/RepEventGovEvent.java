@@ -1,168 +1,82 @@
 package timesieve.sieves;
 
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
-import edu.stanford.nlp.trees.TypedDependency;
+import java.util.Map;
 
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
 import timesieve.TextEvent;
-import timesieve.tlink.EventEventLink;
+import timesieve.TextEvent.Aspect;
+import timesieve.TextEvent.Tense;
 import timesieve.tlink.TLink;
-
-import timesieve.util.TimeSieveProperties;
-import timesieve.util.TreeOperator;
+import timesieve.tlink.TLink.Type;
+import edu.stanford.nlp.trees.TypedDependency;
 
 /**
- * This sieve deals with event pairs in a dependency relationship,
- * when one of the verbs is a reporting verb.
+ * This sieve deals with event pairs, where a REPORTING event governs another
+ * event.
  * 
- * 
- * 
- * @author cassidy
+ * @author bethard
  */
 public class RepEventGovEvent implements Sieve {
-	public boolean debug = false;
-	
-	// Property values 
-	private boolean caseGovPast = true;
-	private boolean caseGovPres = true;
-	private boolean caseGovFuture = true;
-	
+
 	/**
 	 * The main function. All sieves must have this.
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
-		// PROPERTIES CODE
-		try {
-			TimeSieveProperties.load();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		try {
-			caseGovPast = TimeSieveProperties.getBoolean("RepEventGovEvent.caseGovPast", true);
-			caseGovPres = TimeSieveProperties.getBoolean("RepEventGovEvent.caseGovPres", true);
-			caseGovFuture = TimeSieveProperties.getBoolean("RepEventGovEvent.caseGovFuture", true);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		//Sieve Code
-		
-		// Fill this with our new proposed TLinks.
 		List<TLink> proposed = new ArrayList<TLink>();
-		
-		// for each sentence, send its events and dependencies to applySieve, which
-		// finds pairs of the form dep(reporting_verb, event) and checks them against
-		// criteria in terms of additional properties of both events
-		for( SieveSentence sent : doc.getSentences() ) {
-			if (debug == true) {
-				System.out.println("DEBUG: adding tlinks from " + doc.getDocname() + " sentence " + sent.sentence());
+		for (SieveSentence sent : doc.getSentences()) {
+			List<TextEvent> events = sent.events();
+			List<TypedDependency> deps = sent.getDeps();
+
+			Map<Integer, TextEvent> indexToEvent = new HashMap<Integer, TextEvent>();
+			for (TextEvent event : events) {
+				indexToEvent.put(event.getIndex(), event);
 			}
-			proposed.addAll(applySieve(sent.events(), sent.getDeps()));
-		}
 
-		if (debug == true) {
-			System.out.println("TLINKS: " + proposed);
-		}
-		return proposed;
-	}
-
-	/**
-	 * For each event-event pair such that one event governs the other in a dep relation,
-	 * classify as follows: if the governor is a past tense reporting verb...
-	 * label the pair AFTER if the dependent is in the past tense, an occurrence, and not
-	 * the progressive aspect. If the dependent is in the future tense, label BEFORE
-	 * regardless of its class or aspect.
-	 */
-	private List<TLink> applySieve(List<TextEvent> events, List<TypedDependency> deps) {
-		List<TLink> proposed = new ArrayList<TLink>();
-		
-		for( int xx = 0; xx < events.size(); xx++ ) {
-			TextEvent e1 = events.get(xx);
-			for( int yy = xx+1; yy < events.size(); yy++ ) {
-				TextEvent e2 = events.get(yy);
-				// We have a pair of event e1 and e2.
-				// check a given TypedDependency involves both events,
-				// and if so check event properties against criteria.
-				for (TypedDependency td : deps) {
-					// if e1 governs e2
-					if (e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index() 
-							&& e1.getTheClass().equals(TextEvent.Class.REPORTING)) {
-						classifyEventPair(e1, e2, proposed);
-					}
-					// if e2 governs e1
-					else if (e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index()
-									 && e2.getTheClass().equals(TextEvent.Class.REPORTING)) {
-						classifyEventPair(e2, e1, proposed);
+			for (TypedDependency dep : deps) {
+				TextEvent govEvent = indexToEvent.get(dep.gov().index());
+				TextEvent depEvent = indexToEvent.get(dep.dep().index());
+				if (govEvent != null && depEvent != null) {
+					if (govEvent.getTheClass().equals(TextEvent.Class.REPORTING)) {
+						Tense govTense = govEvent.getTense();
+						Tense depTense = depEvent.getTense();
+						Aspect depAspect = depEvent.getAspect();
+						Type relation = null;
+						if (depEvent.getTheClass().equals(TextEvent.Class.REPORTING)) {
+							// annotation of relations between speech events is inconsistent;
+							// best case is (p=0.67 12 of 18), when labeling all SIMULTANEOUS
+							// relation = Type.SIMULTANEOUS;
+						} else if (govTense.equals(Tense.PAST)) {
+							if (depTense.equals(Tense.PAST)) {
+								// p=0.81 22 of 27 on TimeBank
+								relation = Type.AFTER;
+							} else if (depTense.equals(Tense.PRESENT)
+									&& depAspect.equals(Aspect.PERFECTIVE)) {
+								// p=0.83 5 of 6
+								relation = Type.AFTER;
+							} else if (depTense.equals(Tense.FUTURE)) {
+								// p=1.00 3 of 3
+								relation = Type.BEFORE;
+							}
+						}
+						// no rules so far for for PRESENT or FUTURE since:
+						// only 5 instances of govTense=PRESENT in TimeBank
+						// only 1 instance of govTense=FUTURE in TimeBank
+						if (relation != null) {
+							proposed.add(new TLink(govEvent.getEiid(), depEvent.getEiid(),
+									relation));
+						}
 					}
 				}
 			}
 		}
-
-		
-		if (debug == true) {
-			System.out.println("events: " + events);
-			System.out.println("created tlinks: " + proposed);
-		}
 		return proposed;
 	}
-	
-	private void classifyEventPair(TextEvent eGov, TextEvent eDep, List<TLink> proposed ) {
-		TextEvent.Tense eGovTense = eGov.getTense();
-		TextEvent.Tense eDepTense = eDep.getTense();
-		TextEvent.Class eDepClass = eDep.getTheClass();
-		TextEvent.Aspect eDepAspect = eDep.getAspect();
-		
-		// caseGovPast
-		if (caseGovPast && eGovTense == TextEvent.Tense.PAST) {
-			if (eDepTense == TextEvent.Tense.PAST && eDepClass == TextEvent.Class.OCCURRENCE
-					&& eDepAspect != TextEvent.Aspect.PROGRESSIVE) {
-						proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));	
-			}
-			else if (eDepTense == TextEvent.Tense.FUTURE) {
-				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
-		}
-			// Add anything here?
-			else
-			{}
-		}
-		
-		// caseGovPres
-		else if (caseGovPres && eGovTense == TextEvent.Tense.PRESENT) {
-			if (eDepTense == TextEvent.Tense.PAST && eDepClass == TextEvent.Class.OCCURRENCE) {
-				if (eDepAspect != TextEvent.Aspect.PROGRESSIVE) {
-						proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
-				}
-			}
-			else if (eDepTense == TextEvent.Tense.PRESENT) {
-				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
-			}
-			else if (eDepTense == TextEvent.Tense.FUTURE) {
-					proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
-				}
-		}
-		
-		// caseGovFuture
-		else if (caseGovFuture && eGovTense == TextEvent.Tense.FUTURE) {
-			if (eDepTense == TextEvent.Tense.PAST && eDepClass == TextEvent.Class.OCCURRENCE
-					&& eDepAspect != TextEvent.Aspect.PROGRESSIVE) {
-						proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));	
-			}
-		}
-		// Add anything here?
-		else
-		{}
 
-		
-	}
-	
 	/**
 	 * No training. Just rule-based.
 	 */
