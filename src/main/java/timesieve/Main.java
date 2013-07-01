@@ -44,9 +44,9 @@ public class Main {
 	
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
-		  "RepEventGovEvent",
-		  "RepCreationDay",
-			"TimeTimeSieve",
+		  /*"RepEventGovEvent",
+		  "RepCreationDay",*/
+			"TimeTimeSieve"/*,
 		  "RepEventGovEvent",
 		  "DependencyAnalyze",
 		  "Dependencies182",
@@ -61,7 +61,7 @@ public class Main {
 			"ReichenbachDG13_4",
 			"WordFeatures64",
 			//"WordNet209",
-			"RepCreationDay"
+			"RepCreationDay"*/
 	};
 
 	/**

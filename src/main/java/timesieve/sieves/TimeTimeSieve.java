@@ -44,6 +44,7 @@ public class TimeTimeSieve implements Sieve {
 		if (t2.getType() != Timex.Type.DATE && t2.getType() != Timex.Type.TIME)
 			return null;
 		
+		
 		Pair<Calendar, Calendar> interval1 = null;
 		Pair<Calendar, Calendar> interval2 = null;
 		

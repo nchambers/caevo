@@ -140,8 +140,8 @@ public class Timex {
   public String getText() { return this.text; }
   public DocumentFunction getDocumentFunction() { return this.documentFunction; }
   public boolean getTemporalFunction() { return this.temporalFunction; }
-  public String prep() { return this.preposition; }
-
+  public String getPrep() { return this.preposition; }
+  
   public Pair<Calendar, Calendar> getRange() {
   	return getRange(null);
   }
@@ -164,8 +164,8 @@ public class Timex {
   	
   	if (this.type == Timex.Type.DURATION 
   	|| this.type == Timex.Type.SET
-    || this.value.equalsIgnoreCase("PAST_REF")
-    || this.value.equalsIgnoreCase("FUTURE_REF"))
+    || isPastReference()
+    || isFutureReference())
   		return null;
   	else if (this.type == Timex.Type.DATE && this.value.length() < 4) {
   		StringBuilder startYear = new StringBuilder().append(this.value);
@@ -203,6 +203,22 @@ public class Timex {
 		return new edu.stanford.nlp.time.Timex(stanfordType.toString(), stanfordValue);
 	}
   
+  public boolean isReference() {
+  	return isPastReference() || isPresentReference() || isFutureReference();
+  }
+  
+  public boolean isPastReference() {
+  	return this.value.equalsIgnoreCase("PAST_REF");
+  }
+  
+  public boolean isPresentReference() {
+  	return this.value.equalsIgnoreCase("PRESENT_REF");
+  }
+  
+  public boolean isFutureReference() {
+  	return this.value.equalsIgnoreCase("FUTURE_REF");
+  }
+	
   /**
    * @desc Looks in the "value" attribute of the timexes, and compares the ordering
    *       if they are both DATEs or TIMEs.  The value is a date string "YYYY-MM-DD".
