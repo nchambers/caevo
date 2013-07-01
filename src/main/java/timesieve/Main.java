@@ -4,8 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
@@ -215,9 +217,9 @@ public class Main {
 			
 			// Gold links.
 			List<TLink> goldLinks = doc.getTlinks(true);
-			Set<Set<String>> goldUnorderedIdPairs = new HashSet<Set<String>>();
+			Map<Set<String>, TLink> goldUnorderedIdPairs = new HashMap<Set<String>, TLink>();
 			for (TLink tlink : goldLinks) {
-				goldUnorderedIdPairs.add(unorderedIdPair(tlink));
+				goldUnorderedIdPairs.put(unorderedIdPair(tlink), tlink);
 			}
 			
 			// Loop over sieves.
@@ -233,14 +235,18 @@ public class Main {
 					
 					// Check proposed links.
 					for( TLink pp : proposed ) {
+						Set<String> unorderedIdPair = unorderedIdPair(pp);
 						if( Evaluate.isLinkCorrect(pp, goldLinks) )
 							numCorrect.incrementCount(sieveClasses[xx]);
 						// only mark relations wrong if there's a conflicting human annotation
 						// (if there's no human annotation, we don't know if it's right or wrong)
-						else if (goldUnorderedIdPairs.contains(unorderedIdPair(pp))) {
+						else if (goldUnorderedIdPairs.containsKey(unorderedIdPair)) {
 							numIncorrect.incrementCount(sieveClasses[xx]);
 							if (debug) {
-								System.out.println("Incorrect Link: " + getLinkDebugInfo(pp, doc));
+								System.out.printf(
+										"Incorrect Link: expected %s, found %s\nDebug info: %s\n",
+										goldUnorderedIdPairs.get(unorderedIdPair), pp,
+										getLinkDebugInfo(pp, doc));
 							}
 						}
 					}					
