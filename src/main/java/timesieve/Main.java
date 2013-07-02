@@ -3,11 +3,15 @@ package timesieve;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
 
 import timesieve.sieves.Sieve;
-import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
 import timesieve.util.Util;
@@ -18,20 +22,20 @@ import edu.stanford.nlp.util.StringUtils;
 
 /**
  * Controls all Sieve processing including TLink annotating, closure, and the core programming.
- * 
- * REQUIREMENTS: 
+ *
+ * REQUIREMENTS:
  * - An environment variable JWNL that points to your jwnl_file_properties.xml file.
- * 
+ *
  * HOW TO RUN:
  * java Main -info <filepath> gauntlet
  * - Tests the sieves independently and calculates individual precision.
- * 
+ *
  * java Main -info <filepath> parsed
  * - Run event, time, and TLink extraction. The given infofile contains parses.
- * 
- * java Main -info <filepath>  
+ *
+ * java Main -info <filepath>
  * - Runs only the tlink sieve pipeline. Assumes the given infofile has events and times.
- * 
+ *
  * @author chambers
  */
 public class Main {
@@ -41,39 +45,36 @@ public class Main {
 	SieveDocuments info;
 	Closure closure;
 	String outpath = "sieve-output.xml";
+	boolean debug = true;
+	
+	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
-		  "ReichenbachDG13",
-		  "RepCreationDay",
-			"TimeTimeSieve",
-
-		  /*"RepEventGovEvent",
-		  "RepCreationDay",*/
-			
-=======
-	public final static String[] sieveClasses = {
-		  "RepEventGovEvent",
-		  /*"RepCreationDay",*/
-			"TimeTimeSieve"/*,
->>>>>>> e1e93175008fc2f9b1edd756fa2935e64bc5811d
-		  "RepEventGovEvent",
-		  "DependencyAnalyze",
-		  "Dependencies182",
-			"WordFeatures5",
-			"AllVagueSieve",
-			"QuarterSieveReporting",
-			"StupidSieve",
-			"AdjacentVerbTimex",
-			"WordFeatures64",
-			//"WordNet209",
-			"RepCreationDay"
+    "RepEventGovEvent",
+    /*"RepCreationDay",*/
+    "TimeTimeSieve"/*,
+                    "RepEventGovEvent",
+                    "DependencyAnalyze",
+                    "Dependencies182",
+                    "WordFeatures5",
+                    "AllVagueSieve",
+                    "QuarterSieveReporting",
+                    "StupidSieve",
+                    "AdjacentVerbTimex",
+                    "ReichenbachDG13_1",
+                    "ReichenbachDG13_2",
+                    "ReichenbachDG13_3",
+                    "ReichenbachDG13_4",
+                    "WordFeatures64",
+                    //"WordNet209",
+                    "RepCreationDay"*/
 	};
-
+    
 	/**
 	 * Constructor: give it the command-line arguments.
 	 */
 	public Main(String[] args) {
 		Properties props = StringUtils.argsToProperties(args);
-
+        
 		if( props.containsKey("info") ) {
 			System.out.println("Checking for infofile at " + props.getProperty("info"));
 			info = new SieveDocuments(props.getProperty("info"));
@@ -90,7 +91,7 @@ public class Main {
 	}
 	
 	private void init() {
-		// Initialize the transitive closure code. 
+		// Initialize the transitive closure code.
 		try {
 			closure = new Closure();
 		} catch( IOException ex ) {
@@ -141,16 +142,16 @@ public class Main {
 	 */
 	public void runSieves() {
 		runSieves(info);
-	}	
-
+	}
+    
 	public void runSieves(SieveDocuments info) {
 		List<TLink> currentTLinks = new ArrayList<TLink>();
-
+        
 		// Create all the sieves first.
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
 		// Do each file independently.
-
+        
 		for( SieveDocument doc : info.getDocuments() ) {
 			System.out.println("Processing " + doc.getDocname() + "...");
 			
@@ -159,16 +160,16 @@ public class Main {
 				Sieve sieve = sieves[xx];
 				if( sieve == null ) continue;
 				System.out.println("\tSieve " + sieve.getClass().toString());
-
+                
 				// Run this sieve
 				List<TLink> newLinks = sieve.annotate(doc, currentTLinks);
-
+                
 				if( debug ) System.out.println("\t\t" + newLinks.size() + " new links.");
-//				if( debug ) System.out.println("\t\t" + newLinks);
+                //				if( debug ) System.out.println("\t\t" + newLinks);
 				
 				// Verify the links as non-conflicting.
 				int numRemoved = removeConflicts(currentTLinks, newLinks);
-
+                
 				if( debug ) System.out.println("\t\tRemoved " + numRemoved + " proposed links.");
 				
 				// Add the good links to our current list.
@@ -189,11 +190,11 @@ public class Main {
 		System.out.println("Writing output: " + outpath);
 		info.writeToXML(new File(outpath));
 	}
-
+    
 	
 	/**
 	 * Test each sieve's precision independently.
-	 * Runs each sieve and evaluates its proposed links against the input -info file.	
+	 * Runs each sieve and evaluates its proposed links against the input -info file.
 	 * You must have loaded an -info file that has gold TLinks in it.
 	 */
 	public void runPrecisionGauntlet() {
@@ -201,7 +202,7 @@ public class Main {
 			System.out.println("ERROR: no info file given as input for the precision gauntlet.");
 			System.exit(1);
 		}
-
+        
 		// Create all the sieves first.
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
@@ -213,7 +214,6 @@ public class Main {
 		// Loop over documents.
 		for( SieveDocument doc : info.getDocuments() ) {
 			System.out.println("doc: " + doc.getDocname());
-			List<SieveSentence> sents = doc.getSentences();
 			
 			// Gold links.
 			List<TLink> goldLinks = doc.getTlinks(true);
@@ -230,24 +230,11 @@ public class Main {
 					// Run it.
 					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
 					
-//					System.out.println("Proposed: " + proposed);
-//					System.out.println("Gold links: " + goldLinks);
+                    //					System.out.println("Proposed: " + proposed);
+                    //					System.out.println("Gold links: " + goldLinks);
 					
 					// Check proposed links.
 					for( TLink pp : proposed ) {
-<<<<<<< HEAD
-						if( Evaluate.isLinkCorrect(pp, goldLinks) ){
-							numCorrect.incrementCount(sieveClasses[xx]);
-							if (sieveClasses[xx].toString().contains("Reichenbach")){
-							System.out.println(getRbDebugInfo(pp,doc,sents,"Correct"));}
-						}
-						else {
-							numIncorrect.incrementCount(sieveClasses[xx]);
-							if (debug) {
-								//System.out.println("Incorrect Link: " + getLinkDebugInfo(pp, doc));
-								if (sieveClasses[xx].toString().contains("Reichenbach")){
-								System.out.println(getRbDebugInfo(pp,doc,sents,"Incorrect"));}
-=======
 						Set<String> unorderedIdPair = unorderedIdPair(pp);
 						if( Evaluate.isLinkCorrect(pp, goldLinks) )
 							numCorrect.incrementCount(sieveClasses[xx]);
@@ -257,13 +244,12 @@ public class Main {
 							numIncorrect.incrementCount(sieveClasses[xx]);
 							if (debug) {
 								System.out.printf(
-										"Incorrect Link: expected %s, found %s\nDebug info: %s\n",
-										goldUnorderedIdPairs.get(unorderedIdPair), pp,
-										getLinkDebugInfo(pp, doc));
->>>>>>> e1e93175008fc2f9b1edd756fa2935e64bc5811d
+                                                  "Incorrect Link: expected %s, found %s\nDebug info: %s\n",
+                                                  goldUnorderedIdPairs.get(unorderedIdPair), pp,
+                                                  getLinkDebugInfo(pp, doc));
 							}
 						}
-					}					
+					}
 				}
 			}
 		}
@@ -311,40 +297,12 @@ public class Main {
 			String text2 = t2 != null ? t2.getText() : e2.getString();
 			// simple display of relation, anchor texts, and anchor ids.
 			builder.append(String.format("%s(%s[%s],%s[%s])", link.getRelation(),
-					text1, normId1, text2, normId2));
+                                         text1, normId1, text2, normId2));
 		}
-		
 		
 		return builder.toString();
 	}
-
-	private String getRbDebugInfo(TLink link, SieveDocument doc, List<SieveSentence> sents, String result) {
-		StringBuilder builder = new StringBuilder();
-		
-		if (link instanceof EventEventLink) {
-			
-			EventEventLink eeLink = (EventEventLink)link;
-			TextEvent e1 = doc.getEventByEiid(eeLink.getId1());
-			TextEvent e2 = doc.getEventByEiid(eeLink.getId2());
-			int sid1 = e1.getSid();
-			int sid2 = e2.getSid();
-			SieveSentence sent1 = sents.get(sid1);
-			SieveSentence sent2 = sents.get(sid2);
-			
-			builder.append(result + "\t" + eeLink.getRelation() + "\t");
-			builder.append(e1.getString() + "(" + e1.getIndex() + ")\t");
-			builder.append(e1.getTense()+ "-" + e1.getAspect() + "\t");
-			builder.append(e2.getString() + "(" + e2.getIndex() + ")\t");
-			builder.append(e2.getTense() + "-" + e2.getAspect()  + "\t");
-			builder.append(sent1.sentence() + "\t");
-			builder.append(sent2.sentence() + "\t");
-			
-			
-		}	
-			return builder.toString();
-		
-	}
-
+    
 	/**
 	 * DESTRUCTIVE FUNCTION (proposedLinks will be modified)
 	 * Removes any links from the proposed list that already have links between the same pairs in currentLinks.
@@ -374,7 +332,7 @@ public class Main {
 	 */
 	private int closureExpand(List<TLink> links) {
 		List<TLink> newlinks = closure.computeClosure(links);
-
+        
 		links.addAll(newlinks);
 		return newlinks.size();
 	}
@@ -398,7 +356,7 @@ public class Main {
 		if( eventClassifier == null ) {
 			eventClassifier = new TextEventClassifier(info);
 			eventClassifier.loadClassifiers();
-		}		
+		}
 		eventClassifier.extractEvents();
 	}
 	
@@ -417,16 +375,16 @@ public class Main {
 	
 	/**
 	 * Main. Multiple run modes:
-	 * 
+	 *
 	 * main -info <filepath> gauntlet
 	 * - Tests the sieves independently and calculates individual precision.
-	 * 
+	 *
 	 * main -info <filepath>
 	 * - Runs the sieve pipeline.
-	 * 
+	 *
 	 */
 	public static void main(String[] args) {
-//		Properties props = StringUtils.argsToProperties(args);
+        //		Properties props = StringUtils.argsToProperties(args);
 		Main main = new Main(args);
 		
 		// Test each sieve's precision independently.
