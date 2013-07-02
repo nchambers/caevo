@@ -236,11 +236,12 @@ public class Main {
 					// Check proposed links.
 					for( TLink pp : proposed ) {
 						Set<String> unorderedIdPair = unorderedIdPair(pp);
+						TLink goldLink = goldUnorderedIdPairs.get(unorderedIdPair);
 						if( Evaluate.isLinkCorrect(pp, goldLinks) )
 							numCorrect.incrementCount(sieveClasses[xx]);
 						// only mark relations wrong if there's a conflicting human annotation
 						// (if there's no human annotation, we don't know if it's right or wrong)
-						else if (goldUnorderedIdPairs.containsKey(unorderedIdPair)) {
+						else if (goldLink != null && !goldLink.getRelation().equals(TLink.Type.VAGUE)) {
 							numIncorrect.incrementCount(sieveClasses[xx]);
 							if (debug) {
 								System.out.printf(
