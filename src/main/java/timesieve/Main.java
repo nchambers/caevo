@@ -50,9 +50,8 @@ public class Main {
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
     "RepEventGovEvent",
-    /*"RepCreationDay",*/
+    "RepCreationDay",
     "TimeTimeSieve"/*,
-                    "RepEventGovEvent",
                     "DependencyAnalyze",
                     "Dependencies182",
                     "WordFeatures5",
@@ -60,13 +59,9 @@ public class Main {
                     "QuarterSieveReporting",
                     "StupidSieve",
                     "AdjacentVerbTimex",
-                    "ReichenbachDG13_1",
-                    "ReichenbachDG13_2",
-                    "ReichenbachDG13_3",
-                    "ReichenbachDG13_4",
+                    "ReichenbachDG13",
                     "WordFeatures64",
-                    //"WordNet209",
-                    "RepCreationDay"*/
+                    "WordNet209"*/
 	};
     
 	/**
