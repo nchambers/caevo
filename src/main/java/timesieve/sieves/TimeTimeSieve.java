@@ -44,6 +44,16 @@ public class TimeTimeSieve implements Sieve {
 		if (t2.getType() != Timex.Type.DATE && t2.getType() != Timex.Type.TIME)
 			return null;
 		
+		if (t1.isPresentReference() || t2.isPresentReference())
+			return new TimeTimeLink(t1.getTid(), t2.getTid(), TLink.Type.VAGUE);
+		
+		/*if (t1.isReference() && t2.isReference()) {
+			return new TimeTimeLink(t1.getTid(), t2.getTid(), TLink.Type.VAGUE);
+		} else if ((t1.isReference() && !t2.isReference())
+						|| (t2.isReference() && !t1.isReference())) {
+			return new TimeTimeLink(t1.getTid(), t2.getTid(), TLink.Type.VAGUE);
+		}*/
+		
 		
 		Pair<Calendar, Calendar> interval1 = null;
 		Pair<Calendar, Calendar> interval2 = null;

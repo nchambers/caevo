@@ -41,9 +41,6 @@ public class Main {
 	SieveDocuments info;
 	Closure closure;
 	String outpath = "sieve-output.xml";
-	boolean debug = true;
-	
-	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
 		  "ReichenbachDG13",
 		  "RepCreationDay",
@@ -52,6 +49,12 @@ public class Main {
 		  /*"RepEventGovEvent",
 		  "RepCreationDay",*/
 			
+=======
+	public final static String[] sieveClasses = {
+		  "RepEventGovEvent",
+		  /*"RepCreationDay",*/
+			"TimeTimeSieve"/*,
+>>>>>>> e1e93175008fc2f9b1edd756fa2935e64bc5811d
 		  "RepEventGovEvent",
 		  "DependencyAnalyze",
 		  "Dependencies182",
@@ -104,7 +107,7 @@ public class Main {
 	 */
 	private Sieve createSieveInstance(String sieveClass) {
 		try {
-			Class c = Class.forName("timesieve.sieves." + sieveClass);
+			Class<?> c = Class.forName("timesieve.sieves." + sieveClass);
 			Sieve sieve = (Sieve)c.newInstance();
 			return sieve;
 		} catch (InstantiationException e) {
@@ -214,6 +217,10 @@ public class Main {
 			
 			// Gold links.
 			List<TLink> goldLinks = doc.getTlinks(true);
+			Map<Set<String>, TLink> goldUnorderedIdPairs = new HashMap<Set<String>, TLink>();
+			for (TLink tlink : goldLinks) {
+				goldUnorderedIdPairs.put(unorderedIdPair(tlink), tlink);
+			}
 			
 			// Loop over sieves.
 			for( int xx = 0; xx < sieveClasses.length; xx++ ) {
@@ -228,6 +235,7 @@ public class Main {
 					
 					// Check proposed links.
 					for( TLink pp : proposed ) {
+<<<<<<< HEAD
 						if( Evaluate.isLinkCorrect(pp, goldLinks) ){
 							numCorrect.incrementCount(sieveClasses[xx]);
 							if (sieveClasses[xx].toString().contains("Reichenbach")){
@@ -239,6 +247,20 @@ public class Main {
 								//System.out.println("Incorrect Link: " + getLinkDebugInfo(pp, doc));
 								if (sieveClasses[xx].toString().contains("Reichenbach")){
 								System.out.println(getRbDebugInfo(pp,doc,sents,"Incorrect"));}
+=======
+						Set<String> unorderedIdPair = unorderedIdPair(pp);
+						if( Evaluate.isLinkCorrect(pp, goldLinks) )
+							numCorrect.incrementCount(sieveClasses[xx]);
+						// only mark relations wrong if there's a conflicting human annotation
+						// (if there's no human annotation, we don't know if it's right or wrong)
+						else if (goldUnorderedIdPairs.containsKey(unorderedIdPair)) {
+							numIncorrect.incrementCount(sieveClasses[xx]);
+							if (debug) {
+								System.out.printf(
+										"Incorrect Link: expected %s, found %s\nDebug info: %s\n",
+										goldUnorderedIdPairs.get(unorderedIdPair), pp,
+										getLinkDebugInfo(pp, doc));
+>>>>>>> e1e93175008fc2f9b1edd756fa2935e64bc5811d
 							}
 						}
 					}					
@@ -275,7 +297,22 @@ public class Main {
 			builder.append("Time-Time " + ttLink.getRelation() + "\t");
 			builder.append(t1.getTid() + ": " + t1.getValue() + " (" + t1.getText() + ")\t");
 			builder.append(t2.getTid() + ": " + t2.getValue() + " (" + t2.getText() + ")");
-		} 
+		} else {
+			// complex code because Timex and TextEvent don't share a common parent or common APIs
+			String id1 = link.getId1();
+			Timex t1 = doc.getTimexByTid(id1);
+			TextEvent e1 = doc.getEventByEiid(id1);
+			String normId1 = t1 != null ? t1.getTid() : e1.getId();
+			String text1 = t1 != null ? t1.getText() : e1.getString();
+			String id2 = link.getId2();
+			Timex t2 = doc.getTimexByTid(id2);
+			TextEvent e2 = doc.getEventByEiid(id2);
+			String normId2 = t2 != null ? t2.getTid() : e2.getId();
+			String text2 = t2 != null ? t2.getText() : e2.getString();
+			// simple display of relation, anchor texts, and anchor ids.
+			builder.append(String.format("%s(%s[%s],%s[%s])", link.getRelation(),
+					text1, normId1, text2, normId2));
+		}
 		
 		
 		return builder.toString();
@@ -372,6 +409,10 @@ public class Main {
 		if( timexClassifier == null )
 			timexClassifier = new TimexClassifier(info);
 		timexClassifier.markupTimex3();
+	}
+	
+	private static Set<String> unorderedIdPair(TLink tlink) {
+		return new HashSet<String>(Arrays.asList(tlink.getId1(), tlink.getId2()));
 	}
 	
 	/**

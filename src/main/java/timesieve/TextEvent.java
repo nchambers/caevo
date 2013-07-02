@@ -243,7 +243,7 @@ public class TextEvent {
     List<String> eiids = new ArrayList<String>();
     if( this.eiid != null ) eiids.add(this.eiid);
     if( this.eiids != null )
-      for( String eiid : eiids )
+      for( String eiid : this.eiids )
         eiids.add(eiid);
     return eiids;
   }
