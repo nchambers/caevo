@@ -205,6 +205,7 @@ public class Main {
 		List<TLink> currentTLinks = new ArrayList<TLink>();
 		Counter<String> numCorrect = new ClassicCounter<String>();
 		Counter<String> numIncorrect = new ClassicCounter<String>();
+		Counter<String> numIncorrectNonVague = new ClassicCounter<String>();
 		
 		// Loop over documents.
 		for( SieveDocument doc : info.getDocuments() ) {
@@ -236,7 +237,10 @@ public class Main {
 							numCorrect.incrementCount(sieveClasses[xx]);
 						// only mark relations wrong if there's a conflicting human annotation
 						// (if there's no human annotation, we don't know if it's right or wrong)
-						else if (goldLink != null && !goldLink.getRelation().equals(TLink.Type.VAGUE)) {
+						else if (goldLink != null) {
+							if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
+								numIncorrectNonVague.incrementCount(sieveClasses[xx]);
+							}
 							numIncorrect.incrementCount(sieveClasses[xx]);
 							if (debug) {
 								System.out.printf(
@@ -252,17 +256,25 @@ public class Main {
 		
 		// Calculate precision and output the sorted sieves.
 		Counter<String> precision = new ClassicCounter<String>();
-		for( int xx = 0; xx < sieveClasses.length; xx++ ) {
-			double total = (numCorrect.getCount(sieveClasses[xx]) + numIncorrect.getCount(sieveClasses[xx]));
-			precision.incrementCount(sieveClasses[xx], (total > 0 ? numCorrect.getCount(sieveClasses[xx]) / total : 0.0));
+		Counter<String> precisionNonVague = new ClassicCounter<String>();
+		for (String sieveClass : sieveClasses) {
+			double correct = numCorrect.getCount(sieveClass);
+			double incorrect = numIncorrect.getCount(sieveClass);
+			double incorrectNonVague = numIncorrectNonVague.getCount(sieveClass);
+			double total = correct + incorrect;
+			precision.incrementCount(sieveClass, total > 0 ? correct / total : 0.0);
+			double totalNonVague = correct + incorrectNonVague;
+			precisionNonVague.incrementCount(sieveClass, totalNonVague > 0 ? correct / totalNonVague : 0.0);
 		}
 		List<String> sortedKeys = Util.sortCounterKeys(precision);
 		for( String key : sortedKeys ) {
-			double total = (numCorrect.getCount(key) + numIncorrect.getCount(key));
+			double correct = numCorrect.getCount(key);
 			int numtabs = Math.max(1, 4 - key.length() / 8);
 			System.out.print(key);
 			for( int tt = 0; tt < numtabs; tt++ ) System.out.print("\t");
-			System.out.printf("p=%.2f\t%.0f of %.0f\n", precision.getCount(key), numCorrect.getCount(key), total);
+			System.out.printf("p=%.2f\t%.0f of %.0f\tNon-VAGUE:\tp=%.2f\t%.0f of %.0f\n",
+					precision.getCount(key), correct, correct + numIncorrect.getCount(key),
+					precisionNonVague.getCount(key), correct, correct + numIncorrectNonVague.getCount(key));
 		}
 	}
 	
