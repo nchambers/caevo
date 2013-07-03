@@ -1,0 +1,56 @@
+General observations based on AdjacentVerbTimex results when event and timex are separated by 1, 2, 3, and 4 intervening words for both directions Verb Timex and Timex Verb
+
+
+
+How to parameterize?
+    there are a few ways to do this. we could say "strictly adjacent"
+    vs otherwise. separate cases for when the number of intervening
+    words is, say, 1, 2, 3, and 4 could be hard-coded. then for > 4
+    some other code. These would most liekly differ based on ordering
+    (in the text) of verb and timex. 
+
+    we could also allow further parameterization for number of
+    intervening words, but it would seem arbitrary to turn off 3-words
+    and turn on 4-words (even though the results, as of now, are far
+    better for 4 than 3 - this is partially by coincidence. 
+
+    That said, if we do not allow structural considerations such as
+    dependency parse output, trees, or even SRL, it is difficult to
+    generalize across number of intervening words. That said, regular
+    expressions with groups followed by conditionals whose conditions
+    are given in terms of the properties of the matching groups might
+    work there.
+
+
+
+
+Observations
+
+Currently, if we allow up to a window of 4 words, the rule yields:
+
+0 AdjacentVerbTimex		p=0.95	20 of 21
+1 AdjacentVerbTimex		p=0.69	11 of 16
+2 AdjacentVerbTimex		p=0.47	8 of 17
+3 AdjacentVerbTimex		p=0.18	2 of 11
+4 AdjacentVerbTimex		p=0.73	8 of 11
+overall
+AdjacentVerbTimex		p=0.64	49 of 76
+    
+
+**After looking through results for one and two intervening words, i
+  think the best bet is to check for a preposition immediately
+  preceding the timex and use conditionals from there (while
+  potentially accessing features of the event and timex)
+
+**the three words intervening case supports this idea.
+The very low performance can be attributed to the fact that for certain
+situations
+in financial contexts, regarding the change in prices and other
+economic indicators corresponding to a period of time (e.g. "prices dropped
+$1 last month"), Bill and I diverged in our labeling (simultaneous vs
+is_included)
+
+**four words intervening context support this as well.
+
+
+ 

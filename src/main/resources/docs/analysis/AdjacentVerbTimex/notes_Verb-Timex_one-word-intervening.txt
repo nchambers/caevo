@@ -1,0 +1,157 @@
+Added sieve: AdjacentVerbTimex
+Added sieve: ReichenbachDG13
+Added sieve: WordFeatures64
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei381->t86=VAGUE, found ei381->t86=IS_INCLUDED
+Debug info: IS_INCLUDED(hit[e10],five year[t86])
+In Singapore , stocks hit a five year low .
+--
+#
+intervening a
+timex directly precedes low
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei424->t100=AFTER, found ei424->t100=IS_INCLUDED
+Debug info: IS_INCLUDED(change[e59],a couple of years[t100])
+I think that the mood is fairly gloomy , and I think it 's not going to change for a couple of years .
+--
+#
+there may be something here; not going to X for timex...
+change is not considered polarity = neg here according to timebank
+#
+Correct Link: [AdjacentVerbTimex] expected ei1642->t162=IS_INCLUDED, found ei1642->t162=IS_INCLUDED
+Debug info: IS_INCLUDED(said[e160],Tuesday[t162])
+The Iraqi ambassador to Venezuela said on Tuesday that Iraq would retaliate against Venezuela and other OPEC oil cartel members if they boost oil production to fill the gap created by blocked supplies from Iraq and Kuwait .
+--
+#
+on --> ii
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei1686->t1192=SIMULTANEOUS, found ei1686->t1192=IS_INCLUDED
+Debug info: IS_INCLUDED(traveling[e225],this crucial moment[t1192])
+In an interview from Jordan on ABC , he declined to discuss details , but said : `` I do n't think that his majesty would be traveling at this crucial moment if the Iraqi leadership did not have a rational approach to the future . ''
+--
+#
+at --> SIMULTANEOUS?
+prog at?
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei1635->t339=SIMULTANEOUS, found ei1635->t339=IS_INCLUDED
+Debug info: IS_INCLUDED(stay[e90],a fairly lengthy period[t339])
+`` We 're there to stay for a fairly lengthy period . ''
+--
+#
+stay for 
+==> see above; what is the difference between stay and change here? is it really because change is negated (in some sense)?
+#
+Correct Link: [AdjacentVerbTimex] expected ei2001->t111=IS_INCLUDED, found ei2001->t111=IS_INCLUDED
+Debug info: IS_INCLUDED(voted[e2],Friday[t111])
+CANBERRA , Australia -LRB- AP -RRB- _ Turning its back on 210 years of loyalty to the British royal family , a constitutional convention voted overwhelmingly Friday to make Australia a republic under its own president .
+--
+#
+adverb-ly
+#
+Correct Link: [AdjacentVerbTimex] expected ei2478->t137=IS_INCLUDED, found ei2478->t137=IS_INCLUDED
+Debug info: IS_INCLUDED(died[e31],weeks or months[t137])
+The Foreign Office said it had informed the family of Howes , 37 years old when he was kidnapped , that he probably died within weeks or months of his capture on March 26 , 1996 .
+--
+#
+occurrence within
+#
+Correct Link: [AdjacentVerbTimex] expected ei2493->t2449=IS_INCLUDED, found ei2493->t2449=IS_INCLUDED
+Debug info: IS_INCLUDED(said[e52],Thursday[t2449])
+Thai military officials who monitor Cambodian affairs said privately Thursday that Britain , through its embassies in Thailand and Cambodia , has been pushing hard to resolve the Howes case as the second anniversary of his abduction nears .
+--
+#
+adv; although default case is ii so probably won't need to encode this
+#
+Correct Link: [AdjacentVerbTimex] expected ei2514->t2452=IS_INCLUDED, found ei2514->t2452=IS_INCLUDED
+Debug info: IS_INCLUDED(said[e85],now[t2452])
+Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+--
+#
+default
+#
+Correct Link: [AdjacentVerbTimex] expected ei2516->t140=IS_INCLUDED, found ei2516->t140=IS_INCLUDED
+Debug info: IS_INCLUDED(killed[e87],a week[t140])
+Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+--
+#
+again within is ii
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei2109->t24=AFTER, found ei2109->t24=IS_INCLUDED
+Debug info: IS_INCLUDED(overruled[e16],1971[t24])
+Both U.S. and British officials filed objections to the court 's jurisdiction in 1995 , claiming Security Council resolutions imposed on Lybia to force the suspects ' extradition overruled a 1971 Convention which gives Libya the right to try the men .
+--
+#
+intervening a
+the important thing is that 1971 not a temporal argument of overruled.
+we could get this from SRL.
+
+consider "he will start a six year contract with ..."
+
+what we really want to do is find the event time of overruled and then relate that to 1975 (obviously, this is the promise of transitivity)
+if a intervenes and the timex is a date, then draw an inference based on tense/aspect reference time, dct, timex value...
+#
+Correct Link: [AdjacentVerbTimex] expected ei163->t24=IS_INCLUDED, found ei163->t24=IS_INCLUDED
+Debug info: IS_INCLUDED(saw[e14],the winter of nineteen ninety-four[t24])
+Ah next up is that thirteen dollar a barrel level we saw in the winter of nineteen ninety-four .
+--
+#
+in --> is_inclulded this time
+event is in the past
+
+i think if the event is in the future, there's more of a chance that e1 AFTER t2
+#
+Correct Link: [AdjacentVerbTimex] expected ei2185->t193=IS_INCLUDED, found ei2185->t193=IS_INCLUDED
+Debug info: IS_INCLUDED(reported[e4],Friday[t193])
+WASHINGTON _ The economy created jobs at a surprisingly robust pace in January , the government reported on Friday , evidence that America 's economic stamina has withstood any disruptions caused so far by the financial tumult in Asia .
+--
+#
+on --> ii
+#
+Correct Link: [AdjacentVerbTimex] expected ei2209->t201=IS_INCLUDED, found ei2209->t201=IS_INCLUDED
+Debug info: IS_INCLUDED(slow[e37],coming months[t201])
+And because the Federal Reserve has made clear that it expects the economy to slow in coming months as ripple effects from Asia reach the United States , investors disregarded the large jobs gains , betting that neither a rise in interest rates nor resurgent inflation is looming .
+--
+#
+in --> ii
+even if it were "will slow in the comming months", it's the same type of reading. clearly such a reading is labeled ii at least sometimes.
+Are there any instances of "e1 in t2" where e1 AFTER t2?
+#
+Correct Link: [AdjacentVerbTimex] expected ei2244->t213=IS_INCLUDED, found ei2244->t213=IS_INCLUDED
+Debug info: IS_INCLUDED(fallen[e98],the last few months[t213])
+Long-term interest rates , an important indicator of economic stability , have fallen in the last few months .
+--
+#
+in --> ii
+#
+Correct Link: [AdjacentVerbTimex] expected ei553->t40=IS_INCLUDED, found ei553->t40=IS_INCLUDED
+Debug info: IS_INCLUDED(stated[e27],this morning[t40])
+I was pleased that Ms. Currie 's lawyers stated unambiguously this morning _ unambiguously _ that she 's not aware of any unethical conduct .
+#
+adv --> ii
+#
+--
+AdjacentVerbTimex		p=0.69	11 of 16
+RepEventGovEvent		p=0.66	31 of 47
+ReichenbachDG13			p=0.60	134 of 223
+
+
+
+intervening adverb!
+privately, unambiguously
+
+intervening personal pronoun
+DEBUG: adding tlinks from APW19980219.0476.tml sentence Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+DEBUGPOS: said/VBD now/PRESENT_REF
+
+
+verb "a" timex
+
+likelty that timex modifies some other thing.
+
+
+sieve about timex modifying things?
+
+
+verb "in" timex - no brainer? what about "die in three weeks" -> this sort of means after three weeks.
+
+verb "on" timex is probably the most straightforward, but also default is ii so we don't even need to consider it (right?)

@@ -49,10 +49,13 @@ import timesieve.util.TreeOperator;
  *SameOrAdjSent/AnyTense			p=0.56	137 of 243
  *
  *--> "Simplify Aspect" = false
- *ReichenbachDG13			p=0.65	17 of 26
- *ReichenbachDG13			p=0.58	47 of 81
- *ReichenbachDG13			p=0.57	47 of 82
- *ReichenbachDG13			p=0.52	139 of 265
+ *SameSentence/SameTense			p=0.65	17 of 26
+ *SameOrAdjSent/SameTense			p=0.58	47 of 81
+ *SameSentence/AnyTense			p=0.57	47 of 82
+ *SameOrAdjSent/AnyTense			p=0.52	139 of 265
+ *
+ *--> "Simplify Present" = false; "Simplify Past" = false
+ *SameOrAdjSent/AnyTense p=0.60	134 of 223
  *
  *
  *DETAILS:

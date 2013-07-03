@@ -1,0 +1,58 @@
+Added sieve: AdjacentVerbTimex
+Added sieve: ReichenbachDG13
+Added sieve: WordFeatures64
+--
+Correct Link: [AdjacentVerbTimex] expected ei1723->t269=IS_INCLUDED, found ei1723->t269=IS_INCLUDED
+Debug info: IS_INCLUDED(told[e268],Tuesday[t269])
+Bush told a news conference on Tuesday that the naval barricade now in force might be extended to Jordan 's Aqaba `` if it is a hole through which commerce flows '' in and out of Iraq .
+--
+Correct Link: [AdjacentVerbTimex] expected ei1734->t1460=IS_INCLUDED, found ei1734->t1460=IS_INCLUDED
+Debug info: IS_INCLUDED(committed[e285],weeks[t1460])
+At least 50,000 U.S. troops are expected to be committed to Desert Shield within weeks , including Marines , Army air assault forces , paratroopers and infantry .
+--
+Correct Link: [AdjacentVerbTimex] expected ei1523->t288=IS_INCLUDED, found ei1523->t288=IS_INCLUDED
+Debug info: IS_INCLUDED(took[e1],Thursday[t288])
+The Persian Gulf showdown between Iraq and the United States took a more personal turn Thursday when Iraq 's Saddam Hussein called President Bush a liar and said the outbreak of holy war could bring thousands of Americans home in coffins .
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei2023->t114=VAGUE, found ei2023->t114=IS_INCLUDED
+Debug info: IS_INCLUDED(voted[e28],Friday[t114])
+Treasurer Peter Costello , Environment Minister Robert Hill and Attorney General Daryl Williams all voted to support the republic Friday .
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei2052->t117=INCLUDES, found ei2052->t117=IS_INCLUDED
+Debug info: IS_INCLUDED(rising[e65],several years ago[t117])
+Polls have shown public support for a republic increasing , rising from about 35 percent several years ago to about 51 percent this year , as pro-monarchist sentiment diminishes .
+--
+#
+note quite sure how to handle this one
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei354->t189=VAGUE, found ei354->t189=IS_INCLUDED
+Debug info: IS_INCLUDED(leave[e12],Tuesday nights[t189])
+In a joint statement with Tourism Minister Andrew Thomson , it said two new flights would leave Bombay on Monday and Tuesday nights from March 30 , with the third departing each Thursday from August 6 .
+--
+#
+we didn't have a systematic way to consider cardinality.
+we might even try to say vague when cardinality is abnormal.
+#
+Correct Link: [AdjacentVerbTimex] expected ei2460->t130=IS_INCLUDED, found ei2460->t130=IS_INCLUDED
+Debug info: IS_INCLUDED(killed[e7],almost two years ago[t130])
+O'SMACH , Cambodia -LRB- AP -RRB- _ The top commander of a Cambodian resistance force said Thursday he has sent a team to recover the remains of a British mine removal expert kidnapped and presumed killed by Khmer Rouge guerrillas almost two years ago .
+--
+Correct Link: [AdjacentVerbTimex] expected ei2525->t143=IS_INCLUDED, found ei2525->t143=IS_INCLUDED
+Debug info: IS_INCLUDED(began[e95],mid-1996[t143])
+But the group began to fall apart in mid-1996 after the defection of one of its top leaders , Ieng Sary .
+--
+Correct Link: [AdjacentVerbTimex] expected ei2004->t34=IS_INCLUDED, found ei2004->t34=IS_INCLUDED
+Debug info: IS_INCLUDED(used[e6],nineteen seventy-nine[t34])
+The city could have used some special protection in nineteen seventy-nine when the Soviet Union invaded Afghanistan .
+--
+Correct Link: [AdjacentVerbTimex] expected ei216->t59=IS_INCLUDED, found ei216->t59=IS_INCLUDED
+Debug info: IS_INCLUDED(put[e17],today[t59])
+In Revolution Square , they put up a giant cross today .
+--
+Correct Link: [AdjacentVerbTimex] expected ei163->t18=IS_INCLUDED, found ei163->t18=IS_INCLUDED
+Debug info: IS_INCLUDED(flying[e7],today[t18])
+Helicopters are flying over northern New York today trying to locate people stranded without food , heat or medicine .
+--
+AdjacentVerbTimex		p=0.73	8 of 11
+TimeTimeSieve			p=0.70	69 of 99
+RepEventGovEvent		p=0.66	31 of 47

@@ -1,0 +1,139 @@
+Added sieve: AdjacentVerbTimex
+Added sieve: ReichenbachDG13
+Added sieve: WordFeatures64
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei274->t36=BEFORE, found ei274->t36=IS_INCLUDED
+Debug info: IS_INCLUDED(held[e20],now[t36])
+In space , some say female pilots were held up until now by the lack of piloting opportunities for them in the military .
+--
+#
+up until; until --> before
+#
+Correct Link: [AdjacentVerbTimex] expected ei1625->t140=IS_INCLUDED, found ei1625->t140=IS_INCLUDED
+Debug info: IS_INCLUDED(assembling[e139],today[t140])
+Spokesman Yuri Gremitskikh said the first group of 230 evacuees was assembling in Baghdad today , but evacuation plans were hampered by desert heat and lack of transportation .
+--
+#
+PP adjunct DOES NOT INCLUDE timex; today is a separate adjunct;
+is today time argument of assembling? SENNA says yes.
+#
+Correct Link: [AdjacentVerbTimex] expected ei1677->t213=IS_INCLUDED, found ei1677->t213=IS_INCLUDED
+Debug info: IS_INCLUDED(meet[e211],Thursday[t213])
+The monarch will meet Bush on Thursday in Kennebunkport , Maine .
+--
+#
+in light of the previous case, it seems like there should be two sieves - one flat, one structural, for "adjacentTimexVerb"; 
+where adjacency is not only generalized to distance (via parameter setting) but distance is generalized beyond surface to dependency structure.
+#
+Correct Link: [AdjacentVerbTimex] expected ei1531->t289=IS_INCLUDED, found ei1531->t289=IS_INCLUDED
+Debug info: IS_INCLUDED(commenting[e7],two-week[t289])
+Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+--
+#
+in this case, since the "crisis" is ongoin, we get is_included. 
+Actually, there is an error here. It should be "two-week-old", except "-old" is not included in the timex. how did this happen?
+*this might be a special rule
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei2024->t114=VAGUE, found ei2024->t114=IS_INCLUDED
+Debug info: IS_INCLUDED(support[e30],Friday[t114])
+Treasurer Peter Costello , Environment Minister Robert Hill and Attorney General Daryl Williams all voted to support the republic Friday .
+--
+#
+Friday is a temporal argument of voted, and not support (I think?)
+SRL (SENNA) does not agree. This is also a weird thing to say I think, "voted in support of the republic" perhaps is better; best nto to worry about this case.
+maybe something can be done with the fact that theres an infinitive.
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei354->t190=VAGUE, found ei354->t190=IS_INCLUDED
+Debug info: IS_INCLUDED(leave[e12],Monday[t190])
+In a joint statement with Tourism Minister Andrew Thomson , it said two new flights would leave Bombay on Monday and Tuesday nights from March 30 , with the third departing each Thursday from August 6 .
+--
+#
+this is just a weird example; is_included is probably correct
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei322->t36=SIMULTANEOUS, found ei322->t36=IS_INCLUDED
+Debug info: IS_INCLUDED(broke[e14],noon Thursday[t36])
+His kidnappers demanded a ransom of dlrs 1 million , but negotiations broke off at noon Thursday .
+--
+#
+if time is specified at the hr/min granularity, maybe convert is_included to simultaneous
+"off" is part of "broke off", at indicates simultaneous?
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei2523->t142=VAGUE, found ei2523->t142=IS_INCLUDED
+Debug info: IS_INCLUDED(held[e93],the late 1970s[t142])
+Pol Pot is considered responsible for the radical policies that led to the deaths of as many as 1.7 million Cambodians when the communist group held power in the late 1970s .
+--
+#
+i think the annotation is vague because we don't know the full time of the power-holding. perhaps it is better to consider held to denote a salient portion
+of the total time of the power-holding? 
+held is a state. is this relevant?
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei2526->t143=VAGUE, found ei2526->t143=IS_INCLUDED
+Debug info: IS_INCLUDED(fall[e166],mid-1996[t143])
+But the group began to fall apart in mid-1996 after the defection of one of its top leaders , Ieng Sary .
+--
+#
+"begin to fall" --> "aspectual verb_inf in timex" ==> vague for verb/timex
+#
+Correct Link: [AdjacentVerbTimex] expected ei114->t16=IS_INCLUDED, found ei114->t16=IS_INCLUDED
+Debug info: IS_INCLUDED(entered[e10],February 1947[t16])
+Seventy-five million copies of the rifle have been built since it entered production in February 1947 , making it history 's most widely distributed weapon .
+--
+#
+event_verb_aspectual event in timex
+first event is is_included; second (non-aspectual) might be most likely vague. 
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei164->t122=VAGUE, found ei164->t122=IS_INCLUDED
+Debug info: IS_INCLUDED(wrapped[e8],three hour[t122])
+Annan wrapped up a three hour meeting with Iraqi president Saddam Hussein in Baghdad today .
+--
+#
+I think the gold standard is wrong :-)
+note that wrapped is aspectual.
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei156->t22=AFTER, found ei156->t22=IS_INCLUDED
+Debug info: IS_INCLUDED(come[e37],the middle of October[t22])
+Oil prices have come down from the middle of October from a twenty-two dollar barrel level down to the fourteen dollars we 're seeing today .
+--
+#
+"from" is key here, a simple pattern could work.
+#
+Correct Link: [AdjacentVerbTimex] expected ei2191->t195=IS_INCLUDED, found ei2191->t195=IS_INCLUDED
+Debug info: IS_INCLUDED(added[e10],last month[t195])
+The Bureau of Labor Statistics said the economy added 358,000 jobs last month , far above the 235,000 forecast by economists .
+--
+#
+intervening material consists of a direct object which is not an event (i think).
+We could delete a verbs arguments and then apply the regular sieve at string level.
+#
+Correct Link: [AdjacentVerbTimex] expected ei2197->t198=IS_INCLUDED, found ei2197->t198=IS_INCLUDED
+Debug info: IS_INCLUDED(raise[e20],last month[t198])
+The demand for workers also led employers to raise wages again last month .
+--
+#
+could remove direct object (as above), also adverbs, and apply string-level sieve.
+#
+Incorrect Link: [AdjacentVerbTimex] expected ei2238->t212=SIMULTANEOUS, found ei2238->t212=IS_INCLUDED
+Debug info: IS_INCLUDED(averaging[e85],the first nine months[t212])
+After accounting for a small downward revision Friday to December 's figures , the economy has been creating jobs at a rate of 358,000 a month for the last four months _ and 381,000 over the last three months _ after averaging 242,000 for the first nine months of 1997 .
+--
+#
+"progressive ... for duration" similar to cases when we have "for" or "throughout"
+"during" might be trickier.
+#
+Correct Link: [AdjacentVerbTimex] expected ei155->t15=IS_INCLUDED, found ei155->t15=IS_INCLUDED
+Debug info: IS_INCLUDED(change[e1],the next several days[t15])
+The lights are out and the heat is off and those vital signs are not likely to change much over the next several days for p - people in parts of the northeastern US and eastern Canada .
+--
+#
+"over" is similar to "during". it might be more indicative of ii, though there may be some cases where we want simultaneous. need to check more thoroughly.
+#
+Correct Link: [AdjacentVerbTimex] expected ei162->t17=IS_INCLUDED, found ei162->t17=IS_INCLUDED
+Debug info: IS_INCLUDED(added[e6],today[t17])
+He added one more today .
+--
+#
+again - intervening material consists solely of direct object.
+#
+AdjacentVerbTimex		p=0.47	8 of 17
+StupidSieve			p=0.22	364 of 1624
+WordFeatures64			p=0.18	72 of 402

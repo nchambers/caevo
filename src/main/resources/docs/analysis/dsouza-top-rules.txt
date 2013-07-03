@@ -1,0 +1,174 @@
+DSouza & Ng - Top rules
+--> Rules with precision over 80%
+
+*Note* when comparing against the spreadsheet, note that there are some duplicate rules.
+For example, SRL_arguments 244 and 224 are the same.
+
+###########
+##Top 10###
+##########
+
+Given two events e1 and e2 (e1 occurs before e2 in the text), 
+where e1 and e2 are in the same sentence unless otherwise specified...
+
+# SRL ARGUMENTS_244 #	32/36
+
+If the first is a verb whose temporal argument based on SRL contains e2,
+and the word "after" occurs within 5 tokens preceding the second, 
+then e1 AFTER e2
+-------------------------------------------------
+if sameSentence=TRUE &&
+	entity1.pos=VB &&
+	entity1.hasSrlTemporalArgument=TRUE &&
+	entity1.srlTemporalArgument.contains(entity2) &&
+	entity2.hasWordIn5WordPrecedingContext=after
+then infer relation=AFTER
+e.g.: Columbia [announced]e84 the results after the [close]e2002 of the stock market.
+-------------------------------------------------
+
+
+# SRL ARGUMENTS_243 #	21/26
+
+If e1 is a verb with a causal SRL argument that contains e2, 
+e1 AFTER e2
+-------------------------------------------------
+if sameSentence=TRUE &&
+	entity1.pos=VB &&
+	entity1.hasSrlCauseArgument=TRUE &&
+	entity1.srlCauseArgument.contains(entity2)
+then infer relation=AFTER
+e.g.: Profit also [suffered] because of "intense" [discounting] in its long-haul...
+-------------------------------------------------
+
+
+# Word Features_66 #
+
+If e1 is in present or prespart tense, and e2 is in the future tense, 
+return BEFORE
+-------------------------------------------------
+        if (!entity1.attribute2.contains("PRES") ||
+                !entity2.attribute2.equals("FUTURE"))
+            return null;
+        return "BEFORE";
+-------------------------------------------------
+
+*NOTE* Why not allow e1 to be in the past tense? 
+
+
+# Dependencies_182 # 17/18
+
+If one state (e1) governs another (e2), e1 SIMULTANEOUS e2
+
+*NOTE* debug this sieve to make sure it really only applies 5 times in our data
+
+
+# Dependencies_200 #
+
+If e1 is a reporting verb and e2 is an occurrence in the past tense,
+if e1 governs e2 then 
+e1 AFTER e2
+-------------------------------------------------
+if sameSentence=TRUE &&
+	entity1.class=REPORTING &&
+	entity2.class=OCCURRENCE &&
+	entity2.tense=PAST &&
+	entity1.ccompDependency=GOVERNOR &&
+	entity2.ccompDependency=DEPENDENT	
+then infer relation=AFTER
+e.g.: Separately, Esselte Business Systems [reported] third-quarter net income [fell] 5.9%...
+-------------------------------------------------
+
+*NOTE* This is quite similar to what I had intended for RepEventGovEvent
+
+
+
+# Relation With DCT_154 # 13/13
+
+if e1 includes (included in?) DCT and e2 after dct, then infer before.
+-------------------------------------------------
+if entity1.relationWithDCT=INCLUDES &&
+	entity2.relationWithDCT=AFTER &&
+then infer relation=BEFORE
+e.g.:Those observers [looking] for a battle between uncompromising representatives and very different ideologies will, in all likelihood, be [disappointed] . 
+-------------------------------------------------
+
+*NOTE* This should be covered by transitivity if e1 included_in DCT is what was intended.
+Otherwise, the rule is non-trivial (in the sense that transitivity won't cover it, but, i don't think we will have annotated looking ii DCT
+if DCT is specified down to the minute granularity. 
+TODO: Email Jennifer about direction of incusion implied here.
+
+
+
+# SRL_ARGUMENT_240 # 11/12
+
+If e1 is reporting verb and it's locative argument (SRL) contains e2,
+e1 IS_INCLUDED e2
+-------------------------------------------------
+if entity1.pos=VB && 
+	entity1.hasLocativeArgument=TRUE &&
+	entity1.locativeArgument.contains(entity2) &&
+	entity1.class=REPORTING
+then infer relation=IS_INCLUDED
+e.g.: Gremitskikh [said] at a regular news [briefing]...
+-------------------------------------------------
+
+*NOTE* can we get this with simple patterns?
+Will this work with non-reporting verbs?
+
+
+
+# Word_Features_30 # 9/10
+
+If e2 is PAST or PASTPART tense and "previous" occurs within two words preceding it,
+e1 after e2.
+-------------------------------------------------
+       if (!entity2.attribute2.contains("PAST") ||
+                !(hasWordInImmediateContext(entity2.context_token_precede, "previous", true, txt) ||
+                hasWordInImmediateContext(entity2.context_token_follow, "previous", false, txt)))
+            return null;
+        return "AFTER";
+-------------------------------------------------
+*NOTE* Does this fire when "previously" occurs within two words preceding e2? 
+TODO: Include this question in email to Jennifer.
+
+
+
+# Word_features_15 # 7/7
+
+
+If e1 and e2 are OCCURRENCE events with the same tense, and the word
+"after" occurs within the 5 tokens preceding e2, and e1 and e2 are within
+10 tokens of one another
+e1 AFTER e2
+-------------------------------------------------
+        if (!are_event_occurrences(entity1, entity2) || !sameTense(entity1, entity2) ||
+                !hasWordInContext(entity2.context_token_precede, "after", txt) ||
+                !closelyFollowing)
+            return null;
+        return "AFTER";
+-------------------------------------------------
+
+
+# Word_features_16 # 7/8
+
+If e1 and e2 are OCCURRENCE events with the same tense, and the word
+"after" occurs within the 5 tokens preceding e2, 
+e1 AFTER e2
+-------------------------------------------------
+        if (!are_event_occurrences(entity1, entity2) || !sameTense(entity1, entity2) ||
+                !hasWordInContext(entity2.context_token_precede, "after", txt) ||
+                entity1.sID != entity2.sID)
+            return null;
+        return "AFTER";
+-------------------------------------------------
+
+*NOTE* there are many other rules where the fact that e1 and e2 must occur
+in the same sentence is explicitly stated. In email Jennifer seemed to reply that
+this is default. I will double check, using the two preceding rules as an example.
+ 
+
+Observations.
+The most frequently firing rules with precision over 80% 
+
+
+

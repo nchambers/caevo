@@ -1,0 +1,51 @@
+Added sieve: AdjacentVerbTimex
+Added sieve: ReichenbachDG13
+Added sieve: WordFeatures64
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei1711->t301=VAGUE, found ei1711->t301=IS_INCLUDED
+Debug info: IS_INCLUDED(filed[e175],Wednesday[t301])
+Thirty-two of the 159 U.N. members had filed compliance reports by Wednesday , and all were honoring the sanctions Iraq .
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei2000->t110=AFTER, found ei2000->t110=IS_INCLUDED
+Debug info: IS_INCLUDED(Turning[e1],210 years[t110])
+CANBERRA , Australia -LRB- AP -RRB- _ Turning its back on 210 years of loyalty to the British royal family , a constitutional convention voted overwhelmingly Friday to make Australia a republic under its own president .
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei402->t71=VAGUE, found ei402->t71=IS_INCLUDED
+Debug info: IS_INCLUDED(took[e18],more than four hours[t71])
+She took the stand for more than four hours Friday in a Tel Aviv magistrate 's court .
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei2194->t196=VAGUE, found ei2194->t196=IS_INCLUDED
+Debug info: IS_INCLUDED(remained[e17],last month[t196])
+With growing opportunities for work drawing more people into the labor force , the unemployment rate remained at 4.7 percent last month , just a notch above its quarter-century low .
+--
+Correct Link: [AdjacentVerbTimex] expected ei2203->t200=IS_INCLUDED, found ei2203->t200=IS_INCLUDED
+Debug info: IS_INCLUDED(lost[e28],the last decade[t200])
+The gain left wages 3.8 percent higher than a year earlier , extending a trend that has given back to workers some of the earning power they lost to inflation in the last decade .
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei2260->t215=VAGUE, found ei2260->t215=IS_INCLUDED
+Debug info: IS_INCLUDED(added[e137],January[t215])
+Some of the biggest employment gains came in the construction industry , which added 92,000 jobs in January .
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei2282->t218=VAGUE, found ei2282->t218=IS_INCLUDED
+Debug info: IS_INCLUDED(declined[e179],last month[t218])
+The figures showed the unemployment rate for adult men declined to 3.8 percent last month from 4.1 percent in December , the lowest figure for almost two decades .
+--
+Correct Link: [AdjacentVerbTimex] expected ei550->t39=IS_INCLUDED, found ei550->t39=IS_INCLUDED
+Debug info: IS_INCLUDED(know[e26],today[t39])
+I know about the stories today .
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei2008->t1982=VAGUE, found ei2008->t1982=IS_INCLUDED
+Debug info: IS_INCLUDED(dominated[e12],centuries[t1982])
+Most of the city 's monuments were destroyed , including a magnificent tiled mosque , which dominated the skyline for centuries .
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei2019->t1986=SIMULTANEOUS, found ei2019->t1986=IS_INCLUDED
+Debug info: IS_INCLUDED(coming[e30],a few minutes[t1986])
+Well , frankly , I do n't , but the answer is coming up in just a few minutes .
+--
+Incorrect Link: [AdjacentVerbTimex] expected ei169->t20=SIMULTANEOUS, found ei169->t20=IS_INCLUDED
+Debug info: IS_INCLUDED(live[e12],a while[t20])
+In Maine , about a half million people still do n't have power and they 're going to have to live without it for a while .
+--
+AdjacentVerbTimex		p=0.18	2 of 11
+WordFeatures64			p=0.18	72 of 402
+WordNet209			p=0.04	1 of 27
