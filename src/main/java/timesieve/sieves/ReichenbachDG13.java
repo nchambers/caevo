@@ -23,11 +23,36 @@ import timesieve.util.TreeOperator;
  *from Reichanbach's theory of tense/aspect. The mapping is adapted from
  *Derczynski and Gaizauskas (D&G 2013).
  *
+ *PARAMETERS:
+ *sameTense - boolean; enforces D&G's "S/R" constraint; essentially,
+ *					only pairs of verbs with the same tense will be considered.
+ *sentWindow - int; only allow events that are within this many sentences of one another
+ *simplifyPast, simplifyPresent, simplifyAspect - boolean; if false, don't apply
+ *the relevant part of the normalization procedure as suggested in D&G13
+ *(see function simplifyTense and simplifyAspect)
+ *
  *SameSentence/SameTense			p=0.65	17 of 26
  *SameOrAdjSent/SameTense			p=0.58	47 of 81
  *SameSentence/AnyTense			  p=0.57	47 of 82
  *SameOrAdjSent/AnyTense			p=0.53	142 of 270
  *
+ *--> "Simplify Past" = false
+ *SameSentence/SameTense			p=0.65	17 of 26
+ *SameOrAdjSent/SameTense			p=0.58	47 of 81
+ *SameSentence/AnyTense				p=0.62	46 of 74
+ *SameOrAdjSent/AnyTense			p=0.55	139 of 252
+ *
+ *--> "Simplify Present" = false
+ *SameSentence/SameTense			p=0.65	17 of 26
+ *SameOrAdjSent/SameTense			p=0.58	47 of 81
+ *SameSentence/AnyTense				p=0.63	45 of 71
+ *SameOrAdjSent/AnyTense			p=0.56	137 of 243
+ *
+ *--> "Simplify Aspect" = false
+ *ReichenbachDG13			p=0.65	17 of 26
+ *ReichenbachDG13			p=0.58	47 of 81
+ *ReichenbachDG13			p=0.57	47 of 82
+ *ReichenbachDG13			p=0.52	139 of 265
  *
  *
  *DETAILS:
@@ -75,6 +100,9 @@ public class ReichenbachDG13 implements Sieve {
 	public boolean debug = false;
 	private int sentWindow = 0;
 	private boolean sameTense = false;
+	private boolean simplifyPast = true;
+	private boolean simplifyPresent = true;
+	private boolean simplifyAspect = true;
 	
 	
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
@@ -90,6 +118,9 @@ public class ReichenbachDG13 implements Sieve {
 			try {
 				sentWindow = TimeSieveProperties.getInt("ReichenbachDG13.sentWindow", 0);
 				sameTense = TimeSieveProperties.getBoolean("ReichenbachDG13.sameTense", false);
+				simplifyPast = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyPast", true);
+				simplifyPresent = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyPresent", true);
+				simplifyAspect = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyAspect", true);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -178,7 +209,7 @@ public class ReichenbachDG13 implements Sieve {
 		}
 		// if sameTense property is true then e1/e2 that don't share the same tense 
 		// automatically are labeled null
-		else if (sameTense && eventsShareTense(e1, e2)) {
+		if (sameTense == true && e1.getTense() != e2.getTense()) {
 			return null;
 		}
 		// if we've made it this far, apply the mapping to (e1, e2) using 
@@ -256,11 +287,11 @@ public class ReichenbachDG13 implements Sieve {
 	private TextEvent.Tense simplifyTense(TextEvent.Tense tense){
 		// simplify past
 		if (tense == TextEvent.Tense.PAST ||
-			  tense == TextEvent.Tense.PASTPART) 
+			  (tense == TextEvent.Tense.PASTPART && simplifyPast)) 
 			{return TextEvent.Tense.PAST;}
 		// simplify present
 		else if (tense == TextEvent.Tense.PRESENT ||
-						 tense == TextEvent.Tense.PRESPART) 
+						 (tense == TextEvent.Tense.PRESPART && simplifyPresent)) 
 				{return TextEvent.Tense.PRESENT;}
 		// future is trivially simplified
 		else if (tense == TextEvent.Tense.FUTURE) 
@@ -276,8 +307,8 @@ public class ReichenbachDG13 implements Sieve {
 		// tense/aspect profile that includes progressive aspect occurs in
 		// any tense/aspect profile pair mapped to a single relation (in our
 		// relation scheme)
-		if (aspect.equals(TextEvent.Aspect.PERFECTIVE_PROGRESSIVE) ||
-				aspect.equals(TextEvent.Aspect.PERFECTIVE))
+		if ( (simplifyAspect && aspect.equals(TextEvent.Aspect.PERFECTIVE_PROGRESSIVE)) ||
+				 aspect.equals(TextEvent.Aspect.PERFECTIVE))
 			{return TextEvent.Aspect.PERFECTIVE;}
 		else if (aspect.equals(TextEvent.Aspect.NONE)) 
 			{return aspect;}

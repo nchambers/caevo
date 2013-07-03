@@ -1,6 +1,7 @@
 package timesieve.util;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -9,6 +10,7 @@ import java.util.Map;
 import java.util.Set;
 
 import net.didion.jwnl.JWNL;
+import net.didion.jwnl.JWNLException;
 import net.didion.jwnl.data.IndexWord;
 import net.didion.jwnl.data.POS;
 import net.didion.jwnl.data.Pointer;
@@ -54,17 +56,21 @@ public class WordNet {
   
   public WordNet(String wordnetPath) {
     // Load WordNet
-    try {
       if( wordnetPath != null && wordnetPath.length() > 0 )
-        JWNL.initialize(new FileInputStream(wordnetPath));
-    } catch( Exception ex ) { ex.printStackTrace(); }
+				try {
+					JWNL.initialize(new FileInputStream(wordnetPath));
+				} catch (FileNotFoundException e) {
+					throw new RuntimeException(e);
+				} catch (JWNLException e) {
+					throw new RuntimeException(e);
+				}
   }
 
   public static String findWordnetPath() {
 		// Load WordNet.
 		String path = System.getenv("JWNL");
 		if( path == null ) {
-			System.out.println("ERROR: couldn't find JWNL xml properties file: " + path);
+			throw new RuntimeException("ERROR: couldn't find JWNL xml properties file: " + path);
 		}   	
   	return path;
   }

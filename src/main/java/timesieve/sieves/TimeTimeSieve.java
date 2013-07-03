@@ -15,6 +15,9 @@ import timesieve.util.Pair;
  * Order normalized date and time expressions by their Timex values
  * 	- Currently does not consider durations or sets
  * 		- Durations require start and end times that we currently don't have
+ *  - Only orders FUTURE_REF with times in the past, and PAST_REF with times in the future
+ *  - Ignores PRESENT_REF due to inconsistent annotations of "now"
+ *  - Current precision: .86 (63 of 73)
  * 
  * @author Bill McDowell
  */
@@ -38,13 +41,18 @@ public class TimeTimeSieve implements Sieve {
 		return proposed;
 	}
 
-	private TLink orderTimexes(Timex t1, Timex t2, Timex ct) {				
+	private TLink orderTimexes(Timex t1, Timex t2, Timex ct) {	
+		if (t1 == null || t2 == null)
+			return null;
 		if (t1.getType() != Timex.Type.DATE && t1.getType() != Timex.Type.TIME)
 			return null;
 		if (t2.getType() != Timex.Type.DATE && t2.getType() != Timex.Type.TIME)
 			return null;
 		
 		if (t1.isReference() || t2.isReference()) {
+			if (ct == null)
+				return null;
+			
 			int t1Ct = 0, t2Ct = 0;
 			
 			if (t1.isReference()) {
