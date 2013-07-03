@@ -5,6 +5,7 @@ import java.util.Calendar;
 import org.jdom.Namespace;
 
 import timesieve.util.Pair;
+import timesieve.util.TimeValueParser;
 
 /**
  * This class represents a sequence of tokens for a Timex. It holds all TimeML attributes.
@@ -26,7 +27,7 @@ public class Timex {
   public static final String TEXT_ATT = "text";
   public static final String OFFSET_ATT = "offset";
   public static final String LENGTH_ATT = "length";
-	
+  	
   public enum Type { DATE, TIME, DURATION, SET };
   public enum DocumentFunction { CREATION_TIME, EXPIRATION_TIME, MODIFICATION_TIME, PUBLICATION_TIME, RELEASE_TIME, RECEPTION_TIME, NONE };
   public enum Mod { BEFORE, AFTER, ON_OR_BEFORE, ON_OR_AFTER, LESS_THAN, MORE_THAN, EQUAL_OR_LESS, EQUAL_OR_MORE, START, MID, END, APPROX };
@@ -43,8 +44,7 @@ public class Timex {
   private DocumentFunction documentFunction;
   private boolean temporalFunction = false;
   private String preposition; // feature not in Timebank
-  
-  private edu.stanford.nlp.time.Timex stanfordHelper;
+  private Pair<Calendar, Calendar> timeRange;
   
   public Timex() {
   
@@ -119,6 +119,7 @@ public class Timex {
   
   public void setValue(String value) { 
   	this.value = value;
+  	this.timeRange = null;
   }
   
   public void setPrep(String prep) { 
@@ -146,62 +147,20 @@ public class Timex {
   	return getRange(null);
   }
   
-  /*
-   * Returns a start and end time for an interval represented by the timex.
-   * - Currently, the interval is determined as follows:
-   * 		- If the Timex is a duration or a set or "PAST_REF" or "FUTURE_REF", return null interval
-   * 			- Durations need reference times that we currently don't have
-   * 		- If the Timex is a partial year representing a decade, return the start and end 
-   * 			of the decade (e.g. 197 represents 1970s)
-   *    - Otherwise, allow Stanford's Timex to determine the interval
-   */
   public Pair<Calendar, Calendar> getRange(Timex documentCreation) {
-  	if (this.stanfordHelper == null)
-  		this.stanfordHelper = this.convertToStanfordTimex(this);
-  	
-  	if (documentCreation != null && documentCreation.stanfordHelper == null)
-  		documentCreation.stanfordHelper = this.convertToStanfordTimex(documentCreation);
-  	
   	if (this.type == Timex.Type.DURATION 
-  	|| this.type == Timex.Type.SET
-    || isPastReference()
-    || isFutureReference())
-  		return null;
-  	else if (this.type == Timex.Type.DATE && this.value.length() < 4) {
-  		StringBuilder startYear = new StringBuilder().append(this.value);
-  		StringBuilder endYear = new StringBuilder().append(this.value);
-  		
-			for (int i = this.value.length(); i < 4; i++) {
-				startYear.append("0");
-				endYear.append("9");
-			}
-			
-  		Calendar startDate = Calendar.getInstance();
-  		Calendar endDate = Calendar.getInstance();
-  		startDate.set(Integer.valueOf(startYear.toString()), 0, 1, 0, 0, 0);
-  		endDate.set(Integer.valueOf(endYear.toString()), 11, 31, 23, 59, 59);
-  		
-  		return new Pair<Calendar, Calendar>(startDate, endDate);
-  	} else {
-	  	edu.stanford.nlp.util.Pair<Calendar, Calendar> range = this.stanfordHelper.getRange((documentCreation == null) ? null : documentCreation.stanfordHelper);
-	  	return new Pair<Calendar, Calendar>(range.first(), range.second());
+  	  	|| this.type == Timex.Type.SET
+  	    || isPastReference()
+  	    || isFutureReference())
+  	  		return null;
+  	
+  	if (this.timeRange == null) {
+	  	TimeValueParser timeParse = new TimeValueParser(this.value);
+	  	this.timeRange = timeParse.getRange();
   	}
-  }
   
-	private edu.stanford.nlp.time.Timex convertToStanfordTimex(Timex timex) {
-		if (timex == null)
-			return null;
-		
-		String stanfordValue = timex.getValue();
-		Timex.Type stanfordType = timex.getType();
-		
-		if (timex.documentFunction == DocumentFunction.CREATION_TIME && timex.getType() == Timex.Type.TIME && !timex.value.contains("REF") && timex.value.contains("T")) {
-			stanfordValue = timex.value.substring(0, stanfordValue.indexOf("T"));
-			stanfordType = Timex.Type.DATE;
-		}
-		
-		return new edu.stanford.nlp.time.Timex(stanfordType.toString(), stanfordValue);
-	}
+  	return this.timeRange;
+  }
   
   public boolean isReference() {
   	return isPastReference() || isPresentReference() || isFutureReference();

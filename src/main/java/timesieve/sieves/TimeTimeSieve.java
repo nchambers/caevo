@@ -44,27 +44,61 @@ public class TimeTimeSieve implements Sieve {
 		if (t2.getType() != Timex.Type.DATE && t2.getType() != Timex.Type.TIME)
 			return null;
 		
-		if (t1.isPresentReference() || t2.isPresentReference())
-			return new TimeTimeLink(t1.getTid(), t2.getTid(), TLink.Type.VAGUE);
-		
-		/*if (t1.isReference() && t2.isReference()) {
-			return new TimeTimeLink(t1.getTid(), t2.getTid(), TLink.Type.VAGUE);
-		} else if ((t1.isReference() && !t2.isReference())
-						|| (t2.isReference() && !t1.isReference())) {
-			return new TimeTimeLink(t1.getTid(), t2.getTid(), TLink.Type.VAGUE);
-		}*/
+		if (t1.isReference() || t2.isReference()) {
+			int t1Ct = 0, t2Ct = 0;
+			
+			if (t1.isReference()) {
+				if (t1.isFutureReference())
+					t1Ct = 1;
+				else if (t1.isPastReference())
+					t1Ct = -1;
+				else
+					return null;//t1Ct = 0;
+			} else {
+				TLink t1CtLink = orderTimexes(t1, ct, null);
+				if (t1CtLink == null || t1CtLink.getRelation() == TLink.Type.VAGUE)
+					return null;
+				else if (t1CtLink.getRelation() == TLink.Type.BEFORE)
+					t1Ct = -1;
+				else if (t1CtLink.getRelation() == TLink.Type.AFTER)
+					t1Ct = 1;
+				else
+					return null;//t1Ct = 0;
+			}
+			
+			if (t2.isReference()) {
+				if (t2.isFutureReference())
+					t2Ct = 1;
+				else if (t2.isPastReference())
+					t2Ct = -1;
+				else
+					return null;//t2Ct = 0;
+			} else {
+				TLink t2CtLink = orderTimexes(t2, ct, null);
+				if (t2CtLink == null || t2CtLink.getRelation() == TLink.Type.VAGUE)
+					return null;
+				else if (t2CtLink.getRelation() == TLink.Type.BEFORE)
+					t2Ct = -1;
+				else if (t2CtLink.getRelation() == TLink.Type.AFTER)
+					t2Ct = 1;
+				else
+					return null;//t2Ct = 0;
+			}
+			
+			if (t1Ct < t2Ct)
+				return new TimeTimeLink(t1.getTid(), t2.getTid(), TLink.Type.BEFORE);
+			else if (t2Ct < t1Ct)
+				return new TimeTimeLink(t1.getTid(), t2.getTid(), TLink.Type.AFTER);
+			else
+				return null;
+		}
 		
 		
 		Pair<Calendar, Calendar> interval1 = null;
 		Pair<Calendar, Calendar> interval2 = null;
 		
-		try {
-			interval1 = t1.getRange(ct);
-			interval2 = t2.getRange(ct);
-		} catch (Exception e) {
-			System.out.println("TimeTimeSieve Error: " + e.getMessage());
-			return null;
-		}
+		interval1 = t1.getRange(ct);
+		interval2 = t2.getRange(ct);
 		
 		if (interval1 == null || interval2 == null)
 			return null;
@@ -74,6 +108,7 @@ public class TimeTimeSieve implements Sieve {
 		int endStart = interval1.second().compareTo(interval2.first());
 		int endEnd = interval1.second().compareTo(interval2.second());
 		
+		//System.out.println(startStart + " " + t1.getTid() + " " + t2.getTid() + " "+ interval1.first().getTime().toString() + " " + interval1.first().getTimeInMillis() + " " + interval2.first().getTime().toString() + interval2.first().getTimeInMillis());
 		TLink.Type lType = TLink.Type.VAGUE;
 		
 		if (startStart == 0 && endEnd == 0)

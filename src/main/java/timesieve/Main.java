@@ -49,7 +49,7 @@ public class Main {
 	
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
-		  "RepEventGovEvent",
+		  //"RepEventGovEvent",
 		  /*"RepCreationDay",*/
 			"TimeTimeSieve"/*,
 		  "RepEventGovEvent",
@@ -274,8 +274,6 @@ public class Main {
 		StringBuilder builder = new StringBuilder();
 		
 		if (link instanceof TimeTimeLink) {
-			
-			
 			TimeTimeLink ttLink = (TimeTimeLink)link;
 			Timex t1 = doc.getTimexByTid(ttLink.getId1());
 			Timex t2 = doc.getTimexByTid(ttLink.getId2());
