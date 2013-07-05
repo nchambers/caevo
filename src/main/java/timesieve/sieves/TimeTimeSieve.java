@@ -18,12 +18,27 @@ import timesieve.util.Pair;
  *  - Only orders FUTURE_REF with times in the past, and PAST_REF with times in the future
  *  - Ignores PRESENT_REF due to inconsistent annotations of "now"
  *  - Current precision: .86 (63 of 73)
+ *  	- All imprecision is due to incorrect annotations
  * 
  * @author Bill McDowell
  */
 public class TimeTimeSieve implements Sieve {
 
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
+		List<TLink> proposed = new ArrayList<TLink>();
+		
+		List<TLink> sentencePairLinks = annotateBySentencePair(doc);
+		List<TLink> creationTimeLinks = annotateByCreationTime(doc);
+		
+		if (sentencePairLinks != null)
+			proposed.addAll(sentencePairLinks);
+		if (creationTimeLinks != null)
+			proposed.addAll(creationTimeLinks);
+		
+		return proposed;
+	}
+	
+	public List<TLink> annotateBySentencePair(SieveDocument doc) {
 		List<List<Timex>> allTimexes = this.allTimexesBySentencePair(doc.getTimexesBySentence());
 		List<TLink> proposed = new ArrayList<TLink>();
 		Timex creationTime = (doc.getDocstamp() ==  null || doc.getDocstamp().isEmpty()) ? null : doc.getDocstamp().get(0);
@@ -37,7 +52,27 @@ public class TimeTimeSieve implements Sieve {
 				}
 			}
 		}
+		
+		return proposed;
+	}
 	
+	public List<TLink> annotateByCreationTime(SieveDocument doc) {
+		if (doc.getDocstamp() == null || doc.getDocstamp().isEmpty())
+			return null;
+		
+		Timex creationTime = doc.getDocstamp().get(0);
+		
+		List<List<Timex>> allTimexes = doc.getTimexesBySentence();
+		List<TLink> proposed = new ArrayList<TLink>();
+		
+		for (List<Timex> timexes : allTimexes) {
+			for (Timex timex : timexes) {
+				TLink link = this.orderTimexes(creationTime, timex, creationTime);
+				if (link != null) 
+					proposed.add(link);
+			}
+		}
+		
 		return proposed;
 	}
 

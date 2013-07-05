@@ -29,12 +29,12 @@ public class RepEventGovEvent implements Sieve {
 		for (SieveSentence sent : doc.getSentences()) {
 			List<TextEvent> events = sent.events();
 			List<TypedDependency> deps = sent.getDeps();
-
+			
 			Map<Integer, TextEvent> indexToEvent = new HashMap<Integer, TextEvent>();
 			for (TextEvent event : events) {
 				indexToEvent.put(event.getIndex(), event);
 			}
-
+			
 			for (TypedDependency dep : deps) {
 				TextEvent govEvent = indexToEvent.get(dep.gov().index());
 				TextEvent depEvent = indexToEvent.get(dep.dep().index());
