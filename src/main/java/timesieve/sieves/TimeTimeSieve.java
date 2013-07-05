@@ -26,7 +26,7 @@ public class TimeTimeSieve implements Sieve {
 
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 		List<TLink> proposed = new ArrayList<TLink>();
-	
+		
 		List<TLink> sentencePairLinks = annotateBySentencePair(doc);
 		List<TLink> creationTimeLinks = annotateByCreationTime(doc);
 		
@@ -34,7 +34,7 @@ public class TimeTimeSieve implements Sieve {
 			proposed.addAll(sentencePairLinks);
 		if (creationTimeLinks != null)
 			proposed.addAll(creationTimeLinks);
-
+		
 		return proposed;
 	}
 	

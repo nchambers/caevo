@@ -5,6 +5,7 @@ import java.util.List;
 
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
 import timesieve.TextEvent;
 import timesieve.tlink.TLink;
 import timesieve.tlink.EventEventLink;
@@ -25,6 +26,12 @@ import timesieve.tlink.EventEventLink;
 public class RepEventRepEventSieve implements Sieve {
 
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
+		List<SieveSentence> sentences = doc.getSentences();
+		/*for (SieveSentence sentence: sentences) {
+			if (sentence.sentence().contains("because"))
+				System.err.println(sentence.sentence());
+		}*/
+		
 		List<TLink> proposed = new ArrayList<TLink>();
 	
 		List<TLink> sentencePairLinks = annotateBySentencePair(doc);
