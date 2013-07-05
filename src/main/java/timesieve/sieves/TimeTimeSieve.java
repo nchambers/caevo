@@ -44,7 +44,7 @@ public class TimeTimeSieve implements Sieve {
 		Timex creationTime = (doc.getDocstamp() ==  null || doc.getDocstamp().isEmpty()) ? null : doc.getDocstamp().get(0);
 		
 		for (List<Timex> closeTimexes : allTimexes) {
-			for (int t1 = 0; t1 < closeTimexes.size(); t1++) {				
+			for (int t1 = 0; t1 < closeTimexes.size(); t1++) {						
 				for (int t2 = t1 + 1; t2 < closeTimexes.size(); t2++) {
 					TLink link = this.orderTimexes(closeTimexes.get(t1), closeTimexes.get(t2), creationTime);
 					if (link != null) 
