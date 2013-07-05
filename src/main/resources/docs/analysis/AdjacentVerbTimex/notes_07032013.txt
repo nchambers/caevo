@@ -29,13 +29,15 @@ Observations
 Currently, if we allow up to a window of 4 words, the rule yields:
 
 0 AdjacentVerbTimex		p=0.95	20 of 21
-1 AdjacentVerbTimex		p=0.69	11 of 16
+1 AdjacentVerbTimex		p=0.69	11 of 16	
 2 AdjacentVerbTimex		p=0.47	8 of 17
 3 AdjacentVerbTimex		p=0.18	2 of 11
 4 AdjacentVerbTimex		p=0.73	8 of 11
 overall
 AdjacentVerbTimex		p=0.64	49 of 76
     
+after adding some simple prep based rules
+
 
 **After looking through results for one and two intervening words, i
   think the best bet is to check for a preposition immediately

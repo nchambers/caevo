@@ -6,14 +6,24 @@ Incorrect Link: [AdjacentVerbTimex] expected ei1711->t301=VAGUE, found ei1711->t
 Debug info: IS_INCLUDED(filed[e175],Wednesday[t301])
 Thirty-two of the 159 U.N. members had filed compliance reports by Wednesday , and all were honoring the sanctions Iraq .
 --
+#
+by should indicate vague for us, since it means during-or-before, or at-or-before.
+#
 Incorrect Link: [AdjacentVerbTimex] expected ei2000->t110=AFTER, found ei2000->t110=IS_INCLUDED
 Debug info: IS_INCLUDED(Turning[e1],210 years[t110])
 CANBERRA , Australia -LRB- AP -RRB- _ Turning its back on 210 years of loyalty to the British royal family , a constitutional convention voted overwhelmingly Friday to make Australia a republic under its own president .
 --
+#
+this is pretty hard...
+#
 Incorrect Link: [AdjacentVerbTimex] expected ei402->t71=VAGUE, found ei402->t71=IS_INCLUDED
 Debug info: IS_INCLUDED(took[e18],more than four hours[t71])
 She took the stand for more than four hours Friday in a Tel Aviv magistrate 's court .
 --
+#
+i think this should be simultaneous - this should be covered by the
+framework where we look for preposition immediately preceding the timex
+#
 Incorrect Link: [AdjacentVerbTimex] expected ei2194->t196=VAGUE, found ei2194->t196=IS_INCLUDED
 Debug info: IS_INCLUDED(remained[e17],last month[t196])
 With growing opportunities for work drawing more people into the labor force , the unemployment rate remained at 4.7 percent last month , just a notch above its quarter-century low .
@@ -26,6 +36,9 @@ Incorrect Link: [AdjacentVerbTimex] expected ei2260->t215=VAGUE, found ei2260->t
 Debug info: IS_INCLUDED(added[e137],January[t215])
 Some of the biggest employment gains came in the construction industry , which added 92,000 jobs in January .
 --
+#
+the problem here is the disagreement between is_included and simultaneous
+#
 Incorrect Link: [AdjacentVerbTimex] expected ei2282->t218=VAGUE, found ei2282->t218=IS_INCLUDED
 Debug info: IS_INCLUDED(declined[e179],last month[t218])
 The figures showed the unemployment rate for adult men declined to 3.8 percent last month from 4.1 percent in December , the lowest figure for almost two decades .
