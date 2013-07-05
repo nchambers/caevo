@@ -55,6 +55,8 @@ import timesieve.util.TreeOperator;
  *SameOrAdjSent/AnyTense			p=0.52	139 of 265
  *
  *--> "Simplify Present" = false; "Simplify Past" = false
+ *SameSentence/SameTense			p=0.65	17 of 26
+ *SameSentence/AnyTense	 p=0.70	44  of 63
  *SameOrAdjSent/AnyTense p=0.60	134 of 223
  *
  *
