@@ -53,14 +53,13 @@ while( $line = <IN> ) {
 	if( exists $docs{$doc} ) {
 	    $good = 1;
 	    $currentDoc = $doc;
+	    %ids = (); # reset the ID mapping
 	} else {
 	    $good = 0;
 	}
     }
     elsif( $good && $line =~ /<event id="(\w+)" eiid="(\w+)" .*/ ) {
 	$ids{$1} = $2;
-#	print "EVENT $line";
-#	print "\t$1 -> $2**\n";
     }
     # Print all our TLinks.
     elsif( $good && $line =~ /<\/file>/ ) {
@@ -74,10 +73,10 @@ while( $line = <IN> ) {
 	    if( $events[1] =~ /^e/ ) { $eiid2 = $ids{$events[1]}; }
 
 	    if( !$eiid1 ) { 
-#		print "Unknown eiid1 from @events\n"; 
+#		print "Unknown eiid1 from $events[0]\n"; 
 	    }
 	    elsif( !$eiid2 ) {
-#		print "Unknown eiid2 from @events\n"; 
+#		print "Unknown eiid2 from $events[1]\n"; 
 	    }
 	    else {
 		my $type = "ee";

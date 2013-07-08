@@ -14,7 +14,9 @@ import java.util.Set;
 import timesieve.sieves.Sieve;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
+import timesieve.util.TimeSieveProperties;
 import timesieve.util.Util;
+import timesieve.util.WordNet;
 
 import edu.stanford.nlp.stats.ClassicCounter;
 import edu.stanford.nlp.stats.Counter;
@@ -27,52 +29,93 @@ import edu.stanford.nlp.util.StringUtils;
  * - An environment variable JWNL that points to your jwnl_file_properties.xml file.
  *
  * HOW TO RUN:
- * java Main -info <filepath> gauntlet
+ * java Main -info <filepath> [-set all|train|dev] gauntlet
  * - Tests the sieves independently and calculates individual precision.
  *
  * java Main -info <filepath> parsed
  * - Run event, time, and TLink extraction. The given infofile contains parses.
  *
- * java Main -info <filepath>
+ * java Main -info <filepath> [-set all|train|dev]
  * - Runs only the tlink sieve pipeline. Assumes the given infofile has events and times.
+ *
+ * java Main -info <filepath> [-set all|train|dev] trainall
+ * - Runs the train() function on all of the sieves.
  *
  * @author chambers
  */
 public class Main {
-	TextEventClassifier eventClassifier;
-	TimexClassifier timexClassifier;
+	private TextEventClassifier eventClassifier;
+	private TimexClassifier timexClassifier;
+	public static WordNet wordnet;
 	
 	SieveDocuments info;
+	SieveDocuments infoUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
 	boolean debug = true;
+
+	// If none are true, then it runs on dev
+	boolean runOnTrain = true;
+	boolean runOnAll = false;
+	boolean runOnTest = false;
 	
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
-    "RepEventGovEvent",
-    "RepCreationDay",
-    "TimeTimeSieve",
-                    "DependencyAnalyze",
-                    "Dependencies182",
-                    "WordFeatures5",
-                    "AllVagueSieve",
-                    "QuarterSieveReporting",
-                    "StupidSieve",
-                    "AdjacentVerbTimex",
-                    "ReichenbachDG13",
-                    "WordFeatures64",
-                    "WordNet209"
+//    "RepCreationDay",
+//    "AdjacentVerbTimex",
+//    "TimeTimeSieve",
+//    "RepEventGovEvent",
+//    "ReichenbachDG13",
+    
+    "MLEventEventSameSent",
+    
+    "AllVagueSieve",
+//                    "DependencyAnalyze",
+//                    "Dependencies182",
+//                    "WordFeatures5",
+//                    "QuarterSieveReporting",
+//                    "StupidSieve",
+//                    "WordFeatures64",
+//                    "WordNet209"
 	};
     
 	/**
 	 * Constructor: give it the command-line arguments.
 	 */
 	public Main(String[] args) {
-		Properties props = StringUtils.argsToProperties(args);
-        
-		if( props.containsKey("info") ) {
-			System.out.println("Checking for infofile at " + props.getProperty("info"));
-			info = new SieveDocuments(props.getProperty("info"));
+		Properties cmdlineProps = StringUtils.argsToProperties(args);
+		String infopath = null;
+		
+		// PROPERTIES CODE
+		try {
+			TimeSieveProperties.load();
+			// Look for a given pre-processed InfoFile
+			infopath = TimeSieveProperties.getString("info");
+		} catch (IOException e) { }
+
+		// -info on the command line?
+		if( cmdlineProps.containsKey("info") ) 
+			infopath = cmdlineProps.getProperty("info");
+
+		if( infopath != null ) {
+			System.out.println("Checking for infofile at " + infopath);
+			info = new SieveDocuments(infopath);
+			infoUnchanged = new SieveDocuments(infopath);
+		}
+
+		// -set on the command line?
+		if( cmdlineProps.containsKey("set") ) { 
+			String type = cmdlineProps.getProperty("set");
+			System.out.println("CMD SET = " + type);
+			if( type.equalsIgnoreCase("train") ) {
+				runOnTrain = true; runOnTest = false; runOnAll = false;
+			}
+			else if( type.equalsIgnoreCase("dev") ) {
+				runOnTrain = false; runOnTest = false; runOnAll = false;
+			}
+			else if( type.equalsIgnoreCase("all") ) {
+				runOnTrain = false; runOnTest = false; runOnAll = true;
+			}
 		}
 		
 		init();
@@ -94,6 +137,9 @@ public class Main {
 			ex.printStackTrace();
 			System.exit(1);
 		}
+
+		// Load WordNet for any and all sieves.
+		wordnet = new WordNet();
 	}
 	
 	/**
@@ -145,9 +191,13 @@ public class Main {
 		// Create all the sieves first.
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
-		// Do each file independently.
-        
-		for( SieveDocument doc : info.getDocuments() ) {
+		// Data
+		SieveDocuments docs = Evaluate.getDevSet(info);
+		if( runOnTrain ) docs = Evaluate.getTrainSet(info);
+		else if( runOnAll ) docs = info;
+
+		// Do each file independently.        
+		for( SieveDocument doc : docs.getDocuments() ) {
 			System.out.println("Processing " + doc.getDocname() + "...");
 			
 			// Loop over the sieves in order.
@@ -201,6 +251,11 @@ public class Main {
 		// Create all the sieves first.
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
+		// Data
+		SieveDocuments docs = Evaluate.getDevSet(info);
+		if( runOnTrain ) docs = Evaluate.getTrainSet(info);
+		else if( runOnAll ) docs = info;
+		
 		// Empty TLink list and counts.
 		List<TLink> currentTLinks = new ArrayList<TLink>();
 		Counter<String> numCorrect = new ClassicCounter<String>();
@@ -208,7 +263,7 @@ public class Main {
 		Counter<String> numIncorrectNonVague = new ClassicCounter<String>();
 		
 		// Loop over documents.
-		for( SieveDocument doc : info.getDocuments() ) {
+		for( SieveDocument doc : docs.getDocuments() ) {
 			System.out.println("doc: " + doc.getDocname());
 			List<SieveSentence> sents = doc.getSentences();
 			// Gold links.
@@ -276,6 +331,30 @@ public class Main {
 			System.out.printf("p=%.2f\t%.0f of %.0f\tNon-VAGUE:\tp=%.2f\t%.0f of %.0f\n",
 					precision.getCount(key), correct, correct + numIncorrect.getCount(key),
 					precisionNonVague.getCount(key), correct, correct + numIncorrectNonVague.getCount(key));
+		}
+	}
+	
+	/**
+	 * Calls the train() function on all of the listed sieves. 
+	 */
+	public void trainSieves() {
+		if( info == null ) {
+			System.out.println("ERROR: no info file given as input for the precision gauntlet.");
+			System.exit(1);
+		}
+        
+		// Create all the sieves first.
+		Sieve sieves[] = createAllSieves(sieveClasses);
+		
+		// Data
+		SieveDocuments docs = Evaluate.getDevSet(info);
+		if( runOnTrain ) docs = Evaluate.getTrainSet(info);
+		else if( runOnAll ) docs = info;
+
+		// Train them!
+		for( Sieve sieve : sieves ) {
+			if( debug ) System.out.println("Training sieve: " + sieve.getClass().toString());
+			sieve.train(docs);
 		}
 	}
 	
@@ -416,6 +495,11 @@ public class Main {
 			main.markupAll();
 		}
 		
+		// The given SieveDocuments only has text and parses, so extract events/times first.
+		else if( args.length > 0 && args[args.length-1].equalsIgnoreCase("trainall") ) {
+			main.trainSieves();
+		}
+			
 		// Run just the TLink Sieve pipeline. Events/Timexes already in the given SieveDocuments.
 		else {
 			main.runSieves();

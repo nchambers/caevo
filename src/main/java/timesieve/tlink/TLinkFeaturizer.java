@@ -48,30 +48,30 @@ public class TLinkFeaturizer {
   TreeFactory _tf;
   public String _outpath = null;
 
-  boolean debug = false;
+  public boolean debug = false;
   
   // If all false, we only featurize the TLinks that were hand labeled in TimeBank.
-  boolean _doBethard = false;
-  boolean _doTurk = false;
-  boolean _doTempeval = false;
-  boolean _doHappened = false;
-  boolean _doClosed = false;   // NOTE: closed might have been derived with Bethard/Tempeval links, so 
+  public boolean _doBethard = false;
+  public boolean _doTurk = false;
+  public boolean _doTempeval = false;
+  public boolean _doHappened = false;
+  public boolean _doClosed = false;   // NOTE: closed might have been derived with Bethard/Tempeval links, so 
                               //       setting this to true should have those true too for consistency.
 
-  boolean _noEventFeats = true; // if true, don't add tense/aspect/polarity
+  public boolean _noEventFeats = true; // if true, don't add tense/aspect/polarity
   
-  boolean _ignoreSameSentence = false; // skips any tlink with both events in the same sentence
-  boolean _sameSentenceOnly = false;
-  boolean _diffSentenceOnly = false; // all cross-sentence links
-  boolean _neighborSentenceOnly = false; // all cross-sentence links
-  boolean _eventEventOnly = true;
-  boolean _eventEventDominates = false;
-  boolean _eventEventNoDominates = false;
-  boolean _eventTimeOnly   = false;
-  boolean _noEventTimeDiff = true;
-  boolean _eventDCTOnly    = false; // event-documentCreationTime links only.
-  boolean _noEventDCT      = false;
-  boolean _noTimeTime      = true;
+  public boolean _ignoreSameSentence = false; // skips any tlink with both events in the same sentence
+  public boolean _sameSentenceOnly = false;
+  public boolean _diffSentenceOnly = false; // all cross-sentence links
+  public boolean _neighborSentenceOnly = false; // all cross-sentence links
+  public boolean _eventEventOnly = true;
+  public boolean _eventEventDominates = false;
+  public boolean _eventEventNoDominates = false;
+  public boolean _eventTimeOnly   = false;
+  public boolean _noEventTimeDiff = true;
+  public boolean _eventDCTOnly    = false; // event-documentCreationTime links only.
+  public boolean _noEventDCT      = false;
+  public boolean _noTimeTime      = true;
   int _timebankMaxSentenceSpan = Integer.MAX_VALUE;
   int _turkMaxSentenceSpan = Integer.MAX_VALUE;
   
@@ -92,8 +92,8 @@ public class TLinkFeaturizer {
   }
 
   private void init() {
-    if( _wordnet == null )
-      _wordnet = new WordNet(_wordnetPath);
+  	// Use the Main function's WordNet so we don't keep loading multiple copies of it.
+    if( _wordnet == null ) _wordnet = Main.wordnet;
   }
   
   private void handleParams(String[] args) {
@@ -269,7 +269,7 @@ public class TLinkFeaturizer {
                 }
 
 //                System.out.println("Will create link=" + link);
-                TLinkDatum datum = createTLinkDatum(link, trees, events, alldeps, timexes, isdctlink);
+                TLinkDatum datum = createTLinkDatum(doc, link, isdctlink);
                 datum.setDocSource(doc.getDocname());
                 data.add(datum);
                 if( debug ) System.out.println("link: " + link);
@@ -323,7 +323,7 @@ public class TLinkFeaturizer {
    * @param timexes All of the timexes in the document.
    * @return A new TLinkDatum representing the given TLink.
    */
-  private TLinkDatum createTLinkDatum(TLink link, List<Tree> trees, List<TextEvent> events, List<List<TypedDependency>> alldeps, List<Timex> timexes, boolean isdctlink) {
+  private TLinkDatum createTLinkDatum(SieveDocument doc, TLink link, boolean isdctlink) {
     // Change to TempEval labels.
     if( _tempeval2Mode ) {
       link.fullToTempeval();
@@ -332,8 +332,8 @@ public class TLinkFeaturizer {
     
     // EVENT-EVENT links.
     if( link instanceof EventEventLink ) {
-      TextEvent event1 = findEvent(link.getId1(), events);
-      TextEvent event2 = findEvent(link.getId2(), events);
+      TextEvent event1 = doc.getEventByEiid(link.getId1());
+      TextEvent event2 = doc.getEventByEiid(link.getId2());
       TLink.Type label = link.getRelation();
 
       // Sanity check
@@ -341,7 +341,7 @@ public class TLinkFeaturizer {
         System.out.println("Didn't find event (" + link.getId1() + "," + link.getId2() + ")! event1=" + event1 + " event2=" + event2);
       }
 
-      TLinkDatum datum = createEventEventDatum(event1, event2, label, events, trees, alldeps.get(event1.getSid()));
+      TLinkDatum datum = createEventEventDatum(doc, event1, event2, label);
       datum.setOriginalTLink(link);
       return datum;
     }
@@ -353,11 +353,11 @@ public class TLinkFeaturizer {
       TextEvent event = null;
       Timex timex = null;
       if( link.getId1().startsWith("e") ) {
-        event = findEvent(link.getId1(), events);
-        timex = findTimex(link.getId2(), timexes);
+        event = doc.getEventByEiid(link.getId1());
+        timex = doc.getTimexByTid(link.getId2());
       } else if( link.getId1().startsWith("t") ) {
-        event = findEvent(link.getId2(), events);
-        timex = findTimex(link.getId1(), timexes);
+        event = doc.getEventByEiid(link.getId2());
+        timex = doc.getTimexByTid(link.getId1());
         label = link.invertRelation(label); // Always make it the (e,t) relation, not the (t,e) relation.
       } else {
         System.out.println("TLinkFeaturizer: Don't know how to handle this event id: " + link.getId1());
@@ -370,8 +370,8 @@ public class TLinkFeaturizer {
       }
       
       TLinkDatum datum;
-      if( isdctlink ) datum = createEventDocumentTimeDatum(event, timex, label, trees);
-      else datum = createEventTimeDatum(event, timex, label, trees, alldeps.get(event.getSid()));
+      if( isdctlink ) datum = createEventDocumentTimeDatum(doc, event, timex, label);
+      else datum = createEventTimeDatum(doc, event, timex, label);
       datum.setOriginalTLink(link);
       return datum;
     }
@@ -394,8 +394,9 @@ public class TLinkFeaturizer {
    * @param trees All parse trees for the entire document where these two events reside.
    * @return A single TLinkDatum object with relevant features.
    */
-  public TLinkDatum createEventTimeDatum(TextEvent event, Timex time, TLink.Type label, List<Tree> trees, List<TypedDependency> deps) {
+  public TLinkDatum createEventTimeDatum(SieveDocument doc, TextEvent event, Timex time, TLink.Type label) {
     Counter<String> feats = new ClassicCounter<String>();
+    List<Tree> trees = doc.getAllParseTrees();
 
     // Sanity check
     if( event == null || time == null ) 
@@ -414,7 +415,7 @@ public class TLinkFeaturizer {
     feats.addAll(getEventTimeBigram(event, time, trees));
     feats.addAll(getEventTimeTokenPathFeature(event, time, trees));
     feats.addAll(getParsePathFeatures(event, time, trees));
-    feats.addAll(getDepsPathFeatures(event, time, deps));
+    feats.addAll(getDepsPathFeatures(event, time, doc.getSentences().get(event.getSid()).getDeps()));
     feats.addAll(getDominanceFeatures(event, time, trees)); // always based on the event's dominance or not
         
     TLinkDatum datum = new TLinkDatum(label);
@@ -427,9 +428,10 @@ public class TLinkFeaturizer {
     return datum;
   }
   
-  public TLinkDatum createEventDocumentTimeDatum(TextEvent event, Timex time, TLink.Type label, List<Tree> trees) {
+  public TLinkDatum createEventDocumentTimeDatum(SieveDocument doc, TextEvent event, Timex time, TLink.Type label) {
     Counter<String> feats = new ClassicCounter<String>();
-
+    List<Tree> trees = doc.getAllParseTrees();
+    
     // Sanity check
     if( event == null ) 
       System.out.println("Null event in createEventDocumentTimeDatum(): " + event + " and " + time);
@@ -456,12 +458,16 @@ public class TLinkFeaturizer {
    * @param trees All parse trees for the entire document where these two events reside.
    * @return A single TLinkDatum object with relevant features.
    */
-  public TLinkDatum createEventEventDatum(TextEvent event1, TextEvent event2, TLink.Type label, List<TextEvent> events, List<Tree> trees, List<TypedDependency> deps) {
+  public TLinkDatum createEventEventDatum(SieveDocument doc, TextEvent event1, TextEvent event2, TLink.Type label) {
     Counter<String> feats = new ClassicCounter<String>();
+    List<Tree> trees = doc.getAllParseTrees();
+    List<TextEvent> events = doc.getEvents();
 
     // Sanity check
     if( event1 == null || event2 == null ) 
       System.out.println("Null events in createTLinkDatum(): " + event1 + " and " + event2);
+    
+    System.out.println("EEDatum: " + event1 + "\t" + event2 + "\t" + label);
     
     // Flip the order to the natural text order.
     if( !TimebankUtil.isBeforeInText(event1, event2) ) {
@@ -479,7 +485,7 @@ public class TLinkFeaturizer {
     feats.addAll(getTextOrderFeatures(event1, event2, trees));
     feats.addAll(getEventInterferenceFeatures(event1, event2, events));
     feats.addAll(getParsePathFeatures(event1, event2, trees));
-    feats.addAll(getDepsPathFeatures(event1, event2, deps));
+    feats.addAll(getDepsPathFeatures(event1, event2, doc.getSentences().get(event1.getSid()).getDeps()));
         
     TLinkDatum datum = new TLinkDatum(label);
     datum.addFeatures(feats);
@@ -501,9 +507,9 @@ public class TLinkFeaturizer {
    */
   private Counter<String> getSingleEventPOSFeatures(String featprefix, TextEvent event1, List<Tree> trees) {
     Counter<String> feats = new ClassicCounter<String>();
-
-    Tree tree1 = trees.get(event1.getSid());
     
+    Tree tree1 = trees.get(event1.getSid());
+
     String pos10 = TreeOperator.indexToPOSTag(tree1, event1.getIndex());
     String pos11 = TreeOperator.indexToPOSTag(tree1, event1.getIndex()-1);
     String pos12 = TreeOperator.indexToPOSTag(tree1, event1.getIndex()-2);
