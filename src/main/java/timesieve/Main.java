@@ -136,6 +136,8 @@ public class Main {
     String filename = System.getProperty("sieves");
     if( filename == null ) filename = "default.sieves";
     
+    System.out.println("Reading sieve list from: " + filename);
+    
     List<String> sieveNames = new ArrayList<String>();
     try {
     	BufferedReader reader = new BufferedReader(new FileReader(new File(filename)));
