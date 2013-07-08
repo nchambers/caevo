@@ -36,6 +36,7 @@ import timesieve.util.Directory;
 import timesieve.util.HandleParameters;
 import timesieve.util.Ling;
 import timesieve.util.TreeOperator;
+import timesieve.util.Util;
 import timesieve.util.WordNet;
 
 /**
@@ -495,51 +496,20 @@ public class TextEventClassifier {
    */
   public void loadClassifiers() {
   	String base = "/models/" + baseModelName;
-  	eventClassifier  = readClassifierFromFile(this.getClass().getResource(base));
-  	tenseClassifier  = readClassifierFromFile(this.getClass().getResource(base + "-tense"));
-  	aspectClassifier = readClassifierFromFile(this.getClass().getResource(base + "-aspect"));
-  	classClassifier  = readClassifierFromFile(this.getClass().getResource(base + "-class"));
-  }
-
-  /**
-   * Read a single serialized classifier into memory.
-   * @param url The path to the model. 
-   * @return The classifier object.
-   */
-  public Classifier<String,String> readClassifierFromFile(URL url) {
-  	if( url == null ) System.out.println("ERROR: null classifier path!");
-  	try {
-  		ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new GZIPInputStream(url.openStream())));
-  		Object o = ois.readObject();
-  		ois.close();
-  		Classifier<String,String> classifier = (Classifier<String,String>)o;
-  		return classifier;
-  	} catch(Exception ex) { 
-  		System.out.println("Had fatal trouble loading " + url);
-  		ex.printStackTrace(); System.exit(1); 
-  	}
-  	return null;
-  }
-
-  public Classifier<String,String> readClassifierFromFile(String path) {
-  	try {
-  		Classifier<String,String> classifier = (Classifier<String,String>)IOUtils.readObjectFromFile(path);
-  		return classifier;
-  	} catch(Exception ex) { 
-  		System.out.println("Had fatal trouble loading " + path);
-  		ex.printStackTrace(); System.exit(1); 
-  	}
-  	return null;
+  	eventClassifier  = Util.readClassifierFromFile(this.getClass().getResource(base));
+  	tenseClassifier  = Util.readClassifierFromFile(this.getClass().getResource(base + "-tense"));
+  	aspectClassifier = Util.readClassifierFromFile(this.getClass().getResource(base + "-aspect"));
+  	classClassifier  = Util.readClassifierFromFile(this.getClass().getResource(base + "-class"));
   }
   
   public void readClassifiersFromDirectory(String dir) {
   	if( !(new File(dir)).isDirectory() )
   		System.out.println("Not a directory: " + dir);
   	else {
-  		eventClassifier  = readClassifierFromFile(dir + File.separator + baseModelName);
-  		tenseClassifier  = readClassifierFromFile(dir + File.separator + baseModelName + "-tense");
-  		aspectClassifier = readClassifierFromFile(dir + File.separator + baseModelName + "-aspect");
-  		classClassifier  = readClassifierFromFile(dir + File.separator + baseModelName + "-class");  		
+  		eventClassifier  = Util.readClassifierFromFile(dir + File.separator + baseModelName);
+  		tenseClassifier  = Util.readClassifierFromFile(dir + File.separator + baseModelName + "-tense");
+  		aspectClassifier = Util.readClassifierFromFile(dir + File.separator + baseModelName + "-aspect");
+  		classClassifier  = Util.readClassifierFromFile(dir + File.separator + baseModelName + "-class");  		
   	}
   }
   
