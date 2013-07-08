@@ -393,25 +393,25 @@ public class Main {
 			TextEvent e1 = doc.getEventByEiid(id1);
 			String normId1 = t1 != null ? t1.getTid() : e1.getId();
 			String text1 = t1 != null ? t1.getText() : e1.getString();
+			int sid1 = t1 != null ? t1.getSid() : e1.getSid();
 			String id2 = link.getId2();
 			Timex t2 = doc.getTimexByTid(id2);
 			TextEvent e2 = doc.getEventByEiid(id2);
 			String normId2 = t2 != null ? t2.getTid() : e2.getId();
 			String text2 = t2 != null ? t2.getText() : e2.getString();
+			int sid2 = t2 != null ? t2.getSid() : e2.getSid();
+			builder.append(String.format("%s(%s[%s],%s[%s])", link.getRelation(),
+          text1, normId1, text2, normId2));
 			if (e1 != null && e2 != null) {
 				TextEvent.Tense e1Tense = e1.getTense();
 				TextEvent.Aspect e1Aspect = e1.getAspect();
 				TextEvent.Tense e2Tense = e2.getTense();
 				TextEvent.Aspect e2Aspect = e2.getAspect();
-				int sid1 = e1.getSid();
-				int sid2 = e2.getSid();
 			// simple display of relation, anchor texts, and anchor ids.
-			builder.append(String.format("%s(%s[%s],%s[%s])", link.getRelation(),
-                                         text1, normId1, text2, normId2));
 			builder.append(String.format("\n%s[%s-%s], %s[%s-%s]", 
 					normId1, e1Tense, e1Aspect, normId2, e2Tense, e2Aspect));
-			builder.append(String.format("\n%s\n%s", sents.get(sid1).sentence(), sents.get(sid2).sentence()));
 			}
+			builder.append(String.format("\n%s\n%s", sents.get(sid1).sentence(), sents.get(sid2).sentence()));
 		}
 		
 		return builder.toString();
