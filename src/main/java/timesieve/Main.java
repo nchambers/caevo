@@ -61,13 +61,13 @@ public class Main {
 	
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
-//    "RepCreationDay",
-//    "AdjacentVerbTimex",
-//    "TimeTimeSieve",
-//    "RepEventGovEvent",
-//    "ReichenbachDG13",
+    "RepCreationDay",
+    "AdjacentVerbTimex",
+    "TimeTimeSieve",
+    "RepEventGovEvent",
+    "ReichenbachDG13",
     
-    "MLEventEventSameSent",
+//    "MLEventEventSameSent",
     
     "AllVagueSieve",
 //                    "DependencyAnalyze",
