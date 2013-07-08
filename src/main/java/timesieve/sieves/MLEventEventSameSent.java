@@ -1,42 +1,31 @@
 package timesieve.sieves;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.io.IOUtils;
 import edu.stanford.nlp.ling.RVFDatum;
-import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
 import edu.stanford.nlp.trees.Tree;
-import edu.stanford.nlp.trees.TreeFactory;
 import edu.stanford.nlp.trees.TypedDependency;
 
 import timesieve.Main;
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
-import timesieve.InfoFile;
-import timesieve.Sentence;
 import timesieve.TextEvent;
-import timesieve.Timex;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TLinkClassifier;
 import timesieve.tlink.TLinkDatum;
 import timesieve.tlink.TLinkFeaturizer;
-import timesieve.tlink.TimeTimeLink;
 import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.Util;
 
 /**
- * JUST AN EXAMPLE
- * Stupid sieve that shows how to access basic data structures.
- * It generates BEFORE links between all intra-sentence pairs.
+ * Machine learned event-event pairs intra-sentence.
  * 
  * @author chambers
  */
@@ -76,13 +65,14 @@ public class MLEventEventSameSent implements Sieve {
 	private void init() {
 		// Flags
 		try {
-  		eesplit = TimeSieveProperties.getBoolean("MLEventEventSameSent.eesplit");
-  		debug = TimeSieveProperties.getBoolean("MLEventEventSameSent.debug");
+  		eesplit = TimeSieveProperties.getBoolean("MLEventEventSameSent.eesplit",false);
+  		debug = TimeSieveProperties.getBoolean("MLEventEventSameSent.debug",false);
 		} catch( IOException ex ) { }
 		
 		// Classifiers
 		readClassifiers();
 	}
+	
 	/**
 	 * The main function. All sieves must have this.
 	 */

@@ -1,6 +1,8 @@
 package timesieve;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,25 +62,9 @@ public class Main {
 	boolean runOnTest = false;
 	
 	// List the sieve class names in your desired order.
-	public final static String[] sieveClasses = {
-    "RepCreationDay",
-    "AdjacentVerbTimex",
-    "TimeTimeSieve",
-    "RepEventGovEvent",
-    "ReichenbachDG13",
-    
-//    "MLEventEventSameSent",
-    
-    "AllVagueSieve",
-//                    "DependencyAnalyze",
-//                    "Dependencies182",
-//                    "WordFeatures5",
-//                    "QuarterSieveReporting",
-//                    "StupidSieve",
-//                    "WordFeatures64",
-//                    "WordNet209"
-	};
-    
+	private String[] sieveClasses;
+
+	
 	/**
 	 * Constructor: give it the command-line arguments.
 	 */
@@ -86,7 +72,7 @@ public class Main {
 		Properties cmdlineProps = StringUtils.argsToProperties(args);
 		String infopath = null;
 		
-		// PROPERTIES CODE
+		// Read the properties from disk at the location specified by -Dprops=XXXXX
 		try {
 			TimeSieveProperties.load();
 			// Look for a given pre-processed InfoFile
@@ -137,9 +123,38 @@ public class Main {
 			ex.printStackTrace();
 			System.exit(1);
 		}
-
+		
 		// Load WordNet for any and all sieves.
 		wordnet = new WordNet();
+
+		// Load the sieve list.
+		sieveClasses = loadSieveList();
+	}
+	
+	
+	private String[] loadSieveList() {
+    String filename = System.getProperty("sieves");
+    if( filename == null ) filename = "default.sieves";
+    
+    List<String> sieveNames = new ArrayList<String>();
+    try {
+    	BufferedReader reader = new BufferedReader(new FileReader(new File(filename)));
+    	String line;
+    	while( (line = reader.readLine()) != null ) {
+    		if( !line.matches("^\\s*$") && !line.matches("^\\s*//.*$") ) {
+    			String name = line.trim();
+    			sieveNames.add(name);
+    		}
+    	}
+    	reader.close();
+    } catch( Exception ex ) {
+    	System.out.println("ERROR: no sieve list found");
+    	ex.printStackTrace();
+    	System.exit(1);
+    }
+    
+    String[] arr = new String[sieveNames.size()];
+    return sieveNames.toArray(arr);
 	}
 	
 	/**
