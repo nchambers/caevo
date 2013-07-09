@@ -179,7 +179,7 @@ public class SieveDocument {
 	public List<TLink> getTlinksOfType(Class linkClass) {
 		List<TLink> keep = new ArrayList<TLink>();
 	  for( TLink link : tlinks ) {
-	  	if( link.getClass() == linkClass )
+	  	if( link.getClass().equals(linkClass) )
 	      keep.add(link);
 	  }
 	  return keep;
