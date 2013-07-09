@@ -4,10 +4,8 @@ import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.PrintWriter;
 import java.net.URL;
@@ -37,15 +35,17 @@ public class Util {
    */
   public static Classifier<String,String> readClassifierFromFile(URL url) {
   	if( url == null ) System.out.println("ERROR: null classifier path!");
-  	try {
-  		ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new GZIPInputStream(url.openStream())));
-  		Object o = ois.readObject();
-  		ois.close();
-  		Classifier<String,String> classifier = (Classifier<String,String>)o;
-  		return classifier;
-  	} catch(Exception ex) { 
-  		System.out.println("Had fatal trouble loading " + url);
-  		ex.printStackTrace(); System.exit(1); 
+  	else {
+  		try {
+  			ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new GZIPInputStream(url.openStream())));
+  			Object o = ois.readObject();
+  			ois.close();
+  			Classifier<String,String> classifier = (Classifier<String,String>)o;
+  			return classifier;
+  		} catch(Exception ex) { 
+  			System.out.println("Had fatal trouble loading " + url);
+  			ex.printStackTrace(); System.exit(1); 
+  		}
   	}
   	return null;
   }
