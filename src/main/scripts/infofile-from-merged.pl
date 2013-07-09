@@ -43,6 +43,7 @@ close IN;
 my $good = 1;
 my $currentDoc = "";
 my %ids = ();
+my %tids = ();
 open(IN, $infopath) || die "Can't open $infopath ($!)\n";
 while( $line = <IN> ) {
 #    print "line: $line\n";
@@ -54,12 +55,16 @@ while( $line = <IN> ) {
 	    $good = 1;
 	    $currentDoc = $doc;
 	    %ids = (); # reset the ID mapping
+            %tids = ();
 	} else {
 	    $good = 0;
 	}
     }
     elsif( $good && $line =~ /<event id="(\w+)" eiid="(\w+)" .*/ ) {
 	$ids{$1} = $2;
+    }
+    elsif( $good && $line =~ /<timex.* tid="(\w+)" .*/ ) {
+	$tids{$1} = 1; # just tracking seen timex tid's
     }
     # Print all our TLinks.
     elsif( $good && $line =~ /<\/file>/ ) {
@@ -69,8 +74,12 @@ while( $line = <IN> ) {
 
 	    my $eiid1 = $events[0];
 	    my $eiid2 = $events[1];
+            my $tid1 = 1;
+            my $tid2 = 1;
 	    if( $events[0] =~ /^e/ ) { $eiid1 = $ids{$events[0]}; }
+	    if( $events[0] =~ /^t/ ) { $tid1 = $tids{$events[0]}; }
 	    if( $events[1] =~ /^e/ ) { $eiid2 = $ids{$events[1]}; }
+	    if( $events[1] =~ /^t/ ) { $tid2 = $tids{$events[1]}; }
 
 	    if( !$eiid1 ) { 
 #		print "Unknown eiid1 from $events[0]\n"; 
@@ -78,6 +87,9 @@ while( $line = <IN> ) {
 	    elsif( !$eiid2 ) {
 #		print "Unknown eiid2 from $events[1]\n"; 
 	    }
+            elsif( !$tid1 || !$tid2 ) {
+#		print "Unknown tid $tid1 or $tid2 from $events[0] or $events[1]\n"; 
+            }
 	    else {
 		my $type = "ee";
 		if( $events[0] =~ /^t/ && $events[1] =~ /^e/ ) { $type = "et"; }
