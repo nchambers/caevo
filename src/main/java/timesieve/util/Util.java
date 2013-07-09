@@ -1,5 +1,6 @@
 package timesieve.util;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -7,7 +8,9 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.io.PrintWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -19,12 +22,45 @@ import java.util.Map;
 import java.util.Set;
 import java.util.zip.GZIPInputStream;
 
+import edu.stanford.nlp.classify.Classifier;
+import edu.stanford.nlp.io.IOUtils;
 import edu.stanford.nlp.stats.Counter;
 
 
 public class Util {
   public Util() { }
 
+  /**
+   * Read a single serialized classifier into memory.
+   * @param url The path to the model. 
+   * @return The classifier object.
+   */
+  public static Classifier<String,String> readClassifierFromFile(URL url) {
+  	if( url == null ) System.out.println("ERROR: null classifier path!");
+  	try {
+  		ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new GZIPInputStream(url.openStream())));
+  		Object o = ois.readObject();
+  		ois.close();
+  		Classifier<String,String> classifier = (Classifier<String,String>)o;
+  		return classifier;
+  	} catch(Exception ex) { 
+  		System.out.println("Had fatal trouble loading " + url);
+  		ex.printStackTrace(); System.exit(1); 
+  	}
+  	return null;
+  }
+
+  public static Classifier<String,String> readClassifierFromFile(String path) {
+  	try {
+  		Classifier<String,String> classifier = (Classifier<String,String>)IOUtils.readObjectFromFile(path);
+  		return classifier;
+  	} catch(Exception ex) { 
+  		System.out.println("Had fatal trouble loading " + path);
+  		ex.printStackTrace(); System.exit(1); 
+  	}
+  	return null;
+  }
+  
   /**
    * Given an event, increment its count by the given amount.
    */

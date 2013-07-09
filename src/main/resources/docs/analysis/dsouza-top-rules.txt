@@ -21,7 +21,7 @@ if sameSentence=TRUE &&
 	entity1.pos=VB &&
 	entity1.hasSrlTemporalArgument=TRUE &&
 	entity1.srlTemporalArgument.contains(entity2) &&
-	entity2.hasWordIn5WordPrecedingContext=after
+	entity2.hasWordIn5WordPrecedingContext=after 
 then infer relation=AFTER
 e.g.: Columbia [announced]e84 the results after the [close]e2002 of the stock market.
 -------------------------------------------------
@@ -41,7 +41,7 @@ e.g.: Profit also [suffered] because of "intense" [discounting] in its long-haul
 -------------------------------------------------
 
 
-# Word Features_66 #
+# Word Features_66 # 19/22
 
 If e1 is in present or prespart tense, and e2 is in the future tense, 
 return BEFORE
@@ -62,7 +62,7 @@ If one state (e1) governs another (e2), e1 SIMULTANEOUS e2
 *NOTE* debug this sieve to make sure it really only applies 5 times in our data
 
 
-# Dependencies_200 #
+# Dependencies_200 # 15/17
 
 If e1 is a reporting verb and e2 is an occurrence in the past tense,
 if e1 governs e2 then 
