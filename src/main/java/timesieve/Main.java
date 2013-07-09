@@ -49,19 +49,21 @@ public class Main {
 	
 	// List the sieve class names in your desired order.
 	public final static String[] sieveClasses = {
-    "RepEventGovEvent",
-    "RepCreationDay",
+    //"RepEventGovEvent",
+    //"RepCreationDay",
     "TimeTimeSieve",
-                    "DependencyAnalyze",
-                    "Dependencies182",
-                    "WordFeatures5",
-                    "AllVagueSieve",
-                    "QuarterSieveReporting",
-                    "StupidSieve",
-                    "AdjacentVerbTimex",
-                    "ReichenbachDG13",
-                    "WordFeatures64",
-                    "WordNet209"
+    "RepEventRepEventSieve"
+    //"EventClassSieve",
+		/*"DependencyAnalyze",
+		"Dependencies182",
+		"WordFeatures5",
+		"AllVagueSieve",
+		"QuarterSieveReporting",
+		"StupidSieve",
+		"AdjacentVerbTimex",
+		"ReichenbachDG13",
+		"WordFeatures64",
+		"WordNet209"*/
 	};
     
 	/**
@@ -233,11 +235,11 @@ public class Main {
 					for( TLink pp : proposed ) {
 						Set<String> unorderedIdPair = unorderedIdPair(pp);
 						TLink goldLink = goldUnorderedIdPairs.get(unorderedIdPair);
-						if( Evaluate.isLinkCorrect(pp, goldLinks) )
+						if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
 							numCorrect.incrementCount(sieveClasses[xx]);
 						// only mark relations wrong if there's a conflicting human annotation
 						// (if there's no human annotation, we don't know if it's right or wrong)
-						else if (goldLink != null) {
+						} else if (goldLink != null) {
 							if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
 								numIncorrectNonVague.incrementCount(sieveClasses[xx]);
 							}

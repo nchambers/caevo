@@ -12,13 +12,14 @@ import timesieve.tlink.TimeTimeLink;
 import timesieve.util.Pair;
 
 /**
- * Order normalized date and time expressions by their Timex values
+ * Order date and time expressions by their Timex normalized values
  * 	- Currently does not consider durations or sets
  * 		- Durations require start and end times that we currently don't have
  *  - Only orders FUTURE_REF with times in the past, and PAST_REF with times in the future
  *  - Ignores PRESENT_REF due to inconsistent annotations of "now"
- *  - Current precision: .86 (63 of 73)
+ *  - Current precision: .86 (55 of 64)
  *  	- All imprecision is due to incorrect annotations
+ *  - Also orders all times with document creation time
  * 
  * @author Bill McDowell
  */
@@ -39,16 +40,24 @@ public class TimeTimeSieve implements Sieve {
 	}
 	
 	public List<TLink> annotateBySentencePair(SieveDocument doc) {
-		List<List<Timex>> allTimexes = this.allTimexesBySentencePair(doc.getTimexesBySentence());
+		List<List<Timex>> sentenceTimexes = doc.getTimexesBySentence();
 		List<TLink> proposed = new ArrayList<TLink>();
 		Timex creationTime = (doc.getDocstamp() ==  null || doc.getDocstamp().isEmpty()) ? null : doc.getDocstamp().get(0);
 		
-		for (List<Timex> closeTimexes : allTimexes) {
-			for (int t1 = 0; t1 < closeTimexes.size(); t1++) {						
-				for (int t2 = t1 + 1; t2 < closeTimexes.size(); t2++) {
-					TLink link = this.orderTimexes(closeTimexes.get(t1), closeTimexes.get(t2), creationTime);
+		for (int s = 0; s < sentenceTimexes.size(); s++) {
+			for (int t1 = 0; t1 < sentenceTimexes.get(s).size(); t1++) {						
+				for (int t2 = t1 + 1; t2 < sentenceTimexes.get(s).size(); t2++) {
+					TLink link = this.orderTimexes(sentenceTimexes.get(s).get(t1), sentenceTimexes.get(s).get(t2), creationTime);
 					if (link != null) 
 						proposed.add(link);
+				}
+				
+				if (s + 1 < sentenceTimexes.size()) {
+					for (int t2 = 0; t2 < sentenceTimexes.get(s+1).size(); t2++) {
+						TLink link = this.orderTimexes(sentenceTimexes.get(s).get(t1), sentenceTimexes.get(s+1).get(t2), creationTime);
+						if (link != null) 
+							proposed.add(link);
+					}
 				}
 			}
 		}
@@ -174,22 +183,6 @@ public class TimeTimeSieve implements Sieve {
 		//System.out.println(timex1.value() + "\t" + timex2.value() + "\t" + lType);
 		
 		return new TimeTimeLink(t1.getTid(), t2.getTid(), lType);
-	}
-	
-	private List<List<Timex>> allTimexesBySentencePair(List<List<Timex>> allTimexesBySentence) {
-		List<List<Timex>> allTimexes = new ArrayList<List<Timex>>();
-		
-		if (allTimexesBySentence.size() == 1)
-			allTimexes.add(allTimexesBySentence.get(0));
-		
-		for (int i = 0; i < allTimexesBySentence.size() - 1; i++) {
-			List<Timex> curTimexes = new ArrayList<Timex>();
-			curTimexes.addAll(allTimexesBySentence.get(i));
-			curTimexes.addAll(allTimexesBySentence.get(i+1));
-			allTimexes.add(curTimexes);
-		}
-		
-		return allTimexes;
 	}
 	
 	/**
