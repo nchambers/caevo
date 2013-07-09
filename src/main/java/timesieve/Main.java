@@ -61,7 +61,8 @@ public class Main {
                     "AdjacentVerbTimex",
                     "ReichenbachDG13",
                     "WordFeatures64",
-                    "WordNet209"
+                    //"WordNet209",
+                    "XCompDepSieve"
 	};
     
 	/**
@@ -315,6 +316,12 @@ public class Main {
 			builder.append(String.format("\n%s[%s-%s], %s[%s-%s]", 
 					normId1, e1Tense, e1Aspect, normId2, e2Tense, e2Aspect));
 			builder.append(String.format("\n%s\n%s", sents.get(sid1).sentence(), sents.get(sid2).sentence()));
+			}
+			else if (t1 != null){
+				builder.append(String.format(" %s(%s) | %s(%s)\n%s", t1.getText(), t1.getTid(), e2.getString(), e2.getId(), sents.get(t1.getSid()).sentence()));
+			}
+			else if (t2 != null){
+				builder.append(String.format(" %s(%s) | %s(%s)\n%s", t2.getText(), t2.getTid(), e1.getString(), e1.getId(), sents.get(t2.getSid()).sentence()));
 			}
 		}
 		
