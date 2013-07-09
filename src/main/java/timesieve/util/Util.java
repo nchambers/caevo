@@ -43,7 +43,7 @@ public class Util {
   			Classifier<String,String> classifier = (Classifier<String,String>)o;
   			return classifier;
   		} catch(Exception ex) { 
-  			System.out.println("Had fatal trouble loading " + url);
+  			System.out.println("ERROR: Had fatal trouble loading url=" + url);
   			ex.printStackTrace(); System.exit(1); 
   		}
   	}
@@ -55,7 +55,7 @@ public class Util {
   		Classifier<String,String> classifier = (Classifier<String,String>)IOUtils.readObjectFromFile(path);
   		return classifier;
   	} catch(Exception ex) { 
-  		System.out.println("Had fatal trouble loading " + path);
+  		System.out.println("ERROR: Had fatal trouble loading path=" + path);
   		ex.printStackTrace(); System.exit(1); 
   	}
   	return null;

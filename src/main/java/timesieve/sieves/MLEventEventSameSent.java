@@ -8,7 +8,6 @@ import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.io.IOUtils;
 import edu.stanford.nlp.ling.RVFDatum;
 import edu.stanford.nlp.trees.Tree;
-import edu.stanford.nlp.trees.TypedDependency;
 
 import timesieve.Main;
 import timesieve.SieveDocument;
@@ -27,16 +26,20 @@ import timesieve.util.Util;
 /**
  * Machine learned event-event pairs intra-sentence.
  * 
+ * Right now this just makes one classifier for all event-event pairs, and doesn't use the
+ * specific ones for syntactic dominance.
+ * 
  * @author chambers
  */
 public class MLEventEventSameSent implements Sieve {
-	Classifier<String,String> eeSameSentClassifier; // intra-sentence event-event links.
-  Classifier<String,String> eeSameSentExistsClassifier; // binary, is there a link or not?
-  Classifier<String,String> eeSameSentDominatesClassifier;   // intra-sentence, event-event syntactically dominates
-  Classifier<String,String> eeSameSentNoDominatesClassifier; // intra-sentence, event-event no syntactically dominates
+	Classifier<String,String> eeSameSentClassifier = null; // intra-sentence event-event links.
+  Classifier<String,String> eeSameSentExistsClassifier = null; // binary, is there a link or not?
+  Classifier<String,String> eeSameSentDominatesClassifier = null;   // intra-sentence, event-event syntactically dominates
+  Classifier<String,String> eeSameSentNoDominatesClassifier = null; // intra-sentence, event-event no syntactically dominates
   TLinkFeaturizer featurizer;
   
   String eeSameSentName = "tlink.ee.samesent.classifier-all";
+  
   boolean eesplit = false;
   boolean debug = true;
   int featMinOccurrence = 2;
@@ -45,8 +48,6 @@ public class MLEventEventSameSent implements Sieve {
    * Constructor uses the global properties for parameters.
    */
 	public MLEventEventSameSent() {
-		System.out.println("CONSTRUCTOR MLEventEventSameSent");
-
 		// Setup the featurizer for event-event intrasentence links.
 		featurizer = new TLinkFeaturizer();
 		featurizer._eventEventOnly = true;
@@ -69,7 +70,6 @@ public class MLEventEventSameSent implements Sieve {
   		debug = TimeSieveProperties.getBoolean("MLEventEventSameSent.debug",false);
 		} catch( IOException ex ) { }
 		
-		// Classifiers
 		readClassifiers();
 	}
 	
@@ -77,6 +77,10 @@ public class MLEventEventSameSent implements Sieve {
 	 * The main function. All sieves must have this.
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
+		// Classifier loading must have failed in init()
+		if( eeSameSentClassifier == null )
+			return null;
+		
 		return extractSameSentenceEventEventLinks(doc);
 	}
 
@@ -89,13 +93,9 @@ public class MLEventEventSameSent implements Sieve {
     if( debug ) System.out.println(sentences.size() + " sentences.");
     List<TLink> tlinks = new ArrayList<TLink>();
 
-    // Grab all the parse trees.
-    List<Tree> trees = doc.getAllParseTrees();
-
     // Loop over each sentence and get TLinks.
     for( SieveSentence sent : sentences ) {
       List<TextEvent> events = sent.events();
-      List<TypedDependency> deps = sent.getDeps();
 
       if( debug ) System.out.println("events: " + events);
       for( int ii = 0; ii < events.size()-1; ii++ ) {
@@ -141,18 +141,7 @@ public class MLEventEventSameSent implements Sieve {
   
   private void readClassifiers() {
   	String path = "/models/tlinks/" + eeSameSentName;
-  	
   	eeSameSentClassifier = Util.readClassifierFromFile(this.getClass().getResource(path));
-
-//    try {
-//      eeSameSentClassifier = (Classifier<String,String>)IOUtils.readObjectFromFile(dirpath + File.separator + "tlink.ee.samesent.classifier-all");
-//      eeSameSentExistsClassifier = (Classifier<String,String>)IOUtils.readObjectFromFile(dirpath + File.separator + "tlink.ee.samesent.exists.classifier-all");
-//      eeSameSentDominatesClassifier = (Classifier<String,String>)IOUtils.readObjectFromFile(dirpath + File.separator + "tlink.ee.samesent.dominate.classifier-all");
-//      eeSameSentNoDominatesClassifier = (Classifier<String,String>)IOUtils.readObjectFromFile(dirpath + File.separator + "tlink.ee.samesent.nodominate.classifier-all");
-//    } catch(Exception ex) { 
-//      System.out.println("Had fatal trouble loading " + dirpath);
-//      ex.printStackTrace(); System.exit(1); 
-//    }
   }
   
   
@@ -171,7 +160,7 @@ public class MLEventEventSameSent implements Sieve {
     	}
     }
     
-    eeSameSentClassifier = TLinkClassifier.train(data, featMinOccurrence);
+    eeSameSentClassifier = TLinkClassifier.train(data, featMinOccurrence);    
     
     try {
     	IOUtils.writeObjectToFile(eeSameSentClassifier, eeSameSentName);
