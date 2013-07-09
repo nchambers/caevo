@@ -77,7 +77,7 @@ public class TextEventPattern implements Serializable {
 			str.append(this.aspect.toString());
 		
 		
-		return str.hashCode();
+		return str.toString().hashCode();
 	}
 	
 	public boolean equals(Object o) {

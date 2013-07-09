@@ -32,6 +32,8 @@ public class TextEventPairPattern implements Serializable {
 	}
 	
 	public TextEventPairPattern(TextEvent canonicalEvent1, TextEvent canonicalEvent2, boolean keepClass, boolean keepTense, boolean keepAspect, boolean keepSentenceRelation) {
+		this.p1 = new TextEventPattern();
+		this.p2 = new TextEventPattern();
 		setFromCanonicalEvent(canonicalEvent1, canonicalEvent2, keepClass, keepTense, keepAspect, keepSentenceRelation);
 	}
 	
@@ -80,7 +82,7 @@ public class TextEventPairPattern implements Serializable {
 	}
 	
 	public int hashCode() {
-		return this.p1.hashCode() ^ this.p2.hashCode() ^ ((this.sentenceRelation == null) ? 0 :this.sentenceRelation.hashCode());
+		return this.p1.hashCode() ^ this.p2.hashCode() ^ ((this.sentenceRelation == null) ? 0 : this.sentenceRelation.toString().hashCode());
 	}
 	
 	public boolean equals(Object o) {

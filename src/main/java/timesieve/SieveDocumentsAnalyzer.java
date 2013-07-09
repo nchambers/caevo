@@ -39,6 +39,7 @@ public class SieveDocumentsAnalyzer {
 				}
 					
 				TextEventPairPattern pairPattern = new TextEventPairPattern(e1, e2, distinguishClass, distinguishTense, distinguishAspect, distinguishSentence);
+				
 				if (!linkCounts.containsKey(pairPattern))
 					linkCounts.put(pairPattern, new HashMap<TLink.Type, Integer>());
 				if (!linkCounts.get(pairPattern).containsKey(link.getRelation()))

@@ -21,13 +21,18 @@ import timesieve.tlink.EventEventLink;
  * based on these patterns.  Rules are created for pairs of event types that tend
  * to have VAGUE links above a certain precision across a minimum number of 
  * examples.
+ * 
+ * Current results:
+ * min_p: .7 min_ex: 20 => .75 (462 of 614)
+ * min_p: .8 min_ex: 20 => .84 (179 of 214)
+ * min_p: .85 min_ex: 20 => .87 (71 of 82)
  *
  * @author Bill McDowell
  */
 public class FrequencyVagueSieve implements Sieve {
 	/* FIXME: MOVE TO PROPERTIES */
-	private static String RULE_SAVE_PATH = "/models/tlinks/FrequencyVagueSieve";
-	private static double MINIMUM_RULE_PRECISION = .7;
+	private static String RULE_SAVE_PATH = "src/main/resources/models/tlinks/FrequencyVagueSieve";
+	private static double MINIMUM_RULE_PRECISION = .85;
 	private static int MINIMUM_PRECISION_EXAMPLES = 20;
 	
 	/* The following static integers and matrix encode which types of rules are constructed by this sieve.
@@ -56,15 +61,13 @@ public class FrequencyVagueSieve implements Sieve {
 		this.vaguePatterns = new ArrayList<TextEventPairPattern>();
 		
 		/* FIXME: Put this somewhere else */
-		URL resource = this.getClass().getResource(FrequencyVagueSieve.RULE_SAVE_PATH);
   	try {
-  		ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(resource.openStream()));
+  		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FrequencyVagueSieve.RULE_SAVE_PATH));
   		Object o = ois.readObject();
   		ois.close();
   		this.vaguePatterns = (List<TextEventPairPattern>)o;
   	} catch(Exception ex) { 
-  		System.out.println("Had fatal trouble loading " + resource);
-  		ex.printStackTrace(); System.exit(1); 
+  		System.out.println("FrequencyVagueSieve: Had fatal trouble loading " + FrequencyVagueSieve.RULE_SAVE_PATH); 
   	}
 	}
 	
@@ -138,8 +141,10 @@ public class FrequencyVagueSieve implements Sieve {
 																					 FrequencyVagueSieve.distinguishedFeatures[t][ASPECT_INDEX],
 																					 FrequencyVagueSieve.distinguishedFeatures[t][SENTENCE_INDEX]);
 	
-			
 			for (Entry<TextEventPairPattern, HashMap<TLink.Type, Integer>> e1 : linkTypeCounts.entrySet()) {
+				if (!e1.getValue().containsKey(TLink.Type.VAGUE))
+					continue;
+				
 				int totalCount = 0;
 				for (Entry<TLink.Type, Integer> e2 : e1.getValue().entrySet()) {
 					totalCount += e2.getValue();
@@ -149,21 +154,21 @@ public class FrequencyVagueSieve implements Sieve {
 				if (precision >= FrequencyVagueSieve.MINIMUM_RULE_PRECISION
 				 && totalCount >= FrequencyVagueSieve.MINIMUM_PRECISION_EXAMPLES) {
 					this.vaguePatterns.add(e1.getKey());
+					System.out.println("FrequencyVagueSieve found rule: " + e1.getKey() + " Precision: " + precision + " Count: " + totalCount);
 				}
 				
 			}
 		}
 		
 		/* FIXME: Put this somewhere else */
-		URL resource = this.getClass().getResource(FrequencyVagueSieve.RULE_SAVE_PATH);
 		try {
-			FileOutputStream fos = new FileOutputStream(resource.getPath());
+			FileOutputStream fos = new FileOutputStream(FrequencyVagueSieve.RULE_SAVE_PATH);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(this.vaguePatterns);
 			oos.flush();
 			oos.close();
 		} catch (Exception e) {
-  		System.out.println("Had fatal trouble loading " + resource);
+  		System.out.println("Had fatal trouble loading " + FrequencyVagueSieve.RULE_SAVE_PATH);
   		e.printStackTrace(); System.exit(1); 
 		}
 	}
