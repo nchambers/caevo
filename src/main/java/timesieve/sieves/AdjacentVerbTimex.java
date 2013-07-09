@@ -29,46 +29,44 @@ import edu.stanford.nlp.trees.TypedDependency;
  * Syntactic features are naive in that they are specified at the surface level.
  * Semantic features have not yet been specified.
  * 
- * The order of the event and the timex (which comes first in the sentence),
- * as well as the maximum distance between the two entities, is parameterized:
- * 1. adjType --> VerbTimex, TimexVerb, unordered
- * 		specifies the allowed ordering for event and timex
- * 2. numInterWords --> 0, 1, ...
- * 		specifies the maximum number of words allowed between event and timex.
- * 		if a given event/timex pair exceeds this number it is not labeled.
  * 
- * Initially we had the following results:
- ***adjType = VerbTimex*** (N is numInterWords)
- * N    prec.   c     t
- * 0 		p=0.95	20 of 21
- * 1 		p=0.84	31 of 37	
- * 2 		p=0.72	39 of 54
- * 3 		p=0.63	41 of 65
- * 4 		p=0.73	49 of 76
+ * Parameters
+ * These parameters are booleans. If true, classify the corresponding pairs
+ * 	AdjacentVerbTimex.EVENT_BEFORE_TIMEX
+ * 	AdjacentVerbTimex.TIMEX_BEFORE_EVENT
+ * 	AdjacentVerbTimex.EVENT_GOVERNS_TIMEX
+ * 	AdjacentVerbTimex.TIMEX_GOVERNS_EVENT
+ * This parameter specifies the maximum number of words that may intervene between
+ * the verb and timex
+ * 	AdjacentVerbTimex.numInterWords
  * 
- ***adjType = TimexVerb*** (N is numInterWords)
- * 0		p=0.45	5 of 11
+ * numInterWords = 2
+ * EVENT_BEFORE_TIMEX
+ * AdjacentVerbTimex		p=0.83	38 of 46	Non-VAGUE:	p=0.95	38 of 40
  * 
- ***adjType = Uunordered*** (N is numInterWords)
- * 0		p=0.78	25 of 32
+ * TIMEX_BEFORE_EVENT
+ * AdjacentVerbTimex		p=0.71	17 of 24	Non-VAGUE:	p=0.74	17 of 23
  * 
- * After adding simple rules based on the preposition immediately
- * preceding the timex:
+ * EVENT_GOVERNS_TIMEX
+ * AdjacentVerbTimex		p=0.64	44 of 69	Non-VAGUE:	p=0.85	44 of 52
  * 
- *  N    prec.   c     t
- * 0 		p=0.95	20 of 21
- * 1 		p=0.89	33 of 37
- * 2 		p=0.83	45 of 54
- * 3 		p=0.75	49 of 65
- * 4 		p=0.75	57 of 76
- * 5		p=0.65	62 of 95  (just for fun, no comparison to above) 
- * 6		p=0.63	65 of 104 (just for fun, no comparison to above)
+ * TIMEX_GOVERNS_EVENT - No attested cases! does this make sense?
+ * AdjacentVerbTimex		p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0
  * 
- * Regarding performance drop for N = 3. These happened to include several cases 
- * that were labeled Vague because of annotator disagreement on how to treat events
- * financial indicators (e.g. "unemployment *declined* to 3.8% *last month*").
+ * EVENT_BEFORE_TIMEX and EVENT_GOVERNS_TIMEX
+ * AdjacentVerbTimex		p=0.66	61 of 93	Non-VAGUE:	p=0.88	63 of 72
  * 
- * More to come for other values of adjType...
+ * numInterWords
+ * EVENT_BEFORE_TIMEX, TIMEX_BEFORE_EVENT, EVENT_GOVERNS_TIMEX
+ * AdjacentVerbTimex		p=0.60	83 of 138	Non-VAGUE:	p=0.74	83 of 112
+ * 
+ * EVENT_BEFORE_TIMEX uses preposition-based rules (default is_included)
+ * TIMEX_BEFORE_EVENT default is_included; vague for event "now"; vague when "said" precedes timex
+ * 	TODO: generalize the third rule to reporting verbs
+ *  TODO: check if that reporting verb governs the event after the timex
+ * EVENT_GOVERNS_TIMEX just returns is_included
+ * 	TODO: add more rules; this is hard because many errors are with event = "now",
+ * 				or vague
  * 
  * @author cassidy
  */
@@ -180,31 +178,44 @@ public class AdjacentVerbTimex implements Sieve {
 					
 					// Now we determine what TLink to add (if any) for the event/timex pair
 					TLink tlink = null;
-					TLink flatTlink = null;
-					TLink depTlink = null;
+					TLink flatTlink_et = null;
+					TLink depTlink_et = null;
+					TLink flatTlink_te = null;
+					TLink depTlink_te = null;
 					// Now, classify pairs for various parameter settings
 					
 				
 					// if verb is before timex, use the following rules...
 					if (EVENT_BEFORE_TIMEX && verbIsBeforeTimex) {
-						flatTlink = eventBeforeTimex(eventToTimexDist, event, timex, sent, tree);
+						flatTlink_et = eventBeforeTimex(eventToTimexDist, event, timex, sent, tree);
 					}
 					else if (TIMEX_BEFORE_EVENT && timexIsBeforeVerb) {
-						flatTlink = timexBeforeEvent(eventToTimexDist, event, timex, sent, tree);
+						if (eventDoesGovernTimex == false)
+							flatTlink_te = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
+						else
+							flatTlink_te = timexBeforeEvent(eventToTimexDist, event, timex, sent, tree);
 					}
 					if (EVENT_GOVERNS_TIMEX && eventDoesGovernTimex) {
-						depTlink = eventGovernsTimex(eventToTimexDist, event, timex, sent, tree, depRel);
+						depTlink_et = eventGovernsTimex(eventToTimexDist, event, timex, sent, tree, depRel);
 						
 					}
 					else if (TIMEX_GOVERNS_EVENT && timexDoesGovernEvent) {
 						// TIMEX_GOVERNS_EVENT is never true in the data!
-						depTlink = timexGovernsEvent(eventToTimexDist, event, timex, sent, tree, depRel);
+						depTlink_te = timexGovernsEvent(eventToTimexDist, event, timex, sent, tree, depRel);
 					}
 				
 					// TODO Decide which tlink to take depending on parameters
 					// For now, take flatTlink, backoff to depTlink
-					if (flatTlink != null) tlink = flatTlink;
-					else tlink = depTlink;
+					if (depTlink_te != null)
+						tlink = depTlink_te;
+					if (flatTlink_te != null)
+						tlink = flatTlink_te;
+					if (flatTlink_et != null) 	
+						tlink = flatTlink_et;
+					if (depTlink_et != null) 
+						tlink = depTlink_et;
+					
+					
 					
 					// Finally add tlink (as long as there is one)
 					if (tlink != null) proposed.add(tlink);
@@ -236,7 +247,7 @@ private TLink eventGovernsTimex(int eventToTimexDist, TextEvent event,
 			Timex timex, SieveSentence sent, Tree tree, GrammaticalRelation depRel) {
 	TLink tlink = null;
 	tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.IS_INCLUDED);
-	
+	//tlink = eventBeforeTimex(eventToTimexDist,event,timex,sent,tree);
 	if (debug == true) {
 		System.out.printf("Event-Governs-Timex: %s(%s) <%s> %s(%s)\n%s\n", 
 											 event.getString(), event.getId(), depRel.getShortName(),
@@ -246,7 +257,6 @@ private TLink eventGovernsTimex(int eventToTimexDist, TextEvent event,
 	 return tlink;
 	  
 	}
-
 
 private boolean validateEvent(TextEvent event, Tree tree, SieveSentence sent) {
 		String eventPos = posTagFromTree(tree, sent, event.getIndex());
@@ -259,7 +269,11 @@ private TLink timexBeforeEvent(int eventToTimexDist, TextEvent event, Timex time
 	 	TLink tlink = null;
 		// If there are no intervening words, label is_included
 	 	if (timex.getText().toLowerCase().equals("now")) {
-			tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
+	 		if (event.getAspect() == TextEvent.Aspect.PROGRESSIVE)
+	 			tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.INCLUDES);
+	 		else
+	 			tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
+	 		
 		}
 	 	else if (eventToTimexDist == -1) {
 			tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.IS_INCLUDED);
@@ -267,6 +281,9 @@ private TLink timexBeforeEvent(int eventToTimexDist, TextEvent event, Timex time
 		else {
 			if (timex.getTokenOffset() > 1 && getTextAtIndex(timex.getTokenOffset() - 1, sent).equals("said"))
 				tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
+			else
+				//return eventBeforeTimex(eventToTimexDist,event,timex,sent,tree);
+				tlink = new EventTimeLink(event.getEiid(), timex.getTid(), TLink.Type.IS_INCLUDED);
 		}
 		if (debug == true) {
 			System.out.printf("TimexVerb: %s\n%s | %s", sent.sentence(), event.getString(), timex.getText());
@@ -365,6 +382,9 @@ private TypedDependency getDepSentIndexPair(List<TypedDependency> deps, int sent
 			return new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.BEFORE) ;
 		}
 		else if (prepText.equals("from")) {
+			return new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.AFTER) ;
+		}
+		else if (prepText.equals("after")) {
 			return new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.AFTER) ;
 		}
 		// If we encounter a different IN (prep/sub conj)
