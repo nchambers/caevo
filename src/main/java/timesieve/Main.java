@@ -54,7 +54,7 @@ public class Main {
 	SieveDocuments infoUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
-	boolean debug = true;
+	boolean debug = false;
 
 	// If none are true, then it runs on dev
 	boolean runOnTrain = true;
@@ -278,6 +278,9 @@ public class Main {
 		Counter<String> numCorrect = new ClassicCounter<String>();
 		Counter<String> numIncorrect = new ClassicCounter<String>();
 		Counter<String> numIncorrectNonVague = new ClassicCounter<String>();
+		Map<String,Counter<String>> guessCounts = new HashMap<String,Counter<String>>();
+		for( String sc : sieveClasses ) guessCounts.put(sc, new ClassicCounter<String>());
+
 		
 		// Loop over documents.
 		for( SieveDocument doc : docs.getDocuments() ) {
@@ -289,26 +292,31 @@ public class Main {
 			for (TLink tlink : goldLinks) {
 				goldUnorderedIdPairs.put(unorderedIdPair(tlink), tlink);
 			}
-			
+
 			// Loop over sieves.
 			for( int xx = 0; xx < sieveClasses.length; xx++ ) {
+				String sieveName = sieveClasses[xx];
 				Sieve sieve = sieves[xx];
 				if( sieve != null ) {
-					
+
 					// Run it.
 					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
-					
-                    //					System.out.println("Proposed: " + proposed);
-                    //					System.out.println("Gold links: " + goldLinks);
-					
+
+					//					System.out.println("Proposed: " + proposed);
+					//					System.out.println("Gold links: " + goldLinks);
+
 					// Check proposed links.
 					for( TLink pp : proposed ) {
 						Set<String> unorderedIdPair = unorderedIdPair(pp);
 						TLink goldLink = goldUnorderedIdPairs.get(unorderedIdPair);
+						
+						if( goldLink != null ) 
+							guessCounts.get(sieveName).incrementCount(goldLink.getOrderedRelation()+" "+pp.getOrderedRelation());
+						
 						if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
 							numCorrect.incrementCount(sieveClasses[xx]);
-						// only mark relations wrong if there's a conflicting human annotation
-						// (if there's no human annotation, we don't know if it's right or wrong)
+							// only mark relations wrong if there's a conflicting human annotation
+							// (if there's no human annotation, we don't know if it's right or wrong)
 						} else if (goldLink != null) {
 							if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
 								numIncorrectNonVague.incrementCount(sieveClasses[xx]);
@@ -316,10 +324,9 @@ public class Main {
 							numIncorrect.incrementCount(sieveClasses[xx]);
 							if (debug) {
 								System.out.printf(
-                                                  "%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
-                                                  sieveClasses[xx], doc.getDocname(), goldUnorderedIdPairs.get(unorderedIdPair), pp,
-                                                  getLinkDebugInfo(pp, sents, doc));
-								
+										"%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
+										sieveClasses[xx], doc.getDocname(), goldUnorderedIdPairs.get(unorderedIdPair), pp,
+										getLinkDebugInfo(pp, sents, doc));
 							}
 						}
 					}
@@ -349,7 +356,37 @@ public class Main {
 					precision.getCount(key), correct, correct + numIncorrect.getCount(key),
 					precisionNonVague.getCount(key), correct, correct + numIncorrectNonVague.getCount(key));
 		}
+		for( String key : sortedKeys ) {
+			System.out.println("** " + key + "**");
+			confusionMatrix(guessCounts.get(key));
+		}
 	}
+	
+	private void printConfusionMatrices(Map<String,Counter<String>> guessCounts) {
+		for( String sieveName : guessCounts.keySet() ) {
+			
+			confusionMatrix(guessCounts.get(sieveName));
+		}
+	}
+	
+	private void confusionMatrix(Counter<String> guessCounts) {
+		final String[] labels = { "BEFORE", "AFTER", "SIMULTANEOUS", "INCLUDES", "IS_INCLUDED", "VAGUE" };
+		for( String label2 : labels )
+			System.out.print("\t" + label2.substring(0,Math.min(label2.length(), 6)));
+		System.out.println();
+		
+		for( String label1 : labels ) {
+			System.out.print(label1.substring(0, Math.min(label1.length(), 6)) + "\t");
+			
+			for( String label2 : labels ) {
+				if( guessCounts.containsKey(label1+" "+label2) )
+					System.out.print((int)guessCounts.getCount(label1+" "+label2) + "\t");
+				else System.out.print("0\t");
+			}
+			System.out.println();
+		}
+	}
+	
 	
 	/**
 	 * Calls the train() function on all of the listed sieves. 
