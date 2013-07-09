@@ -202,7 +202,7 @@ public class AdjacentVerbTimex implements Sieve {
 					}
 				
 					// TODO Decide which tlink to take depending on parameters
-					// For now, take depTlink, backoff to flatTlink
+					// For now, take flatTlink, backoff to depTlink
 					if (flatTlink != null) tlink = flatTlink;
 					else tlink = depTlink;
 					
