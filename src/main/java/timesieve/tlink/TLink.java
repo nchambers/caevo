@@ -55,30 +55,23 @@ public class TLink implements Comparable<TLink> {
   }
   
   public static TLink.Type invertRelation(TLink.Type relation) {
-    
-    // TODO: need to write this for all modes!!
-    
-    // NOTE: I think these inversions are true for every possible mode. But better to address
-    //       each mode as I need it, rather than assume it.     
-    if( TLink.currentMode == TLink.Mode.FULL || TLink.currentMode == TLink.Mode.TEMPEVAL ) {
-      if( relation == TLink.Type.BEFORE ) return TLink.Type.AFTER;
-      if( relation == TLink.Type.IBEFORE ) return TLink.Type.IAFTER;
-      if( relation == TLink.Type.AFTER ) return TLink.Type.BEFORE;
-      if( relation == TLink.Type.IAFTER ) return TLink.Type.IBEFORE;
-      if( relation == TLink.Type.INCLUDES ) return TLink.Type.IS_INCLUDED;
-      if( relation == TLink.Type.IS_INCLUDED ) return TLink.Type.INCLUDES;
-      if( relation == TLink.Type.BEGINS ) return TLink.Type.BEGUN_BY;
-      if( relation == TLink.Type.BEGUN_BY ) return TLink.Type.BEGINS;
-      if( relation == TLink.Type.ENDS ) return TLink.Type.ENDED_BY;
-      if( relation == TLink.Type.ENDED_BY ) return TLink.Type.ENDS;
-      if( relation == TLink.Type.BEFORE_OR_OVERLAP ) return TLink.Type.OVERLAP_OR_AFTER;
-      if( relation == TLink.Type.OVERLAP_OR_AFTER ) return TLink.Type.BEFORE_OR_OVERLAP;
-      if( relation == TLink.Type.OVERLAP || relation == TLink.Type.SIMULTANEOUS || relation == TLink.Type.NONE || relation == TLink.Type.VAGUE || relation == TLink.Type.UNKNOWN ) return relation;
-      System.err.println("ERROR in TLink.invertRelation, unmatched relation " + relation);
-    }      
-      
-    System.err.println("ERROR in TLink.invertRelation, no code for mode " + currentMode);
-    System.exit(1);
+  	if( relation == TLink.Type.BEFORE ) 					return TLink.Type.AFTER;
+  	if( relation == TLink.Type.AFTER ) 						return TLink.Type.BEFORE;
+  	if( relation == TLink.Type.IBEFORE )					return TLink.Type.IAFTER;
+  	if( relation == TLink.Type.IAFTER ) 					return TLink.Type.IBEFORE;
+  	if( relation == TLink.Type.INCLUDES ) 				return TLink.Type.IS_INCLUDED;
+  	if( relation == TLink.Type.IS_INCLUDED )			return TLink.Type.INCLUDES;
+  	if( relation == TLink.Type.BEGINS ) 					return TLink.Type.BEGUN_BY;
+  	if( relation == TLink.Type.BEGUN_BY ) 				return TLink.Type.BEGINS;
+  	if( relation == TLink.Type.ENDS ) 						return TLink.Type.ENDED_BY;
+  	if( relation == TLink.Type.ENDED_BY ) 					return TLink.Type.ENDS;
+  	if( relation == TLink.Type.BEFORE_OR_OVERLAP ) 	return TLink.Type.OVERLAP_OR_AFTER;
+  	if( relation == TLink.Type.OVERLAP_OR_AFTER ) 	return TLink.Type.BEFORE_OR_OVERLAP;
+  	if( relation == TLink.Type.OVERLAP || relation == TLink.Type.SIMULTANEOUS || 
+  			relation == TLink.Type.NONE || relation == TLink.Type.VAGUE || relation == TLink.Type.UNKNOWN ) 
+  		return relation;
+
+  	System.err.println("ERROR in TLink.invertRelation, unmatched relation " + relation);
     return null;
   }
   
@@ -283,6 +276,18 @@ public class TLink implements Comparable<TLink> {
   	if( this.id2.equals(other.id1) && this.id1.equals(other.id2) )
   		return true;
   	return false;
+  }
+  
+  /**
+   * Return this link's relation based on the alphanumeric order of the two event IDs.
+   * This allows us to compare two tlinks over the same events but with possibly different guessed labels.
+   * @return
+   */
+  public Type getOrderedRelation() {
+  	if( id1.compareTo(id2) < 0 )
+  		return relation;
+  	else
+  		return invertRelation(relation);
   }
   
 }

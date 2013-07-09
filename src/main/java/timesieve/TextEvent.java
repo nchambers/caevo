@@ -361,12 +361,12 @@ public class TextEvent {
   }
   
   public String toString() {
-    String str = this.ID + "(" + index + ") - " + getString();
+    String str = this.ID + "(" + this.eiid+ ") " + getString() + "-" + this.index;
     if( this.entities != null ) {
       for( Map.Entry<Integer, String> entry : this.entities.entrySet() )
         str += " (" + entry.getKey() + " " + entry.getValue() + ")";
     }
-    if( this.prepClause != null ) str += " (PREP " + this.prepClause + ")";
+//    if( this.prepClause != null ) str += " (PREP " + this.prepClause + ")";
     //	str += "\nt=" + tense + " a=" + aspect + " m=" + modality + 
     //	    " p=" + polarity + " c=" + theclass;
     return str;

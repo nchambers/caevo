@@ -177,7 +177,7 @@ public class TLinkFeaturizer {
         // --- Create the TLink features ---
 
         for( TLink link : tlinks ) {
-          System.out.println("tlink: " + link);
+//          System.out.println("tlink: " + link);
 
           if( (_noTimeTime && link instanceof TimeTimeLink) )
             continue;
@@ -209,7 +209,7 @@ public class TLinkFeaturizer {
           }
 
           // Statistics tracking.
-          if( !link.closed && !isdctlink && sentenceSpan(link, events, timexes) == 0 ) {
+          if( !link.closed && !isdctlink && sentenceSpan(doc, link) == 0 ) {
             if( link.getOrigin() == null ) numTimebank++;
             else if( link.getOrigin().equals("bethard") ) numBethard++;
             else if( link.getOrigin().equals("turk") ) numTurk++;
@@ -228,8 +228,9 @@ public class TLinkFeaturizer {
             if( !link.closed ) {
               // Only do links that have labels for now. Skip OVERLAP from Bethard...Tempeval3 does not have this relation.
               if( link.getRelation() != TLink.Type.NONE && link.getRelation() != TLink.Type.OVERLAP ) {
-                //                 System.out.println("link: " + link);
-                int sentenceSpan = (isdctlink ? -1 : sentenceSpan(link, events, timexes)); 
+                int sentenceSpan = (isdctlink ? -1 : sentenceSpan(doc, link));
+
+                System.out.println("link: " + link + "\tspan=" + sentenceSpan);
 
                 if( _eventDCTOnly && !isdctlink ) {
                   if( debug ) System.out.println("Skipping non-DCT link " + link);
@@ -288,22 +289,28 @@ public class TLinkFeaturizer {
     return data;
   }
   
-  private int sentenceSpan(TLink link, List<TextEvent> events, List<Timex> timexes) {
+  /**
+   * Better function that uses the SieveDocument properly.
+   * @param doc The document from which the link derives.
+   * @param link The link we care about.
+   * @return The number of sentences that are spanned by this link (0 is the same sentence).
+   */
+  private int sentenceSpan(SieveDocument doc, TLink link) {
     if( link instanceof EventEventLink ) {
-      TextEvent event1 = findEvent(link.getId1(), events);
-      TextEvent event2 = findEvent(link.getId2(), events);
+      TextEvent event1 = doc.getEventByEiid(link.getId1());
+      TextEvent event2 = doc.getEventByEiid(link.getId2());
       return Math.abs(event1.getSid() - event2.getSid());
     } 
     else if( link instanceof EventTimeLink ) {
       int first = 0, second = 0;
       if( link.getId1().startsWith("e") ) {
-        TextEvent event = findEvent(link.getId1(), events);
+        TextEvent event = doc.getEventByEiid(link.getId1());
         first = event.getSid();
-        second = findTimex(link.getId2(), timexes).getSid();
+        second = doc.getTimexByTid(link.getId2()).getSid();
       } else {
-        TextEvent event = findEvent(link.getId2(), events);
+        TextEvent event = doc.getEventByEiid(link.getId2());
         first = event.getSid();
-        second = findTimex(link.getId1(), timexes).getSid();
+        second = doc.getTimexByTid(link.getId1()).getSid();
       }
       return Math.abs(first - second);
     }
@@ -424,7 +431,7 @@ public class TLinkFeaturizer {
       datum.setType(TLinkDatum.TYPE.ETSAME);
     else
       datum.setType(TLinkDatum.TYPE.ETDIFF);
-    System.out.println("et datum: " + datum);
+    if( debug ) System.out.println("et datum: " + datum);
     return datum;
   }
   
@@ -466,8 +473,6 @@ public class TLinkFeaturizer {
     // Sanity check
     if( event1 == null || event2 == null ) 
       System.out.println("Null events in createTLinkDatum(): " + event1 + " and " + event2);
-    
-    System.out.println("EEDatum: " + event1 + "\t" + event2 + "\t" + label);
     
     // Flip the order to the natural text order.
     if( !TimebankUtil.isBeforeInText(event1, event2) ) {
