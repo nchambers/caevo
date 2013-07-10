@@ -8,6 +8,11 @@ import java.util.Map.Entry;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
 
+/**
+ * For running various analyses on corpus to get ideas for Sieves
+ * 
+ * @author Bill McDowell
+ */
 public class SieveDocumentsAnalyzer {
 	private SieveDocuments docs;
 	
@@ -15,12 +20,12 @@ public class SieveDocumentsAnalyzer {
 		this.docs = docs;
 	}
 	
-	public HashMap<String, HashMap<String, HashMap<TLink.Type, Integer>>> getEventEventLinkCounts(boolean distinguishClass, 
-																																															 boolean distinguishTense, 
-																																															 boolean distinguishAspect, 
-																																															 boolean distinguishSentence) {
+	public HashMap<TextEventPairPattern, HashMap<TLink.Type, Integer>> getEventEventLinkCounts(boolean distinguishClass, 
+																																														 boolean distinguishTense, 
+																																														 boolean distinguishAspect, 
+																																														 boolean distinguishSentence) {
 		
-		HashMap<String, HashMap<String, HashMap<TLink.Type, Integer>>> linkCounts = new HashMap<String, HashMap<String, HashMap<TLink.Type, Integer>>>();
+		HashMap<TextEventPairPattern, HashMap<TLink.Type, Integer>> linkCounts = new HashMap<TextEventPairPattern, HashMap<TLink.Type, Integer>>();
 		
 		for (SieveDocument doc : this.docs.getDocuments()) {
 			List<TLink> links = doc.getTlinksOfType(EventEventLink.class);
@@ -28,57 +33,32 @@ public class SieveDocumentsAnalyzer {
 				TextEvent e1 = doc.getEventByEiid(link.getId1());
 				TextEvent e2 = doc.getEventByEiid(link.getId2());
 				
-				if (e1 == null || e2 == null)
+				if (e1 == null || e2 == null) {
+					System.err.println("WARNING: TLink points at " + doc.getDocname() + " missing events " + link.getId1() + " or " + link.getId2() + ".");
 					continue;
-				
-				StringBuilder firstEventStr = new StringBuilder();
-				StringBuilder secondEventStr = new StringBuilder();
-				
-				if (distinguishClass) {
-					firstEventStr.append(e1.getTheClass()).append("\t");
-					secondEventStr.append(e2.getTheClass()).append("\t");
 				}
+					
+				TextEventPairPattern pairPattern = new TextEventPairPattern(e1, e2, distinguishClass, distinguishTense, distinguishAspect, distinguishSentence);
 				
-				if (distinguishTense) {
-					firstEventStr.append(e1.getTense()).append("\t");
-					secondEventStr.append(e2.getTense()).append("\t");					
-				}
+				if (!linkCounts.containsKey(pairPattern))
+					linkCounts.put(pairPattern, new HashMap<TLink.Type, Integer>());
+				if (!linkCounts.get(pairPattern).containsKey(link.getRelation()))
+					linkCounts.get(pairPattern).put(link.getRelation(), 0);
 				
-				if (distinguishAspect) {
-					firstEventStr.append(e1.getAspect()).append("\t");
-					secondEventStr.append(e2.getAspect()).append("\t");				
-				}
-				
-				if (distinguishSentence) {
-					if (e1.getSid() == e2.getSid()) {
-						firstEventStr.append("SAME_SENTENCE").append("\t");
-					} else {
-						firstEventStr.append("DIFFERENT_SENTENCE").append("\t");
-					}
-				}
-				
-				if (!linkCounts.containsKey(firstEventStr.toString()))
-					linkCounts.put(firstEventStr.toString(), new HashMap<String, HashMap<TLink.Type, Integer>>());
-				if (!linkCounts.get(firstEventStr.toString()).containsKey(secondEventStr.toString()))
-					linkCounts.get(firstEventStr.toString()).put(secondEventStr.toString(), new HashMap<TLink.Type, Integer>());
-				if (!linkCounts.get(firstEventStr.toString()).get(secondEventStr.toString()).containsKey(link.getRelation()))
-					linkCounts.get(firstEventStr.toString()).get(secondEventStr.toString()).put(link.getRelation(), 0);
-				
-				linkCounts.get(firstEventStr.toString()).get(secondEventStr.toString()).put(link.getRelation(),
-						linkCounts.get(firstEventStr.toString()).get(secondEventStr.toString()).get(link.getRelation()) + 1);			
+				linkCounts.get(pairPattern).put(link.getRelation(),
+						linkCounts.get(pairPattern).get(link.getRelation()) + 1);			
 			}
 		}
 		
 		return linkCounts;
 	}
 	
-	
-	public String getLinkCountsString(boolean distinguishClass, 
-			 boolean distinguishTense, 
-			 boolean distinguishAspect, 
-			 boolean distinguishSentence) {
+	public String getLinkDistributionsString(boolean distinguishClass, 
+																					 boolean distinguishTense, 
+																					 boolean distinguishAspect, 
+																					 boolean distinguishSentence) {
 		StringBuilder analysis = new StringBuilder();
-		HashMap<String, HashMap<String, HashMap<TLink.Type, Integer>>> linkCounts = 
+		HashMap<TextEventPairPattern, HashMap<TLink.Type, Integer>> linkCounts = 
 				getEventEventLinkCounts(distinguishClass,
 																distinguishTense,
 																distinguishAspect,
@@ -98,23 +78,20 @@ public class SieveDocumentsAnalyzer {
 		
 		analysis.append("Count\n");
 		
-		for (Entry<String, HashMap<String, HashMap<TLink.Type, Integer>>> e1 : linkCounts.entrySet()) {
-			for (Entry<String, HashMap<TLink.Type, Integer>> e2 : e1.getValue().entrySet()) {
-				analysis.append(e1.getKey()).append(e2.getKey());
+		for (Entry<TextEventPairPattern, HashMap<TLink.Type, Integer>> e : linkCounts.entrySet()) {
+				analysis.append(e.getKey().toString()).append("\t");
 				double totalCount = 0;
 				for (int i = 0; i < linkTypes.length; i++)
-					if (e2.getValue().containsKey(linkTypes[i]))
-						totalCount += e2.getValue().get(linkTypes[i]);
+					if (e.getValue().containsKey(linkTypes[i]))
+						totalCount += e.getValue().get(linkTypes[i]);
 				
 				for (int i = 0; i < linkTypes.length; i++) {
-					if (e2.getValue().containsKey(linkTypes[i])) {
-						analysis.append(e2.getValue().get(linkTypes[i])/totalCount).append("\t");
+					if (e.getValue().containsKey(linkTypes[i])) {
+						analysis.append(e.getValue().get(linkTypes[i])/totalCount).append("\t");
 					} else {
 						analysis.append("0").append("\t");
 					}
 				}
-				analysis.append(totalCount).append("\n");
-			}
 		}
 				
 		return analysis.toString();
@@ -137,7 +114,7 @@ public class SieveDocumentsAnalyzer {
  
 			FileWriter fw = new FileWriter(file.getAbsoluteFile());
 			BufferedWriter bw = new BufferedWriter(fw);
-			bw.write(analyzer.getLinkCountsString(false, true, true, true));
+			bw.write(analyzer.getLinkDistributionsString(true, true, true, true));
 			bw.close();
  
 		} catch (IOException e) {

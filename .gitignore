@@ -2,3 +2,5 @@ classes
 /target
 .settings/org.eclipse.jdt.ui.prefs
 jwnl-properties.xml
+my.sieves
+my.properties

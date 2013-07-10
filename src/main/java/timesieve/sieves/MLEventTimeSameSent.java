@@ -28,6 +28,8 @@ import timesieve.util.Util;
  * Right now this just makes one classifier for all event-time pairs, and doesn't use the
  * specific ones for syntactic dominance.
  * 
+ * Performance	p=0.52	28 of 54	Non-VAGUE:	p=0.64	28 of 44
+ * 
  * @author chambers
  */
 public class MLEventTimeSameSent implements Sieve {

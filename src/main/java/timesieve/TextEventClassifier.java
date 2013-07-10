@@ -1,12 +1,9 @@
 package timesieve;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.ObjectInputStream;
 import java.io.PrintWriter;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -14,7 +11,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.zip.GZIPInputStream;
 
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.classify.LinearClassifierFactory;
@@ -61,7 +57,6 @@ public class TextEventClassifier {
   SieveDocuments docs;
   WordNet wordnet;
   String wordnetPath = null;
-  String serializedGrammar = "/home/nchamber/code/resources/englishPCFG.ser.gz";
   
   boolean ruleBased = false;
   String modelOutDir = "eventmodels";
@@ -88,8 +83,6 @@ public class TextEventClassifier {
 
     if( params.hasFlag("-wordnet") )
     	wordnetPath = params.get("-wordnet");
-    if( params.hasFlag("-grammar") )
-      serializedGrammar = params.get("-grammar");
     if( params.hasFlag("-rules") )
     	ruleBased = true;
     if( params.hasFlag("-eventmin") )
@@ -103,6 +96,11 @@ public class TextEventClassifier {
   public TextEventClassifier(SieveDocuments docs) {
   	this.docs = docs;
   	loadWordNet();
+  }
+
+  public TextEventClassifier(SieveDocuments docs, WordNet wordnet) {
+  	this.docs = docs;
+  	this.wordnet = wordnet;
   }
 
 	/**
@@ -428,7 +426,7 @@ public class TextEventClassifier {
 
           			if( useDeterministic && isEventDeterministic(tree, tokens, wordi) ) {
           				TextEvent event = new TextEvent(token, "e" + eventi, sid, wordi);
-          				event.setEiid("ei" + eventi);
+          				event.addEiid("ei" + eventi);
           				newevents.add(event);
           				//                System.out.println("Created event: " + event);
           				eventi++;
@@ -436,7 +434,7 @@ public class TextEventClassifier {
 
           			if( !useDeterministic && isEvent(eventClassifier, sent, tree, alldeps.get(sid), wordi) ) {
           				TextEvent event = new TextEvent(token, "e" + eventi, sid, wordi);
-          				event.setEiid("ei" + eventi);
+          				event.addEiid("ei" + eventi);
 
           				// Set the event attributes.
           				RVFDatum<String,String> datum = wordToDatum(sent, tree, alldeps.get(sid), wordi);
@@ -519,7 +517,11 @@ public class TextEventClassifier {
   
   public void markupRawText(String filepath) {
     // Initialize the parser.
-    LexicalizedParser parser = Ling.createParser(serializedGrammar);
+    LexicalizedParser parser = Ling.createParser(Main.serializedGrammar);
+    if( parser == null ) {
+    	System.out.println("Failed to create parser from " + Main.serializedGrammar);
+    	System.exit(1);
+    }
     TreebankLanguagePack tlp = new PennTreebankLanguagePack();
     GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
     

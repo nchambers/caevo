@@ -228,8 +228,9 @@ public class TLinkFeaturizer {
             if( !link.closed ) {
               // Only do links that have labels for now. Skip OVERLAP from Bethard...Tempeval3 does not have this relation.
               if( link.getRelation() != TLink.Type.NONE && link.getRelation() != TLink.Type.OVERLAP ) {
-                //                 System.out.println("link: " + link);
                 int sentenceSpan = (isdctlink ? -1 : sentenceSpan(doc, link));
+
+                System.out.println("link: " + link + "\tspan=" + sentenceSpan);
 
                 if( _eventDCTOnly && !isdctlink ) {
                   if( debug ) System.out.println("Skipping non-DCT link " + link);

@@ -11,6 +11,8 @@ import timesieve.tlink.TLink;
 import timesieve.tlink.EventEventLink;
 
 /**
+ * FIXME: This is redundant with the sieves that are aimed at only VAGUE... remove it? 
+ * 
  * Labels pairs of reporting events as vague.
  * 
  * Precision varies depending on whether events with non-equal tense and aspect are considered.

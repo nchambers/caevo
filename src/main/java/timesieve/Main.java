@@ -16,12 +16,18 @@ import java.util.Set;
 import timesieve.sieves.Sieve;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
+import timesieve.util.Directory;
+import timesieve.util.Ling;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.Util;
 import timesieve.util.WordNet;
 
+import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
 import edu.stanford.nlp.stats.ClassicCounter;
 import edu.stanford.nlp.stats.Counter;
+import edu.stanford.nlp.trees.GrammaticalStructureFactory;
+import edu.stanford.nlp.trees.PennTreebankLanguagePack;
+import edu.stanford.nlp.trees.TreebankLanguagePack;
 import edu.stanford.nlp.util.StringUtils;
 
 /**
@@ -42,16 +48,21 @@ import edu.stanford.nlp.util.StringUtils;
  *
  * java Main -info <filepath> [-set all|train|dev] trainall
  * - Runs the train() function on all of the sieves.
+ * 
+ * java Main <file-or-dir> raw
+ * - Takes a text file and runs the NLP pipeline, then our event/timex/tlink extraction.
  *
  * @author chambers
  */
 public class Main {
+  public static final String serializedGrammar = "edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz";
+
 	private TextEventClassifier eventClassifier;
 	private TimexClassifier timexClassifier;
 	public static WordNet wordnet;
 	
-	SieveDocuments info;
-	SieveDocuments infoUnchanged; // for evaluating if TLinks are in the input
+	SieveDocuments thedocs;
+	SieveDocuments thedocsUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
 	boolean debug = true;
@@ -85,8 +96,8 @@ public class Main {
 
 		if( infopath != null ) {
 			System.out.println("Checking for infofile at " + infopath);
-			info = new SieveDocuments(infopath);
-			infoUnchanged = new SieveDocuments(infopath);
+			thedocs = new SieveDocuments(infopath);
+			thedocsUnchanged = new SieveDocuments(infopath);
 		}
 
 		// -set on the command line?
@@ -199,7 +210,7 @@ public class Main {
 	 * Run all sieves!! On all documents!!
 	 */
 	public void runSieves() {
-		runSieves(info);
+		runSieves(thedocs);
 	}
     
 	public void runSieves(SieveDocuments info) {
@@ -260,7 +271,7 @@ public class Main {
 	 * You must have loaded an -info file that has gold TLinks in it.
 	 */
 	public void runPrecisionGauntlet() {
-		if( info == null ) {
+		if( thedocs == null ) {
 			System.out.println("ERROR: no info file given as input for the precision gauntlet.");
 			System.exit(1);
 		}
@@ -269,9 +280,9 @@ public class Main {
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
 		// Data
-		SieveDocuments docs = Evaluate.getDevSet(info);
-		if( runOnTrain ) docs = Evaluate.getTrainSet(info);
-		else if( runOnAll ) docs = info;
+		SieveDocuments docs = Evaluate.getDevSet(thedocs);
+		if( runOnTrain ) docs = Evaluate.getTrainSet(thedocs);
+		else if( runOnAll ) docs = thedocs;
 		
 		// Empty TLink list and counts.
 		List<TLink> currentTLinks = new ArrayList<TLink>();
@@ -351,11 +362,33 @@ public class Main {
 		}
 	}
 	
+<<<<<<< HEAD
+=======
+	private void confusionMatrix(Counter<String> guessCounts) {
+		final String[] labels = { "BEFORE", "AFTER", "SIMULTANEOUS", "INCLUDES", "IS_INCLUDED", "VAGUE" };
+		for( String label2 : labels )
+			System.out.print("\t" + label2.substring(0,Math.min(label2.length(), 6)));
+		System.out.println();
+		
+		for( String label1 : labels ) {
+			System.out.print(label1.substring(0, Math.min(label1.length(), 6)) + "\t");
+			
+			for( String label2 : labels ) {
+				if( guessCounts.containsKey(label1+" "+label2) )
+					System.out.print((int)guessCounts.getCount(label1+" "+label2) + "\t");
+				else System.out.print("0\t");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+>>>>>>> 66845e09738d17341f3cd8428be427221f50a9ab
 	/**
 	 * Calls the train() function on all of the listed sieves. 
 	 */
 	public void trainSieves() {
-		if( info == null ) {
+		if( thedocs == null ) {
 			System.out.println("ERROR: no info file given as input for the precision gauntlet.");
 			System.exit(1);
 		}
@@ -364,9 +397,9 @@ public class Main {
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
 		// Data
-		SieveDocuments docs = Evaluate.getDevSet(info);
-		if( runOnTrain ) docs = Evaluate.getTrainSet(info);
-		else if( runOnAll ) docs = info;
+		SieveDocuments docs = Evaluate.getDevSet(thedocs);
+		if( runOnTrain ) docs = Evaluate.getTrainSet(thedocs);
+		else if( runOnAll ) docs = thedocs;
 
 		// Train them!
 		for( Sieve sieve : sieves ) {
@@ -450,12 +483,81 @@ public class Main {
 		links.addAll(newlinks);
 		return newlinks.size();
 	}
+
+	/**
+	 * Given a path to a directory, assumes every file in the directory is a text file with no
+	 * XML markup. This function will treat each text file as a separate document and perform
+	 * full event, time, and tlink markup.
+	 * @param dirpath Directory of text files.
+	 */
+	public SieveDocuments markupRawTextDir(String dirpath) {
+    // Initialize the parser.
+    LexicalizedParser parser = Ling.createParser(serializedGrammar);
+    if( parser == null ) {
+    	System.out.println("Failed to create parser from " + serializedGrammar);
+    	System.exit(1);
+    }
+    TreebankLanguagePack tlp = new PennTreebankLanguagePack();
+    GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
+    
+    SieveDocuments docs = new SieveDocuments();
+    for( String file : Directory.getFilesSorted(dirpath) ) {    	
+    	String path = dirpath + File.separator + file;
+    	SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(path, parser, gsf);
+    	docs.addDocument(doc);
+    }
+    
+    // Markup events, times, and tlinks.
+    markupAll(docs);
+    return docs;
+	}
+	
+	/**
+	 * Assumes the path is to a text-only file with no XML markup.
+	 * @param filepath Path to the text file.
+	 */
+	public SieveDocuments markupRawTextFile(String filepath) {
+    // Initialize the parser.
+    LexicalizedParser parser = Ling.createParser(serializedGrammar);
+    if( parser == null ) {
+    	System.out.println("Failed to create parser from " + serializedGrammar);
+    	System.exit(1);
+    }
+    TreebankLanguagePack tlp = new PennTreebankLanguagePack();
+    GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
+    
+    // Parse the file.
+    SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(filepath, parser, gsf);
+    SieveDocuments docs = new SieveDocuments();
+    docs.addDocument(doc);
+
+    // Markup events, times, and tlinks.
+    markupAll(docs);
+    return docs;
+	}
+	
+	public void markupRawText(String path) {
+		File file = new File(path);
+		SieveDocuments docs = null;
+		if( file.isDirectory() ) docs = markupRawTextDir(path);
+		else docs = markupRawTextFile(path);
+		
+    // Output the InfoFile with the events in it.
+		if( docs != null ) {
+			String outpath = path + ".info.xml";
+			if( file.isDirectory() ) outpath = Directory.lastSubdirectory(path) + "-dir.info.xml";
+			
+			docs.writeToXML(outpath);
+			System.out.println("Created " + outpath);
+		} 
+		else System.out.println("Couldn't create anything from: " + path);
+	}
 	
 	/**
 	 * Assumes the InfoFile has its text parsed.
 	 */
 	public void markupAll() {
-		markupAll(info);
+		markupAll(thedocs);
 	}
 	public void markupAll(SieveDocuments info) {
 		markupEvents(info);
@@ -468,7 +570,7 @@ public class Main {
 	 */
 	public void markupEvents(SieveDocuments info) {
 		if( eventClassifier == null ) {
-			eventClassifier = new TextEventClassifier(info);
+			eventClassifier = new TextEventClassifier(info, wordnet);
 			eventClassifier.loadClassifiers();
 		}
 		eventClassifier.extractEvents();
@@ -511,7 +613,12 @@ public class Main {
 		else if( args.length > 0 && args[args.length-1].equalsIgnoreCase("parsed") ) {
 			main.markupAll();
 		}
-		
+
+		// Give a text file or a directory of text files. Parses and marks it up.
+		else if( args.length > 1 && args[args.length-1].equalsIgnoreCase("raw") ) {
+			main.markupRawText(args[args.length-2]);
+		}
+
 		// The given SieveDocuments only has text and parses, so extract events/times first.
 		else if( args.length > 0 && args[args.length-1].equalsIgnoreCase("trainall") ) {
 			main.trainSieves();

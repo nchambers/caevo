@@ -26,9 +26,9 @@ import edu.stanford.nlp.util.CoreMap;
  * @author chambers
  */
 public class TimexClassifier {
-  String _serializedGrammar = "edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz";
   String posTaggerData = "edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger";
-  private String _nerPath = "edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz";
+//String _serializedGrammar = "edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz";
+//  private String _nerPath = "edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz";
 
   boolean debug = false;
   
