@@ -84,14 +84,22 @@ public class SieveSentence {
 
 
   public void addEvents(List<TextEvent> newEvents) {
-  	events.addAll(newEvents);
+  	if( newEvents != null ) {
+  		if( events == null )
+  			events = new ArrayList<TextEvent>();
+  		events.addAll(newEvents);
+  	}
   }
 
   public void addTimexes(List<Timex> newTimexes) {
-  	for (Timex timex : newTimexes)
-  		timex.setSid(this.sid);
-  	
-  	timexes.addAll(newTimexes);
+  	if( newTimexes != null ) {
+  		if( timexes == null )
+  			timexes = new ArrayList<Timex>();
+
+  		for (Timex timex : newTimexes)
+  			timex.setSid(this.sid);
+  		timexes.addAll(newTimexes);
+  	}
   }
   
   public static SieveSentence fromXML(Element el) {

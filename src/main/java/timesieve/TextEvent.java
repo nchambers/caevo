@@ -1,10 +1,7 @@
 package timesieve;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Vector;
 
 import org.jdom.Namespace;
 import org.w3c.dom.Element;
@@ -37,19 +34,15 @@ public class TextEvent {
 
   public static enum Tense    { PRESENT, PRESPART, PAST, PASTPART, INFINITIVE, FUTURE, PASSIVE, NONE };
   public static enum Aspect   { PROGRESSIVE, PERFECTIVE, IMPERFECTIVE, PERFECTIVE_PROGRESSIVE, IMPERFECTIVE_PROGRESSIVE, NONE };
-  public static enum Class   { OCCURRENCE, ASPECTUAL, STATE, I_ACTION, I_STATE, REPORTING, PERCEPTION, NONE };
+  public static enum Class   	{ OCCURRENCE, ASPECTUAL, STATE, I_ACTION, I_STATE, REPORTING, PERCEPTION, NONE };
   public static enum Polarity { POS, NEG };
     
   private String ID; // event ID from the XML
-  private String eiid; // event instance ID from makeinstances...
-  private List<String> eiids; // event instance ID from makeinstances...
+  private List<String> eiids; // event instance IDs from makeinstances...
   private int sid;   // sentence number in the document
   private int index; // position in the sentence (the first word of the event)
   private String text = ""; // literal string of the event
   private Element element;
-  private HashMap<Integer,String> entities;
-  private String prepClause = null;
-  private int[] pos; // array of POS tags around event
   private Tense tense = Tense.NONE;
   private Aspect aspect = Aspect.NONE;
   private Polarity polarity = Polarity.POS;
@@ -58,7 +51,6 @@ public class TextEvent {
   private String happened = "";
   private String lowerDuration = "";
   private String upperDuration = "";
-  private Vector<String> dominates = new Vector<String>();
 
   /**
    * Build the object from an XML specification
@@ -79,6 +71,7 @@ public class TextEvent {
     
     addEiidsFromAttributeString(el.getAttributeValue(TextEvent.EIID_ELEM));
   }
+
   public TextEvent(String sidstr, org.jdom.Element el) {
   	this(Integer.valueOf(sidstr), el);
   }
@@ -98,8 +91,6 @@ public class TextEvent {
     this.sid = sid;
     this.index = index;
     this.text = text;
-    
-    addEiid(id);
   }
   
   // eiid attributes can be singles "ei4" or multiple "ei4,ei8,ei12"
@@ -135,39 +126,13 @@ public class TextEvent {
    * add the extra ones there. The eiid is not in the eiids list (this is just to preserve space).
    */
   public void addEiid(String eiid) {
-    if( this.eiid == null )
-      this.eiid = eiid;
-    else if( this.eiid.equalsIgnoreCase(eiid) )
-      return;
-    else if( this.eiids == null ) {
+  	if( this.eiids == null ) {
       this.eiids = new ArrayList<String>();
       this.eiids.add(eiid);
     }
     else if( !containsEiid(eiid) )
       this.eiids.add(eiid);
 //    System.out.println("  finished with " + eiids);
-  }
-
-  public void addPrepConstraint(String prep) {
-    this.prepClause = prep;
-  }
-  
-  public void addEntityRelation(int index, String relation) {
-    if( this.entities == null ) 
-    	this.entities = new HashMap<Integer, String>();
-    this.entities.put(index,relation);
-  }
-  
-  public void addDominance(String id) {
-    this.dominates.add(id);
-  }
-  
-  public void setPos(int[] pos) { 
-  	this.pos = pos; 
-  }
-  
-  public void setEiid(String eiid) { 
-  	this.eiid = eiid; 
   }
   
   public void setText(String text) { 
@@ -199,14 +164,12 @@ public class TextEvent {
   }
   
   private String buildEiidString() {
-    if( this.eiid == null ) return "";
-    else {
-      String str = this.eiid;
-      if( this.eiids != null ) 
-        for( int xx = 0; xx < this.eiids.size(); xx++ )
-          str += "," + this.eiids.get(xx);
-      return str;
-    }
+  	String str = "";
+  	if( this.eiids != null && this.eiids.size() > 0 )
+  		str = eiids.get(0);
+  	for( int xx = 1; xx < this.eiids.size(); xx++ )
+  		str += "," + this.eiids.get(xx);
+  	return str;
   }
   
   /**
@@ -215,65 +178,19 @@ public class TextEvent {
    * @return True or false.
    */
   public boolean containsEiid(String eiid) {
-    if( eiid != null && eiid.equalsIgnoreCase(eiid) )
-      return true;
-    else if( this.eiids != null ) {
-      for( int xx = 0; xx < this.eiids.size(); xx++ ) {
-        if( this.eiids.get(xx).equalsIgnoreCase(eiid) )
-          return true;
-      }      
-    }
-    return false;
+  	if( eiid != null && this.eiids != null ) {
+  		for( String id : eiids ) {
+  			if( id.equalsIgnoreCase(eiid) )
+  				return true;
+  		}      
+  	}
+  	return false;
   }
   
-  // Return true if there is at least one entity
-  public boolean hasEntities() {
-  	return this.entities != null && this.entities.size() > 0;
-  }
-
-  /**
-   * Return true if this TextEvent dominates the given id
-   * @param id The id of another TextEvent
-   */
-  public boolean dominates(String id) {
-  	return this.dominates.contains(id);
-  }
-  
-  public List<String> getAllEiids() {
-    List<String> eiids = new ArrayList<String>();
-    if( this.eiid != null ) eiids.add(this.eiid);
-    if( this.eiids != null )
-      for( String eiid : this.eiids )
-        eiids.add(eiid);
-    return eiids;
-  }
-  
-  public String getEntity(int index) {
-    if( this.entities == null ) 
-    	return null;
-    return (String)this.entities.get(index);
-  }
-  
-  public Integer[] getEntities() {
-    if( this.entities != null ) {
-      Integer[] ints = new Integer[1];
-      return this.entities.keySet().toArray(ints);
-    }
-    return null;
-  }
-
   public String getString() {
     //	if( element != null ) return ((Text)element.getFirstChild()).getData();
     if( this.element != null ) return TimebankUtil.stringFromElement(this.element).trim();
     else return this.text;
-  }
-  
-  public int[] getPos() { 
-  	return this.pos; 
-  }
- 
-  public String getPrep() { 
-  	return this.prepClause; 
   }
   
   public String getId() { 
@@ -284,8 +201,14 @@ public class TextEvent {
   	return this.sid; 
   }
 
-  public String getEiid() { 
-  	return this.eiid; 
+  public List<String> getAllEiids() {
+    return eiids;
+  }
+
+  public String getEiid() {
+  	if( eiids != null && eiids.size() > 0 )
+  		return eiids.get(0);
+  	else return null;
   }
   
   public int getIndex() {
@@ -361,14 +284,7 @@ public class TextEvent {
   }
   
   public String toString() {
-    String str = this.ID + "(" + this.eiid+ ") " + getString() + "-" + this.index;
-    if( this.entities != null ) {
-      for( Map.Entry<Integer, String> entry : this.entities.entrySet() )
-        str += " (" + entry.getKey() + " " + entry.getValue() + ")";
-    }
-//    if( this.prepClause != null ) str += " (PREP " + this.prepClause + ")";
-    //	str += "\nt=" + tense + " a=" + aspect + " m=" + modality + 
-    //	    " p=" + polarity + " c=" + theclass;
+    String str = this.ID + "(" + this.buildEiidString() + ") " + getString() + "-" + this.index;
     return str;
   }
 }
