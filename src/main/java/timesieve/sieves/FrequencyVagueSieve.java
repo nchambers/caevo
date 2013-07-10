@@ -1,9 +1,9 @@
 package timesieve.sieves;
 
 import java.io.*;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map.Entry;
 
@@ -55,17 +55,17 @@ public class FrequencyVagueSieve implements Sieve {
 																											 {true,true,true,true}
 																										 };
 	
-	private List<TextEventPairPattern> vaguePatterns;
+	private HashSet<TextEventPairPattern> vaguePatterns;
 	
 	public FrequencyVagueSieve() {
-		this.vaguePatterns = new ArrayList<TextEventPairPattern>();
+		this.vaguePatterns = new HashSet<TextEventPairPattern>();
 		
 		/* FIXME: Put this somewhere else */
   	try {
   		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FrequencyVagueSieve.RULE_SAVE_PATH));
   		Object o = ois.readObject();
   		ois.close();
-  		this.vaguePatterns = (List<TextEventPairPattern>)o;
+  		this.vaguePatterns = (HashSet<TextEventPairPattern>)o;
   	} catch(Exception ex) { 
   		System.out.println("FrequencyVagueSieve: Had fatal trouble loading " + FrequencyVagueSieve.RULE_SAVE_PATH); 
   	}
@@ -132,7 +132,7 @@ public class FrequencyVagueSieve implements Sieve {
 	 * of examples.
 	 */
 	public void train(SieveDocuments trainingInfo) {
-		this.vaguePatterns = new ArrayList<TextEventPairPattern>();
+		this.vaguePatterns = new HashSet<TextEventPairPattern>();
 		SieveDocumentsAnalyzer analyzer = new SieveDocumentsAnalyzer(trainingInfo);
 		for (int t = 0; t < FrequencyVagueSieve.distinguishedFeatures.length; t++) {
 			HashMap<TextEventPairPattern, HashMap<TLink.Type, Integer>> linkTypeCounts = 

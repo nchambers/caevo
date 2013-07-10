@@ -23,6 +23,12 @@ public class TextEventPattern implements Serializable {
 		
 	}
 	
+	public TextEventPattern(TextEvent.Class theClass, TextEvent.Tense tense, TextEvent.Aspect aspect) {
+		this.theClass = theClass;
+		this.tense = tense;
+		this.aspect = aspect;
+	}
+	
 	public TextEventPattern(TextEvent canonicalEvent, boolean keepClass, boolean keepTense, boolean keepAspect) {
 		setFromCanonicalEvent(canonicalEvent, keepClass, keepTense, keepAspect);
 	}
