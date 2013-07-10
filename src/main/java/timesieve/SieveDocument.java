@@ -89,16 +89,20 @@ public class SieveDocument {
   }
   
   private void addEventsToEiidMap (List<TextEvent> events) {
-  	for (TextEvent event : events) {
-  		List<String> eiids = event.getAllEiids();
-  		for (String eiid : eiids)
-  			eiidToEvent.put(eiid, event);
+  	if( events != null ) {
+  		for (TextEvent event : events) {
+  			List<String> eiids = event.getAllEiids();
+  			for (String eiid : eiids)
+  				eiidToEvent.put(eiid, event);
+  		}
   	}
   }
   
   private void addTimexesToTidMap (List<Timex> timexes) {
-  	for (Timex timex : timexes) {
+  	if( timexes != null ) {
+  		for (Timex timex : timexes) {
   			tidToTimex.put(timex.getTid(), timex);
+  		}
   	}
   }
   
@@ -303,12 +307,14 @@ public class SieveDocument {
   		List<CoreLabel> tokens = sent.tokens();
   		// Grab the events.
   		Map<Integer,TextEvent> indexToEvents = new HashMap<Integer,TextEvent>();
-  		for( TextEvent event : sent.events() )
-  			indexToEvents.put(event.getIndex(), event);
+  		if( sent.events() != null )
+  			for( TextEvent event : sent.events() )
+  				indexToEvents.put(event.getIndex(), event);
   		// Grab the timexes.
   		Map<Integer,Timex> indexToTimexes = new HashMap<Integer,Timex>();
-  		for( Timex timex : sent.timexes() )
-  			indexToTimexes.put(timex.getTokenOffset(), timex);  		
+  		if( sent.timexes() != null )
+  			for( Timex timex : sent.timexes() )
+  				indexToTimexes.put(timex.getTokenOffset(), timex);  		
   		Set<Integer> endTimexes = new HashSet<Integer>();
   		
       int ii = 1;

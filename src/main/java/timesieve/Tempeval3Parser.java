@@ -80,8 +80,6 @@ import timesieve.tlink.*;
 public class Tempeval3Parser {
   String baseDir = "/home/nchamber/corpora/tempeval3/TBAQ-cleaned";
   String _serializedGrammar = "/englishPCFG.ser.gz";
-  String posTaggerData = "/home/nchamber/code/resources/english-left3words-distsim.tagger";
-  private String _nerPath = "/home/nchamber/code/resources/all.3class.distsim.crf.ser.gz";
   String outputFile = "tempeval3.xml";
   Properties props;
   LexicalizedParser _parser;
