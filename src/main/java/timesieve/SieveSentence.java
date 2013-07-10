@@ -43,6 +43,9 @@ public class SieveSentence {
   	this.tokens = tokens;
   	this.events = events;
   	this.timexes = timexes;
+  	
+  	if( this.events == null ) 	this.events = new ArrayList<TextEvent>();
+  	if( this.timexes == null ) 	this.timexes = new ArrayList<Timex>();
   }
   
   public SieveSentence(Element el, Namespace ns) {

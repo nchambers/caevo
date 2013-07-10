@@ -57,7 +57,6 @@ public class TextEventClassifier {
   SieveDocuments docs;
   WordNet wordnet;
   String wordnetPath = null;
-  String serializedGrammar = "edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz";
   
   boolean ruleBased = false;
   String modelOutDir = "eventmodels";
@@ -84,8 +83,6 @@ public class TextEventClassifier {
 
     if( params.hasFlag("-wordnet") )
     	wordnetPath = params.get("-wordnet");
-    if( params.hasFlag("-grammar") )
-      serializedGrammar = params.get("-grammar");
     if( params.hasFlag("-rules") )
     	ruleBased = true;
     if( params.hasFlag("-eventmin") )
@@ -99,6 +96,11 @@ public class TextEventClassifier {
   public TextEventClassifier(SieveDocuments docs) {
   	this.docs = docs;
   	loadWordNet();
+  }
+
+  public TextEventClassifier(SieveDocuments docs, WordNet wordnet) {
+  	this.docs = docs;
+  	this.wordnet = wordnet;
   }
 
 	/**
@@ -515,9 +517,9 @@ public class TextEventClassifier {
   
   public void markupRawText(String filepath) {
     // Initialize the parser.
-    LexicalizedParser parser = Ling.createParser(serializedGrammar);
+    LexicalizedParser parser = Ling.createParser(Main.serializedGrammar);
     if( parser == null ) {
-    	System.out.println("Failed to create parser from " + serializedGrammar);
+    	System.out.println("Failed to create parser from " + Main.serializedGrammar);
     	System.exit(1);
     }
     TreebankLanguagePack tlp = new PennTreebankLanguagePack();
