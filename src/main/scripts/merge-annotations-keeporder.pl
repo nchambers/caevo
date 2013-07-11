@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 #
-# Reads a directory of individual annotation files.
+# This is the main script that was used to merge annotations.
+# It reads a directory of individual annotation files.
 # Produces a new directory of merged annotations that came from the same documents.
 #
 # ASSUMES THAT ANNOTATION FILES HAVE THE SAME NUMBER OF LINES WITH THE SAME EVENT PAIR
