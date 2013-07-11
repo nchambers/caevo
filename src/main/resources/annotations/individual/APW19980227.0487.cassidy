@@ -1,11 +1,3 @@
-e64	e66	b
-e64	e65	b
-e19	e20	a
-e65	e66	ii
-e63	e66	v
-e35	e40	a
-e63	e64	a
-e63	e65	v
 e1	e2	i
 e1	t70	i
 e1	e3	v
@@ -84,7 +76,6 @@ e9	e16	v
 e9	e17	v
 e10	e12	a
 e10	e13	a
-e10	e15	a
 e10	e16	a
 e10	e17	a
 e10	e18	b
@@ -94,9 +85,6 @@ e12	e13	a
 e12	e15	a
 e12	e16	a
 e12	e17	a
-e12	e18	b
-e12	t71	b
-e12	t72	b
 e13	e15	s
 e13	e16	a
 e13	e17	v
@@ -131,12 +119,13 @@ t72	t73	a
 t72	e20	a
 t72	e21	a
 e19	t73	a
+e19	e20	a
+e19	e21	a
 e19	e22	v
 e19	e23	a
 e19	e24	a
 e19	e25	a
 e19	e26	a
-e19	e21	a
 t73	e20	i
 t73	e21	i
 t73	e22	v
@@ -144,7 +133,6 @@ t73	e23	v
 t73	e24	v
 t73	e25	i
 t73	e26	i
-e20	e21	ii
 e20	e22	b
 e20	e23	v
 e20	e24	s
@@ -182,7 +170,6 @@ e24	e29	a
 e24	e30	a
 e24	e33	v
 e24	e34	v
-e25	e26	s
 e25	e27	b
 e25	e28	b
 e25	e29	a
@@ -222,7 +209,6 @@ e30	e35	b
 e30	e36	b
 e30	e37	b
 e33	e34	b
-e33	e35	v
 e33	e36	v
 e33	e37	b
 e34	e35	v
@@ -232,6 +218,7 @@ e35	e36	a
 e35	e37	b
 e35	e38	v
 e35	e39	a
+e35	e40	a
 e35	e41	a
 e35	e42	a
 e35	e43	a
@@ -257,7 +244,6 @@ e38	e41	a
 e38	e42	a
 e38	e43	a
 e38	e44	a
-e38	e45	a
 e38	e46	a
 e38	e47	a
 e39	e40	s
@@ -316,7 +302,6 @@ e47	e48	b
 e47	e49	b
 e47	e50	s
 e47	e51	b
-e47	e52	s
 e47	e53	b
 e47	e54	a
 e47	e56	b
@@ -325,7 +310,6 @@ e48	e50	a
 e48	e51	b
 e48	e52	a
 e48	e53	v
-e48	e54	a
 e48	e56	b
 e48	e57	b
 e49	e50	a
@@ -390,3 +374,19 @@ e62	e63	a
 e62	e64	a
 e62	e65	v
 e62	e66	v
+e63	e64	a
+e63	e65	v
+e63	e66	v
+e64	e65	b
+e64	e66	b
+e65	e66	ii
+e12	t72	b
+e25	e26	s
+e47	e52	s
+e20	e21	ii
+e48	e54	a
+e12	e18	b
+e38	e45	a
+e33	e35	v
+e12	t71	b
+e10	e15	a

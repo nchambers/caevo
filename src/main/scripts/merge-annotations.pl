@@ -1,10 +1,14 @@
 #!/usr/bin/perl
 #
-# Reads a directory of individual annotation files.
+# You should use the merge-annotations-keeporder.pl script instead.
+# This script reads a directory of individual annotation files.
 # Produces a new directory of merged annotations that came from the same documents.
 #
 # merge-annotations.pl <dir>
 #
+
+my $outdir = "merged";
+mkdir($outdir);
 
 # Put the relations into a hash table, key is the pair "e3 e15" and the value is the relation "b".
 sub readRelations {
@@ -47,6 +51,7 @@ foreach $file (readdir(DIR)) {
 closedir(DIR);
 
 # Do each document.
+open(OUTALL, ">$outdir/alldocs.merged") || die "Can't open for writing ($!)\n";
 foreach $docname (keys %docs) {
     print "DOCUMENT $docname\n";
     my @annotators = keys %{$docs{$docname}};
@@ -54,7 +59,18 @@ foreach $docname (keys %docs) {
     print "\tnum annotators = $numAnnotators\n";
     print "\tannotator[0] = $annotators[0]\n";
 
-    foreach $pair (keys %{$docs{$docname}{$annotators[0]}}) {
+    open(OUT, ">$outdir/$docname") || die "Can't open $docname for writing ($!)\n";
+
+    my %allpairs = {};
+    # Get all pairs in one set.
+    foreach $anno (keys %{$docs{$docname}}) {
+	foreach $pair (keys %{$docs{$docname}{$anno}}) {
+	    $allpairs{$pair} = 1;
+	}
+    }
+
+#    foreach $pair (keys %{$docs{$docname}{$annotators[0]}}) {
+    foreach $pair (sort keys %allpairs) {
 	my %counts = ();
 
 	for( my $xx = 0; $xx < $numAnnotators; $xx++ ) {
@@ -65,13 +81,17 @@ foreach $docname (keys %docs) {
 	my $foundone = 0;
 	foreach $label (keys %counts) {
 	    if( $counts{$label} > ($numAnnotators / 2) ) {
-		print "$pair\t$label\n";
+		print OUT "$pair\t$label\n";
+		print OUTALL "$docname\t$pair\t$label\n";
 		$foundone = 1;
 	    }
 	}
 	if( !$foundone ) {
-	    print "$pair\tv\n";
+	    print OUT "$pair\tv\n";
+	    print OUTALL "$docname\t$pair\tv\n";
 	}
     }
+    close OUT;
 }
+close OUTALL;
 
