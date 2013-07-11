@@ -16,12 +16,18 @@ import java.util.Set;
 import timesieve.sieves.Sieve;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
+import timesieve.util.Directory;
+import timesieve.util.Ling;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.Util;
 import timesieve.util.WordNet;
 
+import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
 import edu.stanford.nlp.stats.ClassicCounter;
 import edu.stanford.nlp.stats.Counter;
+import edu.stanford.nlp.trees.GrammaticalStructureFactory;
+import edu.stanford.nlp.trees.PennTreebankLanguagePack;
+import edu.stanford.nlp.trees.TreebankLanguagePack;
 import edu.stanford.nlp.util.StringUtils;
 
 /**
@@ -43,19 +49,24 @@ import edu.stanford.nlp.util.StringUtils;
  * java Main -info <filepath> [-set all|train|dev] trainall
  * - Runs the train() function on all of the sieves.
  *
+ * java Main <file-or-dir> raw
+ * - Takes a text file and runs the NLP pipeline, then our event/timex/tlink extraction.
+ *
  * @author chambers
  */
 public class Main {
+    public static final String serializedGrammar = "edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz";
+    
 	private TextEventClassifier eventClassifier;
 	private TimexClassifier timexClassifier;
 	public static WordNet wordnet;
 	
-	SieveDocuments info;
-	SieveDocuments infoUnchanged; // for evaluating if TLinks are in the input
+	SieveDocuments thedocs;
+	SieveDocuments thedocsUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
-	boolean debug = true;
-
+	boolean debug = false;
+    
 	// If none are true, then it runs on dev
 	boolean runOnTrain = true;
 	boolean runOnAll = false;
@@ -63,7 +74,7 @@ public class Main {
 	
 	// List the sieve class names in your desired order.
 	private String[] sieveClasses;
-
+    
 	
 	/**
 	 * Constructor: give it the command-line arguments.
@@ -78,19 +89,19 @@ public class Main {
 			// Look for a given pre-processed InfoFile
 			infopath = TimeSieveProperties.getString("info");
 		} catch (IOException e) { }
-
+        
 		// -info on the command line?
-		if( cmdlineProps.containsKey("info") ) 
+		if( cmdlineProps.containsKey("info") )
 			infopath = cmdlineProps.getProperty("info");
-
+        
 		if( infopath != null ) {
 			System.out.println("Checking for infofile at " + infopath);
-			info = new SieveDocuments(infopath);
-			infoUnchanged = new SieveDocuments(infopath);
+			thedocs = new SieveDocuments(infopath);
+			thedocsUnchanged = new SieveDocuments(infopath);
 		}
-
+        
 		// -set on the command line?
-		if( cmdlineProps.containsKey("set") ) { 
+		if( cmdlineProps.containsKey("set") ) {
 			String type = cmdlineProps.getProperty("set");
 			System.out.println("CMD SET = " + type);
 			if( type.equalsIgnoreCase("train") ) {
@@ -126,37 +137,37 @@ public class Main {
 		
 		// Load WordNet for any and all sieves.
 		wordnet = new WordNet();
-
+        
 		// Load the sieve list.
 		sieveClasses = loadSieveList();
 	}
 	
 	
 	private String[] loadSieveList() {
-    String filename = System.getProperty("sieves");
-    if( filename == null ) filename = "default.sieves";
-    
-    System.out.println("Reading sieve list from: " + filename);
-    
-    List<String> sieveNames = new ArrayList<String>();
-    try {
-    	BufferedReader reader = new BufferedReader(new FileReader(new File(filename)));
-    	String line;
-    	while( (line = reader.readLine()) != null ) {
-    		if( !line.matches("^\\s*$") && !line.matches("^\\s*//.*$") ) {
-    			String name = line.trim();
-    			sieveNames.add(name);
-    		}
-    	}
-    	reader.close();
-    } catch( Exception ex ) {
-    	System.out.println("ERROR: no sieve list found");
-    	ex.printStackTrace();
-    	System.exit(1);
-    }
-    
-    String[] arr = new String[sieveNames.size()];
-    return sieveNames.toArray(arr);
+        String filename = System.getProperty("sieves");
+        if( filename == null ) filename = "default.sieves";
+        
+        System.out.println("Reading sieve list from: " + filename);
+        
+        List<String> sieveNames = new ArrayList<String>();
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(new File(filename)));
+            String line;
+            while( (line = reader.readLine()) != null ) {
+                if( !line.matches("^\\s*$") && !line.matches("^\\s*//.*$") ) {
+                    String name = line.trim();
+                    sieveNames.add(name);
+                }
+            }
+            reader.close();
+        } catch( Exception ex ) {
+            System.out.println("ERROR: no sieve list found");
+            ex.printStackTrace();
+            System.exit(1);
+        }
+        
+        String[] arr = new String[sieveNames.size()];
+        return sieveNames.toArray(arr);
 	}
 	
 	/**
@@ -199,7 +210,7 @@ public class Main {
 	 * Run all sieves!! On all documents!!
 	 */
 	public void runSieves() {
-		runSieves(info);
+		runSieves(thedocs);
 	}
     
 	public void runSieves(SieveDocuments info) {
@@ -212,8 +223,8 @@ public class Main {
 		SieveDocuments docs = Evaluate.getDevSet(info);
 		if( runOnTrain ) docs = Evaluate.getTrainSet(info);
 		else if( runOnAll ) docs = info;
-
-		// Do each file independently.        
+        
+		// Do each file independently.
 		for( SieveDocument doc : docs.getDocuments() ) {
 			System.out.println("Processing " + doc.getDocname() + "...");
 			
@@ -260,7 +271,7 @@ public class Main {
 	 * You must have loaded an -info file that has gold TLinks in it.
 	 */
 	public void runPrecisionGauntlet() {
-		if( info == null ) {
+		if( thedocs == null ) {
 			System.out.println("ERROR: no info file given as input for the precision gauntlet.");
 			System.exit(1);
 		}
@@ -269,15 +280,20 @@ public class Main {
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
 		// Data
-		SieveDocuments docs = Evaluate.getDevSet(info);
-		if( runOnTrain ) docs = Evaluate.getTrainSet(info);
-		else if( runOnAll ) docs = info;
+		SieveDocuments docs = Evaluate.getDevSet(thedocs);
+		if( runOnTrain ) docs = Evaluate.getTrainSet(thedocs);
+		else if( runOnAll ) docs = thedocs;
 		
 		// Empty TLink list and counts.
 		List<TLink> currentTLinks = new ArrayList<TLink>();
 		Counter<String> numCorrect = new ClassicCounter<String>();
 		Counter<String> numIncorrect = new ClassicCounter<String>();
 		Counter<String> numIncorrectNonVague = new ClassicCounter<String>();
+		Map<String,Counter<TLink.Type>> goldLabelCounts = new HashMap<String,Counter<TLink.Type>>();
+		for( String sc : sieveClasses ) goldLabelCounts.put(sc, new ClassicCounter<TLink.Type>());
+		Map<String,Counter<String>> guessCounts = new HashMap<String,Counter<String>>();
+		for( String sc : sieveClasses ) guessCounts.put(sc, new ClassicCounter<String>());
+        
 		
 		// Loop over documents.
 		for( SieveDocument doc : docs.getDocuments() ) {
@@ -289,25 +305,32 @@ public class Main {
 			for (TLink tlink : goldLinks) {
 				goldUnorderedIdPairs.put(unorderedIdPair(tlink), tlink);
 			}
-			
+            
 			// Loop over sieves.
 			for( int xx = 0; xx < sieveClasses.length; xx++ ) {
+				String sieveName = sieveClasses[xx];
 				Sieve sieve = sieves[xx];
 				if( sieve != null ) {
-					
+                    
 					// Run it.
 					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
-					
-                    //					System.out.println("Proposed: " + proposed);
-                    //					System.out.println("Gold links: " + goldLinks);
-					
+                    
 					// Check proposed links.
 					for( TLink pp : proposed ) {
 						Set<String> unorderedIdPair = unorderedIdPair(pp);
 						TLink goldLink = goldUnorderedIdPairs.get(unorderedIdPair);
-						if( Evaluate.isLinkCorrect(pp, goldLinks) )
+						
+						if( goldLink != null ) {
+							guessCounts.get(sieveName).incrementCount(goldLink.getOrderedRelation()+" "+pp.getOrderedRelation());
+							goldLabelCounts.get(sieveName).incrementCount(goldLink.getRelation());
+						}
+						
+						// Guessed link is correct!
+						if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
 							numCorrect.incrementCount(sieveClasses[xx]);
-						// only mark relations wrong if there's a conflicting human annotation
+						} 
+						// Gold and guessed link disagree!
+						// Only mark relations wrong if there's a conflicting human annotation.
 						// (if there's no human annotation, we don't know if it's right or wrong)
 						else if (goldLink != null) {
 							if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
@@ -315,12 +338,14 @@ public class Main {
 							}
 							numIncorrect.incrementCount(sieveClasses[xx]);
 							if (debug) {
-								System.out.printf(
-                                                  "%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
-                                                  sieveClasses[xx], doc.getDocname(), goldUnorderedIdPairs.get(unorderedIdPair), pp,
-                                                  getLinkDebugInfo(pp, sents, doc));
-								
+								System.out.printf("%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
+																	sieveClasses[xx], doc.getDocname(), goldUnorderedIdPairs.get(unorderedIdPair), pp,
+																	getLinkDebugInfo(pp, sents, doc));
 							}
+						}
+						// No gold link.
+						else {
+							System.out.println("No gold link: " + pp);
 						}
 					}
 				}
@@ -346,16 +371,56 @@ public class Main {
 			System.out.print(key);
 			for( int tt = 0; tt < numtabs; tt++ ) System.out.print("\t");
 			System.out.printf("p=%.2f\t%.0f of %.0f\tNon-VAGUE:\tp=%.2f\t%.0f of %.0f\n",
-					precision.getCount(key), correct, correct + numIncorrect.getCount(key),
-					precisionNonVague.getCount(key), correct, correct + numIncorrectNonVague.getCount(key));
+                              precision.getCount(key), correct, correct + numIncorrect.getCount(key),
+                              precisionNonVague.getCount(key), correct, correct + numIncorrectNonVague.getCount(key));
+		}
+		for( String key : sortedKeys ) {
+			System.out.println("**** " + key + "****");
+			printBaseline(goldLabelCounts.get(key));			
+			confusionMatrix(guessCounts.get(key));
 		}
 	}
 	
 	/**
-	 * Calls the train() function on all of the listed sieves. 
+	 * Find the label with the most counts, and print the baseline if you always guessed that one.
+	 */
+	private void printBaseline(Counter<TLink.Type> labelCounts) {
+		double total = labelCounts.totalCount();
+		TLink.Type best = null;
+		double bestc = -1.0;
+		for( TLink.Type label : labelCounts.keySet() ) {
+			if( labelCounts.getCount(label) > bestc ) {
+				bestc = labelCounts.getCount(label);
+				best = label;
+			}
+		}
+		System.out.printf("Local Baseline (%s): %.2f\n", best, (bestc/total));
+	}
+	
+	private void confusionMatrix(Counter<String> guessCounts) {
+		final String[] labels = { "BEFORE", "AFTER", "SIMULTANEOUS", "INCLUDES", "IS_INCLUDED", "VAGUE" };
+		for( String label2 : labels )
+			System.out.print("\t" + label2.substring(0,Math.min(label2.length(), 6)));
+		System.out.println("\t(guesses)");
+		
+		for( String label1 : labels ) {
+			System.out.print(label1.substring(0, Math.min(label1.length(), 6)) + "\t");
+			
+			for( String label2 : labels ) {
+				if( guessCounts.containsKey(label1+" "+label2) )
+					System.out.print((int)guessCounts.getCount(label1+" "+label2) + "\t");
+				else System.out.print("0\t");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	/**
+	 * Calls the train() function on all of the listed sieves.
 	 */
 	public void trainSieves() {
-		if( info == null ) {
+		if( thedocs == null ) {
 			System.out.println("ERROR: no info file given as input for the precision gauntlet.");
 			System.exit(1);
 		}
@@ -364,10 +429,10 @@ public class Main {
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
 		// Data
-		SieveDocuments docs = Evaluate.getDevSet(info);
-		if( runOnTrain ) docs = Evaluate.getTrainSet(info);
-		else if( runOnAll ) docs = info;
-
+		SieveDocuments docs = Evaluate.getDevSet(thedocs);
+		if( runOnTrain ) docs = Evaluate.getTrainSet(thedocs);
+		else if( runOnAll ) docs = thedocs;
+        
 		// Train them!
 		for( Sieve sieve : sieves ) {
 			if( debug ) System.out.println("Training sieve: " + sieve.getClass().toString());
@@ -401,15 +466,15 @@ public class Main {
 			String text2 = t2 != null ? t2.getText() : e2.getString();
 			int sid2 = t2 != null ? t2.getSid() : e2.getSid();
 			builder.append(String.format("%s(%s[%s],%s[%s])", link.getRelation(),
-          text1, normId1, text2, normId2));
+                                         text1, normId1, text2, normId2));
 			if (e1 != null && e2 != null) {
 				TextEvent.Tense e1Tense = e1.getTense();
 				TextEvent.Aspect e1Aspect = e1.getAspect();
 				TextEvent.Tense e2Tense = e2.getTense();
 				TextEvent.Aspect e2Aspect = e2.getAspect();
-			// simple display of relation, anchor texts, and anchor ids.
-			builder.append(String.format("\n%s[%s-%s], %s[%s-%s]", 
-					normId1, e1Tense, e1Aspect, normId2, e2Tense, e2Aspect));
+                // simple display of relation, anchor texts, and anchor ids.
+                builder.append(String.format("\n%s[%s-%s], %s[%s-%s]",
+                                             normId1, e1Tense, e1Aspect, normId2, e2Tense, e2Aspect));
 			}
 			builder.append(String.format("\n%s\n%s", sents.get(sid1).sentence(), sents.get(sid2).sentence()));
 		}
@@ -450,12 +515,81 @@ public class Main {
 		links.addAll(newlinks);
 		return newlinks.size();
 	}
+    
+	/**
+	 * Given a path to a directory, assumes every file in the directory is a text file with no
+	 * XML markup. This function will treat each text file as a separate document and perform
+	 * full event, time, and tlink markup.
+	 * @param dirpath Directory of text files.
+	 */
+	public SieveDocuments markupRawTextDir(String dirpath) {
+        // Initialize the parser.
+        LexicalizedParser parser = Ling.createParser(serializedGrammar);
+        if( parser == null ) {
+            System.out.println("Failed to create parser from " + serializedGrammar);
+            System.exit(1);
+        }
+        TreebankLanguagePack tlp = new PennTreebankLanguagePack();
+        GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
+        
+        SieveDocuments docs = new SieveDocuments();
+        for( String file : Directory.getFilesSorted(dirpath) ) {
+            String path = dirpath + File.separator + file;
+            SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(path, parser, gsf);
+            docs.addDocument(doc);
+        }
+        
+        // Markup events, times, and tlinks.
+        markupAll(docs);
+        return docs;
+	}
+	
+	/**
+	 * Assumes the path is to a text-only file with no XML markup.
+	 * @param filepath Path to the text file.
+	 */
+	public SieveDocuments markupRawTextFile(String filepath) {
+        // Initialize the parser.
+        LexicalizedParser parser = Ling.createParser(serializedGrammar);
+        if( parser == null ) {
+            System.out.println("Failed to create parser from " + serializedGrammar);
+            System.exit(1);
+        }
+        TreebankLanguagePack tlp = new PennTreebankLanguagePack();
+        GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
+        
+        // Parse the file.
+        SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(filepath, parser, gsf);
+        SieveDocuments docs = new SieveDocuments();
+        docs.addDocument(doc);
+        
+        // Markup events, times, and tlinks.
+        markupAll(docs);
+        return docs;
+	}
+	
+	public void markupRawText(String path) {
+		File file = new File(path);
+		SieveDocuments docs = null;
+		if( file.isDirectory() ) docs = markupRawTextDir(path);
+		else docs = markupRawTextFile(path);
+		
+        // Output the InfoFile with the events in it.
+		if( docs != null ) {
+			String outpath = path + ".info.xml";
+			if( file.isDirectory() ) outpath = Directory.lastSubdirectory(path) + "-dir.info.xml";
+			
+			docs.writeToXML(outpath);
+			System.out.println("Created " + outpath);
+		}
+		else System.out.println("Couldn't create anything from: " + path);
+	}
 	
 	/**
 	 * Assumes the InfoFile has its text parsed.
 	 */
 	public void markupAll() {
-		markupAll(info);
+		markupAll(thedocs);
 	}
 	public void markupAll(SieveDocuments info) {
 		markupEvents(info);
@@ -468,7 +602,7 @@ public class Main {
 	 */
 	public void markupEvents(SieveDocuments info) {
 		if( eventClassifier == null ) {
-			eventClassifier = new TextEventClassifier(info);
+			eventClassifier = new TextEventClassifier(info, wordnet);
 			eventClassifier.loadClassifiers();
 		}
 		eventClassifier.extractEvents();
@@ -511,12 +645,17 @@ public class Main {
 		else if( args.length > 0 && args[args.length-1].equalsIgnoreCase("parsed") ) {
 			main.markupAll();
 		}
-		
+        
+		// Give a text file or a directory of text files. Parses and marks it up.
+		else if( args.length > 1 && args[args.length-1].equalsIgnoreCase("raw") ) {
+			main.markupRawText(args[args.length-2]);
+		}
+        
 		// The given SieveDocuments only has text and parses, so extract events/times first.
 		else if( args.length > 0 && args[args.length-1].equalsIgnoreCase("trainall") ) {
 			main.trainSieves();
 		}
-			
+        
 		// Run just the TLink Sieve pipeline. Events/Timexes already in the given SieveDocuments.
 		else {
 			main.runSieves();

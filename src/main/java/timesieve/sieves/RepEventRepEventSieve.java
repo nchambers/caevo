@@ -11,15 +11,17 @@ import timesieve.tlink.TLink;
 import timesieve.tlink.EventEventLink;
 
 /**
+ * FIXME: This is redundant with the sieves that are aimed at only VAGUE... remove it? 
+ * 
  * Labels pairs of reporting events as vague.
  * 
  * Precision varies depending on whether events with non-equal tense and aspect are considered.
  * 
- * Precision for all reporting event pairs: .76 (71 of 94)
- * Precision for same-tense pairs: .80 (55 of 69)
- * Precision for same-tense-and-aspect pairs: .83 (54 of 65)
+ * Precision for all reporting event pairs: .79 (65 of 82)
+ * Precision for same-tense pairs: .82 (50 of 61)
+ * Precision for same-tense-and-aspect pairs: .84 (49 of 58)
  * 
- * Currently, it's set to only consider events with same tense and aspect.
+ * Currently, it's set to consider all event pairs.
  * 
  * @author Bill McDowell
  */
@@ -37,20 +39,22 @@ public class RepEventRepEventSieve implements Sieve {
 	}
 	
 	public List<TLink> annotateBySentencePair(SieveDocument doc) {
-		List<List<TextEvent>> allEvents = this.allEventsBySentencePair(doc.getEventsBySentence());
+		List<List<TextEvent>> sentenceEvents = doc.getEventsBySentence();
 		List<TLink> proposed = new ArrayList<TLink>();
 		
-		for (List<TextEvent> closeEvents : allEvents) {
-			for (int e1 = 0; e1 < closeEvents.size(); e1++) {				
-				for (int e2 = e1 + 1; e2 < closeEvents.size(); e2++) {
-					TextEvent event1 = closeEvents.get(e1);
-					TextEvent event2 = closeEvents.get(e2);
-					if (event1.getTheClass() == TextEvent.Class.REPORTING 
-					 && event2.getTheClass() == TextEvent.Class.REPORTING
-					 && event1.getTense() == event2.getTense() 
-					 && event1.getAspect() == event2.getAspect()) {				
-						TLink link = new EventEventLink(event1.getEiid(), event2.getEiid(), TLink.Type.VAGUE);
+		for (int s = 0; s < sentenceEvents.size(); s++) {
+			for (int e1 = 0; e1 < sentenceEvents.get(s).size(); e1++) {						
+				for (int e2 = e1 + 1; e2 < sentenceEvents.get(s).size(); e2++) {
+					TLink link = this.orderEvents(sentenceEvents.get(s).get(e1), sentenceEvents.get(s).get(e2));
+					if (link != null) 
 						proposed.add(link);
+				}
+				
+				if (s + 1 < sentenceEvents.size()) {
+					for (int t2 = 0; t2 < sentenceEvents.get(s+1).size(); t2++) {
+						TLink link = this.orderEvents(sentenceEvents.get(s).get(e1), sentenceEvents.get(s+1).get(t2));
+						if (link != null) 
+							proposed.add(link);
 					}
 				}
 			}
@@ -59,20 +63,15 @@ public class RepEventRepEventSieve implements Sieve {
 		return proposed;
 	}
 	
-	private List<List<TextEvent>> allEventsBySentencePair(List<List<TextEvent>> allEventsBySentence) {
-		List<List<TextEvent>> allEvents = new ArrayList<List<TextEvent>>();
-		
-		if (allEventsBySentence.size() == 1)
-			allEvents.add(allEventsBySentence.get(0));
-		
-		for (int i = 0; i < allEventsBySentence.size() - 1; i++) {
-			List<TextEvent> curEvents = new ArrayList<TextEvent>();
-			curEvents.addAll(allEventsBySentence.get(i));
-			curEvents.addAll(allEventsBySentence.get(i+1));
-			allEvents.add(curEvents);
+	private TLink orderEvents(TextEvent event1, TextEvent event2) {
+		if (event1.getTheClass() == TextEvent.Class.REPORTING 
+				 && event2.getTheClass() == TextEvent.Class.REPORTING
+				 /*&& event1.getTense() == event2.getTense() */
+				 /*&& event1.getAspect() == event2.getAspect()*/) {				
+			return new EventEventLink(event1.getEiid(), event2.getEiid(), TLink.Type.VAGUE);
+		} else {
+			return null;
 		}
-		
-		return allEvents;
 	}
 	
 	/**

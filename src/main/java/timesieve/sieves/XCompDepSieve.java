@@ -5,8 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.trees.GrammaticalRelation;
+import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TypedDependency;
 
+import timesieve.Main;
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
@@ -18,6 +21,15 @@ import timesieve.util.TimeSieveProperties;
 import timesieve.util.TreeOperator;
 
 /**
+ * 
+ * CURRENT STATUS
+ * outputs information: for each event pair where one governs the other via xcomp, 
+ * print out stats. 
+ * TODO double check that the printout has correct relation direction for all cases
+ * TODO change so taht all dependencies are detected, and the label is just part of the printout
+ * TODO tweak features that are printed out; e.g. at least print out the lemma of the word
+ * 			anything else?
+ * 
  * This sieve deals with event pairs in a dependency relationship,
  * when one of the verbs is a reporting verb.
  * 
@@ -26,12 +38,8 @@ import timesieve.util.TreeOperator;
  * @author cassidy
  */
 public class XCompDepSieve implements Sieve {
-	public boolean debug = false;
-	
-	// Property values 
-	private boolean option1 = true;
-	private boolean option2 = true;
-	private boolean option3 = true;
+	public boolean debug = true;
+	public boolean printInfo = true;
 	
 	/**
 	 * The main function. All sieves must have this.
@@ -44,15 +52,10 @@ public class XCompDepSieve implements Sieve {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		try {
-			option1 = TimeSieveProperties.getBoolean("XCompDepSieve.option1", true);
-			option2 = TimeSieveProperties.getBoolean("XCompDepSieve.option2", true);
-			option3 = TimeSieveProperties.getBoolean("XCompDepSieve.option3", true);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		
+		
+		List<TLink> goldLinks = doc.getTlinks(true);
 		
 		//Sieve Code
 		
@@ -66,7 +69,7 @@ public class XCompDepSieve implements Sieve {
 			if (debug == true) {
 				System.out.println("DEBUG: adding tlinks from " + doc.getDocname() + " sentence " + sent.sentence());
 			}
-			proposed.addAll(applySieve(sent.events(), sent));
+			proposed.addAll(applySieve(sent.events(), sent, doc, goldLinks));
 		}
 
 		if (debug == true) {
@@ -82,8 +85,9 @@ public class XCompDepSieve implements Sieve {
 	 * the progressive aspect. If the dependent is in the future tense, label BEFORE
 	 * regardless of its class or aspect.
 	 */
-	private List<TLink> applySieve(List<TextEvent> events, SieveSentence sent) {
+	private List<TLink> applySieve(List<TextEvent> events, SieveSentence sent, SieveDocument doc, List<TLink> goldLinks) {
 		List<TypedDependency> deps = sent.getDeps();
+		List<Tree> trees = doc.getAllParseTrees();
 		List<TLink> proposed = new ArrayList<TLink>();
 		
 		for( int xx = 0; xx < events.size(); xx++ ) {
@@ -93,27 +97,34 @@ public class XCompDepSieve implements Sieve {
 				// We have a pair of event e1 and e2.
 				// check a given TypedDependency involves both events,
 				// and if so check event properties against criteria.
+				
+				// check out dependencyPath method
+
 				for (TypedDependency td : deps) {
 					// if e1 governs e2
-					if (e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index()) {
-						if (td.reln().toString().equals("xcomp")) {
-						classifyEventPair(e1, e2, sent, proposed);
-						}
+				if ((e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index()) || 
+						(e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index())){
+				
+						TextEvent eGov = e1;
+						TextEvent eDep = e2;
+		
+					if (e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index()) {
+						// switch them if e2 governs e1!
+						eGov = e2;
+						eDep = e1;
 					}
-					// if e2 governs e1
-					else if (e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index()) {
-						if (td.reln().toString().equals("xcomp")) {
-						classifyEventPair(e2, e1, sent, proposed);
-						}
-					}
+						String relType = td.reln().toString();
+						
+						if (relType.equals("xcomp"))
+							classifyEventPair(eGov, eDep, sent, proposed);	
+					}		
 				}
 			}
-		}
-
-		
 		if (debug == true) {
 			System.out.println("events: " + events);
 			System.out.println("created tlinks: " + proposed);
+		}
+		
 		}
 		return proposed;
 	}
@@ -122,40 +133,29 @@ public class XCompDepSieve implements Sieve {
 		TextEvent.Tense eGovTense = eGov.getTense();
 		TextEvent.Tense eDepTense = eDep.getTense();
 		TextEvent.Class eDepClass = eDep.getTheClass();
+		TextEvent.Class eGovClass = eGov.getTheClass();
 		TextEvent.Aspect eDepAspect = eDep.getAspect();
+		String govStr = eGov.getString();
+		String depStr = eDep.getString();
 		
-		// Get governor and dependent words
-		CoreLabel govLabel = sent.tokens().get(eGov.getIndex() - 1);
-		CoreLabel depLabel = sent.tokens().get(eDep.getIndex() - 1);
-		String govStr = govLabel.originalText();
-		String depStr = depLabel.originalText();
-		System.out.println(govStr);
-		if (govStr.contains("continue")) {
+		if (eDepTense == TextEvent.Tense.PRESPART)
+			if (eGovClass == TextEvent.Class.OCCURRENCE){
+				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.SIMULTANEOUS));
+			}
+			else {
+				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
+			}
+		else if (eGovClass == TextEvent.Class.ASPECTUAL){
 			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
 		}
-		else if (govStr.equals("began") || govStr.contains("begin")) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
-		}
-		else if (govStr.contains("finish")) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
-		}
-		else if (govStr.contains("help")) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
-		}
-		else if (govStr.equals("use") || govStr.equals("used")) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.SIMULTANEOUS));
-		}
-		else if (eGov.getPolarity().equals(TextEvent.Polarity.NEG)) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.SIMULTANEOUS));
-		}
-		else if (eDep.getAspect().equals(TextEvent.Aspect.PROGRESSIVE)) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
-		}
-		else {
-		proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
-		}
+		else
+			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
 	}
 	
+	private String posTagFromTree(Tree sentParseTree, int tokenIndex){
+		String posTag = TreeOperator.indexToPOSTag(sentParseTree, tokenIndex);
+		return posTag;
+	}
 	/**
 	 * No training. Just rule-based.
 	 */

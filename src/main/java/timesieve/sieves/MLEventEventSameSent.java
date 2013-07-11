@@ -1,14 +1,20 @@
 package timesieve.sieves;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.io.IOUtils;
 import edu.stanford.nlp.ling.RVFDatum;
+import edu.stanford.nlp.stats.ClassicCounter;
+import edu.stanford.nlp.stats.Counter;
 import edu.stanford.nlp.trees.Tree;
-import edu.stanford.nlp.trees.TypedDependency;
 
 import timesieve.Main;
 import timesieve.SieveDocument;
@@ -27,26 +33,37 @@ import timesieve.util.Util;
 /**
  * Machine learned event-event pairs intra-sentence.
  * 
+ * Right now this just makes one classifier for all event-event pairs, and doesn't use the
+ * specific ones for syntactic dominance.
+ * 
+ * Performance	p=0.41	84 of 207	Non-VAGUE:	p=0.60	84 of 141
+ * 
  * @author chambers
  */
 public class MLEventEventSameSent implements Sieve {
-	Classifier<String,String> eeSameSentClassifier; // intra-sentence event-event links.
-  Classifier<String,String> eeSameSentExistsClassifier; // binary, is there a link or not?
-  Classifier<String,String> eeSameSentDominatesClassifier;   // intra-sentence, event-event syntactically dominates
-  Classifier<String,String> eeSameSentNoDominatesClassifier; // intra-sentence, event-event no syntactically dominates
+	Classifier<String,String> eeSameSentClassifier = null; // intra-sentence event-event links.
+	Map<TLink.Type,Classifier<String,String>> binaryLabelClassifiers;
+	
+  Classifier<String,String> eeSameSentExistsClassifier = null; // binary, is there a link or not?
+  Classifier<String,String> eeSameSentDominatesClassifier = null;   // intra-sentence, event-event syntactically dominates
+  Classifier<String,String> eeSameSentNoDominatesClassifier = null; // intra-sentence, event-event no syntactically dominates
   TLinkFeaturizer featurizer;
   
-  String eeSameSentName = "tlink.ee.samesent.classifier-all";
+  TLink.Type[] labels = { TLink.Type.BEFORE, TLink.Type.AFTER, TLink.Type.INCLUDES, TLink.Type.IS_INCLUDED, TLink.Type.SIMULTANEOUS, TLink.Type.VAGUE };
+  String eeSameSentName = "tlink.ee.samesent.classifier";
+  
+  String modelDir = "/models/tlinks";
+  String doBinaryLabel = null;
   boolean eesplit = false;
   boolean debug = true;
   int featMinOccurrence = 2;
+  
+  double minProb = 0.0;
   
   /**
    * Constructor uses the global properties for parameters.
    */
 	public MLEventEventSameSent() {
-		System.out.println("CONSTRUCTOR MLEventEventSameSent");
-
 		// Setup the featurizer for event-event intrasentence links.
 		featurizer = new TLinkFeaturizer();
 		featurizer._eventEventOnly = true;
@@ -67,17 +84,56 @@ public class MLEventEventSameSent implements Sieve {
 		try {
   		eesplit = TimeSieveProperties.getBoolean("MLEventEventSameSent.eesplit",false);
   		debug = TimeSieveProperties.getBoolean("MLEventEventSameSent.debug",false);
+  		doBinaryLabel = TimeSieveProperties.getString("MLEventEventSameSent.binaryLabel",null);
 		} catch( IOException ex ) { }
 		
-		// Classifiers
 		readClassifiers();
+	}
+	
+	public void trimLowProbability(List<TLink> links) {
+		Set<TLink> removal = new HashSet<TLink>();
+		for( TLink link : links )
+			if( link.getRelationConfidence() < minProb )
+				removal.add(link);
+		
+		for( TLink link : removal ) links.remove(link);
+	}
+	
+	public void printLabelStats(List<TLink> links) {
+		Counter<TLink.Type> counts = new ClassicCounter<TLink.Type>();
+		for( TLink link : links ) counts.incrementCount(link.getRelation());
+		System.out.println("# Predicted Labels");
+		for( TLink.Type label : counts.keySet() )
+			System.out.println(label + "\t" + counts.getCount(label));
 	}
 	
 	/**
 	 * The main function. All sieves must have this.
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
-		return extractSameSentenceEventEventLinks(doc);
+		// Classifier loading must have failed in init()
+		if( eeSameSentClassifier == null )
+			return null;
+		
+		List<TLink> labeled = extractSameSentenceEventEventLinks(doc);
+		
+		if( debug ) printLabelStats(labeled);
+		
+		trimLowProbability(labeled);
+		
+		// Trim out any NONE links (from binary classifier decisions)
+		Set<TLink> removal = new HashSet<TLink>();
+		for( TLink link : labeled )
+			if( link.getRelation() == TLink.Type.NONE )
+				removal.add(link);
+		
+		if( debug ) System.out.println("Labeled " + labeled.size() + " and will remove " + removal.size());
+		
+		// Remove the NONEs
+		for( TLink link : removal ) labeled.remove(link);
+		
+		if( debug ) printLabelStats(labeled);
+		return labeled;
 	}
 
 	
@@ -89,13 +145,9 @@ public class MLEventEventSameSent implements Sieve {
     if( debug ) System.out.println(sentences.size() + " sentences.");
     List<TLink> tlinks = new ArrayList<TLink>();
 
-    // Grab all the parse trees.
-    List<Tree> trees = doc.getAllParseTrees();
-
     // Loop over each sentence and get TLinks.
     for( SieveSentence sent : sentences ) {
       List<TextEvent> events = sent.events();
-      List<TypedDependency> deps = sent.getDeps();
 
       if( debug ) System.out.println("events: " + events);
       for( int ii = 0; ii < events.size()-1; ii++ ) {
@@ -118,6 +170,10 @@ public class MLEventEventSameSent implements Sieve {
     Classifier<String,String> targetClassifier = eeSameSentClassifier;
     List<Tree> trees = doc.getAllParseTrees();
 
+    // We are doing a binary classification on one link type.
+    if( doBinaryLabel != null ) 
+    	targetClassifier = binaryLabelClassifiers.get(TLink.Type.valueOf(doBinaryLabel));
+    
     // Use 2 classifiers for event-event links. One for syntactic dominance, the other for general.
     if( eesplit ) {
     	if( featurizer.oneEventDominates(event1, event2, trees) )
@@ -135,49 +191,67 @@ public class MLEventEventSameSent implements Sieve {
     // Create the actual link with the classified label.
     EventEventLink link = new EventEventLink(event1.getEiid(), event2.getEiid(), TLink.Type.valueOf(label));
     link.setRelationConfidence(labelProb.second());
+    if( debug ) System.out.println(link + "\t prob=" + labelProb.second());
     return link;
   }
   
   
+  /**
+   * Load the previously trained classifiers from our model directory.
+   */
   private void readClassifiers() {
-  	String path = "/models/tlinks/" + eeSameSentName;
-  	
+  	String path = modelDir + File.separator + eeSameSentName;
   	eeSameSentClassifier = Util.readClassifierFromFile(this.getClass().getResource(path));
+  	if( eeSameSentClassifier == null )
+  		System.out.println("ERROR: MLEventEventSameSent could not read its classifier at: " + path);
 
-//    try {
-//      eeSameSentClassifier = (Classifier<String,String>)IOUtils.readObjectFromFile(dirpath + File.separator + "tlink.ee.samesent.classifier-all");
-//      eeSameSentExistsClassifier = (Classifier<String,String>)IOUtils.readObjectFromFile(dirpath + File.separator + "tlink.ee.samesent.exists.classifier-all");
-//      eeSameSentDominatesClassifier = (Classifier<String,String>)IOUtils.readObjectFromFile(dirpath + File.separator + "tlink.ee.samesent.dominate.classifier-all");
-//      eeSameSentNoDominatesClassifier = (Classifier<String,String>)IOUtils.readObjectFromFile(dirpath + File.separator + "tlink.ee.samesent.nodominate.classifier-all");
-//    } catch(Exception ex) { 
-//      System.out.println("Had fatal trouble loading " + dirpath);
-//      ex.printStackTrace(); System.exit(1); 
-//    }
+  	// Read the binary classifiers, one for each label type.
+  	binaryLabelClassifiers = new HashMap<TLink.Type,Classifier<String,String>>();
+  	for( TLink.Type label : labels ) {
+    	String mpath = "/models/tlinks/tlink.ee.samesent." + label.toString() + ".classifier";
+    	Classifier<String,String> classifier = Util.readClassifierFromFile(this.getClass().getResource(mpath));
+    	binaryLabelClassifiers.put(label, classifier);
+  	}
   }
   
+  private void writeClassifier(Classifier<String,String> classifier, String filename) {
+    try {
+    	IOUtils.writeObjectToFile(classifier, filename);
+    } catch(Exception ex) {
+    	System.out.println("ERROR: couldn't write classifier " + filename + " in MLEventEventSameSent");
+    	ex.printStackTrace();
+    }
+  }
+  
+  private List<TLinkDatum> createBinaryData(TLink.Type targetLabel, List<TLinkDatum> links) {
+    List<TLinkDatum> binaryData = new ArrayList<TLinkDatum>();
+    for( TLinkDatum datum : links ) {
+    	TLinkDatum newd = new TLinkDatum();
+    	newd.setLabel((datum.getLabel() == targetLabel) ? targetLabel : TLink.Type.NONE);
+    	newd.addFeatures(datum.getFeatures());
+    	binaryData.add(newd);
+    }
+    return binaryData;
+  }
   
 	/**
 	 * Train on the documents.
 	 */
 	public void train(SieveDocuments docs) {
-//		featurizer.debug = true;
+
+    //		featurizer.debug = true;
 		List<TLinkDatum> data = featurizer.infoToTLinkFeatures(docs, null);
     System.out.println("Final training data size: " + data.size());
-    
-    if( debug ){
-    	for( TLinkDatum dd : data ) {
-    		System.out.println("** " + dd._originalTLink);    		
-    		System.out.println(dd);
-    	}
-    }
-    
-    eeSameSentClassifier = TLinkClassifier.train(data, featMinOccurrence);
-    
-    try {
-    	IOUtils.writeObjectToFile(eeSameSentClassifier, eeSameSentName);
-    } catch(Exception ex) {
-    	System.out.println("ERROR: couldn't write classifiers to file in MLEventEventSameSent");
-    	ex.printStackTrace();
+
+    // Train the multi-class classifier.
+    eeSameSentClassifier = TLinkClassifier.train(data, featMinOccurrence);    
+    writeClassifier(eeSameSentClassifier, eeSameSentName);    
+
+    // Train binary classifiers for each label.
+    for( TLink.Type target : labels ) {
+    	List<TLinkDatum> binarydata = createBinaryData(target, data);
+    	String modelName = "tlink.ee.samesent." + target.toString() + ".classifier";
+    	writeClassifier(TLinkClassifier.train(binarydata, featMinOccurrence), modelName);
     }
 	}
 
