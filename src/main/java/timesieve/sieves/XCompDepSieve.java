@@ -38,9 +38,8 @@ import timesieve.util.TreeOperator;
  * @author cassidy
  */
 public class XCompDepSieve implements Sieve {
-	public boolean debug = false;
+	public boolean debug = true;
 	public boolean printInfo = true;
-	
 	
 	/**
 	 * The main function. All sieves must have this.
@@ -100,13 +99,7 @@ public class XCompDepSieve implements Sieve {
 				// and if so check event properties against criteria.
 				
 				// check out dependencyPath method
-				
-				String shortestPath = TreeOperator.dependencyPath(e1.getIndex(), e2.getIndex(), deps);
-				
-				System.out.println("sent: " + sent.sentence());
-				System.out.println("depPath: " + e1.getString() + " " + shortestPath + e2.getString());
-				
-				
+
 				for (TypedDependency td : deps) {
 					// if e1 governs e2
 				if ((e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index()) || 
@@ -123,38 +116,10 @@ public class XCompDepSieve implements Sieve {
 						String relType = td.reln().toString();
 						
 						if (relType.equals("xcomp"))
-							classifyEventPair(eGov, eDep, sent, proposed);
-						
-						if (printInfo == true) {
-						Tree sentParseTree = trees.get(e1.getSid());
-						String postagStr1 = posTagFromTree(sentParseTree, eGov.getIndex());
-						String govLemma = Main.wordnet.lemmatizeTaggedWord(eGov.getString(), postagStr1);
-						String postagStr2 = posTagFromTree(sentParseTree, eDep.getIndex());
-						String depLemma = Main.wordnet.lemmatizeTaggedWord(eDep.getString(), postagStr2);
-						
-						for (TLink tlink : goldLinks) {
-							
-						 // Check if the relationship in the TLink is ordered gov-dep or dep-gov; invert the relation in the latter case
-							if (tlink.getId1().equals(eGov.getEiid()) && tlink.getId2().equals(eDep.getEiid())) {
-							
-								System.out.printf("%s document:%s relation:%s gold:%s string_eGov:%s lemma_eGov:%s tense_eGov:%s aspect_eGov:%s class_eGov:%s modality_eGov:%s polarity_eGov:%s string_eDep:%s lemma_eDep:%s tense_eDep:%s aspect_eDep:%s class_eDep:%s modality_eDep:%s polarity_eDep:%s\n",
-										"DepStats",doc.getDocname(),relType,tlink.getRelation(),//eGov.getEiid(),eDep.getEiid(),
-										eGov.getString(),govLemma,eGov.getTense(),eGov.getAspect(),eGov.getTheClass(),eGov.getModality(),eGov.getPolarity(),
-										eDep.getString(),depLemma,eDep.getTense(),eDep.getAspect(),eDep.getTheClass(),eDep.getModality(),eDep.getPolarity());
-							}
-							else if (tlink.getId1().equals(eDep.getEiid()) && tlink.getId2().equals(eGov.getEiid())) {
-								System.out.printf("%s document:%s relation:%s gold:%s string_eGov:%s lemma_eGov:%s tense_eGov:%s aspect_eGov:%s class_eGov:%s modality_eGov:%s polarity_eGov:%s string_eDep:%s lemma_eDep:%s tense_eDep:%s aspect_eDep:%s class_eDep:%s modality_eDep:%s polarity_eDep:%s\n",
-										"DepStats",doc.getDocname(),relType,TLink.invertRelation(tlink.getRelation()),//eGov.getEiid(),eDep.getEiid(),
-										eGov.getString(),govLemma,eGov.getTense(),eGov.getAspect(),eGov.getTheClass(),eGov.getModality(),eGov.getPolarity(),
-										eDep.getString(),depLemma,eDep.getTense(),eDep.getAspect(),eDep.getTheClass(),eDep.getModality(),eDep.getPolarity());
-								}
-							
-						 }
-						}
+							classifyEventPair(eGov, eDep, sent, proposed);	
 					}		
 				}
 			}
-	
 		if (debug == true) {
 			System.out.println("events: " + events);
 			System.out.println("created tlinks: " + proposed);
@@ -168,27 +133,23 @@ public class XCompDepSieve implements Sieve {
 		TextEvent.Tense eGovTense = eGov.getTense();
 		TextEvent.Tense eDepTense = eDep.getTense();
 		TextEvent.Class eDepClass = eDep.getTheClass();
+		TextEvent.Class eGovClass = eGov.getTheClass();
 		TextEvent.Aspect eDepAspect = eDep.getAspect();
 		String govStr = eGov.getString();
 		String depStr = eDep.getString();
-
-		if (eGov.getTheClass() == TextEvent.Class.ASPECTUAL)
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
-		else if (eGov.getTheClass() == TextEvent.Class.I_STATE) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
-		}
-		else if (govStr.equals("use") || govStr.equals("used")) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.SIMULTANEOUS));
-		}
-		else if (eGov.getPolarity().equals(TextEvent.Polarity.NEG)) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.SIMULTANEOUS));
-		}
-		else if (eDep.getAspect().equals(TextEvent.Aspect.PROGRESSIVE)) {
+		
+		if (eDepTense == TextEvent.Tense.PRESPART)
+			if (eGovClass == TextEvent.Class.OCCURRENCE){
+				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.SIMULTANEOUS));
+			}
+			else {
+				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
+			}
+		else if (eGovClass == TextEvent.Class.ASPECTUAL){
 			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED));
 		}
-		else {
-		proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
-		}
+		else
+			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
 	}
 	
 	private String posTagFromTree(Tree sentParseTree, int tokenIndex){

@@ -15,7 +15,7 @@ ReichenbachDG13
 //                    WordFeatures64
 //                    WordNet209
 //                      XCompDepSieve
-=======
+
 //RepEventGovEvent
 //RepEventRepEventSieve
 //ReichenbachDG13
@@ -33,4 +33,5 @@ FrequencyVagueSieve
 TimeTimeSieve
 EventCreationTimeSieve
 RepEventRepEventSieve
+XCompDepSieve
 
