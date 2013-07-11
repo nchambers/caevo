@@ -289,6 +289,8 @@ public class Main {
 		Counter<String> numCorrect = new ClassicCounter<String>();
 		Counter<String> numIncorrect = new ClassicCounter<String>();
 		Counter<String> numIncorrectNonVague = new ClassicCounter<String>();
+		Map<String,Counter<TLink.Type>> goldLabelCounts = new HashMap<String,Counter<TLink.Type>>();
+		for( String sc : sieveClasses ) goldLabelCounts.put(sc, new ClassicCounter<TLink.Type>());
 		Map<String,Counter<String>> guessCounts = new HashMap<String,Counter<String>>();
 		for( String sc : sieveClasses ) guessCounts.put(sc, new ClassicCounter<String>());
         
@@ -313,32 +315,37 @@ public class Main {
 					// Run it.
 					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
                     
-					//					System.out.println("Proposed: " + proposed);
-					//					System.out.println("Gold links: " + goldLinks);
-                    
 					// Check proposed links.
 					for( TLink pp : proposed ) {
 						Set<String> unorderedIdPair = unorderedIdPair(pp);
 						TLink goldLink = goldUnorderedIdPairs.get(unorderedIdPair);
 						
-						if( goldLink != null )
+						if( goldLink != null ) {
 							guessCounts.get(sieveName).incrementCount(goldLink.getOrderedRelation()+" "+pp.getOrderedRelation());
+							goldLabelCounts.get(sieveName).incrementCount(goldLink.getRelation());
+						}
 						
+						// Guessed link is correct!
 						if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
 							numCorrect.incrementCount(sieveClasses[xx]);
-							// only mark relations wrong if there's a conflicting human annotation
-							// (if there's no human annotation, we don't know if it's right or wrong)
-						} else if (goldLink != null) {
+						} 
+						// Gold and guessed link disagree!
+						// Only mark relations wrong if there's a conflicting human annotation.
+						// (if there's no human annotation, we don't know if it's right or wrong)
+						else if (goldLink != null) {
 							if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
 								numIncorrectNonVague.incrementCount(sieveClasses[xx]);
 							}
 							numIncorrect.incrementCount(sieveClasses[xx]);
 							if (debug) {
-								System.out.printf(
-                                                  "%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
-                                                  sieveClasses[xx], doc.getDocname(), goldUnorderedIdPairs.get(unorderedIdPair), pp,
-                                                  getLinkDebugInfo(pp, sents, doc));
+								System.out.printf("%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
+																	sieveClasses[xx], doc.getDocname(), goldUnorderedIdPairs.get(unorderedIdPair), pp,
+																	getLinkDebugInfo(pp, sents, doc));
 							}
+						}
+						// No gold link.
+						else {
+							System.out.println("No gold link: " + pp);
 						}
 					}
 				}
@@ -368,16 +375,33 @@ public class Main {
                               precisionNonVague.getCount(key), correct, correct + numIncorrectNonVague.getCount(key));
 		}
 		for( String key : sortedKeys ) {
-			System.out.println("** " + key + "**");
+			System.out.println("**** " + key + "****");
+			printBaseline(goldLabelCounts.get(key));			
 			confusionMatrix(guessCounts.get(key));
 		}
+	}
+	
+	/**
+	 * Find the label with the most counts, and print the baseline if you always guessed that one.
+	 */
+	private void printBaseline(Counter<TLink.Type> labelCounts) {
+		double total = labelCounts.totalCount();
+		TLink.Type best = null;
+		double bestc = -1.0;
+		for( TLink.Type label : labelCounts.keySet() ) {
+			if( labelCounts.getCount(label) > bestc ) {
+				bestc = labelCounts.getCount(label);
+				best = label;
+			}
+		}
+		System.out.printf("Local Baseline (%s): %.2f\n", best, (bestc/total));
 	}
 	
 	private void confusionMatrix(Counter<String> guessCounts) {
 		final String[] labels = { "BEFORE", "AFTER", "SIMULTANEOUS", "INCLUDES", "IS_INCLUDED", "VAGUE" };
 		for( String label2 : labels )
 			System.out.print("\t" + label2.substring(0,Math.min(label2.length(), 6)));
-		System.out.println();
+		System.out.println("\t(guesses)");
 		
 		for( String label1 : labels ) {
 			System.out.print(label1.substring(0, Math.min(label1.length(), 6)) + "\t");
