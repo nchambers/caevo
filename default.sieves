@@ -1,35 +1,9 @@
-//RepCreationDay
-//AdjacentVerbTimex
-//TimeTimeSieve
-//RepEventGovEvent
-//ReichenbachDG13
-    
-//    MLEventEventSameSent
-    
-//AllVagueSieve
-//                    DependencyAnalyze
-//                    Dependencies182
-//                    WordFeatures5
-//                    QuarterSieveReporting
-//                    StupidSieve
-//                    WordFeatures64
-//                    WordNet209
-//                      XCompDepSieve
-=======
-//RepEventGovEvent
-//RepEventRepEventSieve
-//ReichenbachDG13
-//MLEventEventSameSent  
-//AllVagueSieve
-//DependencyAnalyze
-//Dependencies182
-//WordFeatures5
-//QuarterSieveReporting
-//StupidSieve
-//WordFeatures64
-//WordNet209
-//MLEventEventSameSent
-FrequencyVagueSieve
+RepCreationDay
+AdjacentVerbTimex
+RepEventGovEvent
+ReichenbachDG13
+WordNet209
 TimeTimeSieve
 EventCreationTimeSieve
+RepEventRepEventSieve
 

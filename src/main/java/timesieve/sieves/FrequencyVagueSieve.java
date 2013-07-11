@@ -32,8 +32,8 @@ import timesieve.tlink.EventEventLink;
 public class FrequencyVagueSieve implements Sieve {
 	/* FIXME: MOVE TO PROPERTIES */
 	private static String RULE_SAVE_PATH = "src/main/resources/models/tlinks/FrequencyVagueSieve";
-	private static double MINIMUM_RULE_PRECISION = .85;
-	private static int MINIMUM_PRECISION_EXAMPLES = 20;
+	private static double MINIMUM_RULE_PRECISION = .70;
+	private static int MINIMUM_PRECISION_EXAMPLES = 60;
 	
 	/* The following static integers and matrix encode which types of rules are constructed by this sieve.
 	 * Each static "INDEX" value is used to index into the arrays in the matrix.

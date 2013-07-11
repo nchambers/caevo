@@ -22,7 +22,7 @@ import timesieve.util.TreeOperator;
 
 /**
  * 
- * CURRENT STATUS: 
+ * CURRENT STATUS
  * outputs information: for each event pair where one governs the other via xcomp, 
  * print out stats. 
  * TODO double check that the printout has correct relation direction for all cases
@@ -39,6 +39,7 @@ import timesieve.util.TreeOperator;
  */
 public class XCompDepSieve implements Sieve {
 	public boolean debug = false;
+	public boolean printInfo = true;
 	
 	
 	/**
@@ -90,7 +91,6 @@ public class XCompDepSieve implements Sieve {
 		List<Tree> trees = doc.getAllParseTrees();
 		List<TLink> proposed = new ArrayList<TLink>();
 		
-		
 		for( int xx = 0; xx < events.size(); xx++ ) {
 			TextEvent e1 = events.get(xx);
 			for( int yy = xx+1; yy < events.size(); yy++ ) {
@@ -98,10 +98,19 @@ public class XCompDepSieve implements Sieve {
 				// We have a pair of event e1 and e2.
 				// check a given TypedDependency involves both events,
 				// and if so check event properties against criteria.
+				
+				// check out dependencyPath method
+				
+				String shortestPath = TreeOperator.dependencyPath(e1.getIndex(), e2.getIndex(), deps);
+				
+				System.out.println("sent: " + sent.sentence());
+				System.out.println("depPath: " + e1.getString() + " " + shortestPath + e2.getString());
+				
+				
 				for (TypedDependency td : deps) {
 					// if e1 governs e2
-				if (e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index() || 
-						e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index()){
+				if ((e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index()) || 
+						(e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index())){
 				
 						TextEvent eGov = e1;
 						TextEvent eDep = e2;
@@ -116,34 +125,32 @@ public class XCompDepSieve implements Sieve {
 						if (relType.equals("xcomp"))
 							classifyEventPair(eGov, eDep, sent, proposed);
 						
+						if (printInfo == true) {
 						Tree sentParseTree = trees.get(e1.getSid());
 						String postagStr1 = posTagFromTree(sentParseTree, eGov.getIndex());
 						String govLemma = Main.wordnet.lemmatizeTaggedWord(eGov.getString(), postagStr1);
 						String postagStr2 = posTagFromTree(sentParseTree, eDep.getIndex());
-						String depLemma = Main.wordnet.lemmatizeTaggedWord(eDep.getString(), postagStr1);
-						
+						String depLemma = Main.wordnet.lemmatizeTaggedWord(eDep.getString(), postagStr2);
 						
 						for (TLink tlink : goldLinks) {
 							
 						 // Check if the relationship in the TLink is ordered gov-dep or dep-gov; invert the relation in the latter case
 							if (tlink.getId1().equals(eGov.getEiid()) && tlink.getId2().equals(eDep.getEiid())) {
-								if (govLemma.equals("begin")) {
-									continue;
-								}
-								System.out.printf("%s document:%s relation:%s gold:%s pair:(%s,%s) string_eGov:%s lemma_eGov:%s tense_eGov:%s aspect_eGov:%s class_eGov:%s modality_eGov:%s polarity_eGov:%s string_eDep:%s lemma_eDep:%s tense_eDep:%s aspect_eDep:%s class_eDep:%s modality_eDep:%s polarity_eDep:%s\n",
-										"DepStats",doc.getDocname(),relType,tlink.getRelation(),eGov.getEiid(),eDep.getEiid(),
+							
+								System.out.printf("%s document:%s relation:%s gold:%s string_eGov:%s lemma_eGov:%s tense_eGov:%s aspect_eGov:%s class_eGov:%s modality_eGov:%s polarity_eGov:%s string_eDep:%s lemma_eDep:%s tense_eDep:%s aspect_eDep:%s class_eDep:%s modality_eDep:%s polarity_eDep:%s\n",
+										"DepStats",doc.getDocname(),relType,tlink.getRelation(),//eGov.getEiid(),eDep.getEiid(),
 										eGov.getString(),govLemma,eGov.getTense(),eGov.getAspect(),eGov.getTheClass(),eGov.getModality(),eGov.getPolarity(),
 										eDep.getString(),depLemma,eDep.getTense(),eDep.getAspect(),eDep.getTheClass(),eDep.getModality(),eDep.getPolarity());
 							}
 							else if (tlink.getId1().equals(eDep.getEiid()) && tlink.getId2().equals(eGov.getEiid())) {
-								System.out.printf("%s document:%s relation:%s gold:%s pair:(%s,%s) string_eGov:%s lemma_eGov:%s tense_eGov:%s aspect_eGov:%s class_eGov:%s modality_eGov:%s polarity_eGov:%s string_eDep:%s lemma_eDep:%s tense_eDep:%s aspect_eDep:%s class_eDep:%s modality_eDep:%s polarity_eDep:%s\n",
-										"DepStats",doc.getDocname(),relType,TLink.invertRelation(tlink.getRelation()),eGov.getEiid(),eDep.getEiid(),
+								System.out.printf("%s document:%s relation:%s gold:%s string_eGov:%s lemma_eGov:%s tense_eGov:%s aspect_eGov:%s class_eGov:%s modality_eGov:%s polarity_eGov:%s string_eDep:%s lemma_eDep:%s tense_eDep:%s aspect_eDep:%s class_eDep:%s modality_eDep:%s polarity_eDep:%s\n",
+										"DepStats",doc.getDocname(),relType,TLink.invertRelation(tlink.getRelation()),//eGov.getEiid(),eDep.getEiid(),
 										eGov.getString(),govLemma,eGov.getTense(),eGov.getAspect(),eGov.getTheClass(),eGov.getModality(),eGov.getPolarity(),
 										eDep.getString(),depLemma,eDep.getTense(),eDep.getAspect(),eDep.getTheClass(),eDep.getModality(),eDep.getPolarity());
 								}
 							
-							}
-						
+						 }
+						}
 					}		
 				}
 			}
