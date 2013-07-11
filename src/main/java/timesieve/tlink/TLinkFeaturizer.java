@@ -824,9 +824,16 @@ public class TLinkFeaturizer {
   }
   
   public boolean oneEventDominates(TextEvent event1, TextEvent event2, List<Tree> trees) {
+  	if( event1 != null ) {
+  		Tree tree = trees.get(event1.getSid());
+  		return oneEventDominates(event1, event2, tree);
+  	}
+    return false;
+  }
+  
+  public boolean oneEventDominates(TextEvent event1, TextEvent event2, Tree tree) {
   	// Must be in the same sentence.
   	if( event1.getSid() == event2.getSid() ) {
-  		Tree tree = trees.get(event1.getSid());
   		Tree tree1 = TreeOperator.indexToSubtree(tree, event1.getIndex());
   		Tree tree2 = TreeOperator.indexToSubtree(tree, event2.getIndex());
 

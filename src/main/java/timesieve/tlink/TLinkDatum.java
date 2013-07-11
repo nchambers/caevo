@@ -44,11 +44,19 @@ public class TLinkDatum {
   	_type = type;
   }
   
-  public Set<String> getFeatures() {
+  public void setLabel(TLink.Type label) {
+  	this._relation = label;
+  }
+  
+  public Set<String> getFeatureKeys() {
     if( _featureCounts == null ) 
       return null;
     else
       return _featureCounts.keySet();
+  }
+  
+  public Counter<String> getFeatures() {
+  	return _featureCounts;
   }
   
   public double getCount(String feat) {
@@ -112,7 +120,8 @@ public class TLinkDatum {
       return new BasicDatum<String,String>(_featureCounts.keySet(), (_relation == null ? "null" : _relation.toString()));
   }
   
-  public String getLabel() { return _relation.toString(); }
+  public String getLabelAsString() { return _relation.toString(); }
+  public TLink.Type getLabel() { return _relation; }
   public String getSourceDoc() { return _docSource; }
   public TYPE getType() { return _type; };
   
