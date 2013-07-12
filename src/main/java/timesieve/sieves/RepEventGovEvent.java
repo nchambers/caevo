@@ -9,6 +9,7 @@ import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
 import timesieve.TextEvent;
+import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TLink.Type;
 import edu.stanford.nlp.trees.TypedDependency;
@@ -169,8 +170,7 @@ public class RepEventGovEvent implements Sieve {
 						// only 5 instances of govTense=PRESENT in TimeBank
 						// only 1 instance of govTense=FUTURE in TimeBank
 						if (relation != null) {
-							proposed.add(new TLink(govEvent.getEiid(), depEvent.getEiid(),
-									relation));
+							proposed.add(new EventEventLink(govEvent.getEiid(), depEvent.getEiid(), relation));
 						}
 					}
 				}
