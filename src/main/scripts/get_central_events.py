@@ -114,7 +114,7 @@ class HalfLinks:
 			sentAndText += "### Following Sentence: (NONE) \n\n"
 			
 		# add tlink tuples to sentAndText
-		sentAndText += "TLinks: %s\n" % self.get_id_from_full(entId)
+		sentAndText += "TLinks: %s\n" % self.get_id_from_full(entIdFull)
 		tlinkTuples = self.get_tlink_tuples_for_entIdFull(entIdFull)
 		for tt in tlinkTuples:
 			targetId = self.get_id_from_full(tt[0])

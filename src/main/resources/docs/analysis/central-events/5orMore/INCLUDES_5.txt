@@ -1,0 +1,714 @@
+AP900816-0139.tml|ei1532(entity text: crisis)
+
+### Previous Sentence: The Persian Gulf showdown between Iraq and the United States took a more personal turn Thursday when Iraq 's Saddam Hussein called President Bush a liar and said the outbreak of holy war could bring thousands of Americans home in coffins .
+
+### Sentence with entity: Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+
+### Following Sentence: After a two-hour meeting at his Kennebunkport home with King Hussein of Jordan , Bush said , `` I did not come away with any feeling of hope '' that Iraq would withdraw its army from Kuwait .
+
+TLinks: ei1532
+	AFTER	ei1540(event text: invasion)
+	INCLUDES	ei1536(event text: optimistic)
+	VAGUE	ei1522(event text: showdown)
+	INCLUDES	ei1524(event text: called)
+	INCLUDES	ei1542(event text: meeting)
+	INCLUDES	ei1537(event text: settlement)
+	INCLUDES	ei1531(event text: commenting)
+	INCLUDES	ei1533(event text: said)
+	INCLUDES	ei1543(event text: said)
+	VAGUE	ei1529(event text: bring)
+	VAGUE	ei1539(event text: stems)
+	SIMULTANEOUS	ei1538(event text: dispute)
+	AFTER	ei1541(event text: buildup)
+	INCLUDES	ei1526(event text: said)
+	INCLUDES	ei1544(event text: come)
+	INCLUDES	ei1523(event text: took)
+	VAGUE	ei1546(event text: withdraw)
+	INCLUDES	t288(event text: Thursday)
+	INCLUDES	t290(event text: two-hour)
+	INCLUDES	t289(event text: two-week)
+	VAGUE	ei1528(event text: war)
+	INCLUDES	ei1534(event text: saw)
+
+
+AP900815-0044.tml|ei1530(entity text: crisis)
+
+### Previous Sentence: Iraq 's Saddam Hussein , facing U.S. and Arab troops at the Saudi border , today sought peace on another front by promising to withdraw from Iranian territory and release soldiers captured during the Iran-Iraq war .
+
+### Sentence with entity: Also today , King Hussein of Jordan arrived in Washington seeking to mediate the Persian Gulf crisis .
+
+### Following Sentence: President Bush on Tuesday said the United States may extend its naval quarantine to Jordan 's Red Sea port of Aqaba to shut off Iraq 's last unhindered trade route .
+
+TLinks: ei1530
+	VAGUE	ei1525(event text: captured)
+	INCLUDES	ei1531(event text: said)
+	INCLUDES	ei1532(event text: extend)
+	INCLUDES	t4(event text: today)
+	INCLUDES	ei1520(event text: sought)
+	INCLUDES	ei1522(event text: promising)
+	INCLUDES	ei1519(event text: facing)
+	INCLUDES	ei1529(event text: mediate)
+	INCLUDES	t14(event text: today)
+	INCLUDES	ei1527(event text: arrived)
+	VAGUE	ei1523(event text: withdraw)
+	VAGUE	ei1524(event text: release)
+	INCLUDES	t22(event text: Tuesday)
+	INCLUDES	ei1534(event text: shut)
+	VAGUE	ei1526(event text: war)
+	INCLUDES	ei1528(event text: seeking)
+
+
+APW19980219.0476.tml|ei2519(entity text: responsible)
+
+### Previous Sentence: Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+
+### Sentence with entity: Pol Pot is considered responsible for the radical policies that led to the deaths of as many as 1.7 million Cambodians when the communist group held power in the late 1970s .
+
+### Following Sentence: At the time Howes was captured , the Khmer Rouge were a more or less united guerrilla force with more than 10,000 men under arms .
+
+TLinks: ei2519
+	INCLUDES	ei2516(event text: killed)
+	INCLUDES	ei2520(event text: policies)
+	INCLUDES	t2452(event text: now)
+	INCLUDES	ei2521(event text: led)
+	INCLUDES	ei2517(event text: capture)
+	VAGUE	ei2518(event text: considered)
+	INCLUDES	ei2515(event text: believed)
+	INCLUDES	t140(event text: a week)
+	INCLUDES	ei2523(event text: held)
+	INCLUDES	t142(event text: the late 1970s)
+	INCLUDES	ei2522(event text: deaths)
+	INCLUDES	ei2514(event text: said)
+	INCLUDES	ei2524(event text: captured)
+
+
+APW19980213.1310.tml|ei2056(entity text: independent)
+
+### Previous Sentence: Polls have shown public support for a republic increasing , rising from about 35 percent several years ago to about 51 percent this year , as pro-monarchist sentiment diminishes .
+
+### Sentence with entity: Australia has been independent since 1901 , but like many Commonwealth nations it still recognizes the British monarch as its head of state .
+
+### Following Sentence: Howard said Queen Elizabeth II is taking a great interest in the convention .
+
+TLinks: ei2056
+	INCLUDES	ei2051(event text: increasing)
+	INCLUDES	ei2059(event text: taking)
+	INCLUDES	t118(event text: 1901)
+	VAGUE	ei2057(event text: recognizes)
+	INCLUDES	ei2052(event text: rising)
+	INCLUDES	t117(event text: several years ago)
+	INCLUDES	ei2055(event text: diminishes)
+	INCLUDES	ei2049(event text: shown)
+	INCLUDES	ei2058(event text: said)
+	INCLUDES	t358(event text: this year)
+	INCLUDES	ei2060(event text: convention)
+
+
+APW19980227.0476.tml|ei2095(entity text: suspected)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: THE HAGUE , Netherlands -LRB- AP -RRB- _ The World Court Friday rejected U.S. and British objections to a Libyan World Court case that has blocked the trial of two Libyans suspected of blowing up a Pan Am jumbo jet over Scotland in 1988 .
+
+### Following Sentence: Libya , which brought the case to the United Nations ' highest judicial body in its dispute with the United States and Britain , hailed the ruling and said it would press anew for a trial in a third neutral country .
+
+TLinks: ei2095
+	INCLUDES	ei2092(event text: objections)
+	INCLUDES	ei2093(event text: blocked)
+	VAGUE	ei2094(event text: trial)
+	AFTER	ei2096(event text: blowing)
+	VAGUE	t22(event text: 1988)
+	INCLUDES	ei2102(event text: press)
+	INCLUDES	ei2099(event text: hailed)
+	VAGUE	ei2098(event text: dispute)
+	INCLUDES	ei2103(event text: trial)
+	INCLUDES	ei2100(event text: ruling)
+	INCLUDES	t21(event text: Friday)
+	INCLUDES	ei2091(event text: rejected)
+	INCLUDES	ei2097(event text: brought)
+	INCLUDES	ei2101(event text: said)
+
+
+AP900816-0139.tml|t289(entity text: two-week)
+
+### Previous Sentence: The Persian Gulf showdown between Iraq and the United States took a more personal turn Thursday when Iraq 's Saddam Hussein called President Bush a liar and said the outbreak of holy war could bring thousands of Americans home in coffins .
+
+### Sentence with entity: Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+
+### Following Sentence: After a two-hour meeting at his Kennebunkport home with King Hussein of Jordan , Bush said , `` I did not come away with any feeling of hope '' that Iraq would withdraw its army from Kuwait .
+
+TLinks: t289
+	VAGUE	ei1546(event text: withdraw)
+	INCLUDES	t290(event text: two-hour)
+	VAGUE	ei1540(event text: invasion)
+	INCLUDES	ei1531(event text: commenting)
+	BEFORE	ei1537(event text: settlement)
+	VAGUE	ei1539(event text: stems)
+	BEFORE	ei1529(event text: bring)
+	INCLUDES	ei1544(event text: come)
+	INCLUDES	ei1523(event text: took)
+	BEFORE	ei1528(event text: war)
+	VAGUE	ei1541(event text: buildup)
+	VAGUE	ei1522(event text: showdown)
+	VAGUE	ei1536(event text: optimistic)
+	INCLUDES	ei1526(event text: said)
+	INCLUDES	ei1533(event text: said)
+	VAGUE	ei1538(event text: dispute)
+	INCLUDES	ei1542(event text: meeting)
+	VAGUE	ei1534(event text: saw)
+	INCLUDES	ei1524(event text: called)
+	IS_INCLUDED	ei1532(event text: crisis)
+	INCLUDES	t288(event text: Thursday)
+	INCLUDES	ei1543(event text: said)
+
+
+APW19980213.1310.tml|ei2057(entity text: recognizes)
+
+### Previous Sentence: Polls have shown public support for a republic increasing , rising from about 35 percent several years ago to about 51 percent this year , as pro-monarchist sentiment diminishes .
+
+### Sentence with entity: Australia has been independent since 1901 , but like many Commonwealth nations it still recognizes the British monarch as its head of state .
+
+### Following Sentence: Howard said Queen Elizabeth II is taking a great interest in the convention .
+
+TLinks: ei2057
+	INCLUDES	ei2051(event text: increasing)
+	INCLUDES	ei2052(event text: rising)
+	INCLUDES	ei2059(event text: taking)
+	INCLUDES	ei2055(event text: diminishes)
+	INCLUDES	t358(event text: this year)
+	INCLUDES	ei2049(event text: shown)
+	VAGUE	ei2056(event text: independent)
+	INCLUDES	ei2060(event text: convention)
+	INCLUDES	t117(event text: several years ago)
+	INCLUDES	t118(event text: 1901)
+	INCLUDES	ei2058(event text: said)
+
+
+NYT19980212.0019.tml|t44(entity text: Thursday evening)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: NEW YORK _ A Brooklyn woman who was watching her clothes dry in a laundromat was killed Thursday evening when two would-be robbers emptied their pistols into the store , the police said .
+
+### Following Sentence: The men appeared in the store at 469 Vermont St. in Brownsville around 7:15 p.m. , after the victim , Linda Sanders , 35 , had finished her cleaning and was waiting for her clothes to dry , detectives said .
+
+TLinks: t44
+	INCLUDES	ei217(event text: waiting)
+	INCLUDES	ei212(event text: emptied)
+	INCLUDES	t46(event text: around 7:15 p.m.)
+	VAGUE	ei213(event text: said)
+	INCLUDES	ei210(event text: watching)
+	INCLUDES	ei216(event text: cleaning)
+	INCLUDES	ei218(event text: dry)
+	VAGUE	ei219(event text: said)
+	INCLUDES	ei211(event text: killed)
+	INCLUDES	ei215(event text: finished)
+	INCLUDES	ei214(event text: appeared)
+
+
+AP900816-0139.tml|ei1538(entity text: dispute)
+
+### Previous Sentence: The Persian Gulf showdown between Iraq and the United States took a more personal turn Thursday when Iraq 's Saddam Hussein called President Bush a liar and said the outbreak of holy war could bring thousands of Americans home in coffins .
+
+### Sentence with entity: Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+
+### Following Sentence: After a two-hour meeting at his Kennebunkport home with King Hussein of Jordan , Bush said , `` I did not come away with any feeling of hope '' that Iraq would withdraw its army from Kuwait .
+
+TLinks: ei1538
+	AFTER	ei1539(event text: stems)
+	VAGUE	ei1537(event text: settlement)
+	INCLUDES	ei1544(event text: come)
+	VAGUE	ei1524(event text: called)
+	VAGUE	t288(event text: Thursday)
+	AFTER	ei1541(event text: buildup)
+	VAGUE	ei1529(event text: bring)
+	VAGUE	ei1522(event text: showdown)
+	SIMULTANEOUS	ei1532(event text: crisis)
+	AFTER	ei1540(event text: invasion)
+	INCLUDES	ei1536(event text: optimistic)
+	INCLUDES	ei1543(event text: said)
+	INCLUDES	t290(event text: two-hour)
+	VAGUE	t289(event text: two-week)
+	INCLUDES	ei1542(event text: meeting)
+	VAGUE	ei1531(event text: commenting)
+	INCLUDES	ei1526(event text: said)
+	INCLUDES	ei1546(event text: withdraw)
+	VAGUE	ei1523(event text: took)
+	VAGUE	ei1533(event text: said)
+	INCLUDES	ei1534(event text: saw)
+	VAGUE	ei1528(event text: war)
+
+
+PRI19980205.2000.1890.tml|ei169(entity text: threat)
+
+### Previous Sentence: President Clinton rolled out the red carpet for prime minister Blair , welcoming him not only as a close ally , but a close friend .
+
+### Sentence with entity: Posing for photographers with Clinton , Blair pledged to stand united with the president against Iraq , warning Saddam Hussein that the threat of force is real .
+
+### Following Sentence: The British aircraft carrier invincible is now patrolling the Persian Gulf alongside three US vessels .
+
+TLinks: ei169
+	INCLUDES	ei163(event text: rolled)
+	INCLUDES	ei166(event text: pledged)
+	INCLUDES	t36(event text: now)
+	INCLUDES	ei167(event text: stand)
+	INCLUDES	ei164(event text: welcoming)
+	INCLUDES	ei165(event text: Posing)
+	INCLUDES	ei171(event text: patrolling)
+	INCLUDES	ei168(event text: warning)
+
+
+AP900816-0139.tml|ei1550(entity text: embargo)
+
+### Previous Sentence: After a two-hour meeting at his Kennebunkport home with King Hussein of Jordan , Bush said , `` I did not come away with any feeling of hope '' that Iraq would withdraw its army from Kuwait .
+
+### Sentence with entity: Bush also said Thursday that King Hussein assured him Jordan would close the last remaining free port to most Iraqi trade as the economic embargo on materials to Iraq continued unabated .
+
+### Following Sentence: Foodstuffs are among the goods being blocked from entry ; Iraq imports about three-quarters of its food .
+
+TLinks: ei1550
+	INCLUDES	ei1544(event text: come)
+	INCLUDES	ei1549(event text: close)
+	VAGUE	ei1546(event text: withdraw)
+	VAGUE	ei1551(event text: continued)
+	INCLUDES	ei1543(event text: said)
+	INCLUDES	ei1547(event text: said)
+	INCLUDES	t290(event text: two-hour)
+	INCLUDES	ei1548(event text: assured)
+	INCLUDES	ei1542(event text: meeting)
+	INCLUDES	t291(event text: Thursday)
+	VAGUE	ei1553(event text: blocked)
+
+
+AP900815-0044.tml|ei1543(entity text: striking)
+
+### Previous Sentence: Soviet officials also said Soviet women , children and invalids would be allowed to leave Iraq .
+
+### Sentence with entity: President Bush today denounced Saddam 's `` ruinous policies of war , '' and said the United States is `` striking a blow for the principle that might does not make right . ''
+
+### Following Sentence: In a speech delivered at the Pentagon , Bush seemed to suggest that American forces could be in the gulf region for some time .
+
+TLinks: ei1543
+	INCLUDES	ei1538(event text: said)
+	INCLUDES	ei1541(event text: denounced)
+	INCLUDES	t37(event text: today)
+	VAGUE	t47(event text: some time)
+	INCLUDES	ei1546(event text: seemed)
+	VAGUE	ei1540(event text: leave)
+	INCLUDES	ei1544(event text: speech)
+	INCLUDES	ei1547(event text: suggest)
+	INCLUDES	ei1545(event text: delivered)
+	VAGUE	ei1539(event text: allowed)
+	INCLUDES	ei1542(event text: said)
+
+
+AP900816-0139.tml|ei1551(entity text: continued)
+
+### Previous Sentence: After a two-hour meeting at his Kennebunkport home with King Hussein of Jordan , Bush said , `` I did not come away with any feeling of hope '' that Iraq would withdraw its army from Kuwait .
+
+### Sentence with entity: Bush also said Thursday that King Hussein assured him Jordan would close the last remaining free port to most Iraqi trade as the economic embargo on materials to Iraq continued unabated .
+
+### Following Sentence: Foodstuffs are among the goods being blocked from entry ; Iraq imports about three-quarters of its food .
+
+TLinks: ei1551
+	INCLUDES	ei1548(event text: assured)
+	INCLUDES	t291(event text: Thursday)
+	INCLUDES	t290(event text: two-hour)
+	VAGUE	ei1550(event text: embargo)
+	INCLUDES	ei1543(event text: said)
+	VAGUE	ei1546(event text: withdraw)
+	INCLUDES	ei1547(event text: said)
+	INCLUDES	ei1544(event text: come)
+	INCLUDES	ei1549(event text: close)
+	INCLUDES	ei1542(event text: meeting)
+	VAGUE	ei1553(event text: blocked)
+
+
+AP900815-0044.tml|t37(entity text: today)
+
+### Previous Sentence: Soviet officials also said Soviet women , children and invalids would be allowed to leave Iraq .
+
+### Sentence with entity: President Bush today denounced Saddam 's `` ruinous policies of war , '' and said the United States is `` striking a blow for the principle that might does not make right . ''
+
+### Following Sentence: In a speech delivered at the Pentagon , Bush seemed to suggest that American forces could be in the gulf region for some time .
+
+TLinks: t37
+	VAGUE	ei1539(event text: allowed)
+	INCLUDES	ei1541(event text: denounced)
+	INCLUDES	ei1542(event text: said)
+	INCLUDES	ei1544(event text: speech)
+	IS_INCLUDED	ei1543(event text: striking)
+	INCLUDES	ei1538(event text: said)
+	INCLUDES	ei1545(event text: delivered)
+	INCLUDES	ei1546(event text: seemed)
+	VAGUE	ei1540(event text: leave)
+	INCLUDES	ei1547(event text: suggest)
+	VAGUE	t47(event text: some time)
+
+
+ed980111.1130.0089.tml|ei158(entity text: grip)
+
+### Previous Sentence: The lights are out and the heat is off and those vital signs are not likely to change much over the next several days for p - people in parts of the northeastern US and eastern Canada .
+
+### Sentence with entity: A powerful ice storm continues to maintain its grip .
+
+### Following Sentence: Yesterday New York governor George Pataki toured five counties that have been declared under a state of emergency .
+
+TLinks: ei158
+	INCLUDES	ei152(event text: out)
+	VAGUE	ei155(event text: change)
+	INCLUDES	ei153(event text: off)
+	INCLUDES	ei156(event text: continues)
+	INCLUDES	ei157(event text: maintain)
+	VAGUE	t15(event text: the next several days)
+	INCLUDES	ei159(event text: toured)
+	INCLUDES	ei154(event text: likely)
+	INCLUDES	t16(event text: Yesterday)
+	VAGUE	ei160(event text: declared)
+
+
+AP900815-0044.tml|ei1728(entity text: operation)
+
+### Previous Sentence: Bush told a news conference on Tuesday that the naval barricade now in force might be extended to Jordan 's Aqaba `` if it is a hole through which commerce flows '' in and out of Iraq .
+
+### Sentence with entity: In Saudi Arabia , today is the eighth day of `` Desert Shield , '' the operation designed to confront an estimated 200,000 Iraqi soldiers now in Kuwait .
+
+### Following Sentence: Iraq boasts an army of 1 million members .
+
+TLinks: ei1728
+	IS_INCLUDED	ei1732(event text: boasts)
+	VAGUE	ei1725(event text: extended)
+	INCLUDES	t276(event text: eighth day)
+	INCLUDES	ei1730(event text: confront)
+	INCLUDES	t271(event text: now)
+	INCLUDES	t282(event text: now)
+	INCLUDES	t275(event text: today)
+	INCLUDES	ei1723(event text: told)
+	VAGUE	ei1726(event text: flows)
+	INCLUDES	t269(event text: Tuesday)
+
+
+APW19980213.1310.tml|ei2015(entity text: owed)
+
+### Previous Sentence: `` I want a referendum , '' Howard said .
+
+### Sentence with entity: `` The Australian people are owed the opportunity of expressing an opinion on this . ''
+
+### Following Sentence: `` It would be a travesty in common sense terms of Australian democracy for that proposition not to be put to the Australian people , '' Howard said .
+
+TLinks: ei2015
+	INCLUDES	ei2016(event text: expressing)
+	INCLUDES	ei2017(event text: travesty)
+	INCLUDES	ei2020(event text: said)
+	INCLUDES	ei2012(event text: want)
+	INCLUDES	ei2013(event text: referendum)
+	INCLUDES	ei2019(event text: put)
+	INCLUDES	ei2014(event text: said)
+
+
+NYT19980206.0460.tml|ei2201(entity text: trend)
+
+### Previous Sentence: Average hourly earnings of production and nonsupervisory employees rose 4 cents , to $ 12.51 .
+
+### Sentence with entity: The gain left wages 3.8 percent higher than a year earlier , extending a trend that has given back to workers some of the earning power they lost to inflation in the last decade .
+
+### Following Sentence: But economists said the wage increase was not enough to raise any concerns about higher inflation .
+
+TLinks: ei2201
+	INCLUDES	ei2202(event text: given)
+	AFTER	ei2203(event text: lost)
+	INCLUDES	ei2204(event text: said)
+	INCLUDES	ei2205(event text: increase)
+	VAGUE	t200(event text: the last decade)
+	VAGUE	t199(event text: a year earlier)
+	INCLUDES	ei2198(event text: rose)
+	INCLUDES	ei2200(event text: extending)
+	INCLUDES	ei2206(event text: raise)
+	INCLUDES	ei2199(event text: left)
+
+
+AP900816-0139.tml|ei1605(entity text: pray)
+
+### Previous Sentence: In a long verbal attack read on Iraqi television Thursday , Saddam repeatedly called Bush `` a liar '' and said a shooting war could produce body bags courtesy of Baghdad .
+
+### Sentence with entity: `` We continue to pray and pray hard to God so that there will be no confrontation whereby you will receive thousands of Americans wrapped in sad coffins after you had pushed them into a dark tunnel , '' Saddam said .
+
+### Following Sentence: He called U.S. soldiers massing in Saudi Arabia the real occupiers in the Persian Gulf .
+
+TLinks: ei1605
+	BEFORE	ei1606(event text: confrontation)
+	VAGUE	ei1609(event text: pushed)
+	INCLUDES	t293(event text: Thursday)
+	INCLUDES	ei1610(event text: said)
+	INCLUDES	ei1603(event text: continue)
+	SIMULTANEOUS	ei1604(event text: pray)
+	INCLUDES	ei1598(event text: called)
+	BEFORE	ei1602(event text: produce)
+	VAGUE	ei1612(event text: massing)
+	INCLUDES	ei1600(event text: said)
+	INCLUDES	ei1611(event text: called)
+	BEFORE	ei1601(event text: war)
+	INCLUDES	ei1597(event text: attack)
+	BEFORE	ei1607(event text: receive)
+
+
+NYT19980206.0460.tml|ei2250(entity text: investing)
+
+### Previous Sentence: Long-term interest rates , an important indicator of economic stability , have fallen in the last few months .
+
+### Sentence with entity: Lower rates have helped invigorate housing and other interest-sensitive sectors of the economy by making loans more affordable , and have allowed companies to continue investing heavily in more efficient equipment .
+
+### Following Sentence: The likelihood that the federal budget will soon move from deficit into surplus has further improved the outlook .
+
+TLinks: ei2250
+	INCLUDES	ei2252(event text: improved)
+	INCLUDES	ei2247(event text: making)
+	INCLUDES	ei2249(event text: continue)
+	VAGUE	ei2251(event text: move)
+	INCLUDES	t213(event text: the last few months)
+	INCLUDES	ei2245(event text: helped)
+	VAGUE	ei2246(event text: invigorate)
+	INCLUDES	ei2248(event text: allowed)
+	VAGUE	ei2244(event text: fallen)
+
+
+NYT19980206.0466.tml|ei537(entity text: believes)
+
+### Previous Sentence: We 're not going to dignify the latest false leak with a response . ''
+
+### Sentence with entity: McCurry on Friday `` I want to be absolutely clear , to the extent there is any implication or the slightest suggestion that Mrs. Currie believes that the President or anyone else tried to influence her recollection , that is absolutely false and a mischaracterization of the facts .
+
+### Following Sentence: I am shocked and dismayed by the numerous leaks regarding Mrs. Currie 's grand jury testimony . ''
+
+TLinks: ei537
+	AFTER	ei538(event text: tried)
+	INCLUDES	ei535(event text: implication)
+	INCLUDES	ei536(event text: suggestion)
+	VAGUE	ei544(event text: dismayed)
+	VAGUE	ei531(event text: leak)
+	VAGUE	ei546(event text: testimony)
+	VAGUE	ei543(event text: shocked)
+	VAGUE	ei542(event text: mischaracterization)
+	VAGUE	ei532(event text: response)
+	VAGUE	ei530(event text: dignify)
+	INCLUDES	ei545(event text: leaks)
+	VAGUE	ei539(event text: influence)
+	INCLUDES	ei534(event text: clear)
+	INCLUDES	t37(event text: Friday)
+	INCLUDES	ei533(event text: want)
+
+
+APW19980213.1310.tml|ei2069(entity text: understands)
+
+### Previous Sentence: `` She is , I can assure you , from what I 've been told , she 's following the thing very closely and taking the view it 's our business .
+
+### Sentence with entity: `` It 's no secret that she 's indicated to me ... she is a 20th century democrat , understands that the role of the crown in Australia rests in the hands of the Australian people as it has for almost a hundred years . ''
+
+### Following Sentence: The model for a republic , adopted over bitter objections from those advocating direct election of a president , is for presidential nominations to be made with public input and the winning candidate decided by a two-thirds majority of Parliament .
+
+TLinks: ei2069
+	VAGUE	ei2070(event text: rests)
+	VAGUE	ei2074(event text: advocating)
+	INCLUDES	ei2063(event text: following)
+	INCLUDES	ei2073(event text: objections)
+	INCLUDES	ei2062(event text: told)
+	INCLUDES	ei2067(event text: indicated)
+	VAGUE	ei2061(event text: assure)
+	VAGUE	ei2071(event text: has)
+	VAGUE	t119(event text: almost a hundred years)
+	INCLUDES	ei2065(event text: taking)
+	INCLUDES	ei2072(event text: adopted)
+
+
+AP900815-0044.tml|ei1596(entity text: drain)
+
+### Previous Sentence: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+### Sentence with entity: In other developments : The Pentagon said that Defense Secretary Dick Cheney is considering urging Bush to order a national callup of armed forces reserves for active duty because of the drain on units sending soldiers abroad .
+
+### Following Sentence: Bush can call up to 200,000 reservists for up to 180 days without seeking congressional approval .
+
+TLinks: ei1596
+	VAGUE	ei1586(event text: turn)
+	INCLUDES	ei1593(event text: order)
+	INCLUDES	ei1584(event text: said)
+	VAGUE	ei1597(event text: sending)
+	VAGUE	t719(event text: up to 180 days)
+	INCLUDES	ei1585(event text: sought)
+	INCLUDES	ei1594(event text: callup)
+	INCLUDES	ei1591(event text: considering)
+	VAGUE	ei1599(event text: seeking)
+	VAGUE	ei1592(event text: urging)
+	INCLUDES	ei1590(event text: said)
+	VAGUE	ei1598(event text: call)
+	VAGUE	ei1589(event text: harbor)
+
+
+AP900816-0139.tml|ei1522(entity text: showdown)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: The Persian Gulf showdown between Iraq and the United States took a more personal turn Thursday when Iraq 's Saddam Hussein called President Bush a liar and said the outbreak of holy war could bring thousands of Americans home in coffins .
+
+### Following Sentence: Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+
+TLinks: ei1522
+	VAGUE	ei1539(event text: stems)
+	VAGUE	ei1528(event text: war)
+	VAGUE	ei1532(event text: crisis)
+	INCLUDES	ei1533(event text: said)
+	VAGUE	ei1541(event text: buildup)
+	VAGUE	ei1538(event text: dispute)
+	INCLUDES	ei1526(event text: said)
+	VAGUE	ei1536(event text: optimistic)
+	VAGUE	t289(event text: two-week)
+	INCLUDES	ei1531(event text: commenting)
+	INCLUDES	ei1523(event text: took)
+	VAGUE	ei1540(event text: invasion)
+	VAGUE	ei1537(event text: settlement)
+	VAGUE	ei1529(event text: bring)
+	INCLUDES	ei1524(event text: called)
+	INCLUDES	t288(event text: Thursday)
+	VAGUE	ei1534(event text: saw)
+
+
+AP900815-0044.tml|ei1555(entity text: camped)
+
+### Previous Sentence: `` No one should doubt our staying power or determination , '' he said .
+
+### Sentence with entity: The U.S. military buildup in Saudi Arabia continued at fever pace , with Syrian troops now part of a multinational force camped out in the desert to guard the Saudi kingdom from any new thrust by Iraq .
+
+### Following Sentence: In a letter to President Hashemi Rafsanjani of Iran , read by a broadcaster over Baghdad radio , Saddam said he will begin withdrawing troops from Iranian territory on Friday and release Iranian prisoners of war .
+
+TLinks: ei1555
+	INCLUDES	t56(event text: now)
+	INCLUDES	ei1551(event text: said)
+	VAGUE	ei1561(event text: withdrawing)
+	VAGUE	ei1552(event text: buildup)
+	VAGUE	t65(event text: Friday)
+	INCLUDES	ei1559(event text: said)
+	VAGUE	ei1549(event text: doubt)
+	INCLUDES	ei1557(event text: thrust)
+	VAGUE	ei1556(event text: guard)
+	VAGUE	ei1560(event text: begin)
+	INCLUDES	ei1553(event text: continued)
+	INCLUDES	ei1558(event text: read)
+	VAGUE	ei1562(event text: release)
+
+
+AP900816-0139.tml|ei1604(entity text: pray)
+
+### Previous Sentence: In a long verbal attack read on Iraqi television Thursday , Saddam repeatedly called Bush `` a liar '' and said a shooting war could produce body bags courtesy of Baghdad .
+
+### Sentence with entity: `` We continue to pray and pray hard to God so that there will be no confrontation whereby you will receive thousands of Americans wrapped in sad coffins after you had pushed them into a dark tunnel , '' Saddam said .
+
+### Following Sentence: He called U.S. soldiers massing in Saudi Arabia the real occupiers in the Persian Gulf .
+
+TLinks: ei1604
+	BEFORE	ei1602(event text: produce)
+	VAGUE	ei1612(event text: massing)
+	BEFORE	ei1601(event text: war)
+	BEFORE	ei1606(event text: confrontation)
+	INCLUDES	ei1597(event text: attack)
+	INCLUDES	ei1598(event text: called)
+	VAGUE	ei1603(event text: continue)
+	SIMULTANEOUS	ei1605(event text: pray)
+	BEFORE	ei1607(event text: receive)
+	INCLUDES	ei1611(event text: called)
+	INCLUDES	t293(event text: Thursday)
+	VAGUE	ei1609(event text: pushed)
+	INCLUDES	ei1600(event text: said)
+	INCLUDES	ei1610(event text: said)
+
+
+AP900815-0044.tml|ei1732(entity text: boasts)
+
+### Previous Sentence: In Saudi Arabia , today is the eighth day of `` Desert Shield , '' the operation designed to confront an estimated 200,000 Iraqi soldiers now in Kuwait .
+
+### Sentence with entity: Iraq boasts an army of 1 million members .
+
+### Following Sentence: At least 50,000 U.S. troops are expected to be committed to Desert Shield within weeks , including Marines , Army air assault forces , paratroopers and infantry .
+
+TLinks: ei1732
+	INCLUDES	ei1728(event text: operation)
+	VAGUE	ei1734(event text: committed)
+	VAGUE	t1460(event text: weeks)
+	INCLUDES	t275(event text: today)
+	INCLUDES	t276(event text: eighth day)
+	INCLUDES	ei1733(event text: expected)
+	INCLUDES	t282(event text: now)
+	INCLUDES	ei1730(event text: confront)
+
+
+APW19980213.1310.tml|ei2070(entity text: rests)
+
+### Previous Sentence: `` She is , I can assure you , from what I 've been told , she 's following the thing very closely and taking the view it 's our business .
+
+### Sentence with entity: `` It 's no secret that she 's indicated to me ... she is a 20th century democrat , understands that the role of the crown in Australia rests in the hands of the Australian people as it has for almost a hundred years . ''
+
+### Following Sentence: The model for a republic , adopted over bitter objections from those advocating direct election of a president , is for presidential nominations to be made with public input and the winning candidate decided by a two-thirds majority of Parliament .
+
+TLinks: ei2070
+	VAGUE	ei2069(event text: understands)
+	INCLUDES	ei2067(event text: indicated)
+	VAGUE	t119(event text: almost a hundred years)
+	INCLUDES	ei2072(event text: adopted)
+	INCLUDES	ei2073(event text: objections)
+	VAGUE	ei2074(event text: advocating)
+	INCLUDES	ei2062(event text: told)
+	VAGUE	ei2071(event text: has)
+	INCLUDES	ei2065(event text: taking)
+	VAGUE	ei2061(event text: assure)
+	INCLUDES	ei2063(event text: following)
+
+
+NYT19980206.0466.tml|t35(entity text: the past few weeks)
+
+### Previous Sentence: WASHINGTON _ Following are statements made Friday and Thursday by Lawrence Wechsler , a lawyer for the White House secretary , Betty Currie ; the White House ; White House spokesman Mike McCurry , and President Clinton in response to an article in The New York Times on Friday about her statements regarding a meeting with the president : Wechsler on Thursday `` Without commenting on the allegations raised in this article , to the extent that there is any implication or suggestion that Mrs. Currie was aware of any legal or ethical impropriety by anyone , that implication or suggestion is entirely inaccurate . ''
+
+### Sentence with entity: White House on Thursday `` For the past few weeks we 've been subjected to false leaks designed to mislead both reporters and the American public .
+
+### Following Sentence: We 're not going to dignify the latest false leak with a response . ''
+
+TLinks: t35
+	VAGUE	ei530(event text: dignify)
+	VAGUE	ei520(event text: aware)
+	INCLUDES	ei512(event text: statements)
+	VAGUE	t30(event text: Friday)
+	VAGUE	t32(event text: Friday)
+	INCLUDES	t31(event text: Thursday)
+	VAGUE	ei527(event text: designed)
+	INCLUDES	t33(event text: Thursday)
+	INCLUDES	t34(event text: Thursday)
+	INCLUDES	ei516(event text: raised)
+	INCLUDES	ei531(event text: leak)
+	VAGUE	ei532(event text: response)
+	VAGUE	ei525(event text: subjected)
+	VAGUE	ei529(event text: mislead)
+
+
+AP900816-0139.tml|ei1603(entity text: continue)
+
+### Previous Sentence: In a long verbal attack read on Iraqi television Thursday , Saddam repeatedly called Bush `` a liar '' and said a shooting war could produce body bags courtesy of Baghdad .
+
+### Sentence with entity: `` We continue to pray and pray hard to God so that there will be no confrontation whereby you will receive thousands of Americans wrapped in sad coffins after you had pushed them into a dark tunnel , '' Saddam said .
+
+### Following Sentence: He called U.S. soldiers massing in Saudi Arabia the real occupiers in the Persian Gulf .
+
+TLinks: ei1603
+	INCLUDES	t293(event text: Thursday)
+	IS_INCLUDED	ei1605(event text: pray)
+	VAGUE	ei1609(event text: pushed)
+	INCLUDES	ei1611(event text: called)
+	VAGUE	ei1604(event text: pray)
+	INCLUDES	ei1597(event text: attack)
+	BEFORE	ei1602(event text: produce)
+	INCLUDES	ei1598(event text: called)
+	BEFORE	ei1607(event text: receive)
+	VAGUE	ei1606(event text: confrontation)
+	VAGUE	ei1612(event text: massing)
+	INCLUDES	ei1610(event text: said)
+	INCLUDES	ei1600(event text: said)
+	BEFORE	ei1601(event text: war)
+
+
