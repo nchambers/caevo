@@ -5,13 +5,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-import java.util.Set;
 
 import timesieve.sieves.Sieve;
 import timesieve.tlink.TLink;
@@ -97,7 +94,6 @@ public class Main {
 		if( infopath != null ) {
 			System.out.println("Checking for infofile at " + infopath);
 			thedocs = new SieveDocuments(infopath);
-			thedocs.removeAllTLinks(); // because we will be adding our own
 			thedocsUnchanged = new SieveDocuments(infopath);
 		}
         
@@ -215,6 +211,9 @@ public class Main {
 	}
     
 	public void runSieves(SieveDocuments info) {
+		info.removeAllTLinks(); // because we will be adding our own
+
+		// Start with zero links.
 		List<TLink> currentTLinks = new ArrayList<TLink>();
         
 		// Create all the sieves first.
@@ -279,7 +278,8 @@ public class Main {
 			System.out.println("ERROR: no info file given as input for the precision gauntlet.");
 			System.exit(1);
 		}
-        
+		thedocs.removeAllTLinks(); // because we will be adding our own
+		
 		// Create all the sieves first.
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
