@@ -35,8 +35,9 @@ import timesieve.util.Util;
  * 
  * Right now this just makes one classifier for all event-event pairs, and doesn't use the
  * specific ones for syntactic dominance.
- * 
- * Performance	p=0.41	84 of 207	Non-VAGUE:	p=0.60	84 of 141
+ *
+ * MLEventEventSameSent            p=0.43  96 of 225       Non-VAGUE:      p=0.49  96 of 194
+ * (Baseline 0.36)
  * 
  * @author chambers
  */

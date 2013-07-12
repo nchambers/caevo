@@ -251,6 +251,21 @@ public class TextEvent {
   	return lowerDuration; 
   }
 
+  /**
+   * Determines if this event occurs before the other in the document.
+   * It assumes both events are from the same document.
+   * @param other Another event to compare against.
+   * @return True if this event occurs before the other in the document.
+   */
+  public boolean isBeforeInText(TextEvent other) {
+  	if( sid < other.getSid() )
+  		return true;
+  	else if( sid == other.getSid() && index < other.getIndex() )
+  		return true;
+  	else 
+  		return false;
+  }
+  
   public org.jdom.Element toElement(Namespace ns) {
     org.jdom.Element el = new org.jdom.Element(TextEvent.NAME_ELEM,ns);
     

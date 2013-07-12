@@ -97,6 +97,7 @@ public class Main {
 		if( infopath != null ) {
 			System.out.println("Checking for infofile at " + infopath);
 			thedocs = new SieveDocuments(infopath);
+			thedocs.removeAllTLinks(); // because we will be adding our own
 			thedocsUnchanged = new SieveDocuments(infopath);
 		}
         
@@ -261,7 +262,10 @@ public class Main {
 		}
 		
 		System.out.println("Writing output: " + outpath);
-		info.writeToXML(new File(outpath));
+		docs.writeToXML(new File(outpath));
+		
+		// Evaluate it if the input file had tlinks in it.
+		Evaluate.evaluate(thedocsUnchanged, docs);
 	}
     
 	
@@ -301,9 +305,9 @@ public class Main {
 			List<SieveSentence> sents = doc.getSentences();
 			// Gold links.
 			List<TLink> goldLinks = doc.getTlinks(true);
-			Map<Set<String>, TLink> goldUnorderedIdPairs = new HashMap<Set<String>, TLink>();
+			Map<String, TLink> goldOrderedIdPairs = new HashMap<String, TLink>();
 			for (TLink tlink : goldLinks) {
-				goldUnorderedIdPairs.put(unorderedIdPair(tlink), tlink);
+				goldOrderedIdPairs.put(TLink.orderedIdPair(tlink), tlink);
 			}
             
 			// Loop over sieves.
@@ -317,8 +321,8 @@ public class Main {
                     
 					// Check proposed links.
 					for( TLink pp : proposed ) {
-						Set<String> unorderedIdPair = unorderedIdPair(pp);
-						TLink goldLink = goldUnorderedIdPairs.get(unorderedIdPair);
+						String orderedIdPair = TLink.orderedIdPair(pp);
+						TLink goldLink = goldOrderedIdPairs.get(orderedIdPair);
 						
 						if( goldLink != null ) {
 							guessCounts.get(sieveName).incrementCount(goldLink.getOrderedRelation()+" "+pp.getOrderedRelation());
@@ -339,13 +343,13 @@ public class Main {
 							numIncorrect.incrementCount(sieveClasses[xx]);
 							if (debug) {
 								System.out.printf("%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
-																	sieveClasses[xx], doc.getDocname(), goldUnorderedIdPairs.get(unorderedIdPair), pp,
+																	sieveClasses[xx], doc.getDocname(), goldOrderedIdPairs.get(orderedIdPair), pp,
 																	getLinkDebugInfo(pp, sents, doc));
 							}
 						}
 						// No gold link.
 						else {
-							System.out.println("No gold link: " + pp);
+							System.out.println("No gold link (" + sieveName + "): " + pp);
 						}
 					}
 				}
@@ -376,44 +380,11 @@ public class Main {
 		}
 		for( String key : sortedKeys ) {
 			System.out.println("**** " + key + "****");
-			printBaseline(goldLabelCounts.get(key));			
-			confusionMatrix(guessCounts.get(key));
+			Evaluate.printBaseline(goldLabelCounts.get(key));			
+			Evaluate.confusionMatrix(guessCounts.get(key));
 		}
 	}
-	
-	/**
-	 * Find the label with the most counts, and print the baseline if you always guessed that one.
-	 */
-	private void printBaseline(Counter<TLink.Type> labelCounts) {
-		double total = labelCounts.totalCount();
-		TLink.Type best = null;
-		double bestc = -1.0;
-		for( TLink.Type label : labelCounts.keySet() ) {
-			if( labelCounts.getCount(label) > bestc ) {
-				bestc = labelCounts.getCount(label);
-				best = label;
-			}
-		}
-		System.out.printf("Local Baseline (%s): %.2f\n", best, (bestc/total));
-	}
-	
-	private void confusionMatrix(Counter<String> guessCounts) {
-		final String[] labels = { "BEFORE", "AFTER", "SIMULTANEOUS", "INCLUDES", "IS_INCLUDED", "VAGUE" };
-		for( String label2 : labels )
-			System.out.print("\t" + label2.substring(0,Math.min(label2.length(), 6)));
-		System.out.println("\t(guesses)");
-		
-		for( String label1 : labels ) {
-			System.out.print(label1.substring(0, Math.min(label1.length(), 6)) + "\t");
-			
-			for( String label2 : labels ) {
-				if( guessCounts.containsKey(label1+" "+label2) )
-					System.out.print((int)guessCounts.getCount(label1+" "+label2) + "\t");
-				else System.out.print("0\t");
-			}
-			System.out.println();
-		}
-	}
+
 	
 	
 	/**
@@ -615,10 +586,6 @@ public class Main {
 		if( timexClassifier == null )
 			timexClassifier = new TimexClassifier(info);
 		timexClassifier.markupTimex3();
-	}
-	
-	private static Set<String> unorderedIdPair(TLink tlink) {
-		return new HashSet<String>(Arrays.asList(tlink.getId1(), tlink.getId2()));
 	}
 	
 	/**
