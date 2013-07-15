@@ -17,6 +17,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Reads an HTML file from the TimeBank online browser. Prints all pairs of events/times that
+ * occur in the same or next sentence, and lets the user type in a relation for each one. It
+ * prompts for a pair one at a time. The user can save progress to a text file and load it
+ * later to pick up where he/she left off.
+ * 
+ * Annotator <html-file> [progress-file]
+ * 
+ * @author chambers
+ */
 public class Annotator {
   List<TLink> allLinksOrdered;
   Set<String> allLinksHash;
@@ -75,6 +85,11 @@ public class Annotator {
 			List<String> sent = sentenceEvents.get(sid);
 			// Grab all pairs in this sentence.
 			for( int xx = 0; xx < sent.size(); xx++ ) {
+				// Create the link to the DCT (doc creation time).
+				TLink dctlink = new EventEventLink(sent.get(xx), "t0", TLink.Type.NONE);
+				allLinksOrdered.add(dctlink);
+				allLinksHash.add(dctlink.getId1() + " t0");
+				
 				// Intra-sentence pairs.
 				for( int yy = xx+1; yy < sent.size(); yy++ ) {
 					TLink link = new EventEventLink(sent.get(xx), sent.get(yy), TLink.Type.NONE);
@@ -179,6 +194,7 @@ public class Annotator {
 		    dumpToFile("auto-saved.txt");
 		  }
 		}
+		dumpToFile("auto-saved.txt");
 	}
 
 	 private String relationToAbbrev(TLink.Type rel) {

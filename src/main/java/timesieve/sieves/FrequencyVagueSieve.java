@@ -14,26 +14,37 @@ import timesieve.TextEvent;
 import timesieve.TextEventPairPattern;
 import timesieve.tlink.TLink;
 import timesieve.tlink.EventEventLink;
+import timesieve.util.TimeSieveProperties;
 
 /**
- * Looks at training data to find out if certain pairs of tenses, classes,
+ * FrequencyVagueSieve looks at training data to find out if certain pairs of tenses, classes,
  * and aspects typically are related by VAGUE TLinks, and then makes up rules
  * based on these patterns.  Rules are created for pairs of event types that tend
  * to have VAGUE links above a certain precision across a minimum number of 
  * examples.
  * 
- * Current results:
- * min_p: .7 min_ex: 20 => .75 (462 of 614)
- * min_p: .8 min_ex: 20 => .84 (179 of 214)
- * min_p: .85 min_ex: 20 => .87 (71 of 82)
+ * NOTE: MLVagueSieve should be used instead of this.
+ * 
+ * The following table contains the current results for the train and dev sets when 
+ * training on train.
+ * 
+ * p_min    ex_min      train-set                 dev-set
+ * .6       20          0.66 (932 of 1410)        0.50 (100 of 200)
+ * .7       20          0.76 (358 of 472)         0.48 (31 of 65)
+ * .8       20          0.83 (186 of 225)         0.41 (14 of 34)
+ * .6       80          0.65 (326 of 499)         0.51 (31 of 61)
+ * .7       80          0.72 (58 of 81)           1.00 (6 of 6)
+ * .7       50          0.75 (233 of 311)         0.52 (26 of 50)
+ * .8       50          0.83 (99 of 120)          0.45 (10 of 22)
+ * 
+ * The current default setting is p_min=.7 and ex_min=50
  *
  * @author Bill McDowell
  */
 public class FrequencyVagueSieve implements Sieve {
-	/* FIXME: MOVE TO PROPERTIES */
-	private static String RULE_SAVE_PATH = "src/main/resources/models/tlinks/FrequencyVagueSieve";
-	private static double MINIMUM_RULE_PRECISION = .70;
-	private static int MINIMUM_PRECISION_EXAMPLES = 60;
+	private String ruleSavePath;
+	private double minRulePrecision;
+	private int minRuleExamples;
 	
 	/* The following static integers and matrix encode which types of rules are constructed by this sieve.
 	 * Each static "INDEX" value is used to index into the arrays in the matrix.
@@ -46,28 +57,40 @@ public class FrequencyVagueSieve implements Sieve {
 	private static int TENSE_INDEX = 1;
 	private static int ASPECT_INDEX = 2;
 	private static int SENTENCE_INDEX = 3;
-	private static boolean[][] distinguishedFeatures = { {true,false,false,true},
-																											 {false,true,false,true},
-																											 {false,false,true,true},
-																											 {true,true,false,true},
-																											 {true,false,true,true},
-																											 {false,true,true,true},
-																											 {true,true,true,true}
-																										 };
+	private static boolean[][] distinguishedFeatures = 
+		{	{true,false,false,false},
+			{false,true,false,false},
+			{false,false,true,false},
+			{false,false,false,true},
+			{true,false,false,true},
+		  {false,true,false,true},
+		  {false,false,true,true},
+			{true,false,true,false},
+			{false,true,true,false},
+		  {true,true,false,false},
+		  {true,true,false,true},
+		  {true,false,true,true},
+		  {false,true,true,true},
+		  {true,true,true,true}
+	 };
 	
 	private HashSet<TextEventPairPattern> vaguePatterns;
 	
 	public FrequencyVagueSieve() {
 		this.vaguePatterns = new HashSet<TextEventPairPattern>();
-		
-		/* FIXME: Put this somewhere else */
-  	try {
-  		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FrequencyVagueSieve.RULE_SAVE_PATH));
+			
+		try {
+			this.ruleSavePath = TimeSieveProperties.getString("FrequencyVagueSieve.ruleSavePath", "src/main/resources/models/tlinks/FrequencyVagueSieve");
+			this.minRulePrecision = TimeSieveProperties.getDouble("FrequencyVagueSieve.minRulePrecision", .7);
+			this.minRuleExamples = TimeSieveProperties.getInt("FrequencyVagueSieve.minRuleExamples", 50);
+
+  		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(this.ruleSavePath));
   		Object o = ois.readObject();
   		ois.close();
   		this.vaguePatterns = (HashSet<TextEventPairPattern>)o;
   	} catch(Exception ex) { 
-  		System.out.println("FrequencyVagueSieve: Had fatal trouble loading " + FrequencyVagueSieve.RULE_SAVE_PATH); 
+  		System.out.println("FrequencyVagueSieve: Had fatal trouble loading " + this.ruleSavePath); 
+  		ex.printStackTrace();
   	}
 	}
 	
@@ -151,8 +174,8 @@ public class FrequencyVagueSieve implements Sieve {
 				}
 				
 				double precision = e1.getValue().get(TLink.Type.VAGUE)/(double)totalCount;
-				if (precision >= FrequencyVagueSieve.MINIMUM_RULE_PRECISION
-				 && totalCount >= FrequencyVagueSieve.MINIMUM_PRECISION_EXAMPLES) {
+				if (precision >= this.minRulePrecision
+				 && totalCount >= this.minRuleExamples) {
 					this.vaguePatterns.add(e1.getKey());
 					System.out.println("FrequencyVagueSieve found rule: " + e1.getKey() + " Precision: " + precision + " Count: " + totalCount);
 				}
@@ -160,15 +183,14 @@ public class FrequencyVagueSieve implements Sieve {
 			}
 		}
 		
-		/* FIXME: Put this somewhere else */
 		try {
-			FileOutputStream fos = new FileOutputStream(FrequencyVagueSieve.RULE_SAVE_PATH);
+			FileOutputStream fos = new FileOutputStream(this.ruleSavePath);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(this.vaguePatterns);
 			oos.flush();
 			oos.close();
 		} catch (Exception e) {
-  		System.out.println("Had fatal trouble loading " + FrequencyVagueSieve.RULE_SAVE_PATH);
+  		System.out.println("Had fatal trouble loading " + this.ruleSavePath);
   		e.printStackTrace(); System.exit(1); 
 		}
 	}
