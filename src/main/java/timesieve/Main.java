@@ -304,9 +304,10 @@ public class Main {
 			System.out.println("doc: " + doc.getDocname());
 			List<SieveSentence> sents = doc.getSentences();
 			// Gold links.
-			List<TLink> goldLinks = doc.getTlinks(true);
+			List<TLink> goldLinks = thedocsUnchanged.getDocument(doc.getDocname()).getTlinks(true);
 			Map<String, TLink> goldOrderedIdPairs = new HashMap<String, TLink>();
 			for (TLink tlink : goldLinks) {
+//				System.out.println("adding gold: " + tlink + " order=" + TLink.orderedIdPair(tlink));
 				goldOrderedIdPairs.put(TLink.orderedIdPair(tlink), tlink);
 			}
             
@@ -320,36 +321,39 @@ public class Main {
 					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
                     
 					// Check proposed links.
-					for( TLink pp : proposed ) {
-						String orderedIdPair = TLink.orderedIdPair(pp);
-						TLink goldLink = goldOrderedIdPairs.get(orderedIdPair);
-						
-						if( goldLink != null ) {
-							guessCounts.get(sieveName).incrementCount(goldLink.getOrderedRelation()+" "+pp.getOrderedRelation());
-							goldLabelCounts.get(sieveName).incrementCount(goldLink.getRelation());
-						}
-						
-						// Guessed link is correct!
-						if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
-							numCorrect.incrementCount(sieveClasses[xx]);
-						} 
-						// Gold and guessed link disagree!
-						// Only mark relations wrong if there's a conflicting human annotation.
-						// (if there's no human annotation, we don't know if it's right or wrong)
-						else if (goldLink != null) {
-							if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
-								numIncorrectNonVague.incrementCount(sieveClasses[xx]);
+					if( proposed != null ) {
+						for( TLink pp : proposed ) {
+							String orderedIdPair = TLink.orderedIdPair(pp);
+//							System.out.println("looking up gold for " + pp + " order=" + TLink.orderedIdPair(pp));
+							TLink goldLink = goldOrderedIdPairs.get(orderedIdPair);
+
+							if( goldLink != null ) {
+								guessCounts.get(sieveName).incrementCount(goldLink.getOrderedRelation()+" "+pp.getOrderedRelation());
+								goldLabelCounts.get(sieveName).incrementCount(goldLink.getRelation());
 							}
-							numIncorrect.incrementCount(sieveClasses[xx]);
-							if (debug) {
-								System.out.printf("%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
-																	sieveClasses[xx], doc.getDocname(), goldOrderedIdPairs.get(orderedIdPair), pp,
-																	getLinkDebugInfo(pp, sents, doc));
+
+							// Guessed link is correct!
+							if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
+								numCorrect.incrementCount(sieveClasses[xx]);
+							} 
+							// Gold and guessed link disagree!
+							// Only mark relations wrong if there's a conflicting human annotation.
+							// (if there's no human annotation, we don't know if it's right or wrong)
+							else if (goldLink != null) {
+								if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
+									numIncorrectNonVague.incrementCount(sieveClasses[xx]);
+								}
+								numIncorrect.incrementCount(sieveClasses[xx]);
+								if (debug) {
+									System.out.printf("%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
+											sieveClasses[xx], doc.getDocname(), goldOrderedIdPairs.get(orderedIdPair), pp,
+											getLinkDebugInfo(pp, sents, doc));
+								}
 							}
-						}
-						// No gold link.
-						else {
-							System.out.println("No gold link (" + sieveName + "): " + pp);
+							// No gold link.
+							else {
+								System.out.println("No gold link (" + sieveName + "): " + pp);
+							}
 						}
 					}
 				}
