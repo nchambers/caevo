@@ -1,7 +1,6 @@
 package timesieve.tlink;
 
 import org.jdom.*;
-import org.jdom.Namespace;
 import timesieve.*;
 
 
@@ -289,5 +288,11 @@ public class TLink implements Comparable<TLink> {
   	else
   		return invertRelation(relation);
   }
-  
+
+	public static String orderedIdPair(TLink tlink) {
+		if( tlink.getId1().compareTo(tlink.getId2()) < 0 )
+			return tlink.getId1() + tlink.getId2();
+		else
+			return tlink.getId2() + tlink.getId1();
+	}
 }

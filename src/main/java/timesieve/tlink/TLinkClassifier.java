@@ -1053,7 +1053,7 @@ public class TLinkClassifier {
         }
       }
       
-      doc.deleteTlinks();
+      doc.removeTlinks();
       doc.addTlinks(links);
     }
     System.out.println("Labeled known tlinks, finished.");

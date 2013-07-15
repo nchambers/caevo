@@ -98,14 +98,19 @@ public class SieveDocument {
   	}
   }
   
-  private void addTimexesToTidMap (List<Timex> timexes) {
+  private void addTimexesToTidMap(List<Timex> timexes) {
   	if( timexes != null ) {
   		for (Timex timex : timexes) {
   			tidToTimex.put(timex.getTid(), timex);
   		}
   	}
   }
-  
+
+  private void addTimexToTidMap(Timex timex) {
+  	if( timex != null )
+  		tidToTimex.put(timex.getTid(), timex);
+  }
+
   /**
    * Adds a list of tlinks to the XML file
    * @param tlinks Vector of TLink objects
@@ -125,10 +130,15 @@ public class SieveDocument {
   	newlink.setDocument(this);
   }
 
+  public void removeTlink(TLink link) {
+  	if( tlinks != null )
+  		tlinks.remove(link);
+  }
+  
   /**
    * Deletes all the TLinks from the XML file
    */
-  public void deleteTlinks() {
+  public void removeTlinks() {
   	for (TLink tlink : tlinks)
   		tlink.setDocument(null);
   	tlinks.clear();
@@ -255,6 +265,7 @@ public class SieveDocument {
   public void addCreationTime(Timex timex) {
   	if( dcts == null ) dcts = new ArrayList<Timex>();
   	dcts.add(timex);
+  	addTimexToTidMap(timex);
   }
 
   /**

@@ -92,6 +92,8 @@ public class SieveDocumentsAnalyzer {
 						analysis.append("0").append("\t");
 					}
 				}
+				
+				analysis.append(totalCount + "\n");
 		}
 				
 		return analysis.toString();
@@ -104,7 +106,16 @@ public class SieveDocumentsAnalyzer {
 		String inputFile = args[0];
 		String outputFile = args[1];
 		
-		SieveDocumentsAnalyzer analyzer = new SieveDocumentsAnalyzer(new SieveDocuments(inputFile));
+		String docSet = (args.length > 2) ? args[2] : "";
+		
+		SieveDocuments docs = new SieveDocuments(inputFile);
+		if (docSet.equals("train")) {
+			docs = Evaluate.getTrainSet(docs);
+		} else if (docSet.equals("dev")) {
+			docs = Evaluate.getDevSet(docs);
+		}	
+		
+		SieveDocumentsAnalyzer analyzer = new SieveDocumentsAnalyzer(docs);
 		
 		try {
 			File file = new File(outputFile);
@@ -114,7 +125,7 @@ public class SieveDocumentsAnalyzer {
  
 			FileWriter fw = new FileWriter(file.getAbsoluteFile());
 			BufferedWriter bw = new BufferedWriter(fw);
-			bw.write(analyzer.getLinkDistributionsString(true, true, true, true));
+			bw.write(analyzer.getLinkDistributionsString(true, false, true, true));
 			bw.close();
  
 		} catch (IOException e) {

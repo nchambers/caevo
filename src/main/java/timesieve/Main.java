@@ -5,13 +5,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-import java.util.Set;
 
 import timesieve.sieves.Sieve;
 import timesieve.tlink.TLink;
@@ -214,6 +211,9 @@ public class Main {
 	}
     
 	public void runSieves(SieveDocuments info) {
+		info.removeAllTLinks(); // because we will be adding our own
+
+		// Start with zero links.
 		List<TLink> currentTLinks = new ArrayList<TLink>();
         
 		// Create all the sieves first.
@@ -261,7 +261,10 @@ public class Main {
 		}
 		
 		System.out.println("Writing output: " + outpath);
-		info.writeToXML(new File(outpath));
+		docs.writeToXML(new File(outpath));
+		
+		// Evaluate it if the input file had tlinks in it.
+		Evaluate.evaluate(thedocsUnchanged, docs);
 	}
     
 	
@@ -275,7 +278,8 @@ public class Main {
 			System.out.println("ERROR: no info file given as input for the precision gauntlet.");
 			System.exit(1);
 		}
-        
+		thedocs.removeAllTLinks(); // because we will be adding our own
+		
 		// Create all the sieves first.
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
@@ -300,10 +304,11 @@ public class Main {
 			System.out.println("doc: " + doc.getDocname());
 			List<SieveSentence> sents = doc.getSentences();
 			// Gold links.
-			List<TLink> goldLinks = doc.getTlinks(true);
-			Map<Set<String>, TLink> goldUnorderedIdPairs = new HashMap<Set<String>, TLink>();
+			List<TLink> goldLinks = thedocsUnchanged.getDocument(doc.getDocname()).getTlinks(true);
+			Map<String, TLink> goldOrderedIdPairs = new HashMap<String, TLink>();
 			for (TLink tlink : goldLinks) {
-				goldUnorderedIdPairs.put(unorderedIdPair(tlink), tlink);
+//				System.out.println("adding gold: " + tlink + " order=" + TLink.orderedIdPair(tlink));
+				goldOrderedIdPairs.put(TLink.orderedIdPair(tlink), tlink);
 			}
             
 			// Loop over sieves.
@@ -316,36 +321,39 @@ public class Main {
 					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
                     
 					// Check proposed links.
-					for( TLink pp : proposed ) {
-						Set<String> unorderedIdPair = unorderedIdPair(pp);
-						TLink goldLink = goldUnorderedIdPairs.get(unorderedIdPair);
-						
-						if( goldLink != null ) {
-							guessCounts.get(sieveName).incrementCount(goldLink.getOrderedRelation()+" "+pp.getOrderedRelation());
-							goldLabelCounts.get(sieveName).incrementCount(goldLink.getRelation());
-						}
-						
-						// Guessed link is correct!
-						if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
-							numCorrect.incrementCount(sieveClasses[xx]);
-						} 
-						// Gold and guessed link disagree!
-						// Only mark relations wrong if there's a conflicting human annotation.
-						// (if there's no human annotation, we don't know if it's right or wrong)
-						else if (goldLink != null) {
-							if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
-								numIncorrectNonVague.incrementCount(sieveClasses[xx]);
+					if( proposed != null ) {
+						for( TLink pp : proposed ) {
+							String orderedIdPair = TLink.orderedIdPair(pp);
+//							System.out.println("looking up gold for " + pp + " order=" + TLink.orderedIdPair(pp));
+							TLink goldLink = goldOrderedIdPairs.get(orderedIdPair);
+
+							if( goldLink != null ) {
+								guessCounts.get(sieveName).incrementCount(goldLink.getOrderedRelation()+" "+pp.getOrderedRelation());
+								goldLabelCounts.get(sieveName).incrementCount(goldLink.getRelation());
 							}
-							numIncorrect.incrementCount(sieveClasses[xx]);
-							if (debug) {
-								System.out.printf("%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
-																	sieveClasses[xx], doc.getDocname(), goldUnorderedIdPairs.get(unorderedIdPair), pp,
-																	getLinkDebugInfo(pp, sents, doc));
+
+							// Guessed link is correct!
+							if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
+								numCorrect.incrementCount(sieveClasses[xx]);
+							} 
+							// Gold and guessed link disagree!
+							// Only mark relations wrong if there's a conflicting human annotation.
+							// (if there's no human annotation, we don't know if it's right or wrong)
+							else if (goldLink != null) {
+								if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
+									numIncorrectNonVague.incrementCount(sieveClasses[xx]);
+								}
+								numIncorrect.incrementCount(sieveClasses[xx]);
+								if (debug) {
+									System.out.printf("%s: %s: Incorrect Link: expected %s, found %s\nDebug info: %s\n",
+											sieveClasses[xx], doc.getDocname(), goldOrderedIdPairs.get(orderedIdPair), pp,
+											getLinkDebugInfo(pp, sents, doc));
+								}
 							}
-						}
-						// No gold link.
-						else {
-							System.out.println("No gold link: " + pp);
+							// No gold link.
+							else {
+								System.out.println("No gold link (" + sieveName + "): " + pp);
+							}
 						}
 					}
 				}
@@ -376,44 +384,11 @@ public class Main {
 		}
 		for( String key : sortedKeys ) {
 			System.out.println("**** " + key + "****");
-			printBaseline(goldLabelCounts.get(key));			
-			confusionMatrix(guessCounts.get(key));
+			Evaluate.printBaseline(goldLabelCounts.get(key));			
+			Evaluate.confusionMatrix(guessCounts.get(key));
 		}
 	}
-	
-	/**
-	 * Find the label with the most counts, and print the baseline if you always guessed that one.
-	 */
-	private void printBaseline(Counter<TLink.Type> labelCounts) {
-		double total = labelCounts.totalCount();
-		TLink.Type best = null;
-		double bestc = -1.0;
-		for( TLink.Type label : labelCounts.keySet() ) {
-			if( labelCounts.getCount(label) > bestc ) {
-				bestc = labelCounts.getCount(label);
-				best = label;
-			}
-		}
-		System.out.printf("Local Baseline (%s): %.2f\n", best, (bestc/total));
-	}
-	
-	private void confusionMatrix(Counter<String> guessCounts) {
-		final String[] labels = { "BEFORE", "AFTER", "SIMULTANEOUS", "INCLUDES", "IS_INCLUDED", "VAGUE" };
-		for( String label2 : labels )
-			System.out.print("\t" + label2.substring(0,Math.min(label2.length(), 6)));
-		System.out.println("\t(guesses)");
-		
-		for( String label1 : labels ) {
-			System.out.print(label1.substring(0, Math.min(label1.length(), 6)) + "\t");
-			
-			for( String label2 : labels ) {
-				if( guessCounts.containsKey(label1+" "+label2) )
-					System.out.print((int)guessCounts.getCount(label1+" "+label2) + "\t");
-				else System.out.print("0\t");
-			}
-			System.out.println();
-		}
-	}
+
 	
 	
 	/**
@@ -615,10 +590,6 @@ public class Main {
 		if( timexClassifier == null )
 			timexClassifier = new TimexClassifier(info);
 		timexClassifier.markupTimex3();
-	}
-	
-	private static Set<String> unorderedIdPair(TLink tlink) {
-		return new HashSet<String>(Arrays.asList(tlink.getId1(), tlink.getId2()));
 	}
 	
 	/**

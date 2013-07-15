@@ -1,37 +1,26 @@
 RepCreationDay
-AdjacentVerbTimex
+TimeTimeSieve
 RepEventGovEvent
+EventEventVagueSieve
+WordNet209
+AdjacentVerbTimex
 ReichenbachDG13
-//ReichenbachDG13
-    
-//    MLEventEventSameSent
-    
-//AllVagueSieve
-//                    DependencyAnalyze
-//                    Dependencies182
-//                    WordFeatures5
-//                    QuarterSieveReporting
-//                    StupidSieve
-//                    WordFeatures64
-//                    WordNet209
-//                      XCompDepSieve
 
-//RepEventGovEvent
-//RepEventRepEventSieve
-//ReichenbachDG13
-//MLEventEventSameSent  
-//AllVagueSieve
+MLEventEventSameSent  
+//MLEventEventDominates
+//MLEventEventDiffSent   // this really hurts
+MLEventTimeDiffSent
+MLEventTimeSameSent
+AllVagueSieve
+
 //DependencyAnalyze
 //Dependencies182
 //WordFeatures5
 //QuarterSieveReporting
 //StupidSieve
 //WordFeatures64
-//WordNet209
-//MLEventEventSameSent
-FrequencyVagueSieve
-TimeTimeSieve
-EventCreationTimeSieve
-RepEventRepEventSieve
-XCompDepSieve
+//FrequencyVagueSieve
 
+//EventCreationTimeSieve
+//XCompDepSieve
+//FrequencyVagueSieve

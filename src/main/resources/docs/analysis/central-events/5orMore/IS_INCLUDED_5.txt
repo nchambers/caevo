@@ -1,0 +1,75 @@
+AP900816-0139.tml|ei1526(entity text: said)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: The Persian Gulf showdown between Iraq and the United States took a more personal turn Thursday when Iraq 's Saddam Hussein called President Bush a liar and said the outbreak of holy war could bring thousands of Americans home in coffins .
+
+### Following Sentence: Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+
+TLinks: ei1526
+	VAGUE	ei1531(event text: commenting)
+	BEFORE	ei1537(event text: settlement)
+	IS_INCLUDED	t288(event text: Thursday)
+	VAGUE	ei1534(event text: saw)
+	BEFORE	ei1529(event text: bring)
+	IS_INCLUDED	ei1522(event text: showdown)
+	AFTER	ei1540(event text: invasion)
+	VAGUE	ei1536(event text: optimistic)
+	AFTER	ei1539(event text: stems)
+	IS_INCLUDED	ei1532(event text: crisis)
+	VAGUE	ei1524(event text: called)
+	IS_INCLUDED	t289(event text: two-week)
+	VAGUE	ei1541(event text: buildup)
+	BEFORE	ei1528(event text: war)
+	IS_INCLUDED	ei1523(event text: took)
+	IS_INCLUDED	ei1538(event text: dispute)
+	VAGUE	ei1533(event text: said)
+
+
+AP900815-0044.tml|ei1551(entity text: said)
+
+### Previous Sentence: In a speech delivered at the Pentagon , Bush seemed to suggest that American forces could be in the gulf region for some time .
+
+### Sentence with entity: `` No one should doubt our staying power or determination , '' he said .
+
+### Following Sentence: The U.S. military buildup in Saudi Arabia continued at fever pace , with Syrian troops now part of a multinational force camped out in the desert to guard the Saudi kingdom from any new thrust by Iraq .
+
+TLinks: ei1551
+	VAGUE	ei1549(event text: doubt)
+	IS_INCLUDED	t56(event text: now)
+	IS_INCLUDED	ei1555(event text: camped)
+	IS_INCLUDED	ei1553(event text: continued)
+	VAGUE	ei1557(event text: thrust)
+	IS_INCLUDED	ei1552(event text: buildup)
+	VAGUE	t47(event text: some time)
+	IS_INCLUDED	ei1545(event text: delivered)
+	VAGUE	ei1547(event text: suggest)
+	VAGUE	ei1546(event text: seemed)
+	VAGUE	ei1556(event text: guard)
+	IS_INCLUDED	ei1544(event text: speech)
+
+
+AP900816-0139.tml|ei1611(entity text: called)
+
+### Previous Sentence: `` We continue to pray and pray hard to God so that there will be no confrontation whereby you will receive thousands of Americans wrapped in sad coffins after you had pushed them into a dark tunnel , '' Saddam said .
+
+### Sentence with entity: He called U.S. soldiers massing in Saudi Arabia the real occupiers in the Persian Gulf .
+
+### Following Sentence: Replied State Department deputy spokesman Richard Boucher , `` We have n't really analyzed the statement in detail but it appears to be just another example of his outlandish rhetoric and his attempts to distort the truth .
+
+TLinks: ei1611
+	IS_INCLUDED	ei1619(event text: distort)
+	IS_INCLUDED	ei1603(event text: continue)
+	BEFORE	ei1614(event text: Replied)
+	BEFORE	ei1617(event text: appears)
+	IS_INCLUDED	ei1612(event text: massing)
+	IS_INCLUDED	ei1604(event text: pray)
+	BEFORE	ei1615(event text: analyzed)
+	BEFORE	ei1606(event text: confrontation)
+	BEFORE	ei1607(event text: receive)
+	IS_INCLUDED	ei1605(event text: pray)
+	VAGUE	ei1610(event text: said)
+	IS_INCLUDED	ei1618(event text: attempts)
+	VAGUE	ei1609(event text: pushed)
+
+

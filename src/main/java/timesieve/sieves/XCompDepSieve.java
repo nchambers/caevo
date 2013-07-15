@@ -138,6 +138,7 @@ public class XCompDepSieve implements Sieve {
 		String govStr = eGov.getString();
 		String depStr = eDep.getString();
 		
+		
 		if (eDepTense == TextEvent.Tense.PRESPART)
 			if (eGovClass == TextEvent.Class.OCCURRENCE){
 				proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.SIMULTANEOUS));
