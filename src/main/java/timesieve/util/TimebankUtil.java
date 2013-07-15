@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import timesieve.tlink.*;
+import timesieve.util.TreeOperator;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -19,6 +20,7 @@ import org.w3c.dom.NodeList; // yes?
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
+import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.trees.TreeGraphNode;
 import edu.stanford.nlp.trees.TypedDependency;
 
@@ -229,6 +231,8 @@ public class TimebankUtil {
    * 
    * @returns the tense of event, where tense is less strictly defined.
    */
+  
+  // Basically if a word governs a modal word then it is considered as being in the future tense.
   public static TextEvent.Tense pseudoTense(SieveSentence sent, List<TypedDependency> tds, TextEvent event) {
   	int eventIndex = event.getIndex();
   	for (TypedDependency td : tds) {
@@ -242,6 +246,28 @@ public class TimebankUtil {
   		}
   		return event.getTense();
   	}
+  
+  // This method was meant to generalize the above, but the intuition is not quite right.
+  // a modal verb is governed by the verb it modifies, but a verb that governs that verb is not int he modal context.
+  // Need to hash this out still.
+  public static TextEvent.Tense pseudoTense2(SieveSentence sent, List<TypedDependency> tds, TextEvent event) {
+  	int eventIndex = event.getIndex();
+  	List<CoreLabel> tokens = sent.tokens();
+  	for (int t = 0; t < tokens.size(); t++) {
+  		String tokenText = tokens.get(t).originalText();
+  		if (isModalWord(tokenText)) {
+  			String dp = TreeOperator.directPath(eventIndex, t+1, tds); // add 1 because of stanford indexing starting at 1
+  			if (dp != null){
+  				System.out.println("dp: " + dp);
+  				System.out.println(sent.sentence());
+  				System.out.println(event.getString());
+  				return TextEvent.Tense.FUTURE;
+  			}
+  		}
+  	}
+  	return event.getTense();
+  }
+  
   public static boolean isModalWord(String word) {
   	if (word.toLowerCase().equals("would") || word.toLowerCase().equals("could") ||
   			word.toLowerCase().equals("might") || word.toLowerCase().equals("may") ||

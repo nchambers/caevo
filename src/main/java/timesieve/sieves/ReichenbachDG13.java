@@ -62,6 +62,15 @@ import timesieve.util.TimebankUtil;
  *SameOrAdjSent/AnyTense p=0.60	134 of 223
  *
  *
+ *After adding the pseudoTense function that puts words that govern
+ *a modal word in the future, new results:
+ *
+ *train:
+ *ReichenbachDG13			p=0.59	192 of 326	Non-VAGUE:	p=0.90	192 of 213
+ *dev:
+ *ReichenbachDG13			p=0.63	20 of 32	Non-VAGUE:	p=0.77	20 of 26
+ *
+ *
  *DETAILS:
  *
  * D&G2013 report the percentage of TLINKs in timebank for which the following
