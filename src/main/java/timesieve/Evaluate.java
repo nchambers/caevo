@@ -13,12 +13,12 @@ import timesieve.tlink.TLink;
 public class Evaluate {
 
 	public static final String[] devDocs = { 
-		"APW19980227.0487.tml",
-		"CNN19980223.1130.0960.tml",
-		"NYT19980212.0019.tml", 
+		"APW19980227.0487.tml", 
+		"CNN19980223.1130.0960.tml", 
+		"NYT19980212.0019.tml",  
 		"PRI19980216.2000.0170.tml", 
 		"ed980111.1130.0089.tml" 
-		};
+	};
 	
 	/**
 	 * Determines if the given TLink exists in the goldLinks, and its relation is equal
