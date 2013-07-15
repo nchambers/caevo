@@ -1,0 +1,3392 @@
+APW19980227.0476.tml|ei2103(entity text: trial)
+
+### Previous Sentence: THE HAGUE , Netherlands -LRB- AP -RRB- _ The World Court Friday rejected U.S. and British objections to a Libyan World Court case that has blocked the trial of two Libyans suspected of blowing up a Pan Am jumbo jet over Scotland in 1988 .
+
+### Sentence with entity: Libya , which brought the case to the United Nations ' highest judicial body in its dispute with the United States and Britain , hailed the ruling and said it would press anew for a trial in a third neutral country .
+
+### Following Sentence: Both U.S. and British officials filed objections to the court 's jurisdiction in 1995 , claiming Security Council resolutions imposed on Lybia to force the suspects ' extradition overruled a 1971 Convention which gives Libya the right to try the men .
+
+TLinks: ei2103
+	AFTER	ei2099(event text: hailed)
+	AFTER	ei2097(event text: brought)
+	AFTER	ei2109(event text: overruled)
+	AFTER	ei2102(event text: press)
+	AFTER	t21(event text: Friday)
+	AFTER	ei2105(event text: claiming)
+	AFTER	t23(event text: 1995)
+	AFTER	ei2104(event text: filed)
+	VAGUE	ei2094(event text: trial)
+	IS_INCLUDED	ei2095(event text: suspected)
+	VAGUE	ei2108(event text: force)
+	AFTER	ei2101(event text: said)
+	AFTER	t24(event text: 1971)
+	AFTER	ei2091(event text: rejected)
+	AFTER	ei2100(event text: ruling)
+	AFTER	ei2092(event text: objections)
+	AFTER	ei2107(event text: imposed)
+	VAGUE	ei2098(event text: dispute)
+	AFTER	t22(event text: 1988)
+	AFTER	ei2093(event text: blocked)
+	AFTER	ei2096(event text: blowing)
+
+
+APW19980227.0476.tml|ei2102(entity text: press)
+
+### Previous Sentence: THE HAGUE , Netherlands -LRB- AP -RRB- _ The World Court Friday rejected U.S. and British objections to a Libyan World Court case that has blocked the trial of two Libyans suspected of blowing up a Pan Am jumbo jet over Scotland in 1988 .
+
+### Sentence with entity: Libya , which brought the case to the United Nations ' highest judicial body in its dispute with the United States and Britain , hailed the ruling and said it would press anew for a trial in a third neutral country .
+
+### Following Sentence: Both U.S. and British officials filed objections to the court 's jurisdiction in 1995 , claiming Security Council resolutions imposed on Lybia to force the suspects ' extradition overruled a 1971 Convention which gives Libya the right to try the men .
+
+TLinks: ei2102
+	AFTER	ei2105(event text: claiming)
+	AFTER	ei2097(event text: brought)
+	BEFORE	ei2103(event text: trial)
+	VAGUE	ei2094(event text: trial)
+	AFTER	ei2109(event text: overruled)
+	IS_INCLUDED	ei2095(event text: suspected)
+	AFTER	t23(event text: 1995)
+	AFTER	ei2100(event text: ruling)
+	VAGUE	ei2098(event text: dispute)
+	AFTER	ei2096(event text: blowing)
+	AFTER	ei2104(event text: filed)
+	AFTER	ei2101(event text: said)
+	AFTER	ei2093(event text: blocked)
+	VAGUE	t21(event text: Friday)
+	AFTER	ei2107(event text: imposed)
+	AFTER	ei2091(event text: rejected)
+	AFTER	t22(event text: 1988)
+	VAGUE	ei2108(event text: force)
+	AFTER	ei2099(event text: hailed)
+	AFTER	t24(event text: 1971)
+	AFTER	ei2092(event text: objections)
+
+
+AP900816-0139.tml|ei1537(entity text: settlement)
+
+### Previous Sentence: The Persian Gulf showdown between Iraq and the United States took a more personal turn Thursday when Iraq 's Saddam Hussein called President Bush a liar and said the outbreak of holy war could bring thousands of Americans home in coffins .
+
+### Sentence with entity: Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+
+### Following Sentence: After a two-hour meeting at his Kennebunkport home with King Hussein of Jordan , Bush said , `` I did not come away with any feeling of hope '' that Iraq would withdraw its army from Kuwait .
+
+TLinks: ei1537
+	AFTER	t290(event text: two-hour)
+	AFTER	ei1536(event text: optimistic)
+	AFTER	ei1526(event text: said)
+	VAGUE	ei1538(event text: dispute)
+	AFTER	t289(event text: two-week)
+	IS_INCLUDED	ei1532(event text: crisis)
+	AFTER	ei1534(event text: saw)
+	AFTER	ei1542(event text: meeting)
+	AFTER	ei1541(event text: buildup)
+	AFTER	ei1531(event text: commenting)
+	AFTER	ei1543(event text: said)
+	VAGUE	ei1528(event text: war)
+	AFTER	ei1539(event text: stems)
+	VAGUE	t288(event text: Thursday)
+	AFTER	ei1523(event text: took)
+	AFTER	ei1533(event text: said)
+	AFTER	ei1524(event text: called)
+	VAGUE	ei1522(event text: showdown)
+	AFTER	ei1540(event text: invasion)
+	VAGUE	ei1546(event text: withdraw)
+	VAGUE	ei1529(event text: bring)
+	AFTER	ei1544(event text: come)
+
+
+APW19980219.0476.tml|ei2512(entity text: turned)
+
+### Previous Sentence: He said he received information from Khmer Rouge guerrillas on where the body had been buried , and recently ordered 10 of his men from a force of 500 near Khmer Rouge headquarters in Anlong Veng to conduct the search .
+
+### Sentence with entity: If and when the remains are found , he said , they would be turned over to the British Embassy , apparently meaning they would be sent across the border into Thailand and onward to Bangkok .
+
+### Following Sentence: Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+
+TLinks: ei2512
+	VAGUE	ei2513(event text: sent)
+	AFTER	ei2504(event text: said)
+	AFTER	ei2514(event text: said)
+	AFTER	t2452(event text: now)
+	AFTER	ei2509(event text: search)
+	AFTER	ei2517(event text: capture)
+	AFTER	ei2516(event text: killed)
+	AFTER	ei2510(event text: found)
+	AFTER	t140(event text: a week)
+	AFTER	ei2508(event text: conduct)
+	AFTER	ei2515(event text: believed)
+	AFTER	ei2506(event text: buried)
+	AFTER	ei2505(event text: received)
+	AFTER	ei2511(event text: said)
+	AFTER	ei2507(event text: ordered)
+
+
+APW19980219.0476.tml|ei2513(entity text: sent)
+
+### Previous Sentence: He said he received information from Khmer Rouge guerrillas on where the body had been buried , and recently ordered 10 of his men from a force of 500 near Khmer Rouge headquarters in Anlong Veng to conduct the search .
+
+### Sentence with entity: If and when the remains are found , he said , they would be turned over to the British Embassy , apparently meaning they would be sent across the border into Thailand and onward to Bangkok .
+
+### Following Sentence: Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+
+TLinks: ei2513
+	AFTER	ei2509(event text: search)
+	AFTER	t140(event text: a week)
+	VAGUE	ei2512(event text: turned)
+	AFTER	ei2504(event text: said)
+	AFTER	ei2507(event text: ordered)
+	AFTER	ei2516(event text: killed)
+	AFTER	t2452(event text: now)
+	AFTER	ei2506(event text: buried)
+	AFTER	ei2514(event text: said)
+	AFTER	ei2505(event text: received)
+	AFTER	ei2511(event text: said)
+	AFTER	ei2515(event text: believed)
+	AFTER	ei2510(event text: found)
+	AFTER	ei2517(event text: capture)
+	AFTER	ei2508(event text: conduct)
+
+
+AP900815-0044.tml|ei1578(entity text: heading)
+
+### Previous Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+### Sentence with entity: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+### Following Sentence: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+TLinks: ei1578
+	VAGUE	ei1586(event text: turn)
+	AFTER	ei1574(event text: cease-fire)
+	VAGUE	ei1569(event text: accept)
+	AFTER	t82(event text: eight-year)
+	AFTER	ei1584(event text: said)
+	VAGUE	ei1576(event text: seemed)
+	AFTER	ei1581(event text: invasion)
+	VAGUE	ei1568(event text: appeared)
+	AFTER	ei1575(event text: war)
+	AFTER	t79(event text: August 1988)
+	AFTER	ei1572(event text: talks)
+	AFTER	ei1571(event text: rejected)
+	VAGUE	ei1585(event text: sought)
+	AFTER	ei1583(event text: dispatched)
+	VAGUE	ei1589(event text: harbor)
+	AFTER	ei1582(event text: criticized)
+	AFTER	ei1580(event text: condemned)
+	AFTER	t89(event text: Aug. 2)
+	AFTER	ei1577(event text: aimed)
+
+
+APW19980227.0476.tml|ei2101(entity text: said)
+
+### Previous Sentence: THE HAGUE , Netherlands -LRB- AP -RRB- _ The World Court Friday rejected U.S. and British objections to a Libyan World Court case that has blocked the trial of two Libyans suspected of blowing up a Pan Am jumbo jet over Scotland in 1988 .
+
+### Sentence with entity: Libya , which brought the case to the United Nations ' highest judicial body in its dispute with the United States and Britain , hailed the ruling and said it would press anew for a trial in a third neutral country .
+
+### Following Sentence: Both U.S. and British officials filed objections to the court 's jurisdiction in 1995 , claiming Security Council resolutions imposed on Lybia to force the suspects ' extradition overruled a 1971 Convention which gives Libya the right to try the men .
+
+TLinks: ei2101
+	VAGUE	t21(event text: Friday)
+	VAGUE	ei2108(event text: force)
+	AFTER	ei2104(event text: filed)
+	VAGUE	ei2094(event text: trial)
+	AFTER	ei2107(event text: imposed)
+	AFTER	t22(event text: 1988)
+	AFTER	ei2096(event text: blowing)
+	AFTER	ei2091(event text: rejected)
+	AFTER	ei2100(event text: ruling)
+	AFTER	ei2092(event text: objections)
+	AFTER	ei2097(event text: brought)
+	BEFORE	ei2103(event text: trial)
+	BEFORE	ei2102(event text: press)
+	AFTER	ei2093(event text: blocked)
+	AFTER	ei2109(event text: overruled)
+	AFTER	t23(event text: 1995)
+	AFTER	t24(event text: 1971)
+	VAGUE	ei2099(event text: hailed)
+	IS_INCLUDED	ei2095(event text: suspected)
+	VAGUE	ei2098(event text: dispute)
+	AFTER	ei2105(event text: claiming)
+
+
+APW19980227.0476.tml|ei2099(entity text: hailed)
+
+### Previous Sentence: THE HAGUE , Netherlands -LRB- AP -RRB- _ The World Court Friday rejected U.S. and British objections to a Libyan World Court case that has blocked the trial of two Libyans suspected of blowing up a Pan Am jumbo jet over Scotland in 1988 .
+
+### Sentence with entity: Libya , which brought the case to the United Nations ' highest judicial body in its dispute with the United States and Britain , hailed the ruling and said it would press anew for a trial in a third neutral country .
+
+### Following Sentence: Both U.S. and British officials filed objections to the court 's jurisdiction in 1995 , claiming Security Council resolutions imposed on Lybia to force the suspects ' extradition overruled a 1971 Convention which gives Libya the right to try the men .
+
+TLinks: ei2099
+	VAGUE	ei2094(event text: trial)
+	BEFORE	ei2103(event text: trial)
+	AFTER	ei2092(event text: objections)
+	AFTER	ei2096(event text: blowing)
+	AFTER	t24(event text: 1971)
+	AFTER	ei2105(event text: claiming)
+	AFTER	ei2107(event text: imposed)
+	IS_INCLUDED	ei2095(event text: suspected)
+	AFTER	t22(event text: 1988)
+	VAGUE	ei2098(event text: dispute)
+	AFTER	ei2109(event text: overruled)
+	VAGUE	ei2108(event text: force)
+	AFTER	ei2100(event text: ruling)
+	AFTER	ei2104(event text: filed)
+	VAGUE	ei2101(event text: said)
+	AFTER	ei2093(event text: blocked)
+	AFTER	ei2097(event text: brought)
+	AFTER	t23(event text: 1995)
+	BEFORE	ei2102(event text: press)
+	AFTER	ei2091(event text: rejected)
+	VAGUE	t21(event text: Friday)
+
+
+NYT19980206.0460.tml|t205(entity text: Friday)
+
+### Previous Sentence: The job figures for January extended a surge in employment gains that began last fall , just when the labor market had showed signs of cooling .
+
+### Sentence with entity: After accounting for a small downward revision Friday to December 's figures , the economy has been creating jobs at a rate of 358,000 a month for the last four months _ and 381,000 over the last three months _ after averaging 242,000 for the first nine months of 1997 .
+
+### Following Sentence: The surge in jobs reflects a remarkable confluence of positive and self-reinforcing economic forces .
+
+TLinks: t205
+	AFTER	t206(event text: December)
+	AFTER	ei2237(event text: creating)
+	AFTER	t204(event text: last fall)
+	AFTER	ei2234(event text: showed)
+	VAGUE	ei2239(event text: reflects)
+	VAGUE	ei2231(event text: surge)
+	AFTER	t207(event text: the last four months)
+	AFTER	t212(event text: the first nine months)
+	AFTER	ei2233(event text: began)
+	VAGUE	ei2236(event text: revision)
+	AFTER	t211(event text: 1997)
+	AFTER	ei2230(event text: extended)
+	VAGUE	ei2235(event text: accounting)
+	AFTER	t208(event text: the last three months)
+	AFTER	t203(event text: January)
+	AFTER	ei2238(event text: averaging)
+	VAGUE	ei2232(event text: gains)
+
+
+NYT19980206.0460.tml|ei2236(entity text: revision)
+
+### Previous Sentence: The job figures for January extended a surge in employment gains that began last fall , just when the labor market had showed signs of cooling .
+
+### Sentence with entity: After accounting for a small downward revision Friday to December 's figures , the economy has been creating jobs at a rate of 358,000 a month for the last four months _ and 381,000 over the last three months _ after averaging 242,000 for the first nine months of 1997 .
+
+### Following Sentence: The surge in jobs reflects a remarkable confluence of positive and self-reinforcing economic forces .
+
+TLinks: ei2236
+	AFTER	t212(event text: the first nine months)
+	AFTER	ei2238(event text: averaging)
+	AFTER	t203(event text: January)
+	AFTER	ei2230(event text: extended)
+	VAGUE	ei2231(event text: surge)
+	AFTER	ei2234(event text: showed)
+	AFTER	t206(event text: December)
+	AFTER	t204(event text: last fall)
+	AFTER	ei2237(event text: creating)
+	VAGUE	ei2235(event text: accounting)
+	VAGUE	t205(event text: Friday)
+	AFTER	t208(event text: the last three months)
+	VAGUE	ei2239(event text: reflects)
+	AFTER	ei2233(event text: began)
+	AFTER	t207(event text: the last four months)
+	AFTER	t211(event text: 1997)
+	VAGUE	ei2232(event text: gains)
+
+
+APW19980219.0476.tml|t133(entity text: the next two weeks)
+
+### Previous Sentence: O'SMACH , Cambodia -LRB- AP -RRB- _ The top commander of a Cambodian resistance force said Thursday he has sent a team to recover the remains of a British mine removal expert kidnapped and presumed killed by Khmer Rouge guerrillas almost two years ago .
+
+### Sentence with entity: Gen. Nhek Bunchhay , a loyalist of ousted Cambodian Prime Minister Prince Norodom Ranariddh , said in an interview with The Associated Press at his hilltop headquarters that he hopes to recover the remains of Christopher Howes within the next two weeks .
+
+### Following Sentence: Howes had been working for the Britain-based Mines Advisory Group when he was abducted with his Cambodian interpreter Houn Hourth in March 1996 .
+
+TLinks: t133
+	AFTER	ei2455(event text: said)
+	AFTER	t130(event text: almost two years ago)
+	AFTER	ei2465(event text: working)
+	AFTER	ei2463(event text: hopes)
+	VAGUE	ei2456(event text: sent)
+	AFTER	t2443(event text: Thursday)
+	AFTER	ei2466(event text: abducted)
+	VAGUE	ei2457(event text: recover)
+	AFTER	ei2461(event text: said)
+	AFTER	t134(event text: March 1996)
+	AFTER	ei2462(event text: interview)
+	AFTER	ei2460(event text: killed)
+	VAGUE	ei2464(event text: recover)
+	AFTER	ei2458(event text: kidnapped)
+	AFTER	ei2459(event text: presumed)
+
+
+APW19980227.0476.tml|ei2100(entity text: ruling)
+
+### Previous Sentence: THE HAGUE , Netherlands -LRB- AP -RRB- _ The World Court Friday rejected U.S. and British objections to a Libyan World Court case that has blocked the trial of two Libyans suspected of blowing up a Pan Am jumbo jet over Scotland in 1988 .
+
+### Sentence with entity: Libya , which brought the case to the United Nations ' highest judicial body in its dispute with the United States and Britain , hailed the ruling and said it would press anew for a trial in a third neutral country .
+
+### Following Sentence: Both U.S. and British officials filed objections to the court 's jurisdiction in 1995 , claiming Security Council resolutions imposed on Lybia to force the suspects ' extradition overruled a 1971 Convention which gives Libya the right to try the men .
+
+TLinks: ei2100
+	AFTER	ei2092(event text: objections)
+	SIMULTANEOUS	ei2091(event text: rejected)
+	VAGUE	ei2108(event text: force)
+	AFTER	ei2105(event text: claiming)
+	AFTER	ei2104(event text: filed)
+	BEFORE	ei2101(event text: said)
+	AFTER	ei2109(event text: overruled)
+	BEFORE	ei2102(event text: press)
+	VAGUE	ei2098(event text: dispute)
+	IS_INCLUDED	ei2095(event text: suspected)
+	AFTER	ei2096(event text: blowing)
+	AFTER	t22(event text: 1988)
+	IS_INCLUDED	t21(event text: Friday)
+	BEFORE	ei2099(event text: hailed)
+	AFTER	ei2107(event text: imposed)
+	BEFORE	ei2103(event text: trial)
+	AFTER	t24(event text: 1971)
+	AFTER	ei2093(event text: blocked)
+	VAGUE	ei2094(event text: trial)
+	AFTER	ei2097(event text: brought)
+	AFTER	t23(event text: 1995)
+
+
+AP900815-0044.tml|ei1567(entity text: review)
+
+### Previous Sentence: In a letter to President Hashemi Rafsanjani of Iran , read by a broadcaster over Baghdad radio , Saddam said he will begin withdrawing troops from Iranian territory on Friday and release Iranian prisoners of war .
+
+### Sentence with entity: Iran said an Iraqi diplomatic delegation was en route to Tehran to deliver Saddam 's message , which it said it would review `` with optimism . ''
+
+### Following Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+TLinks: ei1567
+	AFTER	ei1563(event text: said)
+	VAGUE	ei1559(event text: said)
+	AFTER	ei1575(event text: war)
+	AFTER	t82(event text: eight-year)
+	AFTER	ei1569(event text: accept)
+	VAGUE	ei1558(event text: read)
+	AFTER	ei1574(event text: cease-fire)
+	VAGUE	ei1561(event text: withdrawing)
+	AFTER	ei1571(event text: rejected)
+	VAGUE	t65(event text: Friday)
+	VAGUE	ei1560(event text: begin)
+	VAGUE	ei1562(event text: release)
+	AFTER	ei1566(event text: said)
+	AFTER	ei1565(event text: deliver)
+	AFTER	ei1568(event text: appeared)
+	AFTER	ei1572(event text: talks)
+	AFTER	t79(event text: August 1988)
+
+
+NYT19980206.0460.tml|ei2209(entity text: slow)
+
+### Previous Sentence: But economists said the wage increase was not enough to raise any concerns about higher inflation .
+
+### Sentence with entity: And because the Federal Reserve has made clear that it expects the economy to slow in coming months as ripple effects from Asia reach the United States , investors disregarded the large jobs gains , betting that neither a rise in interest rates nor resurgent inflation is looming .
+
+### Following Sentence: Stocks rose , pushing the Dow Jones industrial average up 72.24 points , to 8,189.49 , leaving the index within 70 points of its record high set on Aug. 6 .
+
+TLinks: ei2209
+	AFTER	ei2207(event text: made)
+	VAGUE	ei2213(event text: rise)
+	AFTER	ei2208(event text: expects)
+	AFTER	ei2205(event text: increase)
+	AFTER	t202(event text: Aug. 6)
+	AFTER	ei2206(event text: raise)
+	IS_INCLUDED	t201(event text: coming months)
+	VAGUE	ei2215(event text: looming)
+	VAGUE	ei2214(event text: inflation)
+	AFTER	ei2211(event text: disregarded)
+	AFTER	ei2217(event text: pushing)
+	AFTER	ei2204(event text: said)
+	AFTER	ei2216(event text: rose)
+	AFTER	ei2212(event text: betting)
+	AFTER	ei2218(event text: leaving)
+	SIMULTANEOUS	ei2210(event text: reach)
+
+
+NYT19980206.0460.tml|ei2214(entity text: inflation)
+
+### Previous Sentence: But economists said the wage increase was not enough to raise any concerns about higher inflation .
+
+### Sentence with entity: And because the Federal Reserve has made clear that it expects the economy to slow in coming months as ripple effects from Asia reach the United States , investors disregarded the large jobs gains , betting that neither a rise in interest rates nor resurgent inflation is looming .
+
+### Following Sentence: Stocks rose , pushing the Dow Jones industrial average up 72.24 points , to 8,189.49 , leaving the index within 70 points of its record high set on Aug. 6 .
+
+TLinks: ei2214
+	AFTER	ei2205(event text: increase)
+	AFTER	ei2218(event text: leaving)
+	AFTER	ei2211(event text: disregarded)
+	AFTER	t202(event text: Aug. 6)
+	AFTER	ei2217(event text: pushing)
+	AFTER	ei2204(event text: said)
+	AFTER	ei2212(event text: betting)
+	VAGUE	ei2210(event text: reach)
+	AFTER	ei2206(event text: raise)
+	VAGUE	ei2213(event text: rise)
+	VAGUE	ei2209(event text: slow)
+	AFTER	ei2207(event text: made)
+	IS_INCLUDED	t201(event text: coming months)
+	AFTER	ei2208(event text: expects)
+	AFTER	ei2216(event text: rose)
+	VAGUE	ei2215(event text: looming)
+
+
+NYT19980206.0460.tml|t201(entity text: coming months)
+
+### Previous Sentence: But economists said the wage increase was not enough to raise any concerns about higher inflation .
+
+### Sentence with entity: And because the Federal Reserve has made clear that it expects the economy to slow in coming months as ripple effects from Asia reach the United States , investors disregarded the large jobs gains , betting that neither a rise in interest rates nor resurgent inflation is looming .
+
+### Following Sentence: Stocks rose , pushing the Dow Jones industrial average up 72.24 points , to 8,189.49 , leaving the index within 70 points of its record high set on Aug. 6 .
+
+TLinks: t201
+	AFTER	ei2211(event text: disregarded)
+	INCLUDES	ei2210(event text: reach)
+	AFTER	ei2216(event text: rose)
+	AFTER	ei2205(event text: increase)
+	AFTER	ei2207(event text: made)
+	INCLUDES	ei2209(event text: slow)
+	AFTER	ei2206(event text: raise)
+	AFTER	ei2218(event text: leaving)
+	INCLUDES	ei2214(event text: inflation)
+	AFTER	ei2208(event text: expects)
+	AFTER	ei2217(event text: pushing)
+	AFTER	t202(event text: Aug. 6)
+	VAGUE	ei2215(event text: looming)
+	INCLUDES	ei2213(event text: rise)
+	AFTER	ei2212(event text: betting)
+	AFTER	ei2204(event text: said)
+
+
+APW19980219.0476.tml|ei2464(entity text: recover)
+
+### Previous Sentence: O'SMACH , Cambodia -LRB- AP -RRB- _ The top commander of a Cambodian resistance force said Thursday he has sent a team to recover the remains of a British mine removal expert kidnapped and presumed killed by Khmer Rouge guerrillas almost two years ago .
+
+### Sentence with entity: Gen. Nhek Bunchhay , a loyalist of ousted Cambodian Prime Minister Prince Norodom Ranariddh , said in an interview with The Associated Press at his hilltop headquarters that he hopes to recover the remains of Christopher Howes within the next two weeks .
+
+### Following Sentence: Howes had been working for the Britain-based Mines Advisory Group when he was abducted with his Cambodian interpreter Houn Hourth in March 1996 .
+
+TLinks: ei2464
+	AFTER	ei2456(event text: sent)
+	AFTER	ei2465(event text: working)
+	AFTER	ei2460(event text: killed)
+	AFTER	ei2461(event text: said)
+	AFTER	ei2466(event text: abducted)
+	VAGUE	ei2455(event text: said)
+	AFTER	ei2459(event text: presumed)
+	AFTER	ei2463(event text: hopes)
+	AFTER	t130(event text: almost two years ago)
+	VAGUE	t133(event text: the next two weeks)
+	VAGUE	ei2457(event text: recover)
+	AFTER	ei2458(event text: kidnapped)
+	AFTER	ei2462(event text: interview)
+	VAGUE	t2443(event text: Thursday)
+	AFTER	t134(event text: March 1996)
+
+
+NYT19980206.0460.tml|ei2210(entity text: reach)
+
+### Previous Sentence: But economists said the wage increase was not enough to raise any concerns about higher inflation .
+
+### Sentence with entity: And because the Federal Reserve has made clear that it expects the economy to slow in coming months as ripple effects from Asia reach the United States , investors disregarded the large jobs gains , betting that neither a rise in interest rates nor resurgent inflation is looming .
+
+### Following Sentence: Stocks rose , pushing the Dow Jones industrial average up 72.24 points , to 8,189.49 , leaving the index within 70 points of its record high set on Aug. 6 .
+
+TLinks: ei2210
+	AFTER	ei2204(event text: said)
+	AFTER	ei2206(event text: raise)
+	IS_INCLUDED	t201(event text: coming months)
+	AFTER	ei2205(event text: increase)
+	AFTER	ei2216(event text: rose)
+	AFTER	ei2217(event text: pushing)
+	VAGUE	ei2214(event text: inflation)
+	VAGUE	ei2215(event text: looming)
+	AFTER	t202(event text: Aug. 6)
+	AFTER	ei2211(event text: disregarded)
+	AFTER	ei2207(event text: made)
+	AFTER	ei2212(event text: betting)
+	AFTER	ei2208(event text: expects)
+	VAGUE	ei2213(event text: rise)
+	SIMULTANEOUS	ei2209(event text: slow)
+	AFTER	ei2218(event text: leaving)
+
+
+APW19980219.0476.tml|ei2510(entity text: found)
+
+### Previous Sentence: He said he received information from Khmer Rouge guerrillas on where the body had been buried , and recently ordered 10 of his men from a force of 500 near Khmer Rouge headquarters in Anlong Veng to conduct the search .
+
+### Sentence with entity: If and when the remains are found , he said , they would be turned over to the British Embassy , apparently meaning they would be sent across the border into Thailand and onward to Bangkok .
+
+### Following Sentence: Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+
+TLinks: ei2510
+	AFTER	t2452(event text: now)
+	AFTER	ei2516(event text: killed)
+	AFTER	ei2505(event text: received)
+	AFTER	t140(event text: a week)
+	AFTER	ei2507(event text: ordered)
+	AFTER	ei2511(event text: said)
+	VAGUE	ei2509(event text: search)
+	BEFORE	ei2512(event text: turned)
+	AFTER	ei2506(event text: buried)
+	AFTER	ei2504(event text: said)
+	BEFORE	ei2513(event text: sent)
+	AFTER	ei2517(event text: capture)
+	VAGUE	ei2508(event text: conduct)
+	AFTER	ei2514(event text: said)
+	AFTER	ei2515(event text: believed)
+
+
+APW19980227.0487.tml|ei419(entity text: reported)
+
+### Previous Sentence: Har-Shefi acknowledged she told police interrogators that Rabin was a traitor and that she prayed for him to have a heart attack and die .
+
+### Sentence with entity: She said Rabin 's murder was `` a black stain on Israel , '' Israel radio and Israel army radio reported .
+
+### Following Sentence: Har-Shefi said she heard Amir talk about killing Rabin but did not tell the police because she did not believe he was serious .
+
+TLinks: ei419
+	VAGUE	ei411(event text: acknowledged)
+	AFTER	ei425(event text: believe)
+	AFTER	ei418(event text: murder)
+	AFTER	ei421(event text: heard)
+	VAGUE	ei416(event text: die)
+	AFTER	ei424(event text: tell)
+	AFTER	ei420(event text: said)
+	AFTER	ei423(event text: killing)
+	AFTER	ei414(event text: prayed)
+	AFTER	ei417(event text: said)
+	AFTER	ei422(event text: talk)
+	AFTER	ei412(event text: told)
+	VAGUE	ei413(event text: traitor)
+	AFTER	ei426(event text: serious)
+
+
+AP900816-0139.tml|ei1602(entity text: produce)
+
+### Previous Sentence: Saddam has been under international quarantine since his Aug. 2 power-grab , or what he calls an `` eternal merger '' with Kuwait .
+
+### Sentence with entity: In a long verbal attack read on Iraqi television Thursday , Saddam repeatedly called Bush `` a liar '' and said a shooting war could produce body bags courtesy of Baghdad .
+
+### Following Sentence: `` We continue to pray and pray hard to God so that there will be no confrontation whereby you will receive thousands of Americans wrapped in sad coffins after you had pushed them into a dark tunnel , '' Saddam said .
+
+TLinks: ei1602
+	VAGUE	ei1607(event text: receive)
+	AFTER	ei1604(event text: pray)
+	AFTER	t293(event text: Thursday)
+	VAGUE	ei1595(event text: calls)
+	VAGUE	ei1609(event text: pushed)
+	AFTER	ei1605(event text: pray)
+	VAGUE	ei1606(event text: confrontation)
+	AFTER	ei1594(event text: power-grab)
+	AFTER	ei1597(event text: attack)
+	AFTER	ei1600(event text: said)
+	AFTER	t292(event text: Aug. 2)
+	AFTER	ei1603(event text: continue)
+	AFTER	ei1610(event text: said)
+	VAGUE	ei1742(event text: merger)
+	AFTER	ei1601(event text: war)
+	AFTER	ei1598(event text: called)
+
+
+NYT19980206.0460.tml|ei2213(entity text: rise)
+
+### Previous Sentence: But economists said the wage increase was not enough to raise any concerns about higher inflation .
+
+### Sentence with entity: And because the Federal Reserve has made clear that it expects the economy to slow in coming months as ripple effects from Asia reach the United States , investors disregarded the large jobs gains , betting that neither a rise in interest rates nor resurgent inflation is looming .
+
+### Following Sentence: Stocks rose , pushing the Dow Jones industrial average up 72.24 points , to 8,189.49 , leaving the index within 70 points of its record high set on Aug. 6 .
+
+TLinks: ei2213
+	AFTER	t202(event text: Aug. 6)
+	AFTER	ei2217(event text: pushing)
+	AFTER	ei2204(event text: said)
+	AFTER	ei2218(event text: leaving)
+	AFTER	ei2212(event text: betting)
+	VAGUE	ei2209(event text: slow)
+	AFTER	ei2205(event text: increase)
+	AFTER	ei2208(event text: expects)
+	AFTER	ei2207(event text: made)
+	VAGUE	ei2214(event text: inflation)
+	AFTER	ei2206(event text: raise)
+	AFTER	ei2211(event text: disregarded)
+	VAGUE	ei2215(event text: looming)
+	IS_INCLUDED	t201(event text: coming months)
+	AFTER	ei2216(event text: rose)
+	VAGUE	ei2210(event text: reach)
+
+
+APW19980213.1310.tml|t112(entity text: next year)
+
+### Previous Sentence: CANBERRA , Australia -LRB- AP -RRB- _ Turning its back on 210 years of loyalty to the British royal family , a constitutional convention voted overwhelmingly Friday to make Australia a republic under its own president .
+
+### Sentence with entity: Prime Minister John Howard , a monarchist himself , promised to put the question to a national referendum next year after convention delegates voted 89-52 for a republic , with 11 abstentions .
+
+### Following Sentence: Spontaneous applause echoed through the chamber and public galleries as the crucial vote passed by a wide margin .
+
+TLinks: t112
+	AFTER	ei2007(event text: voted)
+	AFTER	ei2009(event text: echoed)
+	AFTER	ei2003(event text: promised)
+	INCLUDES	ei2004(event text: put)
+	AFTER	ei2010(event text: vote)
+	AFTER	t110(event text: 210 years)
+	AFTER	ei2000(event text: Turning)
+	AFTER	t111(event text: Friday)
+	AFTER	ei2001(event text: voted)
+	AFTER	ei2011(event text: passed)
+	INCLUDES	ei2006(event text: referendum)
+	AFTER	ei2008(event text: applause)
+	VAGUE	ei2002(event text: make)
+
+
+NYT19980212.0019.tml|ei219(entity text: said)
+
+### Previous Sentence: NEW YORK _ A Brooklyn woman who was watching her clothes dry in a laundromat was killed Thursday evening when two would-be robbers emptied their pistols into the store , the police said .
+
+### Sentence with entity: The men appeared in the store at 469 Vermont St. in Brownsville around 7:15 p.m. , after the victim , Linda Sanders , 35 , had finished her cleaning and was waiting for her clothes to dry , detectives said .
+
+### Following Sentence: `` It looks as though they panicked , '' a detective , speaking on condition of anonymity , said of the robbers .
+
+TLinks: ei219
+	VAGUE	ei222(event text: speaking)
+	AFTER	ei218(event text: dry)
+	AFTER	ei212(event text: emptied)
+	AFTER	ei215(event text: finished)
+	VAGUE	ei223(event text: said)
+	VAGUE	ei213(event text: said)
+	AFTER	ei216(event text: cleaning)
+	AFTER	ei214(event text: appeared)
+	AFTER	ei217(event text: waiting)
+	AFTER	ei211(event text: killed)
+	VAGUE	t44(event text: Thursday evening)
+	AFTER	ei221(event text: panicked)
+	AFTER	ei210(event text: watching)
+	VAGUE	ei220(event text: looks)
+	AFTER	t46(event text: around 7:15 p.m.)
+
+
+AP900815-0044.tml|ei1569(entity text: accept)
+
+### Previous Sentence: Iran said an Iraqi diplomatic delegation was en route to Tehran to deliver Saddam 's message , which it said it would review `` with optimism . ''
+
+### Sentence with entity: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+### Following Sentence: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+TLinks: ei1569
+	AFTER	t79(event text: August 1988)
+	VAGUE	ei1578(event text: heading)
+	AFTER	t89(event text: Aug. 2)
+	AFTER	ei1571(event text: rejected)
+	BEFORE	ei1567(event text: review)
+	VAGUE	ei1577(event text: aimed)
+	AFTER	t82(event text: eight-year)
+	VAGUE	ei1582(event text: criticized)
+	VAGUE	ei1565(event text: deliver)
+	VAGUE	ei1563(event text: said)
+	AFTER	ei1581(event text: invasion)
+	AFTER	ei1572(event text: talks)
+	VAGUE	ei1566(event text: said)
+	VAGUE	ei1576(event text: seemed)
+	AFTER	ei1575(event text: war)
+	VAGUE	ei1568(event text: appeared)
+	AFTER	ei1574(event text: cease-fire)
+	AFTER	ei1580(event text: condemned)
+	AFTER	ei1583(event text: dispatched)
+
+
+APW19980219.0476.tml|ei2503(entity text: find)
+
+### Previous Sentence: Thai military officials who monitor Cambodian affairs said privately Thursday that Britain , through its embassies in Thailand and Cambodia , has been pushing hard to resolve the Howes case as the second anniversary of his abduction nears .
+
+### Sentence with entity: Nhek Bunchhay , who had been closely involved in the search for Howes before having to flee the Cambodian capital after a coup d'etat last year , appeared confident he would find Howes ' remains .
+
+### Following Sentence: He said he received information from Khmer Rouge guerrillas on where the body had been buried , and recently ordered 10 of his men from a force of 500 near Khmer Rouge headquarters in Anlong Veng to conduct the search .
+
+TLinks: ei2503
+	VAGUE	t2449(event text: Thursday)
+	AFTER	ei2497(event text: abduction)
+	AFTER	ei2500(event text: flee)
+	AFTER	ei2502(event text: appeared)
+	VAGUE	ei2495(event text: resolve)
+	AFTER	ei2506(event text: buried)
+	VAGUE	ei2508(event text: conduct)
+	AFTER	ei2507(event text: ordered)
+	AFTER	ei2501(event text: coup)
+	VAGUE	ei2493(event text: said)
+	AFTER	t131(event text: last year)
+	VAGUE	ei2543(event text: anniversary)
+	VAGUE	ei2494(event text: pushing)
+	VAGUE	ei2509(event text: search)
+	AFTER	ei2505(event text: received)
+	AFTER	ei2504(event text: said)
+	AFTER	ei2498(event text: involved)
+	VAGUE	ei2499(event text: search)
+
+
+AP900816-0139.tml|ei1601(entity text: war)
+
+### Previous Sentence: Saddam has been under international quarantine since his Aug. 2 power-grab , or what he calls an `` eternal merger '' with Kuwait .
+
+### Sentence with entity: In a long verbal attack read on Iraqi television Thursday , Saddam repeatedly called Bush `` a liar '' and said a shooting war could produce body bags courtesy of Baghdad .
+
+### Following Sentence: `` We continue to pray and pray hard to God so that there will be no confrontation whereby you will receive thousands of Americans wrapped in sad coffins after you had pushed them into a dark tunnel , '' Saddam said .
+
+TLinks: ei1601
+	AFTER	ei1594(event text: power-grab)
+	AFTER	ei1604(event text: pray)
+	AFTER	t292(event text: Aug. 2)
+	VAGUE	ei1607(event text: receive)
+	VAGUE	ei1609(event text: pushed)
+	AFTER	ei1600(event text: said)
+	VAGUE	ei1595(event text: calls)
+	VAGUE	ei1606(event text: confrontation)
+	AFTER	t293(event text: Thursday)
+	AFTER	ei1610(event text: said)
+	BEFORE	ei1602(event text: produce)
+	AFTER	ei1605(event text: pray)
+	AFTER	ei1597(event text: attack)
+	AFTER	ei1598(event text: called)
+	AFTER	ei1603(event text: continue)
+	VAGUE	ei1742(event text: merger)
+
+
+AP900816-0139.tml|ei1607(entity text: receive)
+
+### Previous Sentence: In a long verbal attack read on Iraqi television Thursday , Saddam repeatedly called Bush `` a liar '' and said a shooting war could produce body bags courtesy of Baghdad .
+
+### Sentence with entity: `` We continue to pray and pray hard to God so that there will be no confrontation whereby you will receive thousands of Americans wrapped in sad coffins after you had pushed them into a dark tunnel , '' Saddam said .
+
+### Following Sentence: He called U.S. soldiers massing in Saudi Arabia the real occupiers in the Persian Gulf .
+
+TLinks: ei1607
+	VAGUE	ei1602(event text: produce)
+	VAGUE	ei1601(event text: war)
+	VAGUE	ei1612(event text: massing)
+	VAGUE	t293(event text: Thursday)
+	AFTER	ei1598(event text: called)
+	AFTER	ei1604(event text: pray)
+	AFTER	ei1609(event text: pushed)
+	AFTER	ei1600(event text: said)
+	AFTER	ei1606(event text: confrontation)
+	AFTER	ei1603(event text: continue)
+	AFTER	ei1611(event text: called)
+	AFTER	ei1597(event text: attack)
+	AFTER	ei1610(event text: said)
+	AFTER	ei1605(event text: pray)
+
+
+APW19980213.1310.tml|ei2006(entity text: referendum)
+
+### Previous Sentence: CANBERRA , Australia -LRB- AP -RRB- _ Turning its back on 210 years of loyalty to the British royal family , a constitutional convention voted overwhelmingly Friday to make Australia a republic under its own president .
+
+### Sentence with entity: Prime Minister John Howard , a monarchist himself , promised to put the question to a national referendum next year after convention delegates voted 89-52 for a republic , with 11 abstentions .
+
+### Following Sentence: Spontaneous applause echoed through the chamber and public galleries as the crucial vote passed by a wide margin .
+
+TLinks: ei2006
+	AFTER	ei2009(event text: echoed)
+	AFTER	t111(event text: Friday)
+	VAGUE	ei2002(event text: make)
+	AFTER	ei2000(event text: Turning)
+	AFTER	ei2003(event text: promised)
+	AFTER	ei2007(event text: voted)
+	AFTER	ei2001(event text: voted)
+	VAGUE	ei2004(event text: put)
+	AFTER	ei2010(event text: vote)
+	AFTER	ei2011(event text: passed)
+	AFTER	ei2008(event text: applause)
+	AFTER	t110(event text: 210 years)
+	IS_INCLUDED	t112(event text: next year)
+
+
+AP900815-0044.tml|ei1577(entity text: aimed)
+
+### Previous Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+### Sentence with entity: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+### Following Sentence: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+TLinks: ei1577
+	VAGUE	ei1584(event text: said)
+	AFTER	ei1580(event text: condemned)
+	AFTER	ei1572(event text: talks)
+	VAGUE	ei1568(event text: appeared)
+	VAGUE	ei1585(event text: sought)
+	VAGUE	ei1569(event text: accept)
+	AFTER	ei1581(event text: invasion)
+	AFTER	ei1571(event text: rejected)
+	AFTER	ei1574(event text: cease-fire)
+	VAGUE	ei1586(event text: turn)
+	VAGUE	ei1589(event text: harbor)
+	AFTER	ei1583(event text: dispatched)
+	AFTER	t79(event text: August 1988)
+	AFTER	ei1575(event text: war)
+	AFTER	t82(event text: eight-year)
+	VAGUE	ei1576(event text: seemed)
+	VAGUE	ei1582(event text: criticized)
+	BEFORE	ei1578(event text: heading)
+	AFTER	t89(event text: Aug. 2)
+
+
+APW19980213.1310.tml|ei2004(entity text: put)
+
+### Previous Sentence: CANBERRA , Australia -LRB- AP -RRB- _ Turning its back on 210 years of loyalty to the British royal family , a constitutional convention voted overwhelmingly Friday to make Australia a republic under its own president .
+
+### Sentence with entity: Prime Minister John Howard , a monarchist himself , promised to put the question to a national referendum next year after convention delegates voted 89-52 for a republic , with 11 abstentions .
+
+### Following Sentence: Spontaneous applause echoed through the chamber and public galleries as the crucial vote passed by a wide margin .
+
+TLinks: ei2004
+	VAGUE	ei2002(event text: make)
+	AFTER	ei2003(event text: promised)
+	AFTER	ei2009(event text: echoed)
+	AFTER	ei2011(event text: passed)
+	VAGUE	ei2006(event text: referendum)
+	AFTER	ei2010(event text: vote)
+	IS_INCLUDED	t112(event text: next year)
+	AFTER	ei2007(event text: voted)
+	AFTER	t111(event text: Friday)
+	AFTER	ei2000(event text: Turning)
+	AFTER	ei2001(event text: voted)
+	AFTER	ei2008(event text: applause)
+	AFTER	t110(event text: 210 years)
+
+
+AP900815-0044.tml|ei1568(entity text: appeared)
+
+### Previous Sentence: Iran said an Iraqi diplomatic delegation was en route to Tehran to deliver Saddam 's message , which it said it would review `` with optimism . ''
+
+### Sentence with entity: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+### Following Sentence: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+TLinks: ei1568
+	AFTER	ei1571(event text: rejected)
+	VAGUE	ei1566(event text: said)
+	VAGUE	ei1577(event text: aimed)
+	AFTER	t89(event text: Aug. 2)
+	AFTER	ei1574(event text: cease-fire)
+	AFTER	ei1583(event text: dispatched)
+	VAGUE	ei1578(event text: heading)
+	AFTER	ei1575(event text: war)
+	AFTER	ei1580(event text: condemned)
+	AFTER	t79(event text: August 1988)
+	AFTER	t82(event text: eight-year)
+	VAGUE	ei1576(event text: seemed)
+	VAGUE	ei1563(event text: said)
+	VAGUE	ei1582(event text: criticized)
+	AFTER	ei1572(event text: talks)
+	BEFORE	ei1567(event text: review)
+	VAGUE	ei1565(event text: deliver)
+	VAGUE	ei1569(event text: accept)
+	AFTER	ei1581(event text: invasion)
+
+
+NYT19980212.0019.tml|ei223(entity text: said)
+
+### Previous Sentence: The men appeared in the store at 469 Vermont St. in Brownsville around 7:15 p.m. , after the victim , Linda Sanders , 35 , had finished her cleaning and was waiting for her clothes to dry , detectives said .
+
+### Sentence with entity: `` It looks as though they panicked , '' a detective , speaking on condition of anonymity , said of the robbers .
+
+### Following Sentence: `` They intended to rob the place .
+
+TLinks: ei223
+	VAGUE	ei222(event text: speaking)
+	AFTER	t46(event text: around 7:15 p.m.)
+	AFTER	ei221(event text: panicked)
+	AFTER	ei215(event text: finished)
+	VAGUE	ei219(event text: said)
+	VAGUE	ei220(event text: looks)
+	AFTER	ei218(event text: dry)
+	AFTER	ei214(event text: appeared)
+	AFTER	ei225(event text: rob)
+	AFTER	ei224(event text: intended)
+	AFTER	ei216(event text: cleaning)
+	AFTER	ei217(event text: waiting)
+
+
+APW19980219.0476.tml|ei2495(entity text: resolve)
+
+### Previous Sentence: `` We will continue to do everything we can to establish what has happened . ''
+
+### Sentence with entity: Thai military officials who monitor Cambodian affairs said privately Thursday that Britain , through its embassies in Thailand and Cambodia , has been pushing hard to resolve the Howes case as the second anniversary of his abduction nears .
+
+### Following Sentence: Nhek Bunchhay , who had been closely involved in the search for Howes before having to flee the Cambodian capital after a coup d'etat last year , appeared confident he would find Howes ' remains .
+
+TLinks: ei2495
+	AFTER	ei2497(event text: abduction)
+	VAGUE	ei2543(event text: anniversary)
+	AFTER	ei2500(event text: flee)
+	AFTER	ei2502(event text: appeared)
+	VAGUE	ei2503(event text: find)
+	AFTER	ei2492(event text: happened)
+	VAGUE	ei2499(event text: search)
+	AFTER	ei2493(event text: said)
+	VAGUE	ei2490(event text: do)
+	VAGUE	ei2491(event text: establish)
+	VAGUE	t2449(event text: Thursday)
+	AFTER	t131(event text: last year)
+	AFTER	ei2494(event text: pushing)
+	AFTER	ei2501(event text: coup)
+	AFTER	ei2498(event text: involved)
+	VAGUE	ei2489(event text: continue)
+
+
+APW19980227.0487.tml|ei417(entity text: said)
+
+### Previous Sentence: Har-Shefi acknowledged she told police interrogators that Rabin was a traitor and that she prayed for him to have a heart attack and die .
+
+### Sentence with entity: She said Rabin 's murder was `` a black stain on Israel , '' Israel radio and Israel army radio reported .
+
+### Following Sentence: Har-Shefi said she heard Amir talk about killing Rabin but did not tell the police because she did not believe he was serious .
+
+TLinks: ei417
+	AFTER	ei426(event text: serious)
+	AFTER	ei414(event text: prayed)
+	AFTER	ei421(event text: heard)
+	AFTER	ei425(event text: believe)
+	AFTER	ei418(event text: murder)
+	AFTER	ei424(event text: tell)
+	AFTER	ei422(event text: talk)
+	VAGUE	ei411(event text: acknowledged)
+	AFTER	ei412(event text: told)
+	BEFORE	ei419(event text: reported)
+	VAGUE	ei416(event text: die)
+	VAGUE	ei413(event text: traitor)
+	AFTER	ei423(event text: killing)
+	VAGUE	ei420(event text: said)
+
+
+NYT19980212.0019.tml|ei220(entity text: looks)
+
+### Previous Sentence: The men appeared in the store at 469 Vermont St. in Brownsville around 7:15 p.m. , after the victim , Linda Sanders , 35 , had finished her cleaning and was waiting for her clothes to dry , detectives said .
+
+### Sentence with entity: `` It looks as though they panicked , '' a detective , speaking on condition of anonymity , said of the robbers .
+
+### Following Sentence: `` They intended to rob the place .
+
+TLinks: ei220
+	AFTER	ei217(event text: waiting)
+	VAGUE	ei222(event text: speaking)
+	AFTER	ei224(event text: intended)
+	VAGUE	ei223(event text: said)
+	AFTER	ei218(event text: dry)
+	AFTER	ei216(event text: cleaning)
+	AFTER	t46(event text: around 7:15 p.m.)
+	VAGUE	ei219(event text: said)
+	AFTER	ei225(event text: rob)
+	AFTER	ei221(event text: panicked)
+	AFTER	ei214(event text: appeared)
+	AFTER	ei215(event text: finished)
+
+
+APW19980227.0487.tml|t72(entity text: Friday)
+
+### Previous Sentence: Margalit Har-Shefi , 22 , has pleaded innocent to charges that she failed to report Yigal Amir 's plan to kill Rabin .
+
+### Sentence with entity: She took the stand for more than four hours Friday in a Tel Aviv magistrate 's court .
+
+### Following Sentence: Amir , 27 , is serving a life sentence for the November 1995 assassination of Rabin at a Tel Aviv peace rally .
+
+TLinks: t72
+	AFTER	ei399(event text: report)
+	AFTER	ei395(event text: pleaded)
+	AFTER	ei405(event text: rally)
+	VAGUE	ei403(event text: serving)
+	AFTER	ei398(event text: failed)
+	INCLUDES	ei402(event text: took)
+	INCLUDES	t71(event text: more than four hours)
+	AFTER	ei401(event text: kill)
+	AFTER	ei400(event text: plan)
+	AFTER	t73(event text: November 1995)
+	AFTER	ei404(event text: assassination)
+	AFTER	ei397(event text: charges)
+
+
+APW19980227.0487.tml|ei420(entity text: said)
+
+### Previous Sentence: She said Rabin 's murder was `` a black stain on Israel , '' Israel radio and Israel army radio reported .
+
+### Sentence with entity: Har-Shefi said she heard Amir talk about killing Rabin but did not tell the police because she did not believe he was serious .
+
+### Following Sentence: Instead , she turned to her community rabbi in the Jewish West Bank settlement of Beit El and told him about Amir 's statements .
+
+TLinks: ei420
+	AFTER	ei425(event text: believe)
+	AFTER	ei428(event text: told)
+	AFTER	ei418(event text: murder)
+	AFTER	ei427(event text: turned)
+	AFTER	ei422(event text: talk)
+	BEFORE	ei419(event text: reported)
+	AFTER	ei423(event text: killing)
+	AFTER	ei421(event text: heard)
+	AFTER	ei426(event text: serious)
+	AFTER	ei424(event text: tell)
+	VAGUE	ei417(event text: said)
+
+
+APW19980219.0476.tml|ei2543(entity text: anniversary)
+
+### Previous Sentence: `` We will continue to do everything we can to establish what has happened . ''
+
+### Sentence with entity: Thai military officials who monitor Cambodian affairs said privately Thursday that Britain , through its embassies in Thailand and Cambodia , has been pushing hard to resolve the Howes case as the second anniversary of his abduction nears .
+
+### Following Sentence: Nhek Bunchhay , who had been closely involved in the search for Howes before having to flee the Cambodian capital after a coup d'etat last year , appeared confident he would find Howes ' remains .
+
+TLinks: ei2543
+	VAGUE	ei2495(event text: resolve)
+	AFTER	ei2501(event text: coup)
+	AFTER	ei2493(event text: said)
+	VAGUE	ei2489(event text: continue)
+	VAGUE	ei2499(event text: search)
+	AFTER	ei2498(event text: involved)
+	AFTER	t2449(event text: Thursday)
+	VAGUE	ei2494(event text: pushing)
+	AFTER	ei2497(event text: abduction)
+	VAGUE	ei2503(event text: find)
+	AFTER	ei2500(event text: flee)
+	VAGUE	ei2490(event text: do)
+	AFTER	ei2502(event text: appeared)
+	AFTER	ei2492(event text: happened)
+	VAGUE	ei2491(event text: establish)
+	AFTER	t131(event text: last year)
+
+
+NYT19980212.0019.tml|ei218(entity text: dry)
+
+### Previous Sentence: NEW YORK _ A Brooklyn woman who was watching her clothes dry in a laundromat was killed Thursday evening when two would-be robbers emptied their pistols into the store , the police said .
+
+### Sentence with entity: The men appeared in the store at 469 Vermont St. in Brownsville around 7:15 p.m. , after the victim , Linda Sanders , 35 , had finished her cleaning and was waiting for her clothes to dry , detectives said .
+
+### Following Sentence: `` It looks as though they panicked , '' a detective , speaking on condition of anonymity , said of the robbers .
+
+TLinks: ei218
+	BEFORE	ei219(event text: said)
+	AFTER	ei217(event text: waiting)
+	BEFORE	ei222(event text: speaking)
+	AFTER	ei210(event text: watching)
+	BEFORE	ei223(event text: said)
+	AFTER	ei215(event text: finished)
+	BEFORE	ei220(event text: looks)
+	IS_INCLUDED	t44(event text: Thursday evening)
+	AFTER	ei214(event text: appeared)
+	AFTER	t46(event text: around 7:15 p.m.)
+	AFTER	ei221(event text: panicked)
+	AFTER	ei216(event text: cleaning)
+	AFTER	ei211(event text: killed)
+	AFTER	ei212(event text: emptied)
+	VAGUE	ei213(event text: said)
+
+
+APW19980227.0487.tml|t71(entity text: more than four hours)
+
+### Previous Sentence: Margalit Har-Shefi , 22 , has pleaded innocent to charges that she failed to report Yigal Amir 's plan to kill Rabin .
+
+### Sentence with entity: She took the stand for more than four hours Friday in a Tel Aviv magistrate 's court .
+
+### Following Sentence: Amir , 27 , is serving a life sentence for the November 1995 assassination of Rabin at a Tel Aviv peace rally .
+
+TLinks: t71
+	AFTER	ei400(event text: plan)
+	AFTER	ei404(event text: assassination)
+	AFTER	ei401(event text: kill)
+	SIMULTANEOUS	ei402(event text: took)
+	AFTER	ei399(event text: report)
+	AFTER	ei395(event text: pleaded)
+	AFTER	t73(event text: November 1995)
+	VAGUE	ei403(event text: serving)
+	IS_INCLUDED	t72(event text: Friday)
+	AFTER	ei405(event text: rally)
+	AFTER	ei397(event text: charges)
+	AFTER	ei398(event text: failed)
+
+
+NYT19980212.0019.tml|ei222(entity text: speaking)
+
+### Previous Sentence: The men appeared in the store at 469 Vermont St. in Brownsville around 7:15 p.m. , after the victim , Linda Sanders , 35 , had finished her cleaning and was waiting for her clothes to dry , detectives said .
+
+### Sentence with entity: `` It looks as though they panicked , '' a detective , speaking on condition of anonymity , said of the robbers .
+
+### Following Sentence: `` They intended to rob the place .
+
+TLinks: ei222
+	VAGUE	ei219(event text: said)
+	VAGUE	ei223(event text: said)
+	AFTER	t46(event text: around 7:15 p.m.)
+	AFTER	ei215(event text: finished)
+	VAGUE	ei220(event text: looks)
+	AFTER	ei218(event text: dry)
+	AFTER	ei214(event text: appeared)
+	AFTER	ei221(event text: panicked)
+	AFTER	ei225(event text: rob)
+	AFTER	ei224(event text: intended)
+	AFTER	ei217(event text: waiting)
+	AFTER	ei216(event text: cleaning)
+
+
+APW19980219.0476.tml|ei2472(entity text: concluded)
+
+### Previous Sentence: Howes ' team was clearing mines 17 kilometers -LRB- 10 miles -RRB- from Angkor Wat , the fabled 11th century temple that is Cambodia 's main tourist attraction , when it was attacked .
+
+### Sentence with entity: In January this year , British police officers who had been searching for Howes concluded he had probably been killed soon after being captured .
+
+### Following Sentence: The Foreign Office said it had informed the family of Howes , 37 years old when he was kidnapped , that he probably died within weeks or months of his capture on March 26 , 1996 .
+
+TLinks: ei2472
+	AFTER	ei2478(event text: died)
+	AFTER	t136(event text: March 26 , 1996)
+	AFTER	ei2479(event text: capture)
+	AFTER	ei2469(event text: clearing)
+	AFTER	t137(event text: weeks or months)
+	AFTER	ei2473(event text: killed)
+	AFTER	ei2477(event text: kidnapped)
+	IS_INCLUDED	t135(event text: January this year)
+	AFTER	ei2470(event text: attacked)
+	VAGUE	ei2476(event text: informed)
+	VAGUE	ei2475(event text: said)
+	VAGUE	ei2471(event text: searching)
+	AFTER	ei2474(event text: captured)
+
+
+AP900816-0139.tml|ei1528(entity text: war)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: The Persian Gulf showdown between Iraq and the United States took a more personal turn Thursday when Iraq 's Saddam Hussein called President Bush a liar and said the outbreak of holy war could bring thousands of Americans home in coffins .
+
+### Following Sentence: Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+
+TLinks: ei1528
+	VAGUE	ei1522(event text: showdown)
+	VAGUE	ei1536(event text: optimistic)
+	AFTER	ei1539(event text: stems)
+	AFTER	ei1541(event text: buildup)
+	VAGUE	ei1537(event text: settlement)
+	AFTER	ei1531(event text: commenting)
+	AFTER	ei1533(event text: said)
+	AFTER	t289(event text: two-week)
+	VAGUE	ei1534(event text: saw)
+	AFTER	ei1524(event text: called)
+	INCLUDES	ei1529(event text: bring)
+	VAGUE	t288(event text: Thursday)
+	AFTER	ei1526(event text: said)
+	AFTER	ei1540(event text: invasion)
+	VAGUE	ei1532(event text: crisis)
+	AFTER	ei1523(event text: took)
+	VAGUE	ei1538(event text: dispute)
+
+
+AP900816-0139.tml|ei1529(entity text: bring)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: The Persian Gulf showdown between Iraq and the United States took a more personal turn Thursday when Iraq 's Saddam Hussein called President Bush a liar and said the outbreak of holy war could bring thousands of Americans home in coffins .
+
+### Following Sentence: Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+
+TLinks: ei1529
+	AFTER	ei1541(event text: buildup)
+	AFTER	ei1524(event text: called)
+	AFTER	ei1539(event text: stems)
+	VAGUE	ei1538(event text: dispute)
+	AFTER	ei1526(event text: said)
+	AFTER	t289(event text: two-week)
+	AFTER	ei1533(event text: said)
+	VAGUE	ei1532(event text: crisis)
+	VAGUE	t288(event text: Thursday)
+	AFTER	ei1540(event text: invasion)
+	AFTER	ei1531(event text: commenting)
+	VAGUE	ei1534(event text: saw)
+	AFTER	ei1523(event text: took)
+	IS_INCLUDED	ei1528(event text: war)
+	VAGUE	ei1522(event text: showdown)
+	VAGUE	ei1536(event text: optimistic)
+	VAGUE	ei1537(event text: settlement)
+
+
+APW19980219.0476.tml|t135(entity text: January this year)
+
+### Previous Sentence: Howes ' team was clearing mines 17 kilometers -LRB- 10 miles -RRB- from Angkor Wat , the fabled 11th century temple that is Cambodia 's main tourist attraction , when it was attacked .
+
+### Sentence with entity: In January this year , British police officers who had been searching for Howes concluded he had probably been killed soon after being captured .
+
+### Following Sentence: The Foreign Office said it had informed the family of Howes , 37 years old when he was kidnapped , that he probably died within weeks or months of his capture on March 26 , 1996 .
+
+TLinks: t135
+	VAGUE	ei2475(event text: said)
+	AFTER	ei2470(event text: attacked)
+	AFTER	ei2474(event text: captured)
+	AFTER	ei2473(event text: killed)
+	INCLUDES	ei2472(event text: concluded)
+	AFTER	t136(event text: March 26 , 1996)
+	AFTER	ei2477(event text: kidnapped)
+	AFTER	ei2479(event text: capture)
+	AFTER	ei2469(event text: clearing)
+	AFTER	t137(event text: weeks or months)
+	VAGUE	ei2471(event text: searching)
+	AFTER	ei2478(event text: died)
+	VAGUE	ei2476(event text: informed)
+
+
+NYT19980206.0460.tml|ei2229(entity text: tilts)
+
+### Previous Sentence: `` The bottom line is that we 've got a lovely economy . ''
+
+### Sentence with entity: With potential inflation counterbalanced by worries about possible price declines , the Fed and its chairman , Alan Greenspan , have suggested that they intend to keep interest rates unchanged until the economy tilts clearly in one direction or another .
+
+### Following Sentence: The job figures for January extended a surge in employment gains that began last fall , just when the labor market had showed signs of cooling .
+
+TLinks: ei2229
+	AFTER	ei2226(event text: suggested)
+	AFTER	ei2227(event text: intend)
+	AFTER	ei2228(event text: keep)
+	AFTER	ei2224(event text: counterbalanced)
+	AFTER	ei2233(event text: began)
+	VAGUE	ei2225(event text: declines)
+	VAGUE	ei2231(event text: surge)
+	VAGUE	ei2232(event text: gains)
+	AFTER	ei2234(event text: showed)
+	AFTER	ei2230(event text: extended)
+	AFTER	t203(event text: January)
+	AFTER	t204(event text: last fall)
+
+
+APW19980227.0487.tml|ei402(entity text: took)
+
+### Previous Sentence: Margalit Har-Shefi , 22 , has pleaded innocent to charges that she failed to report Yigal Amir 's plan to kill Rabin .
+
+### Sentence with entity: She took the stand for more than four hours Friday in a Tel Aviv magistrate 's court .
+
+### Following Sentence: Amir , 27 , is serving a life sentence for the November 1995 assassination of Rabin at a Tel Aviv peace rally .
+
+TLinks: ei402
+	VAGUE	ei403(event text: serving)
+	AFTER	t73(event text: November 1995)
+	AFTER	ei405(event text: rally)
+	AFTER	ei397(event text: charges)
+	SIMULTANEOUS	t71(event text: more than four hours)
+	AFTER	ei399(event text: report)
+	AFTER	ei395(event text: pleaded)
+	IS_INCLUDED	t72(event text: Friday)
+	AFTER	ei398(event text: failed)
+	AFTER	ei400(event text: plan)
+	AFTER	ei404(event text: assassination)
+	AFTER	ei401(event text: kill)
+
+
+NYT19980212.0019.tml|ei213(entity text: said)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: NEW YORK _ A Brooklyn woman who was watching her clothes dry in a laundromat was killed Thursday evening when two would-be robbers emptied their pistols into the store , the police said .
+
+### Following Sentence: The men appeared in the store at 469 Vermont St. in Brownsville around 7:15 p.m. , after the victim , Linda Sanders , 35 , had finished her cleaning and was waiting for her clothes to dry , detectives said .
+
+TLinks: ei213
+	VAGUE	ei219(event text: said)
+	VAGUE	t44(event text: Thursday evening)
+	AFTER	ei216(event text: cleaning)
+	AFTER	ei212(event text: emptied)
+	AFTER	ei217(event text: waiting)
+	AFTER	t46(event text: around 7:15 p.m.)
+	AFTER	ei211(event text: killed)
+	AFTER	ei215(event text: finished)
+	AFTER	ei214(event text: appeared)
+	AFTER	ei210(event text: watching)
+	VAGUE	ei218(event text: dry)
+
+
+CNN19980223.1130.0960.tml|ei162(entity text: increase)
+
+### Previous Sentence: Oil prices have come down from the middle of October from a twenty-two dollar barrel level down to the fourteen dollars we 're seeing today .
+
+### Sentence with entity: That 's built up a heck of a momentum and that momentum will look to increase .
+
+### Following Sentence: Ah next up is that thirteen dollar a barrel level we saw in the winter of nineteen ninety-four .
+
+TLinks: ei162
+	AFTER	ei160(event text: built)
+	AFTER	ei159(event text: seeing)
+	AFTER	ei156(event text: come)
+	AFTER	t24(event text: the winter of nineteen ninety-four)
+	AFTER	t22(event text: the middle of October)
+	AFTER	ei161(event text: look)
+	AFTER	t23(event text: today)
+	AFTER	ei163(event text: saw)
+
+
+APW19980213.1310.tml|ei2036(entity text: defeat)
+
+### Previous Sentence: Calling for an amended constitution with a new preamble , to be written by Australian poets , republican Janet Holmes a Court said , `` We need the smell of eucalyptus in this , and the feel of red dust . ''
+
+### Sentence with entity: Monarchists hope to defeat the republic at the referendum .
+
+### Following Sentence: `` The phony war has finished and the real referendum campaign has clearly begun , '' Australians for a Constitutional Monarchy executive director Kerry Jones said .
+
+TLinks: ei2036
+	AFTER	ei2033(event text: said)
+	VAGUE	ei2034(event text: need)
+	VAGUE	ei2037(event text: referendum)
+	AFTER	ei2041(event text: begun)
+	AFTER	ei2039(event text: finished)
+	AFTER	ei2040(event text: campaign)
+	AFTER	ei2042(event text: said)
+	AFTER	ei2035(event text: hope)
+	AFTER	ei2030(event text: Calling)
+	VAGUE	ei2032(event text: written)
+	AFTER	ei2038(event text: war)
+
+
+APW19980219.0476.tml|t2452(entity text: now)
+
+### Previous Sentence: If and when the remains are found , he said , they would be turned over to the British Embassy , apparently meaning they would be sent across the border into Thailand and onward to Bangkok .
+
+### Sentence with entity: Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+
+### Following Sentence: Pol Pot is considered responsible for the radical policies that led to the deaths of as many as 1.7 million Cambodians when the communist group held power in the late 1970s .
+
+TLinks: t2452
+	AFTER	ei2517(event text: capture)
+	BEFORE	ei2510(event text: found)
+	AFTER	ei2520(event text: policies)
+	AFTER	t142(event text: the late 1970s)
+	IS_INCLUDED	ei2519(event text: responsible)
+	AFTER	ei2516(event text: killed)
+	INCLUDES	ei2514(event text: said)
+	IS_INCLUDED	ei2518(event text: considered)
+	BEFORE	ei2513(event text: sent)
+	BEFORE	ei2512(event text: turned)
+	AFTER	ei2523(event text: held)
+	AFTER	ei2521(event text: led)
+	AFTER	ei2522(event text: deaths)
+	VAGUE	ei2515(event text: believed)
+	AFTER	t140(event text: a week)
+	INCLUDES	ei2511(event text: said)
+
+
+NYT19980206.0460.tml|t193(entity text: Friday)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: WASHINGTON _ The economy created jobs at a surprisingly robust pace in January , the government reported on Friday , evidence that America 's economic stamina has withstood any disruptions caused so far by the financial tumult in Asia .
+
+### Following Sentence: The Bureau of Labor Statistics said the economy added 358,000 jobs last month , far above the 235,000 forecast by economists .
+
+TLinks: t193
+	AFTER	ei2184(event text: created)
+	INCLUDES	ei2185(event text: reported)
+	AFTER	ei2191(event text: added)
+	AFTER	ei2186(event text: withstood)
+	VAGUE	ei2189(event text: tumult)
+	AFTER	ei2188(event text: caused)
+	AFTER	t191(event text: January)
+	AFTER	ei2192(event text: forecast)
+	AFTER	t195(event text: last month)
+	AFTER	ei2187(event text: disruptions)
+	INCLUDES	ei2190(event text: said)
+
+
+NYT19980206.0460.tml|ei2190(entity text: said)
+
+### Previous Sentence: WASHINGTON _ The economy created jobs at a surprisingly robust pace in January , the government reported on Friday , evidence that America 's economic stamina has withstood any disruptions caused so far by the financial tumult in Asia .
+
+### Sentence with entity: The Bureau of Labor Statistics said the economy added 358,000 jobs last month , far above the 235,000 forecast by economists .
+
+### Following Sentence: It was the third consecutive month that job generation has been exceptionally strong .
+
+TLinks: ei2190
+	AFTER	ei2192(event text: forecast)
+	VAGUE	ei2185(event text: reported)
+	AFTER	ei2184(event text: created)
+	AFTER	ei2191(event text: added)
+	AFTER	t191(event text: January)
+	AFTER	ei2187(event text: disruptions)
+	AFTER	t195(event text: last month)
+	VAGUE	ei2189(event text: tumult)
+	IS_INCLUDED	t193(event text: Friday)
+	AFTER	ei2188(event text: caused)
+	AFTER	ei2186(event text: withstood)
+
+
+AP900816-0139.tml|ei1606(entity text: confrontation)
+
+### Previous Sentence: In a long verbal attack read on Iraqi television Thursday , Saddam repeatedly called Bush `` a liar '' and said a shooting war could produce body bags courtesy of Baghdad .
+
+### Sentence with entity: `` We continue to pray and pray hard to God so that there will be no confrontation whereby you will receive thousands of Americans wrapped in sad coffins after you had pushed them into a dark tunnel , '' Saddam said .
+
+### Following Sentence: He called U.S. soldiers massing in Saudi Arabia the real occupiers in the Persian Gulf .
+
+TLinks: ei1606
+	VAGUE	ei1612(event text: massing)
+	AFTER	ei1605(event text: pray)
+	AFTER	ei1604(event text: pray)
+	AFTER	ei1597(event text: attack)
+	AFTER	ei1600(event text: said)
+	AFTER	ei1610(event text: said)
+	AFTER	ei1609(event text: pushed)
+	VAGUE	ei1601(event text: war)
+	VAGUE	ei1602(event text: produce)
+	BEFORE	ei1607(event text: receive)
+	VAGUE	t293(event text: Thursday)
+	AFTER	ei1611(event text: called)
+	VAGUE	ei1603(event text: continue)
+	AFTER	ei1598(event text: called)
+
+
+APW19980219.0476.tml|ei2514(entity text: said)
+
+### Previous Sentence: If and when the remains are found , he said , they would be turned over to the British Embassy , apparently meaning they would be sent across the border into Thailand and onward to Bangkok .
+
+### Sentence with entity: Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+
+### Following Sentence: Pol Pot is considered responsible for the radical policies that led to the deaths of as many as 1.7 million Cambodians when the communist group held power in the late 1970s .
+
+TLinks: ei2514
+	AFTER	t142(event text: the late 1970s)
+	IS_INCLUDED	t2452(event text: now)
+	AFTER	ei2523(event text: held)
+	BEFORE	ei2512(event text: turned)
+	VAGUE	ei2511(event text: said)
+	AFTER	ei2522(event text: deaths)
+	IS_INCLUDED	ei2518(event text: considered)
+	AFTER	t140(event text: a week)
+	BEFORE	ei2513(event text: sent)
+	AFTER	ei2521(event text: led)
+	AFTER	ei2517(event text: capture)
+	IS_INCLUDED	ei2515(event text: believed)
+	AFTER	ei2516(event text: killed)
+	AFTER	ei2520(event text: policies)
+	BEFORE	ei2510(event text: found)
+	IS_INCLUDED	ei2519(event text: responsible)
+
+
+APW19980219.0476.tml|ei2475(entity text: said)
+
+### Previous Sentence: In January this year , British police officers who had been searching for Howes concluded he had probably been killed soon after being captured .
+
+### Sentence with entity: The Foreign Office said it had informed the family of Howes , 37 years old when he was kidnapped , that he probably died within weeks or months of his capture on March 26 , 1996 .
+
+### Following Sentence: `` Obviously , it is deeply discouraging for the family after 22 months , but there is no proof of life .
+
+TLinks: ei2475
+	VAGUE	t135(event text: January this year)
+	AFTER	ei2478(event text: died)
+	VAGUE	ei2471(event text: searching)
+	AFTER	t138(event text: 22 months)
+	AFTER	ei2479(event text: capture)
+	VAGUE	ei2473(event text: killed)
+	AFTER	t137(event text: weeks or months)
+	AFTER	ei2476(event text: informed)
+	AFTER	ei2477(event text: kidnapped)
+	AFTER	t136(event text: March 26 , 1996)
+	AFTER	ei2474(event text: captured)
+	VAGUE	ei2472(event text: concluded)
+	IS_INCLUDED	ei2480(event text: discouraging)
+
+
+NYT19980206.0460.tml|ei2185(entity text: reported)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: WASHINGTON _ The economy created jobs at a surprisingly robust pace in January , the government reported on Friday , evidence that America 's economic stamina has withstood any disruptions caused so far by the financial tumult in Asia .
+
+### Following Sentence: The Bureau of Labor Statistics said the economy added 358,000 jobs last month , far above the 235,000 forecast by economists .
+
+TLinks: ei2185
+	AFTER	ei2187(event text: disruptions)
+	AFTER	ei2188(event text: caused)
+	VAGUE	ei2190(event text: said)
+	IS_INCLUDED	t193(event text: Friday)
+	AFTER	t191(event text: January)
+	AFTER	ei2186(event text: withstood)
+	AFTER	ei2191(event text: added)
+	AFTER	t195(event text: last month)
+	AFTER	ei2192(event text: forecast)
+	VAGUE	ei2189(event text: tumult)
+	AFTER	ei2184(event text: created)
+
+
+APW19980213.1310.tml|ei2037(entity text: referendum)
+
+### Previous Sentence: Calling for an amended constitution with a new preamble , to be written by Australian poets , republican Janet Holmes a Court said , `` We need the smell of eucalyptus in this , and the feel of red dust . ''
+
+### Sentence with entity: Monarchists hope to defeat the republic at the referendum .
+
+### Following Sentence: `` The phony war has finished and the real referendum campaign has clearly begun , '' Australians for a Constitutional Monarchy executive director Kerry Jones said .
+
+TLinks: ei2037
+	AFTER	ei2042(event text: said)
+	VAGUE	ei2032(event text: written)
+	VAGUE	ei2036(event text: defeat)
+	VAGUE	ei2034(event text: need)
+	AFTER	ei2040(event text: campaign)
+	AFTER	ei2039(event text: finished)
+	AFTER	ei2030(event text: Calling)
+	AFTER	ei2041(event text: begun)
+	AFTER	ei2035(event text: hope)
+	AFTER	ei2033(event text: said)
+	AFTER	ei2038(event text: war)
+
+
+APW19980219.0476.tml|ei2462(entity text: interview)
+
+### Previous Sentence: O'SMACH , Cambodia -LRB- AP -RRB- _ The top commander of a Cambodian resistance force said Thursday he has sent a team to recover the remains of a British mine removal expert kidnapped and presumed killed by Khmer Rouge guerrillas almost two years ago .
+
+### Sentence with entity: Gen. Nhek Bunchhay , a loyalist of ousted Cambodian Prime Minister Prince Norodom Ranariddh , said in an interview with The Associated Press at his hilltop headquarters that he hopes to recover the remains of Christopher Howes within the next two weeks .
+
+### Following Sentence: Howes had been working for the Britain-based Mines Advisory Group when he was abducted with his Cambodian interpreter Houn Hourth in March 1996 .
+
+TLinks: ei2462
+	AFTER	t130(event text: almost two years ago)
+	AFTER	ei2458(event text: kidnapped)
+	AFTER	t134(event text: March 1996)
+	VAGUE	ei2463(event text: hopes)
+	IS_INCLUDED	t2443(event text: Thursday)
+	INCLUDES	ei2461(event text: said)
+	AFTER	ei2459(event text: presumed)
+	INCLUDES	ei2455(event text: said)
+	AFTER	ei2460(event text: killed)
+	VAGUE	ei2457(event text: recover)
+	AFTER	ei2456(event text: sent)
+	BEFORE	t133(event text: the next two weeks)
+	AFTER	ei2466(event text: abducted)
+	BEFORE	ei2464(event text: recover)
+	AFTER	ei2465(event text: working)
+
+
+APW19980219.0476.tml|ei2461(entity text: said)
+
+### Previous Sentence: O'SMACH , Cambodia -LRB- AP -RRB- _ The top commander of a Cambodian resistance force said Thursday he has sent a team to recover the remains of a British mine removal expert kidnapped and presumed killed by Khmer Rouge guerrillas almost two years ago .
+
+### Sentence with entity: Gen. Nhek Bunchhay , a loyalist of ousted Cambodian Prime Minister Prince Norodom Ranariddh , said in an interview with The Associated Press at his hilltop headquarters that he hopes to recover the remains of Christopher Howes within the next two weeks .
+
+### Following Sentence: Howes had been working for the Britain-based Mines Advisory Group when he was abducted with his Cambodian interpreter Houn Hourth in March 1996 .
+
+TLinks: ei2461
+	IS_INCLUDED	ei2463(event text: hopes)
+	VAGUE	ei2457(event text: recover)
+	VAGUE	ei2455(event text: said)
+	AFTER	ei2459(event text: presumed)
+	IS_INCLUDED	ei2462(event text: interview)
+	AFTER	ei2460(event text: killed)
+	AFTER	ei2466(event text: abducted)
+	BEFORE	ei2464(event text: recover)
+	AFTER	t134(event text: March 1996)
+	IS_INCLUDED	t2443(event text: Thursday)
+	AFTER	ei2465(event text: working)
+	AFTER	ei2458(event text: kidnapped)
+	AFTER	ei2456(event text: sent)
+	BEFORE	t133(event text: the next two weeks)
+	AFTER	t130(event text: almost two years ago)
+
+
+AP900816-0139.tml|ei1717(entity text: pump)
+
+### Previous Sentence: Thirty-two of the 159 U.N. members had filed compliance reports by Wednesday , and all were honoring the sanctions Iraq .
+
+### Sentence with entity: Also Thursday , Saudi Arabia called for an emergency conference of the Organization of Petroleum Exporting Countries to discuss how much oil to pump .
+
+### Following Sentence: The minister denied the kingdom had notified notified any of its customers of any cutbacks in oil supply .
+
+TLinks: ei1717
+	AFTER	ei1714(event text: called)
+	AFTER	ei1716(event text: discuss)
+	AFTER	ei1718(event text: denied)
+	AFTER	ei1720(event text: cutbacks)
+	VAGUE	ei1712(event text: honoring)
+	AFTER	t302(event text: Thursday)
+	AFTER	t301(event text: Wednesday)
+	AFTER	ei1711(event text: filed)
+	AFTER	ei1715(event text: conference)
+
+
+APW19980227.0487.tml|ei438(entity text: described)
+
+### Previous Sentence: The rabbi said called the talk about killing Rabin `` nonsense , '' and said Jews are prohibited from killing one another , the radio reports said .
+
+### Sentence with entity: Har-Shefi described Amir as an `` original thinker , '' as well as delusional and a liar .
+
+### Following Sentence: She also denied accusations made by Amir 's brother , Hagai , that she joined an anti-Arab underground movement .
+
+TLinks: ei438
+	VAGUE	ei436(event text: prohibited)
+	AFTER	ei430(event text: said)
+	AFTER	ei432(event text: talk)
+	AFTER	ei441(event text: made)
+	AFTER	ei440(event text: accusations)
+	AFTER	ei433(event text: killing)
+	AFTER	ei431(event text: called)
+	VAGUE	ei437(event text: said)
+	AFTER	ei435(event text: said)
+	VAGUE	ei439(event text: denied)
+	AFTER	ei442(event text: joined)
+
+
+APW19980219.0476.tml|ei2515(entity text: believed)
+
+### Previous Sentence: If and when the remains are found , he said , they would be turned over to the British Embassy , apparently meaning they would be sent across the border into Thailand and onward to Bangkok .
+
+### Sentence with entity: Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+
+### Following Sentence: Pol Pot is considered responsible for the radical policies that led to the deaths of as many as 1.7 million Cambodians when the communist group held power in the late 1970s .
+
+TLinks: ei2515
+	AFTER	ei2521(event text: led)
+	AFTER	ei2517(event text: capture)
+	AFTER	ei2516(event text: killed)
+	AFTER	ei2520(event text: policies)
+	IS_INCLUDED	ei2518(event text: considered)
+	IS_INCLUDED	ei2519(event text: responsible)
+	AFTER	t140(event text: a week)
+	AFTER	t142(event text: the late 1970s)
+	INCLUDES	ei2514(event text: said)
+	AFTER	ei2523(event text: held)
+	VAGUE	t2452(event text: now)
+	INCLUDES	ei2511(event text: said)
+	BEFORE	ei2513(event text: sent)
+	BEFORE	ei2512(event text: turned)
+	BEFORE	ei2510(event text: found)
+	AFTER	ei2522(event text: deaths)
+
+
+APW19980227.0476.tml|ei2097(entity text: brought)
+
+### Previous Sentence: THE HAGUE , Netherlands -LRB- AP -RRB- _ The World Court Friday rejected U.S. and British objections to a Libyan World Court case that has blocked the trial of two Libyans suspected of blowing up a Pan Am jumbo jet over Scotland in 1988 .
+
+### Sentence with entity: Libya , which brought the case to the United Nations ' highest judicial body in its dispute with the United States and Britain , hailed the ruling and said it would press anew for a trial in a third neutral country .
+
+### Following Sentence: Both U.S. and British officials filed objections to the court 's jurisdiction in 1995 , claiming Security Council resolutions imposed on Lybia to force the suspects ' extradition overruled a 1971 Convention which gives Libya the right to try the men .
+
+TLinks: ei2097
+	AFTER	ei2105(event text: claiming)
+	BEFORE	ei2103(event text: trial)
+	VAGUE	ei2093(event text: blocked)
+	AFTER	t23(event text: 1995)
+	VAGUE	ei2108(event text: force)
+	AFTER	t24(event text: 1971)
+	BEFORE	ei2102(event text: press)
+	VAGUE	ei2098(event text: dispute)
+	BEFORE	ei2091(event text: rejected)
+	AFTER	t22(event text: 1988)
+	BEFORE	ei2101(event text: said)
+	AFTER	ei2109(event text: overruled)
+	BEFORE	t21(event text: Friday)
+	AFTER	ei2107(event text: imposed)
+	AFTER	ei2104(event text: filed)
+	AFTER	ei2096(event text: blowing)
+	VAGUE	ei2094(event text: trial)
+	VAGUE	ei2092(event text: objections)
+	BEFORE	ei2100(event text: ruling)
+	IS_INCLUDED	ei2095(event text: suspected)
+	BEFORE	ei2099(event text: hailed)
+
+
+APW19980213.1380.tml|ei314(entity text: confirmed)
+
+### Previous Sentence: CAGUAS , Puerto Rico -LRB- AP -RRB- _ Kidnappers kept their promise to kill a store owner they took hostage and police found the man 's dismembered and decapitated body Friday wrapped in plastic garbage bags .
+
+### Sentence with entity: Police confirmed Friday that the body found along a highway in this municipality 15 miles south of San Juan belonged to Jorge Hernandez , 49 .
+
+### Following Sentence: Hernandez was kidnapped from his small , neighborhood store in the town of Trujillo Alto at 10 p.m. Wednesday , police said .
+
+TLinks: ei314
+	AFTER	ei317(event text: kidnapped)
+	AFTER	ei310(event text: found)
+	AFTER	ei308(event text: took)
+	VAGUE	ei313(event text: wrapped)
+	IS_INCLUDED	t39(event text: Friday)
+	AFTER	t35(event text: 10 p.m. Wednesday)
+	VAGUE	ei318(event text: said)
+	AFTER	ei315(event text: found)
+	IS_INCLUDED	t33(event text: Friday)
+	AFTER	ei307(event text: kill)
+	AFTER	ei316(event text: belonged)
+	AFTER	ei305(event text: kept)
+
+
+PRI19980216.2000.0170.tml|ei223(entity text: expelled)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: The British government has formally called for Sinn Fein , the IRA 's political wing , to be expelled from the multiparty peace talks on northern Ireland .
+
+### Following Sentence: The move had been widely expected after northern Ireland police said they believe the IRA was behind two killings in Belfast last week .
+
+TLinks: ei223
+	IS_INCLUDED	ei224(event text: talks)
+	AFTER	ei229(event text: behind)
+	AFTER	ei225(event text: move)
+	AFTER	ei227(event text: said)
+	AFTER	ei222(event text: called)
+	AFTER	ei226(event text: expected)
+	AFTER	ei230(event text: killings)
+	AFTER	t26(event text: last week)
+	AFTER	ei228(event text: believe)
+
+
+NYT19980206.0460.tml|ei2206(entity text: raise)
+
+### Previous Sentence: The gain left wages 3.8 percent higher than a year earlier , extending a trend that has given back to workers some of the earning power they lost to inflation in the last decade .
+
+### Sentence with entity: But economists said the wage increase was not enough to raise any concerns about higher inflation .
+
+### Following Sentence: And because the Federal Reserve has made clear that it expects the economy to slow in coming months as ripple effects from Asia reach the United States , investors disregarded the large jobs gains , betting that neither a rise in interest rates nor resurgent inflation is looming .
+
+TLinks: ei2206
+	VAGUE	ei2204(event text: said)
+	BEFORE	ei2210(event text: reach)
+	VAGUE	ei2208(event text: expects)
+	AFTER	ei2199(event text: left)
+	VAGUE	ei2211(event text: disregarded)
+	AFTER	ei2202(event text: given)
+	BEFORE	ei2209(event text: slow)
+	VAGUE	ei2212(event text: betting)
+	BEFORE	ei2214(event text: inflation)
+	BEFORE	ei2213(event text: rise)
+	BEFORE	t201(event text: coming months)
+	AFTER	t200(event text: the last decade)
+	AFTER	ei2200(event text: extending)
+	AFTER	ei2205(event text: increase)
+	VAGUE	ei2215(event text: looming)
+	AFTER	ei2203(event text: lost)
+	VAGUE	ei2207(event text: made)
+	AFTER	t199(event text: a year earlier)
+	IS_INCLUDED	ei2201(event text: trend)
+
+
+NYT19980206.0466.tml|ei534(entity text: clear)
+
+### Previous Sentence: We 're not going to dignify the latest false leak with a response . ''
+
+### Sentence with entity: McCurry on Friday `` I want to be absolutely clear , to the extent there is any implication or the slightest suggestion that Mrs. Currie believes that the President or anyone else tried to influence her recollection , that is absolutely false and a mischaracterization of the facts .
+
+### Following Sentence: I am shocked and dismayed by the numerous leaks regarding Mrs. Currie 's grand jury testimony . ''
+
+TLinks: ei534
+	AFTER	ei531(event text: leak)
+	VAGUE	ei530(event text: dignify)
+	VAGUE	ei544(event text: dismayed)
+	AFTER	ei546(event text: testimony)
+	VAGUE	ei532(event text: response)
+	VAGUE	ei536(event text: suggestion)
+	AFTER	ei545(event text: leaks)
+	AFTER	ei538(event text: tried)
+	AFTER	ei539(event text: influence)
+	AFTER	ei542(event text: mischaracterization)
+	AFTER	ei533(event text: want)
+	VAGUE	ei535(event text: implication)
+	IS_INCLUDED	ei537(event text: believes)
+	IS_INCLUDED	t37(event text: Friday)
+	VAGUE	ei543(event text: shocked)
+
+
+NYT19980206.0466.tml|t32(entity text: Friday)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: WASHINGTON _ Following are statements made Friday and Thursday by Lawrence Wechsler , a lawyer for the White House secretary , Betty Currie ; the White House ; White House spokesman Mike McCurry , and President Clinton in response to an article in The New York Times on Friday about her statements regarding a meeting with the president : Wechsler on Thursday `` Without commenting on the allegations raised in this article , to the extent that there is any implication or suggestion that Mrs. Currie was aware of any legal or ethical impropriety by anyone , that implication or suggestion is entirely inaccurate . ''
+
+### Following Sentence: White House on Thursday `` For the past few weeks we 've been subjected to false leaks designed to mislead both reporters and the American public .
+
+TLinks: t32
+	AFTER	t31(event text: Thursday)
+	VAGUE	t35(event text: the past few weeks)
+	VAGUE	ei529(event text: mislead)
+	SIMULTANEOUS	t30(event text: Friday)
+	AFTER	ei520(event text: aware)
+	AFTER	t33(event text: Thursday)
+	AFTER	ei516(event text: raised)
+	VAGUE	ei525(event text: subjected)
+	AFTER	ei512(event text: statements)
+	AFTER	t34(event text: Thursday)
+	AFTER	ei527(event text: designed)
+
+
+AP900815-0044.tml|ei1677(entity text: meet)
+
+### Previous Sentence: King Hussein was reportedly carrying a message to Bush from Iraq 's Saddam , with whom the king met Monday .
+
+### Sentence with entity: The monarch will meet Bush on Thursday in Kennebunkport , Maine .
+
+### Following Sentence: Crown Prince Hassan , King Hussein 's brother and political adviser , was asked today about the message the king was said to be carrying .
+
+TLinks: ei1677
+	AFTER	t215(event text: today)
+	AFTER	t210(event text: Monday)
+	AFTER	ei1678(event text: asked)
+	AFTER	ei1680(event text: carrying)
+	AFTER	ei1676(event text: met)
+	AFTER	ei1675(event text: carrying)
+	AFTER	ei1679(event text: said)
+	IS_INCLUDED	t213(event text: Thursday)
+
+
+PRI19980216.2000.0170.tml|ei232(entity text: challenge)
+
+### Previous Sentence: The move had been widely expected after northern Ireland police said they believe the IRA was behind two killings in Belfast last week .
+
+### Sentence with entity: Sinn Fein chairman Mitchell McLaughlin says the party will challenge the move by legal means if they have to .
+
+### Following Sentence: We 're going to fight it .
+
+TLinks: ei232
+	SIMULTANEOUS	ei234(event text: fight)
+	AFTER	ei225(event text: move)
+	AFTER	ei230(event text: killings)
+	AFTER	ei228(event text: believe)
+	AFTER	ei226(event text: expected)
+	AFTER	ei233(event text: move)
+	VAGUE	ei231(event text: says)
+	AFTER	t26(event text: last week)
+	VAGUE	ei227(event text: said)
+	AFTER	ei229(event text: behind)
+
+
+APW19980219.0476.tml|ei2504(entity text: said)
+
+### Previous Sentence: Nhek Bunchhay , who had been closely involved in the search for Howes before having to flee the Cambodian capital after a coup d'etat last year , appeared confident he would find Howes ' remains .
+
+### Sentence with entity: He said he received information from Khmer Rouge guerrillas on where the body had been buried , and recently ordered 10 of his men from a force of 500 near Khmer Rouge headquarters in Anlong Veng to conduct the search .
+
+### Following Sentence: If and when the remains are found , he said , they would be turned over to the British Embassy , apparently meaning they would be sent across the border into Thailand and onward to Bangkok .
+
+TLinks: ei2504
+	BEFORE	ei2513(event text: sent)
+	VAGUE	ei2499(event text: search)
+	AFTER	ei2498(event text: involved)
+	BEFORE	ei2512(event text: turned)
+	AFTER	ei2505(event text: received)
+	VAGUE	ei2502(event text: appeared)
+	VAGUE	ei2511(event text: said)
+	VAGUE	ei2509(event text: search)
+	VAGUE	ei2508(event text: conduct)
+	AFTER	ei2501(event text: coup)
+	BEFORE	ei2510(event text: found)
+	AFTER	ei2507(event text: ordered)
+	AFTER	t131(event text: last year)
+	BEFORE	ei2503(event text: find)
+	AFTER	ei2500(event text: flee)
+	AFTER	ei2506(event text: buried)
+
+
+PRI19980216.2000.0170.tml|ei231(entity text: says)
+
+### Previous Sentence: The move had been widely expected after northern Ireland police said they believe the IRA was behind two killings in Belfast last week .
+
+### Sentence with entity: Sinn Fein chairman Mitchell McLaughlin says the party will challenge the move by legal means if they have to .
+
+### Following Sentence: We 're going to fight it .
+
+TLinks: ei231
+	AFTER	ei225(event text: move)
+	BEFORE	ei234(event text: fight)
+	AFTER	ei230(event text: killings)
+	AFTER	ei226(event text: expected)
+	AFTER	ei229(event text: behind)
+	AFTER	ei228(event text: believe)
+	VAGUE	ei232(event text: challenge)
+	AFTER	ei233(event text: move)
+	VAGUE	ei227(event text: said)
+	AFTER	t26(event text: last week)
+
+
+NYT19980206.0460.tml|ei2279(entity text: start)
+
+### Previous Sentence: `` The economy has been running on the fumes of the strength from before the Asia shock , '' McCulley said .
+
+### Sentence with entity: `` Those fumes will exhaust themselves , and the manufacturing sector is going to start getting beat up in the spring . ''
+
+### Following Sentence: The figures showed the unemployment rate for adult men declined to 3.8 percent last month from 4.1 percent in December , the lowest figure for almost two decades .
+
+TLinks: ei2279
+	AFTER	ei2281(event text: showed)
+	AFTER	t219(event text: December)
+	VAGUE	ei2280(event text: beat)
+	AFTER	t218(event text: last month)
+	AFTER	ei2277(event text: said)
+	AFTER	ei2276(event text: running)
+	AFTER	ei2278(event text: exhaust)
+	AFTER	ei2282(event text: declined)
+
+
+ea980120.1830.0071.tml|ei235(entity text: visit)
+
+### Previous Sentence: Today , hundreds of people from the US began to arrive , including some Cuban Americans who left here when Castro came to power and are returning to Havana for the first time .
+
+### Sentence with entity: The Pope 's visit is important , but they are also coming home .
+
+### Following Sentence: This is quite an extraordinary story unfolding here .
+
+TLinks: ei235
+	AFTER	ei231(event text: left)
+	AFTER	ei230(event text: arrive)
+	AFTER	ei236(event text: coming)
+	AFTER	ei232(event text: came)
+	AFTER	ei234(event text: returning)
+	IS_INCLUDED	ei238(event text: unfolding)
+	AFTER	ei229(event text: began)
+	IS_INCLUDED	ei237(event text: story)
+	AFTER	t57(event text: Today)
+
+
+AP900816-0139.tml|ei1546(entity text: withdraw)
+
+### Previous Sentence: Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+
+### Sentence with entity: After a two-hour meeting at his Kennebunkport home with King Hussein of Jordan , Bush said , `` I did not come away with any feeling of hope '' that Iraq would withdraw its army from Kuwait .
+
+### Following Sentence: Bush also said Thursday that King Hussein assured him Jordan would close the last remaining free port to most Iraqi trade as the economic embargo on materials to Iraq continued unabated .
+
+TLinks: ei1546
+	VAGUE	t289(event text: two-week)
+	AFTER	ei1548(event text: assured)
+	VAGUE	ei1549(event text: close)
+	VAGUE	ei1550(event text: embargo)
+	VAGUE	t291(event text: Thursday)
+	VAGUE	ei1539(event text: stems)
+	VAGUE	ei1533(event text: said)
+	VAGUE	ei1551(event text: continued)
+	VAGUE	ei1536(event text: optimistic)
+	AFTER	ei1543(event text: said)
+	VAGUE	ei1534(event text: saw)
+	VAGUE	ei1531(event text: commenting)
+	AFTER	t290(event text: two-hour)
+	AFTER	ei1547(event text: said)
+	VAGUE	ei1544(event text: come)
+	VAGUE	ei1532(event text: crisis)
+	VAGUE	ei1537(event text: settlement)
+	AFTER	ei1541(event text: buildup)
+	AFTER	ei1542(event text: meeting)
+	IS_INCLUDED	ei1538(event text: dispute)
+	AFTER	ei1540(event text: invasion)
+
+
+APW19980227.0487.tml|ei437(entity text: said)
+
+### Previous Sentence: Instead , she turned to her community rabbi in the Jewish West Bank settlement of Beit El and told him about Amir 's statements .
+
+### Sentence with entity: The rabbi said called the talk about killing Rabin `` nonsense , '' and said Jews are prohibited from killing one another , the radio reports said .
+
+### Following Sentence: Har-Shefi described Amir as an `` original thinker , '' as well as delusional and a liar .
+
+TLinks: ei437
+	AFTER	ei431(event text: called)
+	AFTER	ei427(event text: turned)
+	AFTER	ei432(event text: talk)
+	VAGUE	ei438(event text: described)
+	AFTER	ei433(event text: killing)
+	AFTER	ei430(event text: said)
+	VAGUE	ei436(event text: prohibited)
+	AFTER	ei428(event text: told)
+	AFTER	ei435(event text: said)
+
+
+NYT19980212.0019.tml|ei232(entity text: said)
+
+### Previous Sentence: Ms. Sanders was hit several times and was pronounced dead at the scene .
+
+### Sentence with entity: The other customers fled , and the police said it did not appear that anyone else was injured .
+
+### Following Sentence: The men took no money from their victim or from the establishment , said Detective Joseph Pentangelo , a Police Department spokesman .
+
+TLinks: ei232
+	AFTER	ei229(event text: pronounced)
+	AFTER	ei228(event text: hit)
+	AFTER	ei231(event text: fled)
+	AFTER	ei230(event text: dead)
+	AFTER	ei235(event text: took)
+	AFTER	ei234(event text: injured)
+	VAGUE	ei236(event text: said)
+	AFTER	ei233(event text: appear)
+
+
+AP900816-0139.tml|ei1730(entity text: quoted)
+
+### Previous Sentence: Meanwhile , Egypt 's official Middle East News Agency said Thursday that Saddam was the target of an assassination attempt , which led to `` large-scale '' arrests , including some close associates of the Iraqi strongman .
+
+### Sentence with entity: The agency quoted witnesses as saying tanks and armored cars are patrolling the streets of Baghdad .
+
+### Following Sentence: There was no independent confirmation of the report by the government-run news agency , which did not say when the reported attempt occurred .
+
+TLinks: ei1730
+	AFTER	ei1725(event text: target)
+	VAGUE	ei1732(event text: patrolling)
+	AFTER	ei1738(event text: occurred)
+	IS_INCLUDED	t304(event text: Thursday)
+	BEFORE	ei1733(event text: confirmation)
+	AFTER	ei1727(event text: attempt)
+	VAGUE	ei1724(event text: said)
+	AFTER	ei1728(event text: led)
+	AFTER	ei1731(event text: saying)
+	AFTER	ei1729(event text: arrests)
+	AFTER	ei1737(event text: attempt)
+	VAGUE	ei1736(event text: say)
+
+
+APW19980227.0487.tml|ei388(entity text: Taking)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: JERUSALEM -LRB- AP -RRB- _ Taking the stand in her own defense , a friend of Yitzhak Rabin 's assassin said Friday that she regretted calling the prime minister a traitor and praying for his death .
+
+### Following Sentence: Margalit Har-Shefi , 22 , has pleaded innocent to charges that she failed to report Yigal Amir 's plan to kill Rabin .
+
+TLinks: ei388
+	VAGUE	ei394(event text: death)
+	AFTER	ei399(event text: report)
+	VAGUE	ei390(event text: regretted)
+	VAGUE	ei401(event text: kill)
+	AFTER	ei395(event text: pleaded)
+	AFTER	ei391(event text: calling)
+	IS_INCLUDED	t70(event text: Friday)
+	AFTER	ei400(event text: plan)
+	AFTER	ei398(event text: failed)
+	INCLUDES	ei389(event text: said)
+	AFTER	ei397(event text: charges)
+	AFTER	ei393(event text: praying)
+
+
+AP900815-0044.tml|ei1582(entity text: criticized)
+
+### Previous Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+### Sentence with entity: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+### Following Sentence: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+TLinks: ei1582
+	AFTER	t82(event text: eight-year)
+	AFTER	ei1572(event text: talks)
+	VAGUE	ei1580(event text: condemned)
+	AFTER	ei1583(event text: dispatched)
+	VAGUE	ei1569(event text: accept)
+	BEFORE	ei1585(event text: sought)
+	VAGUE	t89(event text: Aug. 2)
+	VAGUE	ei1571(event text: rejected)
+	VAGUE	ei1589(event text: harbor)
+	AFTER	t79(event text: August 1988)
+	VAGUE	ei1568(event text: appeared)
+	AFTER	ei1575(event text: war)
+	AFTER	ei1581(event text: invasion)
+	VAGUE	ei1576(event text: seemed)
+	BEFORE	ei1578(event text: heading)
+	BEFORE	ei1584(event text: said)
+	AFTER	ei1574(event text: cease-fire)
+	BEFORE	ei1586(event text: turn)
+	VAGUE	ei1577(event text: aimed)
+
+
+NYT19980206.0460.tml|ei2204(entity text: said)
+
+### Previous Sentence: The gain left wages 3.8 percent higher than a year earlier , extending a trend that has given back to workers some of the earning power they lost to inflation in the last decade .
+
+### Sentence with entity: But economists said the wage increase was not enough to raise any concerns about higher inflation .
+
+### Following Sentence: And because the Federal Reserve has made clear that it expects the economy to slow in coming months as ripple effects from Asia reach the United States , investors disregarded the large jobs gains , betting that neither a rise in interest rates nor resurgent inflation is looming .
+
+TLinks: ei2204
+	BEFORE	ei2210(event text: reach)
+	VAGUE	ei2208(event text: expects)
+	VAGUE	ei2206(event text: raise)
+	AFTER	ei2203(event text: lost)
+	IS_INCLUDED	ei2201(event text: trend)
+	AFTER	ei2199(event text: left)
+	VAGUE	ei2211(event text: disregarded)
+	BEFORE	ei2213(event text: rise)
+	VAGUE	ei2212(event text: betting)
+	AFTER	ei2200(event text: extending)
+	BEFORE	ei2214(event text: inflation)
+	AFTER	ei2205(event text: increase)
+	AFTER	ei2202(event text: given)
+	AFTER	t200(event text: the last decade)
+	BEFORE	ei2209(event text: slow)
+	AFTER	t199(event text: a year earlier)
+	IS_INCLUDED	ei2215(event text: looming)
+	VAGUE	ei2207(event text: made)
+	BEFORE	t201(event text: coming months)
+
+
+AP900815-0044.tml|t213(entity text: Thursday)
+
+### Previous Sentence: King Hussein was reportedly carrying a message to Bush from Iraq 's Saddam , with whom the king met Monday .
+
+### Sentence with entity: The monarch will meet Bush on Thursday in Kennebunkport , Maine .
+
+### Following Sentence: Crown Prince Hassan , King Hussein 's brother and political adviser , was asked today about the message the king was said to be carrying .
+
+TLinks: t213
+	AFTER	t210(event text: Monday)
+	AFTER	ei1679(event text: said)
+	AFTER	ei1675(event text: carrying)
+	AFTER	ei1678(event text: asked)
+	INCLUDES	ei1677(event text: meet)
+	AFTER	ei1676(event text: met)
+	AFTER	t215(event text: today)
+	AFTER	ei1680(event text: carrying)
+
+
+AP900815-0044.tml|ei1580(entity text: condemned)
+
+### Previous Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+### Sentence with entity: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+### Following Sentence: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+TLinks: ei1580
+	AFTER	ei1572(event text: talks)
+	BEFORE	ei1577(event text: aimed)
+	BEFORE	ei1586(event text: turn)
+	VAGUE	ei1583(event text: dispatched)
+	VAGUE	ei1582(event text: criticized)
+	VAGUE	ei1589(event text: harbor)
+	AFTER	t82(event text: eight-year)
+	BEFORE	ei1568(event text: appeared)
+	AFTER	ei1581(event text: invasion)
+	AFTER	t79(event text: August 1988)
+	AFTER	ei1575(event text: war)
+	VAGUE	ei1576(event text: seemed)
+	BEFORE	ei1585(event text: sought)
+	AFTER	ei1571(event text: rejected)
+	AFTER	ei1574(event text: cease-fire)
+	VAGUE	t89(event text: Aug. 2)
+	BEFORE	ei1584(event text: said)
+	BEFORE	ei1578(event text: heading)
+	BEFORE	ei1569(event text: accept)
+
+
+APW19980227.0487.tml|ei389(entity text: said)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: JERUSALEM -LRB- AP -RRB- _ Taking the stand in her own defense , a friend of Yitzhak Rabin 's assassin said Friday that she regretted calling the prime minister a traitor and praying for his death .
+
+### Following Sentence: Margalit Har-Shefi , 22 , has pleaded innocent to charges that she failed to report Yigal Amir 's plan to kill Rabin .
+
+TLinks: ei389
+	AFTER	ei398(event text: failed)
+	VAGUE	ei390(event text: regretted)
+	AFTER	ei397(event text: charges)
+	AFTER	ei391(event text: calling)
+	VAGUE	ei394(event text: death)
+	AFTER	ei399(event text: report)
+	AFTER	ei393(event text: praying)
+	AFTER	ei400(event text: plan)
+	AFTER	ei395(event text: pleaded)
+	VAGUE	ei401(event text: kill)
+	IS_INCLUDED	t70(event text: Friday)
+	IS_INCLUDED	ei388(event text: Taking)
+
+
+NYT19980206.0460.tml|ei2278(entity text: exhaust)
+
+### Previous Sentence: `` The economy has been running on the fumes of the strength from before the Asia shock , '' McCulley said .
+
+### Sentence with entity: `` Those fumes will exhaust themselves , and the manufacturing sector is going to start getting beat up in the spring . ''
+
+### Following Sentence: The figures showed the unemployment rate for adult men declined to 3.8 percent last month from 4.1 percent in December , the lowest figure for almost two decades .
+
+TLinks: ei2278
+	AFTER	ei2277(event text: said)
+	VAGUE	ei2280(event text: beat)
+	AFTER	ei2281(event text: showed)
+	AFTER	t218(event text: last month)
+	AFTER	t219(event text: December)
+	AFTER	ei2276(event text: running)
+	BEFORE	ei2279(event text: start)
+	AFTER	ei2282(event text: declined)
+
+
+PRI19980205.2000.1998.tml|ei2012(entity text: election)
+
+### Previous Sentence: Joblessness is now at its highest level in Germany since the second world war .
+
+### Sentence with entity: With the general election due this September , record figures could n't have come at a worst time for Chancellor Kohl .
+
+### Following Sentence: His promise to half unemployment by the year two thousand has now been abandoned .
+
+TLinks: ei2012
+	AFTER	t42(event text: now)
+	AFTER	t47(event text: now)
+	AFTER	ei2015(event text: promise)
+	VAGUE	ei2016(event text: half)
+	BEFORE	t45(event text: the year two thousand)
+	AFTER	ei2011(event text: war)
+	AFTER	ei2017(event text: abandoned)
+	AFTER	ei2013(event text: come)
+	IS_INCLUDED	t44(event text: this September)
+
+
+PRI19980216.2000.0170.tml|ei222(entity text: called)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: The British government has formally called for Sinn Fein , the IRA 's political wing , to be expelled from the multiparty peace talks on northern Ireland .
+
+### Following Sentence: The move had been widely expected after northern Ireland police said they believe the IRA was behind two killings in Belfast last week .
+
+TLinks: ei222
+	SIMULTANEOUS	ei225(event text: move)
+	AFTER	ei230(event text: killings)
+	AFTER	ei226(event text: expected)
+	BEFORE	ei223(event text: expelled)
+	AFTER	ei229(event text: behind)
+	IS_INCLUDED	ei224(event text: talks)
+	AFTER	ei228(event text: believe)
+	AFTER	t26(event text: last week)
+	AFTER	ei227(event text: said)
+
+
+APW19980213.1320.tml|ei334(entity text: boost)
+
+### Previous Sentence: The airline has also cut all flights to South Korea .
+
+### Sentence with entity: Qantas plans daily flights between Sydney and Bombay , up from the current four flights a week , to boost business and tourism ties with India , the airline announced Friday .
+
+### Following Sentence: In a joint statement with Tourism Minister Andrew Thomson , it said two new flights would leave Bombay on Monday and Tuesday nights from March 30 , with the third departing each Thursday from August 6 .
+
+TLinks: ei334
+	VAGUE	ei354(event text: leave)
+	VAGUE	t55(event text: August 6)
+	AFTER	t47(event text: Friday)
+	VAGUE	t189(event text: Tuesday nights)
+	AFTER	ei336(event text: announced)
+	VAGUE	t56(event text: March 30)
+	AFTER	ei329(event text: cut)
+	AFTER	ei331(event text: plans)
+	AFTER	t46(event text: current)
+	VAGUE	ei341(event text: departing)
+	AFTER	ei338(event text: said)
+	VAGUE	t54(event text: each Thursday)
+	VAGUE	t190(event text: Monday)
+
+
+APW19980227.0487.tml|ei403(entity text: serving)
+
+### Previous Sentence: She took the stand for more than four hours Friday in a Tel Aviv magistrate 's court .
+
+### Sentence with entity: Amir , 27 , is serving a life sentence for the November 1995 assassination of Rabin at a Tel Aviv peace rally .
+
+### Following Sentence: Newspaper reports have said Amir was infatuated with Har-Shefi and may have been trying to impress her by killing the prime minister .
+
+TLinks: ei403
+	VAGUE	ei402(event text: took)
+	AFTER	t73(event text: November 1995)
+	VAGUE	ei407(event text: infatuated)
+	VAGUE	t72(event text: Friday)
+	AFTER	ei410(event text: killing)
+	VAGUE	ei406(event text: said)
+	VAGUE	t71(event text: more than four hours)
+	AFTER	ei409(event text: impress)
+	AFTER	ei405(event text: rally)
+	AFTER	ei408(event text: trying)
+	AFTER	ei404(event text: assassination)
+
+
+APW19980219.0476.tml|ei2471(entity text: searching)
+
+### Previous Sentence: Howes ' team was clearing mines 17 kilometers -LRB- 10 miles -RRB- from Angkor Wat , the fabled 11th century temple that is Cambodia 's main tourist attraction , when it was attacked .
+
+### Sentence with entity: In January this year , British police officers who had been searching for Howes concluded he had probably been killed soon after being captured .
+
+### Following Sentence: The Foreign Office said it had informed the family of Howes , 37 years old when he was kidnapped , that he probably died within weeks or months of his capture on March 26 , 1996 .
+
+TLinks: ei2471
+	VAGUE	ei2473(event text: killed)
+	VAGUE	ei2476(event text: informed)
+	VAGUE	ei2475(event text: said)
+	AFTER	t136(event text: March 26 , 1996)
+	AFTER	ei2477(event text: kidnapped)
+	AFTER	ei2469(event text: clearing)
+	VAGUE	t137(event text: weeks or months)
+	VAGUE	ei2478(event text: died)
+	AFTER	ei2474(event text: captured)
+	AFTER	ei2470(event text: attacked)
+	VAGUE	ei2472(event text: concluded)
+	VAGUE	t135(event text: January this year)
+	AFTER	ei2479(event text: capture)
+
+
+AP900815-0044.tml|ei1566(entity text: said)
+
+### Previous Sentence: In a letter to President Hashemi Rafsanjani of Iran , read by a broadcaster over Baghdad radio , Saddam said he will begin withdrawing troops from Iranian territory on Friday and release Iranian prisoners of war .
+
+### Sentence with entity: Iran said an Iraqi diplomatic delegation was en route to Tehran to deliver Saddam 's message , which it said it would review `` with optimism . ''
+
+### Following Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+TLinks: ei1566
+	AFTER	t82(event text: eight-year)
+	AFTER	ei1571(event text: rejected)
+	VAGUE	ei1568(event text: appeared)
+	AFTER	t79(event text: August 1988)
+	BEFORE	t65(event text: Friday)
+	BEFORE	ei1562(event text: release)
+	VAGUE	ei1558(event text: read)
+	AFTER	ei1575(event text: war)
+	BEFORE	ei1567(event text: review)
+	AFTER	ei1574(event text: cease-fire)
+	BEFORE	ei1561(event text: withdrawing)
+	AFTER	ei1572(event text: talks)
+	VAGUE	ei1569(event text: accept)
+	BEFORE	ei1560(event text: begin)
+	VAGUE	ei1559(event text: said)
+	VAGUE	ei1565(event text: deliver)
+	VAGUE	ei1563(event text: said)
+
+
+AP900815-0044.tml|ei1581(entity text: invasion)
+
+### Previous Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+### Sentence with entity: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+### Following Sentence: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+TLinks: ei1581
+	AFTER	t82(event text: eight-year)
+	BEFORE	ei1584(event text: said)
+	AFTER	ei1574(event text: cease-fire)
+	BEFORE	ei1585(event text: sought)
+	BEFORE	ei1578(event text: heading)
+	BEFORE	ei1577(event text: aimed)
+	VAGUE	ei1583(event text: dispatched)
+	BEFORE	ei1586(event text: turn)
+	BEFORE	ei1580(event text: condemned)
+	BEFORE	ei1569(event text: accept)
+	BEFORE	ei1582(event text: criticized)
+	AFTER	ei1571(event text: rejected)
+	VAGUE	t89(event text: Aug. 2)
+	AFTER	ei1572(event text: talks)
+	AFTER	t79(event text: August 1988)
+	BEFORE	ei1568(event text: appeared)
+	VAGUE	ei1589(event text: harbor)
+	AFTER	ei1575(event text: war)
+	VAGUE	ei1576(event text: seemed)
+
+
+APW19980219.0476.tml|ei2476(entity text: informed)
+
+### Previous Sentence: In January this year , British police officers who had been searching for Howes concluded he had probably been killed soon after being captured .
+
+### Sentence with entity: The Foreign Office said it had informed the family of Howes , 37 years old when he was kidnapped , that he probably died within weeks or months of his capture on March 26 , 1996 .
+
+### Following Sentence: `` Obviously , it is deeply discouraging for the family after 22 months , but there is no proof of life .
+
+TLinks: ei2476
+	VAGUE	t138(event text: 22 months)
+	VAGUE	ei2471(event text: searching)
+	AFTER	ei2477(event text: kidnapped)
+	AFTER	t137(event text: weeks or months)
+	BEFORE	ei2475(event text: said)
+	VAGUE	ei2472(event text: concluded)
+	AFTER	t136(event text: March 26 , 1996)
+	VAGUE	ei2473(event text: killed)
+	AFTER	ei2479(event text: capture)
+	AFTER	ei2478(event text: died)
+	VAGUE	t135(event text: January this year)
+	VAGUE	ei2480(event text: discouraging)
+	AFTER	ei2474(event text: captured)
+
+
+AP900815-0044.tml|ei1565(entity text: deliver)
+
+### Previous Sentence: In a letter to President Hashemi Rafsanjani of Iran , read by a broadcaster over Baghdad radio , Saddam said he will begin withdrawing troops from Iranian territory on Friday and release Iranian prisoners of war .
+
+### Sentence with entity: Iran said an Iraqi diplomatic delegation was en route to Tehran to deliver Saddam 's message , which it said it would review `` with optimism . ''
+
+### Following Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+TLinks: ei1565
+	VAGUE	ei1563(event text: said)
+	AFTER	ei1572(event text: talks)
+	AFTER	ei1575(event text: war)
+	VAGUE	ei1560(event text: begin)
+	VAGUE	ei1562(event text: release)
+	VAGUE	ei1561(event text: withdrawing)
+	VAGUE	ei1559(event text: said)
+	AFTER	t82(event text: eight-year)
+	VAGUE	ei1569(event text: accept)
+	BEFORE	ei1567(event text: review)
+	AFTER	t79(event text: August 1988)
+	VAGUE	ei1568(event text: appeared)
+	VAGUE	t65(event text: Friday)
+	VAGUE	ei1558(event text: read)
+	AFTER	ei1574(event text: cease-fire)
+	VAGUE	ei1566(event text: said)
+	AFTER	ei1571(event text: rejected)
+
+
+APW19980227.0487.tml|ei423(entity text: killing)
+
+### Previous Sentence: She said Rabin 's murder was `` a black stain on Israel , '' Israel radio and Israel army radio reported .
+
+### Sentence with entity: Har-Shefi said she heard Amir talk about killing Rabin but did not tell the police because she did not believe he was serious .
+
+### Following Sentence: Instead , she turned to her community rabbi in the Jewish West Bank settlement of Beit El and told him about Amir 's statements .
+
+TLinks: ei423
+	AFTER	ei421(event text: heard)
+	AFTER	ei428(event text: told)
+	AFTER	ei422(event text: talk)
+	BEFORE	ei419(event text: reported)
+	AFTER	ei424(event text: tell)
+	BEFORE	ei420(event text: said)
+	VAGUE	ei426(event text: serious)
+	SIMULTANEOUS	ei418(event text: murder)
+	AFTER	ei427(event text: turned)
+	BEFORE	ei417(event text: said)
+	AFTER	ei425(event text: believe)
+
+
+AP900816-0139.tml|ei1543(entity text: said)
+
+### Previous Sentence: Bush , commenting on the two-week gulf crisis from his vacation home in Maine , said he saw little reason to be optimistic about a settlement of the dispute , which stems from Iraq 's invasion of oil-wealthy Kuwait and its subsequent military buildup on the border of Saudi Arabia .
+
+### Sentence with entity: After a two-hour meeting at his Kennebunkport home with King Hussein of Jordan , Bush said , `` I did not come away with any feeling of hope '' that Iraq would withdraw its army from Kuwait .
+
+### Following Sentence: Bush also said Thursday that King Hussein assured him Jordan would close the last remaining free port to most Iraqi trade as the economic embargo on materials to Iraq continued unabated .
+
+TLinks: ei1543
+	VAGUE	ei1531(event text: commenting)
+	VAGUE	ei1539(event text: stems)
+	BEFORE	ei1549(event text: close)
+	VAGUE	ei1534(event text: saw)
+	VAGUE	ei1533(event text: said)
+	VAGUE	ei1536(event text: optimistic)
+	VAGUE	ei1547(event text: said)
+	AFTER	t290(event text: two-hour)
+	IS_INCLUDED	ei1550(event text: embargo)
+	IS_INCLUDED	ei1551(event text: continued)
+	IS_INCLUDED	ei1532(event text: crisis)
+	BEFORE	ei1537(event text: settlement)
+	AFTER	ei1544(event text: come)
+	AFTER	ei1541(event text: buildup)
+	AFTER	ei1540(event text: invasion)
+	BEFORE	ei1546(event text: withdraw)
+	AFTER	ei1548(event text: assured)
+	IS_INCLUDED	ei1538(event text: dispute)
+	AFTER	ei1542(event text: meeting)
+	VAGUE	t291(event text: Thursday)
+	IS_INCLUDED	t289(event text: two-week)
+
+
+AP900815-0044.tml|t89(entity text: Aug. 2)
+
+### Previous Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+### Sentence with entity: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+### Following Sentence: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+TLinks: t89
+	AFTER	ei1575(event text: war)
+	AFTER	t82(event text: eight-year)
+	VAGUE	ei1583(event text: dispatched)
+	BEFORE	ei1569(event text: accept)
+	AFTER	ei1574(event text: cease-fire)
+	BEFORE	ei1568(event text: appeared)
+	BEFORE	ei1585(event text: sought)
+	AFTER	ei1571(event text: rejected)
+	VAGUE	ei1589(event text: harbor)
+	AFTER	t79(event text: August 1988)
+	AFTER	ei1572(event text: talks)
+	VAGUE	ei1582(event text: criticized)
+	VAGUE	ei1576(event text: seemed)
+	BEFORE	ei1584(event text: said)
+	VAGUE	ei1581(event text: invasion)
+	VAGUE	ei1580(event text: condemned)
+	BEFORE	ei1586(event text: turn)
+	BEFORE	ei1578(event text: heading)
+	BEFORE	ei1577(event text: aimed)
+
+
+NYT19980206.0466.tml|t30(entity text: Friday)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: WASHINGTON _ Following are statements made Friday and Thursday by Lawrence Wechsler , a lawyer for the White House secretary , Betty Currie ; the White House ; White House spokesman Mike McCurry , and President Clinton in response to an article in The New York Times on Friday about her statements regarding a meeting with the president : Wechsler on Thursday `` Without commenting on the allegations raised in this article , to the extent that there is any implication or suggestion that Mrs. Currie was aware of any legal or ethical impropriety by anyone , that implication or suggestion is entirely inaccurate . ''
+
+### Following Sentence: White House on Thursday `` For the past few weeks we 've been subjected to false leaks designed to mislead both reporters and the American public .
+
+TLinks: t30
+	AFTER	ei527(event text: designed)
+	VAGUE	t35(event text: the past few weeks)
+	AFTER	ei520(event text: aware)
+	SIMULTANEOUS	t32(event text: Friday)
+	AFTER	t31(event text: Thursday)
+	VAGUE	ei512(event text: statements)
+	VAGUE	ei525(event text: subjected)
+	VAGUE	ei529(event text: mislead)
+	AFTER	t34(event text: Thursday)
+	AFTER	ei516(event text: raised)
+	AFTER	t33(event text: Thursday)
+
+
+NYT19980206.0460.tml|t203(entity text: January)
+
+### Previous Sentence: With potential inflation counterbalanced by worries about possible price declines , the Fed and its chairman , Alan Greenspan , have suggested that they intend to keep interest rates unchanged until the economy tilts clearly in one direction or another .
+
+### Sentence with entity: The job figures for January extended a surge in employment gains that began last fall , just when the labor market had showed signs of cooling .
+
+### Following Sentence: After accounting for a small downward revision Friday to December 's figures , the economy has been creating jobs at a rate of 358,000 a month for the last four months _ and 381,000 over the last three months _ after averaging 242,000 for the first nine months of 1997 .
+
+TLinks: t203
+	BEFORE	ei2236(event text: revision)
+	AFTER	t211(event text: 1997)
+	VAGUE	ei2225(event text: declines)
+	VAGUE	ei2227(event text: intend)
+	IS_INCLUDED	t207(event text: the last four months)
+	AFTER	t212(event text: the first nine months)
+	AFTER	ei2238(event text: averaging)
+	IS_INCLUDED	t208(event text: the last three months)
+	VAGUE	ei2228(event text: keep)
+	AFTER	ei2234(event text: showed)
+	AFTER	ei2233(event text: began)
+	VAGUE	ei2230(event text: extended)
+	VAGUE	ei2226(event text: suggested)
+	AFTER	t204(event text: last fall)
+	VAGUE	ei2235(event text: accounting)
+	VAGUE	ei2232(event text: gains)
+	BEFORE	t205(event text: Friday)
+	BEFORE	ei2229(event text: tilts)
+	IS_INCLUDED	ei2231(event text: surge)
+	VAGUE	t206(event text: December)
+	VAGUE	ei2224(event text: counterbalanced)
+	IS_INCLUDED	ei2237(event text: creating)
+
+
+AP900816-0139.tml|ei1724(entity text: said)
+
+### Previous Sentence: Reports attributed to the Japanese foreign ministry said Saudi Arabia told U.S. , European and Japanese oil companies of a 15-20 percent cutback in its oil supply in September .
+
+### Sentence with entity: Meanwhile , Egypt 's official Middle East News Agency said Thursday that Saddam was the target of an assassination attempt , which led to `` large-scale '' arrests , including some close associates of the Iraqi strongman .
+
+### Following Sentence: The agency quoted witnesses as saying tanks and armored cars are patrolling the streets of Baghdad .
+
+TLinks: ei1724
+	VAGUE	ei1721(event text: said)
+	VAGUE	ei1732(event text: patrolling)
+	AFTER	ei1728(event text: led)
+	AFTER	ei1723(event text: cutback)
+	IS_INCLUDED	t304(event text: Thursday)
+	AFTER	ei1727(event text: attempt)
+	AFTER	ei1729(event text: arrests)
+	VAGUE	ei1722(event text: told)
+	AFTER	ei1725(event text: target)
+	VAGUE	ei1731(event text: saying)
+	VAGUE	ei1730(event text: quoted)
+	AFTER	t303(event text: September)
+
+
+APW19980213.1310.tml|ei2047(entity text: fall)
+
+### Previous Sentence: `` Well may we say ` God save the Queen , ' for nothing will save the republic , '' outraged monarchist delegate David Mitchell said .
+
+### Sentence with entity: `` The idea of a republic will fall to dust through the grace of almighty God . ''
+
+### Following Sentence: Polls have shown public support for a republic increasing , rising from about 35 percent several years ago to about 51 percent this year , as pro-monarchist sentiment diminishes .
+
+TLinks: ei2047
+	AFTER	ei2052(event text: rising)
+	AFTER	ei2043(event text: say)
+	AFTER	ei2049(event text: shown)
+	AFTER	t117(event text: several years ago)
+	VAGUE	ei2055(event text: diminishes)
+	VAGUE	t358(event text: this year)
+	AFTER	ei2046(event text: said)
+	AFTER	ei2051(event text: increasing)
+
+
+PRI19980216.2000.0170.tml|ei233(entity text: move)
+
+### Previous Sentence: The move had been widely expected after northern Ireland police said they believe the IRA was behind two killings in Belfast last week .
+
+### Sentence with entity: Sinn Fein chairman Mitchell McLaughlin says the party will challenge the move by legal means if they have to .
+
+### Following Sentence: We 're going to fight it .
+
+TLinks: ei233
+	AFTER	ei229(event text: behind)
+	AFTER	t26(event text: last week)
+	AFTER	ei230(event text: killings)
+	BEFORE	ei234(event text: fight)
+	AFTER	ei228(event text: believe)
+	AFTER	ei226(event text: expected)
+	AFTER	ei227(event text: said)
+	BEFORE	ei232(event text: challenge)
+	BEFORE	ei231(event text: says)
+	SIMULTANEOUS	ei225(event text: move)
+
+
+NYT19980206.0466.tml|t37(entity text: Friday)
+
+### Previous Sentence: We 're not going to dignify the latest false leak with a response . ''
+
+### Sentence with entity: McCurry on Friday `` I want to be absolutely clear , to the extent there is any implication or the slightest suggestion that Mrs. Currie believes that the President or anyone else tried to influence her recollection , that is absolutely false and a mischaracterization of the facts .
+
+### Following Sentence: I am shocked and dismayed by the numerous leaks regarding Mrs. Currie 's grand jury testimony . ''
+
+TLinks: t37
+	AFTER	ei545(event text: leaks)
+	VAGUE	ei535(event text: implication)
+	AFTER	ei539(event text: influence)
+	AFTER	ei542(event text: mischaracterization)
+	VAGUE	ei536(event text: suggestion)
+	VAGUE	ei544(event text: dismayed)
+	AFTER	ei531(event text: leak)
+	AFTER	ei546(event text: testimony)
+	VAGUE	ei530(event text: dignify)
+	INCLUDES	ei533(event text: want)
+	VAGUE	ei532(event text: response)
+	AFTER	ei538(event text: tried)
+	VAGUE	ei543(event text: shocked)
+	INCLUDES	ei534(event text: clear)
+	IS_INCLUDED	ei537(event text: believes)
+
+
+PRI19980205.2000.1998.tml|t44(entity text: this September)
+
+### Previous Sentence: Joblessness is now at its highest level in Germany since the second world war .
+
+### Sentence with entity: With the general election due this September , record figures could n't have come at a worst time for Chancellor Kohl .
+
+### Following Sentence: His promise to half unemployment by the year two thousand has now been abandoned .
+
+TLinks: t44
+	AFTER	ei2015(event text: promise)
+	BEFORE	t45(event text: the year two thousand)
+	AFTER	ei2013(event text: come)
+	AFTER	ei2017(event text: abandoned)
+	AFTER	t47(event text: now)
+	AFTER	t42(event text: now)
+	VAGUE	ei2016(event text: half)
+	AFTER	ei2011(event text: war)
+	INCLUDES	ei2012(event text: election)
+
+
+ABC19980108.1830.0711.tml|ei424(entity text: change)
+
+### Previous Sentence: And at the big brokerage houses , after ten years of boom , they 're talking about layoffs .
+
+### Sentence with entity: I think that the mood is fairly gloomy , and I think it 's not going to change for a couple of years .
+
+### Following Sentence: So for Hong Kong , it 's time , as investment bankers like to say , to reposition .
+
+TLinks: ei424
+	AFTER	ei417(event text: boom)
+	AFTER	ei422(event text: think)
+	AFTER	t100(event text: a couple of years)
+	VAGUE	ei418(event text: talking)
+	AFTER	t99(event text: ten years)
+	VAGUE	ei426(event text: reposition)
+	AFTER	ei436(event text: gloomy)
+	VAGUE	ei419(event text: layoffs)
+	AFTER	ei420(event text: think)
+
+
+APW19980227.0487.tml|t70(entity text: Friday)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: JERUSALEM -LRB- AP -RRB- _ Taking the stand in her own defense , a friend of Yitzhak Rabin 's assassin said Friday that she regretted calling the prime minister a traitor and praying for his death .
+
+### Following Sentence: Margalit Har-Shefi , 22 , has pleaded innocent to charges that she failed to report Yigal Amir 's plan to kill Rabin .
+
+TLinks: t70
+	AFTER	ei395(event text: pleaded)
+	VAGUE	ei401(event text: kill)
+	AFTER	ei393(event text: praying)
+	AFTER	ei397(event text: charges)
+	VAGUE	ei400(event text: plan)
+	INCLUDES	ei388(event text: Taking)
+	AFTER	ei391(event text: calling)
+	AFTER	ei398(event text: failed)
+	INCLUDES	ei389(event text: said)
+	VAGUE	ei394(event text: death)
+	VAGUE	ei390(event text: regretted)
+	AFTER	ei399(event text: report)
+
+
+APW19980219.0476.tml|ei2516(entity text: killed)
+
+### Previous Sentence: If and when the remains are found , he said , they would be turned over to the British Embassy , apparently meaning they would be sent across the border into Thailand and onward to Bangkok .
+
+### Sentence with entity: Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+
+### Following Sentence: Pol Pot is considered responsible for the radical policies that led to the deaths of as many as 1.7 million Cambodians when the communist group held power in the late 1970s .
+
+TLinks: ei2516
+	AFTER	ei2517(event text: capture)
+	IS_INCLUDED	t140(event text: a week)
+	IS_INCLUDED	ei2519(event text: responsible)
+	BEFORE	t2452(event text: now)
+	BEFORE	ei2511(event text: said)
+	BEFORE	ei2510(event text: found)
+	VAGUE	ei2518(event text: considered)
+	BEFORE	ei2513(event text: sent)
+	AFTER	ei2523(event text: held)
+	AFTER	ei2520(event text: policies)
+	AFTER	t142(event text: the late 1970s)
+	BEFORE	ei2515(event text: believed)
+	BEFORE	ei2512(event text: turned)
+	AFTER	ei2522(event text: deaths)
+	AFTER	ei2521(event text: led)
+	BEFORE	ei2514(event text: said)
+
+
+PRI19980205.2000.1998.tml|t45(entity text: the year two thousand)
+
+### Previous Sentence: With the general election due this September , record figures could n't have come at a worst time for Chancellor Kohl .
+
+### Sentence with entity: His promise to half unemployment by the year two thousand has now been abandoned .
+
+### Following Sentence: And the German electorate appears increasingly eager to dispense with the services of Europe 's longest serving leader .
+
+TLinks: t45
+	VAGUE	ei2016(event text: half)
+	VAGUE	ei2019(event text: dispense)
+	AFTER	t47(event text: now)
+	AFTER	ei2013(event text: come)
+	AFTER	ei2012(event text: election)
+	VAGUE	ei2018(event text: eager)
+	AFTER	t44(event text: this September)
+	AFTER	ei2017(event text: abandoned)
+	AFTER	ei2015(event text: promise)
+
+
+NYT19980206.0460.tml|ei2280(entity text: beat)
+
+### Previous Sentence: `` The economy has been running on the fumes of the strength from before the Asia shock , '' McCulley said .
+
+### Sentence with entity: `` Those fumes will exhaust themselves , and the manufacturing sector is going to start getting beat up in the spring . ''
+
+### Following Sentence: The figures showed the unemployment rate for adult men declined to 3.8 percent last month from 4.1 percent in December , the lowest figure for almost two decades .
+
+TLinks: ei2280
+	AFTER	ei2277(event text: said)
+	VAGUE	ei2278(event text: exhaust)
+	AFTER	t218(event text: last month)
+	AFTER	t219(event text: December)
+	VAGUE	ei2279(event text: start)
+	AFTER	ei2281(event text: showed)
+	AFTER	ei2276(event text: running)
+	AFTER	ei2282(event text: declined)
+
+
+APW19980219.0476.tml|ei2473(entity text: killed)
+
+### Previous Sentence: Howes ' team was clearing mines 17 kilometers -LRB- 10 miles -RRB- from Angkor Wat , the fabled 11th century temple that is Cambodia 's main tourist attraction , when it was attacked .
+
+### Sentence with entity: In January this year , British police officers who had been searching for Howes concluded he had probably been killed soon after being captured .
+
+### Following Sentence: The Foreign Office said it had informed the family of Howes , 37 years old when he was kidnapped , that he probably died within weeks or months of his capture on March 26 , 1996 .
+
+TLinks: ei2473
+	VAGUE	ei2471(event text: searching)
+	AFTER	ei2477(event text: kidnapped)
+	AFTER	ei2474(event text: captured)
+	AFTER	ei2479(event text: capture)
+	BEFORE	ei2472(event text: concluded)
+	VAGUE	ei2475(event text: said)
+	BEFORE	t135(event text: January this year)
+	AFTER	ei2470(event text: attacked)
+	VAGUE	ei2476(event text: informed)
+	IS_INCLUDED	t137(event text: weeks or months)
+	AFTER	ei2469(event text: clearing)
+	SIMULTANEOUS	ei2478(event text: died)
+	AFTER	t136(event text: March 26 , 1996)
+
+
+AP900815-0044.tml|ei1576(entity text: seemed)
+
+### Previous Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+### Sentence with entity: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+### Following Sentence: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+TLinks: ei1576
+	AFTER	ei1574(event text: cease-fire)
+	AFTER	ei1575(event text: war)
+	VAGUE	ei1584(event text: said)
+	AFTER	t82(event text: eight-year)
+	AFTER	t79(event text: August 1988)
+	VAGUE	ei1578(event text: heading)
+	VAGUE	ei1589(event text: harbor)
+	AFTER	ei1572(event text: talks)
+	VAGUE	ei1586(event text: turn)
+	VAGUE	ei1568(event text: appeared)
+	VAGUE	ei1583(event text: dispatched)
+	VAGUE	t89(event text: Aug. 2)
+	VAGUE	ei1585(event text: sought)
+	VAGUE	ei1580(event text: condemned)
+	VAGUE	ei1569(event text: accept)
+	VAGUE	ei1582(event text: criticized)
+	VAGUE	ei1577(event text: aimed)
+	AFTER	ei1571(event text: rejected)
+	VAGUE	ei1581(event text: invasion)
+
+
+APW19980219.0476.tml|ei2502(entity text: appeared)
+
+### Previous Sentence: Thai military officials who monitor Cambodian affairs said privately Thursday that Britain , through its embassies in Thailand and Cambodia , has been pushing hard to resolve the Howes case as the second anniversary of his abduction nears .
+
+### Sentence with entity: Nhek Bunchhay , who had been closely involved in the search for Howes before having to flee the Cambodian capital after a coup d'etat last year , appeared confident he would find Howes ' remains .
+
+### Following Sentence: He said he received information from Khmer Rouge guerrillas on where the body had been buried , and recently ordered 10 of his men from a force of 500 near Khmer Rouge headquarters in Anlong Veng to conduct the search .
+
+TLinks: ei2502
+	VAGUE	ei2499(event text: search)
+	AFTER	ei2498(event text: involved)
+	AFTER	ei2501(event text: coup)
+	BEFORE	ei2495(event text: resolve)
+	BEFORE	ei2503(event text: find)
+	VAGUE	ei2504(event text: said)
+	AFTER	ei2497(event text: abduction)
+	AFTER	ei2500(event text: flee)
+	VAGUE	ei2507(event text: ordered)
+	IS_INCLUDED	t2449(event text: Thursday)
+	VAGUE	ei2508(event text: conduct)
+	VAGUE	ei2493(event text: said)
+	VAGUE	ei2505(event text: received)
+	AFTER	ei2506(event text: buried)
+	IS_INCLUDED	ei2494(event text: pushing)
+	VAGUE	ei2509(event text: search)
+	BEFORE	ei2543(event text: anniversary)
+	AFTER	t131(event text: last year)
+
+
+APW19980219.0476.tml|t2449(entity text: Thursday)
+
+### Previous Sentence: `` We will continue to do everything we can to establish what has happened . ''
+
+### Sentence with entity: Thai military officials who monitor Cambodian affairs said privately Thursday that Britain , through its embassies in Thailand and Cambodia , has been pushing hard to resolve the Howes case as the second anniversary of his abduction nears .
+
+### Following Sentence: Nhek Bunchhay , who had been closely involved in the search for Howes before having to flee the Cambodian capital after a coup d'etat last year , appeared confident he would find Howes ' remains .
+
+TLinks: t2449
+	VAGUE	ei2491(event text: establish)
+	VAGUE	ei2499(event text: search)
+	VAGUE	ei2503(event text: find)
+	AFTER	ei2500(event text: flee)
+	AFTER	t131(event text: last year)
+	INCLUDES	ei2502(event text: appeared)
+	VAGUE	ei2489(event text: continue)
+	AFTER	ei2492(event text: happened)
+	BEFORE	ei2543(event text: anniversary)
+	VAGUE	ei2495(event text: resolve)
+	INCLUDES	ei2493(event text: said)
+	AFTER	ei2501(event text: coup)
+	AFTER	ei2497(event text: abduction)
+	IS_INCLUDED	ei2494(event text: pushing)
+	IS_INCLUDED	ei2490(event text: do)
+	AFTER	ei2498(event text: involved)
+
+
+APW19980219.0476.tml|ei2463(entity text: hopes)
+
+### Previous Sentence: O'SMACH , Cambodia -LRB- AP -RRB- _ The top commander of a Cambodian resistance force said Thursday he has sent a team to recover the remains of a British mine removal expert kidnapped and presumed killed by Khmer Rouge guerrillas almost two years ago .
+
+### Sentence with entity: Gen. Nhek Bunchhay , a loyalist of ousted Cambodian Prime Minister Prince Norodom Ranariddh , said in an interview with The Associated Press at his hilltop headquarters that he hopes to recover the remains of Christopher Howes within the next two weeks .
+
+### Following Sentence: Howes had been working for the Britain-based Mines Advisory Group when he was abducted with his Cambodian interpreter Houn Hourth in March 1996 .
+
+TLinks: ei2463
+	AFTER	ei2465(event text: working)
+	INCLUDES	ei2461(event text: said)
+	VAGUE	ei2462(event text: interview)
+	VAGUE	ei2456(event text: sent)
+	AFTER	t134(event text: March 1996)
+	AFTER	ei2458(event text: kidnapped)
+	AFTER	t130(event text: almost two years ago)
+	BEFORE	t133(event text: the next two weeks)
+	BEFORE	ei2464(event text: recover)
+	VAGUE	ei2459(event text: presumed)
+	VAGUE	ei2457(event text: recover)
+	AFTER	ei2466(event text: abducted)
+	AFTER	ei2460(event text: killed)
+	VAGUE	t2443(event text: Thursday)
+	INCLUDES	ei2455(event text: said)
+
+
+APW19980213.1320.tml|ei341(entity text: departing)
+
+### Previous Sentence: Qantas plans daily flights between Sydney and Bombay , up from the current four flights a week , to boost business and tourism ties with India , the airline announced Friday .
+
+### Sentence with entity: In a joint statement with Tourism Minister Andrew Thomson , it said two new flights would leave Bombay on Monday and Tuesday nights from March 30 , with the third departing each Thursday from August 6 .
+
+### Following Sentence: This will add nearly 700 seats a week on the route .
+
+TLinks: ei341
+	VAGUE	t54(event text: each Thursday)
+	VAGUE	ei331(event text: plans)
+	VAGUE	t189(event text: Tuesday nights)
+	VAGUE	ei342(event text: add)
+	AFTER	ei336(event text: announced)
+	AFTER	ei338(event text: said)
+	VAGUE	t190(event text: Monday)
+	VAGUE	ei354(event text: leave)
+	VAGUE	ei334(event text: boost)
+	AFTER	t46(event text: current)
+	AFTER	t55(event text: August 6)
+	AFTER	t56(event text: March 30)
+	AFTER	t47(event text: Friday)
+
+
+AP900815-0044.tml|ei1534(entity text: shut)
+
+### Previous Sentence: Also today , King Hussein of Jordan arrived in Washington seeking to mediate the Persian Gulf crisis .
+
+### Sentence with entity: President Bush on Tuesday said the United States may extend its naval quarantine to Jordan 's Red Sea port of Aqaba to shut off Iraq 's last unhindered trade route .
+
+### Following Sentence: In another mediation effort , the Soviet Union said today it had sent an envoy to the Middle East on a series of stops to include Baghdad .
+
+TLinks: ei1534
+	VAGUE	t380(event text: today)
+	VAGUE	ei1529(event text: mediate)
+	VAGUE	ei1537(event text: stops)
+	VAGUE	ei1535(event text: said)
+	AFTER	ei1531(event text: said)
+	AFTER	ei1532(event text: extend)
+	AFTER	ei1536(event text: sent)
+	AFTER	ei1527(event text: arrived)
+	IS_INCLUDED	ei1530(event text: crisis)
+	AFTER	t14(event text: today)
+	AFTER	ei1528(event text: seeking)
+	VAGUE	t22(event text: Tuesday)
+
+
+NYT19980212.0019.tml|ei236(entity text: said)
+
+### Previous Sentence: The other customers fled , and the police said it did not appear that anyone else was injured .
+
+### Sentence with entity: The men took no money from their victim or from the establishment , said Detective Joseph Pentangelo , a Police Department spokesman .
+
+### Following Sentence: Victor Miranda , who lives in Ms. Sanders ' apartment building at 405 Williams Ave. , said the laundry machines in the building were removed a few years ago to make room for management offices .
+
+TLinks: ei236
+	AFTER	t47(event text: a few years ago)
+	IS_INCLUDED	ei237(event text: lives)
+	AFTER	ei239(event text: removed)
+	AFTER	ei231(event text: fled)
+	AFTER	ei235(event text: took)
+	AFTER	ei240(event text: make)
+	AFTER	ei234(event text: injured)
+	VAGUE	ei232(event text: said)
+	VAGUE	ei238(event text: said)
+	VAGUE	ei233(event text: appear)
+
+
+AP900815-0044.tml|ei1529(entity text: mediate)
+
+### Previous Sentence: Iraq 's Saddam Hussein , facing U.S. and Arab troops at the Saudi border , today sought peace on another front by promising to withdraw from Iranian territory and release soldiers captured during the Iran-Iraq war .
+
+### Sentence with entity: Also today , King Hussein of Jordan arrived in Washington seeking to mediate the Persian Gulf crisis .
+
+### Following Sentence: President Bush on Tuesday said the United States may extend its naval quarantine to Jordan 's Red Sea port of Aqaba to shut off Iraq 's last unhindered trade route .
+
+TLinks: ei1529
+	VAGUE	ei1519(event text: facing)
+	VAGUE	ei1534(event text: shut)
+	AFTER	ei1526(event text: war)
+	AFTER	ei1525(event text: captured)
+	VAGUE	ei1523(event text: withdraw)
+	IS_INCLUDED	ei1530(event text: crisis)
+	VAGUE	t14(event text: today)
+	AFTER	t22(event text: Tuesday)
+	AFTER	ei1528(event text: seeking)
+	AFTER	ei1531(event text: said)
+	AFTER	ei1527(event text: arrived)
+	VAGUE	ei1520(event text: sought)
+	VAGUE	ei1522(event text: promising)
+	VAGUE	ei1532(event text: extend)
+	VAGUE	ei1524(event text: release)
+	VAGUE	t4(event text: today)
+
+
+APW19980219.0476.tml|t140(entity text: a week)
+
+### Previous Sentence: If and when the remains are found , he said , they would be turned over to the British Embassy , apparently meaning they would be sent across the border into Thailand and onward to Bangkok .
+
+### Sentence with entity: Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+
+### Following Sentence: Pol Pot is considered responsible for the radical policies that led to the deaths of as many as 1.7 million Cambodians when the communist group held power in the late 1970s .
+
+TLinks: t140
+	AFTER	t142(event text: the late 1970s)
+	INCLUDES	ei2516(event text: killed)
+	BEFORE	ei2513(event text: sent)
+	AFTER	ei2521(event text: led)
+	BEFORE	ei2510(event text: found)
+	VAGUE	ei2518(event text: considered)
+	AFTER	ei2523(event text: held)
+	BEFORE	ei2515(event text: believed)
+	IS_INCLUDED	ei2519(event text: responsible)
+	BEFORE	ei2514(event text: said)
+	BEFORE	ei2512(event text: turned)
+	AFTER	ei2520(event text: policies)
+	AFTER	ei2517(event text: capture)
+	BEFORE	ei2511(event text: said)
+	BEFORE	t2452(event text: now)
+	AFTER	ei2522(event text: deaths)
+
+
+APW19980227.0468.tml|ei107(entity text: build)
+
+### Previous Sentence: (NONE) 
+
+### Sentence with entity: MOSCOW -LRB- AP -RRB- _ The mayor of Moscow has allocated funds to help build a museum in honor of Mikhail Kalashnikov , the Russian who gave his name to the world 's most widely wielded weapon , according to a news agency report Friday .
+
+### Following Sentence: Kalashnikov designed the AK-47 automatic rifle , famed for its reliability and effectiveness .
+
+TLinks: ei107
+	AFTER	t15(event text: Friday)
+	AFTER	ei110(event text: report)
+	AFTER	ei111(event text: designed)
+	AFTER	ei108(event text: gave)
+	VAGUE	ei116(event text: help)
+	AFTER	ei109(event text: according)
+	AFTER	ei104(event text: allocated)
+
+
+AP900815-0044.tml|ei1563(entity text: said)
+
+### Previous Sentence: In a letter to President Hashemi Rafsanjani of Iran , read by a broadcaster over Baghdad radio , Saddam said he will begin withdrawing troops from Iranian territory on Friday and release Iranian prisoners of war .
+
+### Sentence with entity: Iran said an Iraqi diplomatic delegation was en route to Tehran to deliver Saddam 's message , which it said it would review `` with optimism . ''
+
+### Following Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+TLinks: ei1563
+	VAGUE	ei1565(event text: deliver)
+	BEFORE	ei1562(event text: release)
+	BEFORE	ei1560(event text: begin)
+	BEFORE	ei1567(event text: review)
+	AFTER	ei1574(event text: cease-fire)
+	AFTER	ei1572(event text: talks)
+	VAGUE	ei1558(event text: read)
+	BEFORE	ei1561(event text: withdrawing)
+	AFTER	t82(event text: eight-year)
+	VAGUE	ei1569(event text: accept)
+	AFTER	ei1575(event text: war)
+	VAGUE	ei1559(event text: said)
+	VAGUE	ei1568(event text: appeared)
+	AFTER	t79(event text: August 1988)
+	AFTER	ei1571(event text: rejected)
+	BEFORE	t65(event text: Friday)
+	VAGUE	ei1566(event text: said)
+
+
+PRI19980216.2000.0170.tml|ei225(entity text: move)
+
+### Previous Sentence: The British government has formally called for Sinn Fein , the IRA 's political wing , to be expelled from the multiparty peace talks on northern Ireland .
+
+### Sentence with entity: The move had been widely expected after northern Ireland police said they believe the IRA was behind two killings in Belfast last week .
+
+### Following Sentence: Sinn Fein chairman Mitchell McLaughlin says the party will challenge the move by legal means if they have to .
+
+TLinks: ei225
+	SIMULTANEOUS	ei222(event text: called)
+	BEFORE	ei231(event text: says)
+	BEFORE	ei232(event text: challenge)
+	IS_INCLUDED	ei224(event text: talks)
+	BEFORE	ei223(event text: expelled)
+	AFTER	ei229(event text: behind)
+	AFTER	t26(event text: last week)
+	SIMULTANEOUS	ei233(event text: move)
+	AFTER	ei228(event text: believe)
+	AFTER	ei227(event text: said)
+	AFTER	ei230(event text: killings)
+	AFTER	ei226(event text: expected)
+
+
+APW19980213.1380.tml|ei315(entity text: found)
+
+### Previous Sentence: CAGUAS , Puerto Rico -LRB- AP -RRB- _ Kidnappers kept their promise to kill a store owner they took hostage and police found the man 's dismembered and decapitated body Friday wrapped in plastic garbage bags .
+
+### Sentence with entity: Police confirmed Friday that the body found along a highway in this municipality 15 miles south of San Juan belonged to Jorge Hernandez , 49 .
+
+### Following Sentence: Hernandez was kidnapped from his small , neighborhood store in the town of Trujillo Alto at 10 p.m. Wednesday , police said .
+
+TLinks: ei315
+	IS_INCLUDED	t33(event text: Friday)
+	BEFORE	ei318(event text: said)
+	SIMULTANEOUS	ei310(event text: found)
+	AFTER	ei305(event text: kept)
+	AFTER	ei317(event text: kidnapped)
+	AFTER	ei316(event text: belonged)
+	AFTER	ei307(event text: kill)
+	IS_INCLUDED	t39(event text: Friday)
+	AFTER	t35(event text: 10 p.m. Wednesday)
+	BEFORE	ei314(event text: confirmed)
+	AFTER	ei308(event text: took)
+	IS_INCLUDED	ei313(event text: wrapped)
+
+
+APW19980213.1320.tml|t54(entity text: each Thursday)
+
+### Previous Sentence: Qantas plans daily flights between Sydney and Bombay , up from the current four flights a week , to boost business and tourism ties with India , the airline announced Friday .
+
+### Sentence with entity: In a joint statement with Tourism Minister Andrew Thomson , it said two new flights would leave Bombay on Monday and Tuesday nights from March 30 , with the third departing each Thursday from August 6 .
+
+### Following Sentence: This will add nearly 700 seats a week on the route .
+
+TLinks: t54
+	VAGUE	ei341(event text: departing)
+	VAGUE	t189(event text: Tuesday nights)
+	AFTER	ei338(event text: said)
+	VAGUE	ei354(event text: leave)
+	AFTER	t55(event text: August 6)
+	AFTER	t46(event text: current)
+	AFTER	t47(event text: Friday)
+	AFTER	t56(event text: March 30)
+	AFTER	ei336(event text: announced)
+	VAGUE	ei334(event text: boost)
+	VAGUE	ei342(event text: add)
+	VAGUE	ei331(event text: plans)
+	VAGUE	t190(event text: Monday)
+
+
+NYT19980206.0460.tml|ei2230(entity text: extended)
+
+### Previous Sentence: With potential inflation counterbalanced by worries about possible price declines , the Fed and its chairman , Alan Greenspan , have suggested that they intend to keep interest rates unchanged until the economy tilts clearly in one direction or another .
+
+### Sentence with entity: The job figures for January extended a surge in employment gains that began last fall , just when the labor market had showed signs of cooling .
+
+### Following Sentence: After accounting for a small downward revision Friday to December 's figures , the economy has been creating jobs at a rate of 358,000 a month for the last four months _ and 381,000 over the last three months _ after averaging 242,000 for the first nine months of 1997 .
+
+TLinks: ei2230
+	VAGUE	ei2225(event text: declines)
+	IS_INCLUDED	t208(event text: the last three months)
+	VAGUE	ei2235(event text: accounting)
+	IS_INCLUDED	t207(event text: the last four months)
+	BEFORE	ei2236(event text: revision)
+	IS_INCLUDED	ei2237(event text: creating)
+	VAGUE	ei2227(event text: intend)
+	AFTER	ei2233(event text: began)
+	AFTER	t212(event text: the first nine months)
+	AFTER	ei2238(event text: averaging)
+	VAGUE	t203(event text: January)
+	AFTER	t204(event text: last fall)
+	VAGUE	ei2228(event text: keep)
+	VAGUE	ei2224(event text: counterbalanced)
+	VAGUE	ei2232(event text: gains)
+	BEFORE	ei2229(event text: tilts)
+	AFTER	t211(event text: 1997)
+	VAGUE	t206(event text: December)
+	BEFORE	t205(event text: Friday)
+	VAGUE	ei2226(event text: suggested)
+	IS_INCLUDED	ei2231(event text: surge)
+	AFTER	ei2234(event text: showed)
+
+
+AP900816-0139.tml|ei1549(entity text: close)
+
+### Previous Sentence: After a two-hour meeting at his Kennebunkport home with King Hussein of Jordan , Bush said , `` I did not come away with any feeling of hope '' that Iraq would withdraw its army from Kuwait .
+
+### Sentence with entity: Bush also said Thursday that King Hussein assured him Jordan would close the last remaining free port to most Iraqi trade as the economic embargo on materials to Iraq continued unabated .
+
+### Following Sentence: Foodstuffs are among the goods being blocked from entry ; Iraq imports about three-quarters of its food .
+
+TLinks: ei1549
+	AFTER	ei1543(event text: said)
+	IS_INCLUDED	ei1550(event text: embargo)
+	VAGUE	ei1546(event text: withdraw)
+	AFTER	t290(event text: two-hour)
+	VAGUE	ei1553(event text: blocked)
+	VAGUE	t291(event text: Thursday)
+	IS_INCLUDED	ei1551(event text: continued)
+	AFTER	ei1548(event text: assured)
+	AFTER	ei1542(event text: meeting)
+	AFTER	ei1544(event text: come)
+	AFTER	ei1547(event text: said)
+
+
+APW19980227.0487.tml|ei433(entity text: killing)
+
+### Previous Sentence: Instead , she turned to her community rabbi in the Jewish West Bank settlement of Beit El and told him about Amir 's statements .
+
+### Sentence with entity: The rabbi said called the talk about killing Rabin `` nonsense , '' and said Jews are prohibited from killing one another , the radio reports said .
+
+### Following Sentence: Har-Shefi described Amir as an `` original thinker , '' as well as delusional and a liar .
+
+TLinks: ei433
+	AFTER	ei432(event text: talk)
+	VAGUE	ei436(event text: prohibited)
+	AFTER	ei427(event text: turned)
+	AFTER	ei435(event text: said)
+	BEFORE	ei438(event text: described)
+	AFTER	ei428(event text: told)
+	BEFORE	ei437(event text: said)
+	AFTER	ei430(event text: said)
+	AFTER	ei431(event text: called)
+
+
+NYT19980206.0466.tml|ei533(entity text: want)
+
+### Previous Sentence: We 're not going to dignify the latest false leak with a response . ''
+
+### Sentence with entity: McCurry on Friday `` I want to be absolutely clear , to the extent there is any implication or the slightest suggestion that Mrs. Currie believes that the President or anyone else tried to influence her recollection , that is absolutely false and a mischaracterization of the facts .
+
+### Following Sentence: I am shocked and dismayed by the numerous leaks regarding Mrs. Currie 's grand jury testimony . ''
+
+TLinks: ei533
+	AFTER	ei542(event text: mischaracterization)
+	VAGUE	ei532(event text: response)
+	AFTER	ei531(event text: leak)
+	AFTER	ei545(event text: leaks)
+	VAGUE	ei535(event text: implication)
+	VAGUE	ei530(event text: dignify)
+	AFTER	ei538(event text: tried)
+	AFTER	ei539(event text: influence)
+	AFTER	ei546(event text: testimony)
+	VAGUE	ei543(event text: shocked)
+	VAGUE	ei536(event text: suggestion)
+	IS_INCLUDED	t37(event text: Friday)
+	VAGUE	ei544(event text: dismayed)
+	BEFORE	ei534(event text: clear)
+	IS_INCLUDED	ei537(event text: believes)
+
+
+AP900815-0044.tml|ei1584(entity text: said)
+
+### Previous Sentence: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+### Sentence with entity: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+### Following Sentence: In other developments : The Pentagon said that Defense Secretary Dick Cheney is considering urging Bush to order a national callup of armed forces reserves for active duty because of the drain on units sending soldiers abroad .
+
+TLinks: ei1584
+	BEFORE	ei1586(event text: turn)
+	VAGUE	ei1577(event text: aimed)
+	VAGUE	ei1576(event text: seemed)
+	AFTER	ei1581(event text: invasion)
+	BEFORE	ei1578(event text: heading)
+	BEFORE	ei1592(event text: urging)
+	IS_INCLUDED	ei1596(event text: drain)
+	BEFORE	ei1594(event text: callup)
+	VAGUE	ei1590(event text: said)
+	AFTER	t89(event text: Aug. 2)
+	AFTER	ei1585(event text: sought)
+	VAGUE	ei1597(event text: sending)
+	VAGUE	ei1591(event text: considering)
+	AFTER	ei1582(event text: criticized)
+	AFTER	ei1580(event text: condemned)
+	AFTER	ei1583(event text: dispatched)
+	VAGUE	ei1589(event text: harbor)
+	BEFORE	ei1593(event text: order)
+
+
+AP900815-0044.tml|ei1583(entity text: dispatched)
+
+### Previous Sentence: Saddam appeared to accept a border demarcation treaty he had rejected in peace talks following the August 1988 cease-fire of the eight-year war with Iran .
+
+### Sentence with entity: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+### Following Sentence: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+TLinks: ei1583
+	AFTER	ei1575(event text: war)
+	VAGUE	t89(event text: Aug. 2)
+	BEFORE	ei1586(event text: turn)
+	AFTER	t79(event text: August 1988)
+	AFTER	ei1574(event text: cease-fire)
+	BEFORE	ei1585(event text: sought)
+	VAGUE	ei1580(event text: condemned)
+	VAGUE	ei1589(event text: harbor)
+	VAGUE	ei1581(event text: invasion)
+	BEFORE	ei1568(event text: appeared)
+	BEFORE	ei1582(event text: criticized)
+	AFTER	t82(event text: eight-year)
+	VAGUE	ei1576(event text: seemed)
+	BEFORE	ei1577(event text: aimed)
+	AFTER	ei1571(event text: rejected)
+	BEFORE	ei1578(event text: heading)
+	BEFORE	ei1584(event text: said)
+	AFTER	ei1572(event text: talks)
+	BEFORE	ei1569(event text: accept)
+
+
+APW19980219.0476.tml|ei2511(entity text: said)
+
+### Previous Sentence: He said he received information from Khmer Rouge guerrillas on where the body had been buried , and recently ordered 10 of his men from a force of 500 near Khmer Rouge headquarters in Anlong Veng to conduct the search .
+
+### Sentence with entity: If and when the remains are found , he said , they would be turned over to the British Embassy , apparently meaning they would be sent across the border into Thailand and onward to Bangkok .
+
+### Following Sentence: Nhek Bunchhay said he now believed Howes had been killed within a week of his capture by a Khmer Rouge faction loyal to Pol Pot , then the guerrilla group 's leader .
+
+TLinks: ei2511
+	AFTER	ei2505(event text: received)
+	AFTER	ei2517(event text: capture)
+	AFTER	ei2516(event text: killed)
+	VAGUE	ei2508(event text: conduct)
+	BEFORE	ei2510(event text: found)
+	VAGUE	ei2504(event text: said)
+	VAGUE	ei2514(event text: said)
+	AFTER	ei2506(event text: buried)
+	AFTER	ei2507(event text: ordered)
+	BEFORE	ei2513(event text: sent)
+	IS_INCLUDED	ei2515(event text: believed)
+	AFTER	t140(event text: a week)
+	VAGUE	ei2509(event text: search)
+	BEFORE	ei2512(event text: turned)
+	IS_INCLUDED	t2452(event text: now)
+
+
+AP900815-0044.tml|ei1586(entity text: turn)
+
+### Previous Sentence: The move seemed aimed at heading off more trouble with Iran , which had condemned Iraq 's invasion of Kuwait on Aug. 2 but also criticized the multinational force dispatched to Saudi Arabia .
+
+### Sentence with entity: Saddam said he sought to `` turn the gulf into a lake of peace free of foreign fleets and forces that harbor ill intentions against us . ''
+
+### Following Sentence: In other developments : The Pentagon said that Defense Secretary Dick Cheney is considering urging Bush to order a national callup of armed forces reserves for active duty because of the drain on units sending soldiers abroad .
+
+TLinks: ei1586
+	VAGUE	ei1578(event text: heading)
+	AFTER	ei1584(event text: said)
+	AFTER	ei1583(event text: dispatched)
+	VAGUE	ei1596(event text: drain)
+	VAGUE	ei1585(event text: sought)
+	VAGUE	ei1590(event text: said)
+	VAGUE	ei1592(event text: urging)
+	AFTER	ei1580(event text: condemned)
+	AFTER	ei1581(event text: invasion)
+	VAGUE	ei1594(event text: callup)
+	VAGUE	ei1576(event text: seemed)
+	VAGUE	ei1577(event text: aimed)
+	VAGUE	ei1593(event text: order)
+	VAGUE	ei1597(event text: sending)
+	VAGUE	ei1589(event text: harbor)
+	AFTER	t89(event text: Aug. 2)
+	AFTER	ei1582(event text: criticized)
+	VAGUE	ei1591(event text: considering)
+
+
+NYT19980206.0460.tml|ei2251(entity text: move)
+
+### Previous Sentence: Lower rates have helped invigorate housing and other interest-sensitive sectors of the economy by making loans more affordable , and have allowed companies to continue investing heavily in more efficient equipment .
+
+### Sentence with entity: The likelihood that the federal budget will soon move from deficit into surplus has further improved the outlook .
+
+### Following Sentence: The less money the government needs to borrow , the more is freed for private investment .
+
+TLinks: ei2251
+	AFTER	ei2252(event text: improved)
+	VAGUE	ei2250(event text: investing)
+	AFTER	ei2246(event text: invigorate)
+	AFTER	ei2249(event text: continue)
+	AFTER	ei2245(event text: helped)
+	AFTER	ei2247(event text: making)
+	AFTER	ei2248(event text: allowed)
+
+

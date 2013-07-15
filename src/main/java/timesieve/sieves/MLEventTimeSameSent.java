@@ -28,7 +28,8 @@ import timesieve.util.Util;
  * Right now this just makes one classifier for all event-time pairs, and doesn't use the
  * specific ones for syntactic dominance.
  * 
- * Performance	p=0.52	28 of 54	Non-VAGUE:	p=0.64	28 of 44
+ * MLEventTimeSameSent             p=0.48  26 of 54        Non-VAGUE:      p=0.57  26 of 46
+ * (baseline 0.37)
  * 
  * @author chambers
  */
@@ -37,7 +38,7 @@ public class MLEventTimeSameSent implements Sieve {
   Classifier<String,String> etSameSentExistsClassifier = null; // binary, is there a link or not?
   TLinkFeaturizer featurizer;
   
-  String etSameSentName = "tlink.et.samesent.classifier-all";
+  String etSameSentName = "tlink.et.samesent.classifier";
   
   boolean debug = true;
   int featMinOccurrence = 2;

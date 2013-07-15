@@ -177,6 +177,26 @@ public class Timex {
   public boolean isFutureReference() {
   	return this.value.equalsIgnoreCase("FUTURE_REF");
   }
+  
+  public boolean isDCT() {
+  	return documentFunction == DocumentFunction.CREATION_TIME;
+  }
+  
+  /**
+   * Determines if this timex occurs before the other in the document.
+   * It assumes both timexes are from the same document.
+   * @param other Another timex to compare against.
+   * @return True if this timex occurs before the other in the document.
+   */
+  public boolean isBeforeInText(Timex other) {
+  	if( sid < other.getSid() )
+  		return true;
+  	else if( sid == other.getSid() && tokenOffset < other.getTokenOffset() )
+  		return true;
+  	else 
+  		return false;
+  }
+
 	
   /**
    * @desc Looks in the "value" attribute of the timexes, and compares the ordering

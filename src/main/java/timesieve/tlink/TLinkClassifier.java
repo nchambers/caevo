@@ -1053,7 +1053,7 @@ public class TLinkClassifier {
         }
       }
       
-      doc.deleteTlinks();
+      doc.removeTlinks();
       doc.addTlinks(links);
     }
     System.out.println("Labeled known tlinks, finished.");
@@ -1102,7 +1102,7 @@ public class TLinkClassifier {
   public static Set<String> getUniqueLabels(List<TLinkDatum> datums) {
     Set<String> labels = new HashSet<String>();
     for( TLinkDatum datum : datums )
-      labels.add(datum.getLabel());
+      labels.add(datum.getLabelAsString());
     return labels;
   }
   

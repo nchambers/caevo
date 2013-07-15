@@ -24,8 +24,9 @@ import timesieve.util.Util;
 
 /**
  * Machine learned event-time pairs inter-sentence.
- * 
- * Performance	p=0.41	39 of 95	Non-VAGUE:	p=0.51	39 of 77
+ *
+ * MLEventTimeDiffSent             p=0.37  36 of 97        Non-VAGUE:      p=0.41  36 of 87
+ * (Baseline 0.35)
  *
  * @author chambers
  */
@@ -34,7 +35,7 @@ public class MLEventTimeDiffSent implements Sieve {
   Classifier<String,String> etDiffSentExistsClassifier = null; // binary, is there a link or not?
   TLinkFeaturizer featurizer;
   
-  String etDiffSentName = "tlink.et.diffsent.classifier-all";
+  String etDiffSentName = "tlink.et.diffsent.classifier";
   
   boolean debug = true;
   int featMinOccurrence = 2;
