@@ -12,14 +12,18 @@ import timesieve.tlink.TimeTimeLink;
 import timesieve.util.Pair;
 
 /**
- * Order date and time expressions by their Timex normalized values
+ * TimeTimeSieve orders date and time expressions by their Timex normalized values
  * 	- Currently does not consider durations or sets
  * 		- Durations require start and end times that we currently don't have
  *  - Only orders FUTURE_REF with times in the past, and PAST_REF with times in the future
  *  - Ignores PRESENT_REF due to inconsistent annotations of "now"
- *  - Current precision: .86 (55 of 64)
- *  	- All imprecision is due to incorrect annotations
+ *  - Currently, all imprecision is due to incorrect annotations
  *  - Also orders all times with document creation time
+ * 
+ * Current results on various data sets:
+ * 	- Train: p=0.88	52 of 59	Non-VAGUE:	p=0.95	52 of 55
+ * 	- Dev: p=1.00	5 of 5	Non-VAGUE:	p=1.00	5 of 5
+ * 	- All: p=0.89	57 of 64	Non-VAGUE:	p=0.95	57 of 60
  * 
  * @author Bill McDowell
  */
