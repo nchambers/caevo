@@ -34,6 +34,11 @@ import timesieve.util.TreeOperator;
  * This sieve deals with event pairs in a dependency relationship,
  * when one of the verbs is a reporting verb.
  * 
+ * 07/15/2013
+ * train:
+ * XCompDepSieve			p=0.68	111 of 164	Non-VAGUE:	p=0.80	111 of 138
+ * dev:
+ * XCompDepSieve			p=0.70	21 of 30	Non-VAGUE:	p=0.78	21 of 27
  * 
  * 
  * @author cassidy
@@ -119,6 +124,8 @@ public class XCompDepSieve implements Sieve {
 							classifyEventPair_xcomp(eGov, eDep, sent, proposed);
 						if (relType.equals("ccomp"))
 							classifyEventPair_ccomp(eGov, eDep, sent, proposed);
+						if (relType.equals("conj_and"))
+							classifyEventPair_conj_and(eGov, eDep, sent, proposed);
 					}		
 				}
 			}
@@ -131,6 +138,12 @@ public class XCompDepSieve implements Sieve {
 		return proposed;
 	}
 	
+	private void classifyEventPair_conj_and(TextEvent eGov, TextEvent eDep,
+			SieveSentence sent, List<TLink> proposed) {
+		proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.VAGUE));
+		
+	}
+
 	private void classifyEventPair_xcomp(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TLink> proposed ) {
 		TextEvent.Tense eGovTense = eGov.getTense();
 		TextEvent.Tense eDepTense = eDep.getTense();
