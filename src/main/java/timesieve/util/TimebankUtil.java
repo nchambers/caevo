@@ -19,6 +19,9 @@ import org.w3c.dom.NodeList; // yes?
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
+import edu.stanford.nlp.trees.TreeGraphNode;
+import edu.stanford.nlp.trees.TypedDependency;
+
 import timesieve.*;
 
 public class TimebankUtil {
@@ -216,5 +219,36 @@ public class TimebankUtil {
       return str;
     }
   }
-  
+  /**
+   * There are syntactic contexts that aren't considered "future tense"
+   * but where intuitively, the event in question is located in the future.
+   * For example, in "X would Y", where X is the agent of the event Y,
+   * Y most likely has not yet happened (how to interpret the likelihood of Y ever hapening at all
+   * is a different concern - the point is that if it does happen it will be in the future).
+   * 
+   * 
+   * @returns the tense of event, where tense is less strictly defined.
+   */
+  public static TextEvent.Tense pseudoTense(SieveSentence sent, List<TypedDependency> tds, TextEvent event) {
+  	int eventIndex = event.getIndex();
+  	for (TypedDependency td : tds) {
+  		TreeGraphNode dep = td.dep();
+  		if (eventIndex == td.gov().index() && 
+  				isModalWord(dep.toString("value").toLowerCase()) &&
+  				td.reln().toString().equals("aux")) {
+  			return TextEvent.Tense.FUTURE;
+  		}
+  			
+  		}
+  		return event.getTense();
+  	}
+  public static boolean isModalWord(String word) {
+  	if (word.toLowerCase().equals("would") || word.toLowerCase().equals("could") ||
+  			word.toLowerCase().equals("might") || word.toLowerCase().equals("may") ||
+  			word.toLowerCase().equals("should") || word.toLowerCase().equals("'d") ||
+  			word.toLowerCase().equals("will")){
+  		return true;
+  	}
+  	else return false;
+  }
 }

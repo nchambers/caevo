@@ -7,6 +7,7 @@ import java.util.List;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.trees.GrammaticalRelation;
 import edu.stanford.nlp.trees.Tree;
+import edu.stanford.nlp.trees.TreeGraphNode;
 import edu.stanford.nlp.trees.TypedDependency;
 
 import timesieve.Main;
@@ -104,7 +105,6 @@ public class XCompDepSieve implements Sieve {
 					// if e1 governs e2
 				if ((e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index()) || 
 						(e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index())){
-				
 						TextEvent eGov = e1;
 						TextEvent eDep = e2;
 		
@@ -116,7 +116,9 @@ public class XCompDepSieve implements Sieve {
 						String relType = td.reln().toString();
 						
 						if (relType.equals("xcomp"))
-							classifyEventPair(eGov, eDep, sent, proposed);	
+							classifyEventPair_xcomp(eGov, eDep, sent, proposed);
+						if (relType.equals("ccomp"))
+							classifyEventPair_ccomp(eGov, eDep, sent, proposed);
 					}		
 				}
 			}
@@ -129,7 +131,7 @@ public class XCompDepSieve implements Sieve {
 		return proposed;
 	}
 	
-	private void classifyEventPair(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TLink> proposed ) {
+	private void classifyEventPair_xcomp(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TLink> proposed ) {
 		TextEvent.Tense eGovTense = eGov.getTense();
 		TextEvent.Tense eDepTense = eDep.getTense();
 		TextEvent.Class eDepClass = eDep.getTheClass();
@@ -151,6 +153,34 @@ public class XCompDepSieve implements Sieve {
 		}
 		else
 			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
+	}
+	
+	private void classifyEventPair_ccomp(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TLink> proposed ) {
+		TextEvent.Tense eGovTense = eGov.getTense();
+		TextEvent.Tense eDepTense = eDep.getTense();
+		TextEvent.Class eDepClass = eDep.getTheClass();
+		TextEvent.Class eGovClass = eGov.getTheClass();
+		TextEvent.Aspect eDepAspect = eDep.getAspect();
+		TextEvent.Aspect eGovAspect = eGov.getAspect();
+		String govStr = eGov.getString();
+		String depStr = eDep.getString();
+		
+//		if (eGovClass == TextEvent.Class.I_STATE) {
+//			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.VAGUE));
+//		}
+		if (eGovTense == TextEvent.Tense.PAST && eGovAspect == TextEvent.Aspect.NONE &&
+				eDepTense == TextEvent.Tense.PAST && eDepAspect == TextEvent.Aspect.NONE // || eDepAspect == TextEvent.Aspect.PERFECTIVE
+				&& eDepClass == TextEvent.Class.OCCURRENCE) {
+			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
+		}
+		if (eGovTense == TextEvent.Tense.PAST && eGovAspect == TextEvent.Aspect.NONE &&
+				eDepTense == TextEvent.Tense.NONE && eDepAspect == TextEvent.Aspect.NONE &&
+				eDepClass == TextEvent.Class.OCCURRENCE) {
+			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
+			
+		}
+		//else
+			//proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
 	}
 	
 	private String posTagFromTree(Tree sentParseTree, int tokenIndex){

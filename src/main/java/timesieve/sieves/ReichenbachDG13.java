@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import edu.stanford.nlp.trees.Tree;
+import edu.stanford.nlp.trees.TypedDependency;
 
 import timesieve.InfoFile;
 import timesieve.SieveDocument;
@@ -16,6 +17,7 @@ import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.TreeOperator;
+import timesieve.util.TimebankUtil;
 
 /**
  *SUMMARY:
@@ -140,6 +142,10 @@ public class ReichenbachDG13 implements Sieve {
 		// we need all trees in order to get pos tags
 		List<Tree> trees = doc.getAllParseTrees();
 		
+		// we need the sentences and td's to pass to the "pseudoTense" util function
+		List<SieveSentence> sents = doc.getSentences();
+		
+		
 		// for each event, compare is with all events in range, in accordance
 		// with sentWindow.
 		int numSents = allEvents.size();
@@ -154,7 +160,7 @@ public class ReichenbachDG13 implements Sieve {
 				// apply adapted D&G2013 mapping (via getLabel)
 				for (int j = i + 1; j < numEvents; j++) {
 					TextEvent e2 = allEvents.get(sid).get(j);
-					TLink.Type label = getLabel(e1, e2, trees);
+					TLink.Type label = getLabel(e1, e2, sents.get(sid), sents.get(sid), trees);
 					// if the label is null, the mapping couldn't be applied.
 					// otherwise, add (e1, e2, label) to proposed.
 					if (label == null) continue;
@@ -172,7 +178,7 @@ public class ReichenbachDG13 implements Sieve {
 					for (int k = 0; k < numEvents2; k++) {
 						// label (e1, e2, label) only if label is not null, as in above
 						TextEvent e2 = allEvents.get(sid2).get(k);
-						TLink.Type label = getLabel(e1, e2, trees);
+						TLink.Type label = getLabel(e1, e2, sents.get(sid), sents.get(sid2), trees);
 						if (label == null) continue;
 						addPair(e1, e2, label, proposed, doc);
 					}
@@ -204,7 +210,7 @@ public class ReichenbachDG13 implements Sieve {
  // get the label indicated for (e1, e2) by the D&G mapping.
  // this method also applies filters that eliminate certain events and event pairs
 	// from consideration.
-	private TLink.Type getLabel(TextEvent e1, TextEvent e2, List<Tree> trees) {
+	private TLink.Type getLabel(TextEvent e1, TextEvent e2, SieveSentence sent1, SieveSentence sent2, List<Tree> trees) {
 		// get pos tags for e1 and e2
 		String e1Pos = posTagFromTree(trees.get(e1.getSid()), e1.getIndex());
 		String e2Pos = posTagFromTree(trees.get(e2.getSid()), e2.getIndex());
@@ -219,7 +225,7 @@ public class ReichenbachDG13 implements Sieve {
 		}
 		// if we've made it this far, apply the mapping to (e1, e2) using 
 		else {
-			return taToLabel(e1, e2);
+			return taToLabel(e1, e2, sent1, sent2);
 		}
 	}
 	// check if events have the same tense. this is used for the setting in which two events (verbs) are assumed
@@ -228,13 +234,17 @@ public class ReichenbachDG13 implements Sieve {
 	public boolean eventsShareTense(TextEvent e1, TextEvent e2) {return e1.getTense() == e2.getTense();}
 
 	// apply mapping adapted from D&G2013
-	public TLink.Type taToLabel(TextEvent e1, TextEvent e2){
+	public TLink.Type taToLabel(TextEvent e1, TextEvent e2, SieveSentence sent1, SieveSentence sent2){
 		
 		// First convert e1(2)Tense(Aspect) to their simplified forms 
 		// as per D&G's mapping (via simplifyTense and simplifyAspect)
-		TextEvent.Tense e1SimpTense = simplifyTense(e1.getTense());
+		TextEvent.Tense e1Tense = TimebankUtil.pseudoTense(sent1, sent1.getDeps(), e1);
+		TextEvent.Tense e2Tense = TimebankUtil.pseudoTense(sent2, sent2.getDeps(), e2);
+		 //TextEvent.Tense e1Tense = e1.getTense();
+		 //TextEvent.Tense e2Tense = e2.getTense();
+		TextEvent.Tense e1SimpTense = simplifyTense(e1Tense);
 		TextEvent.Aspect e1SimpAspect = simplifyAspect(e1.getAspect());
-		TextEvent.Tense e2SimpTense = simplifyTense(e2.getTense());
+		TextEvent.Tense e2SimpTense = simplifyTense(e2Tense);
 		TextEvent.Aspect e2SimpAspect = simplifyAspect(e2.getAspect());
 		
 		// define the boolean variables that we need to check to apply mapping
