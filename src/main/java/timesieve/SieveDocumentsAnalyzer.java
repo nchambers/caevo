@@ -7,6 +7,7 @@ import java.util.Map.Entry;
 
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
+import timesieve.util.Pair;
 
 /**
  * For running various analyses on corpus to get ideas for Sieves
@@ -18,6 +19,75 @@ public class SieveDocumentsAnalyzer {
 	
 	public SieveDocumentsAnalyzer(SieveDocuments docs) {
 		this.docs = docs;
+	}
+	
+	public String getNominalEventLinkString() {
+		StringBuilder str = new StringBuilder();
+		
+		for (SieveDocument doc : this.docs.getDocuments()) {
+			List<TLink> links = doc.getTlinksOfType(EventEventLink.class);
+			HashMap<String, Pair<Integer, Integer>> eventVagueFrequencies= new HashMap<String, Pair<Integer, Integer>>();
+			for (TLink link : links) {
+				TextEvent e1 = doc.getEventByEiid(link.getId1());
+				TextEvent e2 = doc.getEventByEiid(link.getId2());
+				
+				if (e1.getTense() != TextEvent.Tense.NONE || e1.getAspect() != TextEvent.Aspect.NONE)
+					continue;
+				
+				if (!eventVagueFrequencies.containsKey(e1.getEiid()))
+					eventVagueFrequencies.put(e1.getEiid(), new Pair<Integer, Integer>(0,0));
+				Pair<Integer, Integer> frac1 = eventVagueFrequencies.get(e1.getEiid());
+				frac1.setFirst((link.getRelation() == TLink.Type.VAGUE) ? frac1.first() + 1 : frac1.first());
+				frac1.setSecond(frac1.second() + 1);
+				
+				if (!eventVagueFrequencies.containsKey(e2.getEiid()))
+					eventVagueFrequencies.put(e2.getEiid(), new Pair<Integer, Integer>(0,0));
+				Pair<Integer, Integer> frac2 = eventVagueFrequencies.get(e2.getEiid());
+				frac2.setFirst((link.getRelation() == TLink.Type.VAGUE) ? frac2.first() + 1 : frac2.first());
+				frac2.setSecond(frac2.second() + 1);
+			}
+			
+			for (Entry<String, Pair<Integer, Integer>> entry : eventVagueFrequencies.entrySet()) {
+				TextEvent e = doc.getEventByEiid(entry.getKey());
+				str.append(e.getString())
+					 .append("\t")
+					 .append(entry.getValue().first())
+					 .append("\t")
+					 .append(entry.getValue().second())
+					 .append("\t")
+					 .append(doc.getSentences().get(e.getSid()).sentence())
+					 .append("\n");
+			}
+			
+		}
+
+		return str.toString();
+	}
+	
+	public HashMap<String, Integer> getModalityCounts() {
+		HashMap<String, Integer> modalityCounts = new HashMap<String, Integer>();
+		
+		for (SieveDocument doc : this.docs.getDocuments()) {
+			List<TextEvent> events = doc.getEvents();
+			for (TextEvent event : events) {
+				if (!modalityCounts.containsKey(event.getModality()))
+					modalityCounts.put(event.getModality(), 0);
+				modalityCounts.put(event.getModality(), modalityCounts.get(event.getModality()) + 1);
+			}
+		}
+		
+		return modalityCounts;
+	}
+	
+	public String getModalityCountsString() {
+		HashMap<String, Integer> modalityCounts = this.getModalityCounts();
+		StringBuilder str = new StringBuilder();
+		
+		for (Entry<String, Integer> e : modalityCounts.entrySet()) {
+			str.append(e.getKey()).append("\t").append(e.getValue()).append("\n");
+		}
+		
+		return str.toString();
 	}
 	
 	public HashMap<TextEventPairPattern, HashMap<TLink.Type, Integer>> getEventEventLinkCounts(boolean distinguishClass, 
@@ -125,7 +195,7 @@ public class SieveDocumentsAnalyzer {
  
 			FileWriter fw = new FileWriter(file.getAbsoluteFile());
 			BufferedWriter bw = new BufferedWriter(fw);
-			bw.write(analyzer.getLinkDistributionsString(true, false, true, true));
+			bw.write(analyzer.getModalityCountsString());//analyzer.getLinkDistributionsString(true, false, true, true));
 			bw.close();
  
 		} catch (IOException e) {
