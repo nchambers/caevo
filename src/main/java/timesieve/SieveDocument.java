@@ -139,6 +139,9 @@ public class SieveDocument {
    * Deletes all the TLinks from the XML file
    */
   public void removeTlinks() {
+  	if (tlinks == null)
+  		return;
+  	
   	for (TLink tlink : tlinks)
   		tlink.setDocument(null);
   	tlinks.clear();

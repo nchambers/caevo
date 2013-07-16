@@ -197,6 +197,9 @@ public class Evaluate {
 		int numIncorrectNonVague = 0;
 		int numMissed = 0;
 
+		if (goldDocs == null)
+			return;
+		
 		// Make sure all TLinks follow text order and invert relations that don't.
 //		normalizeAllTlinksByTextOrder(goldDocs);
 		normalizeAllTlinksByTextOrder(guessedDocs);
