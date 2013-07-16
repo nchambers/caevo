@@ -60,6 +60,19 @@ import edu.stanford.nlp.trees.TypedDependency;
  * EVENT_BEFORE_TIMEX, TIMEX_BEFORE_EVENT, EVENT_GOVERNS_TIMEX
  * AdjacentVerbTimex		p=0.60	83 of 138	Non-VAGUE:	p=0.74	83 of 112
  * 
+ * 
+ * After updated labels; introduction of new train and dev set; refactoring:
+ * 0	AdjacentVerbTimex		p=0.74	56 of 76	Non-VAGUE:	p=0.88	56 of 64
+ * 1	AdjacentVerbTimex		p=0.73	67 of 92	Non-VAGUE:	p=0.85	67 of 79
+ * 2	AdjacentVerbTimex		p=0.72	77 of 107	Non-VAGUE:	p=0.86	77 of 90
+ * 3	AdjacentVerbTimex		p=0.69	84 of 122	Non-VAGUE:	p=0.81	84 of 104
+ * 4	AdjacentVerbTimex		p=0.66	92 of 139	Non-VAGUE:	p=0.77	92 of 120
+ * 5	AdjacentVerbTimex		p=0.60	96 of 161	Non-VAGUE:	p=0.71	96 of 135
+ * 6	AdjacentVerbTimex		p=0.57	106 of 185	Non-VAGUE:	p=0.67	106 of 158
+ * 7	AdjacentVerbTimex		p=0.55	113 of 205	Non-VAGUE:	p=0.66	113 of 171
+ * 8	AdjacentVerbTimex		p=0.53	116 of 217	Non-VAGUE:	p=0.64	116 of 182
+ * 
+ * 
  * EVENT_BEFORE_TIMEX uses preposition-based rules (default is_included)
  * TIMEX_BEFORE_EVENT default is_included; vague for event "now"; vague when "said" precedes timex
  * 	TODO: generalize the third rule to reporting verbs
@@ -187,20 +200,21 @@ public class AdjacentVerbTimex implements Sieve {
 					TLink depTlink_te = null;
 					// Now, classify pairs for various parameter settings
 					
-				  
-					// if verb is before timex, use the following rules...
-					if (EVENT_BEFORE_TIMEX && verbIsBeforeTimex) {
+					 if (EVENT_BEFORE_TIMEX && verbIsBeforeTimex) {
 						flatTlink_et = eventBeforeTimex(eventToTimexDist, event, timex, sent, tree);
 					}
 					// if timex is before verb, use these rules...
 					else if (TIMEX_BEFORE_EVENT && timexIsBeforeVerb) {
-						//if (eventDoesGovernTimex == false)
-							//flatTlink_te = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
-						//else
+						if (eventDoesGovernTimex == false)
+							flatTlink_te = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
+						else {
 							flatTlink_te = timexBeforeEvent(eventToTimexDist, event, timex, sent, tree);
+							System.out.printf("E GOV T: %s(%s) %s(%s)\n%s", event.getString(), event.getId(), timex.getText(), timex.getTid(), sent.sentence());
+						}
 					}
-					// if verb governs timex, use these rules
-					if (EVENT_GOVERNS_TIMEX && eventDoesGovernTimex) {
+					
+				// if verb governs timex, use these rules
+					else if (EVENT_GOVERNS_TIMEX && eventDoesGovernTimex) {
 						depTlink_et = eventGovernsTimex(eventToTimexDist, event, timex, sent, tree, depRel);
 						
 					}
@@ -209,9 +223,14 @@ public class AdjacentVerbTimex implements Sieve {
 						// TIMEX_GOVERNS_EVENT is never true in the data!
 						depTlink_te = timexGovernsEvent(eventToTimexDist, event, timex, sent, tree, depRel);
 					}
-				
-					// TODO Decide which tlink to take depending on parameters
-					// For now, take flatTlink, backoff to depTlink
+					
+					
+					
+					// heriarchy of preference is already determined in the above conditional blocks
+					// take flat unless the event and timex are not within the numInterWords range,
+					// in which case back off to dep. By setting numInterWords low we only use the 
+					// flat method when the event and timex are very close together. This seems
+					// to work best.
 					if (depTlink_te != null)
 						tlink = depTlink_te;
 					if (flatTlink_te != null)
@@ -272,7 +291,14 @@ public class AdjacentVerbTimex implements Sieve {
 private TLink eventGovernsTimex(int eventToTimexDist, TextEvent event,
 			Timex timex, SieveSentence sent, Tree tree, GrammaticalRelation depRel) {
 	TLink tlink = null;
-	tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.IS_INCLUDED);
+	if (timex.getText().toLowerCase().equals("now")) {
+ 		if (event.getAspect() == TextEvent.Aspect.PROGRESSIVE)
+ 			tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.INCLUDES);
+ 		else
+ 			tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
+ }
+	else
+		tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.IS_INCLUDED);
 	//tlink = eventBeforeTimex(eventToTimexDist,event,timex,sent,tree);
 	if (debug == true) {
 		System.out.printf("Event-Governs-Timex: %s(%s) <%s> %s(%s)\n%s\n", 
@@ -330,7 +356,8 @@ private TLink timexBeforeEvent(int eventToTimexDist, TextEvent event, Timex time
 private TLink eventBeforeTimex(int eventToTimexDist, TextEvent event, Timex timex, SieveSentence sent, Tree tree) {
 // If there are no intervening words, label is_included
 	 TLink tlink = null;
-		if (eventToTimexDist == 1) {
+	 
+	 		if (eventToTimexDist == 1) {
 			return new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.IS_INCLUDED);
 		}
 		else {
