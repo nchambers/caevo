@@ -72,7 +72,7 @@ import edu.stanford.nlp.trees.TypedDependency;
  */
 public class AdjacentVerbTimex implements Sieve {
 	
-	public boolean debug = true;
+	public boolean debug = false;
 	private boolean EVENT_BEFORE_TIMEX = true;
 	private boolean TIMEX_BEFORE_EVENT = true;
 	private boolean EVENT_GOVERNS_TIMEX = true;
@@ -122,7 +122,7 @@ public class AdjacentVerbTimex implements Sieve {
 		// Iterate over sentences in doc and classify verb/timex pairs
 		for( SieveSentence sent : sentList ) {
 			// Get a list of all dependencies in the sentence
-		  // We'll need the parse tree from sentence to calculate a word's POS
+		  // We'll need the parse tree from each sentence to calculate a word's POS
 			List<TypedDependency> deps = sent.getDeps();
 			Tree tree = null;  // initialize to null so we don't end up loading it (e.g. if no timexes are in the sentence)
 			
@@ -134,15 +134,15 @@ public class AdjacentVerbTimex implements Sieve {
 			// Check timex/event pairs against our criteria
 			// Iterate over timexes
 			for (Timex timex : sent.timexes()) {
-				// Ensure timex passes eligibility criteria
+				// Ensure timex passes eligibility criteria specified in validateTimex
 				if (!validateTimex(timex)) continue;
 				
 				// Iterate over events for fixed timex...
 				for (TextEvent event : sent.events()) {
-					// Ensure event passes eligibility criteria
+					// Ensure event passes eligibility criteria specified in validateEvent
 					if (!validateEvent(event, tree, sent)) continue;
 					
-					// Get some useful parameters for checking against criteria
+					// Get parameters used for "flat" notion of adjacency 
 					// Distance from event to timex (positive if event is before timex)
 					int eventToTimexDist = timex.getTokenOffset() - event.getIndex();
 					// booleans for ordering
@@ -150,6 +150,8 @@ public class AdjacentVerbTimex implements Sieve {
 							(eventToTimexDist <= (numInterWords + 1) && eventToTimexDist >= 1);
 					boolean timexIsBeforeVerb = 
 							(eventToTimexDist*(-1) <= (numInterWords + 1) && eventToTimexDist <= -1); 
+					
+					// Get parameters used for "structured" notion of adjacency
 				  // Dependency relation between event and time if applicable
 					// booleans for dependency relation direction, updated below
 					// Dependency relation if applicable
@@ -158,11 +160,13 @@ public class AdjacentVerbTimex implements Sieve {
 					GrammaticalRelation depRel = null;
 					TypedDependency eventTimeDep = null;
 					// Update above booleans
+					// Check if event governs timex, and if so save the dependency relation depRel
 					eventTimeDep = getDepSentIndexPair(deps, event.getIndex(), timex.getTokenOffset());
 					if (eventTimeDep != null) { 
 						depRel = eventTimeDep.reln();
 						eventDoesGovernTimex = true;
 					}
+					// If not, check if timex governs event, and if so save the dependency relation depRel
 					else {
 						eventTimeDep = getDepSentIndexPair(deps, timex.getTokenOffset(), event.getIndex());
 						if (eventTimeDep != null) {
@@ -170,13 +174,12 @@ public class AdjacentVerbTimex implements Sieve {
 							timexDoesGovernEvent = true;
 						}
 					}
-/*					 Now, if there's a dependency relationship between the event and the time
+/*					 At this point, if there's a dependency relationship between the event and the time
 					 We know what it is (depRel) and the direction (eventGovernsTimex vs timexGovernsEvent)*/
 					
+	
 					
-					
-					
-					// Now we determine what TLink to add (if any) for the event/timex pair
+					// Now, we determine what TLink to add to proposed (if any) for the event/timex pair
 					TLink tlink = null;
 					TLink flatTlink_et = null;
 					TLink depTlink_et = null;
@@ -184,21 +187,24 @@ public class AdjacentVerbTimex implements Sieve {
 					TLink depTlink_te = null;
 					// Now, classify pairs for various parameter settings
 					
-				
+				  
 					// if verb is before timex, use the following rules...
 					if (EVENT_BEFORE_TIMEX && verbIsBeforeTimex) {
 						flatTlink_et = eventBeforeTimex(eventToTimexDist, event, timex, sent, tree);
 					}
+					// if timex is before verb, use these rules...
 					else if (TIMEX_BEFORE_EVENT && timexIsBeforeVerb) {
-						if (eventDoesGovernTimex == false)
-							flatTlink_te = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
-						else
+						//if (eventDoesGovernTimex == false)
+							//flatTlink_te = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
+						//else
 							flatTlink_te = timexBeforeEvent(eventToTimexDist, event, timex, sent, tree);
 					}
+					// if verb governs timex, use these rules
 					if (EVENT_GOVERNS_TIMEX && eventDoesGovernTimex) {
 						depTlink_et = eventGovernsTimex(eventToTimexDist, event, timex, sent, tree, depRel);
 						
 					}
+					// if timex governs verb, use these rules
 					else if (TIMEX_GOVERNS_EVENT && timexDoesGovernEvent) {
 						// TIMEX_GOVERNS_EVENT is never true in the data!
 						depTlink_te = timexGovernsEvent(eventToTimexDist, event, timex, sent, tree, depRel);
@@ -229,7 +235,17 @@ public class AdjacentVerbTimex implements Sieve {
 		return proposed;
 	}
 	
-	
+/**
+ * 
+ * @param eventToTimexDist
+ * @param event
+ * @param timex
+ * @param sent
+ * @param tree
+ * @param depRel
+ * @criteria is_included no matter what!
+ * @return a non-null tlink just in case the implemented criteria are satisfied
+ */
  private TLink timexGovernsEvent(int eventToTimexDist, TextEvent event,
 		Timex timex, SieveSentence sent, Tree tree, GrammaticalRelation depRel) {
 	 TLink tlink = null;
@@ -242,7 +258,17 @@ public class AdjacentVerbTimex implements Sieve {
 	  return tlink;
 	}
 
-
+/**
+ * 
+ * @param eventToTimexDist
+ * @param event
+ * @param timex
+ * @param sent
+ * @param tree
+ * @param depRel
+ * @criteria is_included no matter what!
+ * @return a non-null tlink just in case the implemented criteria are satisfied
+ */
 private TLink eventGovernsTimex(int eventToTimexDist, TextEvent event,
 			Timex timex, SieveSentence sent, Tree tree, GrammaticalRelation depRel) {
 	TLink tlink = null;
@@ -258,16 +284,20 @@ private TLink eventGovernsTimex(int eventToTimexDist, TextEvent event,
 	  
 	}
 
-private boolean validateEvent(TextEvent event, Tree tree, SieveSentence sent) {
-		String eventPos = posTagFromTree(tree, sent, event.getIndex());
-		if (!eventPos.startsWith("VB")) return false;
-		else return true;
-	}
-
-
+/**
+ * 
+ * @param eventToTimexDist
+ * @param event
+ * @param timex
+ * @param sent
+ * @param tree
+ * @criteria generally is_included, with two special cases yielding vague  
+ * @return a non-null tlink just in case the implemented criteria are satisfied
+ */
 private TLink timexBeforeEvent(int eventToTimexDist, TextEvent event, Timex timex, SieveSentence sent, Tree tree) {
 	 	TLink tlink = null;
-		// If there are no intervening words, label is_included
+		// if the timex is "now", return a vague tlink unless the event is in the progressive tense,
+	 	// in which case we return includes.
 	 	if (timex.getText().toLowerCase().equals("now")) {
 	 		if (event.getAspect() == TextEvent.Aspect.PROGRESSIVE)
 	 			tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.INCLUDES);
@@ -275,12 +305,17 @@ private TLink timexBeforeEvent(int eventToTimexDist, TextEvent event, Timex time
 	 			tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
 	 		
 		}
+	 	// if the words are directly adjecent then is_included
 	 	else if (eventToTimexDist == -1) {
 			tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.IS_INCLUDED);
 		}
+	 	// otherwise, return is_included unless the word directly preceding the timex is "said".
+	 	// this is the naive (flat) way to cover a common case that looks like this:
+	 	// 
 		else {
-			if (timex.getTokenOffset() > 1 && getTextAtIndex(timex.getTokenOffset() - 1, sent).equals("said"))
+			if (timex.getTokenOffset() > 1 && getTextAtIndex(timex.getTokenOffset() - 1, sent).equals("said")){
 				tlink = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
+			}
 			else
 				//return eventBeforeTimex(eventToTimexDist,event,timex,sent,tree);
 				tlink = new EventTimeLink(event.getEiid(), timex.getTid(), TLink.Type.IS_INCLUDED);
@@ -320,7 +355,14 @@ private TLink eventBeforeTimex(int eventToTimexDist, TextEvent event, Timex time
 		return tlink;
 	}
 
-
+/**
+ * 
+ * @param deps
+ * @param sentIndex1
+ * @param sentIndex2
+ * @return null unless there is a dependency in which the item at sentIndex1 governs the item
+ * at sentIndex2
+ */
 private TypedDependency getDepSentIndexPair(List<TypedDependency> deps, int sentIndex1, int sentIndex2) {
 	 // sentIndex_i conforms to the convention that index starts at 1!
 	 TypedDependency foundDep = null;
@@ -339,6 +381,19 @@ private TypedDependency getDepSentIndexPair(List<TypedDependency> deps, int sent
 		Matcher m = valQuarter.matcher(val);
 		if (!m.matches()) return true;
 		else return false;
+	}
+	/**
+	 * 
+	 * @param event
+	 * @param tree
+	 * @param sent
+	 * @criteria only allow verbal events
+	 * @return true just in case event criteria are satisfied
+	 */
+	private boolean validateEvent(TextEvent event, Tree tree, SieveSentence sent) {
+		String eventPos = posTagFromTree(tree, sent, event.getIndex());
+		if (!eventPos.startsWith("VB")) return false;
+		else return true;
 	}
 	
 	// Given a sentence parse tree and an (sentence) index, return
