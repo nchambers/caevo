@@ -153,6 +153,9 @@ public class SieveDocument {
   public List<TLink> getTlinks(boolean noclosures) {
     List<TLink> keep = new ArrayList<TLink>();
 
+    if (tlinks == null)
+    	return keep;
+    
     for( TLink link : tlinks )
     	if( !link.getIsFromClosure() ) 
     		keep.add(link);
