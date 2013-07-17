@@ -128,9 +128,7 @@ public class Closure {
     if( prints ) report = true;
     else report = false;
 
-    if( report ) {
-      System.out.println("Computing Closure (" + relations.size() + " relations)");
-    }
+    if( report ) System.out.println("Computing Closure (" + relations.size() + " relations)");
 
     // Save what we've seen already
     HashMap<String,TLink.Type> seen = new HashMap<String,TLink.Type>();
@@ -148,13 +146,15 @@ public class Closure {
         TLink.Type rel1 = tlink1.getRelation();
         eid1 = tlink1.getId1();
         eid2 = tlink1.getId2();
-
+        if( report ) System.out.println("Starting with tlink1 = " + tlink1);
+        
         for (int j = start; j < size; j++) {
           tlink2 = relations.get(j);
           TLink.Type rel2 = tlink2.getRelation();
           B = null;
           C = null;
-
+          if( report ) System.out.println("\ttlink2 = " + tlink2);
+          
           // Find which out of 4 transitive patterns to use
 
           // A-B-Rel, A-C-Rel
@@ -182,6 +182,8 @@ public class Closure {
             C = tlink2.getId1();
           }
 
+//          System.out.println("\tB = " + B + " C = " + C + " matchCase = " + matchCase);
+          
           // Ignore closing trivial relations such as A-A-INCL, A-A-SIMUL
           if( eid1.equals(eid2) &&
               (rel1 == TLink.Type.SIMULTANEOUS || rel1 == TLink.Type.INCLUDES) ) {
@@ -198,7 +200,7 @@ public class Closure {
             TLink.Type newrel = closeLinks(rel1, rel2, matchCase);
 //            System.out.println(rel1 + " " + rel2 + " newrel=" + newrel);
             if( newrel != null ) {
-//              System.out.println("New link! " + newrel);
+              if( report ) System.out.println("New link! " + newrel);
               TLink newLink = addlink(seen, relations, B, C, newrel);
               // If this new link conflicts, remember that
               if( newLink == null ) conflict = true;
