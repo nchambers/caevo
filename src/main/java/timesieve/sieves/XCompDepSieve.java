@@ -20,6 +20,7 @@ import timesieve.tlink.TLink;
 
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.TreeOperator;
+import timesieve.util.TimebankUtil;
 
 /**
  * 
@@ -40,12 +41,22 @@ import timesieve.util.TreeOperator;
  * dev:
  * XCompDepSieve			p=0.70	21 of 30	Non-VAGUE:	p=0.78	21 of 27
  * 
+ * 07/16/2013
+ * (after the // is after adding the case "else --> AFTER" for ccomp
+ * train:
+ * XCompDepSieve			p=0.71	127 of 180	Non-VAGUE:	p=0.84	127 of 152 // XCompDepSieve			p=0.59	148 of 249	Non-VAGUE:	p=0.74	148 of 200
+ * dev:
+ * XCompDepSieve			p=0.59	17 of 29	Non-VAGUE:	p=0.68	17 of 25 // XCompDepSieve			p=0.68	36 of 53	Non-VAGUE:	p=0.80	36 of 45
+ * 
+ * parameter useExtendedTense onyl applies to ccomp right now.
+ * 
  * 
  * @author cassidy
  */
 public class XCompDepSieve implements Sieve {
 	public boolean debug = true;
 	public boolean printInfo = true;
+	private boolean useExtendedTense = true;
 	
 	/**
 	 * The main function. All sieves must have this.
@@ -58,7 +69,13 @@ public class XCompDepSieve implements Sieve {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
+		try {
+			useExtendedTense = TimeSieveProperties.getBoolean("XCompDepSieve.useExtendedTense", true);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 		List<TLink> goldLinks = doc.getTlinks(true);
@@ -123,7 +140,7 @@ public class XCompDepSieve implements Sieve {
 						if (relType.equals("xcomp"))
 							classifyEventPair_xcomp(eGov, eDep, sent, proposed);
 						if (relType.equals("ccomp"))
-							classifyEventPair_ccomp(eGov, eDep, sent, proposed);
+							classifyEventPair_ccomp(eGov, eDep, sent, deps, proposed);
 						if (relType.equals("conj_and"))
 							classifyEventPair_conj_and(eGov, eDep, sent, proposed);
 					}		
@@ -144,7 +161,7 @@ public class XCompDepSieve implements Sieve {
 		
 	}
 
-	private void classifyEventPair_xcomp(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TLink> proposed ) {
+	private void classifyEventPair_xcomp(TextEvent eGov, TextEvent eDep, SieveSentence sent,  List<TLink> proposed ) {
 		TextEvent.Tense eGovTense = eGov.getTense();
 		TextEvent.Tense eDepTense = eDep.getTense();
 		TextEvent.Class eDepClass = eDep.getTheClass();
@@ -168,9 +185,17 @@ public class XCompDepSieve implements Sieve {
 			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
 	}
 	
-	private void classifyEventPair_ccomp(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TLink> proposed ) {
-		TextEvent.Tense eGovTense = eGov.getTense();
-		TextEvent.Tense eDepTense = eDep.getTense();
+	private void classifyEventPair_ccomp(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TypedDependency> deps, List<TLink> proposed ) {
+		TextEvent.Tense eDepTense = null;
+		TextEvent.Tense eGovTense = null;
+		if (useExtendedTense == true) {
+			eGovTense = TimebankUtil.pseudoTense(sent, deps, eGov);
+			eDepTense = TimebankUtil.pseudoTense(sent, deps, eDep);
+		}
+		else {
+			eGovTense = eGov.getTense();
+			eDepTense = eDep.getTense();
+		}
 		TextEvent.Class eDepClass = eDep.getTheClass();
 		TextEvent.Class eGovClass = eGov.getTheClass();
 		TextEvent.Aspect eDepAspect = eDep.getAspect();
@@ -178,22 +203,39 @@ public class XCompDepSieve implements Sieve {
 		String govStr = eGov.getString();
 		String depStr = eDep.getString();
 		
-//		if (eGovClass == TextEvent.Class.I_STATE) {
-//			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.VAGUE));
-//		}
-		if (eGovTense == TextEvent.Tense.PAST && eGovAspect == TextEvent.Aspect.NONE &&
-				eDepTense == TextEvent.Tense.PAST && eDepAspect == TextEvent.Aspect.NONE // || eDepAspect == TextEvent.Aspect.PERFECTIVE
-				&& eDepClass == TextEvent.Class.OCCURRENCE) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
+	
+		if (eDepTense == TextEvent.Tense.FUTURE) {
+			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE)); // 8/8 = 100%; 21/28 = 75%
 		}
-		if (eGovTense == TextEvent.Tense.PAST && eGovAspect == TextEvent.Aspect.NONE &&
-				eDepTense == TextEvent.Tense.NONE && eDepAspect == TextEvent.Aspect.NONE &&
-				eDepClass == TextEvent.Class.OCCURRENCE) {
-			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
-			
+		else if (eDepAspect == TextEvent.Aspect.PERFECTIVE) { // 7/7 = 100%
+				if (eGovAspect == TextEvent.Aspect.NONE)
+					proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
+				else if (eGovTense == TextEvent.Tense.PAST)
+					proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
+				else if (eGovClass == TextEvent.Class.REPORTING)
+					proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
+				else if (eDepClass == TextEvent.Class.OCCURRENCE)
+					proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
+			}
+		else if (eGovAspect == TextEvent.Aspect.PERFECTIVE) {
+			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.VAGUE)); 
 		}
-		//else
+		//else //commenting this out is great for the train set and terrible for the dev set!
 			//proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
+
+//		if (eGovTense == TextEvent.Tense.PAST && eGovAspect == TextEvent.Aspect.NONE &&
+//				eDepTense == TextEvent.Tense.PAST && eDepAspect == TextEvent.Aspect.NONE // || eDepAspect == TextEvent.Aspect.PERFECTIVE
+//				&& eDepClass == TextEvent.Class.OCCURRENCE) {
+//			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER));
+//		}
+//		if (eGovTense == TextEvent.Tense.PAST && eGovAspect == TextEvent.Aspect.NONE &&
+//				eDepTense == TextEvent.Tense.NONE && eDepAspect == TextEvent.Aspect.NONE &&
+//				eDepClass == TextEvent.Class.OCCURRENCE) {
+//			proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE));
+//			
+//		}
+//		else
+	//		proposed.add(new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER)); // 32/114 = 28%
 	}
 	
 	private String posTagFromTree(Tree sentParseTree, int tokenIndex){

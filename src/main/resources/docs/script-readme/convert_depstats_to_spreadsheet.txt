@@ -1,0 +1,46 @@
+Readme for convert_depstats_to_spreadsheet.py
+
+
+pass these arguments
+
+
+--profilesFile PROFILESFILE
+                        specify path to (input) file mapping profile name to
+                        space delimited list of features (name|f1 f1 ...)
+  --examplesFileIn EXAMPLESFILEIN
+                        (input) file containing examples; format is
+                        featureSetName f1:v1 f2:v2 ...
+  --examplesFileOut EXAMPLESFILEOUT
+                        (output) file path for excel friendly file with all
+                        feature values for all examples
+  --isoFeaturesPath ISOFEATURESPATH
+                        path to put excel friendly files that contain all
+                        cases, but for only a subset of features (as specified
+                        in profilesFile
+  --wekaFileName WEKAFILENAME
+                        path to write weka file
+
+
+
+
+They are all implemented as "optional" but really you need EXAMPLESFILEIN
+
+
+An example of the sort of file to point to with PROFILESFILE is in profiles.txt
+the feature names are those used in EXAMPLESFILEIN
+--> The output will go to ISOFEATURESPATH
+
+
+you don't need to specify WEKAFILENAME unless you want a weka version (.arff) of EXAMPLESFILEIN.
+
+
+
+examples
+
+get some iso files
+
+$ python convert_depstats_to_spreadsheet.py --profilesFile profiles.txt --examplesFileIn eventGovernsEvent_input.txt --isoFeaturesPath isofeatures
+
+get the spreadsheet with all features
+
+# python convert_depstats_to_spreadsheet.py --examplesFileIn eventGovernsEvent_input.txt --examplesFileOut all_features.txt
