@@ -6,12 +6,12 @@
 //AdjacentVerbTimex
 //ReichenbachDG13
 
-//MLEventEventSameSent  
+MLEventEventSameSent  
 //MLEventEventDominates
 //MLEventEventDiffSent   // this really hurts
 //MLEventTimeDiffSent
 //MLEventTimeSameSent
-//AllVagueSieve
+AllVagueSieve
 
 //DependencyAnalyze
 //Dependencies182
@@ -22,5 +22,5 @@
 //FrequencyVagueSieve
 
 //EventCreationTimeSieve
-XCompDepSieve
+//XCompDepSieve
 //FrequencyVagueSieve
