@@ -62,6 +62,7 @@ import edu.stanford.nlp.trees.TypedDependency;
  * 
  * 
  * After updated labels; introduction of new train and dev set; refactoring:
+ * Train set
  * 0	AdjacentVerbTimex		p=0.74	56 of 76	Non-VAGUE:	p=0.88	56 of 64
  * 1	AdjacentVerbTimex		p=0.73	67 of 92	Non-VAGUE:	p=0.85	67 of 79
  * 2	AdjacentVerbTimex		p=0.72	77 of 107	Non-VAGUE:	p=0.86	77 of 90
@@ -71,6 +72,17 @@ import edu.stanford.nlp.trees.TypedDependency;
  * 6	AdjacentVerbTimex		p=0.57	106 of 185	Non-VAGUE:	p=0.67	106 of 158
  * 7	AdjacentVerbTimex		p=0.55	113 of 205	Non-VAGUE:	p=0.66	113 of 171
  * 8	AdjacentVerbTimex		p=0.53	116 of 217	Non-VAGUE:	p=0.64	116 of 182
+ * Dev set
+ * 0 
+ * 1
+ * 2
+ * 3
+ * 4
+ * 5
+ * 6
+ * 7
+ * 8
+ *
  * 
  * 
  * EVENT_BEFORE_TIMEX uses preposition-based rules (default is_included)
