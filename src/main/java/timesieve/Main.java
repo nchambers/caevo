@@ -62,7 +62,7 @@ public class Main {
 	SieveDocuments thedocsUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
-	boolean debug = false;
+	boolean debug = true;
     
 	// If none are true, then it runs on dev
 	boolean runOnTrain = true;
@@ -215,6 +215,7 @@ public class Main {
 
 		// Start with zero links.
 		List<TLink> currentTLinks = new ArrayList<TLink>();
+		Map<String,TLink> currentTLinksHash = new HashMap<String,TLink>();
         
 		// Create all the sieves first.
 		Sieve sieves[] = createAllSieves(sieveClasses);
@@ -227,6 +228,7 @@ public class Main {
 		// Do each file independently.
 		for( SieveDocument doc : docs.getDocuments() ) {
 			System.out.println("Processing " + doc.getDocname() + "...");
+//			System.out.println("Number of gold links: " + thedocsUnchanged.getDocument(doc.getDocname()).getTlinks().size());
 			
 			// Loop over the sieves in order.
 			for( int xx = 0; xx < sieves.length; xx++ ) {
@@ -236,28 +238,30 @@ public class Main {
                 
 				// Run this sieve
 				List<TLink> newLinks = sieve.annotate(doc, currentTLinks);
-                
 				if( debug ) System.out.println("\t\t" + newLinks.size() + " new links.");
-                //				if( debug ) System.out.println("\t\t" + newLinks);
+//				if( debug ) System.out.println("\t\t" + newLinks);
 				
 				// Verify the links as non-conflicting.
-				int numRemoved = removeConflicts(currentTLinks, newLinks);
-                
+				int numRemoved = removeConflicts(currentTLinksHash, newLinks);
 				if( debug ) System.out.println("\t\tRemoved " + numRemoved + " proposed links.");
-				
-				// Add the good links to our current list.
-				currentTLinks.addAll(newLinks);
+//				if( debug ) System.out.println("\t\t" + newLinks);
 				
 				// Run closure.
 				if( newLinks.size() > 0 ) {
-					int numClosed = closureExpand(currentTLinks);
-					if( debug ) System.out.println("\t\tClosure produced " + numClosed + " links.");
+					// Add the good links to our current list.
+					addProposedToCurrentList(sieveClasses[xx], newLinks, currentTLinks, currentTLinksHash);//currentTLinks.addAll(newLinks);
+					// Closure
+					List<TLink> closedLinks = closureExpand(currentTLinks, currentTLinksHash);
+					if( debug ) System.out.println("\t\tClosure produced " + closedLinks.size() + " links.");
+//					if( debug ) System.out.println("\t\tclosed=" + closedLinks);
 				}
+				if( debug ) System.out.println("\t\tDoc now has " + currentTLinks.size() + " links.");
 			}
 			
 			// Add links to InfoFile.
 			doc.addTlinks(currentTLinks);
 			currentTLinks.clear();
+			currentTLinksHash.clear();
 		}
 		
 		System.out.println("Writing output: " + outpath);
@@ -267,7 +271,6 @@ public class Main {
 		Evaluate.evaluate(thedocsUnchanged, docs);
 	}
     
-	
 	/**
 	 * Test each sieve's precision independently.
 	 * Runs each sieve and evaluates its proposed links against the input -info file.
@@ -457,6 +460,15 @@ public class Main {
 		return builder.toString();
 	}
     
+	private void addProposedToCurrentList(String sieveName, List<TLink> proposed, List<TLink> current, Map<String,TLink> currentHash) {
+		for( TLink newlink : proposed ) {
+			current.add(newlink);
+			currentHash.put(newlink.getId1()+newlink.getId2(), newlink);
+			currentHash.put(newlink.getId2()+newlink.getId1(), newlink);
+			newlink.setOrigin(sieveName);
+		}
+	}
+
 	/**
 	 * DESTRUCTIVE FUNCTION (proposedLinks will be modified)
 	 * Removes any links from the proposed list that already have links between the same pairs in currentLinks.
@@ -464,18 +476,27 @@ public class Main {
 	 * @param proposedLinks The list of proposed new links.
 	 * @return The number of links removed.
 	 */
-	private int removeConflicts(List<TLink> currentLinks, List<TLink> proposedLinks) {
+	private int removeConflicts(Map<String,TLink> currentLinksHash, List<TLink> proposedLinks) {
 		List<TLink> removals = new ArrayList<TLink>();
 		for( TLink proposed : proposedLinks ) {
-			for( TLink current : currentLinks ) {
-				if( current.coversSamePair(proposed) )
-					removals.add(proposed);
+
+			// Make sure we have a valid link with 2 events!
+			if( proposed.getId1() == null || proposed.getId2() == null || 
+					proposed.getId1().length() == 0 || proposed.getId2().length() == 0 ) {
+				removals.add(proposed);
+				System.out.println("WARNING (proposed an invalid link): " + proposed);
+				continue;
 			}
+
+			// Look for a current link that conflicts with this proposed link.
+			TLink current = currentLinksHash.get(proposed.getId1()+proposed.getId2());
+			if( current != null && current.coversSamePair(proposed) )
+				removals.add(proposed);
 		}
-		
+
 		for( TLink remove : removals )
 			proposedLinks.remove(remove);
-		
+
 		return removals.size();
 	}
 	
@@ -483,12 +504,12 @@ public class Main {
 	 * DESTRUCTIVE FUNCTION (links may have new TLink objects appended to it)
 	 * Run transitive closure and add any inferred links.
 	 * @param links The list of TLinks to expand with transitive closure.
+	 * @return The list of new links from closure (these are already added to the given lists)
 	 */
-	private int closureExpand(List<TLink> links) {
-		List<TLink> newlinks = closure.computeClosure(links);
-        
-		links.addAll(newlinks);
-		return newlinks.size();
+	private List<TLink> closureExpand(List<TLink> links, Map<String,TLink> linksHash) {
+		List<TLink> newlinks = closure.computeClosure(links, false);
+		addProposedToCurrentList("closure", newlinks, links, linksHash);
+		return newlinks;
 	}
     
 	/**

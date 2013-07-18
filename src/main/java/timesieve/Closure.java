@@ -153,6 +153,7 @@ public class Closure {
           TLink.Type rel2 = tlink2.getRelation();
           B = null;
           C = null;
+          matchCase = -1;
           if( report ) System.out.println("\ttlink2 = " + tlink2);
           
           // Find which out of 4 transitive patterns to use
@@ -200,7 +201,7 @@ public class Closure {
             TLink.Type newrel = closeLinks(rel1, rel2, matchCase);
 //            System.out.println(rel1 + " " + rel2 + " newrel=" + newrel);
             if( newrel != null ) {
-              if( report ) System.out.println("New link! " + newrel);
+              if( report ) System.out.println("New link! " + newrel + "(from B=" + B + " C=" + C + " matchCase=" + matchCase + ")");
               TLink newLink = addlink(seen, relations, B, C, newrel);
               // If this new link conflicts, remember that
               if( newLink == null ) conflict = true;

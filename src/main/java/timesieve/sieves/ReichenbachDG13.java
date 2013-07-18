@@ -122,15 +122,7 @@ public class ReichenbachDG13 implements Sieve {
 	
 	
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
-	// PROPERTIES CODE
-			try {
- 				TimeSieveProperties.load();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-			// Get property values from the config file
+		// Get property values from the config file
 			try {
 				sentWindow = TimeSieveProperties.getInt("ReichenbachDG13.sentWindow", 0);
 				sameTense = TimeSieveProperties.getBoolean("ReichenbachDG13.sameTense", false);
