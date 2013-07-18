@@ -107,9 +107,14 @@ public class TextEventClassifier {
 	 * Load WordNet. Default looks for the JWNL environment variable.
 	 */
   private void loadWordNet() {
+  	// If a path was passed as a command-line parameter.
   	if( wordnetPath != null )
   		wordnet = new WordNet(wordnetPath);
-  	else 
+  	// Otherwise, use the Main.java wordnet instance.
+  	else if( Main.wordnet != null )
+  		wordnet = Main.wordnet;
+  	// Create a new one as a last resort.
+  	else
   		wordnet = new WordNet();
   }
   

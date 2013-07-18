@@ -40,14 +40,6 @@ public class RepCreationDay implements Sieve {
 	 * The main function. All sieves must have this.
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
-	// PROPERTIES CODE
-			try {
-				TimeSieveProperties.load();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
 			try {
 				leftSentWindow = TimeSieveProperties.getInt("RepCreationDay.leftSentWindow", 0);
 				rightSentWindow = TimeSieveProperties.getInt("RepCreationDay.rightSentWindow", 0);

@@ -108,15 +108,6 @@ public class WordNet209 implements Sieve {
 	 * @see timesieve.sieves.Sieve#annotate(timesieve.InfoFile, java.lang.String, java.util.List)
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
-
-	// PROPERTIES CODE
-				try {
-	 				TimeSieveProperties.load();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
 				// Get property values from the config file
 				try {
 					sentWindow = TimeSieveProperties.getInt("Wordnet209.sentWindow", 1);
