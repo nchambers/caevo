@@ -62,7 +62,7 @@ public class Main {
 	SieveDocuments thedocsUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
-	boolean debug = true;
+	boolean debug = false;
     
 	// If none are true, then it runs on dev
 	boolean runOnTrain = true;
@@ -260,6 +260,7 @@ public class Main {
 			
 			// Add links to InfoFile.
 			doc.addTlinks(currentTLinks);
+			if( debug ) System.out.println("Adding links: " + currentTLinks);
 			currentTLinks.clear();
 			currentTLinksHash.clear();
 		}
@@ -322,6 +323,8 @@ public class Main {
                     
 					// Run it.
 					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
+					if( debug ) System.out.println(sieveName + " proposed: " + proposed);
+
                     
 					// Check proposed links.
 					if( proposed != null ) {
