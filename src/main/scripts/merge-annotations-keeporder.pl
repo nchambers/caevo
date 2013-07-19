@@ -67,8 +67,8 @@ foreach $docname (keys %docs) {
     my @annotators = keys %{$docs{$docname}};
     my $numAnnotators = scalar @annotators;
     print "\tnum annotators = $numAnnotators\n";
-    print "\tannotator[0] = $annotators[0]\n";
 
+    if( $numAnnotators > 1 ) {
     open(OUT, ">$outdir/$docname") || die "Can't open $docname for writing ($!)\n";
 
     my @pairs = @{$docs{$docname}{$annotators[0]}};
@@ -100,6 +100,7 @@ foreach $docname (keys %docs) {
 	}
     }
     close OUT;
+    }
 }
 close OUTALL;
 
