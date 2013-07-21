@@ -25,6 +25,13 @@ import edu.stanford.nlp.trees.TreeFactory;
 /**
  *This sieve returns IS_INCLUDED for an event/timex pair of 
  *the form (class=REPORTING, val=PRESENT_REF)
+ *
+ *07/19/2013
+ *Changed regex to accomodate documents with full and partial DCT
+ *Train:
+ *RepCreationDay			p=0.90	162 of 180	Non-VAGUE:	p=0.95	162 of 171
+ *Dev:
+ *
  * 
  * @author cassidy
  */
@@ -33,7 +40,7 @@ public class RepCreationDay implements Sieve {
 	private int leftSentWindow = 0;
 	private int rightSentWindow = 0;
 	private boolean considerTA = true;
-	private static String creationTimeRegex = "(\\d{4}-\\d{2}-\\d{2})T\\d{2}:\\d{2}";
+	private static String creationTimeRegex = "(\\d{4}-\\d{2}-\\d{2}).*";
 	private static Pattern creationTimePattern = Pattern.compile(creationTimeRegex);
 	
 	/**
@@ -82,7 +89,7 @@ public class RepCreationDay implements Sieve {
 		
 		// extract the date of the document creation time
 		String dcd = getDocCreationDate(dctTimex);
-		
+		System.out.println("INFO:" + doc.getDocname() + ":" + dcd);
 		
 		// check timexes/event pairs in each sentence against sieve criteria.
 		int sid = 0;
