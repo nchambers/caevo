@@ -260,6 +260,11 @@ public class WordNet209 implements Sieve {
 			Tree sentParseTree2 = trees.get(e2.getSid());
 			String postagStr1 = posTagFromTree(sentParseTree1, e1.getIndex());
 			String postagStr2 = posTagFromTree(sentParseTree2, e2.getIndex());
+			
+			if (postagStr1.length() < 2 || postagStr2.length() < 2) {
+				return null;
+			}
+			
 			String postagSimple1 = postagStr1.substring(0,2);
 			String postagSimple2 = postagStr2.substring(0,2);
 			POS pos1 = postagSimpleToPOS.get(postagSimple1);
@@ -299,6 +304,11 @@ public class WordNet209 implements Sieve {
 			String postagStr2 = posTagFromTree(sentParseTree2, e2.getTokenOffset());
 			String postagSimple1 = postagStr1.substring(0,2);
 			String postagSimple2 = postagStr2.substring(0,2);
+			
+			if (postagStr1.length() < 2 || postagStr2.length() < 2) {
+				return null;
+			}
+			
 			POS pos1 = postagSimpleToPOS.get(postagSimple1);
 			POS pos2 = postagSimpleToPOS.get(postagSimple2);
 			String lemma1 = Main.wordnet.lemmatizeTaggedWord(e1.getText(), postagStr1);
