@@ -92,8 +92,10 @@ public class SieveJCasUtil {
 				cleartkTime.setId(time.getTid());
 				cleartkTime.setTimeType(time.getType().name());
 				cleartkTime.addToIndexes();
-				if (!cleartkTime.getCoveredText().replaceAll("\\s", "")
-						.equals(time.getText().replaceAll("\\s", ""))) {
+				// use \p{Z} instead of \s because there are non-breaking spaces sometimes
+				if (!cleartkTime.getCoveredText().replaceAll("\\p{Z}", "")
+						// the latter .replaceAll handles the buggy "2 1\/2 years" in Timex
+						.equals(time.getText().replaceAll("\\p{Z}", "").replaceAll("\\\\/", "/"))) {
 					throw new RuntimeException(String.format(
 							"expected time '%s', found '%s'", time.getText(),
 							cleartkTime.getCoveredText()));
