@@ -62,7 +62,7 @@ public class Main {
 	SieveDocuments thedocsUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
-	boolean debug = false;
+	boolean debug = true;
     
 	// If none are true, then it runs on dev
 	boolean runOnTrain = true;
@@ -451,11 +451,13 @@ public class Main {
 			if (e1 != null && e2 != null) {
 				TextEvent.Tense e1Tense = e1.getTense();
 				TextEvent.Aspect e1Aspect = e1.getAspect();
+				TextEvent.Class e1Class = e1.getTheClass();
 				TextEvent.Tense e2Tense = e2.getTense();
 				TextEvent.Aspect e2Aspect = e2.getAspect();
+				TextEvent.Class e2Class = e2.getTheClass();
                 // simple display of relation, anchor texts, and anchor ids.
-                builder.append(String.format("\n%s[%s-%s], %s[%s-%s]",
-                                             normId1, e1Tense, e1Aspect, normId2, e2Tense, e2Aspect));
+                builder.append(String.format("\n%s[%s-%s-%s], %s[%s-%s-%s]",
+                                             normId1, e1Tense, e1Aspect, e1Class, normId2, e2Tense, e2Aspect, e2Class));
 			}
 			builder.append(String.format("\n%s\n%s", sents.get(sid1).sentence(), sents.get(sid2).sentence()));
 		}

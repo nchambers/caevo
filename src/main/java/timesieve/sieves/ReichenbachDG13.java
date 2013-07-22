@@ -119,6 +119,8 @@ public class ReichenbachDG13 implements Sieve {
 	private boolean simplifyPast = true;
 	private boolean simplifyPresent = true;
 	private boolean simplifyAspect = true;
+	private boolean useExtendedTense = true;
+	private boolean useExtendedTenseAcrossSentence = true;
 	
 	
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
@@ -129,6 +131,9 @@ public class ReichenbachDG13 implements Sieve {
 				simplifyPast = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyPast", true);
 				simplifyPresent = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyPresent", true);
 				simplifyAspect = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyAspect", true);
+				useExtendedTense = TimeSieveProperties.getBoolean("ReichenbachDG13.useExtendedTense", true);
+				useExtendedTenseAcrossSentence = 
+						TimeSieveProperties.getBoolean("ReichenbachDG13.useExtendedTenseAcrossSentence", true);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -145,6 +150,8 @@ public class ReichenbachDG13 implements Sieve {
 		
 		// we need the sentences and td's to pass to the "pseudoTense" util function
 		List<SieveSentence> sents = doc.getSentences();
+		
+
 		
 		
 		// for each event, compare is with all events in range, in accordance
@@ -212,6 +219,17 @@ public class ReichenbachDG13 implements Sieve {
  // this method also applies filters that eliminate certain events and event pairs
 	// from consideration.
 	private TLink.Type getLabel(TextEvent e1, TextEvent e2, SieveSentence sent1, SieveSentence sent2, List<Tree> trees) {
+		// TEMPORARY FOR DEBUGGING - SEE IF I_STATEs and I_ACTIONs BEHAVE DIFFERENTLY!
+		/*boolean e1IsISTATE = e1.getTheClass() == TextEvent.Class.I_STATE;
+		boolean e2IsISTATE = e2.getTheClass() == TextEvent.Class.I_STATE;
+		boolean e1IsIACTION = e1.getTheClass() == TextEvent.Class.I_ACTION;
+		boolean e2IsIACTION = e2.getTheClass() == TextEvent.Class.I_ACTION;
+		
+		if (e1IsISTATE || e1IsIACTION || e2IsISTATE || e2IsIACTION) {
+			return null;
+		}*/
+		
+		// END TEMPORARY CODE HERE
 		// get pos tags for e1 and e2
 		String e1Pos = posTagFromTree(trees.get(e1.getSid()), e1.getIndex());
 		String e2Pos = posTagFromTree(trees.get(e2.getSid()), e2.getIndex());
@@ -225,9 +243,7 @@ public class ReichenbachDG13 implements Sieve {
 			return null;
 		}
 		// if we've made it this far, apply the mapping to (e1, e2) using 
-		else {
-			return taToLabel(e1, e2, sent1, sent2);
-		}
+		return taToLabel(e1, e2, sent1, sent2);
 	}
 	// check if events have the same tense. this is used for the setting in which two events (verbs) are assumed
 	// not to share their reference time (ie be a part of the same "temporal context") only if they have
@@ -236,13 +252,26 @@ public class ReichenbachDG13 implements Sieve {
 
 	// apply mapping adapted from D&G2013
 	public TLink.Type taToLabel(TextEvent e1, TextEvent e2, SieveSentence sent1, SieveSentence sent2){
-		
 		// First convert e1(2)Tense(Aspect) to their simplified forms 
 		// as per D&G's mapping (via simplifyTense and simplifyAspect)
-		TextEvent.Tense e1Tense = TimebankUtil.pseudoTense(sent1, sent1.getDeps(), e1);
-		TextEvent.Tense e2Tense = TimebankUtil.pseudoTense(sent2, sent2.getDeps(), e2);
-		 //TextEvent.Tense e1Tense = e1.getTense();
-		 //TextEvent.Tense e2Tense = e2.getTense();
+		TextEvent.Tense e1Tense = null;
+		TextEvent.Tense e2Tense = null;
+		if (useExtendedTense == true) {
+			if (!useExtendedTenseAcrossSentence && !sent1.equals(sent2)) {
+				e1Tense = e1.getTense();
+				e2Tense = e2.getTense();
+			}
+			else{
+				e1Tense = TimebankUtil.pseudoTense(sent1, sent1.getDeps(), e1);
+				e2Tense = TimebankUtil.pseudoTense(sent2, sent2.getDeps(), e2);
+			
+			}
+		}
+		else {
+			e1Tense = e1.getTense();
+			e2Tense = e2.getTense();
+		}
+
 		TextEvent.Tense e1SimpTense = simplifyTense(e1Tense);
 		TextEvent.Aspect e1SimpAspect = simplifyAspect(e1.getAspect());
 		TextEvent.Tense e2SimpTense = simplifyTense(e2Tense);
@@ -254,8 +283,11 @@ public class ReichenbachDG13 implements Sieve {
 		boolean e2Past = (e2SimpTense == TextEvent.Tense.PAST);
 		boolean e1Pres = (e1SimpTense == TextEvent.Tense.PRESENT);
 		boolean e2Pres = (e2SimpTense == TextEvent.Tense.PRESENT);
+
+		
 		boolean e1Future = (e1SimpTense == TextEvent.Tense.FUTURE);
 		boolean e2Future = (e2SimpTense == TextEvent.Tense.FUTURE);
+		
 		boolean e1Perf = (e1SimpAspect == TextEvent.Aspect.PERFECTIVE);
 		boolean e1None = (e1SimpAspect == TextEvent.Aspect.NONE);
 		boolean e2Perf = (e2SimpAspect == TextEvent.Aspect.PERFECTIVE);
