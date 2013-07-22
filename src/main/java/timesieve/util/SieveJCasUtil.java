@@ -8,6 +8,7 @@ import org.apache.uima.jcas.cas.FSArray;
 import org.cleartk.syntax.constituent.type.TerminalTreebankNode;
 import org.cleartk.syntax.constituent.type.TopTreebankNode;
 import org.cleartk.syntax.constituent.type.TreebankNode;
+import org.cleartk.timeml.type.DocumentCreationTime;
 import org.cleartk.timeml.type.Event;
 import org.cleartk.timeml.type.Time;
 import org.cleartk.token.type.Sentence;
@@ -57,6 +58,14 @@ public class SieveJCasUtil {
 			toCleartk.put(sentence, cleartkSentence);
 		}
 		jCas.setDocumentText(documentText.toString());
+
+		// add document creation time
+		for (Timex docTime : document.getDocstamp()) {
+			DocumentCreationTime cleartkDocTime = new DocumentCreationTime(jCas, 0, 0);
+			cleartkDocTime.setId(docTime.getTid());
+			cleartkDocTime.setTimeType(docTime.getType().name());
+			cleartkDocTime.addToIndexes();
+		}
 
 		// add events, times, POS tags and constituents
 		for (SieveSentence sentence : document.getSentences()) {
