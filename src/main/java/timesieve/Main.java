@@ -524,51 +524,52 @@ public class Main {
 	 * @param dirpath Directory of text files.
 	 */
 	public SieveDocuments markupRawTextDir(String dirpath) {
-        // Initialize the parser.
-        LexicalizedParser parser = Ling.createParser(serializedGrammar);
-        if( parser == null ) {
-            System.out.println("Failed to create parser from " + serializedGrammar);
-            System.exit(1);
-        }
-        TreebankLanguagePack tlp = new PennTreebankLanguagePack();
-        GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
-        
-        SieveDocuments docs = new SieveDocuments();
-        for( String file : Directory.getFilesSorted(dirpath) ) {
-            String path = dirpath + File.separator + file;
-            SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(path, parser, gsf);
-            docs.addDocument(doc);
-        }
-        
-        // Markup events, times, and tlinks.
-        markupAll(docs);
-        return docs;
+		// Initialize the parser.
+		LexicalizedParser parser = Ling.createParser(serializedGrammar);
+		if( parser == null ) {
+			System.out.println("Failed to create parser from " + serializedGrammar);
+			System.exit(1);
+		}
+		TreebankLanguagePack tlp = new PennTreebankLanguagePack();
+		GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
+
+		SieveDocuments docs = new SieveDocuments();
+		for( String file : Directory.getFilesSorted(dirpath) ) {
+			String path = dirpath + File.separator + file;
+			SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(path, parser, gsf);
+			docs.addDocument(doc);
+		}
+
+		// Markup events, times, and tlinks.
+		markupAll(docs);
+		return docs;
 	}
 	
 	/**
 	 * Assumes the path is to a text-only file with no XML markup.
 	 * @param filepath Path to the text file.
+	 * @return A SieveDocuments instance with one SieveDocument in it, namely, the marked up file.
 	 */
 	public SieveDocuments markupRawTextFile(String filepath) {
-        // Initialize the parser.
-        LexicalizedParser parser = Ling.createParser(serializedGrammar);
-        if( parser == null ) {
-            System.out.println("Failed to create parser from " + serializedGrammar);
-            System.exit(1);
-        }
-        TreebankLanguagePack tlp = new PennTreebankLanguagePack();
-        GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
-        
-        // Parse the file.
-        SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(filepath, parser, gsf);
-        SieveDocuments docs = new SieveDocuments();
-        docs.addDocument(doc);
-        
-        // Markup events, times, and tlinks.
-        markupAll(docs);
-        return docs;
+		// Initialize the parser.
+		LexicalizedParser parser = Ling.createParser(serializedGrammar);
+		if( parser == null ) {
+			System.out.println("Failed to create parser from " + serializedGrammar);
+			System.exit(1);
+		}
+		TreebankLanguagePack tlp = new PennTreebankLanguagePack();
+		GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
+
+		// Parse the file.
+		SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(filepath, parser, gsf);
+		SieveDocuments docs = new SieveDocuments();
+		docs.addDocument(doc);
+
+		// Markup events, times, and tlinks.
+		markupAll(docs);
+		return docs;
 	}
-	
+
 	public void markupRawText(String path) {
 		File file = new File(path);
 		SieveDocuments docs = null;
