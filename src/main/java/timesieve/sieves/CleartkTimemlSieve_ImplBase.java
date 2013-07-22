@@ -6,12 +6,17 @@ import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.jcas.JCas;
+import org.cleartk.timeml.type.Anchor;
+import org.cleartk.timeml.type.Event;
 import org.cleartk.timeml.type.TemporalLink;
+import org.cleartk.timeml.type.Time;
 import org.uimafit.factory.AggregateBuilder;
 import org.uimafit.util.JCasUtil;
 
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
+import timesieve.tlink.EventEventLink;
+import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
 import timesieve.util.SieveJCasUtil;
 
@@ -41,10 +46,25 @@ public class CleartkTimemlSieve_ImplBase implements Sieve {
 			List<TLink> tlinks = Lists.newArrayList();
 			for (TemporalLink cleartkTLink : JCasUtil
 					.select(jCas, TemporalLink.class)) {
-				String sourceId = cleartkTLink.getSource().getId();
-				String targetId = cleartkTLink.getTarget().getId();
+				Anchor source = cleartkTLink.getSource();
+				Anchor target = cleartkTLink.getTarget();
+				String sourceId = source.getId();
+				String targetId = target.getId();
 				String relation = cleartkTLink.getRelationType();
-				tlinks.add(new TLink(sourceId, targetId, relation));
+				// create different types of TLinks -- necessary only because Evaluate
+				// does not properly handle general TLinks, only the specific subclasses
+				TLink tlink;
+				if (source instanceof Event && target instanceof Event) {
+					tlink = new EventEventLink(sourceId, targetId, relation);
+				} else if ((source instanceof Event && target instanceof Time)
+						|| (target instanceof Event && source instanceof Time)) {
+					tlink = new EventTimeLink(sourceId, targetId, relation);
+				} else {
+					throw new IllegalArgumentException(String.format(
+							"can't create TLink for %s and %s", source.getClass().getName(),
+							target.getClass().getName()));
+				}
+				tlinks.add(tlink);
 			}
 			return tlinks;
 		} catch (UIMAException e) {
