@@ -470,7 +470,7 @@ public class TextEventClassifier {
   }
   
   /**
-   * Ouputs only the events that are in a document in the given InfoFile. 
+   * Outputs only the events that are in a document in the given InfoFile. 
    * It outputs a one per line format with indices:
    *     <sentence-id> <token-index> <token-string> <event-class> <event-tense>
    * @param outpath File path to create.
@@ -524,7 +524,22 @@ public class TextEventClassifier {
   }
   
   public void markupRawText(String filepath) {
-    // Initialize the parser.
+    SieveDocument doc = markupRawTextToSieveDocument(filepath);
+
+    // Output the InfoFile with the events in it.
+    String outpath = filepath + ".info.xml";
+    docsToFile(outpath);
+    System.out.println("Created " + outpath);
+
+    // Output just the text with the events marked as XML elements.
+    String markup = doc.markupOriginalText();
+    outpath = filepath + ".withevents";
+    Directory.stringToFile(outpath, markup);
+    System.out.println("Created " + outpath);
+  }
+  
+  public SieveDocument markupRawTextToSieveDocument(String filepath) {
+ // Initialize the parser.
     LexicalizedParser parser = Ling.createParser(Main.serializedGrammar);
     if( parser == null ) {
     	System.out.println("Failed to create parser from " + Main.serializedGrammar);
@@ -539,17 +554,8 @@ public class TextEventClassifier {
     docs.addDocument(doc);
     loadClassifiers();
     extractEvents();
-
-    // Output the InfoFile with the events in it.
-    String outpath = filepath + ".info.xml";
-    docsToFile(outpath);
-    System.out.println("Created " + outpath);
-
-    // Output just the text with the events marked as XML elements.
-    String markup = doc.markupOriginalText();
-    outpath = filepath + ".withevents";
-    Directory.stringToFile(outpath, markup);
-    System.out.println("Created " + outpath);
+    
+    return doc;
   }
 
   public void markupPreParsedText(String path) {

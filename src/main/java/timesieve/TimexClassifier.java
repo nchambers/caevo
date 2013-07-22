@@ -53,6 +53,9 @@ public class TimexClassifier {
     return buf.toString();
   }
   
+  
+//  "URL"
+  
   /**
    * Use the global .info file and destructively mark it up for time expressions.
    */
@@ -73,7 +76,10 @@ public class TimexClassifier {
       // Loop over each sentence and get TLinks.
       int sid = 0;
       for( SieveSentence sent : sentences ) {
-//        System.out.println("TimexClassifier markupTimex3 tokens = " + sent.tokens());
+      	
+//      	List<CoreLabel> theTokens = preprocessTokens(sent.tokens());
+      	
+        System.out.println("TimexClassifier markupTimex3 tokens = " + sent.tokens());
         List<Timex> stanfordTimex = markupTimex3(sent.tokens(), tid, docDate);
         myRevisedTimex3(stanfordTimex, docDate);
         tid += stanfordTimex.size();
