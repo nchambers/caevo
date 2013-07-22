@@ -18,7 +18,7 @@ public class WordnetTest extends TestCase {
 	private void testLemmas(WordNet wordnet) {
 		assertEquals(wordnet.lemmatizeTaggedWord("running", "VBG"), "run");
 		assertEquals(wordnet.lemmatizeTaggedWord("were", "VBG"), "be");
-		assertEquals(wordnet.lemmatizeTaggedWord("men", "VBG"), "man");
+		assertEquals(wordnet.lemmatizeTaggedWord("men", "NNS"), "man");
 	}
 	
 	private void testSynsets(WordNet wordnet) {
