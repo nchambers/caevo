@@ -19,6 +19,7 @@ import timesieve.tlink.TLinkDatum;
 import timesieve.tlink.TLinkFeaturizer;
 import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
+import timesieve.util.TimebankUtil;
 import timesieve.util.Util;
 
 /**
@@ -34,8 +35,9 @@ public class MLEventDCT implements Sieve {
   String eDCTName = "tlink.edct.classifier";
   
   boolean debug = true;
-  int featMinOccurrence = 2;
-  
+  int minFeatOccurrence = 2;
+  double minProb = 0.0;
+
   /**
    * Constructor uses the global properties for parameters.
    */
@@ -59,7 +61,9 @@ public class MLEventDCT implements Sieve {
 	private void init() {
 		// Flags
 		try {
-  		debug = TimeSieveProperties.getBoolean("MLEventDCT.debug",false);
+  		debug = TimeSieveProperties.getBoolean("MLEventDCT.debug", false);
+  		minProb = TimeSieveProperties.getDouble("MLEventDCT.minProb", 0.0);
+  		minFeatOccurrence = TimeSieveProperties.getInt("MLEventDCT.minFeatCount", 2);
 		} catch( IOException ex ) { }
 		
 		readClassifiers();
@@ -73,7 +77,10 @@ public class MLEventDCT implements Sieve {
 		if( eDCTClassifier == null )
 			return null;
 		
-		return extractEventDCTLinks(doc);
+		List<TLink> labeled = extractEventDCTLinks(doc);
+		
+		TimebankUtil.trimLowProbability(labeled, minProb);
+		return labeled;
 	}
 
     
@@ -131,7 +138,7 @@ public class MLEventDCT implements Sieve {
     	}
     }
     
-    eDCTClassifier = TLinkClassifier.train(data, featMinOccurrence);    
+    eDCTClassifier = TLinkClassifier.train(data, minFeatOccurrence);    
     
     try {
     	IOUtils.writeObjectToFile(eDCTClassifier, eDCTName);
