@@ -62,7 +62,7 @@ public class Main {
 	SieveDocuments thedocsUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
-	boolean debug = true;
+	boolean debug = false;
     
 	// If none are true, then it runs on dev
 	boolean runOnTrain = true;

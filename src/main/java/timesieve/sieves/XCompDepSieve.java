@@ -124,7 +124,7 @@ public class XCompDepSieve implements Sieve {
 				// check out dependencyPath method
 
 				for (TypedDependency td : deps) {
-					// if e1 governs e2
+					// if e1 governs e2 (or vice versa)
 				if ((e1.getIndex() == td.gov().index() && e2.getIndex() == td.dep().index()) || 
 						(e2.getIndex() == td.gov().index() && e1.getIndex() == td.dep().index())){
 						TextEvent eGov = e1;
