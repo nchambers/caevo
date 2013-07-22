@@ -152,8 +152,11 @@ public class Main {
             String line;
             while( (line = reader.readLine()) != null ) {
                 if( !line.matches("^\\s*$") && !line.matches("^\\s*//.*$") ) {
-                    String name = line.trim();
-                    sieveNames.add(name);
+                	// Remove trailing comments if they exist.
+                	if( line.indexOf("//") > -1 )
+                		line = line.substring(0, line.indexOf("//"));
+                	String name = line.trim();
+                	sieveNames.add(name);
                 }
             }
             reader.close();
