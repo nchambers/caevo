@@ -28,6 +28,7 @@ import timesieve.tlink.TLinkDatum;
 import timesieve.tlink.TLinkFeaturizer;
 import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
+import timesieve.util.TimebankUtil;
 import timesieve.util.Util;
 
 /**
@@ -76,8 +77,6 @@ public class MLEventEventSameSent implements Sieve {
     featurizer._eventEventDominates = false;
 		
 		init();
-		System.out.println("Wordnet test: running -> " + Main.wordnet.lemmatizeTaggedWord("running", "VBG"));
-		System.out.println("Wordnet test: house physical -> " + Main.wordnet.isPhysicalObject("house"));
 	}
 	
 	private void init() {
@@ -89,15 +88,6 @@ public class MLEventEventSameSent implements Sieve {
 		} catch( IOException ex ) { }
 		
 		readClassifiers();
-	}
-	
-	public void trimLowProbability(List<TLink> links) {
-		Set<TLink> removal = new HashSet<TLink>();
-		for( TLink link : links )
-			if( link.getRelationConfidence() < minProb )
-				removal.add(link);
-		
-		for( TLink link : removal ) links.remove(link);
 	}
 	
 	public void printLabelStats(List<TLink> links) {
@@ -120,7 +110,7 @@ public class MLEventEventSameSent implements Sieve {
 		
 		if( debug ) printLabelStats(labeled);
 		
-		trimLowProbability(labeled);
+		TimebankUtil.trimLowProbability(labeled, minProb);
 		
 		// Trim out any NONE links (from binary classifier decisions)
 		Set<TLink> removal = new HashSet<TLink>();

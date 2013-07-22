@@ -76,6 +76,8 @@ public class SieveDocument {
    * Add events to a particular sentence.
    */
   public void addEvents(int sid, List<TextEvent> events) {
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();
   	sentences.get(sid).addEvents(events);
   	addEventsToEiidMap(events);
   }
@@ -84,6 +86,8 @@ public class SieveDocument {
    * Add timexes to a particular sentence.
    */
   public void addTimexes(int sid, List<Timex> timexes) {
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();  	
   	sentences.get(sid).addTimexes(timexes);
   	addTimexesToTidMap(timexes);
   }
@@ -139,6 +143,9 @@ public class SieveDocument {
    * Deletes all the TLinks from the XML file
    */
   public void removeTlinks() {
+  	if (tlinks == null)
+  		return;
+  	
   	for (TLink tlink : tlinks)
   		tlink.setDocument(null);
   	tlinks.clear();
@@ -150,6 +157,9 @@ public class SieveDocument {
   public List<TLink> getTlinks(boolean noclosures) {
     List<TLink> keep = new ArrayList<TLink>();
 
+    if (tlinks == null)
+    	return keep;
+    
     for( TLink link : tlinks )
     	if( !link.getIsFromClosure() ) 
     		keep.add(link);
@@ -165,7 +175,10 @@ public class SieveDocument {
    *         This is a list of sentences, each sentence is a list of CoreLabels with character information.
    */
   public List<List<CoreLabel>> getTokensAllSentences(String file) {
-    List<List<CoreLabel>> tokens = new ArrayList<List<CoreLabel>>();
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();    
+  	
+  	List<List<CoreLabel>> tokens = new ArrayList<List<CoreLabel>>();
     for( SieveSentence sent : sentences )
     	tokens.add(sent.tokens());    
     return tokens;
@@ -178,7 +191,10 @@ public class SieveDocument {
    * 
    */
   public List<List<Timex>> getTimexesBySentence() {
-    List<List<Timex>> timexes = new ArrayList<List<Timex>>();
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();    
+  	
+  	List<List<Timex>> timexes = new ArrayList<List<Timex>>();
     
     // Timexes in each sentence.
     for( SieveSentence sent : sentences )
@@ -203,6 +219,9 @@ public class SieveDocument {
    * @return A List of all Timex objects, including the document creation time.
    */
   public List<Timex> getTimexes() {
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();
+  	
     List<Timex> timexes = new ArrayList<Timex>();
     
     // Timexes in each sentence.
@@ -227,6 +246,9 @@ public class SieveDocument {
    * @return A List of all Event objects in one document (file parameter)
    */
   public List<List<TextEvent>> getEventsBySentence() {
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();
+  	
     List<List<TextEvent>> allEvents = new ArrayList<List<TextEvent>>();
     for( SieveSentence sent : sentences )
     	allEvents.add(sent.events());
@@ -237,6 +259,9 @@ public class SieveDocument {
    * @return A List of all Event objects in one document (file parameter)
    */
   public List<TextEvent> getEvents() {
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();
+  	
     List<TextEvent> events = new ArrayList<TextEvent>();
     for( SieveSentence sent : sentences )
     	events.addAll(sent.events());
@@ -272,6 +297,9 @@ public class SieveDocument {
    * @return A Vector of Sentence objects
    */
   public List<SieveSentence> getSentences() {
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();
+  	
   	return sentences;
   }
 
@@ -281,6 +309,9 @@ public class SieveDocument {
    * @return A List of Strings that are parse trees
    */
   public List<Tree> getAllParseTrees() {
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();
+  	
   	List<Tree> trees = new ArrayList<Tree>();
   	for( SieveSentence sent : sentences )
   		trees.add(sent.getParseTree());
@@ -291,6 +322,9 @@ public class SieveDocument {
    * @return A List of Strings, one string per sentence, representing dependencies.
    */
   public List<List<TypedDependency>> getAllDependencies() {
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();
+  	
   	List<List<TypedDependency>> alldeps = new ArrayList<List<TypedDependency>>();
   	for( SieveSentence sent : sentences )
   		alldeps.add(sent.getDeps());
@@ -489,6 +523,9 @@ public class SieveDocument {
    * @return A list of makeinstance strings.
    */
   public List<String> createMakeInstanceStrings() {
+  	if( sentences == null ) 
+  		sentences = new ArrayList<SieveSentence>();
+  	
     List<String> strings = new ArrayList<String>();
 
     for( SieveSentence sent : sentences ) {

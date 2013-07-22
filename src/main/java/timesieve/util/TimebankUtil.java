@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import timesieve.tlink.*;
+import timesieve.util.TreeOperator;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -19,10 +20,28 @@ import org.w3c.dom.NodeList; // yes?
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
+import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.trees.TreeGraphNode;
+import edu.stanford.nlp.trees.TypedDependency;
+
 import timesieve.*;
 
 public class TimebankUtil {
   
+	/**
+	 * Remove any tlinks from the list whose confidence is below the given minimum.
+	 * @param links A list of TLinks.
+	 * @param minProb The probability cutoff.
+	 */
+	public static void trimLowProbability(List<TLink> links, double minProb) {
+		List<TLink> removal = new ArrayList<TLink>();
+		for( TLink link : links )
+			if( link.getRelationConfidence() < minProb )
+				removal.add(link);
+		
+		for( TLink link : removal ) links.remove(link);
+	}
+
   public static boolean isDayOfWeek(String str) {
     str = str.toLowerCase();
     if( str.equals("sunday") || str.equals("monday") || str.equals("tuesday") ||
@@ -216,5 +235,60 @@ public class TimebankUtil {
       return str;
     }
   }
+  /**
+   * There are syntactic contexts that aren't considered "future tense"
+   * but where intuitively, the event in question is located in the future.
+   * For example, in "X would Y", where X is the agent of the event Y,
+   * Y most likely has not yet happened (how to interpret the likelihood of Y ever hapening at all
+   * is a different concern - the point is that if it does happen it will be in the future).
+   * 
+   * 
+   * @returns the tense of event, where tense is less strictly defined.
+   */
   
+  // Basically if a word governs a modal word then it is considered as being in the future tense.
+  public static TextEvent.Tense pseudoTense(SieveSentence sent, List<TypedDependency> tds, TextEvent event) {
+  	int eventIndex = event.getIndex();
+  	for (TypedDependency td : tds) {
+  		TreeGraphNode dep = td.dep();
+  		if (eventIndex == td.gov().index() && 
+  				isModalWord(dep.toString("value").toLowerCase()) &&
+  				td.reln().toString().equals("aux")) {
+  			return TextEvent.Tense.FUTURE;
+  		}
+  			
+  		}
+  		return event.getTense();
+  	}
+  
+  // This method was meant to generalize the above, but the intuition is not quite right.
+  // a modal verb is governed by the verb it modifies, but a verb that governs that verb is not int he modal context.
+  // Need to hash this out still.
+  public static TextEvent.Tense pseudoTense2(SieveSentence sent, List<TypedDependency> tds, TextEvent event) {
+  	int eventIndex = event.getIndex();
+  	List<CoreLabel> tokens = sent.tokens();
+  	for (int t = 0; t < tokens.size(); t++) {
+  		String tokenText = tokens.get(t).originalText();
+  		if (isModalWord(tokenText)) {
+  			String dp = TreeOperator.directPath(eventIndex, t+1, tds); // add 1 because of stanford indexing starting at 1
+  			if (dp != null){
+  				System.out.println("dp: " + dp);
+  				System.out.println(sent.sentence());
+  				System.out.println(event.getString());
+  				return TextEvent.Tense.FUTURE;
+  			}
+  		}
+  	}
+  	return event.getTense();
+  }
+  
+  public static boolean isModalWord(String word) {
+  	if (word.toLowerCase().equals("would") || word.toLowerCase().equals("could") ||
+  			word.toLowerCase().equals("might") || word.toLowerCase().equals("may") ||
+  			word.toLowerCase().equals("should") || word.toLowerCase().equals("'d") ||
+  			word.toLowerCase().equals("will")){
+  		return true;
+  	}
+  	else return false;
+  }
 }

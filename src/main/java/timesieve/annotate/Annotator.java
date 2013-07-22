@@ -17,6 +17,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Reads an HTML file from the TimeBank online browser. Prints all pairs of events/times that
+ * occur in the same or next sentence, and lets the user type in a relation for each one. It
+ * prompts for a pair one at a time. The user can save progress to a text file and load it
+ * later to pick up where he/she left off.
+ * 
+ * Annotator <html-file> [progress-file]
+ * 
+ * @author chambers
+ */
 public class Annotator {
   List<TLink> allLinksOrdered;
   Set<String> allLinksHash;
@@ -75,6 +85,11 @@ public class Annotator {
 			List<String> sent = sentenceEvents.get(sid);
 			// Grab all pairs in this sentence.
 			for( int xx = 0; xx < sent.size(); xx++ ) {
+				// Create the link to the DCT (doc creation time).
+				TLink dctlink = new EventEventLink(sent.get(xx), "t0", TLink.Type.NONE);
+				allLinksOrdered.add(dctlink);
+				allLinksHash.add(dctlink.getId1() + " t0");
+				
 				// Intra-sentence pairs.
 				for( int yy = xx+1; yy < sent.size(); yy++ ) {
 					TLink link = new EventEventLink(sent.get(xx), sent.get(yy), TLink.Type.NONE);
@@ -115,6 +130,7 @@ public class Annotator {
 	}
 	
 	private void runClosure() {
+//		System.out.println("Labeled relations before closure: " + labeledRelations);
     // Run Closure
 	  List<TLink> added = new ArrayList<TLink>();
     List<TLink> newLinks = closure.computeClosure(labeledRelations);
@@ -122,13 +138,24 @@ public class Annotator {
     if( newLinks != null && newLinks.size() > 0 ) {
 //      System.out.println("Added " + newLinks.size() + " transitive links.");
       for( TLink link : newLinks ) {
-//        System.out.println("\t" + link);
-        String keypair = link.getId1() + " " + link.getId2();
+//        System.out.println("\tpossible closed link: " + link);
+      	String keypair = link.getId1() + " " + link.getId2();
+      	String keypairInverted = link.getId2() + " " + link.getId1();
         if( allLinksHash.contains(keypair) ) {
           labeledRelations.add(link);
           labeledLookup.put(keypair, relationToAbbrev(link.getRelation()));
           count++;
           added.add(link);
+        }
+        // Closure might produce B->A when we care about A->B. Invert and add it.
+        else if( allLinksHash.contains(keypairInverted) ) {
+//        	System.out.println("Closure produced inverted: " + link);
+        	TLink ilink = createLink(link.getId2(), link.getId1(), TLink.invertRelation(link.getRelation()));
+        	labeledRelations.add(ilink);
+          labeledLookup.put(keypairInverted, relationToAbbrev(ilink.getRelation()));
+          count++;
+//          System.out.println("...adding inverted " + ilink);
+          added.add(ilink);
         }
       }
     }
@@ -137,6 +164,29 @@ public class Annotator {
       System.out.println("Added " + count + " transitive links.");
       for( TLink link : added ) System.out.println("\t" + link);
     }
+	}
+	
+	/**
+	 * Convenience function that creates a TLink object from two event ids and a relation.
+	 * It determines if the id's are events or times and creates the correct TLink subclass.
+	 * @param id1 ID of the first event
+	 * @param id2 ID of the second event
+	 * @param rel The ordered relation for id1->id2
+	 * @return A new TLink object.
+	 */
+	private TLink createLink(String id1, String id2, TLink.Type rel) {
+    // See what type of relation we are adding (e.g. event-time)
+    // YES, this depends on making sure all time variables start with 't'
+		int times = 0;
+    if( id1.charAt(0) == 't' ) times++;
+    if( id2.charAt(0) == 't' ) times++;
+
+    // Create the appropriate TLink
+    TLink link = null;
+    if( times == 2 ) link = new TimeTimeLink(id1, id2, rel, true);
+    else if( times == 1 ) link = new EventTimeLink(id1, id2, rel, true);
+    else link = new EventEventLink(id1, id2, rel, true);
+    return link; 
 	}
 	
 	/**
@@ -179,6 +229,7 @@ public class Annotator {
 		    dumpToFile("auto-saved.txt");
 		  }
 		}
+		dumpToFile("auto-saved.txt");
 	}
 
 	 private String relationToAbbrev(TLink.Type rel) {

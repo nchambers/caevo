@@ -16,6 +16,8 @@ import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.classify.LinearClassifierFactory;
 import edu.stanford.nlp.classify.RVFDataset;
 import edu.stanford.nlp.io.IOUtils;
+import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.RVFDatum;
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
 import edu.stanford.nlp.stats.ClassicCounter;
@@ -107,9 +109,14 @@ public class TextEventClassifier {
 	 * Load WordNet. Default looks for the JWNL environment variable.
 	 */
   private void loadWordNet() {
+  	// If a path was passed as a command-line parameter.
   	if( wordnetPath != null )
   		wordnet = new WordNet(wordnetPath);
-  	else 
+  	// Otherwise, use the Main.java wordnet instance.
+  	else if( Main.wordnet != null )
+  		wordnet = Main.wordnet;
+  	// Create a new one as a last resort.
+  	else
   		wordnet = new WordNet();
   }
   
@@ -342,10 +349,10 @@ public class TextEventClassifier {
    * @param wordi Index of the word you want to label as event/not-event. Index starts at 1
    * @return True if the word is an event.
    */
-  private boolean isEventDeterministic(Tree tree, String[] tokens, int wordi) {
+  private boolean isEventDeterministic(Tree tree, List<CoreLabel> tokens, int wordi) {
     String POS = TreeOperator.indexToPOSTag(tree, wordi); 
 //    String prePOS = (wordi > 1 ? TreeOperator.indexToPOSTag(tree, wordi-1) : null);
-    String postPOS = (wordi < tokens.length-1 ? TreeOperator.indexToPOSTag(tree, wordi+1) : null);
+    String postPOS = (wordi < tokens.size()-1 ? TreeOperator.indexToPOSTag(tree, wordi+1) : null);
 
     System.out.println("tree: " + tree);
     System.out.println("wordi = " + wordi + " POS = " + POS);
@@ -397,8 +404,6 @@ public class TextEventClassifier {
    * @param docnames Limit extraction to a set of documents in the info file. Use null if you want all docs.
    */
   public void extractEvents(SieveDocuments docs, Collection<String> docnames, boolean useDeterministic) {
-    TreeFactory tf = new LabeledScoredTreeFactory();
-    
     for( SieveDocument doc : docs.getDocuments() ) {
       if( docnames == null || docnames.contains(doc.getDocname()) ) {
         System.out.println("doc = " + doc.getDocname());
@@ -412,7 +417,7 @@ public class TextEventClassifier {
         // Each sentence.
         int sid = 0;
         for( SieveSentence sent : sentences ) {
-          String[] tokens = sent.sentence().split("\\s+");
+//          String[] tokens = sent.sentence().split("\\s+");
           Tree tree = sent.getParseTree();
           List<TextEvent> newevents = new ArrayList<TextEvent>();
           Set<Integer> timexIndices = indicesCoveredByTimexes(sent.timexes());
@@ -420,12 +425,14 @@ public class TextEventClassifier {
           if( tree != null && tree.size() > 1 ) {
           	// Each token.
           	int wordi = 1; // first word is index 1
-          	for( String token : tokens ) {
+          	for( CoreLabel token : sent.tokens() ) {
+          		
           		// Skip tokens that are already tagged by a timex.
           		if( !timexIndices.contains(wordi) ) {
 
-          			if( useDeterministic && isEventDeterministic(tree, tokens, wordi) ) {
-          				TextEvent event = new TextEvent(token, "e" + eventi, sid, wordi);
+          			if( useDeterministic && isEventDeterministic(tree, sent.tokens(), wordi) ) {
+              		String tokenStr = token.getString(CoreAnnotations.OriginalTextAnnotation.class);
+          				TextEvent event = new TextEvent(tokenStr, "e" + eventi, sid, wordi);
           				event.addEiid("ei" + eventi);
           				newevents.add(event);
           				//                System.out.println("Created event: " + event);
@@ -433,7 +440,8 @@ public class TextEventClassifier {
           			}
 
           			if( !useDeterministic && isEvent(eventClassifier, sent, tree, alldeps.get(sid), wordi) ) {
-          				TextEvent event = new TextEvent(token, "e" + eventi, sid, wordi);
+              		String tokenStr = token.getString(CoreAnnotations.OriginalTextAnnotation.class);
+          				TextEvent event = new TextEvent(tokenStr, "e" + eventi, sid, wordi);
           				event.addEiid("ei" + eventi);
 
           				// Set the event attributes.
@@ -462,7 +470,7 @@ public class TextEventClassifier {
   }
   
   /**
-   * Ouputs only the events that are in a document in the given InfoFile. 
+   * Outputs only the events that are in a document in the given InfoFile. 
    * It outputs a one per line format with indices:
    *     <sentence-id> <token-index> <token-string> <event-class> <event-tense>
    * @param outpath File path to create.
@@ -516,7 +524,22 @@ public class TextEventClassifier {
   }
   
   public void markupRawText(String filepath) {
-    // Initialize the parser.
+    SieveDocument doc = markupRawTextToSieveDocument(filepath);
+
+    // Output the InfoFile with the events in it.
+    String outpath = filepath + ".info.xml";
+    docsToFile(outpath);
+    System.out.println("Created " + outpath);
+
+    // Output just the text with the events marked as XML elements.
+    String markup = doc.markupOriginalText();
+    outpath = filepath + ".withevents";
+    Directory.stringToFile(outpath, markup);
+    System.out.println("Created " + outpath);
+  }
+  
+  public SieveDocument markupRawTextToSieveDocument(String filepath) {
+ // Initialize the parser.
     LexicalizedParser parser = Ling.createParser(Main.serializedGrammar);
     if( parser == null ) {
     	System.out.println("Failed to create parser from " + Main.serializedGrammar);
@@ -531,17 +554,8 @@ public class TextEventClassifier {
     docs.addDocument(doc);
     loadClassifiers();
     extractEvents();
-
-    // Output the InfoFile with the events in it.
-    String outpath = filepath + ".info.xml";
-    docsToFile(outpath);
-    System.out.println("Created " + outpath);
-
-    // Output just the text with the events marked as XML elements.
-    String markup = doc.markupOriginalText();
-    outpath = filepath + ".withevents";
-    Directory.stringToFile(outpath, markup);
-    System.out.println("Created " + outpath);
+    
+    return doc;
   }
 
   public void markupPreParsedText(String path) {

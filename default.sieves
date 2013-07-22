@@ -1,26 +1,32 @@
+RepEventGovEvent
 RepCreationDay
 TimeTimeSieve
-RepEventGovEvent
-EventEventVagueSieve
 WordNet209
+XCompDepSieve
 AdjacentVerbTimex
 ReichenbachDG13
 
-MLEventEventSameSent  
-//MLEventEventDominates
-//MLEventEventDiffSent   // this really hurts
-MLEventTimeDiffSent
+EventCreationTimeSieve // Drops a bunch on Dev, but still useful.
+MLEventDCT
+
 MLEventTimeSameSent
+MLEventEventDominates
+MLEventEventSameSent  
+
 AllVagueSieve
 
+
+
+
+
+//MLVagueSieve // Does pretty well on Dev, but doesn't add anything.
+//MLEventTimeDiffSent    // about the same as All Vague performance. Better without.
+//MLEventEventDiffSent   // about the same as All Vague performance. Better without.
+
+//FrequencyVagueSieve
+//EventEventVagueSieve // Drops a ton on Dev, hiding...
 //DependencyAnalyze
 //Dependencies182
 //WordFeatures5
 //QuarterSieveReporting
-//StupidSieve
 //WordFeatures64
-//FrequencyVagueSieve
-
-//EventCreationTimeSieve
-//XCompDepSieve
-//FrequencyVagueSieve

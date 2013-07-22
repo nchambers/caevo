@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import edu.stanford.nlp.trees.Tree;
+import edu.stanford.nlp.trees.TypedDependency;
 
 import timesieve.InfoFile;
 import timesieve.SieveDocument;
@@ -16,6 +17,7 @@ import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.TreeOperator;
+import timesieve.util.TimebankUtil;
 
 /**
  *SUMMARY:
@@ -58,6 +60,15 @@ import timesieve.util.TreeOperator;
  *SameSentence/SameTense			p=0.65	17 of 26
  *SameSentence/AnyTense	 p=0.70	44  of 63
  *SameOrAdjSent/AnyTense p=0.60	134 of 223
+ *
+ *
+ *After adding the pseudoTense function that puts words that govern
+ *a modal word in the future, new results:
+ *
+ *train:
+ *ReichenbachDG13			p=0.59	192 of 326	Non-VAGUE:	p=0.90	192 of 213
+ *dev:
+ *ReichenbachDG13			p=0.63	20 of 32	Non-VAGUE:	p=0.77	20 of 26
  *
  *
  *DETAILS:
@@ -108,24 +119,21 @@ public class ReichenbachDG13 implements Sieve {
 	private boolean simplifyPast = true;
 	private boolean simplifyPresent = true;
 	private boolean simplifyAspect = true;
+	private boolean useExtendedTense = true;
+	private boolean useExtendedTenseAcrossSentence = true;
 	
 	
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
-	// PROPERTIES CODE
-			try {
- 				TimeSieveProperties.load();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-			// Get property values from the config file
+		// Get property values from the config file
 			try {
 				sentWindow = TimeSieveProperties.getInt("ReichenbachDG13.sentWindow", 0);
 				sameTense = TimeSieveProperties.getBoolean("ReichenbachDG13.sameTense", false);
 				simplifyPast = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyPast", true);
 				simplifyPresent = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyPresent", true);
 				simplifyAspect = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyAspect", true);
+				useExtendedTense = TimeSieveProperties.getBoolean("ReichenbachDG13.useExtendedTense", true);
+				useExtendedTenseAcrossSentence = 
+						TimeSieveProperties.getBoolean("ReichenbachDG13.useExtendedTenseAcrossSentence", true);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -139,6 +147,12 @@ public class ReichenbachDG13 implements Sieve {
 		
 		// we need all trees in order to get pos tags
 		List<Tree> trees = doc.getAllParseTrees();
+		
+		// we need the sentences and td's to pass to the "pseudoTense" util function
+		List<SieveSentence> sents = doc.getSentences();
+		
+
+		
 		
 		// for each event, compare is with all events in range, in accordance
 		// with sentWindow.
@@ -154,7 +168,7 @@ public class ReichenbachDG13 implements Sieve {
 				// apply adapted D&G2013 mapping (via getLabel)
 				for (int j = i + 1; j < numEvents; j++) {
 					TextEvent e2 = allEvents.get(sid).get(j);
-					TLink.Type label = getLabel(e1, e2, trees);
+					TLink.Type label = getLabel(e1, e2, sents.get(sid), sents.get(sid), trees);
 					// if the label is null, the mapping couldn't be applied.
 					// otherwise, add (e1, e2, label) to proposed.
 					if (label == null) continue;
@@ -172,7 +186,7 @@ public class ReichenbachDG13 implements Sieve {
 					for (int k = 0; k < numEvents2; k++) {
 						// label (e1, e2, label) only if label is not null, as in above
 						TextEvent e2 = allEvents.get(sid2).get(k);
-						TLink.Type label = getLabel(e1, e2, trees);
+						TLink.Type label = getLabel(e1, e2, sents.get(sid), sents.get(sid2), trees);
 						if (label == null) continue;
 						addPair(e1, e2, label, proposed, doc);
 					}
@@ -204,7 +218,18 @@ public class ReichenbachDG13 implements Sieve {
  // get the label indicated for (e1, e2) by the D&G mapping.
  // this method also applies filters that eliminate certain events and event pairs
 	// from consideration.
-	private TLink.Type getLabel(TextEvent e1, TextEvent e2, List<Tree> trees) {
+	private TLink.Type getLabel(TextEvent e1, TextEvent e2, SieveSentence sent1, SieveSentence sent2, List<Tree> trees) {
+		// TEMPORARY FOR DEBUGGING - SEE IF I_STATEs and I_ACTIONs BEHAVE DIFFERENTLY!
+		/*boolean e1IsISTATE = e1.getTheClass() == TextEvent.Class.I_STATE;
+		boolean e2IsISTATE = e2.getTheClass() == TextEvent.Class.I_STATE;
+		boolean e1IsIACTION = e1.getTheClass() == TextEvent.Class.I_ACTION;
+		boolean e2IsIACTION = e2.getTheClass() == TextEvent.Class.I_ACTION;
+		
+		if (e1IsISTATE || e1IsIACTION || e2IsISTATE || e2IsIACTION) {
+			return null;
+		}*/
+		
+		// END TEMPORARY CODE HERE
 		// get pos tags for e1 and e2
 		String e1Pos = posTagFromTree(trees.get(e1.getSid()), e1.getIndex());
 		String e2Pos = posTagFromTree(trees.get(e2.getSid()), e2.getIndex());
@@ -218,9 +243,7 @@ public class ReichenbachDG13 implements Sieve {
 			return null;
 		}
 		// if we've made it this far, apply the mapping to (e1, e2) using 
-		else {
-			return taToLabel(e1, e2);
-		}
+		return taToLabel(e1, e2, sent1, sent2);
 	}
 	// check if events have the same tense. this is used for the setting in which two events (verbs) are assumed
 	// not to share their reference time (ie be a part of the same "temporal context") only if they have
@@ -228,13 +251,30 @@ public class ReichenbachDG13 implements Sieve {
 	public boolean eventsShareTense(TextEvent e1, TextEvent e2) {return e1.getTense() == e2.getTense();}
 
 	// apply mapping adapted from D&G2013
-	public TLink.Type taToLabel(TextEvent e1, TextEvent e2){
-		
+	public TLink.Type taToLabel(TextEvent e1, TextEvent e2, SieveSentence sent1, SieveSentence sent2){
 		// First convert e1(2)Tense(Aspect) to their simplified forms 
 		// as per D&G's mapping (via simplifyTense and simplifyAspect)
-		TextEvent.Tense e1SimpTense = simplifyTense(e1.getTense());
+		TextEvent.Tense e1Tense = null;
+		TextEvent.Tense e2Tense = null;
+		if (useExtendedTense == true) {
+			if (!useExtendedTenseAcrossSentence && !sent1.equals(sent2)) {
+				e1Tense = e1.getTense();
+				e2Tense = e2.getTense();
+			}
+			else{
+				e1Tense = TimebankUtil.pseudoTense(sent1, sent1.getDeps(), e1);
+				e2Tense = TimebankUtil.pseudoTense(sent2, sent2.getDeps(), e2);
+			
+			}
+		}
+		else {
+			e1Tense = e1.getTense();
+			e2Tense = e2.getTense();
+		}
+
+		TextEvent.Tense e1SimpTense = simplifyTense(e1Tense);
 		TextEvent.Aspect e1SimpAspect = simplifyAspect(e1.getAspect());
-		TextEvent.Tense e2SimpTense = simplifyTense(e2.getTense());
+		TextEvent.Tense e2SimpTense = simplifyTense(e2Tense);
 		TextEvent.Aspect e2SimpAspect = simplifyAspect(e2.getAspect());
 		
 		// define the boolean variables that we need to check to apply mapping
@@ -243,8 +283,11 @@ public class ReichenbachDG13 implements Sieve {
 		boolean e2Past = (e2SimpTense == TextEvent.Tense.PAST);
 		boolean e1Pres = (e1SimpTense == TextEvent.Tense.PRESENT);
 		boolean e2Pres = (e2SimpTense == TextEvent.Tense.PRESENT);
+
+		
 		boolean e1Future = (e1SimpTense == TextEvent.Tense.FUTURE);
 		boolean e2Future = (e2SimpTense == TextEvent.Tense.FUTURE);
+		
 		boolean e1Perf = (e1SimpAspect == TextEvent.Aspect.PERFECTIVE);
 		boolean e1None = (e1SimpAspect == TextEvent.Aspect.NONE);
 		boolean e2Perf = (e2SimpAspect == TextEvent.Aspect.PERFECTIVE);

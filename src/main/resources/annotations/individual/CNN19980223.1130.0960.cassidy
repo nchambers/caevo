@@ -1,6 +1,6 @@
 t20	e26	i
 t20	e1	i
-t20	e27	i
+t20	e27	v
 t20	t21	v
 t20	e28	b
 t20	e29	v
@@ -22,10 +22,10 @@ e1	e29	v
 e1	e32	v
 e1	e34	b
 e1	e33	b
-e27	t21	i
+e27	t21	b
 e27	e28	b
 e27	e29	v
-e27	e32	i
+e27	e32	b
 e27	e34	b
 e27	e33	b
 t21	e28	b

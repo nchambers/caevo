@@ -62,7 +62,7 @@ public class Main {
 	SieveDocuments thedocsUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
-	boolean debug = false;
+	boolean debug = true;
     
 	// If none are true, then it runs on dev
 	boolean runOnTrain = true;
@@ -152,8 +152,11 @@ public class Main {
             String line;
             while( (line = reader.readLine()) != null ) {
                 if( !line.matches("^\\s*$") && !line.matches("^\\s*//.*$") ) {
-                    String name = line.trim();
-                    sieveNames.add(name);
+                	// Remove trailing comments if they exist.
+                	if( line.indexOf("//") > -1 )
+                		line = line.substring(0, line.indexOf("//"));
+                	String name = line.trim();
+                	sieveNames.add(name);
                 }
             }
             reader.close();
@@ -215,6 +218,7 @@ public class Main {
 
 		// Start with zero links.
 		List<TLink> currentTLinks = new ArrayList<TLink>();
+		Map<String,TLink> currentTLinksHash = new HashMap<String,TLink>();
         
 		// Create all the sieves first.
 		Sieve sieves[] = createAllSieves(sieveClasses);
@@ -227,6 +231,7 @@ public class Main {
 		// Do each file independently.
 		for( SieveDocument doc : docs.getDocuments() ) {
 			System.out.println("Processing " + doc.getDocname() + "...");
+//			System.out.println("Number of gold links: " + thedocsUnchanged.getDocument(doc.getDocname()).getTlinks().size());
 			
 			// Loop over the sieves in order.
 			for( int xx = 0; xx < sieves.length; xx++ ) {
@@ -236,28 +241,31 @@ public class Main {
                 
 				// Run this sieve
 				List<TLink> newLinks = sieve.annotate(doc, currentTLinks);
-                
 				if( debug ) System.out.println("\t\t" + newLinks.size() + " new links.");
-                //				if( debug ) System.out.println("\t\t" + newLinks);
+//				if( debug ) System.out.println("\t\t" + newLinks);
 				
 				// Verify the links as non-conflicting.
-				int numRemoved = removeConflicts(currentTLinks, newLinks);
-                
+				int numRemoved = removeConflicts(currentTLinksHash, newLinks);
 				if( debug ) System.out.println("\t\tRemoved " + numRemoved + " proposed links.");
-				
-				// Add the good links to our current list.
-				currentTLinks.addAll(newLinks);
+//				if( debug ) System.out.println("\t\t" + newLinks);
 				
 				// Run closure.
 				if( newLinks.size() > 0 ) {
-					int numClosed = closureExpand(currentTLinks);
-					if( debug ) System.out.println("\t\tClosure produced " + numClosed + " links.");
+					// Add the good links to our current list.
+					addProposedToCurrentList(sieveClasses[xx], newLinks, currentTLinks, currentTLinksHash);//currentTLinks.addAll(newLinks);
+					// Closure
+					List<TLink> closedLinks = closureExpand(currentTLinks, currentTLinksHash);
+					if( debug ) System.out.println("\t\tClosure produced " + closedLinks.size() + " links.");
+//					if( debug ) System.out.println("\t\tclosed=" + closedLinks);
 				}
+				if( debug ) System.out.println("\t\tDoc now has " + currentTLinks.size() + " links.");
 			}
 			
 			// Add links to InfoFile.
 			doc.addTlinks(currentTLinks);
+			if( debug ) System.out.println("Adding links: " + currentTLinks);
 			currentTLinks.clear();
+			currentTLinksHash.clear();
 		}
 		
 		System.out.println("Writing output: " + outpath);
@@ -267,7 +275,6 @@ public class Main {
 		Evaluate.evaluate(thedocsUnchanged, docs);
 	}
     
-	
 	/**
 	 * Test each sieve's precision independently.
 	 * Runs each sieve and evaluates its proposed links against the input -info file.
@@ -319,6 +326,8 @@ public class Main {
                     
 					// Run it.
 					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
+					if( debug ) System.out.println(sieveName + " proposed: " + proposed);
+
                     
 					// Check proposed links.
 					if( proposed != null ) {
@@ -445,11 +454,13 @@ public class Main {
 			if (e1 != null && e2 != null) {
 				TextEvent.Tense e1Tense = e1.getTense();
 				TextEvent.Aspect e1Aspect = e1.getAspect();
+				TextEvent.Class e1Class = e1.getTheClass();
 				TextEvent.Tense e2Tense = e2.getTense();
 				TextEvent.Aspect e2Aspect = e2.getAspect();
+				TextEvent.Class e2Class = e2.getTheClass();
                 // simple display of relation, anchor texts, and anchor ids.
-                builder.append(String.format("\n%s[%s-%s], %s[%s-%s]",
-                                             normId1, e1Tense, e1Aspect, normId2, e2Tense, e2Aspect));
+                builder.append(String.format("\n%s[%s-%s-%s], %s[%s-%s-%s]",
+                                             normId1, e1Tense, e1Aspect, e1Class, normId2, e2Tense, e2Aspect, e2Class));
 			}
 			builder.append(String.format("\n%s\n%s", sents.get(sid1).sentence(), sents.get(sid2).sentence()));
 		}
@@ -457,6 +468,15 @@ public class Main {
 		return builder.toString();
 	}
     
+	private void addProposedToCurrentList(String sieveName, List<TLink> proposed, List<TLink> current, Map<String,TLink> currentHash) {
+		for( TLink newlink : proposed ) {
+			current.add(newlink);
+			currentHash.put(newlink.getId1()+newlink.getId2(), newlink);
+			currentHash.put(newlink.getId2()+newlink.getId1(), newlink);
+			newlink.setOrigin(sieveName);
+		}
+	}
+
 	/**
 	 * DESTRUCTIVE FUNCTION (proposedLinks will be modified)
 	 * Removes any links from the proposed list that already have links between the same pairs in currentLinks.
@@ -464,18 +484,27 @@ public class Main {
 	 * @param proposedLinks The list of proposed new links.
 	 * @return The number of links removed.
 	 */
-	private int removeConflicts(List<TLink> currentLinks, List<TLink> proposedLinks) {
+	private int removeConflicts(Map<String,TLink> currentLinksHash, List<TLink> proposedLinks) {
 		List<TLink> removals = new ArrayList<TLink>();
 		for( TLink proposed : proposedLinks ) {
-			for( TLink current : currentLinks ) {
-				if( current.coversSamePair(proposed) )
-					removals.add(proposed);
+
+			// Make sure we have a valid link with 2 events!
+			if( proposed.getId1() == null || proposed.getId2() == null || 
+					proposed.getId1().length() == 0 || proposed.getId2().length() == 0 ) {
+				removals.add(proposed);
+				System.out.println("WARNING (proposed an invalid link): " + proposed);
+				continue;
 			}
+
+			// Look for a current link that conflicts with this proposed link.
+			TLink current = currentLinksHash.get(proposed.getId1()+proposed.getId2());
+			if( current != null && current.coversSamePair(proposed) )
+				removals.add(proposed);
 		}
-		
+
 		for( TLink remove : removals )
 			proposedLinks.remove(remove);
-		
+
 		return removals.size();
 	}
 	
@@ -483,12 +512,12 @@ public class Main {
 	 * DESTRUCTIVE FUNCTION (links may have new TLink objects appended to it)
 	 * Run transitive closure and add any inferred links.
 	 * @param links The list of TLinks to expand with transitive closure.
+	 * @return The list of new links from closure (these are already added to the given lists)
 	 */
-	private int closureExpand(List<TLink> links) {
-		List<TLink> newlinks = closure.computeClosure(links);
-        
-		links.addAll(newlinks);
-		return newlinks.size();
+	private List<TLink> closureExpand(List<TLink> links, Map<String,TLink> linksHash) {
+		List<TLink> newlinks = closure.computeClosure(links, false);
+		addProposedToCurrentList("closure", newlinks, links, linksHash);
+		return newlinks;
 	}
     
 	/**
@@ -498,51 +527,52 @@ public class Main {
 	 * @param dirpath Directory of text files.
 	 */
 	public SieveDocuments markupRawTextDir(String dirpath) {
-        // Initialize the parser.
-        LexicalizedParser parser = Ling.createParser(serializedGrammar);
-        if( parser == null ) {
-            System.out.println("Failed to create parser from " + serializedGrammar);
-            System.exit(1);
-        }
-        TreebankLanguagePack tlp = new PennTreebankLanguagePack();
-        GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
-        
-        SieveDocuments docs = new SieveDocuments();
-        for( String file : Directory.getFilesSorted(dirpath) ) {
-            String path = dirpath + File.separator + file;
-            SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(path, parser, gsf);
-            docs.addDocument(doc);
-        }
-        
-        // Markup events, times, and tlinks.
-        markupAll(docs);
-        return docs;
+		// Initialize the parser.
+		LexicalizedParser parser = Ling.createParser(serializedGrammar);
+		if( parser == null ) {
+			System.out.println("Failed to create parser from " + serializedGrammar);
+			System.exit(1);
+		}
+		TreebankLanguagePack tlp = new PennTreebankLanguagePack();
+		GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
+
+		SieveDocuments docs = new SieveDocuments();
+		for( String file : Directory.getFilesSorted(dirpath) ) {
+			String path = dirpath + File.separator + file;
+			SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(path, parser, gsf);
+			docs.addDocument(doc);
+		}
+
+		// Markup events, times, and tlinks.
+		markupAll(docs);
+		return docs;
 	}
 	
 	/**
 	 * Assumes the path is to a text-only file with no XML markup.
 	 * @param filepath Path to the text file.
+	 * @return A SieveDocuments instance with one SieveDocument in it, namely, the marked up file.
 	 */
 	public SieveDocuments markupRawTextFile(String filepath) {
-        // Initialize the parser.
-        LexicalizedParser parser = Ling.createParser(serializedGrammar);
-        if( parser == null ) {
-            System.out.println("Failed to create parser from " + serializedGrammar);
-            System.exit(1);
-        }
-        TreebankLanguagePack tlp = new PennTreebankLanguagePack();
-        GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
-        
-        // Parse the file.
-        SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(filepath, parser, gsf);
-        SieveDocuments docs = new SieveDocuments();
-        docs.addDocument(doc);
-        
-        // Markup events, times, and tlinks.
-        markupAll(docs);
-        return docs;
+		// Initialize the parser.
+		LexicalizedParser parser = Ling.createParser(serializedGrammar);
+		if( parser == null ) {
+			System.out.println("Failed to create parser from " + serializedGrammar);
+			System.exit(1);
+		}
+		TreebankLanguagePack tlp = new PennTreebankLanguagePack();
+		GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
+
+		// Parse the file.
+		SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(filepath, parser, gsf);
+		SieveDocuments docs = new SieveDocuments();
+		docs.addDocument(doc);
+
+		// Markup events, times, and tlinks.
+		markupAll(docs);
+		return docs;
 	}
-	
+
 	public void markupRawText(String path) {
 		File file = new File(path);
 		SieveDocuments docs = null;

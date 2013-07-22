@@ -23,6 +23,7 @@ import timesieve.tlink.TLinkDatum;
 import timesieve.tlink.TLinkFeaturizer;
 import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
+import timesieve.util.TimebankUtil;
 import timesieve.util.Util;
 
 /**
@@ -81,7 +82,7 @@ public class MLEventEventDominates extends MLEventEventSameSent {
 		
 		if( debug ) printLabelStats(labeled);
 		
-		trimLowProbability(labeled);
+		TimebankUtil.trimLowProbability(labeled, minProb);
 		
 		// Trim out any NONE links (from binary classifier decisions)
 		Set<TLink> removal = new HashSet<TLink>();
