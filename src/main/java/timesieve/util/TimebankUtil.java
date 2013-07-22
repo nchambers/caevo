@@ -28,6 +28,20 @@ import timesieve.*;
 
 public class TimebankUtil {
   
+	/**
+	 * Remove any tlinks from the list whose confidence is below the given minimum.
+	 * @param links A list of TLinks.
+	 * @param minProb The probability cutoff.
+	 */
+	public static void trimLowProbability(List<TLink> links, double minProb) {
+		List<TLink> removal = new ArrayList<TLink>();
+		for( TLink link : links )
+			if( link.getRelationConfidence() < minProb )
+				removal.add(link);
+		
+		for( TLink link : removal ) links.remove(link);
+	}
+
   public static boolean isDayOfWeek(String str) {
     str = str.toLowerCase();
     if( str.equals("sunday") || str.equals("monday") || str.equals("tuesday") ||
