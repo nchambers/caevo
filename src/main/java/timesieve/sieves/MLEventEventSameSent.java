@@ -76,8 +76,6 @@ public class MLEventEventSameSent implements Sieve {
     featurizer._eventEventDominates = false;
 		
 		init();
-		System.out.println("Wordnet test: running -> " + Main.wordnet.lemmatizeTaggedWord("running", "VBG"));
-		System.out.println("Wordnet test: house physical -> " + Main.wordnet.isPhysicalObject("house"));
 	}
 	
 	private void init() {
