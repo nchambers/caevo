@@ -1,16 +1,15 @@
 package timesieve;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import junit.framework.TestCase;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
-import junit.framework.TestCase;
 
 public class ClosureTest extends TestCase {
 
-	public void testClosure() {
+	public void testClosure() throws Exception {
 		String rules[] = { 
 				"e1 e2 BEFORE",
 				"e3 e7 SIMULTANEOUS",
@@ -47,13 +46,7 @@ public class ClosureTest extends TestCase {
 		
 		
 		// Load Closure rules.
-		Closure closure = null;
-		try {
-			closure = new Closure();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		assertNotNull(closure);
+		Closure closure = new Closure();
 
 		// Check that each closed link appears in the expected list!
 		List<TLink> newClosed = closure.computeClosure(links);

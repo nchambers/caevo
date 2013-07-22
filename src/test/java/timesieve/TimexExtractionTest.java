@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 
 public class TimexExtractionTest extends TestCase {
 	
-	public void testRawToTimex() {
+	public void testRawToTimex() throws Exception {
 		
 		String text = "Libya brought the case in 2003 to Britain because of 11/25/1980 and complained.";
 		
@@ -16,14 +16,9 @@ public class TimexExtractionTest extends TestCase {
 
 		// Create a temporary file.
 		String tempfile = "testing-timex.txt";
-		try {
-			PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(tempfile)));
-			writer.write(text);
-			writer.close();
-		} catch( Exception ex ) { 
-			ex.printStackTrace();
-			assert(false);
-		}
+		PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(tempfile)));
+		writer.write(text);
+		writer.close();
 
 		// Run the full markup pipeline.
 		SieveDocuments docs = main.markupRawTextFile(tempfile);

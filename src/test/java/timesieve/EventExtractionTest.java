@@ -11,7 +11,7 @@ import junit.framework.TestCase;
  */
 public class EventExtractionTest extends TestCase {
 
-	public void testRawToEvents() {
+	public void testRawToEvents() throws Exception {
 		
 		String text = "Libya, which brought the case to the United Nations' highest judicial body in its dispute with the United States and Britain, hailed the ruling and said it would press anew for a trial in a third neutral country. Britain will complain because they always complain.";
 
@@ -21,14 +21,9 @@ public class EventExtractionTest extends TestCase {
 
 		// Create a temporary file.
 		String tempfile = "testing-events.txt";
-		try {
-			PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(tempfile)));
-			writer.write(text);
-			writer.close();
-		} catch( Exception ex ) { 
-			ex.printStackTrace();
-			assert(false);
-		}
+		PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(tempfile)));
+		writer.write(text);
+		writer.close();
 		
     SieveDocument doc = classifier.markupRawTextToSieveDocument(tempfile);
     assertNotNull(doc);
