@@ -1,15 +1,18 @@
 package timesieve.sieves;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.cleartk.timeml.type.Anchor;
 import org.cleartk.timeml.type.Event;
 import org.cleartk.timeml.type.TemporalLink;
 import org.cleartk.timeml.type.Time;
+import org.cleartk.timeml.util.CleartkInternalModelFactory;
 import org.uimafit.factory.AggregateBuilder;
 import org.uimafit.util.JCasUtil;
 
@@ -19,6 +22,7 @@ import timesieve.tlink.EventEventLink;
 import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
 import timesieve.util.SieveJCasUtil;
+import timesieve.util.TimeSieveProperties;
 
 import com.google.common.collect.Lists;
 
@@ -76,4 +80,10 @@ public class CleartkTimemlSieve_ImplBase implements Sieve {
 		// trained previously on TimeBank+AQUAINT corpus
 	}
 
+	public static AnalysisEngineDescription getAnnotatorDescription(Class<?> sieveClass, CleartkInternalModelFactory factory) throws IOException, ResourceInitializationException {
+		String property = String.format("%s.model", sieveClass.getSimpleName());
+		return TimeSieveProperties.hasProperty(property)
+				? factory.getAnnotatorDescription(TimeSieveProperties.getString(property))
+				: factory.getAnnotatorDescription();
+	}
 }
