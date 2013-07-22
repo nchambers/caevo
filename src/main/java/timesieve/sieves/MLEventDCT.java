@@ -1,0 +1,144 @@
+package timesieve.sieves;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import edu.stanford.nlp.classify.Classifier;
+import edu.stanford.nlp.io.IOUtils;
+
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
+import timesieve.TextEvent;
+import timesieve.Timex;
+import timesieve.tlink.EventTimeLink;
+import timesieve.tlink.TLink;
+import timesieve.tlink.TLinkClassifier;
+import timesieve.tlink.TLinkDatum;
+import timesieve.tlink.TLinkFeaturizer;
+import timesieve.util.Pair;
+import timesieve.util.TimeSieveProperties;
+import timesieve.util.Util;
+
+/**
+ * Machine learned event-DCT pairs.
+ *
+ * @author chambers
+ */
+public class MLEventDCT implements Sieve {
+	Classifier<String,String> eDCTClassifier = null; // event-DCT links.
+  Classifier<String,String> eDCTExistsClassifier = null; // binary, is there a link or not?
+  TLinkFeaturizer featurizer;
+  
+  String eDCTName = "tlink.edct.classifier";
+  
+  boolean debug = true;
+  int featMinOccurrence = 2;
+  
+  /**
+   * Constructor uses the global properties for parameters.
+   */
+	public MLEventDCT() {
+		// Setup the featurizer for event-event intrasentence links.
+		featurizer = new TLinkFeaturizer();
+		featurizer._eventDCTOnly = true;
+    featurizer._noEventDCT = false;
+    featurizer._eventTimeOnly = true;
+    featurizer._eventEventOnly = false;
+    featurizer._sameSentenceOnly = false;
+    featurizer._ignoreSameSentence = false;
+    featurizer._diffSentenceOnly = false;
+    featurizer._neighborSentenceOnly = false;
+		
+		featurizer.debug = false;
+
+		init();
+	}
+	
+	private void init() {
+		// Flags
+		try {
+  		debug = TimeSieveProperties.getBoolean("MLEventDCT.debug",false);
+		} catch( IOException ex ) { }
+		
+		readClassifiers();
+	}
+	
+	/**
+	 * The main function. All sieves must have this.
+	 */
+	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
+		// Classifier loading must have failed in init()
+		if( eDCTClassifier == null )
+			return null;
+		
+		return extractEventDCTLinks(doc);
+	}
+
+    
+  /**
+   * Put event-time links into the global .info file between different sentence event-time links.
+   */
+  public List<TLink> extractEventDCTLinks(SieveDocument doc) {
+    if( debug ) System.out.println(doc.getSentences().size() + " sentences.");
+    List<TLink> tlinks = new ArrayList<TLink>();
+
+    // Get the DCT object.
+    Timex dct = null;
+    List<Timex> dcts = doc.getDocstamp();
+    if( dcts != null && dcts.size() > 0 )
+    	dct = dcts.get(0);
+    
+    // Loop over sentences and get TLinks that cross sentence boundaries between events and times.
+    if( dct != null ) {
+    	for( SieveSentence sent : doc.getSentences() ) {
+    		if( sent.events() != null ) {
+    			for( TextEvent event : sent.events() ) {
+    				TLinkDatum datum = featurizer.createEventDocumentTimeDatum(doc, event, dct, null);
+    				Pair<String,Double> labelProb = TLinkClassifier.getLabelProb(eDCTClassifier, datum.createRVFDatum());
+    				TLink link = new EventTimeLink(event.getEiid(), dct.getTid(), TLink.Type.valueOf(labelProb.first()));
+    				link.setRelationConfidence(labelProb.second());
+    				tlinks.add(link);
+    			}
+    		}
+    	}
+    }
+    if( debug ) System.out.println("Returning e-dct tlinks: " + tlinks);
+    return tlinks;
+  }
+  
+    
+  private void readClassifiers() {
+  	String path = "/models/tlinks/" + eDCTName;
+  	System.out.println("Loading edct from " + path);
+  	eDCTClassifier = Util.readClassifierFromFile(this.getClass().getResource(path));
+  }
+  
+  
+	/**
+	 * Train on the documents.
+	 */
+	public void train(SieveDocuments docs) {
+		featurizer.debug = true;
+		List<TLinkDatum> data = featurizer.infoToTLinkFeatures(docs, null);
+    System.out.println("Final training data size: " + data.size());
+    
+    if( debug ){
+    	for( TLinkDatum dd : data ) {
+    		System.out.println("** " + dd._originalTLink);    		
+    		System.out.println(dd);
+    	}
+    }
+    
+    eDCTClassifier = TLinkClassifier.train(data, featMinOccurrence);    
+    
+    try {
+    	IOUtils.writeObjectToFile(eDCTClassifier, eDCTName);
+    } catch(Exception ex) {
+    	System.out.println("ERROR: couldn't write classifiers to file in MLEventDCT");
+    	ex.printStackTrace();
+    }
+	}
+
+}
