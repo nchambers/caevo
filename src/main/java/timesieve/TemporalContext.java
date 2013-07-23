@@ -89,10 +89,10 @@ public class TemporalContext {
 		// It's value (up to the day granularity)
 		// will serve as the default contextId, for events that don't govern a time expression
 		List<Timex> dctTimexList = doc.getDocstamp();
+		if( dctTimexList == null ) return;
 		Timex dct = dctTimexList.get(0);
-		if (dct == null) {
-			return;
-		}
+		if (dct == null) return;
+		
 		// Now we want to map each event to either dctDayValue, or the timex it governs.
 		// If it governs more than one timex, ???
 		
