@@ -329,11 +329,20 @@ public class TextEventClassifier {
    * @return True if the word at wordi is an event, false otherwise.
    */
   public boolean isEvent(Classifier<String, String> classifier, SieveSentence sentence, Tree tree, List<TypedDependency> deps, int wordi) {
-  	Counter<String> features = getEventFeatures(sentence, tree, deps, wordi);
-    RVFDatum<String,String> datum = new RVFDatum<String,String>(features, null);
-    String guess = classifier.classOf(datum);
-    
-    return guess.equals("event");
+  	String postag = TreeOperator.indexToPOSTag(tree, wordi);
+
+  	// Only consider tokens with specific POS tags.
+  	if( postag.startsWith("NN") || postag.startsWith("VB") || postag.startsWith("J") ||
+  			// "behind* the killings"
+  			postag.equalsIgnoreCase("IN") ||
+  			// "the lights are out*"
+  			postag.equalsIgnoreCase("RP") ) {
+  		Counter<String> features = getEventFeatures(sentence, tree, deps, wordi);
+  		RVFDatum<String,String> datum = new RVFDatum<String,String>(features, null);
+  		String guess = classifier.classOf(datum);
+  		return guess.equals("event");
+  	}
+  	else return false;
   }
   
   private RVFDatum<String,String> wordToDatum(SieveSentence sentence, Tree tree, List<TypedDependency> deps, int wordi) {
