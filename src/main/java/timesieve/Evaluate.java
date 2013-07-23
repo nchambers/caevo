@@ -290,11 +290,11 @@ public class Evaluate {
 
 //		System.out.println("numCorrect = " + numCorrect + " numIncorrect = " + numIncorrect + " numMissed = " + numMissed);
 		
-		System.out.printf("precision\t= %.2f\t %d of %d\nrecall\t\t= %.2f\t %d of %d\nF1\t\t= %.2f\n",
+		System.out.printf("precision\t= %.3f\t %d of %d\nrecall\t\t= %.3f\t %d of %d\nF1\t\t= %.3f\n",
 				precision, numCorrect, totalGuessed,
 				recall, numCorrect, totalGold,
 				f1);
-		System.out.printf("precision (non vague)= %.2f\t %d of %d\n", precisionNonVague, numCorrect, totalGuessedNonVague);
+		System.out.printf("precision (non vague)= %.3f\t %d of %d\n", precisionNonVague, numCorrect, totalGuessedNonVague);
 
 		printBaseline(goldLabelCounts);			
 		confusionMatrix(guessCounts);
@@ -314,7 +314,7 @@ public class Evaluate {
 				best = label;
 			}
 		}
-		System.out.printf("Local Baseline (%s): precision = recall = F1 = %.2f\n", best, (bestc/total));		
+		System.out.printf("Local Baseline (%s): precision = recall = F1 = %.3f\n", best, (bestc/total));		
 	}
 	
 	public static void confusionMatrix(Counter<String> guessCounts) {
