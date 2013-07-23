@@ -37,10 +37,14 @@ public class SieveDocument {
 	private HashMap<String, TextEvent> eiidToEvent;
 	private HashMap<String, Timex> tidToTimex;
 	
+	private List<List<TextEvent>> eventCorefSets;
+	
   public SieveDocument(String name) {
   	docname = name;
   	eiidToEvent = new HashMap<String, TextEvent>();
   	tidToTimex = new HashMap<String, Timex>();
+  
+  	eventCorefSets = new ArrayList<List<TextEvent>>();
   }
 
   /**
@@ -80,6 +84,16 @@ public class SieveDocument {
   		sentences = new ArrayList<SieveSentence>();
   	sentences.get(sid).addEvents(events);
   	addEventsToEiidMap(events);
+  }
+  
+  /** 
+   * Add a set containing coreferring event mentions 
+   */
+  public void addEventCorefSet(List<String> corefMentionIds) {
+  	List<TextEvent> events = new ArrayList<TextEvent>();
+  	for (String eiid : corefMentionIds)
+  		events.add(this.getEventByEiid(eiid));
+  	eventCorefSets.add(events);
   }
   
   /**
@@ -266,6 +280,10 @@ public class SieveDocument {
     for( SieveSentence sent : sentences )
     	events.addAll(sent.events());
     return events;
+  }
+  
+  public List<List<TextEvent>> getEventCorefSets() {
+  	return eventCorefSets;
   }
   
   public TextEvent getEventByEiid(String eiid) {
