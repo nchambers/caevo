@@ -31,8 +31,14 @@ public class BaselineEventDCT implements Sieve {
 		List<TextEvent> allEvents = doc.getEvents();
 		
 		// Create BEFORE links for all events with the DCT.
-		for( TextEvent event : allEvents )
-			proposed.add(new EventTimeLink(event.getEiid(), creationTime.getTid(), TLink.Type.BEFORE));
+		for( TextEvent event : allEvents ) {
+			
+//			if( event.getTheClass() == TextEvent.Class.REPORTING )
+			if( event.getString().equalsIgnoreCase("said") )
+				proposed.add(new EventTimeLink(event.getEiid(), creationTime.getTid(), TLink.Type.IS_INCLUDED));
+//			else
+//				proposed.add(new EventTimeLink(event.getEiid(), creationTime.getTid(), TLink.Type.BEFORE));
+		}
 
 		return proposed;
 	}
