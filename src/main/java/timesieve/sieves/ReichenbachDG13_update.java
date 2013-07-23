@@ -2,6 +2,7 @@ package timesieve.sieves;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -114,7 +115,7 @@ import timesieve.util.TimebankUtil;
  * 
  * @author cassidy
  */
-public class ReichenbachDG13 implements Sieve {
+public class ReichenbachDG13_update implements Sieve {
 	public boolean debug = false;
 	private int sentWindow = 0;
 	private boolean sameTense = false;
@@ -158,47 +159,32 @@ public class ReichenbachDG13 implements Sieve {
 		tc.addContextSimpleDep();
 		// END TEST TEMPORAL CONTEXT CODE
 		
-		
-		// for each event, compare is with all events in range, in accordance
-		// with sentWindow.
-		int numSents = allEvents.size();
-		// iterate over each sentence
-		for (int sid = 0; sid < numSents; sid ++) {
-			// iterate over events in the sent that corresponds with sid
-			int numEvents = allEvents.get(sid).size();
+		// contextMap maps a context ID (which is a timex value) to a list of TextEvents that govern a
+		// timex with that value as their value. If an event doesn't govern any timex,
+		// it belongs to the set associated with the DCT. Note that the key (or contextId) associated
+		// with the DCT is the document creation date; that is, if the DCT is specified beyond the
+		// day granularity, the value is truncated to be of the form YYYY-MM-DD.
+		// Note that this means that events that govern, for example, "today", will be in the same 
+		// set as those that do not govern any time expressiopn.
+		HashMap<String, List<TextEvent>> contextMap = tc.getContextMap();
+		for (String key : contextMap.keySet()) {
+			// there are no cases where two events govern a timex with the same dct and they are relatable according
+			// to the reichenbach rules below, and that dct isn't the same as the dct_day. 
+			//if (key.equals(tc.getValueFromTimex(doc.getDocstamp().get(0))))
+				//continue;
+			
+			List<TextEvent> eventsInContext = contextMap.get(key);
+			int numEvents = eventsInContext.size();
 			for (int i = 0; i < numEvents; i++) {
-				// get the event in the list at index i
-				TextEvent e1 = allEvents.get(sid).get(i);
-				// iterate over remaining events in the sentence and try to
-				// apply adapted D&G2013 mapping (via getLabel)
 				for (int j = i + 1; j < numEvents; j++) {
-					TextEvent e2 = allEvents.get(sid).get(j);
-					TLink.Type label = getLabel(e1, e2, sents.get(sid), sents.get(sid), trees);
-					// if the label is null, the mapping couldn't be applied.
-					// otherwise, add (e1, e2, label) to proposed.
-					if (label == null) continue;
-					addPair(e1, e2, label, proposed, doc);
-				}
-				// iterate over other events in subsequent sentences in accordance
-				// with sentWindow.
-				// Note that if sentWindow == 0, the loop will never start since
-				// sid2 <= sid + sentWindow will never be satisfied
-				for (int sid2 = sid + 1; 
-						sid2 <= sid + sentWindow && sid2 < numSents; sid2++) {
-					// iterate over each event in a given window sentence
-					int numEvents2 = allEvents.get(sid2).size();
-					// compare e1 with all events in the sentence with id sid2
-					for (int k = 0; k < numEvents2; k++) {
-						// label (e1, e2, label) only if label is not null, as in above
-						TextEvent e2 = allEvents.get(sid2).get(k);
-						TLink.Type label = getLabel(e1, e2, sents.get(sid), sents.get(sid2), trees);
-						if (label == null) continue;
+					TextEvent e1 = eventsInContext.get(i);
+					TextEvent e2 = eventsInContext.get(j);
+					TLink.Type label = this.getLabel(e1, e2, sents.get(e1.getSid()), sents.get(e2.getSid()), trees);
+					if (label != null)
 						addPair(e1, e2, label, proposed, doc);
-					}
 				}
 			}
 		}
-				
 		
 		
 		return proposed;
