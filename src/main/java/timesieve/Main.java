@@ -6,9 +6,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
 
 import timesieve.sieves.Sieve;
 import timesieve.tlink.TLink;
@@ -85,6 +87,8 @@ public class Main {
 			TimeSieveProperties.load();
 			// Look for a given pre-processed InfoFile
 			infopath = TimeSieveProperties.getString("info");
+			// Overwrite the debug setting if it is in the properties file.
+			debug = TimeSieveProperties.getBoolean("debug", debug);
 		} catch (IOException e) { }
         
 		// -info on the command line?
@@ -327,7 +331,7 @@ public class Main {
 					// Run it.
 					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
 					if( debug ) System.out.println(sieveName + " proposed: " + proposed);
-
+					removeDuplicatesAndInvalids(proposed);
                     
 					// Check proposed links.
 					if( proposed != null ) {
@@ -478,6 +482,45 @@ public class Main {
 	}
 
 	/**
+ 	 * DESTRUCTIVE FUNCTION (proposedLinks will be modified)
+	 * Remove a link from the given list if another link already exists in the list
+	 * and covers the same event or time pair.
+	 * @param proposedLinks A list of TLinks to check for duplicates.
+	 * @return The number of duplicates found.
+	 */
+	private int removeDuplicatesAndInvalids(List<TLink> proposedLinks) {
+		if( proposedLinks == null || proposedLinks.size() < 2 ) 
+			return 0;
+		
+		List<TLink> removals = new ArrayList<TLink>();
+		Set<String> seenNew = new HashSet<String>();
+		
+		for( TLink proposed : proposedLinks ) {
+			// Make sure we have a valid link with 2 events!
+			if( proposed.getId1() == null || proposed.getId2() == null || 
+					proposed.getId1().length() == 0 || proposed.getId2().length() == 0 ) {
+				removals.add(proposed);
+				System.out.println("WARNING (proposed an invalid link): " + proposed);
+			}			
+			// Remove any proposed links that are duplicates of already proposed links.
+			else if( seenNew.contains(proposed.getId1()+proposed.getId2()) ) {
+				removals.add(proposed);
+				System.out.println("WARNING (proposed the same link twice): " + proposed);
+			}
+			// Normal link. Keep it.
+			else {
+				seenNew.add(proposed.getId1()+proposed.getId2());
+				seenNew.add(proposed.getId2()+proposed.getId1());
+			}
+		}
+		
+		for( TLink remove : removals )
+			proposedLinks.remove(remove);
+		
+		return removals.size();
+	}
+	
+	/**
 	 * DESTRUCTIVE FUNCTION (proposedLinks will be modified)
 	 * Removes any links from the proposed list that already have links between the same pairs in currentLinks.
 	 * @param currentLinks The list of current "good" links.
@@ -486,16 +529,12 @@ public class Main {
 	 */
 	private int removeConflicts(Map<String,TLink> currentLinksHash, List<TLink> proposedLinks) {
 		List<TLink> removals = new ArrayList<TLink>();
+
+		// Remove duplicates.
+		int duplicates = removeDuplicatesAndInvalids(proposedLinks);
+		if( debug && duplicates > 0 ) System.out.println("\t\tRemoved " + duplicates + " duplicate proposed links.");
+		
 		for( TLink proposed : proposedLinks ) {
-
-			// Make sure we have a valid link with 2 events!
-			if( proposed.getId1() == null || proposed.getId2() == null || 
-					proposed.getId1().length() == 0 || proposed.getId2().length() == 0 ) {
-				removals.add(proposed);
-				System.out.println("WARNING (proposed an invalid link): " + proposed);
-				continue;
-			}
-
 			// Look for a current link that conflicts with this proposed link.
 			TLink current = currentLinksHash.get(proposed.getId1()+proposed.getId2());
 			if( current != null && current.coversSamePair(proposed) )
