@@ -762,7 +762,8 @@ AP900816-0139.tml|ei1607(entity text: receive)
 
 ### Previous Sentence: In a long verbal attack read on Iraqi television Thursday , Saddam repeatedly called Bush `` a liar '' and said a shooting war could produce body bags courtesy of Baghdad .
 
-### Sentence with entity: `` We continue to pray and pray hard to God so that there will be no confrontation whereby you will receive thousands of Americans wrapped in sad coffins after you had pushed them into a dark tunnel , '' Saddam said .
+### Sentence with entity: `` We continue to pray and pray hard to God so that there will be no confrontation whereby you will receive thousands of Americans wrapped in sad coffins after you 
+ pushed them into a dark tunnel , '' Saddam said .
 
 ### Following Sentence: He called U.S. soldiers massing in Saudi Arabia the real occupiers in the Persian Gulf .
 

@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import timesieve.util.TreeOperator;
+
 import edu.stanford.nlp.trees.TypedDependency;
 
 public class TemporalContext {
@@ -83,8 +85,9 @@ public class TemporalContext {
 	}
 	
 	public void addContextSimpleDep() {
-		// First get the Timex value (string) denoting the document creation day
-		// This will serve as the default contextId, for events that don't govern a time expression
+		// First get the dct Timex
+		// It's value (up to the day granularity)
+		// will serve as the default contextId, for events that don't govern a time expression
 		List<Timex> dctTimexList = doc.getDocstamp();
 		Timex dct = dctTimexList.get(0);
 		if (dct == null) {
@@ -132,8 +135,47 @@ public class TemporalContext {
 		}
 		
 	}
-	
-	
+	/**
+	 * For each event, obtain the shortest dependency path between the event each timex in it's sentence.
+	 * If no such paths exist, assign the event to the DCT
+	 * Else, choose the shortest path.
+	 * If same length, choose one with most gov-to-dep pointing arrows
+	 * If still more than one, choose the first one in the list 
+	 */
+	public void addContextNearestTimexInPath() {
+		// First get the DCT Timex
+		List<Timex> dctTimexList = doc.getDocstamp();
+		Timex dct = dctTimexList.get(0);
+		if (dct == null) {
+			return;
+		}
+		
+		// Get timexes, events, and dependencies (by sid) for the document.
+		List<List<Timex>> timexesBySentId = doc.getTimexesBySentence();
+		List<List<TextEvent>> eventsBySentId = doc.getEventsBySentence();
+		List<List<TypedDependency>> depsBySentId = doc.getAllDependencies();
+		
+		// Loop
+		int numSents = depsBySentId.size();
+		for (int sid = 0; sid < numSents; sid++) {
+			for (TextEvent event : eventsBySentId.get(sid)) {
+				// We want to map each Timex t to an array of ints representing
+				// (1) the length of the path between event and t, and
+				// (2) the number of right arrows
+				HashMap<Timex, int[]> timexToCounts = new HashMap<Timex, int[]>();
+				for (Timex timex : timexesBySentId.get(sid)) {
+					// Get the shortest path from event to timex:
+					List<TypedDependency> deps = depsBySentId.get(sid);
+					int start = event.getIndex();
+					int end = timex.getTokenOffset();
+					String shortestPath = TreeOperator.dependencyPath(start, end, deps);
+					// to be continued?
+				}
+			}
+			
+		}
+		
+	}
 	
 	
 	/**
@@ -148,6 +190,17 @@ public class TemporalContext {
 		else {
 			return timex.getValue();
 		}
+	}
+	
+	/**
+	 * 
+	 * @param path
+	 * @return the length of a dependency path (provided as a String)
+	 */
+	public int getDepPathLength(String path) {
+		int count = path.split("->").length;
+    count += path.split("<-").length;
+    return count;
 	}
 
 }
