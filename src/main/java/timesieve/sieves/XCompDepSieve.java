@@ -55,6 +55,21 @@ import timesieve.util.TimebankUtil;
  * p=0.68	163 of 241	Non-VAGUE:	p=0.79	163 of 206
  * dev
  * p=0.63	34 of 54	Non-VAGUE:	p=0.77	34 of 44
+ * 
+ * 07/24/2013
+ * train:
+ * extended future:
+ * XCompDepSieve			p=0.67	209 of 311	Non-VAGUE:	p=0.81	209 of 259
+ * without:
+ * p=0.68	199 of 294	Non-VAGUE:	p=0.81	199 of 247
+ * dev:
+ * extended future:
+ * XCompDepSieve			p=0.63	37 of 59	Non-VAGUE:	p=0.76	37 of 49
+ * without:
+ * p=0.63	37 of 59	Non-VAGUE:	p=0.76	37 of 49
+ * 
+ * 
+ * 
  * @author cassidy
  */
 public class XCompDepSieve implements Sieve {
@@ -128,22 +143,58 @@ public class XCompDepSieve implements Sieve {
 						
 						EventEventLink tlink = null;
 						
-						if (relType.equals("xcomp")) { //p=0.65	55 of 84	Non-VAGUE:	p=0.85	55 of 65 
+						if (relType.equals("xcomp")) {  
+							// p=0.69	69 of 100	Non-VAGUE:	p=0.87	69 of 79
 							tlink = classifyEventPair_xcomp(eGov, eDep, sent);
 						}
-						if (relType.equals("ccomp")) { //p=0.71	60 of 84	Non-VAGUE:	p=0.82	60 of 73
+						if (relType.equals("ccomp")) { 
+							// p=0.71	70 of 99	Non-VAGUE:	p=0.85	70 of 82
 							tlink = classifyEventPair_ccomp(eGov, eDep, sent, deps);
 						}
-						if (relType.equals("conj_and")) { //p=0.67	22 of 33	Non-VAGUE:	p=0.67	22 of 33
+						if (relType.equals("conj_and")) { 
+							// p=0.69	24 of 35	Non-VAGUE:	p=0.69	24 of 35
 							tlink = classifyEventPair_conj_and(eGov, eDep, sent);
 						}
-						if (relType.equals("nsubj")) { // p=0.59	13 of 22	Non-VAGUE:	p=0.72	13 of 18
+						if (relType.equals("nsubj")) { 
+							// p=0.52	13 of 25	Non-VAGUE:	p=0.62	13 of 21
 							tlink = classifyEventPair_nsubj(eGov, eDep, sent);
 						}
-						if (relType.equals("advcl")) { // p=0.72	13 of 18	Non-VAGUE:	p=0.76	13 of 17
+						if (relType.equals("advcl")) { 
+							// p=0.65	15 of 23	Non-VAGUE:	p=0.71	15 of 21
 							tlink = classifyEventPair_advcl(eGov, eDep, sent, deps);
 						}
-						if (tlink != null) proposed.add(tlink);
+						if (relType.equals("conj_but")) { 
+							// p=0.50	7 of 14	Non-VAGUE:	p=0.78	7 of 9
+							tlink = classifyEventPair_conj_but(eGov, eDep, sent, deps);
+						}
+						if (relType.equals("conj_or")) { 
+								 //p=0.67	2 of 3	Non-VAGUE:	p=0.67	2 of 3
+							tlink = classifyEventPair_conj_or(eGov, eDep, sent, deps);
+						}
+						if (relType.equals("dobj")) { 
+							// p=0.75	9 of 12	Non-VAGUE:	p=1.00	9 of 9
+							tlink = classifyEventPair_dobj(eGov, eDep, sent, deps);
+						}
+
+						if (tlink != null) {
+//							boolean success = true;
+//							try {
+//								checkTLink(tlink, proposed);
+//							}
+//							catch (IllegalStateException E) {
+//								success = false;
+//								if (debug) {
+//									System.out.printf("Tried to add tlink for pair: (%s[%s], %s[%s]), but link is already proposed",
+//																		eGov.getId(), eGov.getEiid(), eDep.getId(), eDep.getEiid() );
+//								}
+//							}
+//							finally {
+//								if (success)
+							
+							
+									proposed.add(tlink);
+							//}
+						}
 					}		
 				}
 			}
@@ -155,6 +206,42 @@ public class XCompDepSieve implements Sieve {
 		return proposed;
 	}
 	
+
+
+	private EventEventLink classifyEventPair_conj_or(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TypedDependency> deps) {
+		return new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.VAGUE);
+	}
+
+	private EventEventLink classifyEventPair_dobj(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TypedDependency> deps) {
+	 TextEvent.Class eGovClass = eGov.getTheClass();
+	 TextEvent.Tense eDepTense = eDep.getTense();
+	 TextEvent.Aspect eDepAspect = eDep.getAspect();
+	 
+	 if (eGovClass == TextEvent.Class.ASPECTUAL) {
+		 return new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.IS_INCLUDED);
+	 }
+	 else if (eDepTense == TextEvent.Tense.NONE && eDepAspect == TextEvent.Aspect.NONE) {
+		 for (TypedDependency td : deps) {
+			 if (td.gov().index() == eDep.getIndex() && td.reln().toString().toLowerCase().equals("det")) {
+				 if (td.dep().toString("value").toLowerCase().equals("a")) {
+					 return new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE);
+				 }
+//				 if (td.dep().toString("value").toLowerCase().equals("the")) { // how can we differentiate between AFTER and IS_INCLUDED? 
+//					 return new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.AFTER);
+//				 }
+			 }
+		 }
+	 }
+	 else {
+		return new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.VAGUE);
+	 }
+	 return null;
+	}
+
+	private EventEventLink classifyEventPair_conj_but(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TypedDependency> deps) {
+		return new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE);
+	}
+
 	private EventEventLink classifyEventPair_advcl(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TypedDependency> deps) {
 		// Find the "marker" (i.e. the word that introduces the adverbial clause complement (i.e. the dependent)).
 		String mark = null;
@@ -248,8 +335,9 @@ public class XCompDepSieve implements Sieve {
 		}
 		else
 			return new EventEventLink(eGov.getEiid(), eDep.getEiid(), TLink.Type.BEFORE);
+		
 	}
-	
+
 	private EventEventLink classifyEventPair_ccomp(TextEvent eGov, TextEvent eDep, SieveSentence sent, List<TypedDependency> deps) {
 		TextEvent.Tense eDepTense = null;
 		TextEvent.Tense eGovTense = null;
@@ -328,6 +416,16 @@ public class XCompDepSieve implements Sieve {
 		String posTag = TreeOperator.indexToPOSTag(sentParseTree, tokenIndex);
 		return posTag;
 	}
+	
+	public void checkTLink(TLink tlink, List<TLink> proposed) throws IllegalStateException{
+		int numTLinks = proposed.size();
+		for (int t = 0; t < numTLinks; t++) {
+			if (tlink.coversSamePair(proposed.get(t))) { 
+				throw new IllegalStateException("Cannot add a tlink between a pair of events for which there is already a tlink in proposed");
+			}
+		}
+	}
+
 	
 	/**
 	 * No training. Just rule-based.
