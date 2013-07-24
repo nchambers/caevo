@@ -16,15 +16,15 @@ public class WordnetTest extends TestCase {
 	}
 	
 	private void testLemmas(WordNet wordnet) {
-		assertEquals(wordnet.lemmatizeTaggedWord("running", "VBG"), "run");
-		assertEquals(wordnet.lemmatizeTaggedWord("were", "VBG"), "be");
-		assertEquals(wordnet.lemmatizeTaggedWord("men", "NNS"), "man");
+		assertEquals("Checking WordNet lemmatization.", wordnet.lemmatizeTaggedWord("running", "VBG"), "run");
+		assertEquals("Checking WordNet lemmatization.", wordnet.lemmatizeTaggedWord("were", "VBG"), "be");
+		assertEquals("Checking WordNet lemmatization.", wordnet.lemmatizeTaggedWord("men", "NNS"), "man");
 	}
 	
 	private void testSynsets(WordNet wordnet) {
-		assertEquals(wordnet.isPhysicalObject("house"), true);
-		assertEquals(wordnet.isNounPersonOrGroup("soldier"), true);
-		assertEquals(wordnet.isNounPersonOrGroup("knife"), false);
+		assertEquals("Checking WordNet synset paths for physical objects.", true, wordnet.isPhysicalObject("house"));
+		assertEquals("Checking WordNet synset paths for persons.", true, wordnet.isNounPersonOrGroup("soldier"));
+		assertEquals("Checking WordNet synset paths for persons.", false, wordnet.isNounPersonOrGroup("knife"));
 	}
 
 }
