@@ -28602,6 +28602,2496 @@ prep_within(funded-5, continent-14)</deps>
 	<tlink event1="ei2081" event2="t0" relation="AFTER" closed="false" type="et" />
 	<tlink event1="ei2071" event2="ei2080" relation="AFTER" closed="false" type="ee" />
   </file>
+  <file name="APW19980227.0494.tml">
+    <entry sid="0" file="APW19980227.0494.tml">
+      <sentence>MOSCOW -LRB- AP -RRB- _ Presidents Leonid Kuchma of Ukraine and Boris Yeltsin of Russia signed an economic cooperation plan Friday , and Yeltsin claimed they resolved even more nagging problems .</sentence>
+      <tokens>
+        <t>"
+" "MOSCOW" " "</t>
+        <t>" " "(" ""</t>
+        <t>"" "AP" ""</t>
+        <t>"" ")" ""</t>
+        <t>"" "_" " "</t>
+        <t>" " "Presidents" " "</t>
+        <t>" " "Leonid" " "</t>
+        <t>" " "Kuchma" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "Ukraine" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "Boris" " "</t>
+        <t>" " "Yeltsin" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "Russia" " "</t>
+        <t>" " "signed" " "</t>
+        <t>" " "an" " "</t>
+        <t>" " "economic" " "</t>
+        <t>" " "cooperation" " "</t>
+        <t>" " "plan" " "</t>
+        <t>" " "Friday" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "Yeltsin" " "</t>
+        <t>" " "claimed" " "</t>
+        <t>" " "they" " "</t>
+        <t>" " "resolved" " "</t>
+        <t>" " "even" " "</t>
+        <t>" " "more" " "</t>
+        <t>" " "nagging" " "</t>
+        <t>" " "problems" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (S
+      (NP
+        (NP (NNP MOSCOW))
+        (PRN (-LRB- -LRB-)
+          (NP (NNP AP))
+          (-RRB- -RRB-)))
+      (VP (VBD _)
+        (SBAR
+          (S
+            (NP
+              (NP (NNP Presidents) (NNP Leonid) (NNP Kuchma))
+              (PP (IN of)
+                (NP
+                  (NP (NNP Ukraine)
+                    (CC and)
+                    (NNP Boris) (NNP Yeltsin))
+                  (PP (IN of)
+                    (NP (NNP Russia))))))
+            (VP (VBD signed)
+              (NP (DT an) (JJ economic) (NN cooperation) (NN plan))
+              (NP (NNP Friday)))))))
+    (, ,)
+    (CC and)
+    (S
+      (NP (NNP Yeltsin))
+      (VP (VBD claimed)
+        (SBAR
+          (S
+            (NP (PRP they))
+            (VP (VBD resolved)
+              (NP
+                (ADJP (RB even) (JJR more))
+                (VBG nagging) (NNS problems)))))))
+    (. .)))</parse>
+      <deps>nsubj(_-5, MOSCOW-1)
+appos(MOSCOW-1, AP-3)
+root(ROOT-0, _-5)
+nn(Kuchma-8, Presidents-6)
+nn(Kuchma-8, Leonid-7)
+nsubj(signed-16, Kuchma-8)
+nn(Yeltsin-13, Ukraine-10)
+conj_and(Ukraine-10, Boris-12)
+nn(Yeltsin-13, Boris-12)
+prep_of(Kuchma-8, Yeltsin-13)
+prep_of(Yeltsin-13, Russia-15)
+ccomp(_-5, signed-16)
+det(plan-20, an-17)
+amod(plan-20, economic-18)
+nn(plan-20, cooperation-19)
+dobj(signed-16, plan-20)
+tmod(signed-16, Friday-21)
+nsubj(claimed-25, Yeltsin-24)
+conj_and(_-5, claimed-25)
+nsubj(resolved-27, they-26)
+ccomp(claimed-25, resolved-27)
+advmod(more-29, even-28)
+amod(problems-31, more-29)
+amod(problems-31, nagging-30)
+dobj(resolved-27, problems-31)</deps>
+      <events>
+        <event id="e1" eiid="ei2306" offset="16" string="signed" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e2" eiid="ei2307" offset="25" string="claimed" tense="PAST" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e3" eiid="ei2308" offset="27" string="resolved" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes>
+        <timex tid="t2297" text="Friday" offset="21" length="1" anchortid="t0" type="DATE" mod="" value="1998-02-27" docFunction="NONE" temporalFunction="true" />
+      </timexes>
+    </entry>
+    <entry sid="1" file="APW19980227.0494.tml">
+      <sentence>Russia and Ukraine share similar cultures and languages , and Ukraine was ruled from Moscow for centuries .</sentence>
+      <tokens>
+        <t>" " "Russia" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "Ukraine" " "</t>
+        <t>" " "share" " "</t>
+        <t>" " "similar" " "</t>
+        <t>" " "cultures" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "languages" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "Ukraine" " "</t>
+        <t>" " "was" " "</t>
+        <t>" " "ruled" " "</t>
+        <t>" " "from" " "</t>
+        <t>" " "Moscow" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "centuries" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (S
+      (NP (NNP Russia)
+        (CC and)
+        (NNP Ukraine))
+      (VP (VBP share)
+        (NP (JJ similar) (NNS cultures)
+          (CC and)
+          (NNS languages))))
+    (, ,)
+    (CC and)
+    (S
+      (NP (NNP Ukraine))
+      (VP (VBD was)
+        (VP (VBN ruled)
+          (PP (IN from)
+            (NP
+              (NP (NNP Moscow))
+              (PP (IN for)
+                (NP (NNS centuries))))))))
+    (. .)))</parse>
+      <deps>nsubj(share-4, Russia-1)
+conj_and(Russia-1, Ukraine-3)
+nsubj(share-4, Ukraine-3)
+root(ROOT-0, share-4)
+amod(cultures-6, similar-5)
+dobj(share-4, cultures-6)
+dobj(share-4, languages-8)
+conj_and(cultures-6, languages-8)
+nsubjpass(ruled-13, Ukraine-11)
+auxpass(ruled-13, was-12)
+conj_and(share-4, ruled-13)
+prep_from(ruled-13, Moscow-15)
+prep_for(Moscow-15, centuries-17)</deps>
+      <events>
+        <event id="e4" eiid="ei2309" offset="13" string="ruled" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes>
+        <timex tid="t154" text="centuries" offset="17" length="1" anchortid="" type="DURATION" mod="" value="PXE" docFunction="NONE" temporalFunction="false" />
+      </timexes>
+    </entry>
+    <entry sid="2" file="APW19980227.0494.tml">
+      <sentence>But while the two Slavic neighbors see themselves as natural partners , their relations since the breakup of the Soviet Union have been bedeviled by a number of disputes _ Black Sea naval bases , border problems and Ukraine 's natural gas debts .</sentence>
+      <tokens>
+        <t>" " "But" " "</t>
+        <t>" " "while" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "two" " "</t>
+        <t>" " "Slavic" " "</t>
+        <t>" " "neighbors" " "</t>
+        <t>" " "see" " "</t>
+        <t>" " "themselves" " "</t>
+        <t>" " "as" " "</t>
+        <t>" " "natural" " "</t>
+        <t>" " "partners" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "their" " "</t>
+        <t>" " "relations" " "</t>
+        <t>" " "since" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "breakup" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Soviet" " "</t>
+        <t>" " "Union" " "</t>
+        <t>" " "have" " "</t>
+        <t>" " "been" " "</t>
+        <t>" " "bedeviled" " "</t>
+        <t>" " "by" " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "number" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "disputes" " "</t>
+        <t>" " "_" " "</t>
+        <t>" " "Black" " "</t>
+        <t>" " "Sea" " "</t>
+        <t>" " "naval" " "</t>
+        <t>" " "bases" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "border" " "</t>
+        <t>" " "problems" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "Ukraine" ""</t>
+        <t>"" "'s" " "</t>
+        <t>" " "natural" " "</t>
+        <t>" " "gas" " "</t>
+        <t>" " "debts" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S (CC But)
+    (SBAR (IN while)
+      (S
+        (NP (DT the) (CD two) (JJ Slavic) (NNS neighbors))
+        (VP (VBP see)
+          (NP (PRP themselves))
+          (PP (IN as)
+            (NP (JJ natural) (NNS partners))))))
+    (, ,)
+    (NP
+      (NP (PRP$ their) (NNS relations))
+      (PP (IN since)
+        (NP
+          (NP (DT the) (NN breakup))
+          (PP (IN of)
+            (NP (DT the) (NNP Soviet) (NNP Union))))))
+    (VP (VBP have)
+      (VP (VBN been)
+        (VP (VBN bedeviled)
+          (PP (IN by)
+            (NP
+              (NP (DT a) (NN number))
+              (PP (IN of)
+                (NP
+                  (NP (NNP disputes) (NNP _) (NNP Black) (NNP Sea) (JJ naval) (NNS bases))
+                  (, ,)
+                  (NP (NN border) (NNS problems))
+                  (CC and)
+                  (NP
+                    (NP (NNP Ukraine) (POS 's))
+                    (JJ natural) (NN gas) (NNS debts)))))))))
+    (. .)))</parse>
+      <deps>cc(bedeviled-24, But-1)
+mark(see-7, while-2)
+det(neighbors-6, the-3)
+num(neighbors-6, two-4)
+amod(neighbors-6, Slavic-5)
+nsubj(see-7, neighbors-6)
+advcl(bedeviled-24, see-7)
+dobj(see-7, themselves-8)
+amod(partners-11, natural-10)
+prep_as(see-7, partners-11)
+poss(relations-14, their-13)
+nsubjpass(bedeviled-24, relations-14)
+det(breakup-17, the-16)
+prep_since(relations-14, breakup-17)
+det(Union-21, the-19)
+nn(Union-21, Soviet-20)
+prep_of(breakup-17, Union-21)
+aux(bedeviled-24, have-22)
+auxpass(bedeviled-24, been-23)
+root(ROOT-0, bedeviled-24)
+det(number-27, a-26)
+agent(bedeviled-24, number-27)
+nn(bases-34, disputes-29)
+nn(bases-34, _-30)
+nn(bases-34, Black-31)
+nn(bases-34, Sea-32)
+amod(bases-34, naval-33)
+prep_of(number-27, bases-34)
+nn(problems-37, border-36)
+prep_of(number-27, problems-37)
+conj_and(bases-34, problems-37)
+poss(debts-43, Ukraine-39)
+amod(debts-43, natural-41)
+nn(debts-43, gas-42)
+prep_of(number-27, debts-43)
+conj_and(bases-34, debts-43)</deps>
+      <events>
+        <event id="e8" eiid="ei2310" offset="17" string="breakup" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e10" eiid="ei2311" offset="24" string="bedeviled" tense="PRESENT" aspect="PERFECTIVE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e11" eiid="ei2312" offset="29" string="disputes" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="3" file="APW19980227.0494.tml">
+      <sentence>`` We have covered the entire list of questions and discussed how we will be tackling them , '' Yeltsin was quoted as saying by the ITAR-Tass news agency .</sentence>
+      <tokens>
+        <t>" " "``" ""</t>
+        <t>"" "We" " "</t>
+        <t>" " "have" " "</t>
+        <t>" " "covered" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "entire" " "</t>
+        <t>" " "list" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "questions" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "discussed" " "</t>
+        <t>" " "how" " "</t>
+        <t>" " "we" " "</t>
+        <t>" " "will" " "</t>
+        <t>" " "be" " "</t>
+        <t>" " "tackling" " "</t>
+        <t>" " "them" ""</t>
+        <t>"" "," ""</t>
+        <t>"" "''" " "</t>
+        <t>" " "Yeltsin" " "</t>
+        <t>" " "was" " "</t>
+        <t>" " "quoted" " "</t>
+        <t>" " "as" " "</t>
+        <t>" " "saying" " "</t>
+        <t>" " "by" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "ITAR-Tass" " "</t>
+        <t>" " "news" " "</t>
+        <t>" " "agency" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S (`` ``)
+    (S
+      (NP (PRP We))
+      (VP (VBP have)
+        (VP
+          (VP (VBN covered)
+            (NP
+              (NP (DT the) (JJ entire) (NN list))
+              (PP (IN of)
+                (NP (NNS questions)))))
+          (CC and)
+          (VP (VBN discussed)
+            (SBAR
+              (WHADVP (WRB how))
+              (S
+                (NP (PRP we))
+                (VP (MD will)
+                  (VP (VB be)
+                    (VP (VBG tackling)
+                      (NP (PRP them)))))))))))
+    (, ,) ('' '')
+    (NP (NNP Yeltsin))
+    (VP (VBD was)
+      (VP (VBN quoted)
+        (PP (IN as)
+          (S
+            (VP (VBG saying)
+              (PP (IN by)
+                (NP (DT the) (NNP ITAR-Tass) (NN news) (NN agency))))))))
+    (. .)))</parse>
+      <deps>nsubj(covered-4, We-2)
+nsubj(discussed-11, We-2)
+aux(covered-4, have-3)
+ccomp(quoted-22, covered-4)
+det(list-7, the-5)
+amod(list-7, entire-6)
+dobj(covered-4, list-7)
+prep_of(list-7, questions-9)
+conj_and(covered-4, discussed-11)
+ccomp(quoted-22, discussed-11)
+advmod(tackling-16, how-12)
+nsubj(tackling-16, we-13)
+aux(tackling-16, will-14)
+aux(tackling-16, be-15)
+ccomp(discussed-11, tackling-16)
+dobj(tackling-16, them-17)
+nsubjpass(quoted-22, Yeltsin-20)
+auxpass(quoted-22, was-21)
+root(ROOT-0, quoted-22)
+prepc_as(quoted-22, saying-24)
+det(agency-29, the-26)
+nn(agency-29, ITAR-Tass-27)
+nn(agency-29, news-28)
+prep_by(saying-24, agency-29)</deps>
+      <events>
+        <event id="e12" eiid="ei2313" offset="4" string="covered" tense="PRESENT" aspect="PERFECTIVE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e15" eiid="ei2314" offset="11" string="discussed" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e16" eiid="ei2315" offset="16" string="tackling" tense="FUTURE" aspect="PROGRESSIVE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e17" eiid="ei2316" offset="22" string="quoted" tense="PAST" aspect="NONE" class="REPORTING" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e18" eiid="ei2317" offset="24" string="saying" tense="PRESPART" aspect="NONE" class="REPORTING" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="4" file="APW19980227.0494.tml">
+      <sentence>`` I must say there are no unsettled problems any more .</sentence>
+      <tokens>
+        <t>" " "``" ""</t>
+        <t>"" "I" " "</t>
+        <t>" " "must" " "</t>
+        <t>" " "say" " "</t>
+        <t>" " "there" " "</t>
+        <t>" " "are" " "</t>
+        <t>" " "no" " "</t>
+        <t>" " "unsettled" " "</t>
+        <t>" " "problems" " "</t>
+        <t>" " "any" " "</t>
+        <t>" " "more" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S (`` ``)
+    (NP (PRP I))
+    (VP (MD must)
+      (VP (VB say)
+        (SBAR
+          (S
+            (NP (EX there))
+            (VP (VBP are)
+              (NP (DT no) (JJ unsettled) (NNS problems))
+              (ADVP (DT any) (RBR more)))))))
+    (. .)))</parse>
+      <deps>nsubj(say-4, I-2)
+aux(say-4, must-3)
+root(ROOT-0, say-4)
+expl(are-6, there-5)
+ccomp(say-4, are-6)
+det(problems-9, no-7)
+amod(problems-9, unsettled-8)
+nsubj(are-6, problems-9)
+dep(more-11, any-10)
+advmod(are-6, more-11)</deps>
+      <events>
+        <event id="e20" eiid="ei2318" offset="4" string="say" tense="NONE" aspect="NONE" class="REPORTING" polarity="POS" modality="must" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="5" file="APW19980227.0494.tml">
+      <sentence>We have solved them all . ''</sentence>
+      <tokens>
+        <t>" " "We" " "</t>
+        <t>" " "have" " "</t>
+        <t>" " "solved" " "</t>
+        <t>" " "them" " "</t>
+        <t>" " "all" ""</t>
+        <t>"" "." ""</t>
+        <t>"" "''" " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (PRP We))
+    (VP (VBP have)
+      (VP (VBN solved)
+        (S
+          (NP (PRP them))
+          (NP (DT all)))))
+    (. .) ('' '')))</parse>
+      <deps>nsubj(solved-3, We-1)
+aux(solved-3, have-2)
+root(ROOT-0, solved-3)
+nsubj(all-5, them-4)
+xcomp(solved-3, all-5)</deps>
+      <events>
+        <event id="e22" eiid="ei2319" offset="3" string="solved" tense="PRESENT" aspect="PERFECTIVE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="6" file="APW19980227.0494.tml">
+      <sentence>But his sweeping statement contained no details , and gave no indication of how the disputes could be resolved .</sentence>
+      <tokens>
+        <t>" " "But" " "</t>
+        <t>" " "his" " "</t>
+        <t>" " "sweeping" " "</t>
+        <t>" " "statement" " "</t>
+        <t>" " "contained" " "</t>
+        <t>" " "no" " "</t>
+        <t>" " "details" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "gave" " "</t>
+        <t>" " "no" " "</t>
+        <t>" " "indication" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "how" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "disputes" " "</t>
+        <t>" " "could" " "</t>
+        <t>" " "be" " "</t>
+        <t>" " "resolved" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S (CC But)
+    (NP (PRP$ his) (JJ sweeping) (NN statement))
+    (VP
+      (VP (VBD contained)
+        (NP (DT no) (NNS details)))
+      (, ,)
+      (CC and)
+      (VP (VBD gave)
+        (NP
+          (NP (DT no) (NN indication))
+          (PP (IN of)
+            (SBAR
+              (WHADVP (WRB how))
+              (S
+                (NP (DT the) (NNS disputes))
+                (VP (MD could)
+                  (VP (VB be)
+                    (VP (VBN resolved))))))))))
+    (. .)))</parse>
+      <deps>poss(statement-4, his-2)
+amod(statement-4, sweeping-3)
+nsubj(contained-5, statement-4)
+nsubj(gave-10, statement-4)
+root(ROOT-0, contained-5)
+det(details-7, no-6)
+dobj(contained-5, details-7)
+conj_and(contained-5, gave-10)
+det(indication-12, no-11)
+dobj(gave-10, indication-12)
+advmod(resolved-19, how-14)
+det(disputes-16, the-15)
+nsubjpass(resolved-19, disputes-16)
+aux(resolved-19, could-17)
+auxpass(resolved-19, be-18)
+prepc_of(indication-12, resolved-19)</deps>
+      <events>
+        <event id="e28" eiid="ei2320" offset="16" string="disputes" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e29" eiid="ei2321" offset="19" string="resolved" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="could" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="7" file="APW19980227.0494.tml">
+      <sentence>Their solution would require a compromise between the two nations ' parliaments .</sentence>
+      <tokens>
+        <t>" " "Their" " "</t>
+        <t>" " "solution" " "</t>
+        <t>" " "would" " "</t>
+        <t>" " "require" " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "compromise" " "</t>
+        <t>" " "between" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "two" " "</t>
+        <t>" " "nations" ""</t>
+        <t>"" "'" " "</t>
+        <t>" " "parliaments" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (PRP$ Their) (NN solution))
+    (VP (MD would)
+      (VP (VB require)
+        (NP
+          (NP (DT a) (NN compromise))
+          (PP (IN between)
+            (NP
+              (NP (DT the) (CD two) (NNS nations) (POS '))
+              (NNS parliaments))))))
+    (. .)))</parse>
+      <deps>poss(solution-2, Their-1)
+nsubj(require-4, solution-2)
+aux(require-4, would-3)
+root(ROOT-0, require-4)
+det(compromise-6, a-5)
+dobj(require-4, compromise-6)
+det(nations-10, the-8)
+num(nations-10, two-9)
+poss(parliaments-12, nations-10)
+prep_between(compromise-6, parliaments-12)</deps>
+      <events>
+        <event id="e32" eiid="ei2322" offset="4" string="require" tense="NONE" aspect="NONE" class="I_STATE" polarity="POS" modality="would" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e34" eiid="ei2323" offset="6" string="compromise" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="8" file="APW19980227.0494.tml">
+      <sentence>A major dispute concerns a broad political treaty calling for border demarcation , which the two presidents signed last May .</sentence>
+      <tokens>
+        <t>" " "A" " "</t>
+        <t>" " "major" " "</t>
+        <t>" " "dispute" " "</t>
+        <t>" " "concerns" " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "broad" " "</t>
+        <t>" " "political" " "</t>
+        <t>" " "treaty" " "</t>
+        <t>" " "calling" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "border" " "</t>
+        <t>" " "demarcation" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "which" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "two" " "</t>
+        <t>" " "presidents" " "</t>
+        <t>" " "signed" " "</t>
+        <t>" " "last" " "</t>
+        <t>" " "May" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (DT A) (JJ major) (NN dispute))
+    (VP (VBZ concerns)
+      (NP
+        (NP (DT a) (JJ broad) (JJ political) (NN treaty))
+        (VP (VBG calling)
+          (PP (IN for)
+            (NP
+              (NP (NN border) (NN demarcation))
+              (, ,)
+              (SBAR
+                (WHNP (WDT which))
+                (S
+                  (NP (DT the) (CD two) (NNS presidents))
+                  (VP (VBD signed)
+                    (NP (JJ last) (NNP May))))))))))
+    (. .)))</parse>
+      <deps>det(dispute-3, A-1)
+amod(dispute-3, major-2)
+nsubj(concerns-4, dispute-3)
+root(ROOT-0, concerns-4)
+det(treaty-8, a-5)
+amod(treaty-8, broad-6)
+amod(treaty-8, political-7)
+dobj(concerns-4, treaty-8)
+partmod(treaty-8, calling-9)
+nn(demarcation-12, border-11)
+prep_for(calling-9, demarcation-12)
+dobj(signed-18, demarcation-12)
+rel(signed-18, which-14)
+det(presidents-17, the-15)
+num(presidents-17, two-16)
+nsubj(signed-18, presidents-17)
+rcmod(demarcation-12, signed-18)
+amod(May-20, last-19)
+tmod(signed-18, May-20)</deps>
+      <events>
+        <event id="e37" eiid="ei2324" offset="3" string="dispute" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e41" eiid="ei2325" offset="18" string="signed" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes>
+        <timex tid="t143" text="last May" offset="19" length="2" anchortid="t0" type="DATE" mod="" value="1997-05" docFunction="NONE" temporalFunction="true" />
+      </timexes>
+    </entry>
+    <entry sid="9" file="APW19980227.0494.tml">
+      <sentence>In effect , the treaty amounts to Russian recognition of Ukraine 's sovereignty and borders , and the Ukrainian parliament has already ratified it .</sentence>
+      <tokens>
+        <t>" " "In" " "</t>
+        <t>" " "effect" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "treaty" " "</t>
+        <t>" " "amounts" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "Russian" " "</t>
+        <t>" " "recognition" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "Ukraine" ""</t>
+        <t>"" "'s" " "</t>
+        <t>" " "sovereignty" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "borders" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Ukrainian" " "</t>
+        <t>" " "parliament" " "</t>
+        <t>" " "has" " "</t>
+        <t>" " "already" " "</t>
+        <t>" " "ratified" " "</t>
+        <t>" " "it" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (PP (IN In)
+      (NP (NN effect)))
+    (, ,)
+    (S
+      (NP (DT the) (NN treaty))
+      (VP
+        (VP (VBZ amounts)
+          (PP (TO to)
+            (NP
+              (NP (JJ Russian) (NN recognition))
+              (PP (IN of)
+                (NP
+                  (NP (NNP Ukraine) (POS 's))
+                  (NN sovereignty))))))
+        (CC and)
+        (VP (VBZ borders))))
+    (, ,)
+    (CC and)
+    (S
+      (NP (DT the) (JJ Ukrainian) (NN parliament))
+      (VP (VBZ has)
+        (ADVP (RB already))
+        (VP (VBN ratified)
+          (NP (PRP it)))))
+    (. .)))</parse>
+      <deps>prep_in(amounts-6, effect-2)
+det(treaty-5, the-4)
+nsubj(amounts-6, treaty-5)
+nsubj(borders-15, treaty-5)
+root(ROOT-0, amounts-6)
+amod(recognition-9, Russian-8)
+prep_to(amounts-6, recognition-9)
+poss(sovereignty-13, Ukraine-11)
+prep_of(recognition-9, sovereignty-13)
+conj_and(amounts-6, borders-15)
+det(parliament-20, the-18)
+amod(parliament-20, Ukrainian-19)
+nsubj(ratified-23, parliament-20)
+aux(ratified-23, has-21)
+advmod(ratified-23, already-22)
+conj_and(amounts-6, ratified-23)
+dobj(ratified-23, it-24)</deps>
+      <events>
+        <event id="e43" eiid="ei2326" offset="23" string="ratified" tense="PRESENT" aspect="PERFECTIVE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="10" file="APW19980227.0494.tml">
+      <sentence>However , Russia has stalled ratification , trying to tie it to an agreement that would permit the Russian navy to use a naval base on Ukraine 's Crimean peninsula for at least 20 more years .</sentence>
+      <tokens>
+        <t>" " "However" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "Russia" " "</t>
+        <t>" " "has" " "</t>
+        <t>" " "stalled" " "</t>
+        <t>" " "ratification" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "trying" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "tie" " "</t>
+        <t>" " "it" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "an" " "</t>
+        <t>" " "agreement" " "</t>
+        <t>" " "that" " "</t>
+        <t>" " "would" " "</t>
+        <t>" " "permit" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Russian" " "</t>
+        <t>" " "navy" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "use" " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "naval" " "</t>
+        <t>" " "base" " "</t>
+        <t>" " "on" " "</t>
+        <t>" " "Ukraine" ""</t>
+        <t>"" "'s" " "</t>
+        <t>" " "Crimean" " "</t>
+        <t>" " "peninsula" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "at" " "</t>
+        <t>" " "least" " "</t>
+        <t>" " "20" " "</t>
+        <t>" " "more" " "</t>
+        <t>" " "years" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (ADVP (RB However))
+    (, ,)
+    (NP (NNP Russia))
+    (VP (VBZ has)
+      (VP (VBN stalled)
+        (NP (NN ratification))
+        (, ,)
+        (S
+          (VP (VBG trying)
+            (S
+              (VP (TO to)
+                (VP (VB tie)
+                  (NP (PRP it))
+                  (PP (TO to)
+                    (NP
+                      (NP (DT an) (NN agreement))
+                      (SBAR
+                        (WHNP (WDT that))
+                        (S
+                          (VP (MD would)
+                            (VP (VB permit)
+                              (NP (DT the) (JJ Russian) (NN navy))
+                              (S
+                                (VP (TO to)
+                                  (VP (VB use)
+                                    (NP (DT a) (JJ naval) (NN base))
+                                    (PP (IN on)
+                                      (NP
+                                        (NP
+                                          (NP (NNP Ukraine) (POS 's))
+                                          (JJ Crimean) (NN peninsula))
+                                        (PP (IN for)
+                                          (NP
+                                            (QP (IN at) (JJS least) (CD 20) (JJR more))
+                                            (NNS years)))))))))))))))))))))
+    (. .)))</parse>
+      <deps>advmod(stalled-5, However-1)
+nsubj(stalled-5, Russia-3)
+aux(stalled-5, has-4)
+root(ROOT-0, stalled-5)
+dobj(stalled-5, ratification-6)
+partmod(stalled-5, trying-8)
+xcomp(stalled-5, trying-8)
+aux(tie-10, to-9)
+xcomp(trying-8, tie-10)
+dobj(tie-10, it-11)
+det(agreement-14, an-13)
+prep_to(tie-10, agreement-14)
+nsubj(permit-17, agreement-14)
+aux(permit-17, would-16)
+rcmod(agreement-14, permit-17)
+det(navy-20, the-18)
+amod(navy-20, Russian-19)
+dobj(permit-17, navy-20)
+aux(use-22, to-21)
+xcomp(permit-17, use-22)
+det(base-25, a-23)
+amod(base-25, naval-24)
+dobj(use-22, base-25)
+poss(peninsula-30, Ukraine-27)
+amod(peninsula-30, Crimean-29)
+prep_on(use-22, peninsula-30)
+quantmod(20-34, at-32)
+mwe(at-32, least-33)
+pobj(at-32, least-33)
+num(years-36, 20-34)
+quantmod(20-34, more-35)
+prep_for(peninsula-30, years-36)</deps>
+      <events>
+        <event id="e44" eiid="ei2327" offset="5" string="stalled" tense="PRESENT" aspect="PERFECTIVE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e45" eiid="ei2328" offset="6" string="ratification" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e46" eiid="ei2329" offset="8" string="trying" tense="PRESPART" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e48" eiid="ei2330" offset="10" string="tie" tense="INFINITIVE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e50" eiid="ei2332" offset="17" string="permit" tense="NONE" aspect="NONE" class="I_ACTION" polarity="POS" modality="would" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e53" eiid="ei2333" offset="22" string="use" tense="INFINITIVE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes>
+        <timex tid="t2300" text="at least 20 more years" offset="32" length="5" anchortid="" type="DURATION" mod="EQUAL_OR_MORE" value="P20Y" docFunction="NONE" temporalFunction="false" />
+      </timexes>
+    </entry>
+    <entry sid="11" file="APW19980227.0494.tml">
+      <sentence>In their joint statement issued after the talks , Yeltsin and Kuchma called for the fastest possible ratification of the treaty , saying it would create a `` strong legal foundation '' for bilateral ties and help stability in Europe .</sentence>
+      <tokens>
+        <t>" " "In" " "</t>
+        <t>" " "their" " "</t>
+        <t>" " "joint" " "</t>
+        <t>" " "statement" " "</t>
+        <t>" " "issued" " "</t>
+        <t>" " "after" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "talks" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "Yeltsin" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "Kuchma" " "</t>
+        <t>" " "called" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "fastest" " "</t>
+        <t>" " "possible" " "</t>
+        <t>" " "ratification" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "treaty" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "saying" " "</t>
+        <t>" " "it" " "</t>
+        <t>" " "would" " "</t>
+        <t>" " "create" " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "``" ""</t>
+        <t>"" "strong" " "</t>
+        <t>" " "legal" " "</t>
+        <t>" " "foundation" ""</t>
+        <t>"" "''" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "bilateral" " "</t>
+        <t>" " "ties" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "help" " "</t>
+        <t>" " "stability" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "Europe" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (PP (IN In)
+      (NP
+        (NP (PRP$ their) (JJ joint) (NN statement))
+        (VP (VBN issued)
+          (PP (IN after)
+            (NP (DT the) (NNS talks))))))
+    (, ,)
+    (NP (NNP Yeltsin)
+      (CC and)
+      (NNP Kuchma))
+    (VP (VBD called)
+      (PP (IN for)
+        (NP
+          (NP (DT the)
+            (ADJP (JJS fastest) (JJ possible))
+            (NN ratification))
+          (PP (IN of)
+            (NP (DT the) (NN treaty)))))
+      (, ,)
+      (S
+        (VP (VBG saying)
+          (SBAR
+            (S
+              (NP (PRP it))
+              (VP (MD would)
+                (VP
+                  (VP (VB create)
+                    (NP (DT a) (`` ``) (JJ strong) (JJ legal) (NN foundation) ('' ''))
+                    (PP (IN for)
+                      (NP (JJ bilateral) (NNS ties))))
+                  (CC and)
+                  (VP (VB help)
+                    (NP (NN stability))
+                    (PP (IN in)
+                      (NP (NNP Europe)))))))))))
+    (. .)))</parse>
+      <deps>poss(statement-4, their-2)
+amod(statement-4, joint-3)
+prep_in(called-13, statement-4)
+partmod(statement-4, issued-5)
+det(talks-8, the-7)
+prep_after(issued-5, talks-8)
+nsubj(called-13, Yeltsin-10)
+conj_and(Yeltsin-10, Kuchma-12)
+nsubj(called-13, Kuchma-12)
+root(ROOT-0, called-13)
+det(ratification-18, the-15)
+dep(possible-17, fastest-16)
+amod(ratification-18, possible-17)
+prep_for(called-13, ratification-18)
+det(treaty-21, the-20)
+prep_of(ratification-18, treaty-21)
+xcomp(called-13, saying-23)
+nsubj(create-26, it-24)
+nsubj(help-37, it-24)
+aux(create-26, would-25)
+ccomp(saying-23, create-26)
+det(foundation-31, a-27)
+amod(foundation-31, strong-29)
+amod(foundation-31, legal-30)
+dobj(create-26, foundation-31)
+amod(ties-35, bilateral-34)
+prep_for(create-26, ties-35)
+ccomp(saying-23, help-37)
+conj_and(create-26, help-37)
+dobj(help-37, stability-38)
+prep_in(help-37, Europe-40)</deps>
+      <events>
+        <event id="e55" eiid="ei2334" offset="5" string="issued" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e56" eiid="ei2335" offset="8" string="talks" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e58" eiid="ei2336" offset="13" string="called" tense="PAST" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e59" eiid="ei2337" offset="18" string="ratification" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e61" eiid="ei2338" offset="23" string="saying" tense="PRESPART" aspect="NONE" class="REPORTING" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e62" eiid="ei2339" offset="26" string="create" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="would" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e64" eiid="ei2340" offset="37" string="help" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="would" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="12" file="APW19980227.0494.tml">
+      <sentence>Kuchma assured Yeltsin that Ukraine would not join NATO , Yeltsin 's spokesman Sergei Yastrzhembsky said , according to the Interfax news agency .</sentence>
+      <tokens>
+        <t>" " "Kuchma" " "</t>
+        <t>" " "assured" " "</t>
+        <t>" " "Yeltsin" " "</t>
+        <t>" " "that" " "</t>
+        <t>" " "Ukraine" " "</t>
+        <t>" " "would" " "</t>
+        <t>" " "not" " "</t>
+        <t>" " "join" " "</t>
+        <t>" " "NATO" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "Yeltsin" ""</t>
+        <t>"" "'s" " "</t>
+        <t>" " "spokesman" " "</t>
+        <t>" " "Sergei" " "</t>
+        <t>" " "Yastrzhembsky" " "</t>
+        <t>" " "said" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "according" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Interfax" " "</t>
+        <t>" " "news" " "</t>
+        <t>" " "agency" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (S
+      (NP (NNP Kuchma))
+      (VP (VBD assured)
+        (NP (NNP Yeltsin))
+        (SBAR (IN that)
+          (S
+            (NP (NNP Ukraine))
+            (VP (MD would) (RB not)
+              (VP (VB join)
+                (NP (NNP NATO))))))))
+    (, ,)
+    (S
+      (NP
+        (NP (NNP Yeltsin) (POS 's))
+        (NN spokesman) (NNP Sergei) (NNP Yastrzhembsky))
+      (VP (VBD said)))
+    (, ,)
+    (PP (VBG according)
+      (PP (TO to)
+        (NP (DT the) (NNP Interfax) (NN news) (NN agency))))
+    (. .)))</parse>
+      <deps>nsubj(assured-2, Kuchma-1)
+root(ROOT-0, assured-2)
+dobj(assured-2, Yeltsin-3)
+mark(join-8, that-4)
+nsubj(join-8, Ukraine-5)
+aux(join-8, would-6)
+neg(join-8, not-7)
+ccomp(assured-2, join-8)
+dobj(join-8, NATO-9)
+poss(Yastrzhembsky-15, Yeltsin-11)
+nn(Yastrzhembsky-15, spokesman-13)
+nn(Yastrzhembsky-15, Sergei-14)
+nsubj(said-16, Yastrzhembsky-15)
+ccomp(assured-2, said-16)
+prepc_according_to(assured-2, to-19)
+det(agency-23, the-20)
+nn(agency-23, Interfax-21)
+nn(agency-23, news-22)
+pobj(assured-2, agency-23)</deps>
+      <events>
+        <event id="e65" eiid="ei2341" offset="2" string="assured" tense="PAST" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e66" eiid="ei2342" offset="8" string="join" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="NEG" modality="would" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e69" eiid="ei2343" offset="16" string="said" tense="PAST" aspect="NONE" class="REPORTING" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e156" eiid="ei2344" offset="18" string="according" tense="PRESPART" aspect="NONE" class="REPORTING" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="13" file="APW19980227.0494.tml">
+      <sentence>The Russian leadership has staunchly opposed the western alliance 's expansion into Eastern Europe .</sentence>
+      <tokens>
+        <t>" " "The" " "</t>
+        <t>" " "Russian" " "</t>
+        <t>" " "leadership" " "</t>
+        <t>" " "has" " "</t>
+        <t>" " "staunchly" " "</t>
+        <t>" " "opposed" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "western" " "</t>
+        <t>" " "alliance" ""</t>
+        <t>"" "'s" " "</t>
+        <t>" " "expansion" " "</t>
+        <t>" " "into" " "</t>
+        <t>" " "Eastern" " "</t>
+        <t>" " "Europe" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (DT The) (JJ Russian) (NN leadership))
+    (VP (VBZ has)
+      (ADVP (RB staunchly))
+      (VP (VBN opposed)
+        (NP
+          (NP (DT the) (JJ western) (NN alliance) (POS 's))
+          (NN expansion))
+        (PP (IN into)
+          (NP (NNP Eastern) (NNP Europe)))))
+    (. .)))</parse>
+      <deps>det(leadership-3, The-1)
+amod(leadership-3, Russian-2)
+nsubj(opposed-6, leadership-3)
+aux(opposed-6, has-4)
+advmod(opposed-6, staunchly-5)
+root(ROOT-0, opposed-6)
+det(alliance-9, the-7)
+amod(alliance-9, western-8)
+poss(expansion-11, alliance-9)
+dobj(opposed-6, expansion-11)
+nn(Europe-14, Eastern-13)
+prep_into(opposed-6, Europe-14)</deps>
+      <events>
+        <event id="e71" eiid="ei2345" offset="6" string="opposed" tense="PRESENT" aspect="PERFECTIVE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e72" eiid="ei2346" offset="11" string="expansion" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="14" file="APW19980227.0494.tml">
+      <sentence>In their joint statement , released by the Kremlin , the two leaders also pledged to consult each other regularly on their approaches to relations with NATO and , in particular , their action within the framework of NATO 's Partnership for Peace program .</sentence>
+      <tokens>
+        <t>" " "In" " "</t>
+        <t>" " "their" " "</t>
+        <t>" " "joint" " "</t>
+        <t>" " "statement" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "released" " "</t>
+        <t>" " "by" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Kremlin" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "two" " "</t>
+        <t>" " "leaders" " "</t>
+        <t>" " "also" " "</t>
+        <t>" " "pledged" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "consult" " "</t>
+        <t>" " "each" " "</t>
+        <t>" " "other" " "</t>
+        <t>" " "regularly" " "</t>
+        <t>" " "on" " "</t>
+        <t>" " "their" " "</t>
+        <t>" " "approaches" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "relations" " "</t>
+        <t>" " "with" " "</t>
+        <t>" " "NATO" " "</t>
+        <t>" " "and" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "particular" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "their" " "</t>
+        <t>" " "action" " "</t>
+        <t>" " "within" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "framework" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "NATO" ""</t>
+        <t>"" "'s" " "</t>
+        <t>" " "Partnership" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "Peace" " "</t>
+        <t>" " "program" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (PP (IN In)
+      (NP
+        (NP (PRP$ their) (JJ joint) (NN statement))
+        (, ,)
+        (VP (VBN released)
+          (PP (IN by)
+            (NP (DT the) (NNP Kremlin))))))
+    (, ,)
+    (NP (DT the) (CD two) (NNS leaders))
+    (ADVP (RB also))
+    (VP (VBD pledged)
+      (S
+        (VP (TO to)
+          (VP (VB consult)
+            (NP
+              (NP (DT each) (JJ other) (NN regularly))
+              (PP (IN on)
+                (NP (PRP$ their) (NNS approaches))))
+            (PP (TO to)
+              (NP
+                (NP (NNS relations))
+                (PP (IN with)
+                  (NP
+                    (NP (NNP NATO))
+                    (CC and)
+                    (PRN (, ,)
+                      (PP (IN in)
+                        (ADJP (JJ particular)))
+                      (, ,))
+                    (NP (PRP$ their) (NN action))))))
+            (PP (IN within)
+              (NP
+                (NP (DT the) (NN framework))
+                (PP (IN of)
+                  (NP
+                    (NP (NNP NATO) (POS 's))
+                    (NNP Partnership) (IN for) (NNP Peace) (NN program)))))))))
+    (. .)))</parse>
+      <deps>poss(statement-4, their-2)
+amod(statement-4, joint-3)
+prep_in(pledged-15, statement-4)
+partmod(statement-4, released-6)
+det(Kremlin-9, the-8)
+agent(released-6, Kremlin-9)
+det(leaders-13, the-11)
+num(leaders-13, two-12)
+nsubj(pledged-15, leaders-13)
+xsubj(consult-17, leaders-13)
+advmod(pledged-15, also-14)
+root(ROOT-0, pledged-15)
+aux(consult-17, to-16)
+xcomp(pledged-15, consult-17)
+det(regularly-20, each-18)
+amod(regularly-20, other-19)
+dobj(consult-17, regularly-20)
+poss(approaches-23, their-22)
+prep_on(regularly-20, approaches-23)
+prep_to(consult-17, relations-25)
+prep_with(relations-25, NATO-27)
+dep(NATO-27, in-30)
+pobj(in-30, particular-31)
+poss(action-34, their-33)
+prep_with(relations-25, action-34)
+conj_and(NATO-27, action-34)
+det(framework-37, the-36)
+prep_within(consult-17, framework-37)
+poss(program-44, NATO-39)
+nn(program-44, Partnership-41)
+amod(program-44, for-42)
+nn(program-44, Peace-43)
+prep_of(framework-37, program-44)</deps>
+      <events>
+        <event id="e74" eiid="ei2347" offset="6" string="released" tense="PASTPART" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e75" eiid="ei2348" offset="15" string="pledged" tense="PAST" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e77" eiid="ei2349" offset="17" string="consult" tense="INFINITIVE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="15" file="APW19980227.0494.tml">
+      <sentence>Last year , Russian officials assailed Ukraine for holding joint naval exercises with NATO in the Black Sea _ an area Moscow considers its own turf .</sentence>
+      <tokens>
+        <t>" " "Last" " "</t>
+        <t>" " "year" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "Russian" " "</t>
+        <t>" " "officials" " "</t>
+        <t>" " "assailed" " "</t>
+        <t>" " "Ukraine" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "holding" " "</t>
+        <t>" " "joint" " "</t>
+        <t>" " "naval" " "</t>
+        <t>" " "exercises" " "</t>
+        <t>" " "with" " "</t>
+        <t>" " "NATO" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Black" " "</t>
+        <t>" " "Sea" " "</t>
+        <t>" " "_" " "</t>
+        <t>" " "an" " "</t>
+        <t>" " "area" " "</t>
+        <t>" " "Moscow" " "</t>
+        <t>" " "considers" " "</t>
+        <t>" " "its" " "</t>
+        <t>" " "own" " "</t>
+        <t>" " "turf" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (JJ Last) (NN year))
+    (, ,)
+    (NP (JJ Russian) (NNS officials))
+    (VP (VBD assailed)
+      (NP
+        (NP (NNP Ukraine))
+        (PP (IN for)
+          (S
+            (VP (VBG holding)
+              (NP
+                (NP (JJ joint) (JJ naval) (NNS exercises))
+                (PP (IN with)
+                  (NP
+                    (NP (NNP NATO))
+                    (PP (IN in)
+                      (NP (DT the) (NNP Black) (NNP Sea) (NNP _))))))
+              (NP
+                (NP (DT an) (NN area))
+                (SBAR
+                  (S
+                    (NP (NNP Moscow))
+                    (VP (VBZ considers)
+                      (NP (PRP$ its) (JJ own) (NN turf)))))))))))
+    (. .)))</parse>
+      <deps>amod(year-2, Last-1)
+tmod(assailed-6, year-2)
+amod(officials-5, Russian-4)
+nsubj(assailed-6, officials-5)
+root(ROOT-0, assailed-6)
+dobj(assailed-6, Ukraine-7)
+prepc_for(Ukraine-7, holding-9)
+amod(exercises-12, joint-10)
+amod(exercises-12, naval-11)
+iobj(holding-9, exercises-12)
+prep_with(exercises-12, NATO-14)
+det(_-19, the-16)
+nn(_-19, Black-17)
+nn(_-19, Sea-18)
+prep_in(NATO-14, _-19)
+det(area-21, an-20)
+dobj(holding-9, area-21)
+nsubj(considers-23, Moscow-22)
+rcmod(area-21, considers-23)
+poss(turf-26, its-24)
+amod(turf-26, own-25)
+dobj(considers-23, turf-26)</deps>
+      <events>
+        <event id="e82" eiid="ei2350" offset="6" string="assailed" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e83" eiid="ei2351" offset="9" string="holding" tense="PRESPART" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e84" eiid="ei2352" offset="12" string="exercises" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes>
+        <timex tid="t146" text="Last year" offset="1" length="2" anchortid="t0" type="DATE" mod="" value="1997" docFunction="NONE" temporalFunction="true" />
+      </timexes>
+    </entry>
+    <entry sid="16" file="APW19980227.0494.tml">
+      <sentence>Kuchma has said repeatedly that Ukraine would remain neutral for the foreseeable future .</sentence>
+      <tokens>
+        <t>" " "Kuchma" " "</t>
+        <t>" " "has" " "</t>
+        <t>" " "said" " "</t>
+        <t>" " "repeatedly" " "</t>
+        <t>" " "that" " "</t>
+        <t>" " "Ukraine" " "</t>
+        <t>" " "would" " "</t>
+        <t>" " "remain" " "</t>
+        <t>" " "neutral" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "foreseeable" " "</t>
+        <t>" " "future" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (NNP Kuchma))
+    (VP (VBZ has)
+      (VP (VBN said)
+        (ADVP (RB repeatedly))
+        (SBAR (IN that)
+          (S
+            (NP (NNP Ukraine))
+            (VP (MD would)
+              (VP (VB remain)
+                (ADJP (JJ neutral))
+                (PP (IN for)
+                  (NP (DT the) (JJ foreseeable) (NN future)))))))))
+    (. .)))</parse>
+      <deps>nsubj(said-3, Kuchma-1)
+aux(said-3, has-2)
+root(ROOT-0, said-3)
+advmod(said-3, repeatedly-4)
+mark(neutral-9, that-5)
+nsubj(neutral-9, Ukraine-6)
+aux(neutral-9, would-7)
+cop(neutral-9, remain-8)
+ccomp(said-3, neutral-9)
+det(future-13, the-11)
+amod(future-13, foreseeable-12)
+prep_for(neutral-9, future-13)</deps>
+      <events>
+        <event id="e86" eiid="ei2353" offset="3" string="said" tense="PRESENT" aspect="NONE" class="REPORTING" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e87" eiid="ei2354" offset="8" string="remain" tense="NONE" aspect="NONE" class="STATE" polarity="POS" modality="would" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="17" file="APW19980227.0494.tml">
+      <sentence>Yeltsin and Kuchma also called for developing the stagnant relations between the members of the Commonwealth of Independent States , a loose coalition of former Soviet republics .</sentence>
+      <tokens>
+        <t>" " "Yeltsin" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "Kuchma" " "</t>
+        <t>" " "also" " "</t>
+        <t>" " "called" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "developing" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "stagnant" " "</t>
+        <t>" " "relations" " "</t>
+        <t>" " "between" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "members" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Commonwealth" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "Independent" " "</t>
+        <t>" " "States" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "loose" " "</t>
+        <t>" " "coalition" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "former" " "</t>
+        <t>" " "Soviet" " "</t>
+        <t>" " "republics" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (NNP Yeltsin)
+      (CC and)
+      (NNP Kuchma))
+    (ADVP (RB also))
+    (VP (VBD called)
+      (PP (IN for)
+        (S
+          (VP (VBG developing)
+            (NP
+              (NP (DT the) (JJ stagnant) (NNS relations))
+              (PP (IN between)
+                (NP
+                  (NP (DT the) (NNS members))
+                  (PP (IN of)
+                    (NP
+                      (NP (DT the) (NN Commonwealth))
+                      (PP (IN of)
+                        (NP
+                          (NP (NNP Independent) (NNPS States))
+                          (, ,)
+                          (NP
+                            (NP (DT a) (JJ loose) (NN coalition))
+                            (PP (IN of)
+                              (NP (JJ former) (JJ Soviet) (NNS republics)))))))))))))))
+    (. .)))</parse>
+      <deps>nsubj(called-5, Yeltsin-1)
+conj_and(Yeltsin-1, Kuchma-3)
+nsubj(called-5, Kuchma-3)
+advmod(called-5, also-4)
+root(ROOT-0, called-5)
+prepc_for(called-5, developing-7)
+det(relations-10, the-8)
+amod(relations-10, stagnant-9)
+dobj(developing-7, relations-10)
+det(members-13, the-12)
+prep_between(relations-10, members-13)
+det(Commonwealth-16, the-15)
+prep_of(members-13, Commonwealth-16)
+nn(States-19, Independent-18)
+prep_of(Commonwealth-16, States-19)
+det(coalition-23, a-21)
+amod(coalition-23, loose-22)
+appos(States-19, coalition-23)
+amod(republics-27, former-25)
+amod(republics-27, Soviet-26)
+prep_of(coalition-23, republics-27)</deps>
+      <events>
+        <event id="e89" eiid="ei2355" offset="5" string="called" tense="PAST" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e90" eiid="ei2356" offset="7" string="developing" tense="PRESPART" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="18" file="APW19980227.0494.tml">
+      <sentence>In the past , Russia has often claimed that Ukraine was undermining efforts at closer cooperation within the CIS .</sentence>
+      <tokens>
+        <t>" " "In" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "past" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "Russia" " "</t>
+        <t>" " "has" " "</t>
+        <t>" " "often" " "</t>
+        <t>" " "claimed" " "</t>
+        <t>" " "that" " "</t>
+        <t>" " "Ukraine" " "</t>
+        <t>" " "was" " "</t>
+        <t>" " "undermining" " "</t>
+        <t>" " "efforts" " "</t>
+        <t>" " "at" " "</t>
+        <t>" " "closer" " "</t>
+        <t>" " "cooperation" " "</t>
+        <t>" " "within" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "CIS" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (PP (IN In)
+      (NP (DT the) (NN past)))
+    (, ,)
+    (NP (NNP Russia))
+    (VP (VBZ has)
+      (ADVP (RB often))
+      (VP (VBN claimed)
+        (SBAR (IN that)
+          (S
+            (NP (NNP Ukraine))
+            (VP (VBD was)
+              (VP (VBG undermining)
+                (NP (NNS efforts))
+                (PP (IN at)
+                  (NP
+                    (NP (JJR closer) (NN cooperation))
+                    (PP (IN within)
+                      (NP (DT the) (NNP CIS)))))))))))
+    (. .)))</parse>
+      <deps>det(past-3, the-2)
+prep_in(claimed-8, past-3)
+nsubj(claimed-8, Russia-5)
+aux(claimed-8, has-6)
+advmod(claimed-8, often-7)
+root(ROOT-0, claimed-8)
+mark(undermining-12, that-9)
+nsubj(undermining-12, Ukraine-10)
+aux(undermining-12, was-11)
+ccomp(claimed-8, undermining-12)
+dobj(undermining-12, efforts-13)
+amod(cooperation-16, closer-15)
+prep_at(undermining-12, cooperation-16)
+det(CIS-19, the-18)
+prep_within(cooperation-16, CIS-19)</deps>
+      <events>
+        <event id="e92" eiid="ei2357" offset="8" string="claimed" tense="PRESENT" aspect="PERFECTIVE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e93" eiid="ei2358" offset="12" string="undermining" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes>
+        <timex tid="t149" text="the past" offset="2" length="2" anchortid="t0" type="DATE" mod="" value="PAST_REF" docFunction="NONE" temporalFunction="true" />
+      </timexes>
+    </entry>
+    <entry sid="19" file="APW19980227.0494.tml">
+      <sentence>A major goal of Kuchma 's four-day state visit was the signing of a 10-year economic program aimed at doubling the two nations ' trade turnover , which fell to dlrs 14 billion last year , down dlrs 2.5 billion from 1996 .</sentence>
+      <tokens>
+        <t>" " "A" " "</t>
+        <t>" " "major" " "</t>
+        <t>" " "goal" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "Kuchma" ""</t>
+        <t>"" "'s" " "</t>
+        <t>" " "four-day" " "</t>
+        <t>" " "state" " "</t>
+        <t>" " "visit" " "</t>
+        <t>" " "was" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "signing" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "10-year" " "</t>
+        <t>" " "economic" " "</t>
+        <t>" " "program" " "</t>
+        <t>" " "aimed" " "</t>
+        <t>" " "at" " "</t>
+        <t>" " "doubling" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "two" " "</t>
+        <t>" " "nations" ""</t>
+        <t>"" "'" " "</t>
+        <t>" " "trade" " "</t>
+        <t>" " "turnover" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "which" " "</t>
+        <t>" " "fell" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "dlrs" " "</t>
+        <t>" " "14" " "</t>
+        <t>" " "billion" " "</t>
+        <t>" " "last" " "</t>
+        <t>" " "year" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "down" " "</t>
+        <t>" " "dlrs" " "</t>
+        <t>" " "2.5" " "</t>
+        <t>" " "billion" " "</t>
+        <t>" " "from" " "</t>
+        <t>" " "1996" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP
+      (NP (DT A) (JJ major) (NN goal))
+      (PP (IN of)
+        (NP
+          (NP (NNP Kuchma) (POS 's))
+          (JJ four-day) (NN state) (NN visit))))
+    (VP (VBD was)
+      (NP
+        (NP (DT the) (NN signing))
+        (PP (IN of)
+          (NP
+            (NP (DT a) (JJ 10-year) (JJ economic) (NN program))
+            (VP (VBN aimed)
+              (PP (IN at)
+                (S
+                  (VP (VBG doubling)
+                    (SBAR
+                      (S
+                        (NP
+                          (NP
+                            (NP (DT the) (CD two) (NNS nations) (POS '))
+                            (NN trade) (NN turnover))
+                          (, ,)
+                          (SBAR
+                            (WHNP (WDT which))
+                            (S
+                              (VP (VBD fell)
+                                (S
+                                  (VP (TO to)
+                                    (VP (VB dlrs)
+                                      (NP
+                                        (QP (CD 14) (CD billion)))
+                                      (NP (JJ last) (NN year))))))))
+                          (, ,))
+                        (ADVP (RB down))
+                        (VP (VBZ dlrs)
+                          (NP
+                            (NP
+                              (QP (CD 2.5) (CD billion)))
+                            (PP (IN from)
+                              (NP (CD 1996)))))))))))))))
+    (. .)))</parse>
+      <deps>det(goal-3, A-1)
+amod(goal-3, major-2)
+nsubj(signing-12, goal-3)
+poss(visit-9, Kuchma-5)
+amod(visit-9, four-day-7)
+nn(visit-9, state-8)
+prep_of(goal-3, visit-9)
+cop(signing-12, was-10)
+det(signing-12, the-11)
+root(ROOT-0, signing-12)
+det(program-17, a-14)
+amod(program-17, 10-year-15)
+amod(program-17, economic-16)
+prep_of(signing-12, program-17)
+partmod(program-17, aimed-18)
+prepc_at(aimed-18, doubling-20)
+det(nations-23, the-21)
+num(nations-23, two-22)
+poss(turnover-26, nations-23)
+nn(turnover-26, trade-25)
+nsubj(fell-29, turnover-26)
+nsubj(dlrs-38, turnover-26)
+rcmod(turnover-26, fell-29)
+aux(dlrs-31, to-30)
+xcomp(fell-29, dlrs-31)
+number(billion-33, 14-32)
+dobj(dlrs-31, billion-33)
+amod(year-35, last-34)
+tmod(dlrs-31, year-35)
+advmod(dlrs-38, down-37)
+ccomp(doubling-20, dlrs-38)
+number(billion-40, 2.5-39)
+dobj(dlrs-38, billion-40)
+prep_from(billion-40, 1996-42)</deps>
+      <events>
+        <event id="e98" eiid="ei2359" offset="9" string="visit" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e158" eiid="ei2360" offset="12" string="signing" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e99" eiid="ei2361" offset="18" string="aimed" tense="PASTPART" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e101" eiid="ei2362" offset="20" string="doubling" tense="PRESPART" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e102" eiid="ei2363" offset="29" string="fell" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes>
+        <timex tid="t150" text="four-day" offset="7" length="1" anchortid="" type="DURATION" mod="" value="P4D" docFunction="NONE" temporalFunction="false" />
+        <timex tid="t500" text="10-year" offset="15" length="1" anchortid="" type="DURATION" mod="" value="P10Y" docFunction="" temporalFunction="false" />
+        <timex tid="t2303" text="last year" offset="34" length="2" anchortid="t0" type="DATE" mod="" value="1997" docFunction="NONE" temporalFunction="true" />
+        <timex tid="t152" text="1996" offset="42" length="1" anchortid="" type="DATE" mod="" value="1996" docFunction="NONE" temporalFunction="false" />
+      </timexes>
+    </entry>
+    <entry sid="20" file="APW19980227.0494.tml">
+      <sentence>The two presidents on Friday signed the plan , which calls for cooperation in the metallurgy , fuel , energy , aircraft building , missile , space and chemical industries .</sentence>
+      <tokens>
+        <t>" " "The" " "</t>
+        <t>" " "two" " "</t>
+        <t>" " "presidents" " "</t>
+        <t>" " "on" " "</t>
+        <t>" " "Friday" " "</t>
+        <t>" " "signed" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "plan" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "which" " "</t>
+        <t>" " "calls" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "cooperation" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "metallurgy" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "fuel" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "energy" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "aircraft" " "</t>
+        <t>" " "building" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "missile" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "space" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "chemical" " "</t>
+        <t>" " "industries" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP
+      (NP (DT The) (CD two) (NNS presidents))
+      (PP (IN on)
+        (NP (NNP Friday))))
+    (VP (VBD signed)
+      (NP
+        (NP (DT the) (NN plan))
+        (, ,)
+        (SBAR
+          (WHNP (WDT which))
+          (S
+            (VP (VBZ calls)
+              (PP (IN for)
+                (NP
+                  (NP (NN cooperation))
+                  (PP (IN in)
+                    (NP (DT the) (NN metallurgy) (, ,) (NN fuel) (, ,) (NN energy) (, ,) (NN aircraft) (NN building) (, ,) (NN missile) (, ,) (NN space)
+                      (CC and)
+                      (NN chemical) (NNS industries))))))))))
+    (. .)))</parse>
+      <deps>det(presidents-3, The-1)
+num(presidents-3, two-2)
+nsubj(signed-6, presidents-3)
+prep_on(presidents-3, Friday-5)
+root(ROOT-0, signed-6)
+det(plan-8, the-7)
+dobj(signed-6, plan-8)
+nsubj(calls-11, plan-8)
+rcmod(plan-8, calls-11)
+prep_for(calls-11, cooperation-13)
+det(industries-30, the-15)
+nn(industries-30, metallurgy-16)
+dep(industries-30, fuel-18)
+dep(industries-30, energy-20)
+dep(industries-30, aircraft-22)
+nn(industries-30, building-23)
+conj_and(building-23, missile-25)
+nn(industries-30, missile-25)
+conj_and(building-23, space-27)
+nn(industries-30, space-27)
+conj_and(building-23, chemical-29)
+nn(industries-30, chemical-29)
+prep_in(cooperation-13, industries-30)</deps>
+      <events>
+        <event id="e105" eiid="ei2364" offset="6" string="signed" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e106" eiid="ei2365" offset="11" string="calls" tense="PRESENT" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e107" eiid="ei2366" offset="13" string="cooperation" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes>
+        <timex tid="t151" text="Friday" offset="5" length="1" anchortid="t0" type="DATE" mod="" value="1998-02-27" docFunction="NONE" temporalFunction="true" />
+      </timexes>
+    </entry>
+    <entry sid="21" file="APW19980227.0494.tml">
+      <sentence>A major project is joint manufacturing of An-70 cargo planes , the Kremlin statement said .</sentence>
+      <tokens>
+        <t>" " "A" " "</t>
+        <t>" " "major" " "</t>
+        <t>" " "project" " "</t>
+        <t>" " "is" " "</t>
+        <t>" " "joint" " "</t>
+        <t>" " "manufacturing" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "An-70" " "</t>
+        <t>" " "cargo" " "</t>
+        <t>" " "planes" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Kremlin" " "</t>
+        <t>" " "statement" " "</t>
+        <t>" " "said" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (S
+      (NP (DT A) (JJ major) (NN project))
+      (VP (VBZ is)
+        (NP
+          (NP (JJ joint) (NN manufacturing))
+          (PP (IN of)
+            (NP (NN An-70) (NN cargo) (NNS planes))))))
+    (, ,)
+    (NP (DT the) (NNP Kremlin) (NN statement))
+    (VP (VBD said))
+    (. .)))</parse>
+      <deps>det(project-3, A-1)
+amod(project-3, major-2)
+nsubj(manufacturing-6, project-3)
+cop(manufacturing-6, is-4)
+amod(manufacturing-6, joint-5)
+ccomp(said-15, manufacturing-6)
+nn(planes-10, An-70-8)
+nn(planes-10, cargo-9)
+prep_of(manufacturing-6, planes-10)
+det(statement-14, the-12)
+nn(statement-14, Kremlin-13)
+nsubj(said-15, statement-14)
+root(ROOT-0, said-15)</deps>
+      <events>
+        <event id="e111" eiid="ei2367" offset="6" string="manufacturing" tense="PRESENT" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e112" eiid="ei2368" offset="15" string="said" tense="PAST" aspect="NONE" class="REPORTING" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="22" file="APW19980227.0494.tml">
+      <sentence>The program also calls for coordination of economic reforms and joint improvement of social programs in the two countries , where many people have become impoverished during the chaotic post-Soviet transition to capitalism .</sentence>
+      <tokens>
+        <t>" " "The" " "</t>
+        <t>" " "program" " "</t>
+        <t>" " "also" " "</t>
+        <t>" " "calls" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "coordination" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "economic" " "</t>
+        <t>" " "reforms" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "joint" " "</t>
+        <t>" " "improvement" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "social" " "</t>
+        <t>" " "programs" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "two" " "</t>
+        <t>" " "countries" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "where" " "</t>
+        <t>" " "many" " "</t>
+        <t>" " "people" " "</t>
+        <t>" " "have" " "</t>
+        <t>" " "become" " "</t>
+        <t>" " "impoverished" " "</t>
+        <t>" " "during" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "chaotic" " "</t>
+        <t>" " "post-Soviet" " "</t>
+        <t>" " "transition" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "capitalism" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (DT The) (NN program))
+    (ADVP (RB also))
+    (VP (VBZ calls)
+      (PP (IN for)
+        (NP
+          (NP
+            (NP (NN coordination))
+            (PP (IN of)
+              (NP (JJ economic) (NNS reforms))))
+          (CC and)
+          (NP
+            (NP (JJ joint) (NN improvement))
+            (PP (IN of)
+              (NP
+                (NP (JJ social) (NNS programs))
+                (PP (IN in)
+                  (NP (DT the) (CD two) (NNS countries))))))))
+      (, ,)
+      (SBAR
+        (WHADVP (WRB where))
+        (S
+          (NP (JJ many) (NNS people))
+          (VP (VBP have)
+            (VP (VBN become)
+              (S
+                (VP (VBN impoverished)
+                  (PP (IN during)
+                    (NP (DT the) (JJ chaotic) (JJ post-Soviet) (NN transition)))
+                  (PP (TO to)
+                    (NP (NN capitalism))))))))))
+    (. .)))</parse>
+      <deps>det(program-2, The-1)
+nsubj(calls-4, program-2)
+advmod(calls-4, also-3)
+root(ROOT-0, calls-4)
+prep_for(calls-4, coordination-6)
+amod(reforms-9, economic-8)
+prep_of(coordination-6, reforms-9)
+amod(improvement-12, joint-11)
+prep_for(calls-4, improvement-12)
+conj_and(coordination-6, improvement-12)
+amod(programs-15, social-14)
+prep_of(improvement-12, programs-15)
+det(countries-19, the-17)
+num(countries-19, two-18)
+prep_in(programs-15, countries-19)
+advmod(become-25, where-21)
+amod(people-23, many-22)
+nsubj(become-25, people-23)
+aux(become-25, have-24)
+advcl(calls-4, become-25)
+dep(become-25, impoverished-26)
+det(transition-31, the-28)
+amod(transition-31, chaotic-29)
+amod(transition-31, post-Soviet-30)
+prep_during(impoverished-26, transition-31)
+prep_to(impoverished-26, capitalism-33)</deps>
+      <events>
+        <event id="e113" eiid="ei2369" offset="4" string="calls" tense="PRESENT" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e114" eiid="ei2370" offset="6" string="coordination" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e116" eiid="ei2371" offset="12" string="improvement" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e118" eiid="ei2372" offset="26" string="impoverished" tense="PASTPART" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e119" eiid="ei2373" offset="31" string="transition" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="23" file="APW19980227.0494.tml">
+      <sentence>Kuchma also planned to visit Russian gas giant Gazprom , most likely to discuss Ukraine 's dlrs 1.2 billion debt to the company .</sentence>
+      <tokens>
+        <t>" " "Kuchma" " "</t>
+        <t>" " "also" " "</t>
+        <t>" " "planned" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "visit" " "</t>
+        <t>" " "Russian" " "</t>
+        <t>" " "gas" " "</t>
+        <t>" " "giant" " "</t>
+        <t>" " "Gazprom" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "most" " "</t>
+        <t>" " "likely" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "discuss" " "</t>
+        <t>" " "Ukraine" ""</t>
+        <t>"" "'s" " "</t>
+        <t>" " "dlrs" " "</t>
+        <t>" " "1.2" " "</t>
+        <t>" " "billion" " "</t>
+        <t>" " "debt" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "company" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (NNP Kuchma))
+    (ADVP (RB also))
+    (VP (VBD planned)
+      (S
+        (VP (TO to)
+          (VP (VB visit)
+            (NP
+              (NP (JJ Russian) (NN gas) (NN giant) (NNP Gazprom))
+              (, ,)
+              (ADJP (RBS most) (JJ likely))
+              (S
+                (VP (TO to)
+                  (VP (VB discuss)
+                    (NP
+                      (NP (NNP Ukraine) (POS 's))
+                      (JJ dlrs)
+                      (ADJP
+                        (QP (CD 1.2) (CD billion)))
+                      (NN debt))
+                    (PP (TO to)
+                      (NP (DT the) (NN company)))))))))))
+    (. .)))</parse>
+      <deps>nsubj(planned-3, Kuchma-1)
+xsubj(visit-5, Kuchma-1)
+advmod(planned-3, also-2)
+root(ROOT-0, planned-3)
+aux(visit-5, to-4)
+xcomp(planned-3, visit-5)
+amod(Gazprom-9, Russian-6)
+nn(Gazprom-9, gas-7)
+nn(Gazprom-9, giant-8)
+dobj(visit-5, Gazprom-9)
+advmod(likely-12, most-11)
+amod(Gazprom-9, likely-12)
+aux(discuss-14, to-13)
+infmod(Gazprom-9, discuss-14)
+poss(debt-20, Ukraine-15)
+amod(debt-20, dlrs-17)
+number(billion-19, 1.2-18)
+num(debt-20, billion-19)
+dobj(discuss-14, debt-20)
+det(company-23, the-22)
+prep_to(discuss-14, company-23)</deps>
+      <events>
+        <event id="e121" eiid="ei2374" offset="3" string="planned" tense="PAST" aspect="NONE" class="I_STATE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e123" eiid="ei2375" offset="5" string="visit" tense="INFINITIVE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e125" eiid="ei2376" offset="14" string="discuss" tense="INFINITIVE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="24" file="APW19980227.0494.tml">
+      <sentence>-LRB- pvs\/vi\/ji -RRB-</sentence>
+      <tokens>
+        <t>" " "(" ""</t>
+        <t>"" "pvs/vi/ji" ""</t>
+        <t>"" ")" "
+"</t>
+      </tokens>
+      <parse>(ROOT
+  (PRN (-LRB- -LRB-)
+    (NP (NN pvs\/vi\/ji))
+    (-RRB- -RRB-)))</parse>
+      <deps />
+      <events />
+      <timexes />
+    </entry>
+    <timex tid="t0" text="" offset="0" length="1" type="TIME" value="1998-02-27T08:17:00" docFunction="CREATION_TIME" temporalFunction="false" />
+	<tlink event1="ei2338" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2368" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2367" event2="ei2371" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2360" event2="ei2365" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2358" event2="ei2361" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2337" event2="ei2341" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2313" event2="ei2314" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2329" event2="ei2336" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2314" event2="ei2316" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2364" event2="ei2368" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2313" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2352" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2312" event2="ei2317" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2366" event2="ei2367" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2368" event2="ei2369" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2358" event2="t152" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2333" event2="t2300" relation="SIMULTANEOUS" closed="false" type="et" />
+	<tlink event1="t150" event2="ei2360" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="t149" event2="ei2359" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2365" event2="ei2366" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2335" event2="ei2340" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2368" event2="ei2372" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2361" event2="t151" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2359" event2="t2303" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2330" event2="ei2340" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2311" event2="ei2312" relation="SIMULTANEOUS" closed="false" type="ee" />
+	<tlink event1="ei2308" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2366" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2359" event2="t152" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2352" event2="ei2353" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2334" event2="ei2335" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t150" event2="t2303" relation="AFTER" closed="false" type="tt" />
+	<tlink event1="ei2332" event2="ei2336" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2351" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2355" event2="ei2357" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2334" event2="ei2343" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2330" event2="ei2332" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t150" event2="ei2361" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2357" event2="ei2361" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2350" event2="ei2351" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2322" event2="ei2325" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2329" event2="ei2337" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2328" event2="t2300" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2348" event2="ei2352" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2335" event2="ei2337" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2347" event2="ei2351" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2339" event2="ei2342" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t2303" event2="ei2365" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2367" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2353" event2="ei2354" relation="IS_INCLUDED" closed="false" type="ee" />
+	<tlink event1="ei2334" event2="ei2340" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2326" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2324" event2="ei2326" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t150" event2="t0" relation="INCLUDES" closed="false" type="tt" />
+	<tlink event1="ei2333" event2="ei2334" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2364" event2="ei2365" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2364" event2="ei2367" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2307" event2="ei2308" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t151" event2="ei2368" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2312" event2="ei2314" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="t2300" event2="t0" relation="AFTER" closed="false" type="tt" />
+	<tlink event1="ei2320" event2="ei2323" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2375" event2="ei2376" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2360" event2="ei2361" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t146" event2="ei2350" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2365" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2306" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2362" event2="ei2365" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2335" event2="ei2342" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2349" event2="t146" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2372" event2="ei2373" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2371" event2="ei2376" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t149" event2="t150" relation="BEFORE" closed="false" type="tt" />
+	<tlink event1="ei2354" event2="ei2356" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t2300" event2="ei2336" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2361" event2="ei2363" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2328" event2="ei2339" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t150" event2="ei2363" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2347" event2="t146" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2356" event2="ei2357" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2345" event2="ei2348" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2328" event2="ei2335" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2358" event2="ei2362" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2310" event2="ei2316" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t2297" event2="t154" relation="VAGUE" closed="false" type="tt" />
+	<tlink event1="ei2360" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2355" event2="ei2356" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2315" event2="ei2318" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t151" event2="ei2364" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="t152" event2="ei2366" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2324" event2="t143" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2311" event2="ei2315" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2313" event2="ei2317" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2362" event2="ei2363" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2351" event2="ei2353" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2336" event2="ei2340" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2373" event2="ei2375" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2325" event2="t143" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2374" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2312" event2="ei2316" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="t2297" event2="ei2309" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2371" event2="ei2372" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2366" event2="ei2368" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2353" event2="ei2356" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t151" event2="ei2366" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2332" event2="ei2335" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2361" event2="t2303" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2326" event2="ei2333" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t152" event2="ei2365" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2336" event2="ei2341" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t2303" event2="t0" relation="BEFORE" closed="false" type="tt" />
+	<tlink event1="ei2332" event2="ei2333" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2359" event2="ei2361" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="ei2335" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t149" event2="ei2362" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2329" event2="ei2334" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2367" event2="ei2373" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2372" event2="ei2375" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="ei2329" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2357" event2="ei2363" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="ei2334" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t154" event2="ei2310" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2310" event2="ei2315" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2362" event2="t2303" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2336" event2="ei2344" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2306" event2="ei2308" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2328" event2="ei2329" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2312" event2="ei2315" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2311" event2="ei2313" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2356" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2319" event2="ei2320" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2347" event2="ei2349" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t149" event2="ei2361" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2329" event2="ei2333" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2323" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2329" event2="ei2332" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2340" event2="ei2344" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2359" event2="t151" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2343" event2="ei2344" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2345" event2="ei2347" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2337" event2="ei2340" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2333" event2="ei2336" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2341" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2307" event2="ei2309" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2324" event2="t0" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2330" event2="ei2336" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t2297" event2="ei2308" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2310" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2363" event2="ei2365" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2358" event2="ei2359" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2332" event2="ei2338" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2313" event2="ei2315" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2318" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2357" event2="t150" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2340" event2="ei2342" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2323" event2="ei2324" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2346" event2="ei2347" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2355" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2369" event2="ei2371" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2341" event2="ei2343" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2368" event2="ei2370" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2349" event2="ei2350" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2363" event2="t152" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2334" event2="ei2341" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2314" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2341" event2="ei2342" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2326" event2="ei2332" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2360" event2="t151" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2341" event2="ei2344" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2311" event2="t0" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2369" event2="ei2376" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2314" event2="ei2317" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2342" event2="ei2344" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2345" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2326" event2="ei2330" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2328" event2="ei2337" relation="SIMULTANEOUS" closed="false" type="ee" />
+	<tlink event1="ei2307" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2363" event2="t2303" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2346" event2="ei2348" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2338" event2="ei2343" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t143" event2="t0" relation="BEFORE" closed="false" type="tt" />
+	<tlink event1="ei2328" event2="ei2332" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2368" event2="ei2373" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2341" event2="ei2345" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2321" event2="ei2323" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2328" event2="ei2334" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2367" event2="ei2372" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t2303" event2="ei2366" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2353" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2325" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2310" event2="ei2317" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2360" event2="ei2363" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2317" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2359" event2="ei2366" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2350" event2="ei2353" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2344" event2="ei2346" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2369" event2="ei2375" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2357" event2="t152" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2347" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2328" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2370" event2="ei2376" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2335" event2="ei2339" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2360" event2="t152" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2338" event2="ei2344" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2334" event2="ei2344" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2361" event2="ei2366" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="ei2340" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t149" event2="ei2363" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2319" event2="ei2321" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2351" event2="ei2352" relation="SIMULTANEOUS" closed="false" type="ee" />
+	<tlink event1="ei2350" event2="ei2354" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t146" event2="ei2353" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2336" event2="ei2343" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2334" event2="ei2342" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2373" event2="ei2374" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2310" event2="ei2311" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t151" event2="ei2367" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2330" event2="ei2333" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="ei2328" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2334" event2="ei2337" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2355" event2="ei2358" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2369" event2="ei2373" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2360" event2="ei2364" relation="SIMULTANEOUS" closed="false" type="ee" />
+	<tlink event1="ei2344" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2335" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2329" event2="t2300" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="t151" event2="ei2365" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2324" event2="ei2325" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2354" event2="ei2355" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2357" event2="t2303" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="t150" event2="ei2359" relation="SIMULTANEOUS" closed="false" type="et" />
+	<tlink event1="ei2351" event2="ei2354" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2342" event2="ei2345" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2359" event2="ei2362" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2315" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2339" event2="ei2344" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2335" event2="ei2341" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2362" event2="ei2364" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2311" event2="ei2316" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2340" event2="ei2341" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2337" event2="ei2339" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2361" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2334" event2="ei2339" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2334" event2="ei2336" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2358" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2352" event2="ei2354" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2340" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2342" event2="ei2343" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2335" event2="ei2343" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2346" event2="ei2349" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2369" event2="ei2372" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2311" event2="ei2317" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2336" event2="ei2338" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2328" event2="ei2333" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2338" event2="ei2342" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2358" event2="t150" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2332" event2="t2300" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="t2300" event2="ei2338" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2322" event2="t143" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="t150" event2="t151" relation="INCLUDES" closed="false" type="tt" />
+	<tlink event1="ei2306" event2="ei2309" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2334" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2312" event2="ei2313" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2323" event2="t143" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2330" event2="ei2337" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t2297" event2="ei2307" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2368" event2="ei2371" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2353" event2="ei2355" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="ei2333" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2345" event2="ei2349" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2329" event2="ei2339" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2372" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2367" event2="ei2370" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2320" event2="ei2321" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2361" event2="ei2364" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t149" event2="ei2357" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2326" event2="ei2328" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t2300" event2="ei2334" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2363" event2="t151" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2313" event2="ei2318" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2332" event2="ei2339" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2320" event2="ei2322" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2326" event2="ei2327" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2364" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2310" event2="ei2312" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2321" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2349" event2="ei2352" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2341" event2="ei2346" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2340" event2="ei2343" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t152" event2="t0" relation="BEFORE" closed="false" type="tt" />
+	<tlink event1="ei2333" event2="ei2339" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2357" event2="ei2360" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2330" event2="ei2338" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2358" event2="ei2360" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2354" event2="t0" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2339" event2="ei2343" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2355" event2="t149" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2328" event2="ei2338" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2375" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="t2300" event2="ei2340" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2374" event2="ei2376" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2313" event2="ei2316" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2344" event2="ei2345" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2332" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2327" event2="ei2336" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2365" event2="ei2367" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2359" event2="ei2365" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2342" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2330" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2309" event2="ei2310" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t2300" event2="ei2339" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2336" event2="ei2337" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2337" event2="ei2344" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t146" event2="t0" relation="VAGUE" closed="false" type="tt" />
+	<tlink event1="ei2360" event2="ei2362" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2357" event2="ei2359" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2371" event2="ei2375" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t149" event2="t152" relation="VAGUE" closed="false" type="tt" />
+	<tlink event1="t151" event2="t0" relation="SIMULTANEOUS" closed="false" type="tt" />
+	<tlink event1="ei2349" event2="ei2351" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2347" event2="ei2348" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2308" event2="ei2309" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2372" event2="ei2374" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2359" event2="ei2363" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2332" event2="ei2334" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2322" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2316" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2338" event2="ei2339" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2373" event2="ei2376" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2348" event2="ei2349" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2362" event2="t151" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2333" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="t154" event2="t0" relation="VAGUE" closed="false" type="tt" />
+	<tlink event1="t150" event2="ei2364" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2343" event2="ei2346" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t154" event2="ei2312" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2327" event2="ei2330" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="ei2332" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2333" event2="ei2337" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2330" event2="t2300" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="t143" event2="ei2326" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2372" event2="ei2376" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2322" event2="ei2323" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2328" event2="ei2336" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t152" event2="ei2364" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2315" event2="ei2317" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2367" event2="ei2368" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2339" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="t2303" event2="t152" relation="AFTER" closed="false" type="tt" />
+	<tlink event1="t150" event2="t152" relation="AFTER" closed="false" type="tt" />
+	<tlink event1="t2300" event2="ei2335" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2350" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2308" event2="t154" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2359" event2="t0" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2309" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2320" event2="t0" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2321" event2="ei2322" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2309" event2="ei2311" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2328" event2="ei2340" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2342" event2="ei2346" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2348" event2="t146" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2310" event2="ei2314" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t2303" event2="t151" relation="BEFORE" closed="false" type="tt" />
+	<tlink event1="ei2326" event2="t2300" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2326" event2="ei2329" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2322" event2="ei2324" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2319" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2312" event2="t0" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2329" event2="ei2340" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2367" event2="ei2369" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2348" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="t146" event2="ei2354" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2336" event2="ei2342" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2357" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2318" event2="ei2319" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2359" event2="ei2360" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="t150" event2="ei2366" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2348" event2="ei2350" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t2303" event2="ei2364" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2330" event2="ei2335" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t154" event2="ei2311" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2314" event2="ei2315" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2317" event2="ei2318" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2343" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2335" event2="ei2336" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2361" event2="t152" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2337" event2="ei2338" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2337" event2="ei2342" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2347" event2="ei2352" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2315" event2="ei2316" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2333" event2="ei2338" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2335" event2="ei2344" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2360" event2="t2303" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2345" event2="ei2346" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="ei2339" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2360" event2="ei2366" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2336" event2="ei2339" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2358" event2="ei2363" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t149" event2="ei2358" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei2335" event2="ei2338" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2363" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2329" event2="ei2338" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2362" event2="ei2366" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t146" event2="ei2351" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2330" event2="ei2339" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2361" event2="ei2365" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2332" event2="ei2337" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2369" event2="ei2370" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2338" event2="ei2341" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2329" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2337" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2371" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2363" event2="ei2364" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2306" event2="t2297" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2369" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2328" event2="ei2330" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2358" event2="t2303" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2339" event2="ei2340" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2306" event2="t154" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2333" event2="ei2340" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2338" event2="ei2340" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t146" event2="ei2352" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2316" event2="ei2318" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2346" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2339" event2="ei2341" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2370" event2="ei2371" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2310" event2="ei2313" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2337" event2="ei2343" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2349" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2357" event2="ei2362" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2359" event2="ei2364" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2370" event2="ei2375" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2329" event2="ei2335" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t152" event2="t151" relation="BEFORE" closed="false" type="tt" />
+	<tlink event1="ei2333" event2="ei2335" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2362" event2="t152" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2306" event2="ei2307" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2336" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei2369" event2="ei2374" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2370" event2="ei2374" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t149" event2="t0" relation="BEFORE" closed="false" type="tt" />
+	<tlink event1="t150" event2="ei2362" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2356" event2="ei2358" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2309" event2="t154" relation="SIMULTANEOUS" closed="false" type="et" />
+	<tlink event1="t149" event2="ei2360" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="t2300" event2="ei2337" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2370" event2="ei2372" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2362" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2376" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2374" event2="ei2375" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2371" event2="ei2374" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2361" event2="ei2362" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2334" event2="ei2338" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2316" event2="ei2317" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t2297" event2="t0" relation="VAGUE" closed="false" type="tt" />
+	<tlink event1="ei2365" event2="ei2368" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="ei2337" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2330" event2="ei2334" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2347" event2="ei2350" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2371" event2="ei2373" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t150" event2="ei2365" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2323" event2="ei2325" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2364" event2="ei2366" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="t2300" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2311" event2="ei2314" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei2373" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei2343" event2="ei2345" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2370" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2325" event2="ei2326" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2332" event2="ei2340" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2363" event2="ei2366" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2309" event2="ei2312" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei2314" event2="ei2318" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2348" event2="ei2351" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2307" event2="t154" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei2357" event2="ei2358" relation="IS_INCLUDED" closed="false" type="ee" />
+	<tlink event1="ei2329" event2="ei2330" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei2356" event2="t149" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei2350" event2="ei2352" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei2327" event2="ei2338" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t149" event2="t2303" relation="VAGUE" closed="false" type="tt" />
+	<tlink event1="ei2370" event2="ei2373" relation="AFTER" closed="false" type="ee" />
+  </file>
   <file name="APW19980418.0210.tml">
     <entry sid="0" file="APW19980418.0210.tml">
       <sentence>BUDAPEST , Hungary -LRB- AP -RRB- _ Tired of being sidelined , Hungarian astronaut Bertalan Farkas is leaving for the United States to start a new career , he said Saturday .</sentence>
