@@ -153,12 +153,6 @@ public class ReichenbachDG13 implements Sieve {
 		// we need the sentences and td's to pass to the "pseudoTense" util function
 		List<SieveSentence> sents = doc.getSentences();
 		
-		// TO TEST TEMPORAL CONTEXT CODE
-		TemporalContext tc = new TemporalContext(doc);
-		tc.addContextSimpleDep();
-		// END TEST TEMPORAL CONTEXT CODE
-		
-		
 		// for each event, compare is with all events in range, in accordance
 		// with sentWindow.
 		int numSents = allEvents.size();
@@ -217,6 +211,7 @@ public class ReichenbachDG13 implements Sieve {
 	private void addPair(TextEvent e1, TextEvent e2, TLink.Type label, List<TLink> proposed, SieveDocument doc) {
 		EventEventLink tlink = new EventEventLink(e1.getEiid(), e2.getEiid(), label);
 		tlink.setDocument(doc);
+		checkTLink(tlink, proposed);
 		proposed.add(tlink);
 	}
 
@@ -366,5 +361,14 @@ public class ReichenbachDG13 implements Sieve {
 		else if (aspect.equals(TextEvent.Aspect.NONE)) 
 			{return aspect;}
 		else return null; 
+	}
+	
+	public void checkTLink(TLink tlink, List<TLink> proposed) throws IllegalStateException{
+		int numTLinks = proposed.size();
+		for (int t = 0; t < numTLinks; t++) {
+			if (tlink.coversSamePair(proposed.get(t))) { 
+				throw new IllegalStateException("Cannot add a tlink between a pair of events for which there is already a tlink in proposed");
+			}
+		}
 	}
 }

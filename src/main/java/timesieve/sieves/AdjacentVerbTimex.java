@@ -245,7 +245,9 @@ public class AdjacentVerbTimex implements Sieve {
 					
 					
 					// Finally add tlink (as long as there is one)
-					if (tlink != null) proposed.add(tlink);
+					if (tlink != null) {
+						proposed.add(tlink);
+					}
 					}
 				}
 			}
@@ -486,6 +488,16 @@ private TypedDependency getDepSentIndexPair(List<TypedDependency> deps, int sent
 		String text = cl.originalText();
 		return text;
 	}
+	
+//	public void checkTLink(TLink tlink, List<TLink> proposed) throws IllegalStateException{
+//		int numTLinks = proposed.size();
+//		for (int t = 0; t < numTLinks; t++) {
+//			if (tlink.coversSamePair(proposed.get(t))) { 
+//				throw new IllegalStateException("Cannot add a tlink between a pair of events for which there is already a tlink in proposed");
+//			}
+//		}
+//	}
+	
 	/**
 	 * No training. Just rule-based.
 	 */
