@@ -149,6 +149,7 @@ public class Util {
         int count = Integer.valueOf(line.substring(tabindex+1));
         counts.put(key, count);
       }
+      in.close();
     } catch( Exception ex ) { 
       System.err.println("Error opening " + path);
       ex.printStackTrace();
@@ -164,6 +165,7 @@ public class Util {
       while( (line = in.readLine()) != null ) {
         lines.add(line);
       }
+      in.close();
     } catch( Exception ex ) { 
       System.err.println("Error reading from " + path);
       ex.printStackTrace();
@@ -190,6 +192,7 @@ public class Util {
         if( count >= n )
           keys.add(key);
       }
+      in.close();
     } catch( Exception ex ) { 
       System.err.println("Error opening " + path);
       ex.printStackTrace();

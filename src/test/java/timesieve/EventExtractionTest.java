@@ -30,12 +30,12 @@ public class EventExtractionTest extends TestCase {
     // Number of expected sentences.
     assertEquals("Number of sentences.", doc.getSentences().size(), 2);
     // Number of events per sentence.
-    assertEquals("Number of events in 1st sentence.", doc.getSentences().get(0).events().size(), 7);
-    assertEquals("Number of events in 2nd sentence.", doc.getSentences().get(1).events().size(), 2);
+    assertEquals("Number of events in 1st sentence.", 7, doc.getSentences().get(0).events().size());
+    assertEquals("Number of events in 2nd sentence.", 2, doc.getSentences().get(1).events().size());
     // Some tense/aspect attributes.
-    assertEquals("Event Tense check", doc.getSentences().get(0).events().get(0).getTense(), TextEvent.Tense.PAST);
-    assertEquals("Event Class check", doc.getSentences().get(0).events().get(0).getTheClass(), TextEvent.Class.OCCURRENCE);
-    assertEquals("Event Aspect check", doc.getSentences().get(0).events().get(0).getAspect(), TextEvent.Aspect.NONE);
+    assertEquals("Event Tense check", TextEvent.Tense.PAST, doc.getSentences().get(0).events().get(0).getTense());
+    assertEquals("Event Class check", TextEvent.Class.OCCURRENCE, doc.getSentences().get(0).events().get(0).getTheClass());
+    assertEquals("Event Aspect check", TextEvent.Aspect.NONE, doc.getSentences().get(0).events().get(0).getAspect());
 	}
 
 }
