@@ -166,20 +166,24 @@ public class SieveDocument {
   }
 
   /**
-   * @return A List of all TLink objects (event-event and event-time)
+   * @return A List of TLink objects, except for those created from transitive closure.
    */
-  public List<TLink> getTlinks(boolean noclosures) {
+  public List<TLink> getTlinksNoClosures() {
     List<TLink> keep = new ArrayList<TLink>();
 
     if (tlinks == null)
     	return keep;
     
     for( TLink link : tlinks )
-    	if( !link.getIsFromClosure() ) 
+    	if( !link.isFromClosure() ) 
     		keep.add(link);
     
     return keep;
   }
+
+  /**
+   * @return A List of all TLink objects in the document.
+   */
   public List<TLink> getTlinks() {
   		return tlinks;
   }

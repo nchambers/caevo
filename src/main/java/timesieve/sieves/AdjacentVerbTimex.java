@@ -211,7 +211,7 @@ public class AdjacentVerbTimex implements Sieve {
 							flatTlink_te = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
 						else {
 							flatTlink_te = timexBeforeEvent(eventToTimexDist, event, timex, sent, tree);
-							System.out.printf("E GOV T: %s(%s) %s(%s)\n%s", event.getString(), event.getId(), timex.getText(), timex.getTid(), sent.sentence());
+							if( debug ) System.out.printf("E GOV T: %s(%s) %s(%s)\n%s", event.getString(), event.getId(), timex.getText(), timex.getTid(), sent.sentence());
 						}
 					}
 					

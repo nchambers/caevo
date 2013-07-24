@@ -17,6 +17,7 @@ import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
 import timesieve.util.Directory;
 import timesieve.util.Ling;
+import timesieve.util.SieveStats;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.Util;
 import timesieve.util.WordNet;
@@ -64,12 +65,11 @@ public class Main {
 	SieveDocuments thedocsUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
-	boolean debug = true;
+	boolean debug = false;
     
-	// If none are true, then it runs on dev
-	boolean runOnTrain = true;
-	boolean runOnAll = false;
-	boolean runOnTest = false;
+	// Which dataset do we load?
+  public static enum DatasetType { TRAIN, DEV, TEST, ALL };
+  DatasetType dataset = DatasetType.TRAIN;
 	
 	// List the sieve class names in your desired order.
 	private String[] sieveClasses;
@@ -89,6 +89,8 @@ public class Main {
 			infopath = TimeSieveProperties.getString("info");
 			// Overwrite the debug setting if it is in the properties file.
 			debug = TimeSieveProperties.getBoolean("debug", debug);
+			// Overwrite the default dataset type if it is in the properties file.
+			dataset = DatasetType.valueOf(TimeSieveProperties.getString("dataset", dataset.toString()).toUpperCase());
 		} catch (IOException e) { }
         
 		// -info on the command line?
@@ -104,19 +106,13 @@ public class Main {
 		// -set on the command line?
 		if( cmdlineProps.containsKey("set") ) {
 			String type = cmdlineProps.getProperty("set");
-			System.out.println("CMD SET = " + type);
-			if( type.equalsIgnoreCase("train") ) {
-				runOnTrain = true; runOnTest = false; runOnAll = false;
-			}
-			else if( type.equalsIgnoreCase("dev") ) {
-				runOnTrain = false; runOnTest = false; runOnAll = false;
-			}
-			else if( type.equalsIgnoreCase("all") ) {
-				runOnTrain = false; runOnTest = false; runOnAll = true;
-			}
+			dataset = DatasetType.valueOf(type.toUpperCase());
 		}
 		
 		init();
+		
+		System.out.println("Dataset:\t" + dataset);
+		System.out.println("Debug:\t" + dataset);
 	}
 	
 	/**
@@ -142,38 +138,38 @@ public class Main {
 		// Load the sieve list.
 		sieveClasses = loadSieveList();
 	}
-	
-	
+
+
 	private String[] loadSieveList() {
-        String filename = System.getProperty("sieves");
-        if( filename == null ) filename = "default.sieves";
-        
-        System.out.println("Reading sieve list from: " + filename);
-        
-        List<String> sieveNames = new ArrayList<String>();
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(new File(filename)));
-            String line;
-            while( (line = reader.readLine()) != null ) {
-                if( !line.matches("^\\s*$") && !line.matches("^\\s*//.*$") ) {
-                	// Remove trailing comments if they exist.
-                	if( line.indexOf("//") > -1 )
-                		line = line.substring(0, line.indexOf("//"));
-                	String name = line.trim();
-                	sieveNames.add(name);
-                }
-            }
-            reader.close();
-        } catch( Exception ex ) {
-            System.out.println("ERROR: no sieve list found");
-            ex.printStackTrace();
-            System.exit(1);
-        }
-        
-        String[] arr = new String[sieveNames.size()];
-        return sieveNames.toArray(arr);
+		String filename = System.getProperty("sieves");
+		if( filename == null ) filename = "default.sieves";
+
+		System.out.println("Reading sieve list from: " + filename);
+
+		List<String> sieveNames = new ArrayList<String>();
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(new File(filename)));
+			String line;
+			while( (line = reader.readLine()) != null ) {
+				if( !line.matches("^\\s*$") && !line.matches("^\\s*//.*$") ) {
+					// Remove trailing comments if they exist.
+					if( line.indexOf("//") > -1 )
+						line = line.substring(0, line.indexOf("//"));
+					String name = line.trim();
+					sieveNames.add(name);
+				}
+			}
+			reader.close();
+		} catch( Exception ex ) {
+			System.out.println("ERROR: no sieve list found");
+			ex.printStackTrace();
+			System.exit(1);
+		}
+
+		String[] arr = new String[sieveNames.size()];
+		return sieveNames.toArray(arr);
 	}
-	
+
 	/**
 	 * Turns a string class name into an actual Sieve Instance of the class.
 	 * @param sieveClass
@@ -217,8 +213,9 @@ public class Main {
 		runSieves(thedocs);
 	}
     
-	public void runSieves(SieveDocuments info) {
-		info.removeAllTLinks(); // because we will be adding our own
+	public void runSieves(SieveDocuments thedocs) {
+		// Remove all TLinks because we will add our own.
+		thedocs.removeAllTLinks();
 
 		// Start with zero links.
 		List<TLink> currentTLinks = new ArrayList<TLink>();
@@ -226,11 +223,17 @@ public class Main {
         
 		// Create all the sieves first.
 		Sieve sieves[] = createAllSieves(sieveClasses);
+
+		// Statistics collection.
+		SieveStats stats[] = new SieveStats[sieveClasses.length];
+		Map<String, SieveStats> nameToStats = new HashMap<String, SieveStats>();
+		for( int i = 0; i < sieveClasses.length; i++ ) {
+			stats[i] = new SieveStats(sieveClasses[i]);
+			nameToStats.put(sieveClasses[i], stats[i]);
+		}
 		
 		// Data
-		SieveDocuments docs = Evaluate.getDevSet(info);
-		if( runOnTrain ) docs = Evaluate.getTrainSet(info);
-		else if( runOnAll ) docs = info;
+		SieveDocuments docs = getDataset(dataset, thedocs);
         
 		// Do each file independently.
 		for( SieveDocument doc : docs.getDocuments() ) {
@@ -247,27 +250,30 @@ public class Main {
 				List<TLink> newLinks = sieve.annotate(doc, currentTLinks);
 				if( debug ) System.out.println("\t\t" + newLinks.size() + " new links.");
 //				if( debug ) System.out.println("\t\t" + newLinks);
+				stats[xx].addProposedCount(newLinks.size());
 				
 				// Verify the links as non-conflicting.
 				int numRemoved = removeConflicts(currentTLinksHash, newLinks);
 				if( debug ) System.out.println("\t\tRemoved " + numRemoved + " proposed links.");
 //				if( debug ) System.out.println("\t\t" + newLinks);
+				stats[xx].addRemovedCount(numRemoved);
 				
-				// Run closure.
 				if( newLinks.size() > 0 ) {
 					// Add the good links to our current list.
 					addProposedToCurrentList(sieveClasses[xx], newLinks, currentTLinks, currentTLinksHash);//currentTLinks.addAll(newLinks);
-					// Closure
-					List<TLink> closedLinks = closureExpand(currentTLinks, currentTLinksHash);
+
+					// Run Closure
+					List<TLink> closedLinks = closureExpand(sieveClasses[xx], currentTLinks, currentTLinksHash);
 					if( debug ) System.out.println("\t\tClosure produced " + closedLinks.size() + " links.");
 //					if( debug ) System.out.println("\t\tclosed=" + closedLinks);
+					stats[xx].addClosureCount(closedLinks.size());
 				}
 				if( debug ) System.out.println("\t\tDoc now has " + currentTLinks.size() + " links.");
 			}
 			
 			// Add links to InfoFile.
 			doc.addTlinks(currentTLinks);
-			if( debug ) System.out.println("Adding links: " + currentTLinks);
+//			if( debug ) System.out.println("Adding links: " + currentTLinks);
 			currentTLinks.clear();
 			currentTLinksHash.clear();
 		}
@@ -276,7 +282,7 @@ public class Main {
 		docs.writeToXML(new File(outpath));
 		
 		// Evaluate it if the input file had tlinks in it.
-		Evaluate.evaluate(thedocsUnchanged, docs);
+		Evaluate.evaluate(thedocsUnchanged, docs, nameToStats);
 	}
     
 	/**
@@ -295,9 +301,7 @@ public class Main {
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
 		// Data
-		SieveDocuments docs = Evaluate.getDevSet(thedocs);
-		if( runOnTrain ) docs = Evaluate.getTrainSet(thedocs);
-		else if( runOnAll ) docs = thedocs;
+		SieveDocuments docs = getDataset(dataset, thedocs);
 		
 		// Empty TLink list and counts.
 		List<TLink> currentTLinks = new ArrayList<TLink>();
@@ -315,7 +319,7 @@ public class Main {
 			System.out.println("doc: " + doc.getDocname());
 			List<SieveSentence> sents = doc.getSentences();
 			// Gold links.
-			List<TLink> goldLinks = thedocsUnchanged.getDocument(doc.getDocname()).getTlinks(true);
+			List<TLink> goldLinks = thedocsUnchanged.getDocument(doc.getDocname()).getTlinksNoClosures();
 			Map<String, TLink> goldOrderedIdPairs = new HashMap<String, TLink>();
 			for (TLink tlink : goldLinks) {
 //				System.out.println("adding gold: " + tlink + " order=" + TLink.orderedIdPair(tlink));
@@ -417,9 +421,7 @@ public class Main {
 		Sieve sieves[] = createAllSieves(sieveClasses);
 		
 		// Data
-		SieveDocuments docs = Evaluate.getDevSet(thedocs);
-		if( runOnTrain ) docs = Evaluate.getTrainSet(thedocs);
-		else if( runOnAll ) docs = thedocs;
+		SieveDocuments docs = getDataset(dataset, thedocs);
         
 		// Train them!
 		for( Sieve sieve : sieves ) {
@@ -474,6 +476,9 @@ public class Main {
     
 	private void addProposedToCurrentList(String sieveName, List<TLink> proposed, List<TLink> current, Map<String,TLink> currentHash) {
 		for( TLink newlink : proposed ) {
+			if( currentHash.containsKey(newlink.getId1()+newlink.getId2()) ) {
+				System.out.println("MAIN WARNING: overwriting " + currentHash.get(newlink.getId1()+newlink.getId2()) + " with " + newlink);
+			}
 			current.add(newlink);
 			currentHash.put(newlink.getId1()+newlink.getId2(), newlink);
 			currentHash.put(newlink.getId2()+newlink.getId1(), newlink);
@@ -553,9 +558,9 @@ public class Main {
 	 * @param links The list of TLinks to expand with transitive closure.
 	 * @return The list of new links from closure (these are already added to the given lists)
 	 */
-	private List<TLink> closureExpand(List<TLink> links, Map<String,TLink> linksHash) {
+	private List<TLink> closureExpand(String sieveName, List<TLink> links, Map<String,TLink> linksHash) {
 		List<TLink> newlinks = closure.computeClosure(links, false);
-		addProposedToCurrentList("closure", newlinks, links, linksHash);
+		addProposedToCurrentList(sieveName, newlinks, links, linksHash);
 		return newlinks;
 	}
     
@@ -659,6 +664,17 @@ public class Main {
 		if( timexClassifier == null )
 			timexClassifier = new TimexClassifier(info);
 		timexClassifier.markupTimex3();
+	}
+	
+	public static SieveDocuments getDataset(DatasetType type, SieveDocuments docs) {
+		if( type == DatasetType.TRAIN )
+			return Evaluate.getTrainSet(docs);
+		else if( type == DatasetType.DEV )
+			return Evaluate.getDevSet(docs);
+		else if( type == DatasetType.TEST )
+			return Evaluate.getTestSet(docs);
+		else // ALL
+			return docs;
 	}
 	
 	/**

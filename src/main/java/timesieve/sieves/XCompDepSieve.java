@@ -58,21 +58,13 @@ import timesieve.util.TimebankUtil;
  * @author cassidy
  */
 public class XCompDepSieve implements Sieve {
-	public boolean debug = true;
-	public boolean printInfo = true;
+	public boolean debug = false;
 	private boolean useExtendedTense = true;
 	
 	/**
 	 * The main function. All sieves must have this.
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
-		// PROPERTIES CODE
-		try {
-			TimeSieveProperties.load();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		try {
 			useExtendedTense = TimeSieveProperties.getBoolean("XCompDepSieve.useExtendedTense", true);
 		} catch (IOException e) {
@@ -163,7 +155,7 @@ public class XCompDepSieve implements Sieve {
 			if (td.gov().index() == eDep.getIndex()) {
 				if ( rel.equals("mark") ) { // sometimes advmod plays role of mark
 					mark = td.dep().toString("value");
-					System.out.printf("\ngov:%s dep:%s mark:%s\n%s\n", eGov.getString(), eDep.getString(), mark, sent.sentence());
+					if( debug ) System.out.printf("\ngov:%s dep:%s mark:%s\n%s\n", eGov.getString(), eDep.getString(), mark, sent.sentence());
 				 }
 			  }
 		   }
@@ -173,7 +165,7 @@ public class XCompDepSieve implements Sieve {
 					if (td.gov().index() == eDep.getIndex()) {
 						if ( rel.equals("advmod") ) { // sometimes advmod plays role of mark
 							mark = td.dep().toString("value");
-							System.out.printf("\ngov:%s dep:%s mark:%s\n%s\n", eGov.getString(), eDep.getString(), mark, sent.sentence());
+							if( debug ) System.out.printf("\ngov:%s dep:%s mark:%s\n%s\n", eGov.getString(), eDep.getString(), mark, sent.sentence());
 					 }
 					}
 				 }
