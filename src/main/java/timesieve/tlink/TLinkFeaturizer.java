@@ -1079,17 +1079,19 @@ public class TLinkFeaturizer {
 
       if( !pos.equals("PP") ) {
         // Keep moving up the tree till we hit a new type of POS
-        while( p != null && p.label().toString().equals(pos) ) p = p.parent(root);
+        while( p != null && p.label().toString().equals(pos) ) 
+        	p = p.parent(root);
       }
       
       // We can hit one sentence, but the S must be the PP clause
       if( p != null && p.label().value().equals("S") ) {
         p = p.parent(root);
-        if( p == null || !p.label().value().equals("PP") ) return null;
+        if( p == null || !p.label().value().equals("PP") ) 
+        	return null;
       }
 
       // We found the PP, return the preposition
-      if( p.label().value().equals("PP") ) {
+      if( p != null && p.label().value().equals("PP") ) {
         List<Tree> list = p.getChildrenAsList();
         for( Tree node : list ) {
           if( node.label().value().equals("IN") ) 
