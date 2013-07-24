@@ -32,6 +32,18 @@ public class Evaluate {
 		"ed980111.1130.0089.tml" 
 	};
 	
+	public static final String[] testDocs = { 
+		"APW19980227.0489.tml",
+		"APW19980227.0494.tml",
+		"APW19980308.0201.tml",
+		"APW19980418.0210.tml",
+		"CNN19980126.1600.1104.tml",
+		"CNN19980213.2130.0155.tml",
+		"NYT19980402.0453.tml",
+		"PRI19980115.2000.0186.tml",
+		"PRI19980306.2000.1675.tml" 
+	};
+	
 	/**
 	 * Determines if the given TLink exists in the goldLinks, and its relation is equal
 	 * to or compatible (invertible or a more general relation) with the gold link.
@@ -56,7 +68,7 @@ public class Evaluate {
 	public static SieveDocuments getTrainSet(SieveDocuments docs) {
 		SieveDocuments newdocs = new SieveDocuments();
 		for( SieveDocument doc : docs.getDocuments() )
-			if( !exists(doc.getDocname(), devDocs) )
+			if( !exists(doc.getDocname(), devDocs) && !exists(doc.getDocname(), testDocs) )
 				newdocs.addDocument(doc);
 		return newdocs;
 	}
@@ -65,6 +77,14 @@ public class Evaluate {
 		SieveDocuments newdocs = new SieveDocuments();
 		for( SieveDocument doc : docs.getDocuments() )
 			if( exists(doc.getDocname(), devDocs) )
+				newdocs.addDocument(doc);
+		return newdocs;		
+	}
+
+	public static SieveDocuments getTestSet(SieveDocuments docs) {
+		SieveDocuments newdocs = new SieveDocuments();
+		for( SieveDocument doc : docs.getDocuments() )
+			if( exists(doc.getDocname(), testDocs) )
 				newdocs.addDocument(doc);
 		return newdocs;		
 	}
@@ -270,11 +290,11 @@ public class Evaluate {
 
 //		System.out.println("numCorrect = " + numCorrect + " numIncorrect = " + numIncorrect + " numMissed = " + numMissed);
 		
-		System.out.printf("precision\t= %.2f\t %d of %d\nrecall\t\t= %.2f\t %d of %d\nF1\t\t= %.2f\n",
+		System.out.printf("precision\t= %.3f\t %d of %d\nrecall\t\t= %.3f\t %d of %d\nF1\t\t= %.3f\n",
 				precision, numCorrect, totalGuessed,
 				recall, numCorrect, totalGold,
 				f1);
-		System.out.printf("precision (non vague)= %.2f\t %d of %d\n", precisionNonVague, numCorrect, totalGuessedNonVague);
+		System.out.printf("precision (non vague)= %.3f\t %d of %d\n", precisionNonVague, numCorrect, totalGuessedNonVague);
 
 		printBaseline(goldLabelCounts);			
 		confusionMatrix(guessCounts);
@@ -294,7 +314,7 @@ public class Evaluate {
 				best = label;
 			}
 		}
-		System.out.printf("Local Baseline (%s): precision = recall = F1 = %.2f\n", best, (bestc/total));		
+		System.out.printf("Local Baseline (%s): precision = recall = F1 = %.3f\n", best, (bestc/total));		
 	}
 	
 	public static void confusionMatrix(Counter<String> guessCounts) {

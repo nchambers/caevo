@@ -165,18 +165,18 @@ public class TextEventClassifier {
    */
   private Counter<String> getEventFeatures(SieveSentence sentence, Tree tree, List<TypedDependency> deps, int wordIndex) {
     Counter<String> features = new ClassicCounter<String>();
-    String[] tokens = sentence.sentence().toLowerCase().split("\\s+");
-    int size = tokens.length;
+    List<CoreLabel> tokens = sentence.tokens();//sentence.sentence().toLowerCase().split("\\s+");
+    int size = tokens.size();
 
-    String token = tokens[wordIndex-1];
+    String token = tokens.get(wordIndex-1).getString(CoreAnnotations.OriginalTextAnnotation.class).toLowerCase();
     String tokenPre1 = "<s>";
     String tokenPre2 = "<s>";
-    if( wordIndex > 1 ) tokenPre1 = tokens[wordIndex-2];
-    if( wordIndex > 2 ) tokenPre2 = tokens[wordIndex-3];
+    if( wordIndex > 1 ) tokenPre1 = tokens.get(wordIndex-2).getString(CoreAnnotations.OriginalTextAnnotation.class).toLowerCase();
+    if( wordIndex > 2 ) tokenPre2 = tokens.get(wordIndex-3).getString(CoreAnnotations.OriginalTextAnnotation.class).toLowerCase();
     String tokenPost1 = "</s>";
     String tokenPost2 = "</s>";
-    if( wordIndex < size ) tokenPost1 = tokens[wordIndex];
-    if( wordIndex < size-1 ) tokenPost2 = tokens[wordIndex+1];
+    if( wordIndex < size ) tokenPost1 = tokens.get(wordIndex).getString(CoreAnnotations.OriginalTextAnnotation.class).toLowerCase();
+    if( wordIndex < size-1 ) tokenPost2 = tokens.get(wordIndex+1).getString(CoreAnnotations.OriginalTextAnnotation.class).toLowerCase();
 
     // N-grams.
     features.incrementCount(token);
@@ -246,8 +246,8 @@ public class TextEventClassifier {
         List<SieveSentence> sentences = doc.getSentences();
         int sid = 0;
         for( SieveSentence sentence : sentences ) {
-          //        List<CoreLabel> tokens = sentence.tokens();
-          String[] tokens = sentence.sentence().split("\\s+");
+        	List<CoreLabel> tokens = sentence.tokens();
+//          String[] tokens = sentence.sentence().split("\\s+");
           List<TextEvent> events = sentence.events();
           Tree tree = sentence.getParseTree();
 
@@ -257,7 +257,7 @@ public class TextEventClassifier {
             index.put(event.getIndex(), event);
 
           // Create the dataset!
-          for( int xx = 1; xx <= tokens.length; xx++ ) {
+          for( int xx = 1; xx <= tokens.size(); xx++ ) {
             Counter<String> features = getEventFeatures(sentence, tree, alldeps.get(sid), xx);
             RVFDatum<String,String> datum = new RVFDatum<String,String>(features, (index.containsKey(xx) ? "event" : "notevent"));
             eventDataset.add(datum);
@@ -426,7 +426,6 @@ public class TextEventClassifier {
         // Each sentence.
         int sid = 0;
         for( SieveSentence sent : sentences ) {
-//          String[] tokens = sent.sentence().split("\\s+");
           Tree tree = sent.getParseTree();
           List<TextEvent> newevents = new ArrayList<TextEvent>();
           Set<Integer> timexIndices = indicesCoveredByTimexes(sent.timexes());
