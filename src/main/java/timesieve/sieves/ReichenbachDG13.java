@@ -66,12 +66,15 @@ import timesieve.util.TimebankUtil;
  *
  *After adding the pseudoTense function that puts words that govern
  *a modal word in the future, new results:
- *
+ *07/23/2013
  *train:
- *ReichenbachDG13			p=0.59	192 of 326	Non-VAGUE:	p=0.90	192 of 213
+ *p=0.59	192 of 326	Non-VAGUE:	p=0.91	192 of 212
  *dev:
- *ReichenbachDG13			p=0.63	20 of 32	Non-VAGUE:	p=0.77	20 of 26
+ *p=0.63	20 of 32	Non-VAGUE:	p=0.80	20 of 25
  *
+ *If we don't use pseudoTense across sentences:
+ *p=0.62	148 of 240	Non-VAGUE:	p=0.89	148 of 166
+ *p=0.69	20 of 29	Non-VAGUE:	p=0.87	20 of 23
  *
  *DETAILS:
  *

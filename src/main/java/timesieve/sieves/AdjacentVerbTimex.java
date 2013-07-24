@@ -17,73 +17,36 @@ import timesieve.util.TreeOperator;
 
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.trees.GrammaticalRelation;
-import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
 import edu.stanford.nlp.trees.Tree;
-import edu.stanford.nlp.trees.TreeFactory;
 import edu.stanford.nlp.trees.TypedDependency;
 
 /**
  * 
  * AdjacentVerbTimex intends to classify event/time pairs from the same sentence
- * in which the two are fairly close within the sentence and the event is a verb.
- * Syntactic features are naive in that they are specified at the surface level.
- * Semantic features have not yet been specified.
+ * in which the two are "adjacent" in some sense, and the event is a verb.
+ * Two notions of adjacency implemented thus far are based on surface distance 
+ * and relative position in a dependency parse graph.
  * 
  * 
  * Parameters
  * These parameters are booleans. If true, classify the corresponding pairs
- * 	AdjacentVerbTimex.EVENT_BEFORE_TIMEX
+ * 	AdjacentVerbTimex.EVENT_BEFORE_TIMEX - classify a pair if the event comes before the timex in the text
  * 	AdjacentVerbTimex.TIMEX_BEFORE_EVENT
- * 	AdjacentVerbTimex.EVENT_GOVERNS_TIMEX
+ * 	AdjacentVerbTimex.EVENT_GOVERNS_TIMEX - classidy a pair if the event governs the timex
  * 	AdjacentVerbTimex.TIMEX_GOVERNS_EVENT
+ * 
  * This parameter specifies the maximum number of words that may intervene between
- * the verb and timex
+ * the verb and timex such that they are still considered "adjacent".
  * 	AdjacentVerbTimex.numInterWords
  * 
- * numInterWords = 2
- * EVENT_BEFORE_TIMEX
- * AdjacentVerbTimex		p=0.83	38 of 46	Non-VAGUE:	p=0.95	38 of 40
- * 
- * TIMEX_BEFORE_EVENT
- * AdjacentVerbTimex		p=0.71	17 of 24	Non-VAGUE:	p=0.74	17 of 23
- * 
- * EVENT_GOVERNS_TIMEX
- * AdjacentVerbTimex		p=0.64	44 of 69	Non-VAGUE:	p=0.85	44 of 52
- * 
- * TIMEX_GOVERNS_EVENT - No attested cases! does this make sense?
- * AdjacentVerbTimex		p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0
- * 
- * EVENT_BEFORE_TIMEX and EVENT_GOVERNS_TIMEX
- * AdjacentVerbTimex		p=0.66	61 of 93	Non-VAGUE:	p=0.88	63 of 72
- * 
- * numInterWords
- * EVENT_BEFORE_TIMEX, TIMEX_BEFORE_EVENT, EVENT_GOVERNS_TIMEX
- * AdjacentVerbTimex		p=0.60	83 of 138	Non-VAGUE:	p=0.74	83 of 112
- * 
- * 
- * After updated labels; introduction of new train and dev set; refactoring:
- * Train set
- * 0	AdjacentVerbTimex		p=0.74	56 of 76	Non-VAGUE:	p=0.88	56 of 64
- * 1	AdjacentVerbTimex		p=0.73	67 of 92	Non-VAGUE:	p=0.85	67 of 79
- * 2	AdjacentVerbTimex		p=0.72	77 of 107	Non-VAGUE:	p=0.86	77 of 90
- * 3	AdjacentVerbTimex		p=0.69	84 of 122	Non-VAGUE:	p=0.81	84 of 104
- * 4	AdjacentVerbTimex		p=0.66	92 of 139	Non-VAGUE:	p=0.77	92 of 120
- * 5	AdjacentVerbTimex		p=0.60	96 of 161	Non-VAGUE:	p=0.71	96 of 135
- * 6	AdjacentVerbTimex		p=0.57	106 of 185	Non-VAGUE:	p=0.67	106 of 158
- * 7	AdjacentVerbTimex		p=0.55	113 of 205	Non-VAGUE:	p=0.66	113 of 171
- * 8	AdjacentVerbTimex		p=0.53	116 of 217	Non-VAGUE:	p=0.64	116 of 182
- * Dev set
- * 0 
- * 1
- * 2
- * 3
- * 4
- * 5
- * 6
- * 7
- * 8
+ *timex before event - true
+ *p=0.64	89 of 139	Non-VAGUE:	p=0.75	89 of 119
+ * timex before event - false
+ * p=0.70	74 of 106	Non-VAGUE:	p=0.86	74 of 86
  *
- * 
+ * The biggest problem is when the system says IS_INCLUDED and the correct answer is VAGUE.
+ * I attribute this to annotation difficulties; I think in many such cases the system is correct. 
+ * More analysis to come.
  * 
  * EVENT_BEFORE_TIMEX uses preposition-based rules (default is_included)
  * TIMEX_BEFORE_EVENT default is_included; vague for event "now"; vague when "said" precedes timex
@@ -117,7 +80,7 @@ public class AdjacentVerbTimex implements Sieve {
 	 * The main function. All sieves must have this.
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
-			// fill in properties values
+			// Parameter Value Code
 		try {
 			EVENT_BEFORE_TIMEX = TimeSieveProperties.getBoolean("AdjacentVerbTimex.EVENT_BEFORE_TIMEX", true);
 			TIMEX_BEFORE_EVENT = TimeSieveProperties.getBoolean("AdjacentVerbTimex.TIMEX_BEFORE_EVENT", true);
@@ -139,12 +102,11 @@ public class AdjacentVerbTimex implements Sieve {
 			// Get a list of all dependencies in the sentence
 		  // We'll need the parse tree from each sentence to calculate a word's POS
 			List<TypedDependency> deps = sent.getDeps();
-			Tree tree = null;  // initialize to null so we don't end up loading it (e.g. if no timexes are in the sentence)
+			Tree tree = null;  // initialize to null so we don't end up loading it unless timexes are in the sentence
 			
 			if (debug == true) {
 				System.out.println("DEBUG: adding tlinks from " + doc.getDocname() + " sentence " + sent.sentence());
 				}
-			
 			
 			// Check timex/event pairs against our criteria
 			// Iterate over timexes
@@ -168,7 +130,7 @@ public class AdjacentVerbTimex implements Sieve {
 					
 					// Get parameters used for "structured" notion of adjacency
 				  // Dependency relation between event and time if applicable
-					// booleans for dependency relation direction, updated below
+					// Initialize booleans for dependency relation direction, updated below
 					// Dependency relation if applicable
 					boolean eventDoesGovernTimex = false;
 					boolean timexDoesGovernEvent = false;
@@ -189,12 +151,14 @@ public class AdjacentVerbTimex implements Sieve {
 							timexDoesGovernEvent = true;
 						}
 					}
+					
+					
 /*					 At this point, if there's a dependency relationship between the event and the time
 					 We know what it is (depRel) and the direction (eventGovernsTimex vs timexGovernsEvent)*/
 					
 	
 					
-					// Now, we determine what TLink to add to proposed (if any) for the event/timex pair
+					// Now, we determine what TLink (if any)  to add to proposed for the event/timex pair
 					TLink tlink = null;
 					TLink flatTlink_et = null;
 					TLink depTlink_et = null;
@@ -207,11 +171,17 @@ public class AdjacentVerbTimex implements Sieve {
 					}
 					// if timex is before verb, use these rules...
 					else if (TIMEX_BEFORE_EVENT && timexIsBeforeVerb) {
-						if (eventDoesGovernTimex == false)
+						if (eventDoesGovernTimex == false) {
+							// If event governs a timex that comes before it, label it vague - 8/13
+							//probably can be fixed with lexical features
+							//flatTlink_te = null;
 							flatTlink_te = new EventTimeLink(event.getEiid() , timex.getTid(), TLink.Type.VAGUE);
+						}
 						else {
-							flatTlink_te = timexBeforeEvent(eventToTimexDist, event, timex, sent, tree);
-							if( debug ) System.out.printf("E GOV T: %s(%s) %s(%s)\n%s", event.getString(), event.getId(), timex.getText(), timex.getTid(), sent.sentence());
+							flatTlink_te = timexBeforeEvent(eventToTimexDist, event, timex, sent, tree); // 8/11
+							if (debug == true) {
+							System.out.printf("E GOV T: %s(%s) %s(%s)\n%s", event.getString(), event.getId(), timex.getText(), timex.getTid(), sent.sentence());
+							}
 						}
 					}
 					
