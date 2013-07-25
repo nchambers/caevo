@@ -26,13 +26,13 @@ public class TimexExtractionTest extends TestCase {
 		assertNotNull(docs);
 		
     // Number of expected sentences.
-		assertEquals("Number of generated documents.", docs.getDocuments().size(), 1);
+		assertEquals("Number of generated documents.", 1, docs.getDocuments().size());
 
     SieveDocument doc = docs.getDocuments().get(0);
-    assertEquals("Number of sentences.", doc.getSentences().size(), 1);
+    assertEquals("Number of sentences.", 1, doc.getSentences().size());
     
     SieveSentence sent = doc.getSentences().get(0);
-    assertEquals("Number of created timexes.", sent.timexes().size(), 2);
+    assertEquals("Number of created timexes.", 2, sent.timexes().size());
 	}
 
 }

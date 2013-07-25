@@ -195,6 +195,9 @@ public class TLink implements Comparable<TLink> {
   public void setOrigin(String str) { this.origin = str; }
   public void setRelationConfidence(double d) { this.relationConfidence = d; }
   public void setDocument(SieveDocument document) { this.document = document; }
+  public void setClosure(boolean closed) { this.closed = closed; }
+  public void setId1(String id) { id1 = id; }
+  public void setId2(String id) { id2 = id; }
   
   public String getId1() { return this.id1; }
   public String getId2() { return this.id2; }
@@ -202,7 +205,8 @@ public class TLink implements Comparable<TLink> {
   public double getRelationConfidence() { return this.relationConfidence; }
   public String getOriginalRelation() { return this.originalRelation; }
   public String getOrigin() { return this.origin; }
-  public boolean getIsFromClosure() { return this.closed; }
+  public boolean isFromClosure() { return this.closed; }
+  public SieveDocument getDocument() { return this.document; }
   
   public Element toElement(Namespace ns) {
   	//  System.out.println("toElement " + event1 + " " + event2 + " " + relation + " " + closed + " " + origin);
@@ -294,5 +298,24 @@ public class TLink implements Comparable<TLink> {
 			return tlink.getId1() + tlink.getId2();
 		else
 			return tlink.getId2() + tlink.getId1();
+	}
+
+	public static TLink clone(TLink link) {
+		TLink linkclone = null;
+		if( linkclone instanceof EventEventLink )
+			linkclone = new EventEventLink(link.getId1(), link.getId2(), link.getRelation());
+		else if( linkclone instanceof EventTimeLink )
+			linkclone = new EventTimeLink(link.getId1(), link.getId2(), link.getRelation());
+		else if( linkclone instanceof TimeTimeLink )
+			linkclone = new TimeTimeLink(link.getId1(), link.getId2(), link.getRelation());
+		else
+			linkclone = new TLink(link.getId1(), link.getId2(), link.getRelation());
+		
+		linkclone.setOrigin(link.getOrigin());
+		linkclone.setRelationConfidence(link.getRelationConfidence());
+		linkclone.setDocument(link.getDocument());
+		linkclone.setClosure(link.isFromClosure());
+
+		return linkclone;
 	}
 }

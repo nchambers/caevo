@@ -15,6 +15,7 @@ import timesieve.tlink.EventEventLink;
 import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
+import timesieve.util.SieveStats;
 import timesieve.util.Util;
 
 /**
@@ -30,6 +31,18 @@ public class Evaluate {
 		"NYT19980212.0019.tml",  
 		"PRI19980216.2000.0170.tml", 
 		"ed980111.1130.0089.tml" 
+	};
+	
+	public static final String[] testDocs = { 
+		"APW19980227.0489.tml",
+		"APW19980227.0494.tml",
+		"APW19980308.0201.tml",
+		"APW19980418.0210.tml",
+		"CNN19980126.1600.1104.tml",
+		"CNN19980213.2130.0155.tml",
+		"NYT19980402.0453.tml",
+		"PRI19980115.2000.0186.tml",
+		"PRI19980306.2000.1675.tml" 
 	};
 	
 	/**
@@ -56,7 +69,7 @@ public class Evaluate {
 	public static SieveDocuments getTrainSet(SieveDocuments docs) {
 		SieveDocuments newdocs = new SieveDocuments();
 		for( SieveDocument doc : docs.getDocuments() )
-			if( !exists(doc.getDocname(), devDocs) )
+			if( !exists(doc.getDocname(), devDocs) && !exists(doc.getDocname(), testDocs) )
 				newdocs.addDocument(doc);
 		return newdocs;
 	}
@@ -65,6 +78,14 @@ public class Evaluate {
 		SieveDocuments newdocs = new SieveDocuments();
 		for( SieveDocument doc : docs.getDocuments() )
 			if( exists(doc.getDocname(), devDocs) )
+				newdocs.addDocument(doc);
+		return newdocs;		
+	}
+
+	public static SieveDocuments getTestSet(SieveDocuments docs) {
+		SieveDocuments newdocs = new SieveDocuments();
+		for( SieveDocument doc : docs.getDocuments() )
+			if( exists(doc.getDocname(), testDocs) )
 				newdocs.addDocument(doc);
 		return newdocs;		
 	}
@@ -97,8 +118,10 @@ public class Evaluate {
 					else if( !first.isBeforeInText(second) ) {
 						removal.add(link);
 						TLink.Type invertedRelation = TLink.invertRelation(link.getRelation());
-						TLink newlink = new EventEventLink(link.getId2(), link.getId1(), invertedRelation);
-						newlink.setRelationConfidence(link.getRelationConfidence());
+						TLink newlink = TLink.clone(link);
+						newlink.setId1(link.getId2());						
+						newlink.setId2(link.getId1());
+						newlink.setRelation(invertedRelation);
 						addition.add(newlink);
 					}
 				}
@@ -123,8 +146,10 @@ public class Evaluate {
 					if( flip ) {
 						removal.add(link);
 						TLink.Type invertedRelation = TLink.invertRelation(link.getRelation());
-						TLink newlink = new TimeTimeLink(link.getId2(), link.getId1(), invertedRelation);
-						newlink.setRelationConfidence(link.getRelationConfidence());
+						TLink newlink = TLink.clone(link);
+						newlink.setId1(link.getId2());						
+						newlink.setId2(link.getId1());
+						newlink.setRelation(invertedRelation);
 						addition.add(newlink);
 					}
 				}
@@ -165,8 +190,10 @@ public class Evaluate {
 					if( flip ) {
 						removal.add(link);
 						TLink.Type invertedRelation = TLink.invertRelation(link.getRelation());
-						TLink newlink = new EventTimeLink(link.getId2(), link.getId1(), invertedRelation);
-						newlink.setRelationConfidence(link.getRelationConfidence());
+						TLink newlink = TLink.clone(link);
+						newlink.setId1(link.getId2());						
+						newlink.setId2(link.getId1());
+						newlink.setRelation(invertedRelation);
 						addition.add(newlink);
 					}
 				}
@@ -189,7 +216,7 @@ public class Evaluate {
 	 * @param goldDocs Gold tlinks in every document.
 	 * @param guessedDocs The guessed tlinks in every document.
 	 */
-	public static void evaluate(SieveDocuments goldDocs, SieveDocuments guessedDocs) {
+	public static void evaluate(SieveDocuments goldDocs, SieveDocuments guessedDocs, Map<String,SieveStats> sieveStats) {
 		Counter<String> guessCounts = new ClassicCounter<String>();
 		Counter<TLink.Type> goldLabelCounts = new ClassicCounter<TLink.Type>();
 		int numCorrect = 0;
@@ -213,13 +240,14 @@ public class Evaluate {
 //			System.out.println("\t-> " + guessedDoc.getTlinks().size() + " guessed links with " + goldDoc.getTlinks().size() + " gold links.");
 
 			// Gold links.
-			List<TLink> goldLinks = goldDoc.getTlinks(true);
+			List<TLink> goldLinks = goldDoc.getTlinksNoClosures();
 			Map<String, TLink> goldPairLookup = new HashMap<String, TLink>();
 			for (TLink tlink : goldLinks) 
 				goldPairLookup.put(tlink.getId1() + "," + tlink.getId2(), tlink);
 			
 			// Run it.
 			List<TLink> proposed = guessedDoc.getTlinks();
+//			System.out.println("EVALUATE: proposed links in " + guessedDoc.getDocname() + " = " + proposed);
 
 			// Check proposed links.
 			for( TLink pp : proposed ) {
@@ -234,6 +262,10 @@ public class Evaluate {
 				// Guessed link is correct!
 				if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
 					numCorrect++;
+					if( pp.getOrigin() != null ) {
+						sieveStats.get(pp.getOrigin()).addCorrect(pp);
+					}
+					else System.out.println("EVALUATE: unknown link origin: " + pp);
 				} 
 				// Gold and guessed link disagree!
 				// Only mark relations wrong if there's a conflicting human annotation.
@@ -243,9 +275,12 @@ public class Evaluate {
 						numIncorrectNonVague++;
 					}
 					numIncorrect++;
+					if( pp.getOrigin() != null ) sieveStats.get(pp.getOrigin()).addIncorrect(pp, goldLink);
+					else System.out.println("EVALUATE: unknown link origin: " + pp);
 				}
 				// No gold link. We don't penalize for guessed links that aren't in gold.
 				else {
+					sieveStats.get(pp.getOrigin()).addNoGold(pp);
 //					System.out.println("No gold link: " + pp);
 				}
 			}
@@ -266,18 +301,28 @@ public class Evaluate {
 		double recall = (totalGold > 0 ? (double)numCorrect / totalGold : 0.0);
 		double f1 = (precision+recall > 0 ? 2.0 * precision * recall / (precision+recall) : 0.0);
 		int totalGuessedNonVague = numCorrect + numIncorrectNonVague;
-		double precisionNonVague = (totalGuessedNonVague > 0 ? numCorrect / totalGuessedNonVague : 0.0);
+		double precisionNonVague = (totalGuessedNonVague > 0 ? (double)numCorrect / (double)totalGuessedNonVague : 0.0);
 
 //		System.out.println("numCorrect = " + numCorrect + " numIncorrect = " + numIncorrect + " numMissed = " + numMissed);
-		
-		System.out.printf("precision\t= %.2f\t %d of %d\nrecall\t\t= %.2f\t %d of %d\nF1\t\t= %.2f\n",
+
+		// Print performance for each individual sieve.
+		for( SieveStats ss : sieveStats.values() )
+			ss.printStats();
+
+		// Print full system performance.
+		System.out.println("\n*********************************************************************");
+		System.out.println("************************** FULL RESULTS *****************************");
+		System.out.println("*********************************************************************");
+		System.out.printf("precision\t= %.3f\t %d of %d\nrecall\t\t= %.3f\t %d of %d\nF1\t\t= %.3f\n",
 				precision, numCorrect, totalGuessed,
 				recall, numCorrect, totalGold,
 				f1);
-		System.out.printf("precision (non vague)= %.2f\t %d of %d\n", precisionNonVague, numCorrect, totalGuessedNonVague);
+		System.out.printf("precision (non vague)= %.3f\t %d of %d\n", precisionNonVague, numCorrect, totalGuessedNonVague);
+		System.out.println();
 
 		printBaseline(goldLabelCounts);			
 		confusionMatrix(guessCounts);
+		System.out.println("*********************************************************************\n");
 	}
 	
 	
@@ -294,7 +339,7 @@ public class Evaluate {
 				best = label;
 			}
 		}
-		System.out.printf("Local Baseline (%s): precision = recall = F1 = %.2f\n", best, (bestc/total));		
+		System.out.printf("Local Baseline (%s): precision = recall = F1 = %.3f\n", best, (bestc/total));		
 	}
 	
 	public static void confusionMatrix(Counter<String> guessCounts) {

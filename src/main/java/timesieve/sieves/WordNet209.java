@@ -73,7 +73,7 @@ import timesieve.Main;
  *  
  *  ==> I think there is a bug - Shouldn't the denominators line up (first + third = second)?
  *  (25 + 84 != 100). Since we are checking if two events are in the same sentence
- *  before classifying, the mistake is probably that we are missing 9 paris during the 
+ *  before classifying, the mistake is probably that we are missing 9 pairs during the 
  *  enumeration of the 100 for the second case above. Which 9? 
  *  
  *  
@@ -141,14 +141,18 @@ public class WordNet209 implements Sieve {
 			// classify each type of pair based on parameter settings
 			if (eePairs == true){
 				for (TextEvent[] eventPair : eventPairs) {
-					TLink link = getEELink(eventPair[0], eventPair[1], trees);
-					if (link != null) proposed.add(link);
+					TLink tlink = getEELink(eventPair[0], eventPair[1], trees);
+					if (tlink != null) {
+						proposed.add(tlink);
+					}
 				}
 			}
 			if (ttPairs == true){
 				for (Timex[] timexPair : TimexPairs) {
-					TLink link = getTTLink(timexPair[0], timexPair[1], trees);
-					if (link != null) proposed.add(link);
+					TLink tlink = getTTLink(timexPair[0], timexPair[1], trees);
+					if (tlink != null) {
+						proposed.add(tlink);
+					}
 				}
 			}
 		if (debug == true) {
@@ -347,6 +351,8 @@ public class WordNet209 implements Sieve {
 			Tree sentParseTree = TreeOperator.stringToTree(sentParseString, tf);
 			return sentParseTree;
 		}
+		
+		
 	/**
 	 * No training. Just rule-based.
 	 */

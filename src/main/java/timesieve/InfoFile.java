@@ -267,7 +267,7 @@ public class InfoFile {
       for( Object obj : children ) {
         if( noclosures ) { // don't add closed links
           TLink link = tlinkFromElement((Element)obj);
-          if( !link.getIsFromClosure() ) tlinks.add(link);
+          if( !link.isFromClosure() ) tlinks.add(link);
         }
         // add all links
         else tlinks.add(tlinkFromElement((Element)obj));

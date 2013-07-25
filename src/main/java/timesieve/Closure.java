@@ -112,8 +112,9 @@ public class Closure {
 
   /**
    * Compute a larger closed set of relations using transitivity rules of 
-   * temporal reasoning.  Adds the new links directly to the relations Vector.
-   * @param relations A Vector of TLinks
+   * temporal reasoning.  Adds the new links directly to the newRelations List.
+   * @param relations A List of TLinks from which to compute closure.
+   * @param newRelations The List in which to append any new closure links.
    * @return True if the closure is consistent, false if a conflict occurred.
    */
   public boolean computeClosure(List<TLink> relations, List<TLink> newRelations, boolean prints) {
@@ -225,6 +226,13 @@ public class Closure {
     return computeClosure(relations, false);
   }
 
+  /**
+   * Computes closure over the given relations, keeps the given List unchanged, and returns
+   * a new list of closed relations.
+   * @param relations The list of relations from which we compute closure.
+   * @param debug
+   * @return A list of new relations computed from transitivity rules.
+   */
   public List<TLink> computeClosure(List<TLink> relations, boolean debug) {
     List<TLink> cloned = new ArrayList<TLink>(relations);
     List<TLink> newRelations = new ArrayList<TLink>();

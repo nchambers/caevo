@@ -275,7 +275,6 @@ public class Annotator {
 	      }
 	    }
 	    in.close();
-	    System.out.println("Loaded " + count + " labels from " + path);
     } catch( Exception ex ) { 
       ex.printStackTrace(); 
       System.exit(1);
