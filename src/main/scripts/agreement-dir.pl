@@ -91,7 +91,7 @@ sub readRelations {
 	elsif( $line =~ /^#.*/ ) { }
 	elsif( $line =~ /^\s*$/ ) { }
 	else {
-	    print "Unknown line format: $line\n";
+	    print "Unknown line format ($file): $line\n";
 	    exit;
 	}
     }
