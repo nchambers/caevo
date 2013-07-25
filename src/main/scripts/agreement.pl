@@ -47,44 +47,8 @@ my $matched = 0, $mismatch = 0;
 my %numtypes;
 my %matchtypes;
 
-# Loop over the pair labels, and count matches.
-foreach $pair (keys %relations1) {
-    my $rel1 = $relations1{$pair};
-
-    my $rel2;
-    if( not exists $relations2{$pair} ) { $rel2 = "v"; }
-    else { $rel2 = $relations2{$pair}; }
-    
-    $seen{$pair} = 1;
-
-    if( $rel1 eq $rel2 ) {
-	$matched++;
-    }
-    else {
-	$mismatch++;
-#	print "$pair:\t$relations1{$pair} - $relations2{$pair}\n";
-    }
-    $matchtypes{$rel1}{$rel2}++;
-}
-# Find all pairs in the second file that weren't in the first.
-foreach $pair (keys %relations2) {
-    if( not exists $seen{$pair} ) {
-	if( $relations2{$pair} eq "v" ) { 
-	    $matched++;
-	    $matchtypes{"v"}{"v"}++;
-	}
-	else {
-	    $mismatch++;
-	    $matchtypes{"v"}{$relations2{$pair}}++;
-#	    print "$pair:\t - $relations2{$pair}\n";
-	}
-    }
-}
-if( $maxpairs ) {
-    my $numvagues = $maxpairs - $matched - $mismatch;
-    $matched += $numvagues;
-    $matchTypes{"v"}{"v"} += $numvagues;
-}
+# Count.
+countAgreement();
 
 # Print counts.
 print "Total pairs: " . ($matched+$mismatch) . "\n";
@@ -105,4 +69,47 @@ foreach $rel (@types) {
 	print "$matchtypes{$rel}{$rel2}\t";
     }
     print "\n";
+}
+
+
+
+sub countAgreement {
+# Loop over the pair labels, and count matches.
+    foreach $pair (keys %relations1) {
+        my $rel1 = $relations1{$pair};
+
+        my $rel2;
+        if( not exists $relations2{$pair} ) { $rel2 = "v"; }
+        else { $rel2 = $relations2{$pair}; }
+        
+        $seen{$pair} = 1;
+
+        if( $rel1 eq $rel2 ) {
+            $matched++;
+        }
+        else {
+            $mismatch++;
+#	print "$pair:\t$relations1{$pair} - $relations2{$pair}\n";
+        }
+        $matchtypes{$rel1}{$rel2}++;
+    }
+# Find all pairs in the second file that weren't in the first.
+    foreach $pair (keys %relations2) {
+        if( not exists $seen{$pair} ) {
+            if( $relations2{$pair} eq "v" ) { 
+                $matched++;
+                $matchtypes{"v"}{"v"}++;
+            }
+            else {
+                $mismatch++;
+                $matchtypes{"v"}{$relations2{$pair}}++;
+#	    print "$pair:\t - $relations2{$pair}\n";
+            }
+        }
+    }
+    if( $maxpairs ) {
+        my $numvagues = $maxpairs - $matched - $mismatch;
+        $matched += $numvagues;
+        $matchTypes{"v"}{"v"} += $numvagues;
+    }
 }
