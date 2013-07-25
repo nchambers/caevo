@@ -85,6 +85,13 @@ public class Timex {
     this.documentFunction = timex.getDocumentFunction();
     this.temporalFunction = timex.getTemporalFunction();
   }
+  /**
+   * Copy Constructor with new value specified
+   * @param timex
+   */
+  public Timex(String val) { 	
+    this.value = val;
+  }
 
   public Timex(org.jdom.Element el) {
     this.tid = el.getAttributeValue(Timex.TID_ATT);
@@ -105,42 +112,7 @@ public class Timex {
     
     this.temporalFunction = el.getAttributeValue(Timex.TEMPFUNC_ATT).equalsIgnoreCase("true");
   }
-  
-  /**
-   * @returns Timex with truncated DCT (to the day granularity)
-   * @param DCTTimex
-   */
-  public static Timex dctDayTimex(Timex dctTimex) {
-  	
-  	// First confirm that dctTimex is DCT
-  	if (!dctTimex.isDCT()) {
-  		return null;
-  	}
-  	
-  	// Truncate the dctTimex's value to the day granularity if possible;
-  	// otherwise, do nothing
-  	Timex dcdTimex = new Timex(dctTimex);
-  	String creationTimeRegex = "(\\d{4}-\\d{2}-\\d{2}).*";
-  	Pattern creationTimePattern = Pattern.compile(creationTimeRegex);
-  	Matcher matcher = creationTimePattern.matcher(dctTimex.getValue());
-  	if (matcher.matches()) {
-  		String dcdValue = matcher.group(1);
-  		dcdTimex.setValue(dcdValue);
-  	}
-  	
-  	// Confirm that dcdTimex's value is of the appropriate form (no need if match acheived above),
-  	// and then return it;
-  	// if it doesn't then return null
-  	String creationDayRegex = "\\d{4}-\\d{2}-\\d{2}";
-  	Pattern creationDayPattern = Pattern.compile(creationTimeRegex);
-  	Matcher matcherDay = creationTimePattern.matcher(dctTimex.getValue());
-  	if (matcherDay.matches()) {
-  		return dcdTimex;
-  	}
-  	else {
-  		return null;
-  	}
-  }
+
   
   //<TIMEX3 mod="APPROX" endPoint="t42" tid="t39" temporalFunction="false" type="DURATION" functionInDocument="NONE" value="P2Y" >
   public void saveAttributes(org.w3c.dom.Element el) {
@@ -414,5 +386,53 @@ public class Timex {
     		 + this.value + " '" 
     		 + this.text + "' " 
     		 + this.preposition;
+  }
+  
+  
+  public static String dateFromValue(String value) {
+  	String creationTimeRegex = "(\\d{4}-\\d{2}-\\d{2}).*";
+  	Pattern creationTimePattern = Pattern.compile(creationTimeRegex);
+  	Matcher matcher = creationTimePattern.matcher(value);
+  	if (matcher.matches()) {
+  		String dayValue = matcher.group(1);
+  		return dayValue;
+  	}
+  	else {
+  		return null;
+  	}
+  }
+  /**
+   * @returns Timex with truncated DCT (to the day granularity)
+   * @param DCTTimex
+   */
+  public static Timex dctDayTimex(Timex dctTimex) {
+  	// First confirm that dctTimex is DCT
+  	if (!dctTimex.isDCT()) {
+  		return null;
+  	}
+  	
+  	// Truncate the dctTimex's value to the day granularity if possible;
+  	// otherwise, do nothing
+  	Timex dcdTimex = new Timex(dctTimex);
+  	String creationTimeRegex = "(\\d{4}-\\d{2}-\\d{2}).*";
+  	Pattern creationTimePattern = Pattern.compile(creationTimeRegex);
+  	Matcher matcher = creationTimePattern.matcher(dctTimex.getValue());
+  	if (matcher.matches()) {
+  		String dcdValue = matcher.group(1);
+  		dcdTimex.setValue(dcdValue);
+  	}
+  	
+  	// Confirm that dcdTimex's value is of the appropriate form (no need if match acheived above),
+  	// and then return it;
+  	// if it doesn't then return null
+  	String creationDayRegex = "\\d{4}-\\d{2}-\\d{2}";
+  	Pattern creationDayPattern = Pattern.compile(creationTimeRegex);
+  	Matcher matcherDay = creationTimePattern.matcher(dctTimex.getValue());
+  	if (matcherDay.matches()) {
+  		return dcdTimex;
+  	}
+  	else {
+  		return null;
+  	}
   }
 }
