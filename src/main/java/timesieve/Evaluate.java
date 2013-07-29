@@ -24,7 +24,9 @@ import timesieve.util.Util;
  * @author chambers
  */
 public class Evaluate {
-
+	public static final TLink.Type[] labels = { TLink.Type.BEFORE, TLink.Type.AFTER, TLink.Type.SIMULTANEOUS,
+		TLink.Type.INCLUDES, TLink.Type.IS_INCLUDED, TLink.Type.VAGUE };
+	
 	public static final String[] devDocs = { 
 		"APW19980227.0487.tml", 
 		"CNN19980223.1130.0960.tml", 
@@ -320,7 +322,8 @@ public class Evaluate {
 		System.out.printf("precision (non vague)= %.3f\t %d of %d\n", precisionNonVague, numCorrect, totalGuessedNonVague);
 		System.out.println();
 
-		printBaseline(goldLabelCounts);			
+		printBaseline(goldLabelCounts);
+		printDatasetStats(goldLabelCounts);
 		confusionMatrix(guessCounts);
 		System.out.println("*********************************************************************\n");
 	}
@@ -341,17 +344,34 @@ public class Evaluate {
 		}
 		System.out.printf("Local Baseline (%s): precision = recall = F1 = %.3f\n", best, (bestc/total));		
 	}
-	
+
+	/**
+	 * Print how many times each label is in the counts list.
+	 */
+	public static void printDatasetStats(Counter<TLink.Type> labelCounts) {
+		System.out.println("GOLD LABEL COUNTS (out of " + (int)labelCounts.totalCount() + ")");
+		for( TLink.Type label : labels ) {
+			int numtabs = (label.toString().length() > 7 ? 1 : 2);
+			System.out.print(label + "\t");
+			if( numtabs == 2 ) System.out.print("\t");
+			System.out.printf("%d\t%.0f%%\n", (int)labelCounts.getCount(label), (100.0*labelCounts.getCount(label)/labelCounts.totalCount()));
+		}
+	}
+
+	/**
+	 * Prin the confusion matrix for the 6 label types. Each String key should be a pair separated
+	 * by a single space, representing a guess for a gold label: e.g., "before after" 
+	 * @param guessCounts Number of times each guessed label was made for each gold label.
+	 */
 	public static void confusionMatrix(Counter<String> guessCounts) {
-		final String[] labels = { "BEFORE", "AFTER", "SIMULTANEOUS", "INCLUDES", "IS_INCLUDED", "VAGUE" };
-		for( String label2 : labels )
-			System.out.print("\t" + label2.substring(0,Math.min(label2.length(), 6)));
+		for( TLink.Type label2 : labels )
+			System.out.print("\t" + label2.toString().substring(0,Math.min(label2.toString().length(), 6)));
 		System.out.println("\t(guesses)");
 		
-		for( String label1 : labels ) {
-			System.out.print(label1.substring(0, Math.min(label1.length(), 6)) + "\t");
+		for( TLink.Type label1 : labels ) {
+			System.out.print(label1.toString().substring(0, Math.min(label1.toString().length(), 6)) + "\t");
 			
-			for( String label2 : labels ) {
+			for( TLink.Type label2 : labels ) {
 				if( guessCounts.containsKey(label1+" "+label2) )
 					System.out.print((int)guessCounts.getCount(label1+" "+label2) + "\t");
 				else System.out.print("0\t");
