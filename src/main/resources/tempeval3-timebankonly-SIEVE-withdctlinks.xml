@@ -31092,6 +31092,891 @@ prep_to(discuss-14, company-23)</deps>
 	<tlink event1="t149" event2="t2303" relation="VAGUE" closed="false" type="tt" />
 	<tlink event1="ei2370" event2="ei2373" relation="AFTER" closed="false" type="ee" />
   </file>
+  <file name="APW19980308.0201.tml">
+    <entry sid="0" file="APW19980308.0201.tml">
+      <sentence>ISTANBUL , Turkey -LRB- AP -RRB- _ Some 1,500 ethnic Albanians marched Sunday in downtown Istanbul , burning Serbian flags to protest the killings of ethnic Albanians by Serb police in southern Serb Kosovo province .</sentence>
+      <tokens>
+        <t>"
+" "ISTANBUL" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "Turkey" " "</t>
+        <t>" " "(" ""</t>
+        <t>"" "AP" ""</t>
+        <t>"" ")" ""</t>
+        <t>"" "_" " "</t>
+        <t>" " "Some" " "</t>
+        <t>" " "1,500" " "</t>
+        <t>" " "ethnic" " "</t>
+        <t>" " "Albanians" " "</t>
+        <t>" " "marched" " "</t>
+        <t>" " "Sunday" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "downtown" " "</t>
+        <t>" " "Istanbul" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "burning" " "</t>
+        <t>" " "Serbian" " "</t>
+        <t>" " "flags" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "protest" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "killings" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "ethnic" " "</t>
+        <t>" " "Albanians" " "</t>
+        <t>" " "by" " "</t>
+        <t>" " "Serb" " "</t>
+        <t>" " "police" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "southern" " "</t>
+        <t>" " "Serb" " "</t>
+        <t>" " "Kosovo" " "</t>
+        <t>" " "province" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP
+      (NP (NNP ISTANBUL) (, ,) (NNP Turkey))
+      (PRN (-LRB- -LRB-)
+        (NP (NNP AP))
+        (-RRB- -RRB-)))
+    (VP (VBD _)
+      (SBAR
+        (S
+          (NP (DT Some) (CD 1,500) (JJ ethnic) (NNS Albanians))
+          (VP (VBD marched)
+            (NP (NNP Sunday))
+            (PP (IN in)
+              (NP (NN downtown) (NN Istanbul)))
+            (, ,)
+            (S
+              (VP (VBG burning)
+                (S
+                  (NP (NNP Serbian) (NNS flags))
+                  (VP (TO to)
+                    (VP (VB protest)
+                      (NP
+                        (NP (DT the) (NNS killings))
+                        (PP (IN of)
+                          (NP (JJ ethnic) (NNS Albanians))))
+                      (PP (IN by)
+                        (NP (NNP Serb) (NNS police)))
+                      (PP (IN in)
+                        (NP (JJ southern) (NNP Serb) (NNP Kosovo) (NN province))))))))))))
+    (. .)))</parse>
+      <deps>nn(Turkey-3, ISTANBUL-1)
+nsubj(_-7, Turkey-3)
+appos(Turkey-3, AP-5)
+root(ROOT-0, _-7)
+det(Albanians-11, Some-8)
+num(Albanians-11, 1,500-9)
+amod(Albanians-11, ethnic-10)
+nsubj(marched-12, Albanians-11)
+ccomp(_-7, marched-12)
+tmod(marched-12, Sunday-13)
+nn(Istanbul-16, downtown-15)
+prep_in(marched-12, Istanbul-16)
+partmod(marched-12, burning-18)
+xcomp(marched-12, burning-18)
+nn(flags-20, Serbian-19)
+nsubj(protest-22, flags-20)
+aux(protest-22, to-21)
+xcomp(burning-18, protest-22)
+det(killings-24, the-23)
+dobj(protest-22, killings-24)
+amod(Albanians-27, ethnic-26)
+prep_of(killings-24, Albanians-27)
+nn(police-30, Serb-29)
+prep_by(protest-22, police-30)
+amod(province-35, southern-32)
+nn(province-35, Serb-33)
+nn(province-35, Kosovo-34)
+prep_in(protest-22, province-35)</deps>
+      <events>
+        <event id="e2" eiid="ei193" offset="12" string="marched" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e62" eiid="ei194" offset="18" string="burning" tense="PRESPART" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e47" eiid="ei195" offset="22" string="protest" tense="INFINITIVE" aspect="NONE" class="I_STATE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e75" eiid="ei196" offset="24" string="killings" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes>
+        <timex tid="t68" text="Sunday" offset="13" length="1" anchortid="t0" type="DATE" mod="" value="1998-03-08" docFunction="NONE" temporalFunction="true" />
+      </timexes>
+    </entry>
+    <entry sid="1" file="APW19980308.0201.tml">
+      <sentence>The police barred the crowd from reaching the Yugoslavian consulate in downtown Istanbul , but allowed them to demonstrate on nearby streets .</sentence>
+      <tokens>
+        <t>" " "The" " "</t>
+        <t>" " "police" " "</t>
+        <t>" " "barred" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "crowd" " "</t>
+        <t>" " "from" " "</t>
+        <t>" " "reaching" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Yugoslavian" " "</t>
+        <t>" " "consulate" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "downtown" " "</t>
+        <t>" " "Istanbul" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "but" " "</t>
+        <t>" " "allowed" " "</t>
+        <t>" " "them" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "demonstrate" " "</t>
+        <t>" " "on" " "</t>
+        <t>" " "nearby" " "</t>
+        <t>" " "streets" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (DT The) (NN police))
+    (VP
+      (VP (VBD barred)
+        (NP (DT the) (NN crowd))
+        (PP (IN from)
+          (S
+            (VP (VBG reaching)
+              (NP (DT the) (NNP Yugoslavian) (NN consulate))
+              (PP (IN in)
+                (NP (NN downtown) (NN Istanbul)))))))
+      (, ,)
+      (CC but)
+      (VP (VBD allowed)
+        (S
+          (NP (PRP them))
+          (VP (TO to)
+            (VP (VB demonstrate)
+              (PP (IN on)
+                (NP (JJ nearby) (NNS streets))))))))
+    (. .)))</parse>
+      <deps>det(police-2, The-1)
+nsubj(barred-3, police-2)
+nsubj(allowed-16, police-2)
+root(ROOT-0, barred-3)
+det(crowd-5, the-4)
+dobj(barred-3, crowd-5)
+prepc_from(barred-3, reaching-7)
+det(consulate-10, the-8)
+nn(consulate-10, Yugoslavian-9)
+dobj(reaching-7, consulate-10)
+nn(Istanbul-13, downtown-12)
+prep_in(reaching-7, Istanbul-13)
+conj_but(barred-3, allowed-16)
+nsubj(demonstrate-19, them-17)
+aux(demonstrate-19, to-18)
+xcomp(allowed-16, demonstrate-19)
+amod(streets-22, nearby-21)
+prep_on(demonstrate-19, streets-22)</deps>
+      <events>
+        <event id="e76" eiid="ei197" offset="3" string="barred" tense="PAST" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e49" eiid="ei198" offset="7" string="reaching" tense="PRESPART" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e77" eiid="ei199" offset="16" string="allowed" tense="PAST" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e13" eiid="ei200" offset="19" string="demonstrate" tense="INFINITIVE" aspect="NONE" class="STATE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="2" file="APW19980308.0201.tml">
+      <sentence>`` Stop the bloodshed in Kosovo , '' the protesters chanted .</sentence>
+      <tokens>
+        <t>" " "``" ""</t>
+        <t>"" "Stop" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "bloodshed" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "Kosovo" ""</t>
+        <t>"" "," ""</t>
+        <t>"" "''" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "protesters" " "</t>
+        <t>" " "chanted" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S (`` ``)
+    (S
+      (VP (VB Stop)
+        (NP
+          (NP (DT the) (NN bloodshed))
+          (PP (IN in)
+            (NP (NNP Kosovo))))))
+    (, ,) ('' '')
+    (NP (DT the) (NNS protesters))
+    (VP (VBD chanted))
+    (. .)))</parse>
+      <deps>ccomp(chanted-11, Stop-2)
+det(bloodshed-4, the-3)
+dobj(Stop-2, bloodshed-4)
+prep_in(bloodshed-4, Kosovo-6)
+det(protesters-10, the-9)
+nsubj(chanted-11, protesters-10)
+root(ROOT-0, chanted-11)</deps>
+      <events>
+        <event id="e14" eiid="ei201" offset="2" string="Stop" tense="PRESENT" aspect="NONE" class="ASPECTUAL" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e50" eiid="ei202" offset="4" string="bloodshed" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e116" eiid="ei203" offset="11" string="chanted" tense="PAST" aspect="NONE" class="REPORTING" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="3" file="APW19980308.0201.tml">
+      <sentence>Meanwhile in the capital , Ankara , a few hundred ethnic Albanians laid a black wreath at the gate of Yugoslavian embassy .</sentence>
+      <tokens>
+        <t>" " "Meanwhile" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "capital" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "Ankara" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "few" " "</t>
+        <t>" " "hundred" " "</t>
+        <t>" " "ethnic" " "</t>
+        <t>" " "Albanians" " "</t>
+        <t>" " "laid" " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "black" " "</t>
+        <t>" " "wreath" " "</t>
+        <t>" " "at" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "gate" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "Yugoslavian" " "</t>
+        <t>" " "embassy" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (PP
+      (ADVP (RB Meanwhile))
+      (IN in)
+      (NP (DT the) (NN capital)))
+    (, ,)
+    (NP
+      (NP (NNP Ankara))
+      (, ,)
+      (NP
+        (QP (DT a) (JJ few) (CD hundred))
+        (JJ ethnic) (NNS Albanians)))
+    (VP (VBD laid)
+      (NP (DT a) (JJ black) (NN wreath))
+      (PP (IN at)
+        (NP
+          (NP (DT the) (NN gate))
+          (PP (IN of)
+            (NP (JJ Yugoslavian) (NN embassy))))))
+    (. .)))</parse>
+      <deps>advmod(laid-13, Meanwhile-1)
+det(capital-4, the-3)
+prep_in(laid-13, capital-4)
+nsubj(laid-13, Ankara-6)
+quantmod(hundred-10, a-8)
+quantmod(hundred-10, few-9)
+num(Albanians-12, hundred-10)
+amod(Albanians-12, ethnic-11)
+appos(Ankara-6, Albanians-12)
+root(ROOT-0, laid-13)
+det(wreath-16, a-14)
+amod(wreath-16, black-15)
+dobj(laid-13, wreath-16)
+det(gate-19, the-18)
+prep_at(laid-13, gate-19)
+amod(embassy-22, Yugoslavian-21)
+prep_of(gate-19, embassy-22)</deps>
+      <events>
+        <event id="e18" eiid="ei204" offset="13" string="laid" tense="PAST" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="4" file="APW19980308.0201.tml">
+      <sentence>Ethnic Albanians comprise 90 percent of the population in Kosovo , but Serbs maintain control through a large military and police presence .</sentence>
+      <tokens>
+        <t>" " "Ethnic" " "</t>
+        <t>" " "Albanians" " "</t>
+        <t>" " "comprise" " "</t>
+        <t>" " "90" " "</t>
+        <t>" " "percent" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "population" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "Kosovo" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "but" " "</t>
+        <t>" " "Serbs" " "</t>
+        <t>" " "maintain" " "</t>
+        <t>" " "control" " "</t>
+        <t>" " "through" " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "large" " "</t>
+        <t>" " "military" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "police" " "</t>
+        <t>" " "presence" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (S
+      (NP (JJ Ethnic) (NNS Albanians))
+      (VP (VBP comprise)
+        (NP
+          (NP (CD 90) (NN percent))
+          (PP (IN of)
+            (NP
+              (NP (DT the) (NN population))
+              (PP (IN in)
+                (NP (NNP Kosovo))))))))
+    (, ,)
+    (CC but)
+    (S
+      (NP (NNP Serbs))
+      (VP (VBP maintain)
+        (NP (NN control))
+        (PP (IN through)
+          (NP (DT a) (JJ large) (NN military)
+            (CC and)
+            (NN police) (NN presence)))))
+    (. .)))</parse>
+      <deps>amod(Albanians-2, Ethnic-1)
+nsubj(comprise-3, Albanians-2)
+root(ROOT-0, comprise-3)
+num(percent-5, 90-4)
+dobj(comprise-3, percent-5)
+det(population-8, the-7)
+prep_of(percent-5, population-8)
+prep_in(population-8, Kosovo-10)
+nsubj(maintain-14, Serbs-13)
+conj_but(comprise-3, maintain-14)
+dobj(maintain-14, control-15)
+det(military-19, a-17)
+amod(military-19, large-18)
+prep_through(maintain-14, military-19)
+nn(presence-22, police-21)
+prep_through(maintain-14, presence-22)
+conj_and(military-19, presence-22)</deps>
+      <events />
+      <timexes />
+    </entry>
+    <entry sid="5" file="APW19980308.0201.tml">
+      <sentence>Serbian police say they are trying to eliminate the pro-independence Kosovo Liberation Army and restore order .</sentence>
+      <tokens>
+        <t>" " "Serbian" " "</t>
+        <t>" " "police" " "</t>
+        <t>" " "say" " "</t>
+        <t>" " "they" " "</t>
+        <t>" " "are" " "</t>
+        <t>" " "trying" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "eliminate" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "pro-independence" " "</t>
+        <t>" " "Kosovo" " "</t>
+        <t>" " "Liberation" " "</t>
+        <t>" " "Army" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "restore" " "</t>
+        <t>" " "order" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (NN Serbian) (NNS police))
+    (VP (VBP say)
+      (SBAR
+        (S
+          (NP (PRP they))
+          (VP (VBP are)
+            (VP (VBG trying)
+              (S
+                (VP (TO to)
+                  (VP
+                    (VP (VB eliminate)
+                      (NP (DT the) (JJ pro-independence) (NNP Kosovo) (NNP Liberation) (NNP Army)))
+                    (CC and)
+                    (VP (VB restore)
+                      (NP (NN order)))))))))))
+    (. .)))</parse>
+      <deps>nn(police-2, Serbian-1)
+nsubj(say-3, police-2)
+root(ROOT-0, say-3)
+nsubj(trying-6, they-4)
+xsubj(eliminate-8, they-4)
+aux(trying-6, are-5)
+ccomp(say-3, trying-6)
+aux(eliminate-8, to-7)
+xcomp(trying-6, eliminate-8)
+det(Army-13, the-9)
+amod(Army-13, pro-independence-10)
+nn(Army-13, Kosovo-11)
+nn(Army-13, Liberation-12)
+dobj(eliminate-8, Army-13)
+xcomp(trying-6, restore-15)
+conj_and(eliminate-8, restore-15)
+dobj(restore-15, order-16)</deps>
+      <events>
+        <event id="e22" eiid="ei205" offset="3" string="say" tense="PRESENT" aspect="NONE" class="REPORTING" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e23" eiid="ei206" offset="6" string="trying" tense="PRESENT" aspect="PROGRESSIVE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e25" eiid="ei207" offset="8" string="eliminate" tense="INFINITIVE" aspect="NONE" class="ASPECTUAL" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e27" eiid="ei208" offset="15" string="restore" tense="PRESENT" aspect="NONE" class="ASPECTUAL" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="6" file="APW19980308.0201.tml">
+      <sentence>At least 51 people were reported killed in clashes between Serb police and ethnic Albanians in the troubled region in recent days .</sentence>
+      <tokens>
+        <t>" " "At" " "</t>
+        <t>" " "least" " "</t>
+        <t>" " "51" " "</t>
+        <t>" " "people" " "</t>
+        <t>" " "were" " "</t>
+        <t>" " "reported" " "</t>
+        <t>" " "killed" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "clashes" " "</t>
+        <t>" " "between" " "</t>
+        <t>" " "Serb" " "</t>
+        <t>" " "police" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "ethnic" " "</t>
+        <t>" " "Albanians" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "troubled" " "</t>
+        <t>" " "region" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "recent" " "</t>
+        <t>" " "days" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP
+      (QP (IN At) (JJS least) (CD 51))
+      (NNS people))
+    (VP (VBD were)
+      (VP (VBN reported)
+        (S
+          (VP (VBN killed)
+            (PP (IN in)
+              (NP
+                (NP
+                  (NP (NNS clashes))
+                  (PP (IN between)
+                    (NP (NNP Serb) (NNS police))))
+                (CC and)
+                (NP
+                  (NP (JJ ethnic) (NNS Albanians))
+                  (PP (IN in)
+                    (NP
+                      (NP (DT the) (JJ troubled) (NN region))
+                      (PP (IN in)
+                        (NP (JJ recent) (NNS days))))))))))))
+    (. .)))</parse>
+      <deps>quantmod(51-3, At-1)
+mwe(At-1, least-2)
+pobj(At-1, least-2)
+num(people-4, 51-3)
+nsubjpass(reported-6, people-4)
+auxpass(reported-6, were-5)
+root(ROOT-0, reported-6)
+dep(reported-6, killed-7)
+prep_in(killed-7, clashes-9)
+nn(police-12, Serb-11)
+prep_between(clashes-9, police-12)
+amod(Albanians-15, ethnic-14)
+prep_in(killed-7, Albanians-15)
+conj_and(clashes-9, Albanians-15)
+det(region-19, the-17)
+amod(region-19, troubled-18)
+prep_in(Albanians-15, region-19)
+amod(days-22, recent-21)
+prep_in(region-19, days-22)</deps>
+      <events>
+        <event id="e29" eiid="ei210" offset="6" string="reported" tense="PAST" aspect="NONE" class="REPORTING" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e30" eiid="ei211" offset="7" string="killed" tense="PASTPART" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e31" eiid="ei212" offset="9" string="clashes" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes>
+        <timex tid="t71" text="recent days" offset="21" length="2" anchortid="t68" type="DATE" mod="" value="PAST_REF" docFunction="NONE" temporalFunction="true" />
+      </timexes>
+    </entry>
+    <entry sid="7" file="APW19980308.0201.tml">
+      <sentence>Turkey , worried about civil war in Kosovo spilling to the whole Balkans , urged all Balkan states to sign a joint declaration that the Kosovo crisis be solved peacefully and without any change of borders .</sentence>
+      <tokens>
+        <t>" " "Turkey" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "worried" " "</t>
+        <t>" " "about" " "</t>
+        <t>" " "civil" " "</t>
+        <t>" " "war" " "</t>
+        <t>" " "in" " "</t>
+        <t>" " "Kosovo" " "</t>
+        <t>" " "spilling" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "whole" " "</t>
+        <t>" " "Balkans" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "urged" " "</t>
+        <t>" " "all" " "</t>
+        <t>" " "Balkan" " "</t>
+        <t>" " "states" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "sign" " "</t>
+        <t>" " "a" " "</t>
+        <t>" " "joint" " "</t>
+        <t>" " "declaration" " "</t>
+        <t>" " "that" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Kosovo" " "</t>
+        <t>" " "crisis" " "</t>
+        <t>" " "be" " "</t>
+        <t>" " "solved" " "</t>
+        <t>" " "peacefully" " "</t>
+        <t>" " "and" " "</t>
+        <t>" " "without" " "</t>
+        <t>" " "any" " "</t>
+        <t>" " "change" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "borders" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP
+      (NP (NNP Turkey))
+      (, ,)
+      (VP (VBN worried)
+        (PP (IN about)
+          (NP
+            (NP (JJ civil) (NN war))
+            (PP (IN in)
+              (NP (NNP Kosovo) (NNP spilling)))))
+        (PP (TO to)
+          (NP (DT the) (JJ whole) (NNS Balkans))))
+      (, ,))
+    (VP (VBD urged)
+      (NP (DT all) (NNP Balkan) (NNS states))
+      (S
+        (VP (TO to)
+          (VP (VB sign)
+            (NP (DT a) (JJ joint) (NN declaration))
+            (SBAR (IN that)
+              (S
+                (NP (DT the) (NNP Kosovo) (NN crisis))
+                (VP (VB be)
+                  (VP (VBN solved)
+                    (UCP
+                      (ADVP (RB peacefully))
+                      (CC and)
+                      (PP (IN without)
+                        (NP
+                          (NP (DT any) (NN change))
+                          (PP (IN of)
+                            (NP (NNS borders))))))))))))))
+    (. .)))</parse>
+      <deps>nsubj(urged-15, Turkey-1)
+partmod(Turkey-1, worried-3)
+amod(war-6, civil-5)
+prep_about(worried-3, war-6)
+nn(spilling-9, Kosovo-8)
+prep_in(war-6, spilling-9)
+det(Balkans-13, the-11)
+amod(Balkans-13, whole-12)
+prep_to(worried-3, Balkans-13)
+root(ROOT-0, urged-15)
+det(states-18, all-16)
+nn(states-18, Balkan-17)
+dobj(urged-15, states-18)
+aux(sign-20, to-19)
+xcomp(urged-15, sign-20)
+det(declaration-23, a-21)
+amod(declaration-23, joint-22)
+dobj(sign-20, declaration-23)
+mark(solved-29, that-24)
+det(crisis-27, the-25)
+nn(crisis-27, Kosovo-26)
+nsubjpass(solved-29, crisis-27)
+auxpass(solved-29, be-28)
+ccomp(sign-20, solved-29)
+dep(solved-29, peacefully-30)
+dep(solved-29, without-32)
+conj_and(peacefully-30, without-32)
+det(change-34, any-33)
+pobj(without-32, change-34)
+prep_of(change-34, borders-36)</deps>
+      <events>
+        <event id="e34" eiid="ei213" offset="3" string="worried" tense="PASTPART" aspect="NONE" class="I_STATE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e72" eiid="ei215" offset="9" string="spilling" tense="PRESPART" aspect="NONE" class="ASPECTUAL" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e36" eiid="ei216" offset="15" string="urged" tense="PAST" aspect="NONE" class="I_ACTION" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e38" eiid="ei217" offset="20" string="sign" tense="INFINITIVE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e40" eiid="ei219" offset="29" string="solved" tense="PRESENT" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+        <event id="e41" eiid="ei220" offset="34" string="change" tense="NONE" aspect="NONE" class="OCCURRENCE" polarity="POS" modality="" happen="" lowerBoundDuration="" upperBoundDuration="" />
+      </events>
+      <timexes />
+    </entry>
+    <entry sid="8" file="APW19980308.0201.tml">
+      <sentence>Turks feel they have special ties to the whole region , which they ruled for hundreds of years during the Ottoman Empire .</sentence>
+      <tokens>
+        <t>" " "Turks" " "</t>
+        <t>" " "feel" " "</t>
+        <t>" " "they" " "</t>
+        <t>" " "have" " "</t>
+        <t>" " "special" " "</t>
+        <t>" " "ties" " "</t>
+        <t>" " "to" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "whole" " "</t>
+        <t>" " "region" ""</t>
+        <t>"" "," " "</t>
+        <t>" " "which" " "</t>
+        <t>" " "they" " "</t>
+        <t>" " "ruled" " "</t>
+        <t>" " "for" " "</t>
+        <t>" " "hundreds" " "</t>
+        <t>" " "of" " "</t>
+        <t>" " "years" " "</t>
+        <t>" " "during" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "Ottoman" " "</t>
+        <t>" " "Empire" ""</t>
+        <t>"" "." " "</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (NNPS Turks))
+    (VP (VBP feel)
+      (SBAR
+        (S
+          (NP (PRP they))
+          (VP (VBP have)
+            (NP
+              (NP (JJ special) (NNS ties))
+              (PP (TO to)
+                (NP
+                  (NP (DT the) (JJ whole) (NN region))
+                  (, ,)
+                  (SBAR
+                    (WHNP (WDT which))
+                    (S
+                      (NP (PRP they))
+                      (VP (VBD ruled)
+                        (PP (IN for)
+                          (NP
+                            (NP (NNS hundreds))
+                            (PP (IN of)
+                              (NP (NNS years)))))
+                        (PP (IN during)
+                          (NP (DT the) (NNP Ottoman) (NNP Empire)))))))))))))
+    (. .)))</parse>
+      <deps>nsubj(feel-2, Turks-1)
+root(ROOT-0, feel-2)
+nsubj(have-4, they-3)
+ccomp(feel-2, have-4)
+amod(ties-6, special-5)
+dobj(have-4, ties-6)
+det(region-10, the-8)
+amod(region-10, whole-9)
+prep_to(ties-6, region-10)
+dobj(ruled-14, region-10)
+rel(ruled-14, which-12)
+nsubj(ruled-14, they-13)
+rcmod(region-10, ruled-14)
+prep_for(ruled-14, hundreds-16)
+prep_of(hundreds-16, years-18)
+det(Empire-22, the-20)
+nn(Empire-22, Ottoman-21)
+prep_during(ruled-14, Empire-22)</deps>
+      <events />
+      <timexes />
+    </entry>
+    <entry sid="9" file="APW19980308.0201.tml">
+      <sentence>They also share Islam with the ethnic Albanians .</sentence>
+      <tokens>
+        <t>" " "They" " "</t>
+        <t>" " "also" " "</t>
+        <t>" " "share" " "</t>
+        <t>" " "Islam" " "</t>
+        <t>" " "with" " "</t>
+        <t>" " "the" " "</t>
+        <t>" " "ethnic" " "</t>
+        <t>" " "Albanians" ""</t>
+        <t>"" "." "
+"</t>
+      </tokens>
+      <parse>(ROOT
+  (S
+    (NP (PRP They))
+    (ADVP (RB also))
+    (VP (VBP share)
+      (NP
+        (NP (NNP Islam))
+        (PP (IN with)
+          (NP (DT the) (JJ ethnic) (NNS Albanians)))))
+    (. .)))</parse>
+      <deps>nsubj(share-3, They-1)
+advmod(share-3, also-2)
+root(ROOT-0, share-3)
+dobj(share-3, Islam-4)
+det(Albanians-8, the-6)
+amod(Albanians-8, ethnic-7)
+prep_with(Islam-4, Albanians-8)</deps>
+      <events />
+      <timexes />
+    </entry>
+    <timex tid="t0" text="" offset="0" length="1" type="TIME" value="1998-03-08T06:26:00" docFunction="CREATION_TIME" temporalFunction="false" />
+	<tlink event1="ei196" event2="ei197" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei193" event2="ei200" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei198" event2="ei202" relation="IS_INCLUDED" closed="false" type="ee" />
+	<tlink event1="ei199" event2="ei203" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t71" event2="ei217" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei200" event2="ei202" relation="IS_INCLUDED" closed="false" type="ee" />
+	<tlink event1="t71" event2="ei219" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei193" event2="t68" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei194" event2="ei197" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei217" event2="ei220" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei206" event2="ei207" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei197" event2="ei198" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei213" event2="ei215" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei194" event2="ei198" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei205" event2="ei208" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei206" event2="ei208" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t71" event2="ei213" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei210" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei208" event2="ei210" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei211" event2="ei212" relation="IS_INCLUDED" closed="false" type="ee" />
+	<tlink event1="ei211" event2="ei219" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei215" event2="ei220" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei195" event2="ei196" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei216" event2="ei219" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei210" event2="ei216" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t68" event2="ei196" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei211" event2="ei217" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei199" event2="ei201" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei194" event2="ei200" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei198" event2="ei201" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei210" event2="ei220" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t71" event2="ei216" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei202" event2="t0" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei197" event2="ei199" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei197" event2="ei203" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei210" event2="ei219" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei206" event2="ei212" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei202" event2="ei203" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei219" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei196" event2="ei200" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei217" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei194" event2="ei195" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei195" event2="ei197" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei213" event2="ei217" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="t68" event2="ei199" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei200" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei198" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei197" event2="ei202" relation="IS_INCLUDED" closed="false" type="ee" />
+	<tlink event1="ei203" event2="ei204" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei193" event2="ei196" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei207" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei193" event2="ei198" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei212" event2="ei215" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei196" event2="ei199" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei207" event2="ei208" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei193" event2="ei199" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei195" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei216" event2="ei220" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei195" event2="ei200" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei216" event2="ei217" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei194" event2="ei196" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei198" event2="ei199" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei212" event2="ei220" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei193" event2="ei194" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei212" event2="ei217" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei194" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="t71" event2="ei220" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei212" event2="ei213" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei197" event2="ei201" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei208" event2="t71" relation="AFTER" closed="false" type="et" />
+	<tlink event1="t68" event2="ei195" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei210" event2="t71" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei210" event2="ei211" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei207" event2="ei210" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei207" event2="ei212" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t68" event2="t0" relation="SIMULTANEOUS" closed="false" type="tt" />
+	<tlink event1="ei205" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei196" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei198" event2="ei200" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei213" event2="t0" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="t68" event2="ei198" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei208" event2="ei211" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t71" event2="t0" relation="VAGUE" closed="false" type="tt" />
+	<tlink event1="ei205" event2="ei206" relation="IS_INCLUDED" closed="false" type="ee" />
+	<tlink event1="ei194" event2="ei199" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei206" event2="t0" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei217" event2="ei219" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei205" event2="ei207" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei210" event2="ei212" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei212" event2="t71" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei198" event2="ei203" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei199" event2="ei202" relation="IS_INCLUDED" closed="false" type="ee" />
+	<tlink event1="t68" event2="ei197" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei206" event2="ei211" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei215" event2="ei216" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei211" event2="ei213" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei211" event2="ei215" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei213" event2="ei219" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei208" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei205" event2="ei211" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei195" event2="ei199" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei203" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei215" event2="ei219" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei199" event2="ei200" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei210" event2="ei217" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei215" event2="ei217" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei206" event2="ei210" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei215" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei211" event2="ei220" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei211" event2="ei216" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei207" event2="ei211" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei193" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei199" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei201" event2="ei202" relation="IS_INCLUDED" closed="false" type="ee" />
+	<tlink event1="ei210" event2="ei213" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei200" event2="ei203" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei195" event2="ei198" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei206" event2="t71" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei220" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei193" event2="ei195" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei219" event2="ei220" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei204" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei197" event2="t0" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei205" event2="ei212" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei202" event2="ei204" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei205" event2="t71" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei201" event2="t0" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei216" event2="t0" relation="VAGUE" closed="false" type="et" />
+	<tlink event1="ei205" event2="ei210" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei213" event2="ei220" relation="VAGUE" closed="false" type="ee" />
+	<tlink event1="ei213" event2="ei216" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei212" event2="ei216" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei210" event2="ei215" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei211" event2="t71" relation="IS_INCLUDED" closed="false" type="et" />
+	<tlink event1="ei212" event2="ei219" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei193" event2="ei197" relation="INCLUDES" closed="false" type="ee" />
+	<tlink event1="ei207" event2="t71" relation="AFTER" closed="false" type="et" />
+	<tlink event1="ei196" event2="ei198" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="ei201" event2="ei203" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t68" event2="ei200" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei208" event2="ei212" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="t68" event2="ei194" relation="INCLUDES" closed="false" type="et" />
+	<tlink event1="ei200" event2="ei201" relation="BEFORE" closed="false" type="ee" />
+	<tlink event1="t71" event2="ei215" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei201" event2="ei204" relation="AFTER" closed="false" type="ee" />
+	<tlink event1="ei211" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei212" event2="t0" relation="BEFORE" closed="false" type="et" />
+	<tlink event1="ei197" event2="ei200" relation="VAGUE" closed="false" type="ee" />
+  </file>
   <file name="APW19980418.0210.tml">
     <entry sid="0" file="APW19980418.0210.tml">
       <sentence>BUDAPEST , Hungary -LRB- AP -RRB- _ Tired of being sidelined , Hungarian astronaut Bertalan Farkas is leaving for the United States to start a new career , he said Saturday .</sentence>
