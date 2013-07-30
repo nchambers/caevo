@@ -87,11 +87,11 @@ public class Main {
 		try {
 			TimeSieveProperties.load();
 			// Look for a given pre-processed InfoFile
-			infopath = TimeSieveProperties.getString("info", null);
+			infopath = TimeSieveProperties.getString("Main.info", null);
 			// Overwrite these globals if they are in the properties file.
-			debug = TimeSieveProperties.getBoolean("debug", debug);
-			useClosure = TimeSieveProperties.getBoolean("closure", useClosure);
-			dataset = DatasetType.valueOf(TimeSieveProperties.getString("dataset", dataset.toString()).toUpperCase());
+			debug = TimeSieveProperties.getBoolean("Main.debug", debug);
+			useClosure = TimeSieveProperties.getBoolean("Main.closure", useClosure);
+			dataset = DatasetType.valueOf(TimeSieveProperties.getString("Main.dataset", dataset.toString()).toUpperCase());
 		} catch (IOException e) { e.printStackTrace(); }
         
 		// -info on the command line?
