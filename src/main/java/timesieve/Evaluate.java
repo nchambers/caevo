@@ -217,8 +217,10 @@ public class Evaluate {
 	 * The goldDocs and guessedDocs should cover the same docs.
 	 * @param goldDocs Gold tlinks in every document.
 	 * @param guessedDocs The guessed tlinks in every document.
+	 * @param sieveNames The list of sieve names, in order that they were applied to each document.
+	 * @param sieveStats A map from sieve names to their SieveStats objects.
 	 */
-	public static void evaluate(SieveDocuments goldDocs, SieveDocuments guessedDocs, Map<String,SieveStats> sieveStats) {
+	public static void evaluate(SieveDocuments goldDocs, SieveDocuments guessedDocs, String[] sieveNames, Map<String,SieveStats> sieveStats) {
 		Counter<String> guessCounts = new ClassicCounter<String>();
 		Counter<TLink.Type> goldLabelCounts = new ClassicCounter<TLink.Type>();
 		int numCorrect = 0;
@@ -296,6 +298,14 @@ public class Evaluate {
 			}
 		}
 		
+		// Print performance for each individual sieve.
+		System.out.println("\nBrief Sieve Stats");
+		for( String sieveName : sieveNames )
+			sieveStats.get(sieveName).printOneLineStats();
+		System.out.println("\nDetailed Sieve Stats");
+		for( String sieveName : sieveNames )
+			sieveStats.get(sieveName).printStats();
+
 		// Calculate precision and output the sorted sieves.
 		int totalGuessed = numCorrect + numIncorrect;
 		int totalGold = numCorrect + numIncorrect + numMissed;
@@ -304,12 +314,6 @@ public class Evaluate {
 		double f1 = (precision+recall > 0 ? 2.0 * precision * recall / (precision+recall) : 0.0);
 		int totalGuessedNonVague = numCorrect + numIncorrectNonVague;
 		double precisionNonVague = (totalGuessedNonVague > 0 ? (double)numCorrect / (double)totalGuessedNonVague : 0.0);
-
-//		System.out.println("numCorrect = " + numCorrect + " numIncorrect = " + numIncorrect + " numMissed = " + numMissed);
-
-		// Print performance for each individual sieve.
-		for( SieveStats ss : sieveStats.values() )
-			ss.printStats();
 
 		// Print full system performance.
 		System.out.println("\n*********************************************************************");
