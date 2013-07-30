@@ -109,6 +109,16 @@ public class SieveStats {
 		return count;
 	}
 
+	public void printOneLineStats() {
+		System.out.print(sieveName + "\t");
+		if( sieveName.length() < 16 ) System.out.print("\t");
+		if( sieveName.length() < 8 ) System.out.print("\t");
+		// Overall precision.
+		double totalGuessed = correctLinks.size() + incorrectLinks.size();
+		double precision = correctLinks.size() / totalGuessed;
+		System.out.printf("p = %.2f\t(%d of %d)\n", precision, (int)correctLinks.size(), (int)totalGuessed);
+	}
+	
 	public void printStats() {
 		System.out.println("=======================================");
 		System.out.println("-------- " + sieveName + " --------");

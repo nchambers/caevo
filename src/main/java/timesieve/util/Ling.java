@@ -385,22 +385,27 @@ public class Ling {
    * @return True if the indexed word has a known definite determiner.
    *         False otherwise, but this doesn't necessarily mean it's not definite.
    */
-  public static boolean isDefinite(Vector<TypedDependency> deps, int index) {
-    //    System.out.println("isdef top with " + index);
+  public static boolean isDefinite(Collection<TypedDependency> deps, int index) {
+  	String det = getDeterminer(deps, index);
+  	if( det.startsWith("th") )
+  		return true;
+  	else
+  		return false;
+  }
+
+  /**
+   * Given a token index, return the determiner (e.g., "the") for the token, if one exists.
+   * @param deps All dependencies in the sentence.
+   * @param index The index of the token
+   * @return The String determiner, or null if none
+   */
+  public static String getDeterminer(Collection<TypedDependency> deps, int index) {
     for( TypedDependency dep : deps ) {
-      int govIndex = dep.gov().index();
-      if( govIndex == index ) {
-        //  System.out.println("isdef dep match: " + dep);
-        if( dep.reln().toString().equals("det") ) {
-          //    System.out.println("isdef " + dep + " index=" + index);
-          String determiner = dep.dep().toString();
-          // the, that, this, these, those, them
-          if( determiner.startsWith("th") )
-            return true;
-        }
-      }
+      if( dep.gov().index() == index )
+        if( dep.reln().toString().equals("det") )
+        	return dep.dep().value();
     }
-    return false;
+    return null;
   }
 
   public static boolean isProper(List<NERSpan> ners, int index) {

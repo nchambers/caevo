@@ -9,15 +9,12 @@ RepCreationDay
 MLEventTimeSameSent
 MLEventEventDominates
 MLEventEventSameSent  
-
-EventCreationTimeSieve // Drops a bunch on Dev, but still useful.
-//MLEventDCT  // too many before/after when it should do vague
+MLEventDCT
 
 AllVagueSieve
 
 
-
-
+//EventCreationTimeSieve // Drops a bunch on Dev
 
 //MLVagueSieve // Does pretty well on Dev, but doesn't add anything.
 //MLEventTimeDiffSent    // about the same as All Vague performance. Better without.

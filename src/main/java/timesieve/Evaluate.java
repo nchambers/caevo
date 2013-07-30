@@ -7,16 +7,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import edu.stanford.nlp.stats.ClassicCounter;
-import edu.stanford.nlp.stats.Counter;
-
-import timesieve.sieves.Sieve;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
 import timesieve.util.SieveStats;
-import timesieve.util.Util;
+import edu.stanford.nlp.stats.ClassicCounter;
+import edu.stanford.nlp.stats.Counter;
 
 /**
  * Evaluation functions for TLink classification.
@@ -24,7 +21,9 @@ import timesieve.util.Util;
  * @author chambers
  */
 public class Evaluate {
-
+	public static final TLink.Type[] labels = { TLink.Type.BEFORE, TLink.Type.AFTER, TLink.Type.SIMULTANEOUS,
+		TLink.Type.INCLUDES, TLink.Type.IS_INCLUDED, TLink.Type.VAGUE };
+	
 	public static final String[] devDocs = { 
 		"APW19980227.0487.tml", 
 		"CNN19980223.1130.0960.tml", 
@@ -215,14 +214,18 @@ public class Evaluate {
 	 * The goldDocs and guessedDocs should cover the same docs.
 	 * @param goldDocs Gold tlinks in every document.
 	 * @param guessedDocs The guessed tlinks in every document.
+	 * @param sieveNames The list of sieve names, in order that they were applied to each document.
+	 * @param sieveStats A map from sieve names to their SieveStats objects.
 	 */
-	public static void evaluate(SieveDocuments goldDocs, SieveDocuments guessedDocs, Map<String,SieveStats> sieveStats) {
+	public static void evaluate(SieveDocuments goldDocs, SieveDocuments guessedDocs, String[] sieveNames, Map<String,SieveStats> sieveStats) {
 		Counter<String> guessCounts = new ClassicCounter<String>();
 		Counter<TLink.Type> goldLabelCounts = new ClassicCounter<TLink.Type>();
 		int numCorrect = 0;
+		int numCorrectNonVague = 0;
 		int numIncorrect = 0;
 		int numIncorrectNonVague = 0;
 		int numMissed = 0;
+		int numMissedNonVague = 0;
 
 		if (goldDocs == null)
 			return;
@@ -262,6 +265,9 @@ public class Evaluate {
 				// Guessed link is correct!
 				if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
 					numCorrect++;
+					if (!pp.getRelation().equals(TLink.Type.VAGUE)) {
+						numCorrectNonVague++;
+					}
 					if( pp.getOrigin() != null ) {
 						sieveStats.get(pp.getOrigin()).addCorrect(pp);
 					}
@@ -271,10 +277,10 @@ public class Evaluate {
 				// Only mark relations wrong if there's a conflicting human annotation.
 				// (if there's no human annotation, we don't know if it's right or wrong)
 				else if (goldLink != null) {
+					numIncorrect++;
 					if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
 						numIncorrectNonVague++;
 					}
-					numIncorrect++;
 					if( pp.getOrigin() != null ) sieveStats.get(pp.getOrigin()).addIncorrect(pp, goldLink);
 					else System.out.println("EVALUATE: unknown link origin: " + pp);
 				}
@@ -289,38 +295,55 @@ public class Evaluate {
 			for( TLink gold : goldLinks ) {
 				if( !seenGoldLinks.contains(gold.getId1() + "," + gold.getId2()) ) {
 					numMissed++;
+					if (!gold.getRelation().equals(TLink.Type.VAGUE)) {
+						numMissedNonVague++;
+					}
 //					System.out.println("Unlabeled gold: " + guessedDoc.getDocname() + " " + gold);
 				}
 			}
 		}
 		
+		// Print performance for each individual sieve.
+		System.out.println("\nBrief Sieve Stats");
+		for( String sieveName : sieveNames )
+			sieveStats.get(sieveName).printOneLineStats();
+		System.out.println("\nDetailed Sieve Stats");
+		for( String sieveName : sieveNames )
+			sieveStats.get(sieveName).printStats();
+
 		// Calculate precision and output the sorted sieves.
 		int totalGuessed = numCorrect + numIncorrect;
 		int totalGold = numCorrect + numIncorrect + numMissed;
 		double precision = (totalGuessed > 0 ? (double)numCorrect / totalGuessed : 0.0);
 		double recall = (totalGold > 0 ? (double)numCorrect / totalGold : 0.0);
 		double f1 = (precision+recall > 0 ? 2.0 * precision * recall / (precision+recall) : 0.0);
-		int totalGuessedNonVague = numCorrect + numIncorrectNonVague;
-		double precisionNonVague = (totalGuessedNonVague > 0 ? (double)numCorrect / (double)totalGuessedNonVague : 0.0);
-
-//		System.out.println("numCorrect = " + numCorrect + " numIncorrect = " + numIncorrect + " numMissed = " + numMissed);
-
-		// Print performance for each individual sieve.
-		for( SieveStats ss : sieveStats.values() )
-			ss.printStats();
+		int totalGuessedNonVague = numCorrectNonVague + numIncorrectNonVague;
+		int totalGoldNonVague = numCorrectNonVague + numIncorrectNonVague + numMissedNonVague;
+		double precisionNonVague = (totalGuessedNonVague > 0 ? (double)numCorrectNonVague / (double)totalGuessedNonVague : 0.0);
+		double recallNonVague = (totalGuessedNonVague > 0 ? (double)numCorrectNonVague / (double)totalGoldNonVague : 0.0);
+		double f1NonVague = (precisionNonVague + recallNonVague > 0 ? 2.0 * precisionNonVague * recallNonVague / (precisionNonVague + recallNonVague) : 0.0);
 
 		// Print full system performance.
 		System.out.println("\n*********************************************************************");
 		System.out.println("************************** FULL RESULTS *****************************");
 		System.out.println("*********************************************************************");
-		System.out.printf("precision\t= %.3f\t %d of %d\nrecall\t\t= %.3f\t %d of %d\nF1\t\t= %.3f\n",
+		System.out.printf(
+				"precision\t= %.3f\t %d of %d\n" +
+				"recall   \t= %.3f\t %d of %d\n" +
+				"F1       \t= %.3f\n" +
+				"precision (non-VAGUE)\t= %.3f\t %d of %d\n" +
+				"recall (non-VAGUE)   \t= %.3f\t %d of %d\n" +
+				"F1 (non-VAGUE)       \t= %.3f\n",
 				precision, numCorrect, totalGuessed,
 				recall, numCorrect, totalGold,
-				f1);
-		System.out.printf("precision (non vague)= %.3f\t %d of %d\n", precisionNonVague, numCorrect, totalGuessedNonVague);
+				f1,
+				precisionNonVague, numCorrectNonVague, totalGuessedNonVague,
+				recallNonVague, numCorrectNonVague, totalGoldNonVague,
+				f1NonVague);
 		System.out.println();
 
-		printBaseline(goldLabelCounts);			
+		printBaseline(goldLabelCounts);
+		printDatasetStats(goldLabelCounts);
 		confusionMatrix(guessCounts);
 		System.out.println("*********************************************************************\n");
 	}
@@ -341,17 +364,34 @@ public class Evaluate {
 		}
 		System.out.printf("Local Baseline (%s): precision = recall = F1 = %.3f\n", best, (bestc/total));		
 	}
-	
+
+	/**
+	 * Print how many times each label is in the counts list.
+	 */
+	public static void printDatasetStats(Counter<TLink.Type> labelCounts) {
+		System.out.println("GOLD LABEL COUNTS (out of " + (int)labelCounts.totalCount() + ")");
+		for( TLink.Type label : labels ) {
+			int numtabs = (label.toString().length() > 7 ? 1 : 2);
+			System.out.print(label + "\t");
+			if( numtabs == 2 ) System.out.print("\t");
+			System.out.printf("%d\t%.0f%%\n", (int)labelCounts.getCount(label), (100.0*labelCounts.getCount(label)/labelCounts.totalCount()));
+		}
+	}
+
+	/**
+	 * Prin the confusion matrix for the 6 label types. Each String key should be a pair separated
+	 * by a single space, representing a guess for a gold label: e.g., "before after" 
+	 * @param guessCounts Number of times each guessed label was made for each gold label.
+	 */
 	public static void confusionMatrix(Counter<String> guessCounts) {
-		final String[] labels = { "BEFORE", "AFTER", "SIMULTANEOUS", "INCLUDES", "IS_INCLUDED", "VAGUE" };
-		for( String label2 : labels )
-			System.out.print("\t" + label2.substring(0,Math.min(label2.length(), 6)));
+		for( TLink.Type label2 : labels )
+			System.out.print("\t" + label2.toString().substring(0,Math.min(label2.toString().length(), 6)));
 		System.out.println("\t(guesses)");
 		
-		for( String label1 : labels ) {
-			System.out.print(label1.substring(0, Math.min(label1.length(), 6)) + "\t");
+		for( TLink.Type label1 : labels ) {
+			System.out.print(label1.toString().substring(0, Math.min(label1.toString().length(), 6)) + "\t");
 			
-			for( String label2 : labels ) {
+			for( TLink.Type label2 : labels ) {
 				if( guessCounts.containsKey(label1+" "+label2) )
 					System.out.print((int)guessCounts.getCount(label1+" "+label2) + "\t");
 				else System.out.print("0\t");
