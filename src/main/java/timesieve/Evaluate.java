@@ -7,16 +7,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import edu.stanford.nlp.stats.ClassicCounter;
-import edu.stanford.nlp.stats.Counter;
-
-import timesieve.sieves.Sieve;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
 import timesieve.util.SieveStats;
-import timesieve.util.Util;
+import edu.stanford.nlp.stats.ClassicCounter;
+import edu.stanford.nlp.stats.Counter;
 
 /**
  * Evaluation functions for TLink classification.
@@ -224,9 +221,11 @@ public class Evaluate {
 		Counter<String> guessCounts = new ClassicCounter<String>();
 		Counter<TLink.Type> goldLabelCounts = new ClassicCounter<TLink.Type>();
 		int numCorrect = 0;
+		int numCorrectNonVague = 0;
 		int numIncorrect = 0;
 		int numIncorrectNonVague = 0;
 		int numMissed = 0;
+		int numMissedNonVague = 0;
 
 		if (goldDocs == null)
 			return;
@@ -266,6 +265,9 @@ public class Evaluate {
 				// Guessed link is correct!
 				if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
 					numCorrect++;
+					if (!pp.getRelation().equals(TLink.Type.VAGUE)) {
+						numCorrectNonVague++;
+					}
 					if( pp.getOrigin() != null ) {
 						sieveStats.get(pp.getOrigin()).addCorrect(pp);
 					}
@@ -275,10 +277,10 @@ public class Evaluate {
 				// Only mark relations wrong if there's a conflicting human annotation.
 				// (if there's no human annotation, we don't know if it's right or wrong)
 				else if (goldLink != null) {
+					numIncorrect++;
 					if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
 						numIncorrectNonVague++;
 					}
-					numIncorrect++;
 					if( pp.getOrigin() != null ) sieveStats.get(pp.getOrigin()).addIncorrect(pp, goldLink);
 					else System.out.println("EVALUATE: unknown link origin: " + pp);
 				}
@@ -293,6 +295,9 @@ public class Evaluate {
 			for( TLink gold : goldLinks ) {
 				if( !seenGoldLinks.contains(gold.getId1() + "," + gold.getId2()) ) {
 					numMissed++;
+					if (!gold.getRelation().equals(TLink.Type.VAGUE)) {
+						numMissedNonVague++;
+					}
 //					System.out.println("Unlabeled gold: " + guessedDoc.getDocname() + " " + gold);
 				}
 			}
@@ -312,18 +317,29 @@ public class Evaluate {
 		double precision = (totalGuessed > 0 ? (double)numCorrect / totalGuessed : 0.0);
 		double recall = (totalGold > 0 ? (double)numCorrect / totalGold : 0.0);
 		double f1 = (precision+recall > 0 ? 2.0 * precision * recall / (precision+recall) : 0.0);
-		int totalGuessedNonVague = numCorrect + numIncorrectNonVague;
-		double precisionNonVague = (totalGuessedNonVague > 0 ? (double)numCorrect / (double)totalGuessedNonVague : 0.0);
+		int totalGuessedNonVague = numCorrectNonVague + numIncorrectNonVague;
+		int totalGoldNonVague = numCorrectNonVague + numIncorrectNonVague + numMissedNonVague;
+		double precisionNonVague = (totalGuessedNonVague > 0 ? (double)numCorrectNonVague / (double)totalGuessedNonVague : 0.0);
+		double recallNonVague = (totalGuessedNonVague > 0 ? (double)numCorrectNonVague / (double)totalGoldNonVague : 0.0);
+		double f1NonVague = (precisionNonVague + recallNonVague > 0 ? 2.0 * precisionNonVague * recallNonVague / (precisionNonVague + recallNonVague) : 0.0);
 
 		// Print full system performance.
 		System.out.println("\n*********************************************************************");
 		System.out.println("************************** FULL RESULTS *****************************");
 		System.out.println("*********************************************************************");
-		System.out.printf("precision\t= %.3f\t %d of %d\nrecall\t\t= %.3f\t %d of %d\nF1\t\t= %.3f\n",
+		System.out.printf(
+				"precision\t= %.3f\t %d of %d\n" +
+				"recall   \t= %.3f\t %d of %d\n" +
+				"F1       \t= %.3f\n" +
+				"precision (non-VAGUE)\t= %.3f\t %d of %d\n" +
+				"recall (non-VAGUE)   \t= %.3f\t %d of %d\n" +
+				"F1 (non-VAGUE)       \t= %.3f\n",
 				precision, numCorrect, totalGuessed,
 				recall, numCorrect, totalGold,
-				f1);
-		System.out.printf("precision (non vague)= %.3f\t %d of %d\n", precisionNonVague, numCorrect, totalGuessedNonVague);
+				f1,
+				precisionNonVague, numCorrectNonVague, totalGuessedNonVague,
+				recallNonVague, numCorrectNonVague, totalGoldNonVague,
+				f1NonVague);
 		System.out.println();
 
 		printBaseline(goldLabelCounts);
