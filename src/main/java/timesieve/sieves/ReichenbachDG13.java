@@ -2,6 +2,8 @@ package timesieve.sieves;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -17,109 +19,26 @@ import timesieve.TemporalContext;
 import timesieve.Timex;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
+import timesieve.tlink.TLink.Type;
+import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.TreeOperator;
 import timesieve.util.TimebankUtil;
 
 /**
- *SUMMARY:
- *This sieve labels pairs of verb events based on a mapping derived
- *from Reichanbach's theory of tense/aspect. The mapping is adapted from
- *Derczynski and Gaizauskas (D&G 2013).
- *
- *PARAMETERS:
- *sameTense - boolean; enforces D&G's "S/R" constraint; essentially,
- *					only pairs of verbs with the same tense will be considered.
- *sentWindow - int; only allow events that are within this many sentences of one another
- *simplifyPast, simplifyPresent, simplifyAspect - boolean; if false, don't apply
- *the relevant part of the normalization procedure as suggested in D&G13
- *(see function simplifyTense and simplifyAspect)
- *
- *SameSentence/SameTense			p=0.65	17 of 26
- *SameOrAdjSent/SameTense			p=0.58	47 of 81
- *SameSentence/AnyTense			  p=0.57	47 of 82
- *SameOrAdjSent/AnyTense			p=0.53	142 of 270
- *
- *--> "Simplify Past" = false
- *SameSentence/SameTense			p=0.65	17 of 26
- *SameOrAdjSent/SameTense			p=0.58	47 of 81
- *SameSentence/AnyTense				p=0.62	46 of 74
- *SameOrAdjSent/AnyTense			p=0.55	139 of 252
- *
- *--> "Simplify Present" = false
- *SameSentence/SameTense			p=0.65	17 of 26
- *SameOrAdjSent/SameTense			p=0.58	47 of 81
- *SameSentence/AnyTense				p=0.63	45 of 71
- *SameOrAdjSent/AnyTense			p=0.56	137 of 243
- *
- *--> "Simplify Aspect" = false
- *SameSentence/SameTense			p=0.65	17 of 26
- *SameOrAdjSent/SameTense			p=0.58	47 of 81
- *SameSentence/AnyTense			p=0.57	47 of 82
- *SameOrAdjSent/AnyTense			p=0.52	139 of 265
- *
- *--> "Simplify Present" = false; "Simplify Past" = false
- *SameSentence/SameTense			p=0.65	17 of 26
- *SameSentence/AnyTense	 p=0.70	44  of 63
- *SameOrAdjSent/AnyTense p=0.60	134 of 223
- *
- *
- *After adding the pseudoTense function that puts words that govern
- *a modal word in the future, new results:
- *07/23/2013
- *train:
- *p=0.59	192 of 326	Non-VAGUE:	p=0.91	192 of 212
- *dev:
- *p=0.63	20 of 32	Non-VAGUE:	p=0.80	20 of 25
- *
- *If we don't use pseudoTense across sentences:
- *p=0.62	148 of 240	Non-VAGUE:	p=0.89	148 of 166
- *p=0.69	20 of 29	Non-VAGUE:	p=0.87	20 of 23
- *
- *DETAILS:
- *
- * D&G2013 report the percentage of TLINKs in timebank for which the following
- * criteria hold:
- * 1) The TLINK links two events that are Verbs
- * 2) The disjunction of allen relations (each of which is equivalent to a 
- * Freksa (1992) semi-interval) associated with a given pair of the form
- * < <event1.tense, event1.aspect>, <event2.tense, event2.aspect> >
- * contains the interval relation annotated in the TLINK's relType field.
- * 3) The two events are in the same "temporal context"
- *
- *A temporal context is a list of criteria in terms of the properties of
- *two or more events based on which it is inferred that the events share the same
- *reference time.
- *
- *D&G2013 report results for 5 methods of determining temporal context based on two parameters:
- *
- *Method0:
- *baseline - any two events are assumed to be in the same temporal context
- *
- *Other methods based on these parameters
- *   Sentence window: 
- *   		value 1: Same sentence - the two events in the same sentence share their temporal context
- *   		value 2:Same/adjacent sentence - two events within one sentence of one another share their
- *	 Same tense - the two events have the same tense (the idea is that the have the same
- *                relative ordering of their R(eference) and S(peech) times.
- *      value 1: true
- *      value 2: false 
- * 
- * Results can be found in D&G table 6
- * The percentage of TLINKs for each setting for which the mapping yields a set of
- * possible TLINK relTypes (interval relations) that contains the  relType in the
- * gold standard is reported (1. including cases where the mapping is trivial; 2. excluding
- * such cases; a case is trivial if the mapping yields a disjunction of all possible relTypes)
- * 
- * In this implementation, the four non-baseline methods can be used for determining
- * whether events share their temporal context with the sentWindow and sameTense
- * parameters.
+ * update to ReichenbachDG13 that uses "temporal context" mapping; to be merged...
+ * TODO: handle comparison across different temporal contexts; as of now there is a probelm
+ * using methods used to compare timexes (e.g. e1ContextTimex.before(e2ContextTimex)) below)
  * 
  * @author cassidy
  */
 public class ReichenbachDG13 implements Sieve {
-	public boolean debug = false;
+	private static final boolean analysis = true;
+	public boolean debug = true;
 	private int sentWindow = 0;
+	private boolean sameSentence = true;
+	private String contextType = "naive";
+	private String contextCompare = "none";
 	private boolean sameTense = false;
 	private boolean simplifyPast = true;
 	private boolean simplifyPresent = true;
@@ -132,7 +51,10 @@ public class ReichenbachDG13 implements Sieve {
 		// Get property values from the config file
 			try {
 				sentWindow = TimeSieveProperties.getInt("ReichenbachDG13.sentWindow", 0);
+				contextType = TimeSieveProperties.getString("ReichenbachDG13.contextType", "naive"); // naive, temporalDep, closestTimexPath
+				contextCompare = TimeSieveProperties.getString("ReichenbachDG13.contextCompare", "none"); // equals, equalsValue, all
 				sameTense = TimeSieveProperties.getBoolean("ReichenbachDG13.sameTense", false);
+				sameSentence = TimeSieveProperties.getBoolean("ReichenbachDG13.sameSentence", false);
 				simplifyPast = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyPast", true);
 				simplifyPresent = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyPresent", true);
 				simplifyAspect = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyAspect", true);
@@ -147,92 +69,344 @@ public class ReichenbachDG13 implements Sieve {
 		// proposed will hold all TLinks proposed by the sieve
 		List<TLink> proposed = new ArrayList<TLink>();
 		
-		// get all events by sentence
-		List<List<TextEvent>> allEvents = doc.getEventsBySentence();
-		
-		// we need all trees in order to get pos tags
+//		// get all events by sentence
+//		List<List<TextEvent>> eventsBySent = doc.getEventsBySentence();
+//		List<TextEvent> allEvents = doc.getEvents();
+//		// we need all trees in order to get pos tags
 		List<Tree> trees = doc.getAllParseTrees();
+//		
+//		// we need the sentences and td's to pass to the "pseudoTense" util function
 		
-		// we need the sentences and td's to pass to the "pseudoTense" util function
 		List<SieveSentence> sents = doc.getSentences();
+
 		
-		// for each event, compare is with all events in range, in accordance
-		// with sentWindow.
-		int numSents = allEvents.size();
-		// iterate over each sentence
-		for (int sid = 0; sid < numSents; sid ++) {
-			// iterate over events in the sent that corresponds with sid
-			int numEvents = allEvents.get(sid).size();
-			for (int i = 0; i < numEvents; i++) {
-				// get the event in the list at index i
-				TextEvent e1 = allEvents.get(sid).get(i);
-				// iterate over remaining events in the sentence and try to
-				// apply adapted D&G2013 mapping (via getLabel)
-				for (int j = i + 1; j < numEvents; j++) {
-					TextEvent e2 = allEvents.get(sid).get(j);
-					TLink.Type label = getLabel(e1, e2, sents.get(sid), sents.get(sid), trees);
-					// if the label is null, the mapping couldn't be applied.
-					// otherwise, add (e1, e2, label) to proposed.
-					if (label == null) continue;
-					addPair(e1, e2, label, proposed, doc);
-				}
-				// iterate over other events in subsequent sentences in accordance
-				// with sentWindow.
-				// Note that if sentWindow == 0, the loop will never start since
-				// sid2 <= sid + sentWindow will never be satisfied
-				for (int sid2 = sid + 1; 
-						sid2 <= sid + sentWindow && sid2 < numSents; sid2++) {
-					// iterate over each event in a given window sentence
-					int numEvents2 = allEvents.get(sid2).size();
-					// compare e1 with all events in the sentence with id sid2
-					for (int k = 0; k < numEvents2; k++) {
-						// label (e1, e2, label) only if label is not null, as in above
-						TextEvent e2 = allEvents.get(sid2).get(k);
-						TLink.Type label = getLabel(e1, e2, sents.get(sid), sents.get(sid2), trees);
-						if (label == null) continue;
-						addPair(e1, e2, label, proposed, doc);
+		// Get all event by sentence
+		List<List<TextEvent>> eventsBySentId = doc.getEventsBySentence();
+		// Get pairs of events to be classified (based on parameter )
+		
+		// Get document creation day timex
+		Timex dct = getDct(doc);
+		// Build temporal context mapping - each event maps to a temporal context
+		HashMap<TextEvent, ArrayList<Timex>> eventToContext = null;
+		if (contextType.equals("temporalDep")) {
+			eventToContext = getEventGovernsTimexMapping(doc, dct, eventsBySentId);
+		}
+		else if (contextType.equals("naive")) {
+			eventToContext = getNaiveContextMapping(dct, eventsBySentId);
+		}
+		else if (contextType.equals("closestPathTimex")) {
+			eventToContext = getClosestPathTimexMapping(doc, dct, eventsBySentId);
+		}
+
+		// Get event pair list based on sentWindow
+		List<Pair<TextEvent, TextEvent>> eventPairs = getPairs(doc, eventsBySentId);
+		
+		for (Pair<TextEvent, TextEvent> eventPair : eventPairs) {
+			if (compareContexts(eventPair, eventToContext)) {
+				TextEvent e1 = eventPair.first();
+				TextEvent e2 = eventPair.second();
+				SieveSentence sent1 = sents.get(e1.getSid());
+				SieveSentence sent2 = sents.get(e2.getSid());
+				TLink.Type tlink = getLabel(e1, e2, sent1, sent2, trees, eventToContext);
+				addPair(e1, e2, tlink, proposed, doc);
+			}
+		}
+		
+		if (this.analysis == true) {
+			if (true) {//doc.getDocname().equals("APW19980219.0476.tml")
+				// tlinks only contain event ids, so we need mapping from event id to TextEvent
+				HashMap<String, TextEvent> idToEvent = new HashMap<String, TextEvent>();
+				for (int sid = 0; sid < eventsBySentId.size(); sid++) {
+					for (TextEvent event : eventsBySentId.get(sid)) {
+						idToEvent.put(event.getEiid(), event);
+						idToEvent.put(event.getId(), event);
 					}
+				}
+				for (TLink tlink : proposed) {
+					TextEvent e1 = idToEvent.get(tlink.getId1());
+					TextEvent e2 = idToEvent.get(tlink.getId2());
+					System.out.printf("\ndoc:%s\nTLINK: %s(%s; t:%s  a:%s  c:%s) %s %s(%s; t:%s  a:%s  c:%s)\nSentence1: %s\nSentence2: %s\n", doc.getDocname(),
+														e1.getString(), e1.getId(), e1.getTense(), e1.getAspect(), eventToContext.get(e1).get(0).getValue(), tlink.getRelation().name(), 
+														e2.getString(), e2.getId(), e2.getTense(), e2.getAspect(), eventToContext.get(e2).get(0).getValue(), 
+														sents.get(e1.getSid()).sentence(), sents.get(e2.getSid()).sentence());
 				}
 			}
 		}
-				
-		
 		
 		return proposed;
 	}
 	
-	public void train(SieveDocuments trainingInfo) {
-		// no training
-	}
-	
-	// given a tree, return the pos tag for the element with TextEvent index "index"
-	private String posTagFromTree(Tree tree, int index) {
-		String pos = TreeOperator.indexToPOSTag(tree, index);
-		return pos;
-	}
- // add (e1, e2, label) to proposed list of TLINKs
-	private void addPair(TextEvent e1, TextEvent e2, TLink.Type label, List<TLink> proposed, SieveDocument doc) {
-		EventEventLink tlink = new EventEventLink(e1.getEiid(), e2.getEiid(), label);
-		tlink.setDocument(doc);
-		checkTLink(tlink, proposed);
-		proposed.add(tlink);
+
+
+	private boolean compareContexts(Pair<TextEvent, TextEvent> eventPair, HashMap<TextEvent, ArrayList<Timex>> eventToContext) {
+		String context1Value = null;
+		String context2Value = null;
+		if (this.contextCompare.equals("equalsValue")) {
+			context1Value =  eventToContext.get(eventPair.first()).get(0).getValue();
+			context2Value =  eventToContext.get(eventPair.second()).get(0).getValue();
+			if (context1Value.equals(context2Value)) return true;
+			else return false;
+		}
+		else if (this.contextCompare.equals("equals")) {
+			context1Value =  eventToContext.get(eventPair.first()).get(0).toString();
+			context2Value =  eventToContext.get(eventPair.second()).get(0).toString();
+			if (context1Value.equals(context2Value)) return true;
+			else return false;
+		}
+		else if (this.contextCompare.equals("differentValue")) {
+			context1Value =  eventToContext.get(eventPair.first()).get(0).getValue();
+			context2Value =  eventToContext.get(eventPair.second()).get(0).getValue();
+			if (!context1Value.equals(context2Value)) return true;
+			else return false;
+		}
+		else {
+			return true;
+		}
 	}
 
+	private List<Pair<TextEvent, TextEvent>> getPairs(SieveDocument doc, List<List<TextEvent>> eventsBySentId) {
+		List<Pair<TextEvent, TextEvent>> eventPairs = new ArrayList<Pair<TextEvent, TextEvent>>();
+		for (int sid = 0; sid < eventsBySentId.size(); sid++) {
+			// get all pairs in this sentence
+			for (int i = 0; i < eventsBySentId.get(sid).size(); i++) {
+				if (sameSentence == true) {
+					for (int j = i + 1; j < eventsBySentId.get(sid).size(); j++) {
+						eventPairs.add( new Pair(eventsBySentId.get(sid).get(i), eventsBySentId.get(sid).get(j)) );
+					}
+				}
+				// get all pairs between (1) each event in sid, and (2) each event in all subsequent sentences
+				// whose sentence id is within range (sid + sentWindow, inclusive)
+				if (sentWindow <= 0 || sid == eventsBySentId.size() - 1) continue;
+				int sid2Cieling = Math.min(sid + sentWindow + 1, eventsBySentId.size());
+				for (int sid2 = sid + 1; sid2 < sid2Cieling; sid2++) {
+					for (int k = 0; k < eventsBySentId.get(sid2).size(); k++) {
+						eventPairs.add( new Pair(eventsBySentId.get(sid).get(i), eventsBySentId.get(sid2).get(k)) );
+					}
+				}
+			}
+		}
+		return eventPairs;
+	}
+
+private HashMap<TextEvent, ArrayList<Timex>> getNaiveContextMapping(Timex dct, List<List<TextEvent>> eventsBySentId) {
+	HashMap<TextEvent, ArrayList<Timex>> eventToContext = new HashMap<TextEvent, ArrayList<Timex>>();
+	for (int sid = 0; sid < eventsBySentId.size(); sid++) {
+		for (TextEvent event : eventsBySentId.get(sid)) {
+			ArrayList<Timex> eventValueList = new ArrayList<Timex>();
+			eventValueList.add(dct);
+			eventToContext.put(event, eventValueList);
+		}
+	}
+		return eventToContext;
+	}
+
+private HashMap<TextEvent, ArrayList<Timex>> getClosestPathTimexMapping(SieveDocument doc, Timex dct, List<List<TextEvent>> eventsBySentId) {
+	// Get timexes and dependency parses for each sentence
+	List<List<Timex>> timexesBySentId = doc.getTimexesBySentence();
+	List<List<TypedDependency>> depsBySentId = doc.getAllDependencies();
+	// Construct event to timex mapping
+	HashMap<TextEvent, ArrayList<Timex>> eventToTimex = new HashMap<TextEvent, ArrayList<Timex>>();
+	int numSents = depsBySentId.size();
+	for (int sid = 0; sid < numSents; sid++) {
+		for (TextEvent event : eventsBySentId.get(sid)) {
+			// Create value for event key, in the form of empty array list of timexes
+			eventToTimex.put(event, new ArrayList<Timex>());
+			// For each event, find the closest timex(es) based on dependency path
+			List<Timex> closestTimexes = new ArrayList<Timex>(); // this holds the closest timex; there could be more than one, in the event of a tie
+			closestTimexes.add(dct); // add the dct; if no others are added, default will be dct.
+			Integer shortestOverall = null; // the length of the path between event and closest timex(es)
+			for (Timex timex : timexesBySentId.get(sid)) {
+				// calculate distance between the event in focus and each timex, saving the closest one(s).	
+				String shortestPath = TreeOperator.dependencyPath(event.getIndex(), timex.getTokenOffset(), depsBySentId.get(event.getSid()));
+				if (shortestPath == null) continue; // this could happen if event is a word that is removed during dependency parse collapsing, e.g. "in"
+				// Simply skipping over such events and mapping them to dct is a naive quick fix.
+				int shortestPathLength = shortestPath.split("->|<-").length; // length of the shortest path between event and timex
+				if (shortestOverall == null || shortestPathLength < shortestOverall.intValue()) {
+					// new shortest path!
+					closestTimexes = new ArrayList<Timex>();
+					closestTimexes.add(timex);
+					shortestOverall = shortestPathLength;
+			  	}
+				else if (shortestPathLength == shortestOverall.intValue()) { //compare int and Integer
+					// tie; add to the list
+					closestTimexes.add(timex);
+				 }
+				else continue; // in this case the shortest path between event and timex is not the shortest overall (nor tied for the shortest overall)
+			 	}	
+			// Now we need to eliminate all but one of the timexes with the shortest path distance to event.
+			if (closestTimexes.size() == 1) {
+				// trivial case: only one path of the overall shortest path length
+				eventToTimex.get(event).add(closestTimexes.get(0));
+			}
+			else if (closestTimexes.size() > 1) {
+				// non-trivial case - there is more than one timex with the shortest path length to the event
+				// eliminate non-dates, unless there are no timexes that are dates
+				boolean noDate = true;
+				// determine if there are any dates in closestTimexes; if so, switch to noDate = false
+				for (Timex timex : closestTimexes) {
+					if (timex.getType() == Timex.Type.DATE) {
+						noDate = false;
+						break;
+					}
+				}
+				if (!noDate) { // if there is a date, eliminate all non-dates
+					Iterator<Timex> ctIter = closestTimexes.iterator();
+					while (ctIter.hasNext()) {
+						Timex t = ctIter.next();
+						if (t.getType() != Timex.Type.DATE) {
+							ctIter.remove();
+						}
+					 }
+					}
+			// Get the leftmost timex in closestTimexes
+					Timex leftMostTimex = closestTimexes.get(0); // first, pretend its the first one in the list
+					for (Timex timex : closestTimexes) { // replace leftMostTimex if another one has a lesser tokenOffset
+						if (timex.getTokenOffset() < leftMostTimex.getTokenOffset()) {
+							leftMostTimex = timex;
+					 }
+					}
+			// Add the final timex to value for eventToTimex(event); it should be the only element in that array list value!
+				eventToTimex.get(event).add(leftMostTimex);
+			}
+			else { // this would happen if closestTimexes had no elements. but dct is added immediately after it is initialized, and should be a date
+				// this should never happen; perhaps should be handled with exception anyway?
+				System.out.println("this should never happen!"); // fix this
+			}
+		 }	
+		}
+	return eventToTimex;
+	}
+
+private HashMap<TextEvent, ArrayList<Timex>> getEventGovernsTimexMapping(SieveDocument doc, Timex dct, List<List<TextEvent>> eventsBySentId) {
+	HashMap<TextEvent, ArrayList<Timex>> eventToTimex = new HashMap<TextEvent, ArrayList<Timex>>();
+	List<List<Timex>> timexesBySentId = doc.getTimexesBySentence();
+	List<List<TypedDependency>> depsBySentId = doc.getAllDependencies();
+
+	int numSents = depsBySentId.size();
+	for (int sid = 0; sid < numSents; sid++) {
+		for (TextEvent event : eventsBySentId.get(sid)) {
+			// First check if the event governs a timex.
+			// put them all into a list called timexesGovernedByEvent
+			eventToTimex.put(event, new ArrayList<Timex>());
+			for (Timex timex : timexesBySentId.get(sid)) {
+				// First try to add timexes in the sentences that event governs...
+				for (TypedDependency td : depsBySentId.get(sid)) {
+					if (event.getIndex() == td.gov().index() && timex.getTokenOffset() == td.dep().index()) {
+							eventToTimex.get(event).add(timex);
+					}
+				 }
+			  }
+			// If no timexes were added to timexesGovernedByEvent, then add the default dct
+			 if (eventToTimex.get(event).size() == 0) {
+				 ArrayList<Timex> defaultValue = new ArrayList<Timex>();
+				 defaultValue.add(dct);
+				 eventToTimex.put(event, defaultValue);
+			 }
+			}	
+		 } 
+	if (this.debug == true) {
+		// print out some stats if any events have a value in eventToTimex whose length is not equal to 1
+//		for (TextEvent event : eventToTimex.keySet()) {
+//			if (eventToTimex.get(event).size() != 1) {
+//				System.out.printf("DEBUG: Event %s(%s) governs more than one timex", event.getId(), event.getString());
+//			}
+//		for (TextEvent event: eventToTimex.keySet()) {
+//	
+//		}
+	}
+	return eventToTimex;
+ }
+
+//private HashMap<TextEvent, ArrayList<Timex>> getMostRecentTimexMapping(SieveDocument doc, Timex dct, List<List<TextEvent>> eventsBySentId) {
+//	
+//}
+private Timex getDct(SieveDocument doc) {
+	List<Timex> dctList = doc.getDocstamp();
+	Timex dct;
+	if (dctList.size() > 1) {
+		dct = Timex.dctDayTimex(dctList.get(0));
+	}
+	else if (dctList.size() == 1) {
+		dct = Timex.dctDayTimex(dctList.get(0));
+	}
+	else {
+		dct = getMostCommonTimexDay(doc);
+	}
+	return dct;
+}
+
+private Timex getMostCommonTimexDay(SieveDocument doc) {
+		List<Timex> timexes = doc.getTimexes();
+		HashMap<String, Integer> valToCount = new HashMap<String, Integer>();
+		for (Timex timex : timexes) {
+			// get timex's val
+			String val = timex.getValue();
+			// extract date if possible
+			String valDay = Timex.dateFromValue(val);
+			if (valDay == null) continue;
+			if (valToCount.containsKey(valDay)) {
+				valToCount.put(valDay, valToCount.get(valDay) + 1);
+			}
+			else {
+				valToCount.put(valDay, 0);
+			}
+		}
+		int max = 0;
+		ArrayList<String> topDays = new ArrayList<String>();
+		for (String key : valToCount.keySet()) {
+			if (valToCount.get(key) > max) {
+				max = valToCount.get(key);
+				topDays = new ArrayList<String>();
+				topDays.add(key);
+			}
+			else if (valToCount.get(key) == max) topDays.add(key);
+		}
+		
+		/*
+		 * At this point we either have a list of topDays of size 0, 1 or more than 1.
+		 * If its 0 we should just use today's date. if its 1 then that String is the day value.
+		 * If its more than 1, then we have a tie - the two days are mentioned equally. just pick at random.
+		 */
+		
+		if (topDays.size() == 0) {
+			return new Timex("2013-07-24"); // this will do for now
+		}
+		else if (topDays.size() == 1) {
+			return new Timex(topDays.get(0));
+		}
+		else {
+			return new Timex(topDays.get(0));
+		}
+	}
+	
+/**
+ * This method returns the most common day in the document. 
+ * If none are specified, today's date is returned.
+ * @param doc
+ * @return
+ */
+// private Timex getMostCommonTimexDay(SieveDocument doc) {
+//	 String mostCommonDayValue = null;
+//	 List<Timex> allTimexes = doc.getTimexes();
+//	 
+//	 return Timex()
+//	}
+
+
+
+
+	// add (e1, e2, label) to proposed list of TLINKs
+	private void addPair(TextEvent e1, TextEvent e2, TLink.Type label, List<TLink> proposed, SieveDocument doc) {
+		if (label != null) {
+			
+		EventEventLink tlink = new EventEventLink(e1.getEiid(), e2.getEiid(), label);
+		proposed.add(tlink);
+		}
+	}
  // get the label indicated for (e1, e2) by the D&G mapping.
  // this method also applies filters that eliminate certain events and event pairs
 	// from consideration.
-	private TLink.Type getLabel(TextEvent e1, TextEvent e2, SieveSentence sent1, SieveSentence sent2, List<Tree> trees) {
-		// TEMPORARY FOR DEBUGGING - SEE IF I_STATEs and I_ACTIONs BEHAVE DIFFERENTLY!
-		/*boolean e1IsISTATE = e1.getTheClass() == TextEvent.Class.I_STATE;
-		boolean e2IsISTATE = e2.getTheClass() == TextEvent.Class.I_STATE;
-		boolean e1IsIACTION = e1.getTheClass() == TextEvent.Class.I_ACTION;
-		boolean e2IsIACTION = e2.getTheClass() == TextEvent.Class.I_ACTION;
-		
-		if (e1IsISTATE || e1IsIACTION || e2IsISTATE || e2IsIACTION) {
-			return null;
-		}*/
-		
-		// END TEMPORARY CODE HERE
+	private TLink.Type getLabel(TextEvent e1, TextEvent e2, SieveSentence sent1, SieveSentence sent2, List<Tree> trees, HashMap<TextEvent, ArrayList<Timex>> eventToContext) {
 		// get pos tags for e1 and e2
 		String e1Pos = posTagFromTree(trees.get(e1.getSid()), e1.getIndex());
 		String e2Pos = posTagFromTree(trees.get(e2.getSid()), e2.getIndex());
@@ -240,21 +414,17 @@ public class ReichenbachDG13 implements Sieve {
 		if (!e1Pos.startsWith("VB") || !e2Pos.startsWith("VB")) { 
 			return null;
 		}
-		// if sameTense property is true then e1/e2 that don't share the same tense 
-		// automatically are labeled null
-		if (sameTense == true && e1.getTense() != e2.getTense()) {
+		// if sameTense property is true then e1/e2 that don't share the same tense, 
+		// the pair is automatically labeled null
+		if (sameTense == true && !eventsShareTense(e1, e2)) {
 			return null;
 		}
 		// if we've made it this far, apply the mapping to (e1, e2) using 
-		return taToLabel(e1, e2, sent1, sent2);
+		return taToLabel(e1, e2, sent1, sent2, eventToContext);
 	}
-	// check if events have the same tense. this is used for the setting in which two events (verbs) are assumed
-	// not to share their reference time (ie be a part of the same "temporal context") only if they have
-	// the same tense
-	public boolean eventsShareTense(TextEvent e1, TextEvent e2) {return e1.getTense() == e2.getTense();}
 
 	// apply mapping adapted from D&G2013
-	public TLink.Type taToLabel(TextEvent e1, TextEvent e2, SieveSentence sent1, SieveSentence sent2){
+	public TLink.Type taToLabel(TextEvent e1, TextEvent e2, SieveSentence sent1, SieveSentence sent2, HashMap<TextEvent, ArrayList<Timex>> eventToContext){
 		// First convert e1(2)Tense(Aspect) to their simplified forms 
 		// as per D&G's mapping (via simplifyTense and simplifyAspect)
 		TextEvent.Tense e1Tense = null;
@@ -274,7 +444,7 @@ public class ReichenbachDG13 implements Sieve {
 			e1Tense = e1.getTense();
 			e2Tense = e2.getTense();
 		}
-
+		// get simplified tense and aspect
 		TextEvent.Tense e1SimpTense = simplifyTense(e1Tense);
 		TextEvent.Aspect e1SimpAspect = simplifyAspect(e1.getAspect());
 		TextEvent.Tense e2SimpTense = simplifyTense(e2Tense);
@@ -285,56 +455,182 @@ public class ReichenbachDG13 implements Sieve {
 		boolean e1Past = (e1SimpTense == TextEvent.Tense.PAST);
 		boolean e2Past = (e2SimpTense == TextEvent.Tense.PAST);
 		boolean e1Pres = (e1SimpTense == TextEvent.Tense.PRESENT);
-		boolean e2Pres = (e2SimpTense == TextEvent.Tense.PRESENT);
-
-		
+		boolean e2Pres = (e2SimpTense == TextEvent.Tense.PRESENT);		
 		boolean e1Future = (e1SimpTense == TextEvent.Tense.FUTURE);
 		boolean e2Future = (e2SimpTense == TextEvent.Tense.FUTURE);
-		
 		boolean e1Perf = (e1SimpAspect == TextEvent.Aspect.PERFECTIVE);
 		boolean e1None = (e1SimpAspect == TextEvent.Aspect.NONE);
 		boolean e2Perf = (e2SimpAspect == TextEvent.Aspect.PERFECTIVE);
 		boolean e2None = (e2SimpAspect == TextEvent.Aspect.NONE);
 		
-		// this is the mapping, implmented as a long if block
-		// see reichenbach_relationmapping.xls
-		// note that we only consider cases where the result of applying
-		// the mapping is an interval disjunction that translates to only 
-		// one relation according to our task spec. 
-		// see the table in the spreadsheet FreksaAllenUsInfo and mapping_FreksaAllenUs
 		
-		if (e1Past && e1None && e2Past && e2Perf) return TLink.Type.AFTER;
-		else if (e1Past && e1None && e2Future && e2None) return TLink.Type.BEFORE;
-		else if (e1Past && e1None && e2Future && e2Perf) return TLink.Type.BEFORE;
-		//
-		else if (e1Past && e1Perf && e2Past && e2None) return TLink.Type.BEFORE ; 
-		else if (e1Past && e1Perf && e2Pres && e2None) return TLink.Type.BEFORE; 
-		else if (e1Past && e1Perf && e2Pres && e2Perf) return TLink.Type.BEFORE; 
-		else if (e1Past && e1Perf && e2Future && e2None) return TLink.Type.BEFORE; 
-		else if (e1Past && e1Perf && e2Future && e2Perf) return TLink.Type.BEFORE;
-		//
-		else if (e1Pres && e1None && e2Past && e2Perf) return TLink.Type.AFTER;
-		else if (e1Pres && e1None && e2Future && e2None) return TLink.Type.BEFORE;
-		//
-		else if (e1Pres && e1Perf && e2Past && e2Perf) return TLink.Type.AFTER;
-		else if (e1Pres && e1Perf && e2Future && e2None) return TLink.Type.BEFORE;
-		else if (e1Pres && e1Perf && e2Future && e2Perf) return TLink.Type.BEFORE;
-		//
-		else if (e1Future && e1None && e2Past && e2None) return TLink.Type.AFTER;
-		else if (e1Future && e1None && e2Past && e2Perf) return TLink.Type.AFTER;
-		else if (e1Future && e1None && e2Pres && e2None) return TLink.Type.AFTER;
-		else if (e1Future && e1None && e2Pres && e2Perf) return TLink.Type.AFTER;
-		//
-		else if (e1Future && e1Perf && e2Past && e2None) return TLink.Type.AFTER;
-		else if (e1Future && e1Perf && e2Past && e2Perf) return TLink.Type.AFTER;
-		else if (e1Future && e1Perf && e2Pres && e2Perf) return TLink.Type.AFTER;
+		Timex e1ContextTimex = eventToContext.get(e1).get(0);
+		Timex e2ContextTimex = eventToContext.get(e2).get(0);
+		boolean e1ContextSe2Context = false;
+		boolean e1ContextBe2Context = false;
+		boolean e1ContextAe2Context = false;
+		boolean e1ContextIe2Context = false;
+		boolean e1ContextIIe2Context = false;
+		boolean e1ContextXe2Context = false;
+		
+		if (e1ContextTimex.getValue().equals(e2ContextTimex.getValue())) e1ContextSe2Context = true;
+		else if (e1ContextTimex.before(e2ContextTimex)) e1ContextBe2Context = true; // these conditions are broken because of Timex methods
+		else if (e2ContextTimex.before(e1ContextTimex)) e1ContextAe2Context = true; // I'm probably not using them correctly
+		else if (e1ContextTimex.includes((e2ContextTimex))) e1ContextIe2Context = true;
+		else if (e2ContextTimex.includes((e1ContextTimex))) e1ContextIIe2Context = true;
+		else e1ContextXe2Context = true;
+		
+		if (e1ContextSe2Context) { 
+			return compareContextsS(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
+		}
+		else if (e1ContextBe2Context) {
+			return compareContextsB(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
+		}
+		else if (e1ContextAe2Context) {
+			return compareContextsB(e2Past, e2Pres, e2Future, e2Perf, e2None, e1Past, e1Pres, e1Future, e1Perf, e1None);
+		}
+		else if (e1ContextAe2Context) {
+			return compareContextsI(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
+		}
+		else if (e1ContextAe2Context) {
+			return compareContextsI(e2Past, e2Pres, e2Future, e2Perf, e2None, e1Past, e1Pres, e1Future, e1Perf, e1None);
+		}
 		else return null;
-	
 	}
 	
 
+	private Type compareContextsI(boolean e1Past, boolean e1Pres,
+			boolean e1Future, boolean e1Perf, boolean e1None, boolean e2Past,
+			boolean e2Pres, boolean e2Future, boolean e2Perf, boolean e2None) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	private Type compareContextsB(boolean e1Past, boolean e1Pres, boolean e1Future, boolean e1Perf, boolean e1None, boolean e2Past, boolean e2Pres, boolean e2Future, boolean e2Perf, boolean e2None) {
+
+		
+	// stats
+			if (e1Past && e1None && e2Past && e2None) return TLink.Type.BEFORE; // 
+	// stats
+			if (e1Past && e1None && e2Past && e2Perf) return null; // ambiguous...
+	// stats
+			if (e1Past && e1None && e2Pres && e2None) return TLink.Type.BEFORE; // Note: This implies there are two different speech times, right?
+  // stats
+			if (e1Past && e1None && e2Future && e2None) return TLink.Type.BEFORE;
+	// stats
+			if (e1Past && e1None && e2Future && e2Perf) return TLink.Type.BEFORE; 
+//			// e1 Past/Perf
+	// stats
+			if (e1Past && e1Perf && e2Past && e2None) return TLink.Type.BEFORE ;
+	// stats
+			if (e1Past && e1Perf && e2Pres && e2None) return TLink.Type.BEFORE;
+	// stats
+			if (e1Past && e1Perf && e2Pres && e2Perf) return TLink.Type.BEFORE; 
+	// stats
+			if (e1Past && e1Perf && e2Future && e2None) return TLink.Type.BEFORE;
+	// stats
+			if (e1Past && e1Perf && e2Future && e2Perf) return TLink.Type.BEFORE;
+//			// e1 Pres/None
+// stats
+			if (e1Pres && e1None && e2Pres && e2None) return TLink.Type.BEFORE;;
+	// stats
+			if (e1Pres && e1None && e2Past && e2Perf) return null; //ambiguous
+	//
+			if (e1Pres && e1None && e2Future && e2None) return TLink.Type.BEFORE; 
+//			// e1 Pres/Perf
+	//p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1; p=0.00	0 of 2	Non-VAGUE:	p=0.00	0 of 0; p=0.33	1 of 3	Non-VAGUE:	p=1.00	1 of 1
+			if (e1Pres && e1Perf && e2Past && e2Perf) return TLink.Type.AFTER;    
+	//p=0.50	1 of 2	Non-VAGUE:	p=1.00	1 of 1; p=0.64	7 of 11	Non-VAGUE:	p=1.00	7 of 7; p=0.62	8 of 13	Non-VAGUE:	p=1.00	8 of 8
+			if (e1Pres && e1Perf && e2Future && e2None) return TLink.Type.BEFORE;
+	//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0
+			if (e1Pres && e1Perf && e2Future && e2Perf) return TLink.Type.BEFORE;
+//			// e1 Future/None
+	//p=0.60	3 of 5	Non-VAGUE:	p=0.75	3 of 4; p=0.70	33 of 47	Non-VAGUE:	p=1.00	33 of 33; p=0.69	36 of 52	Non-VAGUE:	p=0.97	36 of 37; 
+			if (e1Future && e1None && e2Past && e2None) return TLink.Type.AFTER;
+	//p=0.67	2 of 3	Non-VAGUE:	p=1.00	2 of 2; p=0.71	5 of 7	Non-VAGUE:	p=1.00	5 of 5; p=0.70	7 of 10	Non-VAGUE:	p=1.00	7 of 7
+			if (e1Future && e1None && e2Past && e2Perf) return TLink.Type.AFTER; 
+	//p=0.25	1 of 4	Non-VAGUE:	p=0.50	1 of 2; p=0.38	5 of 13	Non-VAGUE:	p=1.00	5 of 5; p=0.35	6 of 17	Non-VAGUE:	p=0.86	6 of 7;
+	    if (e1Future && e1None && e2Pres && e2None) return TLink.Type.AFTER; 
+	//p=1.00	3 of 3	Non-VAGUE:	p=1.00	3 of 3; p=0.50	3 of 6	Non-VAGUE:	p=1.00	3 of 3; p=0.67	6 of 9	Non-VAGUE:	p=1.00	6 of 6
+	    if (e1Future && e1None && e2Pres && e2Perf) return TLink.Type.AFTER;
+//			// e1 Future/Perf
+	//p=0.00	0 of 2	Non-VAGUE:	p=0.00	0 of 0; p=0.50	2 of 4	Non-VAGUE:	p=1.00	2 of 2; p=0.33	2 of 6	Non-VAGUE:	p=1.00	2 of 2
+			if (e1Future && e1Perf && e2Past && e2None) return TLink.Type.AFTER;  
+	//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1; p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1
+			if (e1Future && e1Perf && e2Past && e2Perf) return TLink.Type.AFTER;
+	//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 1	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 1	Non-VAGUE:	p=0.00	0 of 0
+			if (e1Future && e1Perf && e2Pres && e2Perf) return TLink.Type.AFTER;    //
+			else return null;
+		
+	}
+
+
+
+	private TLink.Type compareContextsS(boolean e1Past, boolean e1Pres, boolean e1Future, boolean e1Perf, boolean e1None, boolean e2Past, boolean e2Pres, boolean e2Future, boolean e2Perf, boolean e2None) {
+		/* This is the mapping, implmented as a long if-block
+		/ See reichenbach_relationmapping.xls.
+		/ Note that we only consider cases where the result of applying
+		/ the mapping is an interval disjunction that translates to only 
+		/ one relation (according to our task spec). 
+		/ See the table in the spreadsheet FreksaAllenUsInfo and mapping_FreksaAllenUs */
+		// e1 Past/None
+// p=0.86	12 of 14	Non-VAGUE:	p=1.00	12 of 12; p=0.45	9 of 20	Non-VAGUE:	p=0.75	9 of 12; p=0.62	21 of 34	Non-VAGUE:	p=0.88	21 of 24
+		if (e1Past && e1None && e2Past && e2Perf) return TLink.Type.AFTER;    
+//p=0.83	35 of 42	Non-VAGUE:	p=0.92	35 of 38; p=0.55	29 of 53	Non-VAGUE:	p=0.97	29 of 30; p=0.67	64 of 95	Non-VAGUE:	p=0.94	64 of 68;
+		if (e1Past && e1None && e2Future && e2None) return TLink.Type.BEFORE;
+//p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1; p=0.00	0 of 1	Non-VAGUE:	p=0.00	0 of 1; p=0.50	1 of 2	Non-VAGUE:	p=0.50	1 of 2
+		if (e1Past && e1None && e2Future && e2Perf) return TLink.Type.BEFORE; 
+//		// e1 Past/Perf
+//p=0.25	2 of 8	Non-VAGUE:	p=0.40	2 of 5; p=0.48	12 of 25	Non-VAGUE:	p=0.63	12 of 19; p=0.42	14 of 33	Non-VAGUE:	p=0.58	14 of 24
+		if (e1Past && e1Perf && e2Past && e2None) return TLink.Type.BEFORE ;
+//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=0.17	1 of 6	Non-VAGUE:	p=1.00	1 of 1; p=0.17	1 of 6	Non-VAGUE:	p=1.00	1 of 1
+		if (e1Past && e1Perf && e2Pres && e2None) return TLink.Type.BEFORE;
+//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1; p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1 
+		if (e1Past && e1Perf && e2Pres && e2Perf) return TLink.Type.BEFORE; 
+//p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1; p=0.80	4 of 5	Non-VAGUE:	p=1.00	4 of 4; p=0.83	5 of 6	Non-VAGUE:	p=1.00	5 of 5
+		if (e1Past && e1Perf && e2Future && e2None) return TLink.Type.BEFORE;
+//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1; p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1
+		if (e1Past && e1Perf && e2Future && e2Perf) return TLink.Type.BEFORE;
+//		// e1 Pres/None
+//p=0.50	1 of 2	Non-VAGUE:	p=1.00	1 of 1; p=0.50	3 of 6	Non-VAGUE:	p=1.00	3 of 3; p=0.50	4 of 8	Non-VAGUE:	p=1.00	4 of 4
+		if (e1Pres && e1None && e2Past && e2Perf) return TLink.Type.AFTER;
+//p=1.00	9 of 9	Non-VAGUE:	p=1.00	9 of 9; p=0.21	4 of 19	Non-VAGUE:	p=1.00	4 of 4; p=0.46	13 of 28	Non-VAGUE:	p=1.00	13 of 13
+		if (e1Pres && e1None && e2Future && e2None) return TLink.Type.BEFORE; 
+//		// e1 Pres/Perf
+//p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1; p=0.00	0 of 2	Non-VAGUE:	p=0.00	0 of 0; p=0.33	1 of 3	Non-VAGUE:	p=1.00	1 of 1
+		if (e1Pres && e1Perf && e2Past && e2Perf) return TLink.Type.AFTER;    
+//p=0.50	1 of 2	Non-VAGUE:	p=1.00	1 of 1; p=0.64	7 of 11	Non-VAGUE:	p=1.00	7 of 7; p=0.62	8 of 13	Non-VAGUE:	p=1.00	8 of 8
+		if (e1Pres && e1Perf && e2Future && e2None) return TLink.Type.BEFORE;
+//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0
+		if (e1Pres && e1Perf && e2Future && e2Perf) return TLink.Type.BEFORE;
+//		// e1 Future/None
+//p=0.60	3 of 5	Non-VAGUE:	p=0.75	3 of 4; p=0.70	33 of 47	Non-VAGUE:	p=1.00	33 of 33; p=0.69	36 of 52	Non-VAGUE:	p=0.97	36 of 37; 
+		if (e1Future && e1None && e2Past && e2None) return TLink.Type.AFTER;
+//p=0.67	2 of 3	Non-VAGUE:	p=1.00	2 of 2; p=0.71	5 of 7	Non-VAGUE:	p=1.00	5 of 5; p=0.70	7 of 10	Non-VAGUE:	p=1.00	7 of 7
+		if (e1Future && e1None && e2Past && e2Perf) return TLink.Type.AFTER; 
+//p=0.25	1 of 4	Non-VAGUE:	p=0.50	1 of 2; p=0.38	5 of 13	Non-VAGUE:	p=1.00	5 of 5; p=0.35	6 of 17	Non-VAGUE:	p=0.86	6 of 7;
+    if (e1Future && e1None && e2Pres && e2None) return TLink.Type.AFTER; 
+//p=1.00	3 of 3	Non-VAGUE:	p=1.00	3 of 3; p=0.50	3 of 6	Non-VAGUE:	p=1.00	3 of 3; p=0.67	6 of 9	Non-VAGUE:	p=1.00	6 of 6
+    if (e1Future && e1None && e2Pres && e2Perf) return TLink.Type.AFTER;
+//		// e1 Future/Perf
+//p=0.00	0 of 2	Non-VAGUE:	p=0.00	0 of 0; p=0.50	2 of 4	Non-VAGUE:	p=1.00	2 of 2; p=0.33	2 of 6	Non-VAGUE:	p=1.00	2 of 2
+		if (e1Future && e1Perf && e2Past && e2None) return TLink.Type.AFTER;  
+//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1; p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1
+		if (e1Future && e1Perf && e2Past && e2Perf) return TLink.Type.AFTER;
+//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 1	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 1	Non-VAGUE:	p=0.00	0 of 0
+		if (e1Future && e1Perf && e2Pres && e2Perf) return TLink.Type.AFTER;    //
+		else return null;
+	}
+		
+		
 	
-	// Apply D&G's mapping to consolidate tense and aspect labels
+	/**
+	 * Apply D&G's mapping to consolidate tense labels
+	 * @param tense
+	 * @return
+	 */
 	private TextEvent.Tense simplifyTense(TextEvent.Tense tense){
 		// simplify past
 		if (tense == TextEvent.Tense.PAST ||
@@ -350,7 +646,11 @@ public class ReichenbachDG13 implements Sieve {
 		// no other tenses are considered.
 		else return null; 
 	}
-		
+	/**
+	 * Apply D&G's mapping to consolidate aspect labels
+	 * @param tense
+	 * @return
+	 */
 	private TextEvent.Aspect simplifyAspect(TextEvent.Aspect aspect){
 		// Return none or perfective based on mapping in D&G13 (else null)
 		// Note that although their mapping includes progressive, we don't use
@@ -366,12 +666,28 @@ public class ReichenbachDG13 implements Sieve {
 		else return null; 
 	}
 	
-	public void checkTLink(TLink tlink, List<TLink> proposed) throws IllegalStateException{
-		int numTLinks = proposed.size();
-		for (int t = 0; t < numTLinks; t++) {
-			if (tlink.coversSamePair(proposed.get(t))) { 
-				throw new IllegalStateException("Cannot add a tlink between a pair of events for which there is already a tlink in proposed");
-			}
+	/**
+	 * given a tree, return the pos tag for the element with TextEvent index "index"
+	 * @param tree
+	 * @param index
+	 * @return
+	 */
+	private String posTagFromTree(Tree tree, int index) {
+		String pos = TreeOperator.indexToPOSTag(tree, index);
+		return pos;
+	}
+	/**
+	 * check if two events e1 and e2 share tense
+	 * @param e1
+	 * @param e2
+	 * @return
+	 */
+	public boolean eventsShareTense(TextEvent e1, TextEvent e2) {
+		return e1.getTense() == e2.getTense();
 		}
+	
+	
+	public void train(SieveDocuments trainingInfo) {
+		// no training
 	}
 }

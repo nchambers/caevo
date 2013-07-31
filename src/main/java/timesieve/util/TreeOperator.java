@@ -626,12 +626,13 @@ public class TreeOperator {
 
     return paths;
   }
+  
   public static String directPath(int start, int end, List<TypedDependency> deps) {
   	String shortestPath = dependencyPath(start, end, deps);
   	if (shortestPath != null) {
   		int n = shortestPath.length();
   		for (int i = 1; i < n; i++){
-  			if (shortestPath.charAt(i) == '-' && shortestPath.charAt(i-1) == '>') {
+  			if (shortestPath.charAt(i) == '-' && shortestPath.charAt(i-1) == '>') { // double check this
   				return null;
   				}
   			}
