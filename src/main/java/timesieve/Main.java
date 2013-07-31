@@ -65,7 +65,7 @@ public class Main {
 	SieveDocuments thedocsUnchanged; // for evaluating if TLinks are in the input
 	Closure closure;
 	String outpath = "sieve-output.xml";
-	boolean debug = false;
+	boolean debug = true;
 	boolean useClosure = true;
     
 	// Which dataset do we load?

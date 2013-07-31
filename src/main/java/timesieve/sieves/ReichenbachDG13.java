@@ -33,8 +33,8 @@ import timesieve.util.TimebankUtil;
  * @author cassidy
  */
 public class ReichenbachDG13 implements Sieve {
-	private static final boolean analysis = true;
-	public boolean debug = true;
+	private static final boolean analysis = false;
+	public boolean debug = false;
 	private int sentWindow = 0;
 	private boolean sameSentence = true;
 	private String contextType = "naive";
@@ -122,6 +122,7 @@ public class ReichenbachDG13 implements Sieve {
 						idToEvent.put(event.getId(), event);
 					}
 				}
+				if (debug) {
 				for (TLink tlink : proposed) {
 					TextEvent e1 = idToEvent.get(tlink.getId1());
 					TextEvent e2 = idToEvent.get(tlink.getId2());
@@ -129,8 +130,9 @@ public class ReichenbachDG13 implements Sieve {
 														e1.getString(), e1.getId(), e1.getTense(), e1.getAspect(), eventToContext.get(e1).get(0).getValue(), tlink.getRelation().name(), 
 														e2.getString(), e2.getId(), e2.getTense(), e2.getAspect(), eventToContext.get(e2).get(0).getValue(), 
 														sents.get(e1.getSid()).sentence(), sents.get(e2.getSid()).sentence());
-				}
+			 }
 			}
+		 }
 		}
 		
 		return proposed;
