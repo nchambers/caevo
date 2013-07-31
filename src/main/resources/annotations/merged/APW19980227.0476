@@ -1,3 +1,4 @@
+t21	t0	s
 t21	e1	i
 t21	e1996	a
 t21	e2	a
@@ -12,6 +13,7 @@ t21	e1998	i
 t21	e9	v
 t21	e10	v
 t21	e1999	b
+e1	t0	ii
 e1	e1996	a
 e1	e2	a
 e1	e1997	v
@@ -25,6 +27,7 @@ e1	e1998	s
 e1	e9	b
 e1	e10	b
 e1	e1999	b
+e1996	t0	b
 e1996	e2	v
 e1996	e1997	v
 e1996	e3	ii
@@ -37,6 +40,7 @@ e1996	e1998	b
 e1996	e9	b
 e1996	e10	b
 e1996	e1999	b
+e2	t0	b
 e2	e1997	v
 e2	e3	ii
 e2	e4	a
@@ -48,6 +52,7 @@ e2	e1998	b
 e2	e9	b
 e2	e10	b
 e2	e1999	b
+e1997	t0	v
 e1997	e3	v
 e1997	e4	a
 e1997	t22	a
@@ -58,6 +63,7 @@ e1997	e1998	v
 e1997	e9	v
 e1997	e10	v
 e1997	e1999	v
+e3	t0	i
 e3	e4	a
 e3	t22	v
 e3	e5	i
@@ -67,6 +73,7 @@ e3	e1998	i
 e3	e9	i
 e3	e10	i
 e3	e1999	i
+e4	t0	b
 e4	t22	ii
 e4	e5	b
 e4	e6	v
@@ -75,6 +82,7 @@ e4	e1998	b
 e4	e9	b
 e4	e10	b
 e4	e1999	b
+t22	t0	b
 t22	e5	b
 t22	e6	v
 t22	e8	b
@@ -82,6 +90,7 @@ t22	e1998	b
 t22	e9	b
 t22	e10	b
 t22	e1999	b
+e5	t0	b
 e5	e6	v
 e5	e8	b
 e5	e1998	b
@@ -96,6 +105,7 @@ e5	e14	a
 e5	e15	v
 e5	e16	a
 e5	t24	a
+e6	t0	i
 e6	e8	v
 e6	e1998	v
 e6	e9	v
@@ -109,6 +119,7 @@ e6	e14	v
 e6	e15	v
 e6	e16	v
 e6	t24	v
+e8	t0	ii
 e8	e1998	a
 e8	e9	v
 e8	e10	b
@@ -121,6 +132,7 @@ e8	e14	a
 e8	e15	v
 e8	e16	a
 e8	t24	a
+e1998	t0	ii
 e1998	e9	b
 e1998	e10	b
 e1998	e1999	b
@@ -132,6 +144,7 @@ e1998	e14	a
 e1998	e15	v
 e1998	e16	a
 e1998	t24	a
+e9	t0	ii
 e9	e10	b
 e9	e1999	b
 e9	e12	a
@@ -142,6 +155,7 @@ e9	e14	a
 e9	e15	v
 e9	e16	a
 e9	t24	a
+e10	t0	v
 e10	e1999	b
 e10	e12	a
 e10	t23	a
@@ -151,6 +165,7 @@ e10	e14	a
 e10	e15	v
 e10	e16	a
 e10	t24	a
+e1999	t0	a
 e1999	e12	a
 e1999	t23	a
 e1999	e13	a
@@ -159,6 +174,7 @@ e1999	e14	a
 e1999	e15	v
 e1999	e16	a
 e1999	t24	a
+e12	t0	b
 e12	t23	ii
 e12	e13	s
 e12	e2078	v
@@ -166,24 +182,31 @@ e12	e14	a
 e12	e15	v
 e12	e16	a
 e12	t24	a
+t23	t0	b
 t23	e13	i
 t23	e2078	v
 t23	e14	v
 t23	e15	v
 t23	e16	v
 t23	t24	a
+e13	t0	b
 e13	e2078	v
 e13	e14	a
 e13	e15	v
 e13	e16	a
 e13	t24	a
+e2078	t0	b
 e2078	e14	v
 e2078	e15	v
 e2078	e16	v
 e2078	t24	a
+e14	t0	b
 e14	e15	b
 e14	e16	s
 e14	t24	a
+e15	t0	b
 e15	e16	v
 e15	t24	a
+e16	t0	b
 e16	t24	a
+t24	t0	b

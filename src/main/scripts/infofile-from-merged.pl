@@ -3,6 +3,11 @@
 # infofile-from-merged.pl <infofile> <merged-file>
 #
 
+if( scalar(@ARGV) < 2 ) {
+    print "infofile-from-merged.pl <infofile> <alldocs.merged>\n";
+    exit;
+}
+
 my $infopath = $ARGV[0];
 my $merged = $ARGV[1];
 

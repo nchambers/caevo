@@ -38,6 +38,13 @@ sub readRelations {
 	}
 	elsif( $line =~ /^#.*/ ) { }
 	elsif( $line =~ /^\s*$/ ) { }
+        elsif( $line =~ /\s*([et]\d+)\s+([et]\d+)\s*$/ ) {   # line with no relation
+	    my $pair = "$1\t$2";
+	    my $rel = "v";
+	    $rels[$ii][0] = $pair;
+	    $rels[$ii][1] = $rel;
+	    $ii++;
+        }
 	else {
 	    print "Unknown line format: $line\n";
 	    exit;

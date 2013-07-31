@@ -66,6 +66,7 @@ public class Main {
 	Closure closure;
 	String outpath = "sieve-output.xml";
 	boolean debug = false;
+	boolean useClosure = true;
     
 	// Which dataset do we load?
   public static enum DatasetType { TRAIN, DEV, TEST, ALL };
@@ -86,12 +87,12 @@ public class Main {
 		try {
 			TimeSieveProperties.load();
 			// Look for a given pre-processed InfoFile
-			infopath = TimeSieveProperties.getString("info");
-			// Overwrite the debug setting if it is in the properties file.
-			debug = TimeSieveProperties.getBoolean("debug", debug);
-			// Overwrite the default dataset type if it is in the properties file.
-			dataset = DatasetType.valueOf(TimeSieveProperties.getString("dataset", dataset.toString()).toUpperCase());
-		} catch (IOException e) { }
+			infopath = TimeSieveProperties.getString("Main.info", null);
+			// Overwrite these globals if they are in the properties file.
+			debug = TimeSieveProperties.getBoolean("Main.debug", debug);
+			useClosure = TimeSieveProperties.getBoolean("Main.closure", useClosure);
+			dataset = DatasetType.valueOf(TimeSieveProperties.getString("Main.dataset", dataset.toString()).toUpperCase());
+		} catch (IOException e) { e.printStackTrace(); }
         
 		// -info on the command line?
 		if( cmdlineProps.containsKey("info") )
@@ -112,7 +113,8 @@ public class Main {
 		init();
 		
 		System.out.println("Dataset:\t" + dataset);
-		System.out.println("Debug:\t" + dataset);
+		System.out.println("Using Closure:\t" + useClosure);
+		System.out.println("Debug:\t\t" + debug);
 	}
 	
 	/**
@@ -206,13 +208,16 @@ public class Main {
 	}
 	
 	/**
-	 * Assumes the global InfoFile is set.
+	 * Assumes the global SieveDocuments is initialized and loaded.
 	 * Run all sieves!! On all documents!!
 	 */
 	public void runSieves() {
 		runSieves(thedocs);
 	}
-    
+
+	/**
+	 * Run the sieve pipeline on the given documents.
+	 */
 	public void runSieves(SieveDocuments thedocs) {
 		// Remove all TLinks because we will add our own.
 		thedocs.removeAllTLinks();
@@ -226,10 +231,10 @@ public class Main {
 
 		// Statistics collection.
 		SieveStats stats[] = new SieveStats[sieveClasses.length];
-		Map<String, SieveStats> nameToStats = new HashMap<String, SieveStats>();
+		Map<String, SieveStats> sieveNameToStats = new HashMap<String, SieveStats>();
 		for( int i = 0; i < sieveClasses.length; i++ ) {
 			stats[i] = new SieveStats(sieveClasses[i]);
-			nameToStats.put(sieveClasses[i], stats[i]);
+			sieveNameToStats.put(sieveClasses[i], stats[i]);
 		}
 		
 		// Data
@@ -263,10 +268,12 @@ public class Main {
 					addProposedToCurrentList(sieveClasses[xx], newLinks, currentTLinks, currentTLinksHash);//currentTLinks.addAll(newLinks);
 
 					// Run Closure
-					List<TLink> closedLinks = closureExpand(sieveClasses[xx], currentTLinks, currentTLinksHash);
-					if( debug ) System.out.println("\t\tClosure produced " + closedLinks.size() + " links.");
-//					if( debug ) System.out.println("\t\tclosed=" + closedLinks);
-					stats[xx].addClosureCount(closedLinks.size());
+					if( useClosure ) {
+						List<TLink> closedLinks = closureExpand(sieveClasses[xx], currentTLinks, currentTLinksHash);
+						if( debug ) System.out.println("\t\tClosure produced " + closedLinks.size() + " links.");
+						//					if( debug ) System.out.println("\t\tclosed=" + closedLinks);
+						stats[xx].addClosureCount(closedLinks.size());
+					}
 				}
 				if( debug ) System.out.println("\t\tDoc now has " + currentTLinks.size() + " links.");
 			}
@@ -282,7 +289,7 @@ public class Main {
 		docs.writeToXML(new File(outpath));
 		
 		// Evaluate it if the input file had tlinks in it.
-		Evaluate.evaluate(thedocsUnchanged, docs, nameToStats);
+		Evaluate.evaluate(thedocsUnchanged, docs, sieveClasses, sieveNameToStats);
 	}
     
 	/**
