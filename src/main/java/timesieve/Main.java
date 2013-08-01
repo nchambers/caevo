@@ -556,7 +556,7 @@ public class Main {
 		for( TLink remove : removals )
 			proposedLinks.remove(remove);
 
-		return removals.size();
+		return removals.size() + duplicates;
 	}
 	
 	/**
