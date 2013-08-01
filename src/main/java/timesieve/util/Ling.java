@@ -13,6 +13,8 @@ import java.util.Set;
 import java.util.Vector;
 
 import timesieve.NERSpan;
+import timesieve.SieveSentence;
+import timesieve.TextEvent;
 
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.HasWord;
@@ -465,6 +467,28 @@ public class Ling {
     return false;
   }
 
+
+	/**
+	 * Find all events that are syntactically dominated by the given event. This finds the parse subtree where
+	 * the given event is root, and returns all events under that subtree.
+	 * @param sent The sentence in question.
+	 * @param event The event in question.
+	 * @return A List of TextEvents that are syntactically dominated.
+	 */
+	public static List<TextEvent> getAllDominatedEvents(SieveSentence sent, TextEvent event) {
+		List<TextEvent> dominated = new ArrayList<TextEvent>();
+		Pair<Integer,Integer> dominatedTokenSpan = TreeOperator.tokenSpanUnderIndex(sent.getParseTree(), event.getIndex());
+		
+		for( TextEvent childEvent : sent.events() ) {
+			if( event != childEvent && 
+					childEvent.getIndex() >= dominatedTokenSpan.first() && childEvent.getIndex() < dominatedTokenSpan.second() ) {
+				dominated.add(childEvent);
+			}
+		}
+		return dominated;
+	}
+
+	
   public static void main(String[] args) {
     System.out.println("88.4 " + Ling.isNumber("88.4"));
     System.out.println("47 1/2 " + Ling.isNumber("47 1/2"));

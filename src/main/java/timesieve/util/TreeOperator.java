@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.Vector;
 
+import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.ling.Label;
 import edu.stanford.nlp.ling.Word;
 import edu.stanford.nlp.ling.CoreAnnotations.CopyAnnotation;
 import edu.stanford.nlp.trees.GrammaticalRelation;
@@ -639,6 +641,26 @@ public class TreeOperator {
   		return shortestPath;
     	}
   	else return null;
+  }
+  
+  /**
+   * Given a token's index in a tree, treat that token as dominating everything under it in the 
+   * syntactic tree. Return the token index span of the subtree under that token.   * 
+   * @param tree The full sentence's tree.
+   * @param index A token's index.
+   * @return A [start,end) pair. The start index is inclusive, and the end index is exclusive.
+   */
+  public static Pair<Integer,Integer> tokenSpanUnderIndex(Tree tree, int index) {
+  	Tree subtree = indexToSubtree(tree, index);
+  	subtree = subtree.parent(tree);
+  	List<Label> yield = subtree.yield();
+  	if( yield != null ) {
+  		CoreLabel first = (CoreLabel)yield.get(0);
+  		CoreLabel last = (CoreLabel)yield.get(yield.size()-1);
+  		return new Pair<Integer,Integer>(first.index(), last.index()+1);
+  	}
+  	else 
+  		return null;
   }
 }
 
