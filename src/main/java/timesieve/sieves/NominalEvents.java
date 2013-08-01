@@ -13,8 +13,6 @@ import timesieve.Timex;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
-import timesieve.tlink.TLink.Type;
-import timesieve.util.Ling;
 import timesieve.util.Pair;
 import timesieve.util.TreeOperator;
 import edu.stanford.nlp.trees.Tree;
@@ -23,7 +21,7 @@ import edu.stanford.nlp.trees.TypedDependency;
 /**
  * This sieve deals with nominal events.
  * These are almost always vague without an understanding of the lexical semantics. We're stuck.
- * Therefore, this sieve does some very precise but rare things:
+ * In the end, this sieve does some very precise but RARE things:
  * 1. Timex modifiers for event-time links: "three-year war"
  * 2. Temporal prepositions for event-event links: "left after the bombing" 
  * 
@@ -63,14 +61,16 @@ public class NominalEvents implements Sieve {
 						TypedDependency dep = keytimex.second();
 						String reln = dep.reln().toString(); 
 
-						// "the two-hour meeting, two-week crisis, eight-year war"
+						// "the two-hour meeting", "two-week crisis", "eight-year war"
+						// (amod should be time duration modifiers, so these are simultaneous)
 						if( reln.equalsIgnoreCase("amod") ) proposed.add(new EventTimeLink(event.getEiid(), theTimex.getTid(), TLink.Type.SIMULTANEOUS));
 
-						// "Aug 9 power grab, Aug 17 cease fire"
+						// "Aug 9 power grab", "Aug 17 cease fire"
 						if( reln.equalsIgnoreCase("nn") ) proposed.add(new EventTimeLink(event.getEiid(), theTimex.getTid(), TLink.Type.IS_INCLUDED));
 
 						// "today's quiz"
 						if( reln.equalsIgnoreCase("poss") ) proposed.add(new EventTimeLink(event.getEiid(), theTimex.getTid(), TLink.Type.IS_INCLUDED));
+
 						// "kidnappings in recent years"
 						if( reln.equalsIgnoreCase("prep_in") ) proposed.add(new EventTimeLink(event.getEiid(), theTimex.getTid(), TLink.Type.IS_INCLUDED));
 					}
