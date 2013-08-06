@@ -485,19 +485,19 @@ private Timex getMostCommonTimexDay(SieveDocument doc) {
 		if (e1ContextSe2Context) { 
 			return compareContextsS(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
 		}
-		else if (e1ContextBe2Context) {
-			return compareContextsB(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
-		}
-		else if (e1ContextAe2Context) {
-			return compareContextsB(e2Past, e2Pres, e2Future, e2Perf, e2None, e1Past, e1Pres, e1Future, e1Perf, e1None);
-		}
-		else if (e1ContextAe2Context) {
-			return compareContextsI(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
-		}
-		else if (e1ContextAe2Context) {
-			return compareContextsI(e2Past, e2Pres, e2Future, e2Perf, e2None, e1Past, e1Pres, e1Future, e1Perf, e1None);
-		}
-		else return null;
+//		else if (e1ContextBe2Context) {
+//			return compareContextsB(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
+//		}
+//		else if (e1ContextAe2Context) {
+//			return compareContextsB(e2Past, e2Pres, e2Future, e2Perf, e2None, e1Past, e1Pres, e1Future, e1Perf, e1None);
+//		}
+//		else if (e1ContextAe2Context) {
+//			return compareContextsI(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
+//		}
+//		else if (e1ContextAe2Context) {
+//			return compareContextsI(e2Past, e2Pres, e2Future, e2Perf, e2None, e1Past, e1Pres, e1Future, e1Perf, e1None);
+//		}
+		else return compareContextsS(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
 	}
 	
 
@@ -513,57 +513,51 @@ private Timex getMostCommonTimexDay(SieveDocument doc) {
 	private Type compareContextsB(boolean e1Past, boolean e1Pres, boolean e1Future, boolean e1Perf, boolean e1None, boolean e2Past, boolean e2Pres, boolean e2Future, boolean e2Perf, boolean e2None) {
 
 		
-	// stats
-			if (e1Past && e1None && e2Past && e2None) return TLink.Type.BEFORE; // 
-	// stats
-			if (e1Past && e1None && e2Past && e2Perf) return null; // ambiguous...
-	// stats
-			if (e1Past && e1None && e2Pres && e2None) return TLink.Type.BEFORE; // Note: This implies there are two different speech times, right?
-  // stats
+	// 
+			if (e1Past && e1None && e2Past && e2Perf) return null;    
+	//
 			if (e1Past && e1None && e2Future && e2None) return TLink.Type.BEFORE;
-	// stats
+	//
 			if (e1Past && e1None && e2Future && e2Perf) return TLink.Type.BEFORE; 
 //			// e1 Past/Perf
-	// stats
+	//
 			if (e1Past && e1Perf && e2Past && e2None) return TLink.Type.BEFORE ;
-	// stats
+	//
 			if (e1Past && e1Perf && e2Pres && e2None) return TLink.Type.BEFORE;
-	// stats
+	// 
 			if (e1Past && e1Perf && e2Pres && e2Perf) return TLink.Type.BEFORE; 
-	// stats
+	//
 			if (e1Past && e1Perf && e2Future && e2None) return TLink.Type.BEFORE;
-	// stats
+	//
 			if (e1Past && e1Perf && e2Future && e2Perf) return TLink.Type.BEFORE;
 //			// e1 Pres/None
-// stats
-			if (e1Pres && e1None && e2Pres && e2None) return TLink.Type.BEFORE;;
-	// stats
-			if (e1Pres && e1None && e2Past && e2Perf) return null; //ambiguous
+	//
+			if (e1Pres && e1None && e2Past && e2Perf) return null;
 	//
 			if (e1Pres && e1None && e2Future && e2None) return TLink.Type.BEFORE; 
 //			// e1 Pres/Perf
-	//p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1; p=0.00	0 of 2	Non-VAGUE:	p=0.00	0 of 0; p=0.33	1 of 3	Non-VAGUE:	p=1.00	1 of 1
-			if (e1Pres && e1Perf && e2Past && e2Perf) return TLink.Type.AFTER;    
-	//p=0.50	1 of 2	Non-VAGUE:	p=1.00	1 of 1; p=0.64	7 of 11	Non-VAGUE:	p=1.00	7 of 7; p=0.62	8 of 13	Non-VAGUE:	p=1.00	8 of 8
+	//
+			if (e1Pres && e1Perf && e2Past && e2Perf) return null;    
+	//
 			if (e1Pres && e1Perf && e2Future && e2None) return TLink.Type.BEFORE;
-	//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0
+	//
 			if (e1Pres && e1Perf && e2Future && e2Perf) return TLink.Type.BEFORE;
 //			// e1 Future/None
-	//p=0.60	3 of 5	Non-VAGUE:	p=0.75	3 of 4; p=0.70	33 of 47	Non-VAGUE:	p=1.00	33 of 33; p=0.69	36 of 52	Non-VAGUE:	p=0.97	36 of 37; 
-			if (e1Future && e1None && e2Past && e2None) return TLink.Type.AFTER;
-	//p=0.67	2 of 3	Non-VAGUE:	p=1.00	2 of 2; p=0.71	5 of 7	Non-VAGUE:	p=1.00	5 of 5; p=0.70	7 of 10	Non-VAGUE:	p=1.00	7 of 7
-			if (e1Future && e1None && e2Past && e2Perf) return TLink.Type.AFTER; 
-	//p=0.25	1 of 4	Non-VAGUE:	p=0.50	1 of 2; p=0.38	5 of 13	Non-VAGUE:	p=1.00	5 of 5; p=0.35	6 of 17	Non-VAGUE:	p=0.86	6 of 7;
-	    if (e1Future && e1None && e2Pres && e2None) return TLink.Type.AFTER; 
-	//p=1.00	3 of 3	Non-VAGUE:	p=1.00	3 of 3; p=0.50	3 of 6	Non-VAGUE:	p=1.00	3 of 3; p=0.67	6 of 9	Non-VAGUE:	p=1.00	6 of 6
-	    if (e1Future && e1None && e2Pres && e2Perf) return TLink.Type.AFTER;
+	// 
+			if (e1Future && e1None && e2Past && e2None) return null;
+	//
+			if (e1Future && e1None && e2Past && e2Perf) return null; 
+	//
+	    if (e1Future && e1None && e2Pres && e2None) return null; 
+	//
+	    if (e1Future && e1None && e2Pres && e2Perf) return null;
 //			// e1 Future/Perf
-	//p=0.00	0 of 2	Non-VAGUE:	p=0.00	0 of 0; p=0.50	2 of 4	Non-VAGUE:	p=1.00	2 of 2; p=0.33	2 of 6	Non-VAGUE:	p=1.00	2 of 2
-			if (e1Future && e1Perf && e2Past && e2None) return TLink.Type.AFTER;  
-	//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1; p=1.00	1 of 1	Non-VAGUE:	p=1.00	1 of 1
-			if (e1Future && e1Perf && e2Past && e2Perf) return TLink.Type.AFTER;
-	//p=0.00	0 of 0	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 1	Non-VAGUE:	p=0.00	0 of 0; p=0.00	0 of 1	Non-VAGUE:	p=0.00	0 of 0
-			if (e1Future && e1Perf && e2Pres && e2Perf) return TLink.Type.AFTER;    //
+	//
+			if (e1Future && e1Perf && e2Past && e2None) return null;  
+	//
+			if (e1Future && e1Perf && e2Past && e2Perf) return null;
+	//
+			if (e1Future && e1Perf && e2Pres && e2Perf) return null;
 			else return null;
 		
 	}
@@ -578,6 +572,7 @@ private Timex getMostCommonTimexDay(SieveDocument doc) {
 		/ one relation (according to our task spec). 
 		/ See the table in the spreadsheet FreksaAllenUsInfo and mapping_FreksaAllenUs */
 		// e1 Past/None
+		
 // p=0.86	12 of 14	Non-VAGUE:	p=1.00	12 of 12; p=0.45	9 of 20	Non-VAGUE:	p=0.75	9 of 12; p=0.62	21 of 34	Non-VAGUE:	p=0.88	21 of 24
 		if (e1Past && e1None && e2Past && e2Perf) return TLink.Type.AFTER;    
 //p=0.83	35 of 42	Non-VAGUE:	p=0.92	35 of 38; p=0.55	29 of 53	Non-VAGUE:	p=0.97	29 of 30; p=0.67	64 of 95	Non-VAGUE:	p=0.94	64 of 68;
