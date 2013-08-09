@@ -94,6 +94,10 @@ public class TimeSieveProperties {
     properties.load(FileManager.getReader(filename));
     isLoaded = true;
   }
+  
+  public static boolean hasProperty(String key) {
+    return System.getProperty(key) != null || (properties != null && properties.containsKey(key));
+  }
 
   public static double getDouble(String key) throws IOException {
     if (!isLoaded) load();
