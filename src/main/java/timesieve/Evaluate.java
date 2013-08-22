@@ -1,5 +1,6 @@
 package timesieve;
 
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -310,6 +311,8 @@ public class Evaluate {
 		System.out.println("\nDetailed Sieve Stats");
 		for( String sieveName : sieveNames )
 			sieveStats.get(sieveName).printStats();
+		for( String sieveName : sieveNames )
+			sieveStats.get(sieveName).dumpStatsToFile();
 
 		// Calculate precision and output the sorted sieves.
 		int totalGuessed = numCorrect + numIncorrect;
@@ -344,7 +347,7 @@ public class Evaluate {
 
 		printBaseline(goldLabelCounts);
 		printDatasetStats(goldLabelCounts);
-		confusionMatrix(guessCounts);
+		printConfusionMatrix(guessCounts);
 		System.out.println("*********************************************************************\n");
 	}
 	
@@ -353,6 +356,9 @@ public class Evaluate {
 	 * Find the label with the most counts, and print the baseline if you always guessed that one.
 	 */
 	public static void printBaseline(Counter<TLink.Type> labelCounts) {
+		printBaseline(labelCounts, System.out);
+	}
+	public static void printBaseline(Counter<TLink.Type> labelCounts, PrintStream printer) {
 		double total = labelCounts.totalCount();
 		TLink.Type best = null;
 		double bestc = -1.0;
@@ -362,41 +368,47 @@ public class Evaluate {
 				best = label;
 			}
 		}
-		System.out.printf("Local Baseline (%s): precision = recall = F1 = %.3f\n", best, (bestc/total));		
+		printer.printf("Local Baseline (%s): precision = recall = F1 = %.3f\n", best, (bestc/total));		
 	}
 
 	/**
 	 * Print how many times each label is in the counts list.
 	 */
 	public static void printDatasetStats(Counter<TLink.Type> labelCounts) {
-		System.out.println("GOLD LABEL COUNTS (out of " + (int)labelCounts.totalCount() + ")");
+		printDatasetStats(labelCounts, System.out);
+	}
+	public static void printDatasetStats(Counter<TLink.Type> labelCounts, PrintStream printer) {
+		printer.println("GOLD LABEL COUNTS (out of " + (int)labelCounts.totalCount() + ")");
 		for( TLink.Type label : labels ) {
 			int numtabs = (label.toString().length() > 7 ? 1 : 2);
-			System.out.print(label + "\t");
-			if( numtabs == 2 ) System.out.print("\t");
-			System.out.printf("%d\t%.0f%%\n", (int)labelCounts.getCount(label), (100.0*labelCounts.getCount(label)/labelCounts.totalCount()));
+			printer.print(label + "\t");
+			if( numtabs == 2 ) printer.print("\t");
+			printer.printf("%d\t%.0f%%\n", (int)labelCounts.getCount(label), (100.0*labelCounts.getCount(label)/labelCounts.totalCount()));
 		}
 	}
-
+	
 	/**
-	 * Prin the confusion matrix for the 6 label types. Each String key should be a pair separated
+	 * Print the confusion matrix for the 6 label types. Each String key should be a pair separated
 	 * by a single space, representing a guess for a gold label: e.g., "before after" 
 	 * @param guessCounts Number of times each guessed label was made for each gold label.
 	 */
-	public static void confusionMatrix(Counter<String> guessCounts) {
+	public static void printConfusionMatrix(Counter<String> guessCounts) {
+		printConfusionMatrix(guessCounts, System.out);
+	}
+	public static void printConfusionMatrix(Counter<String> guessCounts, PrintStream printer) {
 		for( TLink.Type label2 : labels )
-			System.out.print("\t" + label2.toString().substring(0,Math.min(label2.toString().length(), 6)));
-		System.out.println("\t(guesses)");
+			printer.print("\t" + label2.toString().substring(0,Math.min(label2.toString().length(), 6)));
+		printer.println("\t(guesses)");
 		
 		for( TLink.Type label1 : labels ) {
-			System.out.print(label1.toString().substring(0, Math.min(label1.toString().length(), 6)) + "\t");
+			printer.print(label1.toString().substring(0, Math.min(label1.toString().length(), 6)) + "\t");
 			
 			for( TLink.Type label2 : labels ) {
 				if( guessCounts.containsKey(label1+" "+label2) )
-					System.out.print((int)guessCounts.getCount(label1+" "+label2) + "\t");
-				else System.out.print("0\t");
+					printer.print((int)guessCounts.getCount(label1+" "+label2) + "\t");
+				else printer.print("0\t");
 			}
-			System.out.println();
+			printer.println();
 		}
 	}
 	

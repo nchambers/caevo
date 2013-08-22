@@ -20,10 +20,12 @@ import timesieve.util.Pair;
  *  - Currently, all imprecision is due to incorrect annotations
  *  - Also orders all times with document creation time
  * 
+ * Chambers note: make sure DCT times are 24-hour periods as that is the annotation standard
+ *                This sieve uses what it gets, so change to 24-hours before calling it.
+ * 
  * Current results on various data sets:
- * 	- Train: p=0.88	52 of 59	Non-VAGUE:	p=0.95	52 of 55
- * 	- Dev: p=1.00	5 of 5	Non-VAGUE:	p=1.00	5 of 5
- * 	- All: p=0.89	57 of 64	Non-VAGUE:	p=0.95	57 of 60
+ * 	- Train: 0.920	 160 of 174
+ * 	- Dev:   0.882	 15 of 17
  * 
  * @author Bill McDowell
  */
@@ -97,6 +99,8 @@ public class TimeTimeSieve implements Sieve {
 		if (t2.getType() != Timex.Type.DATE && t2.getType() != Timex.Type.TIME)
 			return null;
 		
+//		System.out.println("Checking time-time: " + t1 + "\t" + t2);
+		
 		if (t1.isReference() || t2.isReference()) {
 			if (ct == null)
 				return null;
@@ -156,6 +160,8 @@ public class TimeTimeSieve implements Sieve {
 		interval1 = t1.getRange(ct);
 		interval2 = t2.getRange(ct);
 		
+//		System.out.println("\tintervals: " + interval1 + "\t" + interval2);
+		
 		if (interval1 == null || interval2 == null)
 			return null;
 		
@@ -184,7 +190,7 @@ public class TimeTimeSieve implements Sieve {
 		else
 			return null;
 
-		//System.out.println(timex1.value() + "\t" + timex2.value() + "\t" + lType);
+//		System.out.println(t1.getValue() + "\t" + t2.getValue() + "\t" + lType);
 		
 		return new TimeTimeLink(t1.getTid(), t2.getTid(), lType);
 	}

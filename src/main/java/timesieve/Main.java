@@ -67,7 +67,8 @@ public class Main {
 	String outpath = "sieve-output.xml";
 	boolean debug = true;
 	boolean useClosure = true;
-    
+	boolean force24hrDCT = true;  
+	
 	// Which dataset do we load?
   public static enum DatasetType { TRAIN, DEV, TEST, ALL };
   DatasetType dataset = DatasetType.TRAIN;
@@ -409,7 +410,7 @@ public class Main {
 		for( String key : sortedKeys ) {
 			System.out.println("**** " + key + "****");
 			Evaluate.printBaseline(goldLabelCounts.get(key));			
-			Evaluate.confusionMatrix(guessCounts.get(key));
+			Evaluate.printConfusionMatrix(guessCounts.get(key));
 		}
 	}
 
@@ -673,15 +674,33 @@ public class Main {
 		timexClassifier.markupTimex3();
 	}
 	
-	public static SieveDocuments getDataset(DatasetType type, SieveDocuments docs) {
+	public SieveDocuments getDataset(DatasetType type, SieveDocuments docs) {
+		SieveDocuments dataset;
 		if( type == DatasetType.TRAIN )
-			return Evaluate.getTrainSet(docs);
+			dataset = Evaluate.getTrainSet(docs);
 		else if( type == DatasetType.DEV )
-			return Evaluate.getDevSet(docs);
+			dataset = Evaluate.getDevSet(docs);
 		else if( type == DatasetType.TEST )
-			return Evaluate.getTestSet(docs);
+			dataset = Evaluate.getTestSet(docs);
 		else // ALL
-			return docs;
+			dataset = docs;
+		
+		// Fix DCTs that aren't 24-hour days.
+		if( force24hrDCT ) force24hrDCTs(docs);
+		
+		return dataset;
+	}
+	
+	private void force24hrDCTs(SieveDocuments docs) {
+		if( docs != null ) {
+			for( SieveDocument doc : docs.getDocuments() ) {
+				List<Timex> dcts = doc.getDocstamp();
+				if( dcts != null ) {
+					for( Timex dct : dcts )
+						Util.force24hrTimex(dct);
+				}
+			}
+		}
 	}
 	
 	/**

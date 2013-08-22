@@ -20,6 +20,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.zip.GZIPInputStream;
 
+import timesieve.Timex;
+
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.io.IOUtils;
 import edu.stanford.nlp.stats.Counter;
@@ -28,6 +30,16 @@ import edu.stanford.nlp.stats.Counter;
 public class Util {
   public Util() { }
 
+  public static void force24hrTimex(Timex timex) {
+  	String value = timex.getValue();
+  	if( !timex.isReference() ) {
+  		if( value.matches("^\\d\\d\\d\\d-\\d\\d-\\d\\d.+") ) {
+  			System.out.println("Changing timex " + value + " to " + value.substring(0, 10));
+  			timex.setValue(value.substring(0, 10));
+  		}
+  	}
+  }
+  
   /**
    * Read a single serialized classifier into memory.
    * @param url The path to the model. 

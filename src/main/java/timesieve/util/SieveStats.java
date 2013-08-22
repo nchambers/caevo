@@ -1,5 +1,7 @@
 package timesieve.util;
 
+import java.io.File;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +14,13 @@ import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
 
+/**
+ * Class to hold all links that are guessed by a specific sieve, as well as
+ * compute its statistics for printing/saving.
+ * 
+ * @author chambers
+ *
+ */
 public class SieveStats {
 	String sieveName = "";
 	List<TLink> correctLinks = new ArrayList<TLink>();
@@ -19,6 +28,9 @@ public class SieveStats {
 	List<TLink> lonelyLinks = new ArrayList<TLink>();
 	Counter<String> guessCounts = new ClassicCounter<String>();
 	int numProposed = 0, numRemoved = 0, numFromClosure = 0;
+	
+	String statsOutputDir = "sievestats";
+	
 	
 	public SieveStats() { }
 	
@@ -120,22 +132,23 @@ public class SieveStats {
 	}
 	
 	public void printStats() {
-		System.out.println("=======================================");
-		System.out.println("-------- " + sieveName + " --------");
+		printStats(System.out);
+	}
+	
+	public void printStats(PrintStream printer) {
+		printer.println("=======================================");
+		printer.println("-------- " + sieveName + " --------");
 
 		// Basic stats.
-		System.out.println("Total # of links proposed:\t" + numProposed);
-		System.out.println("Links ignored:\t" + numRemoved);
-		System.out.println("Links produced from closure:\t" + numFromClosure);
-		System.out.println("Links not in gold:\t" + lonelyLinks.size());
+		printer.println("Total # of links proposed:\t" + numProposed);
+		printer.println("Links ignored:\t" + numRemoved);
+		printer.println("Links produced from closure:\t" + numFromClosure);
+		printer.println("Links not in gold:\t" + lonelyLinks.size());
 		
-//		System.out.println("Correct links: " + correctLinks);
-//		System.out.println("Incorrect links: " + incorrectLinks);
-			
 		// Overall precision.
 		double totalGuessed = correctLinks.size() + incorrectLinks.size();
 		double precision = correctLinks.size() / totalGuessed;
-		System.out.printf("PRECISION (overall):\t%.2f\t(%d of %d)\n", precision, (int)correctLinks.size(), (int)totalGuessed);
+		printer.printf("PRECISION (overall):\t%.2f\t(%d of %d)\n", precision, (int)correctLinks.size(), (int)totalGuessed);
 
 		// Raw vs Closure precision.
 		double closedCorrect = numCorrectFromClosure();
@@ -144,8 +157,8 @@ public class SieveStats {
 		double totalUnclosed = totalGuessed - totalClosed;
 		double closedP = (totalClosed == 0.0 ? 0.0 : closedCorrect / totalClosed);
 		double unclosedP = (totalUnclosed == 0.0 ? 0.0 : unclosedCorrect / totalUnclosed);
-		System.out.printf("\tnon-closed:\t%.2f\t(%d of %d)\n", unclosedP, (int)unclosedCorrect, (int)totalUnclosed);
-		System.out.printf("\tclosed:\t\t%.2f\t(%d of %d)\n", closedP, (int)closedCorrect, (int)totalClosed);
+		printer.printf("\tnon-closed:\t%.2f\t(%d of %d)\n", unclosedP, (int)unclosedCorrect, (int)totalUnclosed);
+		printer.printf("\tclosed:\t\t%.2f\t(%d of %d)\n", closedP, (int)closedCorrect, (int)totalClosed);
 		
 		// Precision by tlink type.
 		Counter<String> correctTyped = correctByLinkType();
@@ -154,9 +167,38 @@ public class SieveStats {
 			double tcorrect = correctTyped.getCount(type);
 			double ttotal = totalTyped.getCount(type);
 			double tprecision = (ttotal == 0.0 ? 0.0 : tcorrect / ttotal);
-			System.out.printf("PRECISION %s:\t%.2f\t(%d of %d)\n", type, tprecision, (int)tcorrect, (int)ttotal);
+			printer.printf("PRECISION %s:\t%.2f\t(%d of %d)\n", type, tprecision, (int)tcorrect, (int)ttotal);
 		}
 		
-		Evaluate.confusionMatrix(guessCounts);
+		Evaluate.printConfusionMatrix(guessCounts, printer);
+		printer.flush();
+	}
+	
+	/**
+	 * Create a file with the statistics for this sieve including all guessed links.
+	 */
+	public void dumpStatsToFile() {
+		try {
+			// Create the directory to store the .stats file, if it doesn't yet exist.
+			if( !(new File(statsOutputDir)).exists() )
+				new File(statsOutputDir).mkdir();
+			
+			PrintStream writer = new PrintStream(new File(statsOutputDir + File.separator + this.sieveName + ".stats"));
+
+      // Print the summary statistics.
+      printStats(writer);
+      
+      // Print the individual TLinks that were guessed.
+      writer.print("CORRECT LINKS (" + correctLinks.size() + ")\n");
+      for( TLink link : correctLinks )
+      	writer.print(link.getDocument().getDocname() + "\t" + link + "\n");
+      
+      writer.print("INCORRECT LINKS (" + incorrectLinks.size() + ")\n");
+      for( TLink link : incorrectLinks ) 
+      	writer.print(link.getDocument().getDocname() + "\t" + link + "\t (orig=" + link.getOriginalRelation() + ")\n");
+      
+      writer.flush();
+      writer.close();
+    } catch( Exception ex ) { ex.printStackTrace(); }
 	}
 }
