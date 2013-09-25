@@ -93,6 +93,7 @@ public class Main {
 			debug = TimeSieveProperties.getBoolean("Main.debug", debug);
 			useClosure = TimeSieveProperties.getBoolean("Main.closure", useClosure);
 			dataset = DatasetType.valueOf(TimeSieveProperties.getString("Main.dataset", dataset.toString()).toUpperCase());
+			force24hrDCT = TimeSieveProperties.getBoolean("Main.force24hrdct", force24hrDCT);
 		} catch (IOException e) { e.printStackTrace(); }
         
 		// -info on the command line?
