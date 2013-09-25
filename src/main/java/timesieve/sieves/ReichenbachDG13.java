@@ -325,10 +325,10 @@ private HashMap<TextEvent, ArrayList<Timex>> getEventGovernsTimexMapping(SieveDo
 private Timex getDct(SieveDocument doc) {
 	List<Timex> dctList = doc.getDocstamp();
 	Timex dct;
-	if (dctList.size() > 1) {
+	if (dctList != null && dctList.size() > 1) {
 		dct = Timex.dctDayTimex(dctList.get(0));
 	}
-	else if (dctList.size() == 1) {
+	else if (dctList != null && dctList.size() == 1) {
 		dct = Timex.dctDayTimex(dctList.get(0));
 	}
 	else {
