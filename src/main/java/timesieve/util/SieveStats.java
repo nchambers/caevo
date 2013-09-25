@@ -190,12 +190,25 @@ public class SieveStats {
       
       // Print the individual TLinks that were guessed.
       writer.print("CORRECT LINKS (" + correctLinks.size() + ")\n");
-      for( TLink link : correctLinks )
-      	writer.print(link.getDocument().getDocname() + "\t" + link + "\n");
+      for( TLink link : correctLinks ) {
+      	String eiid1 = link.getId1();
+      	String eiid2 = link.getId2();
+//      	writer.print(link.getDocument().getDocname() + "\t" + link + "\n");
+      	writer.print(link.getDocument().getDocname() + "\t");
+      	if( eiid1.startsWith("t") ) writer.print(eiid1);
+      	else writer.print(link.getDocument().getEventByEiid(link.getId1()));
+      	writer.print("\t");
+      	if( eiid2.startsWith("t") ) writer.print(eiid2);
+      	else writer.print(link.getDocument().getEventByEiid(link.getId2()) + "\t=" + link.getRelation());
+      	writer.print("\n");
+      }
+      
       
       writer.print("INCORRECT LINKS (" + incorrectLinks.size() + ")\n");
       for( TLink link : incorrectLinks ) 
-      	writer.print(link.getDocument().getDocname() + "\t" + link + "\t (orig=" + link.getOriginalRelation() + ")\n");
+      	writer.print(link.getDocument().getDocname() + "\t" + link.getDocument().getEventByEiid(link.getId1()) + "\t" +
+      			link.getDocument().getEventByEiid(link.getId2()) + "\t=" + link.getRelation() + "\n");
+//      	writer.print(link.getDocument().getDocname() + "\t" + link + "\t (orig=" + link.getOriginalRelation() + ")\n");
       
       writer.flush();
       writer.close();
