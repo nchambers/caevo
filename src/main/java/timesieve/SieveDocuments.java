@@ -68,7 +68,9 @@ public class SieveDocuments {
 
   public void addDocument(SieveDocument doc) {
   	if( documents == null ) documents = new ArrayList<SieveDocument>();
+	if( nameToDocument == null ) nameToDocument = new HashMap<String,SieveDocument>();
   	documents.add(doc);
+	nameToDocument.put(doc.getDocname(), doc);
   }
   
   public void readFromXML(String path) {
