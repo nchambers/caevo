@@ -56,8 +56,16 @@
 				</descriptorRefs>
 			</configuration>
 		</plugin>
-	<plugin>
-
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.17</version>
+			<configuration>
+				<environmentVariables>
+					<JWNL>${project.basedir}/src/test/resources/jwnl_file_properties.xml</JWNL>
+				</environmentVariables>
+			</configuration>
+		</plugin>
 	</plugins>
 	</build>
 </project>
