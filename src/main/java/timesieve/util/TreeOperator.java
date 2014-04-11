@@ -1,6 +1,7 @@
 package timesieve.util;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -423,11 +424,20 @@ public class TreeOperator {
    * Build the Tree object from its string form.
    */
   public static Tree stringToTree(String str, TreeFactory tf) {
-    try {
-      PennTreeReader ptr = new PennTreeReader(new BufferedReader(new StringReader(str)), tf);
+    PennTreeReader ptr = null;
+  	try {
+      ptr = new PennTreeReader(new BufferedReader(new StringReader(str)), tf);
       Tree parseTree = ptr.readTree();
       return parseTree;
     } catch( Exception ex ) { ex.printStackTrace(); }
+  	finally {
+  		if (ptr != null)
+				try {
+					ptr.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+  	}
     return null;
   }
 

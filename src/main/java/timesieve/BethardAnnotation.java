@@ -2,6 +2,7 @@ package timesieve;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -46,8 +47,9 @@ public class BethardAnnotation {
     System.out.println("Loading Bethard data from " + path);
     _docTLinks = new HashMap<String,List<TLink>>();
     
+    BufferedReader in = null;
     try {
-      BufferedReader in = new BufferedReader(new FileReader(path));
+      in = new BufferedReader(new FileReader(path));
       String line;
       while ((line = in.readLine()) != null) {
         if( !line.startsWith("#") ) {
@@ -66,6 +68,13 @@ public class BethardAnnotation {
     } catch (Exception ex) {
       ex.printStackTrace();
       System.exit(-1);      
+    } finally {
+    	if (in != null)
+				try {
+					in.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
     }
   }
 }
