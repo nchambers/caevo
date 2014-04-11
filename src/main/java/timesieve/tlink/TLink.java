@@ -302,11 +302,11 @@ public class TLink implements Comparable<TLink> {
 
 	public static TLink clone(TLink link) {
 		TLink linkclone = null;
-		if( linkclone instanceof EventEventLink )
+		if( link instanceof EventEventLink )
 			linkclone = new EventEventLink(link.getId1(), link.getId2(), link.getRelation());
-		else if( linkclone instanceof EventTimeLink )
+		else if( link instanceof EventTimeLink )
 			linkclone = new EventTimeLink(link.getId1(), link.getId2(), link.getRelation());
-		else if( linkclone instanceof TimeTimeLink )
+		else if( link instanceof TimeTimeLink )
 			linkclone = new TimeTimeLink(link.getId1(), link.getId2(), link.getRelation());
 		else
 			linkclone = new TLink(link.getId1(), link.getId2(), link.getRelation());

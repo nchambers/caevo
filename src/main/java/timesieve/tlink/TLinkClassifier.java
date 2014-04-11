@@ -362,7 +362,6 @@ public class TLinkClassifier {
   public List<TLinkDatum> createDatasetEventDCTExists(SieveDocuments docs, Set<String> docnames) {
     System.out.println("createDataset Event DCT Exists");
     List<TLinkDatum> alldata = new ArrayList<TLinkDatum>();
-    TreeFactory tf = new LabeledScoredTreeFactory();
 
     for( SieveDocument doc : docs.getDocuments() ) {
       if( docnames == null || docnames.contains(doc.getDocname()) ) {
@@ -415,7 +414,6 @@ public class TLinkClassifier {
   public List<TLinkDatum> createDatasetEventEventSameSentExists(SieveDocuments docs, Set<String> docnames) {
     System.out.println("createDataset Event Event Same Sent Exists");
     List<TLinkDatum> alldata = new ArrayList<TLinkDatum>();
-    TreeFactory tf = new LabeledScoredTreeFactory();
 
     for( SieveDocument doc : docs.getDocuments() ) {
       if( docnames == null || docnames.contains(doc.getDocname()) ) {
@@ -470,7 +468,6 @@ public class TLinkClassifier {
   public List<TLinkDatum> createDatasetEventTimeSameSentExists(SieveDocuments docs, Set<String> docnames) {
     System.out.println("createDataset Event Time Same Sent Exists");
     List<TLinkDatum> alldata = new ArrayList<TLinkDatum>();
-    TreeFactory tf = new LabeledScoredTreeFactory();
 
     for( SieveDocument doc : docs.getDocuments() ) {
       if( docnames == null || docnames.contains(doc.getDocname()) ) {

@@ -236,7 +236,6 @@ public class TextEventClassifier {
     RVFDataset<String, String> tenseDataset  = new RVFDataset<String, String>();
     RVFDataset<String, String> aspectDataset = new RVFDataset<String, String>();
     RVFDataset<String, String> classDataset  = new RVFDataset<String, String>();
-    TreeFactory tf = new LabeledScoredTreeFactory();
 
     for( SieveDocument doc : docs.getDocuments() ) {
       if( docnames == null || docnames.contains(doc.getDocname()) ) {

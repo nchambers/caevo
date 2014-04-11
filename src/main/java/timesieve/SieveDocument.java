@@ -450,11 +450,9 @@ public class SieveDocument {
   	SieveDocument newdoc = new SieveDocument(docname);
   	
     Namespace ns = Namespace.getNamespace(SieveDocuments.INFO_NS);
-    SAXBuilder builder = new SAXBuilder();
     try {
     	// Sentences
       List<Element> sentElems = el.getChildren(SieveDocuments.ENTRY_ELEM, ns);
-      List<List<TextEvent>> allEvents = new ArrayList<List<TextEvent>>();
       for( Element sentenceObj : sentElems ) {
       	SieveSentence sent = SieveSentence.fromXML(sentenceObj);
       	sent.setParent(newdoc);
