@@ -7,11 +7,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import edu.stanford.nlp.classify.Classifier;
-import edu.stanford.nlp.io.IOUtils;
-import edu.stanford.nlp.ling.RVFDatum;
-import edu.stanford.nlp.trees.Tree;
-
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
@@ -25,6 +20,10 @@ import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.TimebankUtil;
 import timesieve.util.Util;
+import edu.stanford.nlp.classify.Classifier;
+import edu.stanford.nlp.io.IOUtils;
+import edu.stanford.nlp.ling.RVFDatum;
+import edu.stanford.nlp.trees.Tree;
 
 /**
  * Machine learned event-event pairs that are in a syntactic domination relationship.

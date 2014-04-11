@@ -5,14 +5,13 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.stanford.nlp.stats.ClassicCounter;
-import edu.stanford.nlp.stats.Counter;
-
 import timesieve.Evaluate;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
+import edu.stanford.nlp.stats.ClassicCounter;
+import edu.stanford.nlp.stats.Counter;
 
 /**
  * Class to hold all links that are guessed by a specific sieve, as well as

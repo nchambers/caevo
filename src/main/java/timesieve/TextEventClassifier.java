@@ -12,6 +12,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import timesieve.util.Directory;
+import timesieve.util.HandleParameters;
+import timesieve.util.Ling;
+import timesieve.util.TreeOperator;
+import timesieve.util.Util;
+import timesieve.util.WordNet;
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.classify.LinearClassifierFactory;
 import edu.stanford.nlp.classify.RVFDataset;
@@ -29,13 +35,6 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeFactory;
 import edu.stanford.nlp.trees.TreebankLanguagePack;
 import edu.stanford.nlp.trees.TypedDependency;
-
-import timesieve.util.Directory;
-import timesieve.util.HandleParameters;
-import timesieve.util.Ling;
-import timesieve.util.TreeOperator;
-import timesieve.util.Util;
-import timesieve.util.WordNet;
 
 /**
  * Featurizes single tokens for the task of determining EVENT or NOT EVENT.

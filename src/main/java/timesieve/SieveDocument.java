@@ -12,12 +12,13 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
-import timesieve.tlink.*;
-
 import org.jdom.Element;
 import org.jdom.Namespace;
-import org.jdom.input.SAXBuilder;
 
+import timesieve.tlink.EventEventLink;
+import timesieve.tlink.EventTimeLink;
+import timesieve.tlink.TLink;
+import timesieve.tlink.TimeTimeLink;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.trees.Tree;
@@ -224,7 +225,7 @@ public class SieveDocument {
   /**
 	 * @return A List of TLink objects Event-Event, no Event-Time links
 	 */
-	public List<TLink> getTlinksOfType(Class linkClass) {
+	public List<TLink> getTlinksOfType(Class<?> linkClass) {
 		List<TLink> keep = new ArrayList<TLink>();
 	  for( TLink link : tlinks ) {
 	  	if( link.getClass().equals(linkClass) )

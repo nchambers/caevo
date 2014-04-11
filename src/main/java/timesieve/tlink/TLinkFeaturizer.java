@@ -7,22 +7,27 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import net.didion.jwnl.data.POS;
+import net.didion.jwnl.data.Synset;
+import timesieve.Main;
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
+import timesieve.TextEvent;
+import timesieve.Timex;
+import timesieve.util.HandleParameters;
+import timesieve.util.TimebankUtil;
+import timesieve.util.TreeOperator;
+import timesieve.util.WordNet;
 import edu.stanford.nlp.stats.ClassicCounter;
 import edu.stanford.nlp.stats.Counter;
 import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeFactory;
 import edu.stanford.nlp.trees.TypedDependency;
-
-import timesieve.*;
-import timesieve.util.*;
-
-import net.didion.jwnl.data.POS;
-import net.didion.jwnl.data.Synset;
 
 /**
  * This is the NEWEST (2012) best code to learn from TimeBank annotations.
@@ -334,7 +339,7 @@ public class TLinkFeaturizer {
     // Change to TempEval labels.
     if( _tempeval2Mode ) {
       link.fullToTempeval();
-      link.changeMode(TLink.Mode.TEMPEVAL);
+      TLink.changeMode(TLink.Mode.TEMPEVAL);
     }
     
     // EVENT-EVENT links.
@@ -365,7 +370,7 @@ public class TLinkFeaturizer {
       } else if( link.getId1().startsWith("t") ) {
         event = doc.getEventByEiid(link.getId2());
         timex = doc.getTimexByTid(link.getId1());
-        label = link.invertRelation(label); // Always make it the (e,t) relation, not the (t,e) relation.
+        label = EventTimeLink.invertRelation(label); // Always make it the (e,t) relation, not the (t,e) relation.
       } else {
         System.out.println("TLinkFeaturizer: Don't know how to handle this event id: " + link.getId1());
         System.exit(1);

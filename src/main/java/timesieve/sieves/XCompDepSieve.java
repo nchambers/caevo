@@ -4,23 +4,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.trees.GrammaticalRelation;
-import edu.stanford.nlp.trees.Tree;
-import edu.stanford.nlp.trees.TreeGraphNode;
-import edu.stanford.nlp.trees.TypedDependency;
-
-import timesieve.Main;
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
 import timesieve.TextEvent;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
-
 import timesieve.util.TimeSieveProperties;
-import timesieve.util.TreeOperator;
 import timesieve.util.TimebankUtil;
+import timesieve.util.TreeOperator;
+import edu.stanford.nlp.trees.Tree;
+import edu.stanford.nlp.trees.TypedDependency;
 
 /**
  * 

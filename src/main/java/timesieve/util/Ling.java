@@ -15,16 +15,14 @@ import java.util.Vector;
 import timesieve.NERSpan;
 import timesieve.SieveSentence;
 import timesieve.TextEvent;
-
-import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.Word;
-import edu.stanford.nlp.process.TokenizerFactory;
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
 import edu.stanford.nlp.process.DocumentPreprocessor;
 import edu.stanford.nlp.process.PTBTokenizer;
-import edu.stanford.nlp.process.Tokenizer;
 import edu.stanford.nlp.process.PTBTokenizer.PTBTokenizerFactory;
+import edu.stanford.nlp.process.Tokenizer;
+import edu.stanford.nlp.process.TokenizerFactory;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TypedDependency;
 
@@ -287,7 +285,7 @@ public class Ling {
     List<List<HasWord>> sentences = new ArrayList<List<HasWord>>();
     StringReader reader = new StringReader(str);
     DocumentPreprocessor dp = new DocumentPreprocessor(reader);
-    TokenizerFactory factory = null;
+    TokenizerFactory<? extends HasWord> factory = null;
 
     if( invertible ) {
       factory = PTBTokenizer.factory(true, true);

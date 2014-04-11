@@ -2,8 +2,8 @@ package timesieve.tlink;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Set;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import edu.stanford.nlp.ling.BasicDatum;
 import edu.stanford.nlp.ling.RVFDatum;

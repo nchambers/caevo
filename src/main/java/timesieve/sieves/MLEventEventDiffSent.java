@@ -4,10 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.stanford.nlp.classify.Classifier;
-import edu.stanford.nlp.io.IOUtils;
-import edu.stanford.nlp.ling.RVFDatum;
-
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
@@ -20,6 +16,9 @@ import timesieve.tlink.TLinkFeaturizer;
 import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.Util;
+import edu.stanford.nlp.classify.Classifier;
+import edu.stanford.nlp.io.IOUtils;
+import edu.stanford.nlp.ling.RVFDatum;
 
 /**
  * Machine learned event-event pairs inter-sentence (one sentence away).

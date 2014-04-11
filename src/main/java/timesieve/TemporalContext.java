@@ -7,7 +7,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import timesieve.util.TreeOperator;
-
 import edu.stanford.nlp.trees.TypedDependency;
 
 public class TemporalContext {

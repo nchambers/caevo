@@ -1,7 +1,8 @@
 package timesieve.tlink;
 
 
-import org.jdom.*;
+import org.jdom.Element;
+import org.jdom.Namespace;
 
 import timesieve.TextEvent;
 import timesieve.Timex;

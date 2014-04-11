@@ -9,14 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import edu.stanford.nlp.classify.Classifier;
-import edu.stanford.nlp.io.IOUtils;
-import edu.stanford.nlp.ling.RVFDatum;
-import edu.stanford.nlp.stats.ClassicCounter;
-import edu.stanford.nlp.stats.Counter;
-import edu.stanford.nlp.trees.Tree;
-
-import timesieve.Main;
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
@@ -30,6 +22,12 @@ import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.TimebankUtil;
 import timesieve.util.Util;
+import edu.stanford.nlp.classify.Classifier;
+import edu.stanford.nlp.io.IOUtils;
+import edu.stanford.nlp.ling.RVFDatum;
+import edu.stanford.nlp.stats.ClassicCounter;
+import edu.stanford.nlp.stats.Counter;
+import edu.stanford.nlp.trees.Tree;
 
 /**
  * Machine learned event-event pairs intra-sentence.
@@ -47,8 +45,6 @@ public class MLEventEventSameSent implements Sieve {
 	Map<TLink.Type,Classifier<String,String>> binaryLabelClassifiers;
 	
   Classifier<String,String> eeSameSentExistsClassifier = null; // binary, is there a link or not?
-  Classifier<String,String> eeSameSentDominatesClassifier = null;   // intra-sentence, event-event syntactically dominates
-  Classifier<String,String> eeSameSentNoDominatesClassifier = null; // intra-sentence, event-event no syntactically dominates
   TLinkFeaturizer featurizer;
   
   TLink.Type[] labels = { TLink.Type.BEFORE, TLink.Type.AFTER, TLink.Type.INCLUDES, TLink.Type.IS_INCLUDED, TLink.Type.SIMULTANEOUS, TLink.Type.VAGUE };
@@ -166,12 +162,14 @@ public class MLEventEventSameSent implements Sieve {
     	targetClassifier = binaryLabelClassifiers.get(TLink.Type.valueOf(doBinaryLabel));
     
     // Use 2 classifiers for event-event links. One for syntactic dominance, the other for general.
-    if( eesplit ) {
-    	if( featurizer.oneEventDominates(event1, event2, trees) )
-    		targetClassifier = eeSameSentDominatesClassifier;
-    	else
-    		targetClassifier = eeSameSentNoDominatesClassifier;
-    }
+    // This just sets 'targetClassifier' to null. Maintaining in case someone
+    // wants to actually fix the implementation.
+//    if( eesplit ) {
+//    	if( featurizer.oneEventDominates(event1, event2, trees) )
+//    		targetClassifier = eeSameSentDominatesClassifier;
+//    	else
+//    		targetClassifier = eeSameSentNoDominatesClassifier;
+//    }
 
     // Get the best label and its probability.
     TLinkDatum datum = featurizer.createEventEventDatum(doc, event1, event2, null);

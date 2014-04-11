@@ -21,7 +21,6 @@ import java.util.Set;
 import java.util.zip.GZIPInputStream;
 
 import timesieve.Timex;
-
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.io.IOUtils;
 import edu.stanford.nlp.stats.Counter;

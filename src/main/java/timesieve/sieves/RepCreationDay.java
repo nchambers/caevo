@@ -3,24 +3,16 @@ package timesieve.sieves;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
-import timesieve.SieveSentence;
-import timesieve.InfoFile;
-import timesieve.Sentence;
 import timesieve.TextEvent;
 import timesieve.Timex;
 import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
 import timesieve.util.TimeSieveProperties;
-import timesieve.util.TreeOperator;
-
-import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
-import edu.stanford.nlp.trees.Tree;
-import edu.stanford.nlp.trees.TreeFactory;
 
 /**
  *This sieve returns IS_INCLUDED for an event/timex pair of 

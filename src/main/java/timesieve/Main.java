@@ -21,7 +21,6 @@ import timesieve.util.SieveStats;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.Util;
 import timesieve.util.WordNet;
-
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
 import edu.stanford.nlp.stats.ClassicCounter;
 import edu.stanford.nlp.stats.Counter;

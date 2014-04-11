@@ -10,10 +10,10 @@ import java.util.List;
 import java.util.Set;
 import java.util.Vector;
 
+import edu.stanford.nlp.ling.CoreAnnotations.CopyAnnotation;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.Label;
 import edu.stanford.nlp.ling.Word;
-import edu.stanford.nlp.ling.CoreAnnotations.CopyAnnotation;
 import edu.stanford.nlp.trees.GrammaticalRelation;
 import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
 import edu.stanford.nlp.trees.PennTreeReader;

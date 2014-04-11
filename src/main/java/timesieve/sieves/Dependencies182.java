@@ -3,23 +3,14 @@ package timesieve.sieves;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.stanford.nlp.trees.DependencyFactory;
-import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
-import edu.stanford.nlp.trees.TreeFactory;
-import edu.stanford.nlp.trees.TypedDependency;
-
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
-import timesieve.InfoFile;
-import timesieve.Sentence;
 import timesieve.TextEvent;
-import timesieve.Timex;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
-import timesieve.tlink.TimeTimeLink;
-
 import timesieve.util.TreeOperator;
+import edu.stanford.nlp.trees.TypedDependency;
 
 /**
  * 

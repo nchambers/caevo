@@ -11,10 +11,10 @@ import edu.stanford.nlp.pipeline.AnnotationPipeline;
 import edu.stanford.nlp.pipeline.POSTaggerAnnotator;
 import edu.stanford.nlp.pipeline.PTBTokenizerAnnotator;
 import edu.stanford.nlp.pipeline.WordsToSentencesAnnotator;
+import edu.stanford.nlp.time.Options.RelativeHeuristicLevel;
 import edu.stanford.nlp.time.SUTimeMain;
 import edu.stanford.nlp.time.TimeAnnotations;
 import edu.stanford.nlp.time.TimeAnnotator;
-import edu.stanford.nlp.time.Options.RelativeHeuristicLevel;
 import edu.stanford.nlp.util.CoreMap;
 
 

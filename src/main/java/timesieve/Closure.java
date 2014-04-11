@@ -13,7 +13,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
-import timesieve.tlink.*;
+import timesieve.tlink.EventEventLink;
+import timesieve.tlink.EventTimeLink;
+import timesieve.tlink.TLink;
+import timesieve.tlink.TimeTimeLink;
 
 /**
  * Class to compute closure over a set of temporal relations.

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import timesieve.tlink.*;
+import timesieve.tlink.TLink;
 
 /**
  * A simple interface to read Steven Bethard's annotation of TimeBank.

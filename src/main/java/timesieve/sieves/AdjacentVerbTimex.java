@@ -3,7 +3,8 @@ package timesieve.sieves;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
@@ -14,7 +15,6 @@ import timesieve.tlink.EventTimeLink;
 import timesieve.tlink.TLink;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.TreeOperator;
-
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.trees.GrammaticalRelation;
 import edu.stanford.nlp.trees.Tree;

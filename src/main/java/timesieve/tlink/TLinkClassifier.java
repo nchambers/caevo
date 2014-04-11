@@ -13,13 +13,17 @@ import java.util.PriorityQueue;
 import java.util.Properties;
 import java.util.Set;
 
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
+import timesieve.Tester;
+import timesieve.TextEvent;
+import timesieve.Timex;
 import timesieve.util.ClassifiedDatum;
-import timesieve.util.Pair;
 import timesieve.util.HandleParameters;
-import timesieve.util.TreeOperator;
+import timesieve.util.Pair;
 import timesieve.util.TimebankUtil;
-import timesieve.*;
-
+import timesieve.util.TreeOperator;
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.classify.Dataset;
 import edu.stanford.nlp.classify.GeneralDataset;
@@ -31,9 +35,7 @@ import edu.stanford.nlp.stats.ClassicCounter;
 import edu.stanford.nlp.stats.Counter;
 import edu.stanford.nlp.stats.Counters;
 import edu.stanford.nlp.stats.PrecisionRecallStats;
-import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
 import edu.stanford.nlp.trees.Tree;
-import edu.stanford.nlp.trees.TreeFactory;
 import edu.stanford.nlp.trees.TypedDependency;
 import edu.stanford.nlp.util.StringUtils;
 
@@ -595,7 +597,7 @@ public class TLinkClassifier {
           if( !_etDeterministic ) {
             for( TextEvent event : events ) {
               TLinkDatum datum = featurizer.createEventTimeDatum(doc, event, timex, null);
-              RVFDatum rvf = datum.createRVFDatum();
+              RVFDatum<String, String> rvf = datum.createRVFDatum();
               String label = eeSameSentExistsClassifier.classOf(rvf);
               if( TLink.Type.valueOf(label) == TLink.Type.OVERLAP ) {
                 Pair<String,Double> labelProb = getLabelProb(etSameSentClassifier, rvf);

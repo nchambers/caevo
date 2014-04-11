@@ -1,8 +1,5 @@
 package timesieve.annotate;
 
-import timesieve.*;
-import timesieve.tlink.*;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -16,6 +13,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import timesieve.Closure;
+import timesieve.tlink.EventEventLink;
+import timesieve.tlink.EventTimeLink;
+import timesieve.tlink.TLink;
+import timesieve.tlink.TimeTimeLink;
 
 /**
  * Reads an HTML file from the TimeBank online browser. Prints all pairs of events/times that

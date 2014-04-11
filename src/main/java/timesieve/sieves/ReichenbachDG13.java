@@ -5,25 +5,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
-import edu.stanford.nlp.trees.Tree;
-import edu.stanford.nlp.trees.TypedDependency;
-
-import timesieve.InfoFile;
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
 import timesieve.TextEvent;
-import timesieve.TemporalContext;
 import timesieve.Timex;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TLink.Type;
 import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
-import timesieve.util.TreeOperator;
 import timesieve.util.TimebankUtil;
+import timesieve.util.TreeOperator;
+import edu.stanford.nlp.trees.Tree;
+import edu.stanford.nlp.trees.TypedDependency;
 
 /**
  * update to ReichenbachDG13 that uses "temporal context" mapping; to be merged...
@@ -112,28 +108,28 @@ public class ReichenbachDG13 implements Sieve {
 			}
 		}
 		
-		if (this.analysis == true) {
-			if (true) {//doc.getDocname().equals("APW19980219.0476.tml")
-				// tlinks only contain event ids, so we need mapping from event id to TextEvent
-				HashMap<String, TextEvent> idToEvent = new HashMap<String, TextEvent>();
-				for (int sid = 0; sid < eventsBySentId.size(); sid++) {
-					for (TextEvent event : eventsBySentId.get(sid)) {
-						idToEvent.put(event.getEiid(), event);
-						idToEvent.put(event.getId(), event);
-					}
-				}
-				if (debug) {
-				for (TLink tlink : proposed) {
-					TextEvent e1 = idToEvent.get(tlink.getId1());
-					TextEvent e2 = idToEvent.get(tlink.getId2());
-					System.out.printf("\ndoc:%s\nTLINK: %s(%s; t:%s  a:%s  c:%s) %s %s(%s; t:%s  a:%s  c:%s)\nSentence1: %s\nSentence2: %s\n", doc.getDocname(),
-														e1.getString(), e1.getId(), e1.getTense(), e1.getAspect(), eventToContext.get(e1).get(0).getValue(), tlink.getRelation().name(), 
-														e2.getString(), e2.getId(), e2.getTense(), e2.getAspect(), eventToContext.get(e2).get(0).getValue(), 
-														sents.get(e1.getSid()).sentence(), sents.get(e2.getSid()).sentence());
-			 }
-			}
-		 }
-		}
+//		if (ReichenbachDG13.analysis == true) {
+//			if (true) {//doc.getDocname().equals("APW19980219.0476.tml")
+//				// tlinks only contain event ids, so we need mapping from event id to TextEvent
+//				HashMap<String, TextEvent> idToEvent = new HashMap<String, TextEvent>();
+//				for (int sid = 0; sid < eventsBySentId.size(); sid++) {
+//					for (TextEvent event : eventsBySentId.get(sid)) {
+//						idToEvent.put(event.getEiid(), event);
+//						idToEvent.put(event.getId(), event);
+//					}
+//				}
+//				if (debug) {
+//				for (TLink tlink : proposed) {
+//					TextEvent e1 = idToEvent.get(tlink.getId1());
+//					TextEvent e2 = idToEvent.get(tlink.getId2());
+//					System.out.printf("\ndoc:%s\nTLINK: %s(%s; t:%s  a:%s  c:%s) %s %s(%s; t:%s  a:%s  c:%s)\nSentence1: %s\nSentence2: %s\n", doc.getDocname(),
+//														e1.getString(), e1.getId(), e1.getTense(), e1.getAspect(), eventToContext.get(e1).get(0).getValue(), tlink.getRelation().name(), 
+//														e2.getString(), e2.getId(), e2.getTense(), e2.getAspect(), eventToContext.get(e2).get(0).getValue(), 
+//														sents.get(e1.getSid()).sentence(), sents.get(e2.getSid()).sentence());
+//			 }
+//			}
+//		 }
+//		}
 		
 		return proposed;
 	}
@@ -173,7 +169,7 @@ public class ReichenbachDG13 implements Sieve {
 			for (int i = 0; i < eventsBySentId.get(sid).size(); i++) {
 				if (sameSentence == true) {
 					for (int j = i + 1; j < eventsBySentId.get(sid).size(); j++) {
-						eventPairs.add( new Pair(eventsBySentId.get(sid).get(i), eventsBySentId.get(sid).get(j)) );
+						eventPairs.add( new Pair<TextEvent, TextEvent>(eventsBySentId.get(sid).get(i), eventsBySentId.get(sid).get(j)) );
 					}
 				}
 				// get all pairs between (1) each event in sid, and (2) each event in all subsequent sentences
@@ -182,7 +178,7 @@ public class ReichenbachDG13 implements Sieve {
 				int sid2Cieling = Math.min(sid + sentWindow + 1, eventsBySentId.size());
 				for (int sid2 = sid + 1; sid2 < sid2Cieling; sid2++) {
 					for (int k = 0; k < eventsBySentId.get(sid2).size(); k++) {
-						eventPairs.add( new Pair(eventsBySentId.get(sid).get(i), eventsBySentId.get(sid2).get(k)) );
+						eventPairs.add( new Pair<TextEvent, TextEvent>(eventsBySentId.get(sid).get(i), eventsBySentId.get(sid2).get(k)) );
 					}
 				}
 			}

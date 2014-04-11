@@ -1,8 +1,9 @@
 package timesieve.tlink;
 
-import org.jdom.*;
+import org.jdom.Element;
 import org.jdom.Namespace;
-import timesieve.*;
+
+import timesieve.TextEvent;
 
 public class EventEventLink extends TLink {
 

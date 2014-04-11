@@ -15,9 +15,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
-import timesieve.util.*;
-import timesieve.tlink.*;
-
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.Namespace;
@@ -25,6 +22,13 @@ import org.jdom.input.SAXBuilder;
 import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 
+import timesieve.tlink.EventEventLink;
+import timesieve.tlink.EventTimeLink;
+import timesieve.tlink.TLink;
+import timesieve.tlink.TimeTimeLink;
+import timesieve.util.TimebankUtil;
+import timesieve.util.TreeOperator;
+import timesieve.util.Util;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.stats.ClassicCounter;

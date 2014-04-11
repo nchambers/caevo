@@ -1,11 +1,12 @@
 package timesieve;
 
-import org.jdom.*;
-
-import edu.stanford.nlp.ling.CoreLabel;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.jdom.Element;
+import org.jdom.Namespace;
+
+import edu.stanford.nlp.ling.CoreLabel;
 
 /**
  * Represents a sentence in a document, including the following data:

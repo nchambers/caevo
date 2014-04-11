@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Set;
 
 import timesieve.util.ClassifiedDatum;
-
 import edu.stanford.nlp.stats.PrecisionRecallStats;
 import edu.stanford.nlp.util.StringUtils;
 

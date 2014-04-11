@@ -6,8 +6,6 @@ import java.util.List;
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
-import timesieve.InfoFile;
-import timesieve.Sentence;
 import timesieve.TextEvent;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;

@@ -1,7 +1,9 @@
 package timesieve.tlink;
 
-import org.jdom.*;
-import timesieve.*;
+import org.jdom.Element;
+import org.jdom.Namespace;
+
+import timesieve.SieveDocument;
 
 
 public class TLink implements Comparable<TLink> {

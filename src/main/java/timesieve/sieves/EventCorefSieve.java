@@ -1,16 +1,13 @@
 package timesieve.sieves;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
-import timesieve.SieveSentence;
 import timesieve.TextEvent;
-import timesieve.tlink.TLink;
 import timesieve.tlink.EventEventLink;
-import timesieve.util.TimeSieveProperties;
+import timesieve.tlink.TLink;
 
 /**
  * EventCorefSieve labels pairs of coreferent event mentions as simultaneous.  The coreference is determined

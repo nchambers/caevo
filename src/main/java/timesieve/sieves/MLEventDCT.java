@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.stanford.nlp.classify.Classifier;
-import edu.stanford.nlp.io.IOUtils;
-
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.SieveSentence;
@@ -21,6 +18,8 @@ import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.TimebankUtil;
 import timesieve.util.Util;
+import edu.stanford.nlp.classify.Classifier;
+import edu.stanford.nlp.io.IOUtils;
 
 /**
  * Machine learned event-DCT pairs.

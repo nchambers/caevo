@@ -1,18 +1,18 @@
 package timesieve;
 
-import org.jdom.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.jdom.Element;
+import org.jdom.Namespace;
 
 import timesieve.util.TreeOperator;
-
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeFactory;
 import edu.stanford.nlp.trees.TypedDependency;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Represents a sentence in a document, including the following data:

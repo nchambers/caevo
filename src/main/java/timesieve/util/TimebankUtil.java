@@ -7,24 +7,28 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import timesieve.tlink.*;
-import timesieve.util.TreeOperator;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node; // yes?
-import org.w3c.dom.Text; // yes?
 import org.w3c.dom.NodeList; // yes?
+import org.w3c.dom.Text; // yes?
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
+import timesieve.BethardAnnotation;
+import timesieve.SieveDocument;
+import timesieve.SieveDocuments;
+import timesieve.SieveSentence;
+import timesieve.TextEvent;
+import timesieve.Timex;
+import timesieve.tlink.EventEventLink;
+import timesieve.tlink.EventTimeLink;
+import timesieve.tlink.TLink;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.trees.TreeGraphNode;
 import edu.stanford.nlp.trees.TypedDependency;
-
-import timesieve.*;
 
 public class TimebankUtil {
   

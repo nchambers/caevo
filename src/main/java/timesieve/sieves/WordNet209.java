@@ -6,25 +6,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
-import edu.stanford.nlp.trees.Tree;
-import edu.stanford.nlp.trees.TreeFactory;
-
 import net.didion.jwnl.data.POS;
-import net.didion.jwnl.data.Synset;
-
+import timesieve.Main;
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
-import timesieve.SieveSentence;
-import timesieve.InfoFile;
-import timesieve.Sentence;
 import timesieve.TextEvent;
 import timesieve.Timex;
 import timesieve.tlink.EventEventLink;
 import timesieve.tlink.TLink;
 import timesieve.tlink.TimeTimeLink;
-import timesieve.util.*;
-import timesieve.Main;
+import timesieve.util.TimeSieveProperties;
+import timesieve.util.TreeOperator;
+import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
+import edu.stanford.nlp.trees.Tree;
+import edu.stanford.nlp.trees.TreeFactory;
 
 /**
  * This Sieve labels event-event and time-time pairs based on whether

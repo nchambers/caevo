@@ -1,9 +1,6 @@
 package timesieve;
 
 import java.io.File;
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -19,13 +16,22 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
-import edu.stanford.nlp.util.StringUtils;
+import timesieve.tlink.EventEventLink;
+import timesieve.tlink.EventTimeLink;
+import timesieve.tlink.TLink;
+import timesieve.tlink.TLinkClassifier;
+import timesieve.tlink.TimeTimeLink;
+import timesieve.util.Directory;
+import timesieve.util.HandleParameters;
+import timesieve.util.Ling;
+import timesieve.util.Pair;
+import timesieve.util.TimebankUtil;
+import timesieve.util.TreeOperator;
+import timesieve.util.Util;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.HasWord;
-import edu.stanford.nlp.ling.CoreAnnotations.TextAnnotation;
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
-import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.AnnotationPipeline;
 import edu.stanford.nlp.trees.GrammaticalStructure;
 import edu.stanford.nlp.trees.GrammaticalStructureFactory;
@@ -33,20 +39,9 @@ import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
 import edu.stanford.nlp.trees.PennTreebankLanguagePack;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeFactory;
-import edu.stanford.nlp.trees.TreePrint;
 import edu.stanford.nlp.trees.TreebankLanguagePack;
 import edu.stanford.nlp.trees.TypedDependency;
-import edu.stanford.nlp.util.ArrayCoreMap;
-import edu.stanford.nlp.util.CoreMap;
-
-import timesieve.util.Pair;
-import timesieve.util.Directory;
-import timesieve.util.HandleParameters;
-import timesieve.util.Ling;
-import timesieve.util.TimebankUtil;
-import timesieve.util.TreeOperator;
-import timesieve.util.Util;
-import timesieve.tlink.*;
+import edu.stanford.nlp.util.StringUtils;
 
 /**
  * @author chambers
@@ -260,7 +255,7 @@ public class Tempeval3Parser {
         train.add(names.get(xx));
     }
 
-    return new Pair(train, test);
+    return new Pair<Set<String>, Set<String>>(train, test);
   }
   
   /**

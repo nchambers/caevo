@@ -6,21 +6,20 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import edu.stanford.nlp.classify.Classifier;
-import edu.stanford.nlp.io.IOUtils;
-import edu.stanford.nlp.ling.RVFDatum;
-
 import timesieve.SieveDocument;
 import timesieve.SieveDocuments;
 import timesieve.TextEvent;
 import timesieve.TextEventPairPattern;
-import timesieve.tlink.TLink;
 import timesieve.tlink.EventEventLink;
+import timesieve.tlink.TLink;
 import timesieve.tlink.TLinkClassifier;
 import timesieve.tlink.TLinkDatum;
 import timesieve.util.Pair;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.Util;
+import edu.stanford.nlp.classify.Classifier;
+import edu.stanford.nlp.io.IOUtils;
+import edu.stanford.nlp.ling.RVFDatum;
 
 /**
  *  MLVagueSieve learns a maximum entropy model which uses features representing the classes, tenses, 
