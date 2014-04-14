@@ -40,6 +40,11 @@ public class AllVagueSieve implements Sieve {
 //			System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
 			proposed.addAll(allPairs(allEvents.get(sid), (sid+1 < allEvents.size() ? allEvents.get(sid+1) : null), 
 					allTimexes.get(sid), (sid+1 < allTimexes.size() ? allTimexes.get(sid+1) : null)));
+			
+			proposed.addAll(allEventDCTPairs(allEvents.get(sid), doc.getDocstamp().get(0)));
+			proposed.addAll(allTimeDCTPairs(allTimexes.get(sid), doc.getDocstamp().get(0)));
+
+			//System.out.println("added links: " + proposed);
 			sid++;
 		}
 
@@ -47,8 +52,31 @@ public class AllVagueSieve implements Sieve {
 	}
 
 	/**
+	 * Labels as vague all event-DCT links.
+	 * @return List of new TLink links.
+	 */
+	private List<TLink> allTimeDCTPairs(List<Timex> timexes, Timex dct) {
+		List<TLink> proposed = new ArrayList<TLink>();
+		for( Timex timex : timexes )
+			proposed.add(new EventTimeLink(timex.getTid(), dct.getTid(), TLink.Type.VAGUE));
+		return proposed;
+	}
+	
+	/**
+	 * Labels as vague all event-DCT links.
+	 * @return List of new TLink links.
+	 */
+	private List<TLink> allEventDCTPairs(List<TextEvent> events, Timex dct) {
+		List<TLink> proposed = new ArrayList<TLink>();
+		for( TextEvent event : events )
+			proposed.add(new EventTimeLink(event.getEiid(), dct.getTid(), TLink.Type.VAGUE));
+		return proposed;
+	}
+	
+	/**
 	 * Labels as vague all pairs of intra-sentence event-event, event-time, and time-time links.
 	 * Also labels all pairs of adjacent sentence event-event, event-time, and time-time links.
+	 * @return List of new TLink links.
 	 */
 	private List<TLink> allPairs(List<TextEvent> events, List<TextEvent> nextSentEvents, List<Timex> timexes, List<Timex> nextSentTimexes) {
 		List<TLink> proposed = new ArrayList<TLink>();
