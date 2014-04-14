@@ -56,7 +56,7 @@ public class RepEventGovEvent implements Sieve {
 						
 						if (relation != null) {
 							proposed.add(new EventEventLink(govEvent.getEiid(), depEvent.getEiid(), relation));
-							System.out.println("GOVDEP:\t\t" + new EventEventLink(govEvent.getEiid(), depEvent.getEiid(), relation));
+//							System.out.println("GOVDEP:\t\t" + new EventEventLink(govEvent.getEiid(), depEvent.getEiid(), relation));
 						}
 					}
 				}
@@ -81,7 +81,7 @@ public class RepEventGovEvent implements Sieve {
 						// only 1 instance of govTense=FUTURE in TimeBank
 						if (relation != null) {
 							proposed.add(new EventEventLink(govEvent.getEiid(), depEvent.getEiid(), relation));
-							System.out.println("DOMINATED:\t" + new EventEventLink(govEvent.getEiid(), depEvent.getEiid(), relation));
+//							System.out.println("DOMINATED:\t" + new EventEventLink(govEvent.getEiid(), depEvent.getEiid(), relation));
 						}
 					}
 				}
