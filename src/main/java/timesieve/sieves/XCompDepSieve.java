@@ -17,6 +17,9 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TypedDependency;
 
 /**
+ * This sieve deals with event pairs in various dependency relationships.
+ * It looks for two events where a single dependency relation connects them.
+ * Various methods handle the different relations: xcomp, ccomp, nsubj, dep, etc.
  * 
  * CURRENT STATUS
  * outputs information: for each event pair where one governs the other via xcomp, 
@@ -26,8 +29,6 @@ import edu.stanford.nlp.trees.TypedDependency;
  * TODO tweak features that are printed out; e.g. at least print out the lemma of the word
  * 			anything else?
  * 
- * This sieve deals with event pairs in a dependency relationship,
- * when one of the verbs is a reporting verb.
  * 
  * 07/15/2013
  * train:
