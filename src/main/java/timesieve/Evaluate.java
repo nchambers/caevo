@@ -210,6 +210,37 @@ public class Evaluate {
 		}
 	}
 	
+	private static String determineLinkType(TLink link) {
+		if( link.getId1().startsWith("e") && link.getId2().startsWith("e") )
+			return "EELink";
+		if( (link.getId1().startsWith("e") && link.getId2().equals("t0")) ||
+				(link.getId1().equals("t0") && link.getId2().startsWith("e")) )
+			return "EDCTLink";
+		if( (link.getId1().startsWith("e") && link.getId2().startsWith("t")) ||
+				(link.getId1().startsWith("t") && link.getId2().startsWith("e")) )
+			return "ETLink";
+		if( link.getId1().startsWith("t") && link.getId2().startsWith("t") )
+			return "TTLink";
+
+		return "GeneralTLink"; 
+				
+		/*
+		if( link.getId1().startsWith("e") && link.getId2().startsWith("e") ) {
+			if( link.getDocument().getEventByEiid(link.getId1()).getSid() == link.getDocument().getEventByEiid(link.getId2()).getSid() )
+				return "InterSentEELink";
+			else
+				return "IntraSentEELink";
+		}
+		if( (link.getId1().startsWith("e") && link.getId2().startsWith("t")) ||
+				(link.getId1().startsWith("t") && link.getId2().startsWith("e")) ) {
+			if( link.getDocument().getEventByEiid(link.getId1()).getSid() == link.getDocument().getEventByEiid(link.getId2()).getSid() )
+				return "InterSentEELink";
+			else
+				return "IntraSentEELink";
+		}
+		*/
+	}
+	
 	/**
 	 * Full evaluation of guesses to gold links. This penalizes guesses for not labeling everything.
 	 * The goldDocs and guessedDocs should cover the same docs.
@@ -221,6 +252,8 @@ public class Evaluate {
 	public static void evaluate(SieveDocuments goldDocs, SieveDocuments guessedDocs, String[] sieveNames, Map<String,SieveStats> sieveStats) {
 		Counter<String> guessCounts = new ClassicCounter<String>();
 		Counter<TLink.Type> goldLabelCounts = new ClassicCounter<TLink.Type>();
+		Counter<String> breakdownNumCorrect = new ClassicCounter<String>();
+		Counter<String> breakdownNumIncorrect = new ClassicCounter<String>();
 		int numCorrect = 0;
 		int numCorrectNonVague = 0;
 		int numIncorrect = 0;
@@ -246,8 +279,10 @@ public class Evaluate {
 			// Gold links.
 			List<TLink> goldLinks = goldDoc.getTlinksNoClosures();
 			Map<String, TLink> goldPairLookup = new HashMap<String, TLink>();
-			for (TLink tlink : goldLinks) 
+			for (TLink tlink : goldLinks) {
 				goldPairLookup.put(tlink.getId1() + "," + tlink.getId2(), tlink);
+				goldLabelCounts.incrementCount(tlink.getRelation());
+			}
 			
 			// Run it.
 			List<TLink> proposed = guessedDoc.getTlinks();
@@ -259,13 +294,14 @@ public class Evaluate {
 
 				if( goldLink != null ) {
 					guessCounts.incrementCount(goldLink.getRelation()+" "+pp.getRelation());
-					goldLabelCounts.incrementCount(goldLink.getRelation());
 					seenGoldLinks.add(pp.getId1() + "," + pp.getId2());
 				}
 
 				// Guessed link is correct!
 				if( Evaluate.isLinkCorrect(pp, goldLinks) ) {
 					numCorrect++;
+					breakdownNumCorrect.incrementCount(pp.isFromClosure() ? "closed" : "notclosed");
+					breakdownNumCorrect.incrementCount(determineLinkType(pp));
 					if (!pp.getRelation().equals(TLink.Type.VAGUE)) {
 						numCorrectNonVague++;
 					}
@@ -279,6 +315,8 @@ public class Evaluate {
 				// (if there's no human annotation, we don't know if it's right or wrong)
 				else if (goldLink != null) {
 					numIncorrect++;
+					breakdownNumIncorrect.incrementCount(pp.isFromClosure() ? "closed" : "notclosed");
+					breakdownNumIncorrect.incrementCount(determineLinkType(pp));
 					if (!goldLink.getRelation().equals(TLink.Type.VAGUE)) {
 						numIncorrectNonVague++;
 					}
@@ -345,9 +383,23 @@ public class Evaluate {
 				f1NonVague);
 		System.out.println();
 
+		System.out.printf("Links directly from sieves: %.0f correct\t%.0f incorrect\t P=%.3f\n", breakdownNumCorrect.getCount("notclosed"), breakdownNumIncorrect.getCount("notclosed"),
+				breakdownNumCorrect.getCount("notclosed")/(breakdownNumCorrect.getCount("notclosed")+breakdownNumIncorrect.getCount("notclosed")));
+		System.out.printf("Links from transitivity:    %.0f correct\t%.0f incorrect\t P=%.3f\n", breakdownNumCorrect.getCount("closed"), breakdownNumIncorrect.getCount("closed"),
+				breakdownNumCorrect.getCount("closed")/(breakdownNumCorrect.getCount("closed")+breakdownNumIncorrect.getCount("closed")));
+
+		for( String key : breakdownNumCorrect.keySet() )
+			System.out.printf("Links from %s:\ttotal=%.0f\tP=%.0f/%.0f = %.3f\tR=%.0f/%d = %.3f\n", key, breakdownNumCorrect.getCount(key) + breakdownNumIncorrect.getCount(key),
+					breakdownNumCorrect.getCount(key), breakdownNumCorrect.getCount(key) + breakdownNumIncorrect.getCount(key),
+					breakdownNumCorrect.getCount(key)/(breakdownNumCorrect.getCount(key)+breakdownNumIncorrect.getCount(key)),
+					breakdownNumCorrect.getCount(key), totalGold, breakdownNumCorrect.getCount(key)/totalGold
+					);
+
+		
 		printBaseline(goldLabelCounts);
 		printDatasetStats(goldLabelCounts);
 		printConfusionMatrix(guessCounts);
+		printPerRelationPRF(guessCounts, goldLabelCounts);
 		System.out.println("*********************************************************************\n");
 	}
 	
@@ -409,6 +461,40 @@ public class Evaluate {
 				else printer.print("0\t");
 			}
 			printer.println();
+		}
+	}
+	
+	/**
+	 * Print the confusion matrix for the 6 label types. Each String key should be a pair separated
+	 * by a single space, representing a guess for a gold label: e.g., "before after" 
+	 * @param guessCounts Number of times each guessed label was made for each gold label.
+	 */
+	public static void printPerRelationPRF(Counter<String> guessCounts, Counter<TLink.Type> goldLabelCounts) {
+		printPerRelationPRF(guessCounts, goldLabelCounts, System.out);
+	}
+	public static void printPerRelationPRF(Counter<String> guessCounts, Counter<TLink.Type> goldLabelCounts, PrintStream printer) {
+		printer.println("-------------------------------\nPer Relation P/R/F1");
+		for( TLink.Type label1 : labels ) {
+			printer.print(label1.toString().substring(0, Math.min(label1.toString().length(), 6)) + "\t");
+			
+			double correct = guessCounts.getCount(label1+" "+label1);
+			double totalPossible = goldLabelCounts.getCount(label1);
+			double totalGuessed  = 0.0;
+			
+//			for( TLink.Type label2 : labels ) {
+//				if( guessCounts.containsKey(label1+" "+label2) )
+//					totalPossible += guessCounts.getCount(label1+" "+label2);
+//			}
+
+			for( TLink.Type label2 : labels ) {
+				if( guessCounts.containsKey(label2+" "+label1) )
+					totalGuessed += guessCounts.getCount(label2+" "+label1);
+			}
+
+			double precision = correct / totalGuessed;
+			double recall    = correct / totalPossible;
+			double f1 			 = (precision + recall > 0 ? 2.0 * precision * recall / (precision + recall) : 0.0);
+			printer.println(String.format("p=%.2f\tr=%.2f\tf1=%.2f\tcorrect=%.0f\tguessed=%.0f\tpossible=%.0f", precision, recall, f1, correct, totalGuessed, totalPossible));
 		}
 	}
 	
