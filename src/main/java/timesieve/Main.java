@@ -21,6 +21,7 @@ import timesieve.util.SieveStats;
 import timesieve.util.TimeSieveProperties;
 import timesieve.util.Util;
 import timesieve.util.WordNet;
+
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
 import edu.stanford.nlp.stats.ClassicCounter;
 import edu.stanford.nlp.stats.Counter;
@@ -320,10 +321,12 @@ public class Main {
 		for( String sc : sieveClasses ) goldLabelCounts.put(sc, new ClassicCounter<TLink.Type>());
 		Map<String,Counter<String>> guessCounts = new HashMap<String,Counter<String>>();
 		for( String sc : sieveClasses ) guessCounts.put(sc, new ClassicCounter<String>());
-        
+    int totalGoldLinks = 0;
 		
 		// Loop over documents.
 		for( SieveDocument doc : docs.getDocuments() ) {
+//			Set<String> seenGolds = new HashSet<String>();
+			
 			System.out.println("doc: " + doc.getDocname());
 			List<SieveSentence> sents = doc.getSentences();
 			// Gold links.
@@ -333,7 +336,9 @@ public class Main {
 //				System.out.println("adding gold: " + tlink + " order=" + TLink.orderedIdPair(tlink));
 				goldOrderedIdPairs.put(TLink.orderedIdPair(tlink), tlink);
 			}
-            
+			totalGoldLinks += goldOrderedIdPairs.size();
+      if( debug ) System.out.println("Gold links num=" + goldLinks.size() + " or num=" + goldOrderedIdPairs.size());      
+			
 			// Loop over sieves.
 			for( int xx = 0; xx < sieveClasses.length; xx++ ) {
 				String sieveName = sieveClasses[xx];
@@ -342,9 +347,9 @@ public class Main {
                     
 					// Run it.
 					List<TLink> proposed = sieve.annotate(doc, currentTLinks);
-					if( debug ) System.out.println(sieveName + " proposed: " + proposed);
+					if( debug ) System.out.println(sieveName + " proposed " + proposed.size() + ": " + proposed);
 					removeDuplicatesAndInvalids(proposed);
-                    
+					
 					// Check proposed links.
 					if( proposed != null ) {
 						for( TLink pp : proposed ) {
@@ -355,6 +360,9 @@ public class Main {
 							if( goldLink != null ) {
 								guessCounts.get(sieveName).incrementCount(goldLink.getOrderedRelation()+" "+pp.getOrderedRelation());
 								goldLabelCounts.get(sieveName).incrementCount(goldLink.getRelation());
+								
+//								seenGolds.add(goldLink.getId1() + goldLink.getId2());
+//								seenGolds.add(goldLink.getId2() + goldLink.getId1());
 							}
 
 							// Guessed link is correct!
@@ -383,7 +391,16 @@ public class Main {
 					}
 				}
 			}
+			
+			
+			// Check for missed golds.
+//			for (TLink tlink : goldLinks) {
+//				if( !seenGolds.contains(tlink.getId1() + tlink.getId2()) ) {
+//					System.out.println("ERROR: gold link not proposed: " + tlink);
+//				}
+//			}
 		}
+
 		
 		// Calculate precision and output the sorted sieves.
 		Counter<String> precision = new ClassicCounter<String>();
@@ -403,8 +420,9 @@ public class Main {
 			int numtabs = Math.max(1, 4 - key.length() / 8);
 			System.out.print(key);
 			for( int tt = 0; tt < numtabs; tt++ ) System.out.print("\t");
-			System.out.printf("p=%.2f\t%.0f of %.0f\tNon-VAGUE:\tp=%.2f\t%.0f of %.0f\n",
+			System.out.printf("p=%.2f\t%.0f of %.0f\tr=%.2f from %d\tNon-VAGUE:\tp=%.2f\t%.0f of %.0f\n",
                               precision.getCount(key), correct, correct + numIncorrect.getCount(key),
+                              (correct / totalGoldLinks), (int)totalGoldLinks,
                               precisionNonVague.getCount(key), correct, correct + numIncorrectNonVague.getCount(key));
 		}
 		for( String key : sortedKeys ) {
