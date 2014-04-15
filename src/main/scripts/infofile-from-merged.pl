@@ -2,6 +2,16 @@
 #
 # infofile-from-merged.pl <infofile> <merged-file>
 #
+# Reads a .info file that contains document markup.
+# Reads a single TLINK annotation file that contains only TLINK labels.
+# Outputs the same .info file, but with <TLINK> XML elements that correspond
+# to the annotation file's contents.
+#
+# This is typically run with a full .info file and the alldocs.merged file
+# from the TimeBank-Dense annotation directory. This alldocs.merged file 
+# contains all labels from all documents.
+#
+#
 
 if( scalar(@ARGV) < 2 ) {
     print "infofile-from-merged.pl <infofile> <alldocs.merged>\n";
@@ -23,6 +33,9 @@ sub getRelation {
     if( $short =~ /^ii$/ ) { return "IS_INCLUDED"; }
     if( $short =~ /^s$/ ) { return "SIMULTANEOUS"; }
     if( $short =~ /^v$/ ) { return "VAGUE"; }
+    if( $short =~ /^mv$/ ) { return "MUTUAL_VAGUE"; }
+    if( $short =~ /^pv$/ ) { return "PARTIAL_VAGUE"; }
+    if( $short =~ /^nv$/ ) { return "NONE_VAGUE"; }
 
     print "Unknown relation: $short\n";
     return "null";
@@ -87,13 +100,13 @@ while( $line = <IN> ) {
 	    if( $events[1] =~ /^t/ ) { $tid2 = $tids{$events[1]}; }
 
 	    if( !$eiid1 ) { 
-#		print "Unknown eiid1 from $events[0]\n"; 
+		print "Unknown eiid1 from $events[0]\n"; 
 	    }
 	    elsif( !$eiid2 ) {
-#		print "Unknown eiid2 from $events[1]\n"; 
+		print "Unknown eiid2 from $events[1]\n"; 
 	    }
             elsif( !$tid1 || !$tid2 ) {
-#		print "Unknown tid $tid1 or $tid2 from $events[0] or $events[1]\n"; 
+		print "Unknown tid $tid1 or $tid2 from $events[0] or $events[1]\n"; 
             }
 	    else {
 		my $type = "ee";

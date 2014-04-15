@@ -2,7 +2,7 @@
 #
 # This is the main script that was used to merge annotations.
 # It reads a directory of individual annotation files.
-# Produces a new directory of merged annotations that came from the same documents.
+# It produces a new directory of merged annotations that came from the same documents.
 #
 # ASSUMES THAT ANNOTATION FILES HAVE THE SAME NUMBER OF LINES WITH THE SAME EVENT PAIR
 # ON EACH LINE.
@@ -10,9 +10,12 @@
 # merge-annotations-keeporder.pl <dir>
 #
 
-my $outdir = "merged";
+my $outdir = "merged-new";
 mkdir($outdir);
 
+my $agreedVague = 0;
+my $notAgreedWithVague = 0;
+my $notAgreedNoVague = 0;
 
 # Put the relations into a hash table, key is the pair "e3 e15" and the value is the relation "b".
 sub readRelations {
@@ -54,6 +57,13 @@ sub readRelations {
     return \@rels;
 }
 
+
+# Main Program
+if( scalar @ARGV == 0 ) {
+    print "merge-annotations-keeporder.pl <annotation-dir>\n";
+    exit;
+}
+
 my $dir = $ARGV[0];
 
 opendir(DIR, $dir) || die "Can't open $dir ($!)\n";
@@ -69,6 +79,7 @@ closedir(DIR);
 
 # Do each document.
 open(OUTALL, ">$outdir/alldocs.merged") || die "Can't open for writing ($!)\n";
+open(OUTVAGUEALL, ">$outdir/alldocs.finegrainvague.merged") || die "Can't open for writing ($!)\n";
 foreach $docname (keys %docs) {
     print "DOCUMENT $docname\n";
     my @annotators = keys %{$docs{$docname}};
@@ -82,6 +93,7 @@ foreach $docname (keys %docs) {
     for( my $ii = 0; $ii < scalar @pairs; $ii++ ) {
 	my $pair = $pairs[$ii][0];
 	my %counts = ();
+        my $hasvague = 0;
 
 	for( my $xx = 0; $xx < $numAnnotators; $xx++ ) {
 	    my $thispair = $docs{$docname}{$annotators[$xx]}[$ii][0];
@@ -96,12 +108,28 @@ foreach $docname (keys %docs) {
 	my $foundone = 0;
 	foreach $label (keys %counts) {
 	    if( $counts{$label} > ($numAnnotators / 2) ) {
-		print OUT "$pair\t$label\n";
-		print OUTALL "$docname\t$pair\t$label\n";
 		$foundone = 1;
+                if( $label =~ /v/ ) { 
+                    $agreedVague++; 
+                    print OUTVAGUEALL "$docname\t$pair\tmv\n";
+                } else {
+                    print OUTVAGUEALL "$docname\t$pair\t$label\n";
+                }
+                print OUT "$pair\t$label\n";
+                print OUTALL "$docname\t$pair\t$label\n";
 	    }
 	}
+
 	if( !$foundone ) {
+            # vague counting
+            if( $counts{"v"} > 0 ) {
+                $notAgreedWithVague++;
+                print OUTVAGUEALL "$docname\t$pair\tpv\n";
+            } else {
+                $notAgreedNoVague++;
+                print OUTVAGUEALL "$docname\t$pair\tnv\n";
+            }
+
 	    print OUT "$pair\tv\n";
 	    print OUTALL "$docname\t$pair\tv\n";
 	}
@@ -110,5 +138,12 @@ foreach $docname (keys %docs) {
     }
 }
 close OUTALL;
+close OUTVAGUEALL;
 
 print "Outputted to directory $outdir\n";
+
+# Counted how many VAGUE relations were actually chosen by both annotators,
+# or how many came from disagreements.
+print "Vague relations agreed upon:  $agreedVague\n";
+print "Vague relations from disagreement, but one had vague: $notAgreedWithVague\n";
+print "Vague relations from disagreement, none had vague:    $notAgreedNoVague\n";

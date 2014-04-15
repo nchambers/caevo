@@ -15,11 +15,14 @@ my $dir = $ARGV[0];
 opendir(DIR, $dir) || die "Can't open $dir ($!)\n";
 foreach $file (readdir(DIR)) {
     if( $file =~ /^([a-zA-Z].+)\.([^\.]+)$/ ) {
+        # Skip ".adjudicated" files
+        if( $file !~ /adjudicate/ ) {
 #	print "$1 -> $2 -> $file\n";
-        $docnames{$1} = 1;
-        $annotators{$2} = 1;
+            $docnames{$1} = 1;
+            $annotators{$2} = 1;
 #	$docs{$1}{$2} = readRelations("$dir/$file");
 #	print "read relations $dir/$file: got " . scalar(keys %{$docs{$1}{$2}}) . " tlinks\n";
+        }
     }
 }
 closedir(DIR);
@@ -34,6 +37,7 @@ my %relations2 = {};
 my %seen = {};
 my $matched = 0, $mismatch = 0;
 my %matchtypes;
+my %allmatchtypes;
 
 
 # Double loop over pairs of annotators.
@@ -68,6 +72,19 @@ for( $ii = 0; $ii < (scalar @names) - 1; $ii++ ) {
         }
     }
 }
+
+# Extra stats on the vague relation
+print "----------------------------\n";
+print "VAGUE relation split:\n";
+print "Total mutual vague: " . $allmatchtypes{"v"}{"v"} . "\n";
+my @types = qw( b a i ii s v );
+my $sum = 0;
+foreach $rel (@types) {
+    $sum += $allmatchtypes{"v"}{$rel};
+    $sum += $allmatchtypes{$rel}{"v"};
+}
+print "Total unagreed vague: " . $sum . "\n";
+
 
 
 # Put the relations into a hash table, key is the pair "e3 e15" and the value is the relation "b".
@@ -105,7 +122,7 @@ sub printAgreement {
     print "Total pairs: " . ($matched+$mismatch) . "\n";
     print "Matched: $matched\n";
     print "Not Matched: $mismatch\n";
-    print "Accuracy: " . $matched/($matched+$mismatch) . "\n";
+    print "Accuracy (precision): " . $matched/($matched+$mismatch) . "\n";
 
     # Print confusion matrix.
     my @types = qw( b a i ii s v );
@@ -141,6 +158,7 @@ sub countAgreement {
 #	print "$pair:\t$relations1{$pair} - $relations2{$pair}\n";
         }
         $matchtypes{$rel1}{$rel2}++;
+        $allmatchtypes{$rel1}{$rel2}++;
     }
 # Find all pairs in the second file that weren't in the first.
     foreach $pair (keys %relations2) {
@@ -148,10 +166,12 @@ sub countAgreement {
             if( $relations2{$pair} eq "v" ) { 
                 $matched++;
                 $matchtypes{"v"}{"v"}++;
+                $allmatchtypes{"v"}{"v"}++;
             }
             else {
                 $mismatch++;
                 $matchtypes{"v"}{$relations2{$pair}}++;
+                $allmatchtypes{"v"}{$relations2{$pair}}++;
 #	    print "$pair:\t - $relations2{$pair}\n";
             }
         }
