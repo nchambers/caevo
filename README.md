@@ -1,13 +1,14 @@
-time-sieve
+CAEVO
 ==========
 
-A TempEval-style system for fast temporal relationship tagging.
+CAEVO: Cascading EVent Ordering System
+A TempEval-style system for extracting temporal entities (events and time expressions), and labeling the temporal relations between the temporal entities.
 
 
 Prerequisites
 -------------
 
-time-sieve uses the WordNet dictionaries.  The dictionary files can be
+CAEVO uses the WordNet dictionaries.  The dictionary files can be
 downloaded from:
 
     http://wordnetcode.princeton.edu/wn3.1.dict.tar.gz
