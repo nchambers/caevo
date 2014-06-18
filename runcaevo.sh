@@ -17,6 +17,4 @@ if (( $# > 0 )); then
 fi
 
 
-#pushd ~/code/time-sieve
-mvn exec:java -Dexec.mainClass=timesieve.Main -Dprops=$props -Dsieves=$sieves -Dexec.args="$args"
-#popd
+mvn exec:java -Dexec.mainClass=caevo.Main -Dprops=$props -Dsieves=$sieves -Dexec.args="$args"

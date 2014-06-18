@@ -15,4 +15,4 @@ if (( $# > 0 )); then
 fi
 
 
-mvn exec:java -Dexec.mainClass=timesieve.Main -Dprops=$props -Dsieves=$sieves -Dexec.args="$args"
+mvn exec:java -Dexec.mainClass=caevo.Main -Dprops=$props -Dsieves=$sieves -Dexec.args="$args"

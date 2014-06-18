@@ -12,6 +12,4 @@ if (( $# > 0 )); then
 fi
 
 
-#pushd ~/code/time-sieve
-mvn exec:java -Dexec.mainClass=timesieve.TextEventClassifier -Dexec.args="$args"
-#popd
+mvn exec:java -Dexec.mainClass=caevo.TextEventClassifier -Dexec.args="$args"
