@@ -32,9 +32,9 @@ import java.util.regex.Pattern;
  *         <p>
  *         ROOT = /home/joe/project Data = {ROOT}/data
  */
-public class TimeSieveProperties {
+public class CaevoProperties {
 
-  private static final Logger logger = Logger.getLogger(TimeSieveProperties.class.getName());
+  private static final Logger logger = Logger.getLogger(CaevoProperties.class.getName());
 
   static Properties properties;
   static boolean isLoaded = false;
@@ -53,7 +53,7 @@ public class TimeSieveProperties {
     while (m.find()) {
       group = m.group();
       group = group.substring(1, group.length() - 1);
-      replacement = TimeSieveProperties.getString(group, null);
+      replacement = CaevoProperties.getString(group, null);
       if (replacement != null)
         m.appendReplacement(sb, replacement);
       else {
