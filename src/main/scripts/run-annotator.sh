@@ -12,4 +12,4 @@ export JAR=annotator.jar
 
 # Run it.
 export CLASSPATH=.:$JAR
-java timesieve.Annotator $1 $2
+java caevo.Annotator $1 $2
