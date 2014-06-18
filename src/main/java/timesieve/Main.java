@@ -138,7 +138,7 @@ public class Main {
 		
 		// Load WordNet for any and all sieves.
 		wordnet = new WordNet();
-        
+		
 		// Load the sieve list.
 		sieveClasses = loadSieveList();
 	}
@@ -291,7 +291,8 @@ public class Main {
 		docs.writeToXML(new File(outpath));
 		
 		// Evaluate it if the input file had tlinks in it.
-		Evaluate.evaluate(thedocsUnchanged, docs, sieveClasses, sieveNameToStats);
+		if( thedocsUnchanged != null )
+			Evaluate.evaluate(thedocsUnchanged, docs, sieveClasses, sieveNameToStats);
 	}
     
 	/**
@@ -748,6 +749,7 @@ public class Main {
         
 		// Give a text file or a directory of text files. Parses and marks it up.
 		else if( args.length > 1 && args[args.length-1].equalsIgnoreCase("raw") ) {
+			main.dataset = DatasetType.ALL;
 			main.markupRawText(args[args.length-2]);
 		}
         

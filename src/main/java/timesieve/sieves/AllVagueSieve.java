@@ -40,10 +40,13 @@ public class AllVagueSieve implements Sieve {
 //			System.out.println("DEBUG: adding tlinks from " + docname + " sentence " + sent.sentence());
 			proposed.addAll(allPairs(allEvents.get(sid), (sid+1 < allEvents.size() ? allEvents.get(sid+1) : null), 
 					allTimexes.get(sid), (sid+1 < allTimexes.size() ? allTimexes.get(sid+1) : null)));
-			
-			proposed.addAll(allEventDCTPairs(allEvents.get(sid), doc.getDocstamp().get(0)));
-			proposed.addAll(allTimeDCTPairs(allTimexes.get(sid), doc.getDocstamp().get(0)));
 
+			// Make sure there is a document timstamp.
+			if( doc.getDocstamp() != null && doc.getDocstamp().size() > 0 ) {
+				proposed.addAll(allEventDCTPairs(allEvents.get(sid), doc.getDocstamp().get(0)));
+				proposed.addAll(allTimeDCTPairs(allTimexes.get(sid), doc.getDocstamp().get(0)));
+			}
+			
 			//System.out.println("added links: " + proposed);
 			sid++;
 		}
