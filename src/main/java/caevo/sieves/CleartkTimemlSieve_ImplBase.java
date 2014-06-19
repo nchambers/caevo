@@ -22,7 +22,7 @@ import caevo.tlink.EventEventLink;
 import caevo.tlink.EventTimeLink;
 import caevo.tlink.TLink;
 import caevo.util.SieveJCasUtil;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 
 import com.google.common.collect.Lists;
 
@@ -82,8 +82,8 @@ public class CleartkTimemlSieve_ImplBase implements Sieve {
 
 	public static AnalysisEngineDescription getAnnotatorDescription(Class<?> sieveClass, CleartkInternalModelFactory factory) throws IOException, ResourceInitializationException {
 		String property = String.format("%s.model", sieveClass.getSimpleName());
-		return TimeSieveProperties.hasProperty(property)
-				? factory.getAnnotatorDescription(TimeSieveProperties.getString(property))
+		return CaevoProperties.hasProperty(property)
+				? factory.getAnnotatorDescription(CaevoProperties.getString(property))
 				: factory.getAnnotatorDescription();
 	}
 }

@@ -10,7 +10,7 @@ import caevo.SieveSentence;
 import caevo.TextEvent;
 import caevo.tlink.EventEventLink;
 import caevo.tlink.TLink;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 import caevo.util.TimebankUtil;
 import caevo.util.TreeOperator;
 import edu.stanford.nlp.trees.Tree;
@@ -76,7 +76,7 @@ public class XCompDepSieve implements Sieve {
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 		try {
-			useExtendedTense = TimeSieveProperties.getBoolean("XCompDepSieve.useExtendedTense", true);
+			useExtendedTense = CaevoProperties.getBoolean("XCompDepSieve.useExtendedTense", true);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

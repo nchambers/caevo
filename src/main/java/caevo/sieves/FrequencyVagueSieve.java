@@ -17,7 +17,7 @@ import caevo.TextEvent;
 import caevo.TextEventPairPattern;
 import caevo.tlink.EventEventLink;
 import caevo.tlink.TLink;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 
 /**
  * FrequencyVagueSieve looks at training data to find out if certain pairs of tenses, classes,
@@ -83,9 +83,9 @@ public class FrequencyVagueSieve implements Sieve {
 		this.vaguePatterns = new HashSet<TextEventPairPattern>();
 			
 		try {
-			this.ruleSavePath = TimeSieveProperties.getString("FrequencyVagueSieve.ruleSavePath", "src/main/resources/models/tlinks/FrequencyVagueSieve");
-			this.minRulePrecision = TimeSieveProperties.getDouble("FrequencyVagueSieve.minRulePrecision", .7);
-			this.minRuleExamples = TimeSieveProperties.getInt("FrequencyVagueSieve.minRuleExamples", 50);
+			this.ruleSavePath = CaevoProperties.getString("FrequencyVagueSieve.ruleSavePath", "src/main/resources/models/tlinks/FrequencyVagueSieve");
+			this.minRulePrecision = CaevoProperties.getDouble("FrequencyVagueSieve.minRulePrecision", .7);
+			this.minRuleExamples = CaevoProperties.getInt("FrequencyVagueSieve.minRuleExamples", 50);
 
   		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(this.ruleSavePath));
   		Object o = ois.readObject();

@@ -18,7 +18,7 @@ import caevo.tlink.TimeTimeLink;
 import caevo.util.Directory;
 import caevo.util.Ling;
 import caevo.util.SieveStats;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 import caevo.util.Util;
 import caevo.util.WordNet;
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
@@ -85,14 +85,14 @@ public class Main {
 		
 		// Read the properties from disk at the location specified by -Dprops=XXXXX
 		try {
-			TimeSieveProperties.load();
+			CaevoProperties.load();
 			// Look for a given pre-processed InfoFile
-			infopath = TimeSieveProperties.getString("Main.info", null);
+			infopath = CaevoProperties.getString("Main.info", null);
 			// Overwrite these globals if they are in the properties file.
-			debug = TimeSieveProperties.getBoolean("Main.debug", debug);
-			useClosure = TimeSieveProperties.getBoolean("Main.closure", useClosure);
-			dataset = DatasetType.valueOf(TimeSieveProperties.getString("Main.dataset", dataset.toString()).toUpperCase());
-			force24hrDCT = TimeSieveProperties.getBoolean("Main.force24hrdct", force24hrDCT);
+			debug = CaevoProperties.getBoolean("Main.debug", debug);
+			useClosure = CaevoProperties.getBoolean("Main.closure", useClosure);
+			dataset = DatasetType.valueOf(CaevoProperties.getString("Main.dataset", dataset.toString()).toUpperCase());
+			force24hrDCT = CaevoProperties.getBoolean("Main.force24hrdct", force24hrDCT);
 		} catch (IOException e) { e.printStackTrace(); }
         
 		// -info on the command line?

@@ -9,7 +9,7 @@ import caevo.SieveDocuments;
 import caevo.TextEvent;
 import caevo.tlink.EventEventLink;
 import caevo.tlink.TLink;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 
 /**
  * EventEventVagueSieve labels pairs of events as vague based on their tenses, aspects, and classes.
@@ -63,18 +63,18 @@ public class EventEventVagueSieve implements Sieve {
 		this.vagueClasses = new ArrayList<TextEvent.Class>();
 		
 		try {
-			if (TimeSieveProperties.getBoolean("EventEventVagueSieve.considerClassREPORTING", true))
+			if (CaevoProperties.getBoolean("EventEventVagueSieve.considerClassREPORTING", true))
 				this.vagueClasses.add(TextEvent.Class.REPORTING);
-			if (TimeSieveProperties.getBoolean("EventEventVagueSieve.considerClassI_STATE", true))
+			if (CaevoProperties.getBoolean("EventEventVagueSieve.considerClassI_STATE", true))
 				this.vagueClasses.add(TextEvent.Class.I_STATE);
-			if (TimeSieveProperties.getBoolean("EventEventVagueSieve.considerClassI_ACTION", false))
+			if (CaevoProperties.getBoolean("EventEventVagueSieve.considerClassI_ACTION", false))
 				this.vagueClasses.add(TextEvent.Class.I_ACTION);
-			if (TimeSieveProperties.getBoolean("EventEventVagueSieve.considerClassPERCEPTION", true))
+			if (CaevoProperties.getBoolean("EventEventVagueSieve.considerClassPERCEPTION", true))
 				this.vagueClasses.add(TextEvent.Class.PERCEPTION);
 			
-			this.considerTense = TimeSieveProperties.getBoolean("EventEventVagueSieve.considerTense", true);
-			this.considerAspect = TimeSieveProperties.getBoolean("EventEventVagueSieve.considerAspect", true);
-			this.considerSentence = TimeSieveProperties.getBoolean("EventEventVagueSieve.considerSentence", true);
+			this.considerTense = CaevoProperties.getBoolean("EventEventVagueSieve.considerTense", true);
+			this.considerAspect = CaevoProperties.getBoolean("EventEventVagueSieve.considerAspect", true);
+			this.considerSentence = CaevoProperties.getBoolean("EventEventVagueSieve.considerSentence", true);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -15,7 +15,7 @@ import caevo.tlink.TLinkClassifier;
 import caevo.tlink.TLinkDatum;
 import caevo.tlink.TLinkFeaturizer;
 import caevo.util.Pair;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 import caevo.util.Util;
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.io.IOUtils;
@@ -63,7 +63,7 @@ public class MLEventTimeSameSent implements Sieve {
 	private void init() {
 		// Flags
 		try {
-  		debug = TimeSieveProperties.getBoolean("MLEventTimeSameSent.debug",false);
+  		debug = CaevoProperties.getBoolean("MLEventTimeSameSent.debug",false);
 		} catch( IOException ex ) { }
 		
 		readClassifiers();

@@ -17,7 +17,7 @@ import caevo.tlink.TLinkClassifier;
 import caevo.tlink.TLinkDatum;
 import caevo.tlink.TLinkFeaturizer;
 import caevo.util.Pair;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 import caevo.util.TimebankUtil;
 import caevo.util.Util;
 import edu.stanford.nlp.classify.Classifier;
@@ -63,7 +63,7 @@ public class MLEventEventDominates extends MLEventEventSameSent {
 	private void init() {
 		// Flags
 		try {
-  		debug = TimeSieveProperties.getBoolean("MLEventEventDominates.debug",false);
+  		debug = CaevoProperties.getBoolean("MLEventEventDominates.debug",false);
 		} catch( IOException ex ) { }
 		
 		readClassifiers();

@@ -15,7 +15,7 @@ import caevo.tlink.TLinkClassifier;
 import caevo.tlink.TLinkDatum;
 import caevo.tlink.TLinkFeaturizer;
 import caevo.util.Pair;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 import caevo.util.TimebankUtil;
 import caevo.util.Util;
 import edu.stanford.nlp.classify.Classifier;
@@ -60,9 +60,9 @@ public class MLEventDCT implements Sieve {
 	private void init() {
 		// Flags
 		try {
-  		debug = TimeSieveProperties.getBoolean("MLEventDCT.debug", false);
-  		minProb = TimeSieveProperties.getDouble("MLEventDCT.minProb", 0.0);
-  		minFeatOccurrence = TimeSieveProperties.getInt("MLEventDCT.minFeatCount", 2);
+  		debug = CaevoProperties.getBoolean("MLEventDCT.debug", false);
+  		minProb = CaevoProperties.getDouble("MLEventDCT.minProb", 0.0);
+  		minFeatOccurrence = CaevoProperties.getInt("MLEventDCT.minFeatCount", 2);
 		} catch( IOException ex ) { }
 		
 		readClassifiers();

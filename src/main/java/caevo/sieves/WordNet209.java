@@ -14,7 +14,7 @@ import caevo.Timex;
 import caevo.tlink.EventEventLink;
 import caevo.tlink.TLink;
 import caevo.tlink.TimeTimeLink;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 import caevo.util.TreeOperator;
 import net.didion.jwnl.data.POS;
 import edu.stanford.nlp.trees.LabeledScoredTreeFactory;
@@ -105,14 +105,14 @@ public class WordNet209 implements Sieve {
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 				// Get property values from the config file
 				try {
-					sentWindow = TimeSieveProperties.getInt("Wordnet209.sentWindow", 1);
-					checkSiblings = TimeSieveProperties.getBoolean("Wordnet209.checkSiblings", true);
-					checkLemmas = TimeSieveProperties.getBoolean("Wordnet209.checkLemmas", true);
-					ignoreReporting = TimeSieveProperties.getBoolean("Wordnet209.ignoreReporting", true);
-					ignoreIAction = TimeSieveProperties.getBoolean("Wordnet209.ignoreIAction", true);
-					ignoreSameSentence = TimeSieveProperties.getBoolean("Wordnet209.ignoreSameSentence", true);
-					eePairs = TimeSieveProperties.getBoolean("Wordnet209.eePairs", true);
-					ttPairs = TimeSieveProperties.getBoolean("Wordnet209.ttPairs", true);
+					sentWindow = CaevoProperties.getInt("Wordnet209.sentWindow", 1);
+					checkSiblings = CaevoProperties.getBoolean("Wordnet209.checkSiblings", true);
+					checkLemmas = CaevoProperties.getBoolean("Wordnet209.checkLemmas", true);
+					ignoreReporting = CaevoProperties.getBoolean("Wordnet209.ignoreReporting", true);
+					ignoreIAction = CaevoProperties.getBoolean("Wordnet209.ignoreIAction", true);
+					ignoreSameSentence = CaevoProperties.getBoolean("Wordnet209.ignoreSameSentence", true);
+					eePairs = CaevoProperties.getBoolean("Wordnet209.eePairs", true);
+					ttPairs = CaevoProperties.getBoolean("Wordnet209.ttPairs", true);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

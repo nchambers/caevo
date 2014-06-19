@@ -13,7 +13,7 @@ import caevo.TextEvent;
 import caevo.Timex;
 import caevo.tlink.EventTimeLink;
 import caevo.tlink.TLink;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 import caevo.util.TreeOperator;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.trees.GrammaticalRelation;
@@ -82,11 +82,11 @@ public class AdjacentVerbTimex implements Sieve {
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 			// Parameter Value Code
 		try {
-			EVENT_BEFORE_TIMEX = TimeSieveProperties.getBoolean("AdjacentVerbTimex.EVENT_BEFORE_TIMEX", true);
-			TIMEX_BEFORE_EVENT = TimeSieveProperties.getBoolean("AdjacentVerbTimex.TIMEX_BEFORE_EVENT", true);
-			EVENT_GOVERNS_TIMEX = TimeSieveProperties.getBoolean("AdjacentVerbTimex.EVENT_GOVERNS_TIMEX", true);
-			TIMEX_GOVERNS_EVENT = TimeSieveProperties.getBoolean("AdjacentVerbTimex.TIMEX_GOVERNS_EVENT", true);
-			numInterWords = TimeSieveProperties.getInt("AdjacentVerbTimex.numInterWords", 0);
+			EVENT_BEFORE_TIMEX = CaevoProperties.getBoolean("AdjacentVerbTimex.EVENT_BEFORE_TIMEX", true);
+			TIMEX_BEFORE_EVENT = CaevoProperties.getBoolean("AdjacentVerbTimex.TIMEX_BEFORE_EVENT", true);
+			EVENT_GOVERNS_TIMEX = CaevoProperties.getBoolean("AdjacentVerbTimex.EVENT_GOVERNS_TIMEX", true);
+			TIMEX_GOVERNS_EVENT = CaevoProperties.getBoolean("AdjacentVerbTimex.TIMEX_GOVERNS_EVENT", true);
+			numInterWords = CaevoProperties.getInt("AdjacentVerbTimex.numInterWords", 0);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

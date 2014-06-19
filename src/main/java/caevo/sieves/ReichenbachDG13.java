@@ -15,7 +15,7 @@ import caevo.tlink.EventEventLink;
 import caevo.tlink.TLink;
 import caevo.tlink.TLink.Type;
 import caevo.util.Pair;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 import caevo.util.TimebankUtil;
 import caevo.util.TreeOperator;
 import edu.stanford.nlp.trees.Tree;
@@ -46,17 +46,17 @@ public class ReichenbachDG13 implements Sieve {
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 		// Get property values from the config file
 			try {
-				sentWindow = TimeSieveProperties.getInt("ReichenbachDG13.sentWindow", 0);
-				contextType = TimeSieveProperties.getString("ReichenbachDG13.contextType", "naive"); // naive, temporalDep, closestTimexPath
-				contextCompare = TimeSieveProperties.getString("ReichenbachDG13.contextCompare", "none"); // equals, equalsValue, all
-				sameTense = TimeSieveProperties.getBoolean("ReichenbachDG13.sameTense", false);
-				sameSentence = TimeSieveProperties.getBoolean("ReichenbachDG13.sameSentence", false);
-				simplifyPast = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyPast", true);
-				simplifyPresent = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyPresent", true);
-				simplifyAspect = TimeSieveProperties.getBoolean("ReichenbachDG13.simplifyAspect", true);
-				useExtendedTense = TimeSieveProperties.getBoolean("ReichenbachDG13.useExtendedTense", true);
+				sentWindow = CaevoProperties.getInt("ReichenbachDG13.sentWindow", 0);
+				contextType = CaevoProperties.getString("ReichenbachDG13.contextType", "naive"); // naive, temporalDep, closestTimexPath
+				contextCompare = CaevoProperties.getString("ReichenbachDG13.contextCompare", "none"); // equals, equalsValue, all
+				sameTense = CaevoProperties.getBoolean("ReichenbachDG13.sameTense", false);
+				sameSentence = CaevoProperties.getBoolean("ReichenbachDG13.sameSentence", false);
+				simplifyPast = CaevoProperties.getBoolean("ReichenbachDG13.simplifyPast", true);
+				simplifyPresent = CaevoProperties.getBoolean("ReichenbachDG13.simplifyPresent", true);
+				simplifyAspect = CaevoProperties.getBoolean("ReichenbachDG13.simplifyAspect", true);
+				useExtendedTense = CaevoProperties.getBoolean("ReichenbachDG13.useExtendedTense", true);
 				useExtendedTenseAcrossSentence = 
-						TimeSieveProperties.getBoolean("ReichenbachDG13.useExtendedTenseAcrossSentence", true);
+						CaevoProperties.getBoolean("ReichenbachDG13.useExtendedTenseAcrossSentence", true);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

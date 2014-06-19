@@ -15,7 +15,7 @@ import caevo.tlink.TLink;
 import caevo.tlink.TLinkClassifier;
 import caevo.tlink.TLinkDatum;
 import caevo.util.Pair;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 import caevo.util.Util;
 import edu.stanford.nlp.classify.Classifier;
 import edu.stanford.nlp.io.IOUtils;
@@ -96,9 +96,9 @@ public class MLVagueSieve implements Sieve {
 	
 	public MLVagueSieve() {
 		try {
-			this.modelSavePath = TimeSieveProperties.getString("MLVagueSieve.modelSavePath", "src/main/resources/models/tlinks/MLVagueSieve");
-			this.minFeatureOccurrence = TimeSieveProperties.getInt("MLVagueSieve.minFeatureOccurrence", 80);
-			this.minConfidence = TimeSieveProperties.getDouble("MLVagueSieve.minConfidence", 0.7);
+			this.modelSavePath = CaevoProperties.getString("MLVagueSieve.modelSavePath", "src/main/resources/models/tlinks/MLVagueSieve");
+			this.minFeatureOccurrence = CaevoProperties.getInt("MLVagueSieve.minFeatureOccurrence", 80);
+			this.minConfidence = CaevoProperties.getDouble("MLVagueSieve.minConfidence", 0.7);
 			
 			File f = new File(this.modelSavePath);
 			if (f.exists())

@@ -19,7 +19,7 @@ import caevo.tlink.TLinkClassifier;
 import caevo.tlink.TLinkDatum;
 import caevo.tlink.TLinkFeaturizer;
 import caevo.util.Pair;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 import caevo.util.TimebankUtil;
 import caevo.util.Util;
 import edu.stanford.nlp.classify.Classifier;
@@ -78,9 +78,9 @@ public class MLEventEventSameSent implements Sieve {
 	private void init() {
 		// Flags
 		try {
-  		eesplit = TimeSieveProperties.getBoolean("MLEventEventSameSent.eesplit",false);
-  		debug = TimeSieveProperties.getBoolean("MLEventEventSameSent.debug",false);
-  		doBinaryLabel = TimeSieveProperties.getString("MLEventEventSameSent.binaryLabel",null);
+  		eesplit = CaevoProperties.getBoolean("MLEventEventSameSent.eesplit",false);
+  		debug = CaevoProperties.getBoolean("MLEventEventSameSent.debug",false);
+  		doBinaryLabel = CaevoProperties.getString("MLEventEventSameSent.binaryLabel",null);
 		} catch( IOException ex ) { }
 		
 		readClassifiers();

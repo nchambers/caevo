@@ -12,7 +12,7 @@ import caevo.TextEvent;
 import caevo.Timex;
 import caevo.tlink.EventTimeLink;
 import caevo.tlink.TLink;
-import caevo.util.TimeSieveProperties;
+import caevo.util.CaevoProperties;
 
 /**
  *This sieve returns IS_INCLUDED for an event/timex pair of 
@@ -51,10 +51,10 @@ public class RepCreationDay implements Sieve {
 	 */
 	public List<TLink> annotate(SieveDocument doc, List<TLink> currentTLinks) {
 			try {
-				leftSentWindow = TimeSieveProperties.getInt("RepCreationDay.leftSentWindow", 0);
-				rightSentWindow = TimeSieveProperties.getInt("RepCreationDay.rightSentWindow", 0);
-				considerTA = TimeSieveProperties.getBoolean("RepCreationDay.considerTA", true);
-				includePresentRef = TimeSieveProperties.getBoolean("RepCreationDay.includePresentRef", false);
+				leftSentWindow = CaevoProperties.getInt("RepCreationDay.leftSentWindow", 0);
+				rightSentWindow = CaevoProperties.getInt("RepCreationDay.rightSentWindow", 0);
+				considerTA = CaevoProperties.getBoolean("RepCreationDay.considerTA", true);
+				includePresentRef = CaevoProperties.getBoolean("RepCreationDay.includePresentRef", false);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
