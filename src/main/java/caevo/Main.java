@@ -180,7 +180,7 @@ public class Main {
 	 */
 	private Sieve createSieveInstance(String sieveClass) {
 		try {
-			Class<?> c = Class.forName("timesieve.sieves." + sieveClass);
+			Class<?> c = Class.forName("caevo.sieves." + sieveClass);
 			Sieve sieve = (Sieve)c.newInstance();
 			return sieve;
 		} catch (InstantiationException e) {
