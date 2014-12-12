@@ -82,6 +82,8 @@ public class ReichenbachDG13 implements Sieve {
 		
 		// Get document creation day timex
 		Timex dct = getDct(doc);
+		if( dct == null ) System.out.println("WARNING: no dct found in ReichenbachDG13 sieve!");
+		
 		// Build temporal context mapping - each event maps to a temporal context
 		HashMap<TextEvent, ArrayList<Timex>> eventToContext = null;
 		if (contextType.equals("temporalDep")) {
@@ -137,6 +139,12 @@ public class ReichenbachDG13 implements Sieve {
 
 
 	private boolean compareContexts(Pair<TextEvent, TextEvent> eventPair, HashMap<TextEvent, ArrayList<Timex>> eventToContext) {
+		// Error checking if no context was set.
+		if( !eventToContext.containsKey(eventPair.first()) || !eventToContext.containsKey(eventPair.second()) ) {
+			System.out.println("WARNING: no event context in Reichenbach sieve. This shouldn't happen.");
+			return false;
+		}
+		
 		String context1Value = null;
 		String context2Value = null;
 		if (this.contextCompare.equals("equalsValue")) {
