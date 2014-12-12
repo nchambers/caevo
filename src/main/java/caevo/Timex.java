@@ -25,6 +25,7 @@ public class Timex {
   public static final String MOD_ATT = "mod";
   public static final String VALUE_ATT = "value";
   public static final String DOCFUNC_ATT = "docFunction";
+  public static final String DOCFUNC_ATT_ALT = "functionInDocument";
   public static final String TEMPFUNC_ATT = "temporalFunction";
   public static final String TEXT_ATT = "text";
   public static final String OFFSET_ATT = "offset";
@@ -126,14 +127,26 @@ public class Timex {
     	this.mod = Mod.valueOf(modStr);
     
     String docFunStr = el.getAttribute(Timex.DOCFUNC_ATT);
+    // If not found, try with the alternate name.
+    if( docFunStr == null || docFunStr.isEmpty() )
+    	docFunStr = el.getAttribute(Timex.DOCFUNC_ATT_ALT);
+    // If found, grab the value.
     if (docFunStr != null && !docFunStr.isEmpty())
     	this.documentFunction = DocumentFunction.valueOf(docFunStr);
     
     this.temporalFunction = el.getAttribute(Timex.TEMPFUNC_ATT).equalsIgnoreCase("true");
+
+    String text = el.getAttribute(Timex.TEXT_ATT); 
+    if( text != null && text.length() > 0 ) 
+    	this.text = text;
+    else {
+    	text = el.getTextContent();
+    	if( text != null && text.length() > 0 ) this.text = text;
+    }
   }
 
   public void setText(String text) { 
-  	this.text = text; 
+  	this.text = text;
   }
   
   public void setSid(int sid) { 
@@ -367,7 +380,7 @@ public class Timex {
   public org.jdom.Element toElement(Namespace ns) {
     org.jdom.Element el = new org.jdom.Element(Timex.TIMEX_ELEM,ns);
     el.setAttribute(Timex.TID_ATT, tid);
-    el.setAttribute(Timex.TEXT_ATT, text);
+    if( text != null ) el.setAttribute(Timex.TEXT_ATT, text);
     el.setAttribute(Timex.OFFSET_ATT, String.valueOf(this.tokenOffset));
     el.setAttribute(Timex.LENGTH_ATT, String.valueOf(this.tokenLength));
     if( this.anchorTid != null ) el.setAttribute(Timex.ANCHORTID_ATT, this.anchorTid);
@@ -407,9 +420,8 @@ public class Timex {
    */
   public static Timex dctDayTimex(Timex dctTimex) {
   	// First confirm that dctTimex is DCT
-  	if (!dctTimex.isDCT()) {
+  	if (!dctTimex.isDCT())
   		return null;
-  	}
   	
   	// Truncate the dctTimex's value to the day granularity if possible;
   	// otherwise, do nothing
