@@ -25,7 +25,7 @@ public class TimexExtractionTest extends TestCase {
 		writer.close();
 
 		// Run the full markup pipeline.
-		SieveDocuments docs = main.markupRawTextFile(tempfile);
+		SieveDocuments docs = main.markupRawText(tempfile);
 
 		assertNotNull(docs);
 		

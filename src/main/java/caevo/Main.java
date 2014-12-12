@@ -591,12 +591,16 @@ public class Main {
 	}
     
 	/**
-	 * Given a path to a directory, assumes every file in the directory is a text file with no
-	 * XML markup. This function will treat each text file as a separate document and perform
-	 * full event, time, and tlink markup.
-	 * @param dirpath Directory of text files.
+	 * Given a path to a file or directory, assumes file(s) have proper XML markup with only 
+	 * the TEXT and DCT elements present. It is assumed the text in TEXT is not marked up and
+	 * contains just raw unlabeled sentences. If a directory, assumes all files in the 
+	 * directory are of this XML form. This function will treat each text file as a separate 
+	 * document and perform complete event, time, and tlink markup.
+	 * @param path Single file or directory of text files.
 	 */
-	public SieveDocuments markupRawTextDir(String dirpath) {
+	public void markupRawXML(String path) {
+		SieveDocuments docs = new SieveDocuments();
+		
 		// Initialize the parser.
 		LexicalizedParser parser = Ling.createParser(serializedGrammar);
 		if( parser == null ) {
@@ -606,58 +610,73 @@ public class Main {
 		TreebankLanguagePack tlp = new PennTreebankLanguagePack();
 		GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
 
+		// If a directory: parse a directory of XML files.
+		if( Directory.isDirectory(path) ) {
+			for( String file : Directory.getFilesSorted(path) ) {
+				String subpath = path + File.separator + file;
+				SieveDocument doc = Tempeval3Parser.rawXMLtoSieveDocument(subpath, parser, gsf);
+				docs.addDocument(doc);
+			}
+		}
+		// If a single file: parse it.
+		else {
+			SieveDocument doc = Tempeval3Parser.rawXMLtoSieveDocument(path, parser, gsf);
+			docs.addDocument(doc);
+		}
+		
+		// Markup events, times, and tlinks.
+		markupAll(docs);
+		
+    // Output the documents.
+		String outpath = path + ".info.xml";
+		if( Directory.isDirectory(path) ) outpath = Directory.lastSubdirectory(path) + "-dir.info.xml";
+		docs.writeToXML(outpath);
+		System.out.println("Created " + outpath);
+	}
+	
+	/**
+	 * Given a path to a file or directory, assumes file(s) have no XML markup.
+	 * If a directory, assumes all files in the directory are to be processed.
+	 * This function will treat each text file as a separate document and perform complete
+	 * event, time, and tlink markup.
+	 * @param path Single file or directory of text files.
+	 */
+	public SieveDocuments markupRawText(String path) {
 		SieveDocuments docs = new SieveDocuments();
-		for( String file : Directory.getFilesSorted(dirpath) ) {
-			String path = dirpath + File.separator + file;
+
+		// Initialize the parser.
+		LexicalizedParser parser = Ling.createParser(serializedGrammar);
+		if( parser == null ) {
+			System.out.println("Failed to create parser from " + serializedGrammar);
+			System.exit(1);
+		}
+		TreebankLanguagePack tlp = new PennTreebankLanguagePack();
+		GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
+
+		// If a directory: parse a directory of XML files.
+		if( Directory.isDirectory(path) ) {
+			for( String file : Directory.getFilesSorted(path) ) {
+				String subpath = path + File.separator + file;
+				SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(subpath, parser, gsf);
+				docs.addDocument(doc);
+			}
+		}
+		// If a single file: parse it.
+		else {
 			SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(path, parser, gsf);
 			docs.addDocument(doc);
 		}
 
 		// Markup events, times, and tlinks.
 		markupAll(docs);
-		return docs;
-	}
-	
-	/**
-	 * Assumes the path is to a text-only file with no XML markup.
-	 * @param filepath Path to the text file.
-	 * @return A SieveDocuments instance with one SieveDocument in it, namely, the marked up file.
-	 */
-	public SieveDocuments markupRawTextFile(String filepath) {
-		// Initialize the parser.
-		LexicalizedParser parser = Ling.createParser(serializedGrammar);
-		if( parser == null ) {
-			System.out.println("Failed to create parser from " + serializedGrammar);
-			System.exit(1);
-		}
-		TreebankLanguagePack tlp = new PennTreebankLanguagePack();
-		GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
-
-		// Parse the file.
-		SieveDocument doc = Tempeval3Parser.rawTextFileToParsed(filepath, parser, gsf);
-		SieveDocuments docs = new SieveDocuments();
-		docs.addDocument(doc);
-
-		// Markup events, times, and tlinks.
-		markupAll(docs);
-		return docs;
-	}
-
-	public void markupRawText(String path) {
-		File file = new File(path);
-		SieveDocuments docs = null;
-		if( file.isDirectory() ) docs = markupRawTextDir(path);
-		else docs = markupRawTextFile(path);
 		
-        // Output the InfoFile with the events in it.
-		if( docs != null ) {
-			String outpath = path + ".info.xml";
-			if( file.isDirectory() ) outpath = Directory.lastSubdirectory(path) + "-dir.info.xml";
-			
-			docs.writeToXML(outpath);
-			System.out.println("Created " + outpath);
-		}
-		else System.out.println("Couldn't create anything from: " + path);
+		// Output the InfoFile with the events in it.
+		String outpath = path + ".info.xml";
+		if( Directory.isDirectory(path) ) outpath = Directory.lastSubdirectory(path) + "-dir.info.xml";
+		docs.writeToXML(outpath);
+		System.out.println("Created " + outpath);
+		
+		return docs;
 	}
 	
 	/**
@@ -666,10 +685,10 @@ public class Main {
 	public void markupAll() {
 		markupAll(thedocs);
 	}
-	public void markupAll(SieveDocuments info) {
-		markupEvents(info);
-		markupTimexes(info);
-		runSieves(info);
+	public void markupAll(SieveDocuments docs) {
+		markupEvents(docs);
+		markupTimexes(docs);
+		runSieves(docs);
 	}
 	
 	/**
@@ -722,14 +741,7 @@ public class Main {
 	}
 	
 	/**
-	 * Main. Multiple run modes:
-	 *
-	 * main -info <filepath> gauntlet
-	 * - Tests the sieves independently and calculates individual precision.
-	 *
-	 * main -info <filepath>
-	 * - Runs the sieve pipeline.
-	 *
+	 * Main. Multiple run modes. See comments on the top of this class definition.
 	 */
 	public static void main(String[] args) {
         //		Properties props = StringUtils.argsToProperties(args);
@@ -752,6 +764,12 @@ public class Main {
 			main.markupRawText(args[args.length-2]);
 		}
         
+		// Give an XML file or a directory of text files. Parses and marks it up.
+		else if( args.length > 1 && args[args.length-1].equalsIgnoreCase("rawxml") ) {
+			main.dataset = DatasetType.ALL;
+			main.markupRawXML(args[args.length-2]);
+		}
+		
 		// The given SieveDocuments only has text and parses, so extract events/times first.
 		else if( args.length > 0 && args[args.length-1].equalsIgnoreCase("trainall") ) {
 			main.trainSieves();
