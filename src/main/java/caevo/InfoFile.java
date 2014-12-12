@@ -901,8 +901,9 @@ public class InfoFile {
         else {
         	writer.write(dcts.get(0).toXMLString());
         	writer.write(dcts.get(0).getText());
+        	writer.write("</TIMEX3>");
         }
-        writer.write("</TIMEX3></DCT>\n\n");
+        writer.write("</DCT>\n\n");
         
         // The text.
         writer.write("<TEXT>");
