@@ -357,7 +357,7 @@ public class Tempeval3Parser {
     return buf.toString();
   }
 
-  private Document getXMLDocFromPath(String path) {
+  private static Document getXMLDocFromPath(String path) {
     // PARSE the input XML document of events
     Document doc = TimebankUtil.getXMLDoc(path);
     if( doc == null ) {
@@ -815,6 +815,46 @@ public class Tempeval3Parser {
   }
   
   /**
+   * Reads an XML file path that contains raw text in a <TEXT> element. Assumes the text in
+   * this file is unlabeled for events. This looks for <TEXT> and <DCT> elements to load
+   * the SieveDocument object.
+   */
+  public static SieveDocument rawXMLtoSieveDocument(String xmlFilePath, LexicalizedParser parser, GrammaticalStructureFactory gsf) {
+
+    // PARSE the input XML document of events
+    Document doc = getXMLDocFromPath(xmlFilePath);
+
+    // Grab the TEXT element.
+    Element textElement = null;
+    String justtext = null;
+    if( doc.getElementsByTagName("TEXT") != null ) {
+    	textElement = (Element)doc.getElementsByTagName("TEXT").item(0);
+    	justtext = textElement.getTextContent();
+    }
+
+    // Parse the text.
+    SieveDocument sdoc = rawTextToParsed((new File(xmlFilePath)).getName(), justtext, parser, gsf);
+    
+    // Grab the DCT element.
+    Element dctElement = null;
+    if( doc.getElementsByTagName("DCT") != null ) {
+    	dctElement = (Element)doc.getElementsByTagName("DCT").item(0);
+    	NodeList timexes = dctElement.getChildNodes();
+    	for( int ii = 0; ii < timexes.getLength(); ii++ ) {
+    		// Only process TIMEX* elements.
+    		if( timexes.item(ii).getNodeName().startsWith("TIMEX") ) {
+    			// Add the DCT elements.
+    			Timex timex = new Timex();
+    			timex.saveAttributes((Element)timexes.item(ii));
+    			sdoc.addCreationTime(timex);
+    		}
+    	}
+    }
+    
+    return sdoc;
+  }
+  
+  /**
    * Every Tempeval/Timebank document should have a document creation time <DCT> element. Each of these
    * elements is supposed to have a <TIMEX3> child which gives the document's resolved creation time.
    * @param docname The document to retrieve from.
@@ -1230,7 +1270,7 @@ public class Tempeval3Parser {
     return rawTextToParsed(filepath, bigone, parser, gsf);
   }
   
-  private static SieveDocument rawTextToParsed(String filepath, String text, LexicalizedParser parser, GrammaticalStructureFactory gsf) {
+  private static SieveDocument rawTextToParsed(String filename, String text, LexicalizedParser parser, GrammaticalStructureFactory gsf) {
     List<List<HasWord>> sentencesNormInvertible = new ArrayList<List<HasWord>>();
     sentencesNormInvertible.addAll(Ling.getSentencesFromTextNormInvertible(text));
     System.out.println("Got " + sentencesNormInvertible.size() + " sentences.");
@@ -1242,23 +1282,19 @@ public class Tempeval3Parser {
       cl.set(CoreAnnotations.AfterAnnotation.class, trailingWhite);
     }
     
-//    System.out.println("Original:");
-//    System.out.println(text);
+    SieveDocument sdoc = new SieveDocument((new File(filename)).getName());
 
-    SieveDocument info = new SieveDocument(filepath);
-
-//    System.out.println("Tokenized:");
     int sid = 0;
     for( List<HasWord> sent : sentencesNormInvertible ) {
 //      System.out.println("* " + sent);
       Pair<String,String> parseDep = parseDep(sent, parser, gsf);
       List<CoreLabel> cls = new ArrayList<CoreLabel>();
       for( HasWord word : sent ) cls.add((CoreLabel)word);
-      info.addSentence(buildString(sent, 0, sent.size()), cls, parseDep.first(), parseDep.second(), null, null);
+      sdoc.addSentence(buildString(sent, 0, sent.size()), cls, parseDep.first(), parseDep.second(), null, null);
       sid++;
     }
     
-    return info; 
+    return sdoc; 
   }
   
   private Pair<String,String> parseDep(List<HasWord> sentence) {
