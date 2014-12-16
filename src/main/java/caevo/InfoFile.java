@@ -795,6 +795,14 @@ public class InfoFile {
   			}
   			boolean endevent = false;
   			
+  			// If this token starts a TIMEX. (and we're not in an event tag already)
+  			if( indexToTimexes.containsKey(ii) ) {
+  				Timex timex = indexToTimexes.get(ii);
+//  				System.out.println("timex: " + timex);
+  				buf.append(timex.toXMLString());
+  				endTimexes.add(ii+timex.getTokenLength()-1);
+  			}
+  			
   			// If this token is marked as an event.
   			if( indexToEvents.containsKey(ii) ) {
   				TextEvent event = indexToEvents.get(ii);
@@ -810,14 +818,6 @@ public class InfoFile {
   					buf.append(" class=\"" + event.getTheClass() + "\"");
   				buf.append(">");
   				endevent = true;
-  			}
-
-  			// If this token starts a TIMEX.
-  			if( indexToTimexes.containsKey(ii) ) {
-  				Timex timex = indexToTimexes.get(ii);
-//  				System.out.println("timex: " + timex);
-  				buf.append(timex.toXMLString());
-  				endTimexes.add(ii+timex.getTokenLength()-1);
   			}
 
   			// Print the token.
