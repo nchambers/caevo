@@ -614,14 +614,24 @@ public class Main {
 		if( Directory.isDirectory(path) ) {
 			for( String file : Directory.getFilesSorted(path) ) {
 				String subpath = path + File.separator + file;
-				SieveDocument doc = Tempeval3Parser.rawXMLtoSieveDocument(subpath, parser, gsf);
-				docs.addDocument(doc);
+				try {
+					SieveDocument doc = Tempeval3Parser.rawXMLtoSieveDocument(subpath, parser, gsf);
+					docs.addDocument(doc);
+				} catch( Exception ex ) {
+					System.out.println("ERROR while processing " + subpath);
+					ex.printStackTrace();
+				}
 			}
 		}
 		// If a single file: parse it.
 		else {
-			SieveDocument doc = Tempeval3Parser.rawXMLtoSieveDocument(path, parser, gsf);
-			docs.addDocument(doc);
+			try {
+				SieveDocument doc = Tempeval3Parser.rawXMLtoSieveDocument(path, parser, gsf);
+				docs.addDocument(doc);
+			} catch( Exception ex ) {
+				System.out.println("ERROR while processing " + path);
+				ex.printStackTrace();
+			}
 		}
 		
 		// Markup events, times, and tlinks.
