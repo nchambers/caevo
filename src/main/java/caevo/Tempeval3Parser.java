@@ -1286,7 +1286,7 @@ public class Tempeval3Parser {
 
     int sid = 0;
     for( List<HasWord> sent : sentencesNormInvertible ) {
-//      System.out.println("* " + sent);
+//    	System.out.println("* " + sent);
       Pair<String,String> parseDep = parseDep(sent, parser, gsf);
       List<CoreLabel> cls = new ArrayList<CoreLabel>();
       for( HasWord word : sent ) cls.add((CoreLabel)word);

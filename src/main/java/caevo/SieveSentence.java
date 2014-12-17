@@ -210,7 +210,7 @@ public class SieveSentence {
   		deps = TreeOperator.stringToDependencies(depsStr);
   	return deps;
   }
-
+  
   public void setParent(SieveDocument doc) { parent = doc; }
   public int sid() { return sid; }
   public String sentence() { return sentence; }

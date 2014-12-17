@@ -53,6 +53,27 @@ public class TimexClassifier {
     return buf.toString();
   }
   
+  /**
+   * Sometimes a phrase is marked as a TIMEX, but it was already labeled as an EVENT.
+   * In these cases, we remove the TIMEX and assume the event is correct.
+   * DESTRUCTIVE: alters the given list of timexes.
+   * @param timexes List of predicted timex instances.
+   * @param sent The sentence containing the timex predictions.
+   */
+  private void removeConflictingTimexesWithEvents(List<Timex> timexes, SieveSentence sent) {
+  	List<Timex> removals = new ArrayList<Timex>();
+  	for( Timex timex : timexes ) {
+  		for( TextEvent event : sent.events() ) {
+  			// Event token is already labeled and part of this Timex.
+  			if( event.getIndex() >= timex.getTokenOffset() && event.getIndex() <= timex.getTokenOffset()+timex.getTokenLength()-1 )
+  				removals.add(timex);
+  		}
+  	}
+  	// Remove timexes that contained events...assume the event is correct and timex is incorrect.
+  	for( Timex remove : removals )
+  		timexes.remove(remove);
+  }
+
   
 //  "URL"
   
@@ -83,6 +104,10 @@ public class TimexClassifier {
         List<Timex> stanfordTimex = markupTimex3(sent.tokens(), tid, docDate);
         myRevisedTimex3(stanfordTimex, docDate);
         tid += stanfordTimex.size();
+        
+        // Remove any TIMEX phrases that contain EVENT objects.
+        removeConflictingTimexesWithEvents(stanfordTimex, sent);
+        
 //        System.out.println("GOT " + stanfordTimex.size() + " new timexes.");
         doc.addTimexes(sid, stanfordTimex);
         sid++;
