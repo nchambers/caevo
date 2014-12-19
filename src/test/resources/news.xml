@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://timeml.org/timeMLdocs/TimeML_1.2.1.xsd">
+
+<DCT><TIMEX3 tid="t0" type="TIME" value="2014-08-22" temporalFunction="false" functionInDocument="CREATION_TIME">2014</TIMEX3></DCT>
+
+<TEXT>
+It certainly wasn't as easy as the Belgians had anticipated but two second half goals from substitutes were the difference as Marc Wilmots' club downed Algeria 2-1 on Tuesday.
+
+The first half couldn't have gone any better for the Algerians, who, while defending for the majority of the half, took advantage with a quick counter that led to a penalty kick. Sofiane Feghouli buried the first goal, but for the rest of the half, the Algerians were on their heels trying to stave off the Belgian attack.
+</TEXT>
+
+</TimeML>
