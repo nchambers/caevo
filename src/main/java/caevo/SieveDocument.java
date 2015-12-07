@@ -15,6 +15,7 @@ import java.util.Vector;
 import org.jdom.Element;
 import org.jdom.Namespace;
 
+import caevo.Timex.DocumentFunction;
 import caevo.tlink.EventEventLink;
 import caevo.tlink.EventTimeLink;
 import caevo.tlink.TLink;
@@ -314,6 +315,24 @@ public class SieveDocument {
   	if( dcts == null ) dcts = new ArrayList<Timex>();
   	dcts.add(timex);
   	addTimexToTidMap(timex);
+  }
+  
+  /**
+   * @desc Sets the first timex of type DATE in the document timex list as the document creation time
+   * TODO: make sure "first" in list is necessarily first that appears in document! Should be, unless
+   * the relevant string is somehow dropped during sentence tokenization.
+   */
+  public void setFirstDateAsDCT() {
+  	if( dcts == null ) {
+  		dcts = new ArrayList<Timex>();
+  		for (Timex nextTimex : this.getTimexes()){
+  			if (nextTimex.getType().equals(Timex.Type.DATE)) {
+  				nextTimex.setDocumentFunction(DocumentFunction.CREATION_TIME);
+  	  		dcts.add(nextTimex);
+  				break;
+  			}
+  		}
+  	}
   }
 
   /**

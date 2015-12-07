@@ -31,9 +31,9 @@ import caevo.tlink.TimeTimeLink;
  * @author chambers
  */
 public class Annotator {
-  List<TLink> allLinksOrdered;
-  Set<String> allLinksHash;
-  Map<String,String> labeledLookup;
+  List<TLink> allLinksOrdered;  // TLink object for each pair
+  Set<String> allLinksHash;  // String for each pair 
+  Map<String,String> labeledLookup; // Maps pair to relation label
   List<TLink> labeledRelations;
 	Closure closure;
   

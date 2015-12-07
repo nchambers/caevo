@@ -66,7 +66,8 @@ public class Main {
 	String outpath = "sieve-output.xml";
 	boolean debug = true;
 	boolean useClosure = true;
-	boolean force24hrDCT = true;  
+	boolean force24hrDCT = true;
+	boolean firstTimexDctHeuristic = true;
 	
 	// Which dataset do we load?
   public static enum DatasetType { TRAIN, DEV, TEST, ALL };
@@ -698,6 +699,12 @@ public class Main {
 	public void markupAll(SieveDocuments docs) {
 		markupEvents(docs);
 		markupTimexes(docs);
+    // Try to determine DCT based on relevant property settings
+		if (firstTimexDctHeuristic == true) {
+			for (SieveDocument doc : docs.getDocuments()) {
+				doc.setFirstDateAsDCT();  // only if there isn't already a DCT specified!
+			}
+		}
 		runSieves(docs);
 	}
 	

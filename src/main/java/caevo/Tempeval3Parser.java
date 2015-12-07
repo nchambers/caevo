@@ -16,6 +16,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
+import caevo.Timex.DocumentFunction;
 import caevo.tlink.EventEventLink;
 import caevo.tlink.EventTimeLink;
 import caevo.tlink.TLink;
@@ -1267,6 +1268,7 @@ public class Tempeval3Parser {
     String bigone = lines.get(0);
     for( int xx = 1; xx < lines.size(); xx++ ) bigone += "\n" + lines.get(xx);
 //    System.out.println("bigone=" + bigone);
+ 
     return rawTextToParsed(filepath, bigone, parser, gsf);
   }
   

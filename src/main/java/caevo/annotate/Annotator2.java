@@ -2,18 +2,35 @@ package caevo.annotate;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
+
+
+
+
+import org.xml.sax.SAXException;
 
 import caevo.Closure;
 import caevo.tlink.EventEventLink;
@@ -48,6 +65,101 @@ public class Annotator2 {
     closure = new Closure();
     numRelations = 0;
     pairsJustLabeled = new HashSet<String>();
+	}
+	
+	class OrderComparator implements Comparator<Node>{
+		public int compare(Node node1, Node node2) {
+			int startOffset1;
+			int startOffset2;
+			
+			// get start offset from each event
+			int offset1 = getStartOffset(node1);
+			int offset2 = getStartOffset(node2);
+			return offset2 - offset1;
+		}
+		
+		public int getStartOffset(Node node){
+			if (node.getNodeName().toString().equals("event_mention")) {
+				return getEventStartOffset(node);
+			}
+			else if (node.getNodeName().toString().equals("timex2_mention")) {
+				return getTimex2StartOffset(node);
+			}
+			else return getEventStartOffset(node);
+		}
+		private int getTimex2StartOffset(Node timex2) {
+			int offset;
+			
+			Node extent = timex2.getFirstChild();
+			Node charseq = extent.getFirstChild();
+			String startString = charseq.getAttributes().getNamedItem("START").toString();
+			offset = Integer.parseInt(startString);
+			
+			return offset;
+		}
+
+		public int getEventStartOffset(Node event) {
+			
+			int offset;
+			
+			Node extent = event.getFirstChild();
+			Node charseq = extent.getFirstChild();
+			String startString = charseq.getAttributes().getNamedItem("START").toString();
+			offset = Integer.parseInt(startString);
+			
+			return offset;
+		}
+	}
+	
+	public Document readXML_ACE2005(String path) throws SAXException, IOException {
+		File aceFile = new File(path);
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder;
+		try {
+			dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(aceFile);
+			doc.getDocumentElement().normalize();
+			return doc;
+		}
+		catch (ParserConfigurationException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
+	
+	public void processXML_ACE2005(Document doc) {
+		NodeList eventNodes = doc.getElementsByTagName("event_mention");
+		List<Node> eventsList = new ArrayList<Node>();
+		for (int i = 0; i < eventNodes.getLength(); i++) {
+			eventsList.add(eventNodes.item(i));
+		} 
+		NodeList timex2Nodes = doc.getElementsByTagName("timex2_mention");
+		List<Node> timex2List = new ArrayList<Node>();
+		for (int i = 0; i < timex2Nodes.getLength(); i++) {
+			timex2List.add(timex2Nodes.item(i));
+		} 
+		// sort events and times by START offset
+		Collections.sort(eventsList, new OrderComparator());
+		Collections.sort(timex2List, new OrderComparator());
+		// create all pairs
+		allLinks = new LinkedHashMap<String, TLink>();
+		allLinksHash = new HashSet<String>();
+		String keypair;
+		String timex2Id;
+		String eventId;
+		// create DCT links for each event and timex2
+		for (Node timex2 : timex2List) {
+			String[] timex2IdElements = timex2.getAttributes().getNamedItem("ID").toString().split("-");
+			timex2Id = timex2IdElements[1] + timex2IdElements[2];
+			
+			TLink dctlink = new EventEventLink(timex2Id, "t0", TLink.Type.NONE);
+			keypair = dctlink.getId1() + " t0";
+			allLinks.put(keypair, dctlink);
+			allLinksHash.add(keypair);
+			numRelations++;
+		}
+		
 	}
 	
 	public void readHTML(String path) {
@@ -356,8 +468,12 @@ public class Annotator2 {
 	public static void main(String[] args) throws Exception {
 		Annotator2 anno = new Annotator2();
 		if( args.length == 1 ) {
-		  anno.readHTML(args[0]);
-		  anno.prompt();
+			if (args[0].contains(".apf.xml")){
+				anno.readXML_ACE2005(args[0]);
+				anno.prompt();
+			}
+			anno.readHTML(args[0]);
+			anno.prompt();
 		} 
 		else if( args.length == 2 ) {
 		  anno.readHTML(args[0]);
