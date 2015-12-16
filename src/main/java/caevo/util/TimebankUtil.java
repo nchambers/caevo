@@ -295,4 +295,17 @@ public class TimebankUtil {
   	}
   	else return false;
   }
+  
+  /**
+   * return true if two timexes have the same value, or if both arguments are null
+   * @param t1
+   * @param t2
+   * @return
+   */
+  public static boolean compareTimexesByValue(Timex t1, Timex t2) {
+  	if (t1 == null && t2 == null || t1.getValue().equals(t2.getValue())){
+			return true;
+		}
+		else return false;
+  }
 }

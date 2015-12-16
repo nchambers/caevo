@@ -15,6 +15,7 @@ import java.util.Set;
 import caevo.sieves.Sieve;
 import caevo.tlink.TLink;
 import caevo.tlink.TimeTimeLink;
+import caevo.util.DCTHeursitics;
 import caevo.util.Directory;
 import caevo.util.Ling;
 import caevo.util.SieveStats;
@@ -67,7 +68,7 @@ public class Main {
 	boolean debug = true;
 	boolean useClosure = true;
 	boolean force24hrDCT = true;
-	boolean firstTimexDctHeuristic = true;
+	String dctHeuristic = "none";
 	
 	// Which dataset do we load?
   public static enum DatasetType { TRAIN, DEV, TEST, ALL };
@@ -94,6 +95,7 @@ public class Main {
 			useClosure = CaevoProperties.getBoolean("Main.closure", useClosure);
 			dataset = DatasetType.valueOf(CaevoProperties.getString("Main.dataset", dataset.toString()).toUpperCase());
 			force24hrDCT = CaevoProperties.getBoolean("Main.force24hrdct", force24hrDCT);
+			dctHeuristic = CaevoProperties.getString("Main.dctHeuristic", dctHeuristic);
 		} catch (IOException e) { e.printStackTrace(); }
         
 		// -info on the command line?
@@ -700,9 +702,10 @@ public class Main {
 		markupEvents(docs);
 		markupTimexes(docs);
     // Try to determine DCT based on relevant property settings
-		if (firstTimexDctHeuristic == true) {
+		// TODO: use reflection method parallel to how sieves are chosen to choose the right DCTHeuristic method
+		if (dctHeuristic == "setFirstDateAsDCT") {
 			for (SieveDocument doc : docs.getDocuments()) {
-				doc.setFirstDateAsDCT();  // only if there isn't already a DCT specified!
+				DCTHeursitics.setFirstDateAsDCT(doc);;  // only if there isn't already a DCT specified!
 			}
 		}
 		runSieves(docs);

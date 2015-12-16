@@ -9,6 +9,15 @@ import java.util.regex.Pattern;
 import caevo.util.TreeOperator;
 import edu.stanford.nlp.trees.TypedDependency;
 
+/**
+ * A TemporalContext contains partitions the TextEvents in a SieveDocument that share the same temporal context.
+ * 
+ * 
+ * @author tcassidy
+ *
+ */
+
+
 public class TemporalContext {
 	private SieveDocument doc;
 	private HashMap<String,List<TextEvent>> contextMap;
@@ -135,7 +144,7 @@ public class TemporalContext {
 		
 	}
 	/**
-	 * For each event, obtain the shortest dependency path between the event each timex in it's sentence.
+	 * For each event, obtain the shortest dependency path between the event each timex in its sentence.
 	 * If no such paths exist, assign the event to the DCT
 	 * Else, choose the shortest path.
 	 * If same length, choose one with most gov-to-dep pointing arrows

@@ -81,8 +81,15 @@ public class ReichenbachDG13 implements Sieve {
 		// Get pairs of events to be classified (based on parameter )
 		
 		// Get document creation day timex
-		Timex dct = getDct(doc);
-		if( dct == null ) System.out.println("WARNING: no dct found in ReichenbachDG13 sieve!");
+		List<Timex> dcts = doc.getDocstamp();
+		Timex dct;
+		if (dcts != null){
+			dct = dcts.get(0);
+		}
+		else{
+			dct = null;
+			if (debug) System.err.println("WARNING: no dct found in ReichenbachDG13 sieve!");
+		}
 		
 		// Build temporal context mapping - each event maps to a temporal context
 		HashMap<TextEvent, ArrayList<Timex>> eventToContext = null;
@@ -141,17 +148,16 @@ public class ReichenbachDG13 implements Sieve {
 	private boolean compareContexts(Pair<TextEvent, TextEvent> eventPair, HashMap<TextEvent, ArrayList<Timex>> eventToContext) {
 		// Error checking if no context was set.
 		if( !eventToContext.containsKey(eventPair.first()) || !eventToContext.containsKey(eventPair.second()) ) {
-			System.out.println("WARNING: no event context in Reichenbach sieve. This shouldn't happen.");
+			System.err.println("WARNING: no event context in Reichenbach sieve. This shouldn't happen.");
 			return false;
 		}
 		
 		String context1Value = null;
 		String context2Value = null;
 		if (this.contextCompare.equals("equalsValue")) {
-			context1Value =  eventToContext.get(eventPair.first()).get(0).getValue();
-			context2Value =  eventToContext.get(eventPair.second()).get(0).getValue();
-			if (context1Value.equals(context2Value)) return true;
-			else return false;
+			Timex context1 = eventToContext.get(eventPair.first()).get(0);
+			Timex context2 = eventToContext.get(eventPair.second()).get(0);
+			return TimebankUtil.compareTimexesByValue(context1, context2);
 		}
 		else if (this.contextCompare.equals("equals")) {
 			context1Value =  eventToContext.get(eventPair.first()).get(0).toString();
@@ -323,85 +329,16 @@ private HashMap<TextEvent, ArrayList<Timex>> getEventGovernsTimexMapping(SieveDo
 	return eventToTimex;
  }
 
-//private HashMap<TextEvent, ArrayList<Timex>> getMostRecentTimexMapping(SieveDocument doc, Timex dct, List<List<TextEvent>> eventsBySentId) {
-//	
-//}
-private Timex getDct(SieveDocument doc) {
-	List<Timex> dctList = doc.getDocstamp();
-	Timex dct;
-	if (dctList != null && dctList.size() > 1) {
-		dct = Timex.dctDayTimex(dctList.get(0));
-	}
-	else if (dctList != null && dctList.size() == 1) {
-		dct = Timex.dctDayTimex(dctList.get(0));
-	}
-	else {
-		dct = getMostCommonTimexDay(doc);
-	}
-	return dct;
-}
 
-private Timex getMostCommonTimexDay(SieveDocument doc) {
-		List<Timex> timexes = doc.getTimexes();
-		HashMap<String, Integer> valToCount = new HashMap<String, Integer>();
-		for (Timex timex : timexes) {
-			// get timex's val
-			String val = timex.getValue();
-			// extract date if possible
-			String valDay = Timex.dateFromValue(val);
-			if (valDay == null) continue;
-			if (valToCount.containsKey(valDay)) {
-				valToCount.put(valDay, valToCount.get(valDay) + 1);
-			}
-			else {
-				valToCount.put(valDay, 0);
-			}
-		}
-		int max = 0;
-		ArrayList<String> topDays = new ArrayList<String>();
-		for (String key : valToCount.keySet()) {
-			if (valToCount.get(key) > max) {
-				max = valToCount.get(key);
-				topDays = new ArrayList<String>();
-				topDays.add(key);
-			}
-			else if (valToCount.get(key) == max) topDays.add(key);
-		}
-		
-		/*
-		 * At this point we either have a list of topDays of size 0, 1 or more than 1.
-		 * If its 0 we should just use today's date. if its 1 then that String is the day value.
-		 * If its more than 1, then we have a tie - the two days are mentioned equally. just pick at random.
-		 */
-		
-		if (topDays.size() == 0) {
-			return new Timex("2013-07-24"); // this will do for now
-		}
-		else if (topDays.size() == 1) {
-			return new Timex(topDays.get(0));
-		}
-		else {
-			return new Timex(topDays.get(0));
-		}
-	}
-	
 /**
- * This method returns the most common day in the document. 
- * If none are specified, today's date is returned.
+ * add (e1, e2, label) to proposed list of TLINKs
+ * 
+ * @param e1
+ * @param e2
+ * @param label
+ * @param proposed
  * @param doc
- * @return
  */
-// private Timex getMostCommonTimexDay(SieveDocument doc) {
-//	 String mostCommonDayValue = null;
-//	 List<Timex> allTimexes = doc.getTimexes();
-//	 
-//	 return Timex()
-//	}
-
-
-
-
-	// add (e1, e2, label) to proposed list of TLINKs
 	private void addPair(TextEvent e1, TextEvent e2, TLink.Type label, List<TLink> proposed, SieveDocument doc) {
 		if (label != null) {
 			
@@ -472,23 +409,32 @@ private Timex getMostCommonTimexDay(SieveDocument doc) {
 		
 		Timex e1ContextTimex = eventToContext.get(e1).get(0);
 		Timex e2ContextTimex = eventToContext.get(e2).get(0);
-		boolean e1ContextSe2Context = false;
-		boolean e1ContextBe2Context = false;
-		boolean e1ContextAe2Context = false;
-		boolean e1ContextIe2Context = false;
-		boolean e1ContextIIe2Context = false;
-		boolean e1ContextXe2Context = false;
 		
-		if (e1ContextTimex.getValue().equals(e2ContextTimex.getValue())) e1ContextSe2Context = true;
-		else if (e1ContextTimex.before(e2ContextTimex)) e1ContextBe2Context = true; // these conditions are broken because of Timex methods
-		else if (e2ContextTimex.before(e1ContextTimex)) e1ContextAe2Context = true; // I'm probably not using them correctly
-		else if (e1ContextTimex.includes((e2ContextTimex))) e1ContextIe2Context = true;
-		else if (e2ContextTimex.includes((e1ContextTimex))) e1ContextIIe2Context = true;
-		else e1ContextXe2Context = true;
-		
-		if (e1ContextSe2Context) { 
+		if (TimebankUtil.compareTimexesByValue(e1ContextTimex, e2ContextTimex)) {
 			return compareContextsS(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
 		}
+		else {
+			return null;
+		}
+//		
+//		boolean e1ContextSe2Context = false;
+//		boolean e1ContextBe2Context = false;
+//		boolean e1ContextAe2Context = false;
+//		boolean e1ContextIe2Context = false;
+//		boolean e1ContextIIe2Context = false;
+//		boolean e1ContextXe2Context = false;
+		
+		
+		//if (e1ContextTimex.getValue().equals(e2ContextTimex.getValue())) e1ContextSe2Context = true;
+//		else if (e1ContextTimex.before(e2ContextTimex)) e1ContextBe2Context = true; // these conditions are broken because of Timex methods
+//		else if (e2ContextTimex.before(e1ContextTimex)) e1ContextAe2Context = true; // I'm probably not using them correctly
+//		else if (e1ContextTimex.includes((e2ContextTimex))) e1ContextIe2Context = true;
+//		else if (e2ContextTimex.includes((e1ContextTimex))) e1ContextIIe2Context = true;
+//		else e1ContextXe2Context = true;
+		
+//		if (e1ContextSe2Context) { 
+//			return compareContextsS(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
+//		}
 //		else if (e1ContextBe2Context) {
 //			return compareContextsB(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
 //		}
@@ -501,7 +447,7 @@ private Timex getMostCommonTimexDay(SieveDocument doc) {
 //		else if (e1ContextAe2Context) {
 //			return compareContextsI(e2Past, e2Pres, e2Future, e2Perf, e2None, e1Past, e1Pres, e1Future, e1Perf, e1None);
 //		}
-		else return compareContextsS(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
+//		else return compareContextsS(e1Past, e1Pres, e1Future, e1Perf, e1None, e2Past, e2Pres, e2Future, e2Perf, e2None);
 	}
 	
 

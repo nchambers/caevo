@@ -316,24 +316,6 @@ public class SieveDocument {
   	dcts.add(timex);
   	addTimexToTidMap(timex);
   }
-  
-  /**
-   * @desc Sets the first timex of type DATE in the document timex list as the document creation time
-   * TODO: make sure "first" in list is necessarily first that appears in document! Should be, unless
-   * the relevant string is somehow dropped during sentence tokenization.
-   */
-  public void setFirstDateAsDCT() {
-  	if( dcts == null ) {
-  		dcts = new ArrayList<Timex>();
-  		for (Timex nextTimex : this.getTimexes()){
-  			if (nextTimex.getType().equals(Timex.Type.DATE)) {
-  				nextTimex.setDocumentFunction(DocumentFunction.CREATION_TIME);
-  	  		dcts.add(nextTimex);
-  				break;
-  			}
-  		}
-  	}
-  }
 
   /**
    * @return A Vector of Sentence objects
