@@ -1,5 +1,7 @@
 This software is released under the Apache License, Version 2.0. See LICENSE in the project root directory for all details. Portions of this software were originally developed at the United States Naval Academy as NavyTime, and then expanded into CAEVO at the 2013 SCALE Workshop at Johns Hopkins University. Software from Steven Bethard's ClearTK system is also included as separate sieves.
 
+We make note that this software uses Stanford's CoreNLP library which is under a GPL v2.0 license. If you use CAEVO as-is, the software is governed instead by the GPL v2. If you wish to use CAEVO under the Apache License, you need to replace the CoreNLP dependency with a non-GPL library.
+
 
 CAEVO
 ==========
