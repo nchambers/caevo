@@ -1,3 +1,6 @@
+This software is released under the Apache License, Version 2.0. See LICENSE in the project root directory for all details. Portions of this software were originally developed at the United States Naval Academy as NavyTime, and then expanded into CAEVO at the 2013 SCALE Workshop at Johns Hopkins University. Software from Steven Bethard's ClearTK system is also included as separate sieves.
+
+
 CAEVO
 ==========
 
