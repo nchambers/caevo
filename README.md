@@ -28,11 +28,11 @@ your downloaded dictionary. The dictionary and this file can be stored anywhere
 on your drive. CAEVO looks for an environment variable JWNL that should have the
 path to the xml file.
 
-For convenience, you can also download and install the directories with the
-provided shell script (there is a sample jwnl_file_properties.xml file in 
-src/test/resources):
+For convenience, we provide a script that downloads the directories and
+automatically sets up your jwnl_file_properties.xml file.
+All you have to do is create the JWNL environment variable as indicated by the script:
 
-    ./download-wordnet-dictionaries
+    ./getwordnet.sh
 
 
 Building
