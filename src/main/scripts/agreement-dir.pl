@@ -8,6 +8,8 @@
 # agreement.pl <dir>
 #
 
+# Turn on if you want precision without vague relations in the numbers.
+my $ignorevague = 1;
 
 my %annotators;
 my %docnames;
@@ -150,29 +152,34 @@ sub countAgreement {
         
         $seen{$pair} = 1;
 
-        if( $rel1 eq $rel2 ) {
-            $matched++;
-        }
-        else {
-            $mismatch++;
-#	print "$pair:\t$relations1{$pair} - $relations2{$pair}\n";
-        }
-        $matchtypes{$rel1}{$rel2}++;
-        $allmatchtypes{$rel1}{$rel2}++;
-    }
-# Find all pairs in the second file that weren't in the first.
-    foreach $pair (keys %relations2) {
-        if( not exists $seen{$pair} ) {
-            if( $relations2{$pair} eq "v" ) { 
+        if( $ignorevague == 0 || ($rel1 ne "v" && $rel2 ne "v") ) {
+            if( $rel1 eq $rel2 ) {
                 $matched++;
-                $matchtypes{"v"}{"v"}++;
-                $allmatchtypes{"v"}{"v"}++;
             }
             else {
                 $mismatch++;
-                $matchtypes{"v"}{$relations2{$pair}}++;
-                $allmatchtypes{"v"}{$relations2{$pair}}++;
+#	print "$pair:\t$relations1{$pair} - $relations2{$pair}\n";
+            }
+            $matchtypes{$rel1}{$rel2}++;
+            $allmatchtypes{$rel1}{$rel2}++;
+        }
+    }
+
+    # Find all pairs in the second file that weren't in the first.
+    if( $ignorevague == 0 ) {
+        foreach $pair (keys %relations2) {
+            if( not exists $seen{$pair} ) {
+                if( $relations2{$pair} eq "v" ) { 
+                    $matched++;
+                    $matchtypes{"v"}{"v"}++;
+                    $allmatchtypes{"v"}{"v"}++;
+                }
+                else {
+                    $mismatch++;
+                    $matchtypes{"v"}{$relations2{$pair}}++;
+                    $allmatchtypes{"v"}{$relations2{$pair}}++;
 #	    print "$pair:\t - $relations2{$pair}\n";
+                }
             }
         }
     }
