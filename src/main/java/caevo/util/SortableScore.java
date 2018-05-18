@@ -11,20 +11,37 @@ public class SortableScore implements Comparable<SortableScore> {
     score = s;
     key = k;
   }
-  public SortableScore() { }
 
-  public int compareTo(SortableScore b) {
-    if( b == null ) return -1;
-    if( score < ((SortableScore)b).score() ) return 1;
-    else if( ((SortableScore)b).score() > score ) return -1;
-    else return 0;
+  public SortableScore() {
   }
 
-  public void setScore(double s) { score = s; }
-  public void setKey(String k) { key = k; }
+  public int compareTo(SortableScore b) {
+    if (b == null)
+      return -1;
+    if (score < ((SortableScore) b).score())
+      return 1;
+    else if (((SortableScore) b).score() > score)
+      return -1;
+    else
+      return 0;
+  }
 
-  public double score() { return score; }
-  public String key() { return key; }
+  public void setScore(double s) {
+    score = s;
+  }
+
+  public void setKey(String k) {
+    key = k;
+  }
+
+  public double score() {
+    return score;
+  }
+
+  public String key() {
+    return key;
+  }
+
   public String toString() {
     return key + " " + score;
   }

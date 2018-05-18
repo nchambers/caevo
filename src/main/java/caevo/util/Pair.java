@@ -1,8 +1,6 @@
 package caevo.util;
 
-
-
-public class Pair<A,B> {
+public class Pair<A, B> {
   A first;
   B second;
 
@@ -11,11 +9,22 @@ public class Pair<A,B> {
     second = two;
   }
 
-  public A first() { return first; }
-  public B second() { return second; }
-  public void setFirst(A obj) { first = obj; }
-  public void setSecond(B obj) { second = obj; }
-  
+  public A first() {
+    return first;
+  }
+
+  public B second() {
+    return second;
+  }
+
+  public void setFirst(A obj) {
+    first = obj;
+  }
+
+  public void setSecond(B obj) {
+    second = obj;
+  }
+
   public String toString() {
     return (first + ":" + second);
   }
