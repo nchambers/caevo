@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -61,8 +62,8 @@ public class Main {
   private TimexClassifier timexClassifier;
   public static WordNet wordnet;
 
-  SieveDocuments thedocs;
-  SieveDocuments thedocsUnchanged; // for evaluating if TLinks are in the input
+  SieveDocuments thedocs = null;
+  SieveDocuments thedocsUnchanged = null; // for evaluating if TLinks are in the input
   Closure closure;
   String outpath = "sieve-output.xml";
   boolean debug = true;
@@ -112,7 +113,13 @@ public class Main {
     if (infopath != null) {
       System.out.println("Checking for infofile at " + infopath);
       thedocs = new SieveDocuments(infopath);
-      thedocsUnchanged = new SieveDocuments(infopath);
+
+      // For evaluation, contains gold tlinks.  
+      System.out.println(Arrays.toString(args) + "\t" + args[args.length-1]);
+      if( args.length > 0 && !args[args.length-1].equalsIgnoreCase("parsed") ) {
+        System.out.println("unchanged loading!");
+        thedocsUnchanged = new SieveDocuments(infopath);  
+      }
     }
 
     // -set on the command line?
@@ -312,7 +319,7 @@ public class Main {
     docs.writeToXML(new File(outpath));
 
     // Evaluate it if the input file had tlinks in it.
-    if (thedocsUnchanged != null)
+    if (thedocsUnchanged != null )
       Evaluate.evaluate(thedocsUnchanged, docs, sieveClasses, sieveNameToStats);
   }
 
@@ -710,7 +717,7 @@ public class Main {
 
     // Output the documents.
     String outpath = path + ".info.xml";
-    if (Directory.isDirectory(path))
+    if( Directory.isDirectory(path) )
       outpath = Directory.lastSubdirectory(path) + "-dir.info.xml";
     docs.writeToXML(outpath);
     System.out.println("Created " + outpath);
@@ -871,9 +878,12 @@ public class Main {
 
     // The given SieveDocuments only has text and parses, so extract
     // events/times first.
-    else if (args.length > 0
-        && args[args.length - 1].equalsIgnoreCase("parsed")) {
+    else if (args.length > 0 && args[args.length - 1].equalsIgnoreCase("parsed")) {
+      System.out.println("Marking up time!");
       main.markupAll();
+      String outfile = args[args.length-2] + ".withtime";
+      System.out.println("Writing output: " + outfile);
+      main.thedocs.writeToXML(new File(outfile));
     }
 
     // Give a text file or a directory of text files. Parses and marks it up.
@@ -911,3 +921,4 @@ public class Main {
     }
   }
 }
+
