@@ -115,11 +115,8 @@ public class Main {
       thedocs = new SieveDocuments(infopath);
 
       // For evaluation, contains gold tlinks.  
-      System.out.println(Arrays.toString(args) + "\t" + args[args.length-1]);
-      if( args.length > 0 && !args[args.length-1].equalsIgnoreCase("parsed") ) {
-        System.out.println("unchanged loading!");
+      if( args.length > 0 && !args[args.length-1].equalsIgnoreCase("parsed") )
         thedocsUnchanged = new SieveDocuments(infopath);  
-      }
     }
 
     // -set on the command line?
