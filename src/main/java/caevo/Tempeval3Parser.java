@@ -907,16 +907,18 @@ public class Tempeval3Parser {
 
     // Grab the DCT element.
     Element dctElement = null;
-    if (doc.getElementsByTagName("DCT") != null) {
+    if( doc.getElementsByTagName("DCT") != null && doc.getElementsByTagName("DCT").getLength() > 0 ) {
       dctElement = (Element) doc.getElementsByTagName("DCT").item(0);
       NodeList timexes = dctElement.getChildNodes();
-      for (int ii = 0; ii < timexes.getLength(); ii++) {
-        // Only process TIMEX* elements.
-        if (timexes.item(ii).getNodeName().startsWith("TIMEX")) {
-          // Add the DCT elements.
-          Timex timex = new Timex();
-          timex.saveAttributes((Element) timexes.item(ii));
-          sdoc.addCreationTime(timex);
+      if( timexes != null ) {
+        for (int ii = 0; ii < timexes.getLength(); ii++) {
+          // Only process TIMEX* elements.
+          if (timexes.item(ii).getNodeName().startsWith("TIMEX")) {
+            // Add the DCT elements.
+            Timex timex = new Timex();
+            timex.saveAttributes((Element) timexes.item(ii));
+            sdoc.addCreationTime(timex);
+          }
         }
       }
     }

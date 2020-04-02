@@ -172,7 +172,6 @@ public class MLEventEventSameSent implements Sieve {
       TextEvent event1, TextEvent event2) {
     // Normal, 1 classifier for all event-event links.
     Classifier<String, String> targetClassifier = eeSameSentClassifier;
-    List<Tree> trees = doc.getAllParseTrees();
 
     // We are doing a binary classification on one link type.
     if (doBinaryLabel != null)
@@ -184,6 +183,7 @@ public class MLEventEventSameSent implements Sieve {
     // This just sets 'targetClassifier' to null. Maintaining in case someone
     // wants to actually fix the implementation.
     // if( eesplit ) {
+    // List<Tree> trees = doc.getAllParseTrees();
     // if( featurizer.oneEventDominates(event1, event2, trees) )
     // targetClassifier = eeSameSentDominatesClassifier;
     // else
