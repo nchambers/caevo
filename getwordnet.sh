@@ -12,7 +12,7 @@ pushd ~/wordnet3.1
 
 # Get the WordNet dictionary files.
 # Use curl to download, as OS X doesn't include wget
-curl -O http://wordnetcode.princeton.edu/wn3.1.dict.tar.gz
+curl -O https://wordnetcode.princeton.edu/wn3.1.dict.tar.gz
 gunzip wn3.1.dict.tar.gz
 tar -xvf wn3.1.dict.tar
 rm wn3.1.dict.tar
